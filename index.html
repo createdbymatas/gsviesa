@@ -646,18 +646,9 @@
             <i class="fa-regular fa-circle-xmark" style="font-size: 30px; color: red; background-color: #f2f2f2; border-radius: 100%; margin-top: 60px; z-index: 2; margin-left: 45px;"></i>
         </div>
     </div>
-
-    <div style="width: 100%; height: 20px; position: fixed; top: 5px; left: 0; right: 0; z-index: 81; display: flex; justify-content: center; align-items: center; color: white; font-size: 15px;" id="lockUnlockBackground">
-        <i class="fa-solid fa-lock" id="uzrakinta" style="margin-left: -5px;"></i>
-        <div id="atrakinta" style="display: none; justify-content: center; align-items: center; opacity: 0; transition: 0.3s opacity;"><i class="fa-solid fa-lock-open" style="transition: 0.3s opacity;"></i>
-            <div style="width: 0; position: relative; overflow: hidden; height: 20px; transition: 0.3s width; margin-left: 5px; display: none;" id="adminasAtrakinta"><p style="position: absolute; right: 0; transition: none;">adminas</p></div>
-            <div style="width: 0; position: relative; overflow: hidden; height: 20px; transition: 0.3s width; margin-left: 5px; display: none;" id="vardasAtrakinta"><p style="position: absolute; right: 0; transition: none;">Vardas</p></div>
-            <!-- padaryti su keliones (adminas) uzrasu ta pati kaip ir su karnavalo -->
-        </div>
-    </div>
-    <div id="display" style="width: 100%; height: 100%; position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 79; background-image: url(keliones.jpeg); background-repeat: no-repeat; background-size: cover; background-position: center; transition: 0.2s;"></div>
+    <div id="display" style="width: 100%; height: 100%; position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 79; background-image: url(ziema.jpeg); background-repeat: no-repeat; background-size: cover; background-position: center; transition: 0.2s;"></div>
     <div id="screen">
-        <p style="color: white; font-size: 20px; transition: 0.45s;" id="ivestiKoda">Įvesk Kodą</p>
+        <p style="color: white; font-size: 20px; transition: 0.6s;" id="ivestiKoda">Įvesk Kodą</p>
         <form>
             <div id="keypad">
                 <form style="width: 100%; height: 100%; display: flex; justify-content: space-around; align-items: center; flex-direction: column;">
@@ -808,7 +799,7 @@
 
     <div id="karnavalas">
         <div style="position: absolute; width: 5px; height: 5px; top: 0; left: 0;" id="topInformacija"></div>
-        <div id="informacija"><i class="fa-solid fa-chevron-down" style="font-size: 20px; position: absolute; top: 20px; left: 20px; z-index: 4; transition: 0.15s; cursor: pointer; pointer-events: none;" onclick="closeKarnavalas()" id="chevronas"></i></div>
+        <div id="informacija"><i class="fa-solid fa-chevron-down" style="font-size: 20px; position: absolute; top: 20px; left: 20px; z-index: 4; transition: 0.15s; cursor: pointer;" onclick="closeKarnavalas()" id="chevronas"></i></div>
         <p style="font-size: 25px; font-weight: 600; color: black; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; width: 100%; position: fixed; top: 60px; padding-left: 15px; padding-right: 15px; z-index: 10;" id="karnavalasText">Karnavalas "-----"</p>
         <div style="position: fixed; top: 60px; left: 0; right: 0; width: 100%; height: 60px; z-index: 11; color: lightskyblue; font-size: 17px; display: flex; justify-content: space-around; overflow: visible;">
             <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 4s linear infinite;"></i>
@@ -877,14 +868,14 @@
             <i class="fa-regular fa-comments" style="position: absolute; width: 25px; height: 100%; border-radius: 100%; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
             <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Žodžiai:</p>
             <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">"Lorem ipsum dolor sit amet consectetur adipisicing elit." <br> "Voluptas veritatis ratione odit magnam ea iure molestias expedita magni." <br> "Iste perspiciatis debitis unde ex aspernatur adipisci qui temporibus corrupti, impedit explicabo."</p>
-            <p style="color: black; font-size: 13px; font-weight: 400; width: 100%; position: relative; margin-top: 7px; padding-left: 17px;"><span style="position: absolute; left: 0; border: 1px solid black; font-weight: 600; width: 13px; height: 13px; border-radius: 100%; display: flex; justify-content: center; align-items: center; font-size: 10px;">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima perpasakoti kitaip.</p>
+            <p style="color: black; font-size: 13px; font-weight: 400; width: 100%; position: relative; margin-top: 7px; padding-left: 17px;"><span style="position: absolute; left: 0; border: 1px solid black; font-weight: 600; width: 13px; height: 13px; border-radius: 100%; display: flex; justify-content: center; align-items: center; font-size: 10px; margin-top: 1px;">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima perpasakoti kitaip.</p>
         </div>
         <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
         <div id="vaidinimas">
             <i class="fa-solid fa-people-arrows" style="position: absolute; width: 25px; height: 100%; border-radius: 100%; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
             <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Vaidinimo eiga:</p>
             <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas veritatis ratione odit magnam ea iure molestias expedita magni iste perspiciatis debitis unde ex aspernatur adipisci qui temporibus corrupti, impedit explicabo.</p>
-            <p style="color: black; font-size: 13px; font-weight: 400; width: 100%; position: relative; margin-top: 7px; padding-left: 17px;"><span style="position: absolute; left: 0; border: 1px solid black; font-weight: 600; width: 13px; height: 13px; border-radius: 100%; display: flex; justify-content: center; align-items: center; font-size: 10px;">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
+            <p style="color: black; font-size: 13px; font-weight: 400; width: 100%; position: relative; margin-top: 7px; padding-left: 17px;"><span style="position: absolute; left: 0; border: 1px solid black; font-weight: 600; width: 13px; height: 13px; border-radius: 100%; display: flex; justify-content: center; align-items: center; font-size: 10px; margin-top: 1px;">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
         </div>
         <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
         <div id="papildomai">
@@ -1595,27 +1586,12 @@
                     document.getElementById("keypad").style.opacity = "0.5";
                 }, 150);
                 setTimeout(() => {
-                    document.getElementById("uzrakinta").style.opacity = "0";
-                    document.getElementById("vardasAtrakinta").style.display = "block";
-                }, 3000);
-                setTimeout(() => {
-                    document.getElementById("uzrakinta").style.display = "none";
-                    document.getElementById("atrakinta").style.display = "flex";
-                }, 3300);
-                setTimeout(() => {
-                    document.getElementById("atrakinta").style.opacity = "1";
-                }, 3310);
-                setTimeout(() => {
-                    document.getElementById("vardasAtrakinta").style.width = "50px";
-                }, 3610);
-                setTimeout(() => {
                     document.getElementById("keypad").style.opacity = "1";
                     document.getElementById("ivestiKoda").style.opacity = "1";
                     document.getElementById("screen").style.top = "-100%";
                     document.getElementById("screen").style.backgroundColor = "transparent";
                     document.getElementById("display").style.top = "-100%";
                     document.getElementById("karnavalas").style.display = "block";
-                    document.getElementById("lockUnlockBackground").style.color = "black";
                 }, 3600);
                 setTimeout(() => {
                     document.getElementById("karnavalas").style.paddingTop = "0";
@@ -1632,13 +1608,6 @@
                     document.getElementById("loading").style.display = "none";
                     document.getElementById("body").style.overflow = "scroll";
                 }, 3900);
-                setTimeout(() => {
-                    document.getElementById("lockUnlockBackground").style.opacity = "0";
-                }, 6610);
-                setTimeout(() => {
-                    document.getElementById("lockUnlockBackground").style.display = "none";
-                    document.getElementById("chevronas").style.pointerEvents = "all";
-                }, 6910);
           }
             else{
                 document.getElementById("loading").style.display = "flex";
@@ -1696,16 +1665,6 @@
         if (vardas != "") {
             document.getElementById("karnavalas").style.display = "block";
             document.getElementById("karnavalas").style.paddingTop = "0";
-            document.getElementById("uzrakinta").style.opacity = "0";
-            document.getElementById("uzrakinta").style.display = "none";
-            document.getElementById("atrakinta").style.display = "flex";
-            document.getElementById("atrakinta").style.opacity = "1";
-            document.getElementById("vardasAtrakinta").style.width = "50px";
-            document.getElementById("lockUnlockBackground").style.color = "black";
-            document.getElementById("lockUnlockBackground").style.opacity = "0";
-            document.getElementById("lockUnlockBackground").style.display = "none";
-            document.getElementById("vardasAtrakinta").style.display = "block";
-            document.getElementById("chevronas").style.pointerEvents = "all";
             setTimeout(() => {
                 document.querySelector('#topInformacija').scrollIntoView({
                 behavior: 'smooth'});
@@ -1714,29 +1673,9 @@
         else {
             document.getElementById("karnavalas").style.display = "none";
             document.getElementById("karnavalas").style.paddingTop = "100vh";
-            document.getElementById("uzrakinta").style.opacity = "1";
-            document.getElementById("uzrakinta").style.display = "block";
-            document.getElementById("atrakinta").style.display = "none";
-            document.getElementById("atrakinta").style.opacity = "0";
-            document.getElementById("vardasAtrakinta").style.width = "0";
-            document.getElementById("lockUnlockBackground").style.color = "white";
-            document.getElementById("lockUnlockBackground").style.opacity = "1";
-            document.getElementById("lockUnlockBackground").style.display = "flex";
-            document.getElementById("vardasAtrakinta").style.display = "none";
-            document.getElementById("chevronas").style.pointerEvents = "none";
             if (vardas != "" && vardas != null) {
                 document.getElementById("karnavalas").style.display = "none";
                 document.getElementById("karnavalas").style.paddingTop = "100vh";
-                document.getElementById("uzrakinta").style.opacity = "1";
-                document.getElementById("uzrakinta").style.display = "block";
-                document.getElementById("atrakinta").style.display = "none";
-                document.getElementById("atrakinta").style.opacity = "0";
-                document.getElementById("vardasAtrakinta").style.width = "0";
-                document.getElementById("lockUnlockBackground").style.color = "white";
-                document.getElementById("lockUnlockBackground").style.opacity = "1";
-                document.getElementById("lockUnlockBackground").style.display = "flex";
-                document.getElementById("vardasAtrakinta").style.display = "none";
-                document.getElementById("chevronas").style.pointerEvents = "none";
             }
         }
 
@@ -1777,31 +1716,17 @@
         function closeKarnavalas() {
             document.cookie = "vardas=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
             document.getElementById("chevronas").style.pointerEvents = "none";
-            document.getElementById("lockUnlockBackground").style.display = "flex";
             setTimeout(() => {
                 document.getElementById("screen").style.top = "0";
                 document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
                 document.getElementById("display").style.top = "0";
                 document.getElementById("karnavalas").style.paddingTop = "100vh";
-                document.getElementById("lockUnlockBackground").style.opacity = "1";
-                document.getElementById("lockUnlockBackground").style.color = "white";
             }, 10);
             setTimeout(() => {
                 document.getElementById("body").style.overflow = "hidden";
                 document.getElementById("karnavalas").style.display = "none";
-                document.getElementById("vardasAtrakinta").style.width = "0";
+                document.getElementById("chevronas").style.pointerEvents = "all";
             }, 310);
-            setTimeout(() => {
-                document.getElementById("atrakinta").style.opacity = "0";
-            }, 610);
-            setTimeout(() => {
-                document.getElementById("uzrakinta").style.display = "block";
-                document.getElementById("atrakinta").style.display = "none";
-            }, 910);
-            setTimeout(() => {
-                document.getElementById("uzrakinta").style.opacity = "1";
-                document.getElementById("vardasAtrakinta").style.display = "none";
-            }, 1210);
         }
     </script>
 </body>
