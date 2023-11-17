@@ -800,7 +800,7 @@
     <div id="karnavalas">
         <div style="position: absolute; width: 5px; height: 5px; top: 0; left: 0;" id="topInformacija"></div>
         <div id="informacija"><i class="fa-solid fa-chevron-down" style="font-size: 20px; position: absolute; top: 20px; left: 20px; z-index: 4; transition: 0.15s; cursor: pointer;" onclick="closeKarnavalas()" id="chevronas"></i></div>
-        <p style="font-size: 25px; font-weight: 600; color: black; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; width: 100%; position: fixed; top: 60px; padding-left: 15px; padding-right: 15px; z-index: 10;" id="karnavalasText">Karnavalas "-----"</p>
+        <p style="font-size: 25px; font-weight: 600; color: black; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; width: 100%; position: fixed; top: 60px; padding-left: 15px; padding-right: 15px; z-index: 10;" id="karnavalasText">Karnavalas "Snieguolė ir septyni nykštukai"</p>
         <div style="position: fixed; top: 60px; left: 0; right: 0; width: 100%; height: 60px; z-index: 11; color: lightskyblue; font-size: 17px; display: flex; justify-content: space-around; overflow: visible;">
             <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 4s linear infinite;"></i>
             <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 2s linear infinite; animation-delay: 1s;"></i>
@@ -839,7 +839,7 @@
         </div>
 
         <div style="width: 100%; height: auto; background-color: rgba(242, 242, 242, 0.75); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); position: fixed; bottom: 0; left: 0; right: 0; padding: 15px; display: flex; justify-content: center; align-items: center; flex-direction: column; z-index: 17;" id="scenarijusBackground">
-            <button style="width: 100%; height: 40px; display: flex; justify-content: center; align-items: center; border-radius: 25px; border: none; background-color: #f2f2f2; color: black; border: 2px solid black; font-size: 15px;" onclick="scenarijus()" class="warningButton"><i class="fa-solid fa-scroll" style="margin-right: 5px;"></i>Peržiūrėti visą scenarijų</button>
+            <button style="width: 100%; height: 40px; display: flex; justify-content: center; align-items: center; border-radius: 25px; border: none; background-color: transparent; color: black; border: 2px solid black; font-size: 15px;" onclick="scenarijus()" class="warningButton"><i class="fa-solid fa-scroll" style="margin-right: 5px;"></i>Peržiūrėti visą scenarijų</button>
         </div>
         <div id="scriptDownloadingBackground" style="width: 100%; height: 100%; pointer-events: none; z-index: 19; background-color: rgba(211, 211, 211, 0.75); position: fixed; top: 0; left: 0; right: 0; bottom: 0; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); opacity: 0; display: none;"></div>
         <div id="downloadingScript" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "scenarijus.pdf"</div>
@@ -855,33 +855,35 @@
         <div id="apie">
             <i class="fa-regular fa-circle-question" style="position: absolute; width: 25px; height: 100%; border-radius: 100%; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
             <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Apie rolę:</p>
-            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas veritatis ratione odit magnam ea iure molestias expedita magni iste perspiciatis debitis unde ex aspernatur adipisci qui temporibus corrupti, impedit explicabo.</p>
+            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus. Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus. Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus.</p>
         </div>
         <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
         <div id="pasiruosimas">
             <i class="fa-solid fa-suitcase" style="position: absolute; width: 25px; height: 100%; border-radius: 100%; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
             <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Pasiruošti:</p>
-            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas veritatis ratione odit magnam ea iure molestias expedita magni iste perspiciatis debitis unde ex aspernatur adipisci qui temporibus corrupti, impedit explicabo.</p>
+            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus. Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus. Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus.</p>
         </div>
         <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
         <div id="zodziai">
             <i class="fa-regular fa-comments" style="position: absolute; width: 25px; height: 100%; border-radius: 100%; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
             <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Žodžiai:</p>
-            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">"Lorem ipsum dolor sit amet consectetur adipisicing elit." <br> "Voluptas veritatis ratione odit magnam ea iure molestias expedita magni." <br> "Iste perspiciatis debitis unde ex aspernatur adipisci qui temporibus corrupti, impedit explicabo."</p>
+            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">"Taip atrodys tekstas." <br> "Čia yra tik pavyzdys." <br> "Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus."</p>
             <p style="color: black; font-size: 13px; font-weight: 400; width: 100%; position: relative; margin-top: 7px; padding-left: 17px;"><span style="position: absolute; left: 0; border: 1px solid black; font-weight: 600; width: 13px; height: 13px; border-radius: 100%; display: flex; justify-content: center; align-items: center; font-size: 10px; margin-top: 1px;">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima perpasakoti kitaip.</p>
         </div>
         <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
         <div id="vaidinimas">
             <i class="fa-solid fa-people-arrows" style="position: absolute; width: 25px; height: 100%; border-radius: 100%; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
             <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Vaidinimo eiga:</p>
-            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas veritatis ratione odit magnam ea iure molestias expedita magni iste perspiciatis debitis unde ex aspernatur adipisci qui temporibus corrupti, impedit explicabo.</p>
+            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus. Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus. Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus.</p>
             <p style="color: black; font-size: 13px; font-weight: 400; width: 100%; position: relative; margin-top: 7px; padding-left: 17px;"><span style="position: absolute; left: 0; border: 1px solid black; font-weight: 600; width: 13px; height: 13px; border-radius: 100%; display: flex; justify-content: center; align-items: center; font-size: 10px; margin-top: 1px;">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
         </div>
         <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
         <div id="papildomai">
             <i class="fa-regular fa-circle-dot" style="position: absolute; width: 25px; height: 100%; border-radius: 100%; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
             <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Papildomai:</p>
-            <button style="width: 95%; height: 30px; display: flex; justify-content: center; align-items: center; border-radius: 25px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px;" class="warningButton"><i class="fa-regular fa-circle-xmark" style="margin-right: 5px;"></i>Funkcija</button>
+            <button style="width: 95%; height: 30px; display: flex; justify-content: center; align-items: center; border-radius: 25px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px;" class="warningButton"><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Muzika</button>
+            <button style="width: 95%; height: 30px; display: flex; justify-content: center; align-items: center; border-radius: 25px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 5px;" class="warningButton"><i class="fa-solid fa-percent" style="margin-right: 5px;"></i>Funkcija</button>
+            <button style="width: 95%; height: 30px; display: flex; justify-content: center; align-items: center; border-radius: 25px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 5px;" class="warningButton"><i class="fa-solid fa-clapperboard" style="margin-right: 5px;"></i>Veiksmas</button>
         </div>
         <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
     </div>
