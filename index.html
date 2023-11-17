@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600;800&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" type="image/jpg" href="favicon.ico">
+    <link rel="shortcut icon" type="image/jpg" href="images/favicon.ico">
 </head>
 <body onload="loadFunction()" id="body">
     <style>
@@ -646,7 +646,7 @@
             <i class="fa-regular fa-circle-xmark" style="font-size: 30px; color: red; background-color: #f2f2f2; border-radius: 100%; margin-top: 60px; z-index: 2; margin-left: 45px;"></i>
         </div>
     </div>
-    <div id="display" style="width: 100%; height: 100%; position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 79; background-image: url(ziema.jpeg); background-repeat: no-repeat; background-size: cover; background-position: center; transition: 0.2s;"></div>
+    <div id="display" style="width: 100%; height: 100%; position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 79; background-image: url(images/ziema.jpeg); background-repeat: no-repeat; background-size: cover; background-position: center; transition: 0.2s;"></div>
     <div id="screen">
         <p style="color: white; font-size: 20px; transition: 0.6s;" id="ivestiKoda">Įvesk Kodą</p>
         <form>
@@ -687,32 +687,32 @@
     </div>
     <div id="kelioneI---">
         <div style="position: absolute; width: 5px; height: 5px; top: 0; left: 0;" id="topInfo"></div>
-        <div id="info"><i class="fa-solid fa-chevron-down" style="font-size: 20px; position: absolute; top: 20px; left: 20px; z-index: 4; transition: 0.15s; cursor: pointer;" onclick="closeKelione()" id="chevron"></i><p style="position: absolute; right: 15px; top: 20px;">~00,00€</p></div>
+        <div id="info"><i class="fa-solid fa-chevron-down" style="font-size: 15px; position: absolute; top: 15px; left: 15px; z-index: 4; transition: 0.15s; cursor: pointer; width: 30px; height: 30px; display: flex; justify-content: center; align-items: center; border-radius: 100%; background-color: #DEDEDE;" onclick="closeKelione()" id="chevron"></i><p style="position: absolute; right: 15px; top: 20px;">~00,00€</p></div>
         <p style="font-size: 25px; font-weight: 600; color: black; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; width: 100%; position: fixed; top: 60px; padding-left: 15px; padding-right: 15px; z-index: 10;" id="kelionesMarsrutasText">Kelionės į ----- maršrutas</p>
 
 
 
         <div id="warningBg" onclick="closeMaps()" style="width: 100%; height: 100%; pointer-events: none; z-index: 19; background-color: rgba(211, 211, 211, 0.75); position: fixed; top: 0; left: 0; right: 0; bottom: 0; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); opacity: 0; display: none;"></div>
-        <div id="openingMaps" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atidaroma <img src="maps.png" alt="Google Maps" style="width: 20px; border-radius: 5px; background-color: white; margin-left: 5px; margin-right: 5px;"> <span style="color: #34a852;">Google Maps</span></div>
+        <div id="openingMaps" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atidaroma <img src="images/maps.png" alt="Google Maps" style="width: 20px; border-radius: 5px; background-color: white; margin-left: 5px; margin-right: 5px;"> <span style="color: #34a852;">Google Maps</span></div>
 
         <div id="warningTicketBg" onclick="closeTicket()" style="width: 100%; height: 100%; pointer-events: none; z-index: 19; background-color: rgba(211, 211, 211, 0.75); position: fixed; top: 0; left: 0; right: 0; bottom: 0; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); opacity: 0; display: none;"></div>
         <div id="warningTicket">
             <p style="font-weight: 600; font-size: 20px; text-align: center; margin-bottom: 15px; color: black;">Bilieto aktyvavimas</p>
-            <p style="font-size: 15px; text-align: center; margin-bottom: 15px; color: black;">Pasirink programą, kurioje nori aktyvuoti savo bilietą.</p>
-            <div style="width: 100%; height: 40px; display: flex; justify-content: space-around; align-items: center;"><button style="width: 45%; height: 40px; display: flex; justify-content: center; align-items: center; border-radius: 25px; border: none; background-color: #f2f2f2; color: #ff0099; border: 2px solid #ff0099; font-size: 15px;" onclick="trafi()" class="warningButton"><img src="trafi.png" alt="Trafi" style="height: 70%; background-color: white; border-radius: 7px; margin-right: 5px;">Trafi</button><button style="width: 45%; height: 40px; display: flex; justify-content: center; align-items: center; border-radius: 25px; border: none; background-color: #f2f2f2; color: #00e500; border: 2px solid #00e500; font-size: 15px;" onclick="mticket()" class="warningButton"><img src="mticket.png" alt="m. Ticket" style="height: 70%; background-color: white; border-radius: 7px; margin-right: 5px;">m. Ticket</button></div>
+            <p style="font-size: 15px; text-align: center; margin-bottom: 15px; color: black;">Pasirink, kur nori aktyvuoti savo bilietą:</p>
+            <div style="width: 100%; height: 50px; display: flex; justify-content: space-around; align-items: center;"><button style="width: 45%; height: 50px; display: flex; justify-content: center; align-items: center; border-radius: 15px; border: none; background-color: #f2f2f2; color: #ff0099; border: 2px solid #ff0099; font-size: 15px;" onclick="trafi()" class="warningButton"><img src="images/trafi.png" alt="Trafi" style="height: 70%; background-color: white; border-radius: 7px; margin-right: 5px;">Trafi</button><button style="width: 45%; height: 50px; display: flex; justify-content: center; align-items: center; border-radius: 15px; border: none; background-color: #f2f2f2; color: #00e500; border: 2px solid #00e500; font-size: 15px;" onclick="mticket()" class="warningButton"><img src="images/mticket.png" alt="m. Ticket" style="height: 70%; background-color: white; border-radius: 7px; margin-right: 5px;">m. Ticket</button></div>
         </div>
         <div id="warningTrafi">
             <p style="font-weight: 600; font-size: 20px; text-align: center; margin-bottom: 15px; color: black;">Bilieto aktyvavimas</p>
-            <p style="font-size: 15px; text-align: center; margin-bottom: 15px; display: flex; justify-content: center; align-items: center; color: black;">Pasirink, kur nori atidaryti <img src="trafi.png" alt="Trafi" style="width: 20px; border-radius: 5px; background-color: white; margin-left: 5px; margin-right: 5px;"> <span style="color: #ff0099;">Trafi</span>.</p>
-            <div style="width: 100%; height: 40px; display: flex; justify-content: space-around; align-items: center;"><button style="width: 45%; height: 40px; display: flex; justify-content: center; align-items: center; border-radius: 25px; border: none; background-color: #f2f2f2; color: #2da951; border: 2px solid #2da951; font-size: 15px;" onclick="trafiGP()" class="warningButton"><img src="googleplay.png" alt="Google Play" style="height: 70%; background-color: white; border-radius: 10px; margin-right: 5px;">Google Play</button><button style="width: 45%; height: 40px; display: flex; justify-content: center; align-items: center; border-radius: 25px; border: none; background-color: #f2f2f2; color: #0c83f8; border: 2px solid #0c83f8; font-size: 15px;" onclick="trafiAS()" class="warningButton"><img src="appstore.png" alt="App Store" style="height: 70%; background-color: white; border-radius: 10px; margin-right: 5px;">App Store</button></div>
+            <p style="font-size: 15px; text-align: center; margin-bottom: 15px; display: flex; justify-content: center; align-items: center; color: black;">Pasirink, kur nori atidaryti <img src="images/trafi.png" alt="Trafi" style="width: 20px; border-radius: 5px; background-color: white; margin-left: 5px; margin-right: 5px;"> <span style="color: #ff0099;">Trafi</span>:</p>
+            <div style="width: 100%; height: 50px; display: flex; justify-content: space-around; align-items: center;"><button style="width: 45%; height: 50px; display: flex; justify-content: center; align-items: center; border-radius: 15px; border: none; background-color: #f2f2f2; color: #2da951; border: 2px solid #2da951; font-size: 15px;" onclick="trafiGP()" class="warningButton"><img src="images/googleplay.png" alt="Google Play" style="height: 70%; background-color: white; border-radius: 10px; margin-right: 5px;">Google Play</button><button style="width: 45%; height: 50px; display: flex; justify-content: center; align-items: center; border-radius: 15px; border: none; background-color: #f2f2f2; color: #0c83f8; border: 2px solid #0c83f8; font-size: 15px;" onclick="trafiAS()" class="warningButton"><img src="images/appstore.png" alt="App Store" style="height: 70%; background-color: white; border-radius: 10px; margin-right: 5px;">App Store</button></div>
         </div>
         <div id="warningMticket">
             <p style="font-weight: 600; font-size: 20px; text-align: center; margin-bottom: 15px; color: black;">Bilieto aktyvavimas</p>
-            <p style="font-size: 15px; text-align: center; margin-bottom: 15px; display: flex; justify-content: center; align-items: center; color: black;">Pasirink, kur nori atidaryti <img src="mticket.png" alt="m. Ticket" style="width: 20px; border-radius: 5px; background-color: white; margin-left: 5px; margin-right: 5px;"> <span style="color: #00e500;">m. Ticket</span>.</p>
-            <div style="width: 100%; height: 40px; display: flex; justify-content: space-around; align-items: center;"><button style="width: 45%; height: 40px; display: flex; justify-content: center; align-items: center; border-radius: 25px; border: none; background-color: #f2f2f2; color: #2da951; border: 2px solid #2da951; font-size: 15px;" onclick="mticketGP()" class="warningButton"><img src="googleplay.png" alt="Google Play" style="height: 70%; background-color: white; border-radius: 10px; margin-right: 5px;">Google Play</button><button style="width: 45%; height: 40px; display: flex; justify-content: center; align-items: center; border-radius: 25px; border: none; background-color: #f2f2f2; color: #0c83f8; border: 2px solid #0c83f8; font-size: 15px;" onclick="mticketAS()" class="warningButton"><img src="appstore.png" alt="App Store" style="height: 70%; background-color: white; border-radius: 10px; margin-right: 5px;">App Store</button></div>
+            <p style="font-size: 15px; text-align: center; margin-bottom: 15px; display: flex; justify-content: center; align-items: center; color: black;">Pasirink, kur nori atidaryti <img src="images/mticket.png" alt="m. Ticket" style="width: 20px; border-radius: 5px; background-color: white; margin-left: 5px; margin-right: 5px;"> <span style="color: #00e500;">m. Ticket</span>:</p>
+            <div style="width: 100%; height: 50px; display: flex; justify-content: space-around; align-items: center;"><button style="width: 45%; height: 50px; display: flex; justify-content: center; align-items: center; border-radius: 15px; border: none; background-color: #f2f2f2; color: #2da951; border: 2px solid #2da951; font-size: 15px;" onclick="mticketGP()" class="warningButton"><img src="images/googleplay.png" alt="Google Play" style="height: 70%; background-color: white; border-radius: 10px; margin-right: 5px;">Google Play</button><button style="width: 45%; height: 50px; display: flex; justify-content: center; align-items: center; border-radius: 15px; border: none; background-color: #f2f2f2; color: #0c83f8; border: 2px solid #0c83f8; font-size: 15px;" onclick="mticketAS()" class="warningButton"><img src="images/appstore.png" alt="App Store" style="height: 70%; background-color: white; border-radius: 10px; margin-right: 5px;">App Store</button></div>
         </div>
-        <div id="openingPlay" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atidaroma <img src="googleplay.png" alt="Google Play" style="width: 20px; border-radius: 5px; background-color: white; margin-left: 5px; margin-right: 5px;"> <span style="color: #2da951;">Google Play</span></div>
-        <div id="openingStore" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atidaroma <img src="appstore.png" alt="App Store" style="width: 20px; border-radius: 5px; background-color: white; margin-left: 5px; margin-right: 5px;"> <span style="color: #0c83f8;">App Store</span></div>
+        <div id="openingPlay" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atidaroma <img src="images/googleplay.png" alt="Google Play" style="width: 20px; border-radius: 5px; background-color: white; margin-left: 5px; margin-right: 5px;"> <span style="color: #2da951;">Google Play</span></div>
+        <div id="openingStore" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atidaroma <img src="images/appstore.png" alt="App Store" style="width: 20px; border-radius: 5px; background-color: white; margin-left: 5px; margin-right: 5px;"> <span style="color: #0c83f8;">App Store</span></div>
 
         <div id="warningStopsBg" onclick="closeStops()" style="width: 100%; height: 100%; pointer-events: none; z-index: 19; background-color: rgba(211, 211, 211, 0.75); position: fixed; top: 0; left: 0; right: 0; bottom: 0; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); opacity: 0; display: none;"></div>
         <div id="warningStops">
@@ -793,13 +793,13 @@
         </div>
         <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
         <p style="font-size: 13px; color: grey; text-align: center; padding-left: 10px; padding-right: 10px; margin-top: 10px;">Paskutinį kartą atnaujinta 0000<span style="color: transparent;">.</span>00<span style="color: transparent;">.</span>00 00:00</p>
-        <p style="font-size: 13px; color: grey; text-align: center; padding-left: 10px; padding-right: 10px; margin-top: 5px; margin-bottom: 10px;">Maršruto laikai nurodyti pagal <img src="judu.png" alt="Judu.lt" style="height: 8px;"></p>
+        <p style="font-size: 13px; color: grey; text-align: center; padding-left: 10px; padding-right: 10px; margin-top: 5px; margin-bottom: 10px;">Maršruto laikai nurodyti pagal <img src="images/judu.png" alt="Judu.lt" style="height: 8px;"></p>
         <div style="width: 10px; height: 1500px; outline: 1px solid red; margin-left: 15px;"></div>
     </div>
 
     <div id="karnavalas">
         <div style="position: absolute; width: 5px; height: 5px; top: 0; left: 0;" id="topInformacija"></div>
-        <div id="informacija"><i class="fa-solid fa-chevron-down" style="font-size: 20px; position: absolute; top: 20px; left: 20px; z-index: 4; transition: 0.15s; cursor: pointer;" onclick="closeKarnavalas()" id="chevronas"></i></div>
+        <div id="informacija"><i class="fa-solid fa-chevron-down" style="font-size: 15px; position: absolute; top: 15px; left: 15px; z-index: 4; transition: 0.15s; cursor: pointer; width: 30px; height: 30px; display: flex; justify-content: center; align-items: center; border-radius: 100%; background-color: #DEDEDE;" onclick="closeKarnavalas()" id="chevronas"></i></div>
         <p style="font-size: 25px; font-weight: 600; color: black; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; width: 100%; position: fixed; top: 60px; padding-left: 15px; padding-right: 15px; z-index: 10;" id="karnavalasText">Karnavalas "Snieguolė ir septyni nykštukai"</p>
         <div style="position: fixed; top: 60px; left: 0; right: 0; width: 100%; height: 60px; z-index: 11; color: lightskyblue; font-size: 17px; display: flex; justify-content: space-around; overflow: visible;">
             <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 4s linear infinite;"></i>
@@ -839,10 +839,11 @@
         </div>
 
         <div style="width: 100%; height: auto; background-color: rgba(242, 242, 242, 0.75); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); position: fixed; bottom: 0; left: 0; right: 0; padding: 15px; display: flex; justify-content: center; align-items: center; flex-direction: column; z-index: 17;" id="scenarijusBackground">
-            <button style="width: 100%; height: 40px; display: flex; justify-content: center; align-items: center; border-radius: 25px; border: none; background-color: transparent; color: black; border: 2px solid black; font-size: 15px;" onclick="scenarijus()" class="warningButton"><i class="fa-solid fa-scroll" style="margin-right: 5px;"></i>Peržiūrėti visą scenarijų</button>
+            <button style="width: 100%; height: 50px; display: flex; justify-content: center; align-items: center; border-radius: 15px; border: none; background-color: transparent; color: black; border: 2px solid black; font-size: 15px;" onclick="scenarijus()" class="warningButton"><i class="fa-solid fa-scroll" style="margin-right: 5px;"></i>Atsisiųsti visą scenarijų</button>
         </div>
-        <div id="scriptDownloadingBackground" style="width: 100%; height: 100%; pointer-events: none; z-index: 19; background-color: rgba(211, 211, 211, 0.75); position: fixed; top: 0; left: 0; right: 0; bottom: 0; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); opacity: 0; display: none;"></div>
+        <div id="downloadingBackground" style="width: 100%; height: 100%; pointer-events: none; z-index: 19; background-color: rgba(211, 211, 211, 0.75); position: fixed; top: 0; left: 0; right: 0; bottom: 0; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); opacity: 0; display: none;"></div>
         <div id="downloadingScript" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "scenarijus.pdf"</div>
+        <div id="downloadingMusic" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "muzika.mp3"</div>
 
 
 
@@ -881,9 +882,9 @@
         <div id="papildomai">
             <i class="fa-regular fa-circle-dot" style="position: absolute; width: 25px; height: 100%; border-radius: 100%; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
             <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Papildomai:</p>
-            <button style="width: 95%; height: 30px; display: flex; justify-content: center; align-items: center; border-radius: 25px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px;" class="warningButton"><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Muzika</button>
-            <button style="width: 95%; height: 30px; display: flex; justify-content: center; align-items: center; border-radius: 25px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 5px;" class="warningButton"><i class="fa-solid fa-percent" style="margin-right: 5px;"></i>Funkcija</button>
-            <button style="width: 95%; height: 30px; display: flex; justify-content: center; align-items: center; border-radius: 25px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 5px;" class="warningButton"><i class="fa-solid fa-clapperboard" style="margin-right: 5px;"></i>Veiksmas</button>
+            <button style="width: 95%; height: 35px; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px;" class="warningButton" onclick="parsisiustiMuzika()"><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti muzikos įrašus</button>
+            <button style="width: 95%; height: 35px; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 5px;" class="warningButton"><i class="fa-solid fa-percent" style="margin-right: 5px;"></i>Funkcija</button>
+            <button style="width: 95%; height: 35px; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 5px;" class="warningButton"><i class="fa-solid fa-clapperboard" style="margin-right: 5px;"></i>Veiksmas</button>
         </div>
         <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
     </div>
@@ -1122,21 +1123,40 @@
 
 
         function scenarijus() {
-            document.getElementById("scriptDownloadingBackground").style.display = "block";
+            document.getElementById("downloadingBackground").style.display = "block";
             document.getElementById("body").style.overflow = "hidden";
             setTimeout(() => {
                 document.getElementById("downloadingScript").style.bottom = "0";
-                document.getElementById("scriptDownloadingBackground").style.opacity = "1";
+                document.getElementById("downloadingBackground").style.opacity = "1";
             }, 10);
             setTimeout(() => {
                 
             }, 1010);
             setTimeout(() => {
                 document.getElementById("downloadingScript").style.bottom = "-100%";
-                document.getElementById("scriptDownloadingBackground").style.opacity = "0";
+                document.getElementById("downloadingBackground").style.opacity = "0";
             }, 6010);
             setTimeout(() => {
-                document.getElementById("scriptDownloadingBackground").style.display = "none";
+                document.getElementById("downloadingBackground").style.display = "none";
+                document.getElementById("body").style.overflow = "scroll";
+            }, 6310);
+        }
+        function parsisiustiMuzika() {
+            document.getElementById("downloadingBackground").style.display = "block";
+            document.getElementById("body").style.overflow = "hidden";
+            setTimeout(() => {
+                document.getElementById("downloadingMusic").style.bottom = "0";
+                document.getElementById("downloadingBackground").style.opacity = "1";
+            }, 10);
+            setTimeout(() => {
+                
+            }, 1010);
+            setTimeout(() => {
+                document.getElementById("downloadingMusic").style.bottom = "-100%";
+                document.getElementById("downloadingBackground").style.opacity = "0";
+            }, 6010);
+            setTimeout(() => {
+                document.getElementById("downloadingBackground").style.display = "none";
                 document.getElementById("body").style.overflow = "scroll";
             }, 6310);
         }
