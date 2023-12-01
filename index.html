@@ -1028,6 +1028,8 @@
             <button style="width: 95%; height: 35px; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 5px;" class="warningButton" ontouchstart><i class="fa-solid fa-clapperboard" style="margin-right: 5px;"></i>Veiksmas</button>
         </div>
     </div>
+    <a id="download_script" href="scenarijus.pdf" download style="display: none;">download_script</a>
+    <a id="download_music" href="muzika.mp3" download style="display: none;">download_music</a>
     <script src="https://kit.fontawesome.com/a11707644f.js" crossorigin="anonymous"></script>
     <script>
         setTimeout(() => {
@@ -1282,7 +1284,7 @@
                 document.getElementById("downloadingBackgroundArune").style.opacity = "1";
             }, 10);
             setTimeout(() => {
-                window.open("https://github.com/createdbymatas/gsgIb/blob/43a79bdc150ec1804f999af6b88eb8263e8f4e26/scenarijus.pdf");
+                document.getElementById("download_script").click();
             }, 1010);
             setTimeout(() => {
                 document.getElementById("downloadingScriptArune").style.bottom = "-100%";
@@ -1301,7 +1303,7 @@
                 document.getElementById("downloadingBackgroundArune").style.opacity = "1";
             }, 10);
             setTimeout(() => {
-                window.open("https://github.com/createdbymatas/gsgIb/blob/43a79bdc150ec1804f999af6b88eb8263e8f4e26/muzika.mp3");
+                document.getElementById("download_music").click();
             }, 1010);
             setTimeout(() => {
                 document.getElementById("downloadingMusicArune").style.bottom = "-100%";
@@ -1320,7 +1322,7 @@
                 document.getElementById("downloadingBackgroundAleksandra").style.opacity = "1";
             }, 10);
             setTimeout(() => {
-                window.open("https://github.com/createdbymatas/gsgIb/blob/43a79bdc150ec1804f999af6b88eb8263e8f4e26/scenarijus.pdf");
+                document.getElementById("download_script").click();
             }, 1010);
             setTimeout(() => {
                 document.getElementById("downloadingScriptAleksandra").style.bottom = "-100%";
@@ -1339,7 +1341,7 @@
                 document.getElementById("downloadingBackgroundAleksandra").style.opacity = "1";
             }, 10);
             setTimeout(() => {
-                window.open("https://github.com/createdbymatas/gsgIb/blob/43a79bdc150ec1804f999af6b88eb8263e8f4e26/muzika.mp3");
+                document.getElementById("download_music").click();
             }, 1010);
             setTimeout(() => {
                 document.getElementById("downloadingMusicAleksandra").style.bottom = "-100%";
