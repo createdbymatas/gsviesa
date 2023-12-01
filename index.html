@@ -475,6 +475,36 @@
         #chevronArune:active{
             opacity: 0.2;
         }
+        #aleksandra{
+            width: 100%;
+            height: 100%;
+            background-color: #f2f2f2;
+            transition: 0.2s;
+            padding-bottom: 80px;
+            overflow: hidden;
+            overflow-y: scroll;
+            padding-top: 100vh;
+            display: none;
+        }
+        #infoAleksandra{
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(242, 242, 242, 0.75);
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+            color: black;
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            z-index: 10;
+        }
+        #chevronAleksandra:active{
+            opacity: 0.2;
+        }
         .vardas{
             width: 100%;
             height: auto;
@@ -901,6 +931,103 @@
             <button style="width: 95%; height: 35px; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 5px;" class="warningButton" ontouchstart><i class="fa-solid fa-clapperboard" style="margin-right: 5px;"></i>Veiksmas</button>
         </div>
     </div>
+    <div id="aleksandra">
+        <div style="position: absolute; width: 5px; height: 5px; top: 0; left: 0;" id="topInfoAleksandra"></div>
+        <div id="infoAleksandra"><i class="fa-solid fa-chevron-down" style="font-size: 15px; position: absolute; top: 15px; left: 15px; z-index: 4; transition: 0.15s; cursor: pointer; width: 30px; height: 30px; display: flex; justify-content: center; align-items: center; border-radius: 100%; background-color: #DEDEDE;" onclick="closeAleksandra()" id="chevronAleksandra" ontouchstart></i></div>
+        <p style="font-size: 25px; font-weight: 600; color: black; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; width: 100%; position: fixed; top: 60px; padding-left: 15px; padding-right: 15px; z-index: 10;" id="aleksandraKarnavalasText">Karnavalas "Snieguolė ir septyni nykštukai"</p>
+        <div style="position: fixed; top: 60px; left: 0; right: 0; width: 100%; height: 60px; z-index: 11; color: lightskyblue; font-size: 17px; display: flex; justify-content: space-around; overflow: visible;">
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 4s linear infinite;"></i>
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 2s linear infinite; animation-delay: 1s;"></i>
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 3s linear infinite; animation-delay: 0.5s;"></i>
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 2.5s linear infinite;"></i>
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 3.5s linear infinite; animation-delay: 1.5s;"></i>
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 2s linear infinite;"></i>
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 1.5s linear infinite; animation-delay: 1;"></i>
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 3s linear infinite; animation-delay: 2s;"></i>
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 2s linear infinite; animation-delay: 0.5s;"></i>
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 3.5s linear infinite; animation-delay: 0.5s;"></i>
+        </div>
+        <div style="position: fixed; top: -5px; left: 0; right: 0; width: 100%; height: 5px; z-index: 18; color: lightskyblue; font-size: 17px; display: flex; justify-content: center; align-items: flex-end; overflow: visible;">
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite;"></div>
+        </div>
+        <div style="position: fixed; bottom: -5px; left: 0; right: 0; width: 100%; height: 5px; z-index: 18; color: lightskyblue; font-size: 17px; display: flex; justify-content: center; align-items: flex-start; overflow: visible;">
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite; animation-delay: 0.5s;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite; animation-delay: 0.5s;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite; animation-delay: 0.5s;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite; animation-delay: 0.5s;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite; animation-delay: 0.5s;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite; animation-delay: 0.5s;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite; animation-delay: 0.5s;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite; animation-delay: 0.5s;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite; animation-delay: 0.5s;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite; animation-delay: 0.5s;"></div>
+        </div>
+
+        <div style="width: 100%; height: auto; background-color: rgba(242, 242, 242, 0.75); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); position: fixed; bottom: 0; left: 0; right: 0; padding: 15px; display: flex; justify-content: center; align-items: center; flex-direction: column; z-index: 17; box-shadow: 0 0 10px lightgrey; border-radius: 25px 25px 0 0;" id="scenarijusAleksandraBackground">
+            <button style="width: 100%; height: 50px; display: flex; justify-content: center; align-items: center; border-radius: 15px; border: none; background-color: transparent; color: black; border: 2px solid black; font-size: 15px;" onclick="scenarijusAleksandra()" class="warningButton" ontouchstart><i class="fa-solid fa-scroll" style="margin-right: 5px;"></i>Atsisiųsti visą scenarijų</button>
+        </div>
+        <div id="downloadingBackgroundAleksandra" style="width: 100%; height: 100%; pointer-events: none; z-index: 19; background-color: rgba(211, 211, 211, 0.75); position: fixed; top: 0; left: 0; right: 0; bottom: 0; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); opacity: 0; display: none;"></div>
+        <div id="downloadingScriptAleksandra" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "scenarijus.pdf"</div>
+        <div id="downloadingMusicAleksandra" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "muzika.mp3"</div>
+
+
+
+        <div class="vardas" id="vardasAleksandra">
+            <i class="fa-regular fa-user-circle" style="position: absolute; width: 25px; height: 25px; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 12.5px; left: 27.5px; font-size: 20px; color: black;"></i>
+            <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Karalienė/ragana</p>
+            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Aleksandra</p>
+        </div>
+        <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
+        <div class="apie">
+            <i class="fa-regular fa-circle-question" style="position: absolute; width: 25px; height: 100%; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
+            <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Apie rolę:</p>
+            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus. Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus. Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus.</p>
+        </div>
+        <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
+        <div class="pasiruosimas">
+            <i class="fa-solid fa-suitcase" style="position: absolute; width: 25px; height: 100%; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
+            <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Pasiruošti:</p>
+            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus. Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus. Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus.</p>
+            <p style="color: black; font-size: 13px; font-weight: 400; width: 100%; position: relative; margin-top: 7px; padding-left: 17px;"><i class="fa-solid fa-asterisk" style="position: absolute; left: 0; border: 1px solid black; font-weight: 600; width: 13px; height: 13px; border-radius: 100%; display: flex; justify-content: center; align-items: center; font-size: 10px; margin-top: 1px;"></i> Pažymėti daiktai bus paruošti/parūpinti.</p>
+        </div>
+        <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
+        <div class="apranga">
+            <i class="fa-solid fa-shirt" style="position: absolute; width: 25px; height: 100%; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
+            <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Apranga:</p>
+            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus. Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus. Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus.</p>
+        </div>
+        <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
+        <div class="zodziai">
+            <i class="fa-regular fa-comments" style="position: absolute; width: 25px; height: 100%; border-radius: 25px;display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
+            <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Žodžiai:</p>
+            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">"Taip atrodys tekstas." <br> "Čia yra tik pavyzdys." <br> "Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus."</p>
+            <p style="color: black; font-size: 13px; font-weight: 400; width: 100%; position: relative; margin-top: 7px; padding-left: 17px;"><span style="position: absolute; left: 0; border: 1px solid black; font-weight: 600; width: 13px; height: 13px; border-radius: 100%; display: flex; justify-content: center; align-items: center; font-size: 10px; margin-top: 1px;">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima perpasakoti kitaip.</p>
+        </div>
+        <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
+        <div class="vaidinimas">
+            <i class="fa-solid fa-people-arrows" style="position: absolute; width: 25px; height: 100%; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
+            <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Vaidinimo eiga:</p>
+            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus. Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus. Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus.</p>
+            <p style="color: black; font-size: 13px; font-weight: 400; width: 100%; position: relative; margin-top: 7px; padding-left: 17px;"><span style="position: absolute; left: 0; border: 1px solid black; font-weight: 600; width: 13px; height: 13px; border-radius: 100%; display: flex; justify-content: center; align-items: center; font-size: 10px; margin-top: 1px;">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
+        </div>
+        <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
+        <div class="papildomai">
+            <i class="fa-regular fa-circle-dot" style="position: absolute; width: 25px; height: 100%; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
+            <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Papildomai:</p>
+            <button style="width: 95%; height: 35px; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px;" class="warningButton" onclick="parsisiustiMuzikaAleksandra()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti muzikos įrašus</button>
+            <button style="width: 95%; height: 35px; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 5px;" class="warningButton" ontouchstart><i class="fa-solid fa-percent" style="margin-right: 5px;"></i>Funkcija</button>
+            <button style="width: 95%; height: 35px; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 5px;" class="warningButton" ontouchstart><i class="fa-solid fa-clapperboard" style="margin-right: 5px;"></i>Veiksmas</button>
+        </div>
+    </div>
     <script src="https://kit.fontawesome.com/a11707644f.js" crossorigin="anonymous"></script>
     <script>
         setTimeout(() => {
@@ -924,6 +1051,12 @@
                 document.getElementById("chevronArune").style.opacity = "0";
                 document.getElementById("vardasArune").style.marginTop = "75px";
                 document.getElementById("infoArune").style.boxShadow = "0 0 10px lightgrey";
+
+                document.getElementById("aleksandraKarnavalasText").style.fontSize = "20px";
+                document.getElementById("aleksandraKarnavalasText").style.top = "17px";
+                document.getElementById("chevronAleksandra").style.opacity = "0";
+                document.getElementById("vardasAleksandra").style.marginTop = "75px";
+                document.getElementById("infoAleksandra").style.boxShadow = "0 0 10px lightgrey";
             }
             else {
                 document.getElementById("kelionesMarsrutasText").style.fontSize = "25px";
@@ -942,6 +1075,14 @@
                 }, 100);
                 document.getElementById("vardasArune").style.marginTop = "110px";
                 document.getElementById("infoArune").style.boxShadow = "none";
+
+                document.getElementById("aleksandraKarnavalasText").style.fontSize = "25px";
+                document.getElementById("aleksandraKarnavalasText").style.top = "60px";
+                setTimeout(() => {
+                    document.getElementById("chevronAleksandra").style.opacity = "1";
+                }, 100);
+                document.getElementById("vardasAleksandra").style.marginTop = "110px";
+                document.getElementById("infoAleksandra").style.boxShadow = "none";
             }
         }
 
@@ -1168,6 +1309,44 @@
             }, 6010);
             setTimeout(() => {
                 document.getElementById("downloadingBackgroundArune").style.display = "none";
+                document.getElementById("body").style.overflow = "scroll";
+            }, 6310);
+        }
+        function scenarijusAleksandra() {
+            document.getElementById("downloadingBackgroundAleksandra").style.display = "block";
+            document.getElementById("body").style.overflow = "hidden";
+            setTimeout(() => {
+                document.getElementById("downloadingScriptAleksandra").style.bottom = "0";
+                document.getElementById("downloadingBackgroundAleksandra").style.opacity = "1";
+            }, 10);
+            setTimeout(() => {
+                window.open("scenarijus.pdf");
+            }, 1010);
+            setTimeout(() => {
+                document.getElementById("downloadingScriptAleksandra").style.bottom = "-100%";
+                document.getElementById("downloadingBackgroundAleksandra").style.opacity = "0";
+            }, 6010);
+            setTimeout(() => {
+                document.getElementById("downloadingBackgroundAleksandra").style.display = "none";
+                document.getElementById("body").style.overflow = "scroll";
+            }, 6310);
+        }
+        function parsisiustiMuzikaAleksandra() {
+            document.getElementById("downloadingBackgroundAleksandra").style.display = "block";
+            document.getElementById("body").style.overflow = "hidden";
+            setTimeout(() => {
+                document.getElementById("downloadingMusicAleksandra").style.bottom = "0";
+                document.getElementById("downloadingBackgroundAleksandra").style.opacity = "1";
+            }, 10);
+            setTimeout(() => {
+                window.open("muzika.mp3");
+            }, 1010);
+            setTimeout(() => {
+                document.getElementById("downloadingMusicAleksandra").style.bottom = "-100%";
+                document.getElementById("downloadingBackgroundAleksandra").style.opacity = "0";
+            }, 6010);
+            setTimeout(() => {
+                document.getElementById("downloadingBackgroundAleksandra").style.display = "none";
                 document.getElementById("body").style.overflow = "scroll";
             }, 6310);
         }
@@ -1568,7 +1747,7 @@
         }
         function check(form)
         {
-                if(form.pin.value == "111111")
+                if(form.pin.value == "adminas")
                 {
                     document.cookie = "kelioneI=adminas";
                 document.getElementById("loading").style.display = "flex";
@@ -1628,6 +1807,43 @@
                 }, 3600);
                 setTimeout(() => {
                     document.getElementById("arune").style.paddingTop = "0";
+                }, 3620);
+                setTimeout(() => {
+                    inputas = ""
+                    document.getElementById("kodas").value = '';
+                    document.getElementById("taskelis1").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis2").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis3").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis4").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis5").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis6").style.backgroundColor = "transparent";
+                    document.getElementById("loading").style.display = "none";
+                    document.getElementById("body").style.overflow = "scroll";
+                }, 3900);
+          }
+          else if(form.pin.value == "000001")
+                {
+                    document.cookie = "aleksandra=karaliene/ragana";
+                document.getElementById("loading").style.display = "flex";
+                document.getElementById("ivestiKoda").style.opacity = "0.5";
+                document.querySelector('#topInfo').scrollIntoView({
+                    behavior: 'smooth'
+                });
+                document.getElementById("istrinimas").style.color = "transparent";
+                document.getElementById("istrinimas").style.pointerEvents = "none";
+                setTimeout(() => {
+                    document.getElementById("keypad").style.opacity = "0.5";
+                }, 150);
+                setTimeout(() => {
+                    document.getElementById("keypad").style.opacity = "1";
+                    document.getElementById("ivestiKoda").style.opacity = "1";
+                    document.getElementById("screen").style.top = "-100%";
+                    document.getElementById("screen").style.backgroundColor = "transparent";
+                    document.getElementById("display").style.top = "-100%";
+                    document.getElementById("aleksandra").style.display = "block";
+                }, 3600);
+                setTimeout(() => {
+                    document.getElementById("aleksandra").style.paddingTop = "0";
                 }, 3620);
                 setTimeout(() => {
                     inputas = ""
@@ -1711,8 +1927,25 @@
                 document.getElementById("arune").style.paddingTop = "100vh";
             }
         }
+        let aleksandra = getCookie("aleksandra");
+        if (aleksandra != "") {
+            document.getElementById("aleksandra").style.display = "block";
+            document.getElementById("aleksandra").style.paddingTop = "0";
+            setTimeout(() => {
+                document.querySelector('#topInfoAleksandra').scrollIntoView({
+                behavior: 'smooth'});
+            }, 500);
+        }
+        else {
+            document.getElementById("aleksandra").style.display = "none";
+            document.getElementById("aleksandra").style.paddingTop = "100vh";
+            if (aleksandra != "" && aleksandra != null) {
+                document.getElementById("aleksandra").style.display = "none";
+                document.getElementById("aleksandra").style.paddingTop = "100vh";
+            }
+        }
 
-        if (kelioneI != "" || arune != "") {
+        if (kelioneI != "" || arune != "" || aleksandra != "") {
             document.getElementById("screen").style.top = "-100%";
             document.getElementById("screen").style.backgroundColor = "transparent";
             document.getElementById("display").style.top = "-100%";
@@ -1723,7 +1956,7 @@
             document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
             document.getElementById("display").style.top = "0";
             document.getElementById("body").style.overflow = "hidden";
-            if (kelioneI != "" && kelioneI != null || arune != "" && arune != null) {
+            if (kelioneI != "" && kelioneI != null || arune != "" && arune != null || aleksandra != "" && aleksandra != null) {
                 document.getElementById("screen").style.top = "0";
                 document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
                 document.getElementById("display").style.top = "0";
@@ -1759,6 +1992,21 @@
                 document.getElementById("body").style.overflow = "hidden";
                 document.getElementById("arune").style.display = "none";
                 document.getElementById("chevronArune").style.pointerEvents = "all";
+            }, 310);
+        }
+        function closeAleksandra() {
+            document.cookie = "aleksandra=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
+            document.getElementById("chevronAleksandra").style.pointerEvents = "none";
+            setTimeout(() => {
+                document.getElementById("screen").style.top = "0";
+                document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
+                document.getElementById("display").style.top = "0";
+                document.getElementById("aleksandra").style.paddingTop = "100vh";
+            }, 10);
+            setTimeout(() => {
+                document.getElementById("body").style.overflow = "hidden";
+                document.getElementById("aleksandra").style.display = "none";
+                document.getElementById("chevronAleksandra").style.pointerEvents = "all";
             }, 310);
         }
     </script>
