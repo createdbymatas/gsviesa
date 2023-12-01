@@ -505,6 +505,96 @@
         #chevronAleksandra:active{
             opacity: 0.2;
         }
+        #meta{
+            width: 100%;
+            height: 100%;
+            background-color: #f2f2f2;
+            transition: 0.2s;
+            padding-bottom: 80px;
+            overflow: hidden;
+            overflow-y: scroll;
+            padding-top: 100vh;
+            display: none;
+        }
+        #infoMeta{
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(242, 242, 242, 0.75);
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+            color: black;
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            z-index: 10;
+        }
+        #chevronMeta:active{
+            opacity: 0.2;
+        }
+        #norbertas{
+            width: 100%;
+            height: 100%;
+            background-color: #f2f2f2;
+            transition: 0.2s;
+            padding-bottom: 80px;
+            overflow: hidden;
+            overflow-y: scroll;
+            padding-top: 100vh;
+            display: none;
+        }
+        #infoNorbertas{
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(242, 242, 242, 0.75);
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+            color: black;
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            z-index: 10;
+        }
+        #chevronNorbertas:active{
+            opacity: 0.2;
+        }
+        #nojus{
+            width: 100%;
+            height: 100%;
+            background-color: #f2f2f2;
+            transition: 0.2s;
+            padding-bottom: 80px;
+            overflow: hidden;
+            overflow-y: scroll;
+            padding-top: 100vh;
+            display: none;
+        }
+        #infoNojus{
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(242, 242, 242, 0.75);
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+            color: black;
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            z-index: 10;
+        }
+        #chevronNojus:active{
+            opacity: 0.2;
+        }
         .vardas{
             width: 100%;
             height: auto;
@@ -1028,6 +1118,300 @@
             <button style="width: 95%; height: 35px; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 5px;" class="warningButton" ontouchstart><i class="fa-solid fa-clapperboard" style="margin-right: 5px;"></i>Veiksmas</button>
         </div>
     </div>
+    <div id="meta">
+        <div style="position: absolute; width: 5px; height: 5px; top: 0; left: 0;" id="topInfoMeta"></div>
+        <div id="infoMeta"><i class="fa-solid fa-chevron-down" style="font-size: 15px; position: absolute; top: 15px; left: 15px; z-index: 4; transition: 0.15s; cursor: pointer; width: 30px; height: 30px; display: flex; justify-content: center; align-items: center; border-radius: 100%; background-color: #DEDEDE;" onclick="closeMeta()" id="chevronMeta" ontouchstart></i></div>
+        <p style="font-size: 25px; font-weight: 600; color: black; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; width: 100%; position: fixed; top: 60px; padding-left: 15px; padding-right: 15px; z-index: 10;" id="metaKarnavalasText">Karnavalas "Snieguolė ir septyni nykštukai"</p>
+        <div style="position: fixed; top: 60px; left: 0; right: 0; width: 100%; height: 60px; z-index: 11; color: lightskyblue; font-size: 17px; display: flex; justify-content: space-around; overflow: visible;">
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 4s linear infinite;"></i>
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 2s linear infinite; animation-delay: 1s;"></i>
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 3s linear infinite; animation-delay: 0.5s;"></i>
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 2.5s linear infinite;"></i>
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 3.5s linear infinite; animation-delay: 1.5s;"></i>
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 2s linear infinite;"></i>
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 1.5s linear infinite; animation-delay: 1;"></i>
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 3s linear infinite; animation-delay: 2s;"></i>
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 2s linear infinite; animation-delay: 0.5s;"></i>
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 3.5s linear infinite; animation-delay: 0.5s;"></i>
+        </div>
+        <div style="position: fixed; top: -5px; left: 0; right: 0; width: 100%; height: 5px; z-index: 18; color: lightskyblue; font-size: 17px; display: flex; justify-content: center; align-items: flex-end; overflow: visible;">
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite;"></div>
+        </div>
+        <div style="position: fixed; bottom: -5px; left: 0; right: 0; width: 100%; height: 5px; z-index: 18; color: lightskyblue; font-size: 17px; display: flex; justify-content: center; align-items: flex-start; overflow: visible;">
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite; animation-delay: 0.5s;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite; animation-delay: 0.5s;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite; animation-delay: 0.5s;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite; animation-delay: 0.5s;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite; animation-delay: 0.5s;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite; animation-delay: 0.5s;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite; animation-delay: 0.5s;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite; animation-delay: 0.5s;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite; animation-delay: 0.5s;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite; animation-delay: 0.5s;"></div>
+        </div>
+
+        <div style="width: 100%; height: auto; background-color: rgba(242, 242, 242, 0.75); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); position: fixed; bottom: 0; left: 0; right: 0; padding: 15px; display: flex; justify-content: center; align-items: center; flex-direction: column; z-index: 17; box-shadow: 0 0 10px lightgrey; border-radius: 25px 25px 0 0;" id="scenarijusMetaBackground">
+            <button style="width: 100%; height: 50px; display: flex; justify-content: center; align-items: center; border-radius: 15px; border: none; background-color: transparent; color: black; border: 2px solid black; font-size: 15px;" onclick="scenarijusMeta()" class="warningButton" ontouchstart><i class="fa-solid fa-scroll" style="margin-right: 5px;"></i>Atsisiųsti visą scenarijų</button>
+        </div>
+        <div id="downloadingBackgroundMeta" style="width: 100%; height: 100%; pointer-events: none; z-index: 19; background-color: rgba(211, 211, 211, 0.75); position: fixed; top: 0; left: 0; right: 0; bottom: 0; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); opacity: 0; display: none;"></div>
+        <div id="downloadingScriptMeta" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "scenarijus.pdf"</div>
+        <div id="downloadingMusicMeta" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "muzika.mp3"</div>
+
+
+
+        <div class="vardas" id="vardasMeta">
+            <i class="fa-regular fa-user-circle" style="position: absolute; width: 25px; height: 25px; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 12.5px; left: 27.5px; font-size: 20px; color: black;"></i>
+            <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Medžiotojas</p>
+            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Mėta</p>
+        </div>
+        <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
+        <div class="apie">
+            <i class="fa-regular fa-circle-question" style="position: absolute; width: 25px; height: 100%; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
+            <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Apie rolę:</p>
+            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus. Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus. Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus.</p>
+        </div>
+        <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
+        <div class="pasiruosimas">
+            <i class="fa-solid fa-suitcase" style="position: absolute; width: 25px; height: 100%; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
+            <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Pasiruošti:</p>
+            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus. Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus. Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus.</p>
+            <p style="color: black; font-size: 13px; font-weight: 400; width: 100%; position: relative; margin-top: 7px; padding-left: 17px;"><i class="fa-solid fa-asterisk" style="position: absolute; left: 0; border: 1px solid black; font-weight: 600; width: 13px; height: 13px; border-radius: 100%; display: flex; justify-content: center; align-items: center; font-size: 10px; margin-top: 1px;"></i> Pažymėti daiktai bus paruošti/parūpinti.</p>
+        </div>
+        <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
+        <div class="apranga">
+            <i class="fa-solid fa-shirt" style="position: absolute; width: 25px; height: 100%; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
+            <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Apranga:</p>
+            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus. Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus. Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus.</p>
+        </div>
+        <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
+        <div class="zodziai">
+            <i class="fa-regular fa-comments" style="position: absolute; width: 25px; height: 100%; border-radius: 25px;display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
+            <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Žodžiai:</p>
+            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">"Taip atrodys tekstas." <br> "Čia yra tik pavyzdys." <br> "Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus."</p>
+            <p style="color: black; font-size: 13px; font-weight: 400; width: 100%; position: relative; margin-top: 7px; padding-left: 17px;"><span style="position: absolute; left: 0; border: 1px solid black; font-weight: 600; width: 13px; height: 13px; border-radius: 100%; display: flex; justify-content: center; align-items: center; font-size: 10px; margin-top: 1px;">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima perpasakoti kitaip.</p>
+        </div>
+        <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
+        <div class="vaidinimas">
+            <i class="fa-solid fa-people-arrows" style="position: absolute; width: 25px; height: 100%; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
+            <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Vaidinimo eiga:</p>
+            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus. Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus. Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus.</p>
+            <p style="color: black; font-size: 13px; font-weight: 400; width: 100%; position: relative; margin-top: 7px; padding-left: 17px;"><span style="position: absolute; left: 0; border: 1px solid black; font-weight: 600; width: 13px; height: 13px; border-radius: 100%; display: flex; justify-content: center; align-items: center; font-size: 10px; margin-top: 1px;">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
+        </div>
+        <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
+        <div class="papildomai">
+            <i class="fa-regular fa-circle-dot" style="position: absolute; width: 25px; height: 100%; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
+            <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Papildomai:</p>
+            <button style="width: 95%; height: 35px; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px;" class="warningButton" onclick="parsisiustiMuzikaMeta()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti muzikos įrašus</button>
+            <button style="width: 95%; height: 35px; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 5px;" class="warningButton" ontouchstart><i class="fa-solid fa-percent" style="margin-right: 5px;"></i>Funkcija</button>
+            <button style="width: 95%; height: 35px; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 5px;" class="warningButton" ontouchstart><i class="fa-solid fa-clapperboard" style="margin-right: 5px;"></i>Veiksmas</button>
+        </div>
+    </div>
+    <div id="norbertas">
+        <div style="position: absolute; width: 5px; height: 5px; top: 0; left: 0;" id="topInfoNorbertas"></div>
+        <div id="infoNorbertas"><i class="fa-solid fa-chevron-down" style="font-size: 15px; position: absolute; top: 15px; left: 15px; z-index: 4; transition: 0.15s; cursor: pointer; width: 30px; height: 30px; display: flex; justify-content: center; align-items: center; border-radius: 100%; background-color: #DEDEDE;" onclick="closeNorbertas()" id="chevronNorbertas" ontouchstart></i></div>
+        <p style="font-size: 25px; font-weight: 600; color: black; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; width: 100%; position: fixed; top: 60px; padding-left: 15px; padding-right: 15px; z-index: 10;" id="norbertasKarnavalasText">Karnavalas "Snieguolė ir septyni nykštukai"</p>
+        <div style="position: fixed; top: 60px; left: 0; right: 0; width: 100%; height: 60px; z-index: 11; color: lightskyblue; font-size: 17px; display: flex; justify-content: space-around; overflow: visible;">
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 4s linear infinite;"></i>
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 2s linear infinite; animation-delay: 1s;"></i>
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 3s linear infinite; animation-delay: 0.5s;"></i>
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 2.5s linear infinite;"></i>
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 3.5s linear infinite; animation-delay: 1.5s;"></i>
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 2s linear infinite;"></i>
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 1.5s linear infinite; animation-delay: 1;"></i>
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 3s linear infinite; animation-delay: 2s;"></i>
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 2s linear infinite; animation-delay: 0.5s;"></i>
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 3.5s linear infinite; animation-delay: 0.5s;"></i>
+        </div>
+        <div style="position: fixed; top: -5px; left: 0; right: 0; width: 100%; height: 5px; z-index: 18; color: lightskyblue; font-size: 17px; display: flex; justify-content: center; align-items: flex-end; overflow: visible;">
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite;"></div>
+        </div>
+        <div style="position: fixed; bottom: -5px; left: 0; right: 0; width: 100%; height: 5px; z-index: 18; color: lightskyblue; font-size: 17px; display: flex; justify-content: center; align-items: flex-start; overflow: visible;">
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite; animation-delay: 0.5s;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite; animation-delay: 0.5s;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite; animation-delay: 0.5s;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite; animation-delay: 0.5s;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite; animation-delay: 0.5s;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite; animation-delay: 0.5s;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite; animation-delay: 0.5s;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite; animation-delay: 0.5s;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite; animation-delay: 0.5s;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite; animation-delay: 0.5s;"></div>
+        </div>
+
+        <div style="width: 100%; height: auto; background-color: rgba(242, 242, 242, 0.75); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); position: fixed; bottom: 0; left: 0; right: 0; padding: 15px; display: flex; justify-content: center; align-items: center; flex-direction: column; z-index: 17; box-shadow: 0 0 10px lightgrey; border-radius: 25px 25px 0 0;" id="scenarijusNorbertasBackground">
+            <button style="width: 100%; height: 50px; display: flex; justify-content: center; align-items: center; border-radius: 15px; border: none; background-color: transparent; color: black; border: 2px solid black; font-size: 15px;" onclick="scenarijusNorbertas()" class="warningButton" ontouchstart><i class="fa-solid fa-scroll" style="margin-right: 5px;"></i>Atsisiųsti visą scenarijų</button>
+        </div>
+        <div id="downloadingBackgroundNorbertas" style="width: 100%; height: 100%; pointer-events: none; z-index: 19; background-color: rgba(211, 211, 211, 0.75); position: fixed; top: 0; left: 0; right: 0; bottom: 0; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); opacity: 0; display: none;"></div>
+        <div id="downloadingScriptNorbertas" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "scenarijus.pdf"</div>
+        <div id="downloadingMusicNorbertas" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "muzika.mp3"</div>
+
+
+
+        <div class="vardas" id="vardasNorbertas">
+            <i class="fa-regular fa-user-circle" style="position: absolute; width: 25px; height: 25px; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 12.5px; left: 27.5px; font-size: 20px; color: black;"></i>
+            <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Princas</p>
+            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Norbertas</p>
+        </div>
+        <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
+        <div class="apie">
+            <i class="fa-regular fa-circle-question" style="position: absolute; width: 25px; height: 100%; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
+            <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Apie rolę:</p>
+            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus. Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus. Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus.</p>
+        </div>
+        <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
+        <div class="pasiruosimas">
+            <i class="fa-solid fa-suitcase" style="position: absolute; width: 25px; height: 100%; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
+            <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Pasiruošti:</p>
+            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus. Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus. Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus.</p>
+            <p style="color: black; font-size: 13px; font-weight: 400; width: 100%; position: relative; margin-top: 7px; padding-left: 17px;"><i class="fa-solid fa-asterisk" style="position: absolute; left: 0; border: 1px solid black; font-weight: 600; width: 13px; height: 13px; border-radius: 100%; display: flex; justify-content: center; align-items: center; font-size: 10px; margin-top: 1px;"></i> Pažymėti daiktai bus paruošti/parūpinti.</p>
+        </div>
+        <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
+        <div class="apranga">
+            <i class="fa-solid fa-shirt" style="position: absolute; width: 25px; height: 100%; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
+            <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Apranga:</p>
+            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus. Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus. Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus.</p>
+        </div>
+        <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
+        <div class="zodziai">
+            <i class="fa-regular fa-comments" style="position: absolute; width: 25px; height: 100%; border-radius: 25px;display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
+            <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Žodžiai:</p>
+            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">"Taip atrodys tekstas." <br> "Čia yra tik pavyzdys." <br> "Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus."</p>
+            <p style="color: black; font-size: 13px; font-weight: 400; width: 100%; position: relative; margin-top: 7px; padding-left: 17px;"><span style="position: absolute; left: 0; border: 1px solid black; font-weight: 600; width: 13px; height: 13px; border-radius: 100%; display: flex; justify-content: center; align-items: center; font-size: 10px; margin-top: 1px;">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima perpasakoti kitaip.</p>
+        </div>
+        <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
+        <div class="vaidinimas">
+            <i class="fa-solid fa-people-arrows" style="position: absolute; width: 25px; height: 100%; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
+            <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Vaidinimo eiga:</p>
+            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus. Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus. Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus.</p>
+            <p style="color: black; font-size: 13px; font-weight: 400; width: 100%; position: relative; margin-top: 7px; padding-left: 17px;"><span style="position: absolute; left: 0; border: 1px solid black; font-weight: 600; width: 13px; height: 13px; border-radius: 100%; display: flex; justify-content: center; align-items: center; font-size: 10px; margin-top: 1px;">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
+        </div>
+        <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
+        <div class="papildomai">
+            <i class="fa-regular fa-circle-dot" style="position: absolute; width: 25px; height: 100%; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
+            <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Papildomai:</p>
+            <button style="width: 95%; height: 35px; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px;" class="warningButton" onclick="parsisiustiMuzikaNorbertas()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti muzikos įrašus</button>
+            <button style="width: 95%; height: 35px; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 5px;" class="warningButton" ontouchstart><i class="fa-solid fa-percent" style="margin-right: 5px;"></i>Funkcija</button>
+            <button style="width: 95%; height: 35px; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 5px;" class="warningButton" ontouchstart><i class="fa-solid fa-clapperboard" style="margin-right: 5px;"></i>Veiksmas</button>
+        </div>
+    </div>
+    <div id="nojus">
+        <div style="position: absolute; width: 5px; height: 5px; top: 0; left: 0;" id="topInfoNojus"></div>
+        <div id="infoNojus"><i class="fa-solid fa-chevron-down" style="font-size: 15px; position: absolute; top: 15px; left: 15px; z-index: 4; transition: 0.15s; cursor: pointer; width: 30px; height: 30px; display: flex; justify-content: center; align-items: center; border-radius: 100%; background-color: #DEDEDE;" onclick="closeNojus()" id="chevronNojus" ontouchstart></i></div>
+        <p style="font-size: 25px; font-weight: 600; color: black; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; width: 100%; position: fixed; top: 60px; padding-left: 15px; padding-right: 15px; z-index: 10;" id="nojusKarnavalasText">Karnavalas "Snieguolė ir septyni nykštukai"</p>
+        <div style="position: fixed; top: 60px; left: 0; right: 0; width: 100%; height: 60px; z-index: 11; color: lightskyblue; font-size: 17px; display: flex; justify-content: space-around; overflow: visible;">
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 4s linear infinite;"></i>
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 2s linear infinite; animation-delay: 1s;"></i>
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 3s linear infinite; animation-delay: 0.5s;"></i>
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 2.5s linear infinite;"></i>
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 3.5s linear infinite; animation-delay: 1.5s;"></i>
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 2s linear infinite;"></i>
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 1.5s linear infinite; animation-delay: 1;"></i>
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 3s linear infinite; animation-delay: 2s;"></i>
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 2s linear infinite; animation-delay: 0.5s;"></i>
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 3.5s linear infinite; animation-delay: 0.5s;"></i>
+        </div>
+        <div style="position: fixed; top: -5px; left: 0; right: 0; width: 100%; height: 5px; z-index: 18; color: lightskyblue; font-size: 17px; display: flex; justify-content: center; align-items: flex-end; overflow: visible;">
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite;"></div>
+        </div>
+        <div style="position: fixed; bottom: -5px; left: 0; right: 0; width: 100%; height: 5px; z-index: 18; color: lightskyblue; font-size: 17px; display: flex; justify-content: center; align-items: flex-start; overflow: visible;">
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite; animation-delay: 0.5s;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite; animation-delay: 0.5s;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite; animation-delay: 0.5s;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite; animation-delay: 0.5s;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite; animation-delay: 0.5s;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite; animation-delay: 0.5s;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite; animation-delay: 0.5s;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite; animation-delay: 0.5s;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite; animation-delay: 0.5s;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite; animation-delay: 0.5s;"></div>
+        </div>
+
+        <div style="width: 100%; height: auto; background-color: rgba(242, 242, 242, 0.75); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); position: fixed; bottom: 0; left: 0; right: 0; padding: 15px; display: flex; justify-content: center; align-items: center; flex-direction: column; z-index: 17; box-shadow: 0 0 10px lightgrey; border-radius: 25px 25px 0 0;" id="scenarijusNojusBackground">
+            <button style="width: 100%; height: 50px; display: flex; justify-content: center; align-items: center; border-radius: 15px; border: none; background-color: transparent; color: black; border: 2px solid black; font-size: 15px;" onclick="scenarijusNojus()" class="warningButton" ontouchstart><i class="fa-solid fa-scroll" style="margin-right: 5px;"></i>Atsisiųsti visą scenarijų</button>
+        </div>
+        <div id="downloadingBackgroundNojus" style="width: 100%; height: 100%; pointer-events: none; z-index: 19; background-color: rgba(211, 211, 211, 0.75); position: fixed; top: 0; left: 0; right: 0; bottom: 0; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); opacity: 0; display: none;"></div>
+        <div id="downloadingScriptNojus" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "scenarijus.pdf"</div>
+        <div id="downloadingMusicNojus" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "muzika.mp3"</div>
+
+
+
+        <div class="vardas" id="vardasNojus">
+            <i class="fa-regular fa-user-circle" style="position: absolute; width: 25px; height: 25px; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 12.5px; left: 27.5px; font-size: 20px; color: black;"></i>
+            <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">DJ</p>
+            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Nojus</p>
+        </div>
+        <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
+        <div class="apie">
+            <i class="fa-regular fa-circle-question" style="position: absolute; width: 25px; height: 100%; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
+            <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Apie rolę:</p>
+            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus. Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus. Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus.</p>
+        </div>
+        <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
+        <div class="pasiruosimas">
+            <i class="fa-solid fa-suitcase" style="position: absolute; width: 25px; height: 100%; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
+            <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Pasiruošti:</p>
+            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus. Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus. Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus.</p>
+            <p style="color: black; font-size: 13px; font-weight: 400; width: 100%; position: relative; margin-top: 7px; padding-left: 17px;"><i class="fa-solid fa-asterisk" style="position: absolute; left: 0; border: 1px solid black; font-weight: 600; width: 13px; height: 13px; border-radius: 100%; display: flex; justify-content: center; align-items: center; font-size: 10px; margin-top: 1px;"></i> Pažymėti daiktai bus paruošti/parūpinti.</p>
+        </div>
+        <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
+        <div class="apranga">
+            <i class="fa-solid fa-shirt" style="position: absolute; width: 25px; height: 100%; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
+            <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Apranga:</p>
+            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus. Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus. Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus.</p>
+        </div>
+        <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
+        <div class="zodziai">
+            <i class="fa-regular fa-comments" style="position: absolute; width: 25px; height: 100%; border-radius: 25px;display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
+            <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Žodžiai:</p>
+            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">"Taip atrodys tekstas." <br> "Čia yra tik pavyzdys." <br> "Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus."</p>
+            <p style="color: black; font-size: 13px; font-weight: 400; width: 100%; position: relative; margin-top: 7px; padding-left: 17px;"><span style="position: absolute; left: 0; border: 1px solid black; font-weight: 600; width: 13px; height: 13px; border-radius: 100%; display: flex; justify-content: center; align-items: center; font-size: 10px; margin-top: 1px;">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima perpasakoti kitaip.</p>
+        </div>
+        <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
+        <div class="vaidinimas">
+            <i class="fa-solid fa-people-arrows" style="position: absolute; width: 25px; height: 100%; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
+            <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Vaidinimo eiga:</p>
+            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus. Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus. Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus.</p>
+            <p style="color: black; font-size: 13px; font-weight: 400; width: 100%; position: relative; margin-top: 7px; padding-left: 17px;"><span style="position: absolute; left: 0; border: 1px solid black; font-weight: 600; width: 13px; height: 13px; border-radius: 100%; display: flex; justify-content: center; align-items: center; font-size: 10px; margin-top: 1px;">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
+        </div>
+        <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
+        <div class="papildomai">
+            <i class="fa-regular fa-circle-dot" style="position: absolute; width: 25px; height: 100%; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
+            <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Papildomai:</p>
+            <button style="width: 95%; height: 35px; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px;" class="warningButton" onclick="parsisiustiMuzikaNojus()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti muzikos įrašus</button>
+            <button style="width: 95%; height: 35px; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 5px;" class="warningButton" ontouchstart><i class="fa-solid fa-percent" style="margin-right: 5px;"></i>Funkcija</button>
+            <button style="width: 95%; height: 35px; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 5px;" class="warningButton" ontouchstart><i class="fa-solid fa-clapperboard" style="margin-right: 5px;"></i>Veiksmas</button>
+        </div>
+    </div>
+
+
+
     <a id="download_script" href="scenarijus.pdf" download style="display: none;">download_script</a>
     <a id="download_music" href="muzika.mp3" download style="display: none;">download_music</a>
     <script src="https://kit.fontawesome.com/a11707644f.js" crossorigin="anonymous"></script>
@@ -1048,6 +1432,7 @@
                 document.getElementById("startas").style.marginTop = "75px";
                 document.getElementById("info").style.boxShadow = "0 0 10px lightgrey";
 
+
                 document.getElementById("aruneKarnavalasText").style.fontSize = "20px";
                 document.getElementById("aruneKarnavalasText").style.top = "17px";
                 document.getElementById("chevronArune").style.opacity = "0";
@@ -1059,6 +1444,24 @@
                 document.getElementById("chevronAleksandra").style.opacity = "0";
                 document.getElementById("vardasAleksandra").style.marginTop = "75px";
                 document.getElementById("infoAleksandra").style.boxShadow = "0 0 10px lightgrey";
+
+                document.getElementById("metaKarnavalasText").style.fontSize = "20px";
+                document.getElementById("metaKarnavalasText").style.top = "17px";
+                document.getElementById("chevronMeta").style.opacity = "0";
+                document.getElementById("vardasMeta").style.marginTop = "75px";
+                document.getElementById("infoMeta").style.boxShadow = "0 0 10px lightgrey";
+
+                document.getElementById("norbertasKarnavalasText").style.fontSize = "20px";
+                document.getElementById("norbertasKarnavalasText").style.top = "17px";
+                document.getElementById("chevronNorbertas").style.opacity = "0";
+                document.getElementById("vardasNorbertas").style.marginTop = "75px";
+                document.getElementById("infoNorbertas").style.boxShadow = "0 0 10px lightgrey";
+
+                document.getElementById("nojusKarnavalasText").style.fontSize = "20px";
+                document.getElementById("nojusKarnavalasText").style.top = "17px";
+                document.getElementById("chevronNojus").style.opacity = "0";
+                document.getElementById("vardasNojus").style.marginTop = "75px";
+                document.getElementById("infoNojus").style.boxShadow = "0 0 10px lightgrey";
             }
             else {
                 document.getElementById("kelionesMarsrutasText").style.fontSize = "25px";
@@ -1069,6 +1472,7 @@
                 }, 100);
                 document.getElementById("startas").style.marginTop = "110px";
                 document.getElementById("info").style.boxShadow = "none";
+
 
                 document.getElementById("aruneKarnavalasText").style.fontSize = "25px";
                 document.getElementById("aruneKarnavalasText").style.top = "60px";
@@ -1085,6 +1489,30 @@
                 }, 100);
                 document.getElementById("vardasAleksandra").style.marginTop = "110px";
                 document.getElementById("infoAleksandra").style.boxShadow = "none";
+
+                document.getElementById("metaKarnavalasText").style.fontSize = "25px";
+                document.getElementById("metaKarnavalasText").style.top = "60px";
+                setTimeout(() => {
+                    document.getElementById("chevronMeta").style.opacity = "1";
+                }, 100);
+                document.getElementById("vardasMeta").style.marginTop = "110px";
+                document.getElementById("infoMeta").style.boxShadow = "none";
+
+                document.getElementById("norbertasKarnavalasText").style.fontSize = "25px";
+                document.getElementById("norbertasKarnavalasText").style.top = "60px";
+                setTimeout(() => {
+                    document.getElementById("chevronNorbertas").style.opacity = "1";
+                }, 100);
+                document.getElementById("vardasNorbertas").style.marginTop = "110px";
+                document.getElementById("infoNorbertas").style.boxShadow = "none";
+
+                document.getElementById("nojusKarnavalasText").style.fontSize = "25px";
+                document.getElementById("nojusKarnavalasText").style.top = "60px";
+                setTimeout(() => {
+                    document.getElementById("chevronNojus").style.opacity = "1";
+                }, 100);
+                document.getElementById("vardasNojus").style.marginTop = "110px";
+                document.getElementById("infoNojus").style.boxShadow = "none";
             }
         }
 
@@ -1349,6 +1777,120 @@
             }, 6010);
             setTimeout(() => {
                 document.getElementById("downloadingBackgroundAleksandra").style.display = "none";
+                document.getElementById("body").style.overflow = "scroll";
+            }, 6310);
+        }
+        function scenarijusMeta() {
+            document.getElementById("downloadingBackgroundMeta").style.display = "block";
+            document.getElementById("body").style.overflow = "hidden";
+            setTimeout(() => {
+                document.getElementById("downloadingScriptMeta").style.bottom = "0";
+                document.getElementById("downloadingBackgroundMeta").style.opacity = "1";
+            }, 10);
+            setTimeout(() => {
+                document.getElementById("download_script").click();
+            }, 1010);
+            setTimeout(() => {
+                document.getElementById("downloadingScriptMeta").style.bottom = "-100%";
+                document.getElementById("downloadingBackgroundMeta").style.opacity = "0";
+            }, 6010);
+            setTimeout(() => {
+                document.getElementById("downloadingBackgroundMeta").style.display = "none";
+                document.getElementById("body").style.overflow = "scroll";
+            }, 6310);
+        }
+        function parsisiustiMuzikaMeta() {
+            document.getElementById("downloadingBackgroundMeta").style.display = "block";
+            document.getElementById("body").style.overflow = "hidden";
+            setTimeout(() => {
+                document.getElementById("downloadingMusicMeta").style.bottom = "0";
+                document.getElementById("downloadingBackgroundMeta").style.opacity = "1";
+            }, 10);
+            setTimeout(() => {
+                document.getElementById("download_music").click();
+            }, 1010);
+            setTimeout(() => {
+                document.getElementById("downloadingMusicMeta").style.bottom = "-100%";
+                document.getElementById("downloadingBackgroundMeta").style.opacity = "0";
+            }, 6010);
+            setTimeout(() => {
+                document.getElementById("downloadingBackgroundMeta").style.display = "none";
+                document.getElementById("body").style.overflow = "scroll";
+            }, 6310);
+        }
+        function scenarijusNorbertas() {
+            document.getElementById("downloadingBackgroundNorbertas").style.display = "block";
+            document.getElementById("body").style.overflow = "hidden";
+            setTimeout(() => {
+                document.getElementById("downloadingScriptNorbertas").style.bottom = "0";
+                document.getElementById("downloadingBackgroundNorbertas").style.opacity = "1";
+            }, 10);
+            setTimeout(() => {
+                document.getElementById("download_script").click();
+            }, 1010);
+            setTimeout(() => {
+                document.getElementById("downloadingScriptNorbertas").style.bottom = "-100%";
+                document.getElementById("downloadingBackgroundNorbertas").style.opacity = "0";
+            }, 6010);
+            setTimeout(() => {
+                document.getElementById("downloadingBackgroundNorbertas").style.display = "none";
+                document.getElementById("body").style.overflow = "scroll";
+            }, 6310);
+        }
+        function parsisiustiMuzikaNorbertas() {
+            document.getElementById("downloadingBackgroundNorbertas").style.display = "block";
+            document.getElementById("body").style.overflow = "hidden";
+            setTimeout(() => {
+                document.getElementById("downloadingMusicNorbertas").style.bottom = "0";
+                document.getElementById("downloadingBackgroundNorbertas").style.opacity = "1";
+            }, 10);
+            setTimeout(() => {
+                document.getElementById("download_music").click();
+            }, 1010);
+            setTimeout(() => {
+                document.getElementById("downloadingMusicNorbertas").style.bottom = "-100%";
+                document.getElementById("downloadingBackgroundNorbertas").style.opacity = "0";
+            }, 6010);
+            setTimeout(() => {
+                document.getElementById("downloadingBackgroundNorbertas").style.display = "none";
+                document.getElementById("body").style.overflow = "scroll";
+            }, 6310);
+        }
+        function scenarijusNojus() {
+            document.getElementById("downloadingBackgroundNojus").style.display = "block";
+            document.getElementById("body").style.overflow = "hidden";
+            setTimeout(() => {
+                document.getElementById("downloadingScriptNojus").style.bottom = "0";
+                document.getElementById("downloadingBackgroundNojus").style.opacity = "1";
+            }, 10);
+            setTimeout(() => {
+                document.getElementById("download_script").click();
+            }, 1010);
+            setTimeout(() => {
+                document.getElementById("downloadingScriptNojus").style.bottom = "-100%";
+                document.getElementById("downloadingBackgroundNojus").style.opacity = "0";
+            }, 6010);
+            setTimeout(() => {
+                document.getElementById("downloadingBackgroundNojus").style.display = "none";
+                document.getElementById("body").style.overflow = "scroll";
+            }, 6310);
+        }
+        function parsisiustiMuzikaNojus() {
+            document.getElementById("downloadingBackgroundNojus").style.display = "block";
+            document.getElementById("body").style.overflow = "hidden";
+            setTimeout(() => {
+                document.getElementById("downloadingMusicNojus").style.bottom = "0";
+                document.getElementById("downloadingBackgroundNojus").style.opacity = "1";
+            }, 10);
+            setTimeout(() => {
+                document.getElementById("download_music").click();
+            }, 1010);
+            setTimeout(() => {
+                document.getElementById("downloadingMusicNojus").style.bottom = "-100%";
+                document.getElementById("downloadingBackgroundNojus").style.opacity = "0";
+            }, 6010);
+            setTimeout(() => {
+                document.getElementById("downloadingBackgroundNojus").style.display = "none";
                 document.getElementById("body").style.overflow = "scroll";
             }, 6310);
         }
@@ -1860,6 +2402,117 @@
                     document.getElementById("body").style.overflow = "scroll";
                 }, 3900);
           }
+          else if(form.pin.value == "000002")
+                {
+                    document.cookie = "meta=medziotojas";
+                document.getElementById("loading").style.display = "flex";
+                document.getElementById("ivestiKoda").style.opacity = "0.5";
+                document.querySelector('#topInfo').scrollIntoView({
+                    behavior: 'smooth'
+                });
+                document.getElementById("istrinimas").style.color = "transparent";
+                document.getElementById("istrinimas").style.pointerEvents = "none";
+                setTimeout(() => {
+                    document.getElementById("keypad").style.opacity = "0.5";
+                }, 150);
+                setTimeout(() => {
+                    document.getElementById("keypad").style.opacity = "1";
+                    document.getElementById("ivestiKoda").style.opacity = "1";
+                    document.getElementById("screen").style.top = "-100%";
+                    document.getElementById("screen").style.backgroundColor = "transparent";
+                    document.getElementById("display").style.top = "-100%";
+                    document.getElementById("meta").style.display = "block";
+                }, 3600);
+                setTimeout(() => {
+                    document.getElementById("meta").style.paddingTop = "0";
+                }, 3620);
+                setTimeout(() => {
+                    inputas = ""
+                    document.getElementById("kodas").value = '';
+                    document.getElementById("taskelis1").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis2").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis3").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis4").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis5").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis6").style.backgroundColor = "transparent";
+                    document.getElementById("loading").style.display = "none";
+                    document.getElementById("body").style.overflow = "scroll";
+                }, 3900);
+          }
+          else if(form.pin.value == "000003")
+                {
+                    document.cookie = "norbertas=princas";
+                document.getElementById("loading").style.display = "flex";
+                document.getElementById("ivestiKoda").style.opacity = "0.5";
+                document.querySelector('#topInfo').scrollIntoView({
+                    behavior: 'smooth'
+                });
+                document.getElementById("istrinimas").style.color = "transparent";
+                document.getElementById("istrinimas").style.pointerEvents = "none";
+                setTimeout(() => {
+                    document.getElementById("keypad").style.opacity = "0.5";
+                }, 150);
+                setTimeout(() => {
+                    document.getElementById("keypad").style.opacity = "1";
+                    document.getElementById("ivestiKoda").style.opacity = "1";
+                    document.getElementById("screen").style.top = "-100%";
+                    document.getElementById("screen").style.backgroundColor = "transparent";
+                    document.getElementById("display").style.top = "-100%";
+                    document.getElementById("norbertas").style.display = "block";
+                }, 3600);
+                setTimeout(() => {
+                    document.getElementById("norbertas").style.paddingTop = "0";
+                }, 3620);
+                setTimeout(() => {
+                    inputas = ""
+                    document.getElementById("kodas").value = '';
+                    document.getElementById("taskelis1").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis2").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis3").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis4").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis5").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis6").style.backgroundColor = "transparent";
+                    document.getElementById("loading").style.display = "none";
+                    document.getElementById("body").style.overflow = "scroll";
+                }, 3900);
+          }
+          else if(form.pin.value == "000004")
+                {
+                    document.cookie = "nojus=dj";
+                document.getElementById("loading").style.display = "flex";
+                document.getElementById("ivestiKoda").style.opacity = "0.5";
+                document.querySelector('#topInfo').scrollIntoView({
+                    behavior: 'smooth'
+                });
+                document.getElementById("istrinimas").style.color = "transparent";
+                document.getElementById("istrinimas").style.pointerEvents = "none";
+                setTimeout(() => {
+                    document.getElementById("keypad").style.opacity = "0.5";
+                }, 150);
+                setTimeout(() => {
+                    document.getElementById("keypad").style.opacity = "1";
+                    document.getElementById("ivestiKoda").style.opacity = "1";
+                    document.getElementById("screen").style.top = "-100%";
+                    document.getElementById("screen").style.backgroundColor = "transparent";
+                    document.getElementById("display").style.top = "-100%";
+                    document.getElementById("nojus").style.display = "block";
+                }, 3600);
+                setTimeout(() => {
+                    document.getElementById("nojus").style.paddingTop = "0";
+                }, 3620);
+                setTimeout(() => {
+                    inputas = ""
+                    document.getElementById("kodas").value = '';
+                    document.getElementById("taskelis1").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis2").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis3").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis4").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis5").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis6").style.backgroundColor = "transparent";
+                    document.getElementById("loading").style.display = "none";
+                    document.getElementById("body").style.overflow = "scroll";
+                }, 3900);
+          }
             else{
                 document.getElementById("loading").style.display = "flex";
                 document.getElementById("ivestiKoda").style.opacity = "0.5";
@@ -1946,8 +2599,59 @@
                 document.getElementById("aleksandra").style.paddingTop = "100vh";
             }
         }
+        let meta = getCookie("meta");
+        if (meta != "") {
+            document.getElementById("meta").style.display = "block";
+            document.getElementById("meta").style.paddingTop = "0";
+            setTimeout(() => {
+                document.querySelector('#topInfoMeta').scrollIntoView({
+                behavior: 'smooth'});
+            }, 500);
+        }
+        else {
+            document.getElementById("meta").style.display = "none";
+            document.getElementById("meta").style.paddingTop = "100vh";
+            if (meta != "" && meta != null) {
+                document.getElementById("meta").style.display = "none";
+                document.getElementById("meta").style.paddingTop = "100vh";
+            }
+        }
+        let norbertas = getCookie("norbertas");
+        if (norbertas != "") {
+            document.getElementById("norbertas").style.display = "block";
+            document.getElementById("norbertas").style.paddingTop = "0";
+            setTimeout(() => {
+                document.querySelector('#topInfoNorbertas').scrollIntoView({
+                behavior: 'smooth'});
+            }, 500);
+        }
+        else {
+            document.getElementById("norbertas").style.display = "none";
+            document.getElementById("norbertas").style.paddingTop = "100vh";
+            if (norbertas != "" && norbertas != null) {
+                document.getElementById("norbertas").style.display = "none";
+                document.getElementById("norbertas").style.paddingTop = "100vh";
+            }
+        }
+        let nojus = getCookie("nojus");
+        if (nojus != "") {
+            document.getElementById("nojus").style.display = "block";
+            document.getElementById("nojus").style.paddingTop = "0";
+            setTimeout(() => {
+                document.querySelector('#topInfoNojus').scrollIntoView({
+                behavior: 'smooth'});
+            }, 500);
+        }
+        else {
+            document.getElementById("nojus").style.display = "none";
+            document.getElementById("nojus").style.paddingTop = "100vh";
+            if (nojus != "" && nojus != null) {
+                document.getElementById("nojus").style.display = "none";
+                document.getElementById("nojus").style.paddingTop = "100vh";
+            }
+        }
 
-        if (kelioneI != "" || arune != "" || aleksandra != "") {
+        if (kelioneI != "" || arune != "" || aleksandra != "" || meta != "" || norbertas != "" || nojus != "") {
             document.getElementById("screen").style.top = "-100%";
             document.getElementById("screen").style.backgroundColor = "transparent";
             document.getElementById("display").style.top = "-100%";
@@ -1958,7 +2662,7 @@
             document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
             document.getElementById("display").style.top = "0";
             document.getElementById("body").style.overflow = "hidden";
-            if (kelioneI != "" && kelioneI != null || arune != "" && arune != null || aleksandra != "" && aleksandra != null) {
+            if (kelioneI != "" && kelioneI != null || arune != "" && arune != null || aleksandra != "" && aleksandra != null || meta != "" && meta != null || norbertas != "" && norbertas != null || nojus != "" && nojus != null) {
                 document.getElementById("screen").style.top = "0";
                 document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
                 document.getElementById("display").style.top = "0";
@@ -2009,6 +2713,51 @@
                 document.getElementById("body").style.overflow = "hidden";
                 document.getElementById("aleksandra").style.display = "none";
                 document.getElementById("chevronAleksandra").style.pointerEvents = "all";
+            }, 310);
+        }
+        function closeMeta() {
+            document.cookie = "meta=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
+            document.getElementById("chevronMeta").style.pointerEvents = "none";
+            setTimeout(() => {
+                document.getElementById("screen").style.top = "0";
+                document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
+                document.getElementById("display").style.top = "0";
+                document.getElementById("meta").style.paddingTop = "100vh";
+            }, 10);
+            setTimeout(() => {
+                document.getElementById("body").style.overflow = "hidden";
+                document.getElementById("meta").style.display = "none";
+                document.getElementById("chevronMeta").style.pointerEvents = "all";
+            }, 310);
+        }
+        function closeNorbertas() {
+            document.cookie = "norbertas=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
+            document.getElementById("chevronNorbertas").style.pointerEvents = "none";
+            setTimeout(() => {
+                document.getElementById("screen").style.top = "0";
+                document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
+                document.getElementById("display").style.top = "0";
+                document.getElementById("norbertas").style.paddingTop = "100vh";
+            }, 10);
+            setTimeout(() => {
+                document.getElementById("body").style.overflow = "hidden";
+                document.getElementById("norbertas").style.display = "none";
+                document.getElementById("chevronNorbertas").style.pointerEvents = "all";
+            }, 310);
+        }
+        function closeNojus() {
+            document.cookie = "nojus=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
+            document.getElementById("chevronNojus").style.pointerEvents = "none";
+            setTimeout(() => {
+                document.getElementById("screen").style.top = "0";
+                document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
+                document.getElementById("display").style.top = "0";
+                document.getElementById("nojus").style.paddingTop = "100vh";
+            }, 10);
+            setTimeout(() => {
+                document.getElementById("body").style.overflow = "hidden";
+                document.getElementById("nojus").style.display = "none";
+                document.getElementById("chevronNojus").style.pointerEvents = "all";
             }, 310);
         }
     </script>
