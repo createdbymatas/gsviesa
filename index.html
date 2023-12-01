@@ -445,18 +445,18 @@
 
 
 
-        #karnavalas{
+        #arune{
             width: 100%;
             height: 100%;
             background-color: #f2f2f2;
             transition: 0.2s;
-            padding-bottom: 85px;
+            padding-bottom: 80px;
             overflow: hidden;
             overflow-y: scroll;
             padding-top: 100vh;
             display: none;
         }
-        #informacija{
+        #infoArune{
             width: 100%;
             height: 60px;
             display: flex;
@@ -472,10 +472,10 @@
             right: 0;
             z-index: 10;
         }
-        #chevronas:active{
+        #chevronArune:active{
             opacity: 0.2;
         }
-        #vardas{
+        .vardas{
             width: 100%;
             height: auto;
             display: flex;
@@ -490,7 +490,7 @@
             padding-top: 7px;
             padding-bottom: 7px;
         }
-        #apie{
+        .apie{
             width: 100%;
             height: auto;
             display: flex;
@@ -505,7 +505,7 @@
             padding-top: 7px;
             padding-bottom: 7px;
         }
-        #pasiruosimas{
+        .pasiruosimas{
             width: 100%;
             height: auto;
             display: flex;
@@ -520,7 +520,7 @@
             padding-top: 7px;
             padding-bottom: 7px;
         }
-        #zodziai{
+        .zodziai{
             width: 100%;
             height: auto;
             display: flex;
@@ -535,7 +535,7 @@
             padding-top: 7px;
             padding-bottom: 7px;
         }
-        #apranga{
+        .apranga{
             width: 100%;
             height: auto;
             display: flex;
@@ -550,7 +550,7 @@
             padding-top: 7px;
             padding-bottom: 7px;
         }
-        #vaidinimas{
+        .vaidinimas{
             width: 100%;
             height: auto;
             display: flex;
@@ -565,7 +565,7 @@
             padding-top: 7px;
             padding-bottom: 7px;
         }
-        #papildomai{
+        .papildomai{
             width: 100%;
             height: auto;
             display: flex;
@@ -804,10 +804,10 @@
         <div style="width: 10px; height: 1500px; outline: 1px solid red; margin-left: 15px;"></div>
     </div>
 
-    <div id="karnavalas">
-        <div style="position: absolute; width: 5px; height: 5px; top: 0; left: 0;" id="topInformacija"></div>
-        <div id="informacija"><i class="fa-solid fa-chevron-down" style="font-size: 15px; position: absolute; top: 15px; left: 15px; z-index: 4; transition: 0.15s; cursor: pointer; width: 30px; height: 30px; display: flex; justify-content: center; align-items: center; border-radius: 100%; background-color: #DEDEDE;" onclick="closeKarnavalas()" id="chevronas" ontouchstart></i></div>
-        <p style="font-size: 25px; font-weight: 600; color: black; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; width: 100%; position: fixed; top: 60px; padding-left: 15px; padding-right: 15px; z-index: 10;" id="karnavalasText">Karnavalas "Snieguolė ir septyni nykštukai"</p>
+    <div id="arune">
+        <div style="position: absolute; width: 5px; height: 5px; top: 0; left: 0;" id="topInfoArune"></div>
+        <div id="infoArune"><i class="fa-solid fa-chevron-down" style="font-size: 15px; position: absolute; top: 15px; left: 15px; z-index: 4; transition: 0.15s; cursor: pointer; width: 30px; height: 30px; display: flex; justify-content: center; align-items: center; border-radius: 100%; background-color: #DEDEDE;" onclick="closeArune()" id="chevronArune" ontouchstart></i></div>
+        <p style="font-size: 25px; font-weight: 600; color: black; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; width: 100%; position: fixed; top: 60px; padding-left: 15px; padding-right: 15px; z-index: 10;" id="aruneKarnavalasText">Karnavalas "Snieguolė ir septyni nykštukai"</p>
         <div style="position: fixed; top: 60px; left: 0; right: 0; width: 100%; height: 60px; z-index: 11; color: lightskyblue; font-size: 17px; display: flex; justify-content: space-around; overflow: visible;">
             <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 4s linear infinite;"></i>
             <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 2s linear infinite; animation-delay: 1s;"></i>
@@ -845,62 +845,61 @@
             <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite; animation-delay: 0.5s;"></div>
         </div>
 
-        <div style="width: 100%; height: auto; background-color: rgba(242, 242, 242, 0.75); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); position: fixed; bottom: 0; left: 0; right: 0; padding: 15px; display: flex; justify-content: center; align-items: center; flex-direction: column; z-index: 17; box-shadow: 0 0 10px lightgrey; border-radius: 25px 25px 0 0;" id="scenarijusBackground">
-            <button style="width: 100%; height: 50px; display: flex; justify-content: center; align-items: center; border-radius: 15px; border: none; background-color: transparent; color: black; border: 2px solid black; font-size: 15px;" onclick="scenarijus()" class="warningButton" ontouchstart><i class="fa-solid fa-scroll" style="margin-right: 5px;"></i>Atsisiųsti visą scenarijų</button>
+        <div style="width: 100%; height: auto; background-color: rgba(242, 242, 242, 0.75); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); position: fixed; bottom: 0; left: 0; right: 0; padding: 15px; display: flex; justify-content: center; align-items: center; flex-direction: column; z-index: 17; box-shadow: 0 0 10px lightgrey; border-radius: 25px 25px 0 0;" id="scenarijusAruneBackground">
+            <button style="width: 100%; height: 50px; display: flex; justify-content: center; align-items: center; border-radius: 15px; border: none; background-color: transparent; color: black; border: 2px solid black; font-size: 15px;" onclick="scenarijusArune()" class="warningButton" ontouchstart><i class="fa-solid fa-scroll" style="margin-right: 5px;"></i>Atsisiųsti visą scenarijų</button>
         </div>
-        <div id="downloadingBackground" style="width: 100%; height: 100%; pointer-events: none; z-index: 19; background-color: rgba(211, 211, 211, 0.75); position: fixed; top: 0; left: 0; right: 0; bottom: 0; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); opacity: 0; display: none;"></div>
-        <div id="downloadingScript" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "scenarijus.pdf"</div>
-        <div id="downloadingMusic" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "muzika.mp3"</div>
+        <div id="downloadingBackgroundArune" style="width: 100%; height: 100%; pointer-events: none; z-index: 19; background-color: rgba(211, 211, 211, 0.75); position: fixed; top: 0; left: 0; right: 0; bottom: 0; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); opacity: 0; display: none;"></div>
+        <div id="downloadingScriptArune" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "scenarijus.pdf"</div>
+        <div id="downloadingMusicArune" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "muzika.mp3"</div>
 
 
 
-        <div id="vardas">
-            <i class="fa-regular fa-user-circle" style="position: absolute; width: 25px; height: 25px; border-radius: 100%; display: flex; justify-content: center; align-items: center; top: 12.5px; left: 27.5px; font-size: 20px; color: black;"></i>
-            <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Rolės pavadinimas</p>
-            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Vardas</p>
+        <div class="vardas" id="vardasArune">
+            <i class="fa-regular fa-user-circle" style="position: absolute; width: 25px; height: 25px; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 12.5px; left: 27.5px; font-size: 20px; color: black;"></i>
+            <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Snieguolė</p>
+            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Arūnė</p>
         </div>
         <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
-        <div id="apie">
-            <i class="fa-regular fa-circle-question" style="position: absolute; width: 25px; height: 100%; border-radius: 100%; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
+        <div class="apie">
+            <i class="fa-regular fa-circle-question" style="position: absolute; width: 25px; height: 100%; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
             <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Apie rolę:</p>
             <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus. Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus. Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus.</p>
         </div>
         <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
-        <div id="pasiruosimas">
-            <i class="fa-solid fa-suitcase" style="position: absolute; width: 25px; height: 100%; border-radius: 100%; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
+        <div class="pasiruosimas">
+            <i class="fa-solid fa-suitcase" style="position: absolute; width: 25px; height: 100%; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
             <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Pasiruošti:</p>
             <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus. Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus. Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus.</p>
             <p style="color: black; font-size: 13px; font-weight: 400; width: 100%; position: relative; margin-top: 7px; padding-left: 17px;"><i class="fa-solid fa-asterisk" style="position: absolute; left: 0; border: 1px solid black; font-weight: 600; width: 13px; height: 13px; border-radius: 100%; display: flex; justify-content: center; align-items: center; font-size: 10px; margin-top: 1px;"></i> Pažymėti daiktai bus paruošti/parūpinti.</p>
         </div>
         <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
-        <div id="apranga">
-            <i class="fa-solid fa-shirt" style="position: absolute; width: 25px; height: 100%; border-radius: 100%; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
+        <div class="apranga">
+            <i class="fa-solid fa-shirt" style="position: absolute; width: 25px; height: 100%; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
             <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Apranga:</p>
             <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus. Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus. Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus.</p>
         </div>
         <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
-        <div id="zodziai">
-            <i class="fa-regular fa-comments" style="position: absolute; width: 25px; height: 100%; border-radius: 100%; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
+        <div class="zodziai">
+            <i class="fa-regular fa-comments" style="position: absolute; width: 25px; height: 100%; border-radius: 25px;display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
             <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Žodžiai:</p>
             <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">"Taip atrodys tekstas." <br> "Čia yra tik pavyzdys." <br> "Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus."</p>
             <p style="color: black; font-size: 13px; font-weight: 400; width: 100%; position: relative; margin-top: 7px; padding-left: 17px;"><span style="position: absolute; left: 0; border: 1px solid black; font-weight: 600; width: 13px; height: 13px; border-radius: 100%; display: flex; justify-content: center; align-items: center; font-size: 10px; margin-top: 1px;">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima perpasakoti kitaip.</p>
         </div>
         <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
-        <div id="vaidinimas">
-            <i class="fa-solid fa-people-arrows" style="position: absolute; width: 25px; height: 100%; border-radius: 100%; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
+        <div class="vaidinimas">
+            <i class="fa-solid fa-people-arrows" style="position: absolute; width: 25px; height: 100%; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
             <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Vaidinimo eiga:</p>
             <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus. Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus. Taip atrodys tekstas. Čia yra tik pavyzdys. Detalesnė informacija bus įkelta vėliau, kai bus sukurtas scenarijus.</p>
             <p style="color: black; font-size: 13px; font-weight: 400; width: 100%; position: relative; margin-top: 7px; padding-left: 17px;"><span style="position: absolute; left: 0; border: 1px solid black; font-weight: 600; width: 13px; height: 13px; border-radius: 100%; display: flex; justify-content: center; align-items: center; font-size: 10px; margin-top: 1px;">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
         </div>
         <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
-        <div id="papildomai">
-            <i class="fa-regular fa-circle-dot" style="position: absolute; width: 25px; height: 100%; border-radius: 100%; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
+        <div class="papildomai">
+            <i class="fa-regular fa-circle-dot" style="position: absolute; width: 25px; height: 100%; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
             <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Papildomai:</p>
-            <button style="width: 95%; height: 35px; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px;" class="warningButton" onclick="parsisiustiMuzika()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti muzikos įrašus</button>
+            <button style="width: 95%; height: 35px; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px;" class="warningButton" onclick="parsisiustiMuzikaArune()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti muzikos įrašus</button>
             <button style="width: 95%; height: 35px; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 5px;" class="warningButton" ontouchstart><i class="fa-solid fa-percent" style="margin-right: 5px;"></i>Funkcija</button>
             <button style="width: 95%; height: 35px; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 5px;" class="warningButton" ontouchstart><i class="fa-solid fa-clapperboard" style="margin-right: 5px;"></i>Veiksmas</button>
         </div>
-        <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
     </div>
     <script src="https://kit.fontawesome.com/a11707644f.js" crossorigin="anonymous"></script>
     <script>
@@ -920,11 +919,11 @@
                 document.getElementById("startas").style.marginTop = "75px";
                 document.getElementById("info").style.boxShadow = "0 0 10px lightgrey";
 
-                document.getElementById("karnavalasText").style.fontSize = "20px";
-                document.getElementById("karnavalasText").style.top = "17px";
-                document.getElementById("chevronas").style.opacity = "0";
-                document.getElementById("vardas").style.marginTop = "75px";
-                document.getElementById("informacija").style.boxShadow = "0 0 10px lightgrey";
+                document.getElementById("aruneKarnavalasText").style.fontSize = "20px";
+                document.getElementById("aruneKarnavalasText").style.top = "17px";
+                document.getElementById("chevronArune").style.opacity = "0";
+                document.getElementById("vardasArune").style.marginTop = "75px";
+                document.getElementById("infoArune").style.boxShadow = "0 0 10px lightgrey";
             }
             else {
                 document.getElementById("kelionesMarsrutasText").style.fontSize = "25px";
@@ -936,13 +935,13 @@
                 document.getElementById("startas").style.marginTop = "110px";
                 document.getElementById("info").style.boxShadow = "none";
 
-                document.getElementById("karnavalasText").style.fontSize = "25px";
-                document.getElementById("karnavalasText").style.top = "60px";
+                document.getElementById("aruneKarnavalasText").style.fontSize = "25px";
+                document.getElementById("aruneKarnavalasText").style.top = "60px";
                 setTimeout(() => {
-                    document.getElementById("chevronas").style.opacity = "1";
+                    document.getElementById("chevronArune").style.opacity = "1";
                 }, 100);
-                document.getElementById("vardas").style.marginTop = "110px";
-                document.getElementById("informacija").style.boxShadow = "none";
+                document.getElementById("vardasArune").style.marginTop = "110px";
+                document.getElementById("infoArune").style.boxShadow = "none";
             }
         }
 
@@ -1134,41 +1133,41 @@
 
 
 
-        function scenarijus() {
-            document.getElementById("downloadingBackground").style.display = "block";
+        function scenarijusArune() {
+            document.getElementById("downloadingBackgroundArune").style.display = "block";
             document.getElementById("body").style.overflow = "hidden";
             setTimeout(() => {
-                document.getElementById("downloadingScript").style.bottom = "0";
-                document.getElementById("downloadingBackground").style.opacity = "1";
+                document.getElementById("downloadingScriptArune").style.bottom = "0";
+                document.getElementById("downloadingBackgroundArune").style.opacity = "1";
             }, 10);
             setTimeout(() => {
-                
+                window.open("scenarijus.pdf");
             }, 1010);
             setTimeout(() => {
-                document.getElementById("downloadingScript").style.bottom = "-100%";
-                document.getElementById("downloadingBackground").style.opacity = "0";
+                document.getElementById("downloadingScriptArune").style.bottom = "-100%";
+                document.getElementById("downloadingBackgroundArune").style.opacity = "0";
             }, 6010);
             setTimeout(() => {
-                document.getElementById("downloadingBackground").style.display = "none";
+                document.getElementById("downloadingBackgroundArune").style.display = "none";
                 document.getElementById("body").style.overflow = "scroll";
             }, 6310);
         }
-        function parsisiustiMuzika() {
-            document.getElementById("downloadingBackground").style.display = "block";
+        function parsisiustiMuzikaArune() {
+            document.getElementById("downloadingBackgroundArune").style.display = "block";
             document.getElementById("body").style.overflow = "hidden";
             setTimeout(() => {
-                document.getElementById("downloadingMusic").style.bottom = "0";
-                document.getElementById("downloadingBackground").style.opacity = "1";
+                document.getElementById("downloadingMusicArune").style.bottom = "0";
+                document.getElementById("downloadingBackgroundArune").style.opacity = "1";
             }, 10);
             setTimeout(() => {
-                
+                window.open("muzika.mp3");
             }, 1010);
             setTimeout(() => {
-                document.getElementById("downloadingMusic").style.bottom = "-100%";
-                document.getElementById("downloadingBackground").style.opacity = "0";
+                document.getElementById("downloadingMusicArune").style.bottom = "-100%";
+                document.getElementById("downloadingBackgroundArune").style.opacity = "0";
             }, 6010);
             setTimeout(() => {
-                document.getElementById("downloadingBackground").style.display = "none";
+                document.getElementById("downloadingBackgroundArune").style.display = "none";
                 document.getElementById("body").style.overflow = "scroll";
             }, 6310);
         }
@@ -1608,7 +1607,7 @@
           }
           else if(form.pin.value == "000000")
                 {
-                    document.cookie = "vardas=karnavalas";
+                    document.cookie = "arune=snieguole";
                 document.getElementById("loading").style.display = "flex";
                 document.getElementById("ivestiKoda").style.opacity = "0.5";
                 document.querySelector('#topInfo').scrollIntoView({
@@ -1625,10 +1624,10 @@
                     document.getElementById("screen").style.top = "-100%";
                     document.getElementById("screen").style.backgroundColor = "transparent";
                     document.getElementById("display").style.top = "-100%";
-                    document.getElementById("karnavalas").style.display = "block";
+                    document.getElementById("arune").style.display = "block";
                 }, 3600);
                 setTimeout(() => {
-                    document.getElementById("karnavalas").style.paddingTop = "0";
+                    document.getElementById("arune").style.paddingTop = "0";
                 }, 3620);
                 setTimeout(() => {
                     inputas = ""
@@ -1695,25 +1694,25 @@
             }
         }
         
-        let vardas = getCookie("vardas");
-        if (vardas != "") {
-            document.getElementById("karnavalas").style.display = "block";
-            document.getElementById("karnavalas").style.paddingTop = "0";
+        let arune = getCookie("arune");
+        if (arune != "") {
+            document.getElementById("arune").style.display = "block";
+            document.getElementById("arune").style.paddingTop = "0";
             setTimeout(() => {
-                document.querySelector('#topInformacija').scrollIntoView({
+                document.querySelector('#topInfoArune').scrollIntoView({
                 behavior: 'smooth'});
             }, 500);
         }
         else {
-            document.getElementById("karnavalas").style.display = "none";
-            document.getElementById("karnavalas").style.paddingTop = "100vh";
-            if (vardas != "" && vardas != null) {
-                document.getElementById("karnavalas").style.display = "none";
-                document.getElementById("karnavalas").style.paddingTop = "100vh";
+            document.getElementById("arune").style.display = "none";
+            document.getElementById("arune").style.paddingTop = "100vh";
+            if (arune != "" && arune != null) {
+                document.getElementById("arune").style.display = "none";
+                document.getElementById("arune").style.paddingTop = "100vh";
             }
         }
 
-        if (kelioneI != "" || vardas != "") {
+        if (kelioneI != "" || arune != "") {
             document.getElementById("screen").style.top = "-100%";
             document.getElementById("screen").style.backgroundColor = "transparent";
             document.getElementById("display").style.top = "-100%";
@@ -1724,7 +1723,7 @@
             document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
             document.getElementById("display").style.top = "0";
             document.getElementById("body").style.overflow = "hidden";
-            if (kelioneI != "" && kelioneI != null || vardas != "" && vardas != null) {
+            if (kelioneI != "" && kelioneI != null || arune != "" && arune != null) {
                 document.getElementById("screen").style.top = "0";
                 document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
                 document.getElementById("display").style.top = "0";
@@ -1747,19 +1746,19 @@
                 document.getElementById("kelioneI---").style.display = "none";
             }, 310);
         }
-        function closeKarnavalas() {
-            document.cookie = "vardas=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
-            document.getElementById("chevronas").style.pointerEvents = "none";
+        function closeArune() {
+            document.cookie = "arune=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
+            document.getElementById("chevronArune").style.pointerEvents = "none";
             setTimeout(() => {
                 document.getElementById("screen").style.top = "0";
                 document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
                 document.getElementById("display").style.top = "0";
-                document.getElementById("karnavalas").style.paddingTop = "100vh";
+                document.getElementById("arune").style.paddingTop = "100vh";
             }, 10);
             setTimeout(() => {
                 document.getElementById("body").style.overflow = "hidden";
-                document.getElementById("karnavalas").style.display = "none";
-                document.getElementById("chevronas").style.pointerEvents = "all";
+                document.getElementById("arune").style.display = "none";
+                document.getElementById("chevronArune").style.pointerEvents = "all";
             }, 310);
         }
     </script>
