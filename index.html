@@ -252,6 +252,12 @@
             border-top: 1px solid lightgrey;
             width: 100%;
         }
+        .warningButton{
+            cursor: pointer;
+        }
+        .warningButton:active{
+            transform: scale(0.9);
+        }
 
 
 
@@ -355,9 +361,6 @@
             align-items: center;
             flex-direction: column;
             z-index: 20;
-        }
-        .warningButton:active{
-            transform: scale(0.9);
         }
         #startas{
             width: 100%;
@@ -565,7 +568,7 @@
         #chevronNorbertas:active{
             opacity: 0.2;
         }
-        #nojus{
+        #deividas{
             width: 100%;
             height: 100%;
             background-color: #f2f2f2;
@@ -576,7 +579,7 @@
             padding-top: 100vh;
             display: none;
         }
-        #infoNojus{
+        #infoDeividas{
             width: 100%;
             height: 60px;
             display: flex;
@@ -592,7 +595,7 @@
             right: 0;
             z-index: 10;
         }
-        #chevronNojus:active{
+        #chevronDeividas:active{
             opacity: 0.2;
         }
         #aurelija{
@@ -1194,6 +1197,15 @@
         <div style="width: 10px; height: 1500px; outline: 1px solid red; margin-left: 15px;"></div>
     </div>
 
+    <div id="importantInfoBackground" onclick="closeImportantInfo()" style="width: 100%; height: 100%; z-index: 19; background-color: rgba(211, 211, 211, 0.75); position: fixed; top: 0; left: 0; right: 0; bottom: 0; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); opacity: 0; display: none;"></div>
+    <div id="importantInfoDiv" style="position: fixed; left: 0; right: 0; bottom: -100%; border-radius: 25px 25px 0 0; width: 100%; height: auto; background-color: #f2f2f2; z-index: 50; padding: 20px; box-shadow: 0 0 10px lightgrey;">
+        <p style="font-weight: 800; font-size: 20px; text-align: left; padding-bottom: 10px;">Svarbi informacija</p>
+        <p style="font-size: 15px; text-align: left; padding-bottom: 5px;">Karnavalas vyks <span style="font-weight: 600;">gruodžio 22 d.</span></p>
+        <p style="font-size: 15px; text-align: left; padding-bottom: 5px;">Atvykti reikia: laikas planuojamas</p>
+        <p style="font-size: 15px; text-align: left; padding-bottom: 5px;">I-IV kl. karnavalo klasių pradžia: <span style="font-weight: 600;">13:30</span></p>
+        <p style="font-size: 15px; text-align: left; padding-bottom: 5px;">Ib kl. vaidinimas: <span style="font-weight: 600;">13:50 - 14:00</span></p>
+        <p style="font-size: 15px; text-align: left;">Apdovanojimai: <span style="font-weight: 600;">15:30</span></p>
+    </div>
     <div id="arune">
         <div style="position: absolute; width: 5px; height: 5px; top: 0; left: 0;" id="topInfoArune"></div>
         <div id="infoArune"><i class="fa-solid fa-chevron-down" style="font-size: 15px; position: absolute; top: 15px; left: 15px; z-index: 4; transition: 0.15s; cursor: pointer; width: 30px; height: 30px; display: flex; justify-content: center; align-items: center; border-radius: 100%; background-color: #DEDEDE;" onclick="closeArune()" id="chevronArune" ontouchstart></i></div>
@@ -1245,6 +1257,7 @@
         <div id="downloading3Arune" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio3.mp3"</div>
         <div id="downloading4Arune" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio4.mp3"</div>
         <div id="downloading5Arune" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio5.mp3"</div>
+        <button onclick="importantInfo()" class="warningButton" style="position: fixed; right: 15px; bottom: 95px; width: 50px; height: 50px; border-radius: 100%; border: none; background-color: rgba(242, 242, 242, 0.75); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); z-index: 17; box-shadow: 0 0 10px lightgrey; display: flex; justify-content: center; align-items: center;"><i class="fa-solid fa-info" style="width: 30px; height: 30px; border-radius: 100%; border: 2px solid black; display: flex; justify-content: center; align-items: center; font-size: 17px;"></i></button>
 
 
 
@@ -1289,7 +1302,6 @@
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot" style="position: absolute; width: 25px; height: 100%; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
             <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Papildomai:</p>
-            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Dalis informacijos ir funkcijų ruošiamos.</p>
             <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti1Arune()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio1.mp3"</button>
             <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti2Arune()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio2.mp3"</button>
             <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti3Arune()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio3.mp3"</button>
@@ -1348,6 +1360,7 @@
         <div id="downloading3Aleksandra" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio3.mp3"</div>
         <div id="downloading4Aleksandra" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio4.mp3"</div>
         <div id="downloading5Aleksandra" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio5.mp3"</div>
+        <button onclick="importantInfo()" class="warningButton" style="position: fixed; right: 15px; bottom: 95px; width: 50px; height: 50px; border-radius: 100%; border: none; background-color: rgba(242, 242, 242, 0.75); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); z-index: 17; box-shadow: 0 0 10px lightgrey; display: flex; justify-content: center; align-items: center;"><i class="fa-solid fa-info" style="width: 30px; height: 30px; border-radius: 100%; border: 2px solid black; display: flex; justify-content: center; align-items: center; font-size: 17px;"></i></button>
 
 
 
@@ -1393,7 +1406,6 @@
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot" style="position: absolute; width: 25px; height: 100%; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
             <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Papildomai:</p>
-            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Dalis informacijos ir funkcijų ruošiamos.</p>
             <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti1Aleksandra()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio1.mp3"</button>
             <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti2Aleksandra()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio2.mp3"</button>
             <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti3Aleksandra()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio3.mp3"</button>
@@ -1452,6 +1464,7 @@
         <div id="downloading3Meta" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio3.mp3"</div>
         <div id="downloading4Meta" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio4.mp3"</div>
         <div id="downloading5Meta" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio5.mp3"</div>
+        <button onclick="importantInfo()" class="warningButton" style="position: fixed; right: 15px; bottom: 95px; width: 50px; height: 50px; border-radius: 100%; border: none; background-color: rgba(242, 242, 242, 0.75); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); z-index: 17; box-shadow: 0 0 10px lightgrey; display: flex; justify-content: center; align-items: center;"><i class="fa-solid fa-info" style="width: 30px; height: 30px; border-radius: 100%; border: 2px solid black; display: flex; justify-content: center; align-items: center; font-size: 17px;"></i></button>
 
 
 
@@ -1497,7 +1510,6 @@
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot" style="position: absolute; width: 25px; height: 100%; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
             <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Papildomai:</p>
-            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Dalis informacijos ir funkcijų ruošiamos.</p>
             <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti1Meta()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio1.mp3"</button>
             <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti2Meta()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio2.mp3"</button>
             <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti3Meta()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio3.mp3"</button>
@@ -1556,6 +1568,7 @@
         <div id="downloading3Norbertas" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio3.mp3"</div>
         <div id="downloading4Norbertas" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio4.mp3"</div>
         <div id="downloading5Norbertas" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio5.mp3"</div>
+        <button onclick="importantInfo()" class="warningButton" style="position: fixed; right: 15px; bottom: 95px; width: 50px; height: 50px; border-radius: 100%; border: none; background-color: rgba(242, 242, 242, 0.75); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); z-index: 17; box-shadow: 0 0 10px lightgrey; display: flex; justify-content: center; align-items: center;"><i class="fa-solid fa-info" style="width: 30px; height: 30px; border-radius: 100%; border: 2px solid black; display: flex; justify-content: center; align-items: center; font-size: 17px;"></i></button>
 
 
 
@@ -1600,7 +1613,6 @@
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot" style="position: absolute; width: 25px; height: 100%; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
             <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Papildomai:</p>
-            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Dalis informacijos ir funkcijų ruošiamos.</p>
             <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti1Norbertas()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio1.mp3"</button>
             <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti2Norbertas()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio2.mp3"</button>
             <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti3Norbertas()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio3.mp3"</button>
@@ -1608,10 +1620,10 @@
             <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti5Norbertas()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio5.mp3"</button>
         </div>
     </div>
-    <div id="nojus">
-        <div style="position: absolute; width: 5px; height: 5px; top: 0; left: 0;" id="topInfoNojus"></div>
-        <div id="infoNojus"><i class="fa-solid fa-chevron-down" style="font-size: 15px; position: absolute; top: 15px; left: 15px; z-index: 4; transition: 0.15s; cursor: pointer; width: 30px; height: 30px; display: flex; justify-content: center; align-items: center; border-radius: 100%; background-color: #DEDEDE;" onclick="closeNojus()" id="chevronNojus" ontouchstart></i></div>
-        <p style="font-size: 25px; font-weight: 600; color: black; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; width: 100%; position: fixed; top: 60px; padding-left: 15px; padding-right: 15px; z-index: 10;" id="nojusKarnavalasText">Karnavalas "Snieguolė ir septyni nykštukai"</p>
+    <div id="deividas">
+        <div style="position: absolute; width: 5px; height: 5px; top: 0; left: 0;" id="topInfoDeividas"></div>
+        <div id="infoDeividas"><i class="fa-solid fa-chevron-down" style="font-size: 15px; position: absolute; top: 15px; left: 15px; z-index: 4; transition: 0.15s; cursor: pointer; width: 30px; height: 30px; display: flex; justify-content: center; align-items: center; border-radius: 100%; background-color: #DEDEDE;" onclick="closeDeividas()" id="chevronDeividas" ontouchstart></i></div>
+        <p style="font-size: 25px; font-weight: 600; color: black; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; width: 100%; position: fixed; top: 60px; padding-left: 15px; padding-right: 15px; z-index: 10;" id="deividasKarnavalasText">Karnavalas "Snieguolė ir septyni nykštukai"</p>
         <div style="position: fixed; top: 60px; left: 0; right: 0; width: 100%; height: 60px; z-index: 11; color: lightskyblue; font-size: 17px; display: flex; justify-content: space-around; overflow: visible;">
             <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 4s linear infinite;"></i>
             <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 2s linear infinite; animation-delay: 1s;"></i>
@@ -1649,20 +1661,21 @@
             <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite; animation-delay: 0.5s;"></div>
         </div>
 
-        <div style="width: 100%; height: auto; background-color: rgba(242, 242, 242, 0.75); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); position: fixed; bottom: 0; left: 0; right: 0; padding: 15px; display: flex; justify-content: center; align-items: center; flex-direction: column; z-index: 17; box-shadow: 0 0 10px lightgrey; border-radius: 25px 25px 0 0;" id="scenarijusNojusBackground">
-            <button style="width: 100%; height: 50px; display: flex; justify-content: center; align-items: center; border-radius: 15px; border: none; background-color: transparent; color: black; border: 2px solid black; font-size: 15px;" onclick="scenarijusNojus()" class="warningButton" ontouchstart><i class="fa-solid fa-scroll" style="margin-right: 5px;"></i>Atsisiųsti visą scenarijų</button>
+        <div style="width: 100%; height: auto; background-color: rgba(242, 242, 242, 0.75); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); position: fixed; bottom: 0; left: 0; right: 0; padding: 15px; display: flex; justify-content: center; align-items: center; flex-direction: column; z-index: 17; box-shadow: 0 0 10px lightgrey; border-radius: 25px 25px 0 0;" id="scenarijusDeividasBackground">
+            <button style="width: 100%; height: 50px; display: flex; justify-content: center; align-items: center; border-radius: 15px; border: none; background-color: transparent; color: black; border: 2px solid black; font-size: 15px;" onclick="scenarijusDeividas()" class="warningButton" ontouchstart><i class="fa-solid fa-scroll" style="margin-right: 5px;"></i>Atsisiųsti visą scenarijų</button>
         </div>
-        <div id="downloadingBackgroundNojus" style="width: 100%; height: 100%; pointer-events: none; z-index: 19; background-color: rgba(211, 211, 211, 0.75); position: fixed; top: 0; left: 0; right: 0; bottom: 0; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); opacity: 0; display: none;"></div>
-        <div id="downloadingScriptNojus" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "scenarijus.pdf"</div>
-        <div id="downloading1Nojus" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio1.mp3"</div>
-        <div id="downloading2Nojus" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio2.mp3"</div>
-        <div id="downloading3Nojus" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio3.mp3"</div>
-        <div id="downloading4Nojus" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio4.mp3"</div>
-        <div id="downloading5Nojus" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio5.mp3"</div>
+        <div id="downloadingBackgroundDeividas" style="width: 100%; height: 100%; pointer-events: none; z-index: 19; background-color: rgba(211, 211, 211, 0.75); position: fixed; top: 0; left: 0; right: 0; bottom: 0; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); opacity: 0; display: none;"></div>
+        <div id="downloadingScriptDeividas" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "scenarijus.pdf"</div>
+        <div id="downloading1Deividas" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio1.mp3"</div>
+        <div id="downloading2Deividas" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio2.mp3"</div>
+        <div id="downloading3Deividas" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio3.mp3"</div>
+        <div id="downloading4Deividas" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio4.mp3"</div>
+        <div id="downloading5Deividas" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio5.mp3"</div>
+        <button onclick="importantInfo()" class="warningButton" style="position: fixed; right: 15px; bottom: 95px; width: 50px; height: 50px; border-radius: 100%; border: none; background-color: rgba(242, 242, 242, 0.75); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); z-index: 17; box-shadow: 0 0 10px lightgrey; display: flex; justify-content: center; align-items: center;"><i class="fa-solid fa-info" style="width: 30px; height: 30px; border-radius: 100%; border: 2px solid black; display: flex; justify-content: center; align-items: center; font-size: 17px;"></i></button>
 
 
 
-        <div class="vardas" id="vardasNojus">
+        <div class="vardas" id="vardasDeividas">
             <i class="fa-regular fa-user-circle" style="position: absolute; width: 25px; height: 25px; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 12.5px; left: 27.5px; font-size: 20px; color: black;"></i>
             <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">DJ</p>
             <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Deividas</p>
@@ -1684,101 +1697,11 @@
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot" style="position: absolute; width: 25px; height: 100%; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
             <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Papildomai:</p>
-            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Dalis informacijos ir funkcijų ruošiamos.</p>
-            <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti1Nojus()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio1.mp3"</button>
-            <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti2Nojus()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio2.mp3"</button>
-            <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti3Nojus()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio3.mp3"</button>
-            <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti4Nojus()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio4.mp3"</button>
-            <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti5Nojus()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio5.mp3"</button>
-        </div>
-    </div>
-    <div id="aurelija">
-        <div style="position: absolute; width: 5px; height: 5px; top: 0; left: 0;" id="topInfoAurelija"></div>
-        <div id="infoAurelija"><i class="fa-solid fa-chevron-down" style="font-size: 15px; position: absolute; top: 15px; left: 15px; z-index: 4; transition: 0.15s; cursor: pointer; width: 30px; height: 30px; display: flex; justify-content: center; align-items: center; border-radius: 100%; background-color: #DEDEDE;" onclick="closeAurelija()" id="chevronAurelija" ontouchstart></i></div>
-        <p style="font-size: 25px; font-weight: 600; color: black; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; width: 100%; position: fixed; top: 60px; padding-left: 15px; padding-right: 15px; z-index: 10;" id="aurelijaKarnavalasText">Karnavalas "Snieguolė ir septyni nykštukai"</p>
-        <div style="position: fixed; top: 60px; left: 0; right: 0; width: 100%; height: 60px; z-index: 11; color: lightskyblue; font-size: 17px; display: flex; justify-content: space-around; overflow: visible;">
-            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 4s linear infinite;"></i>
-            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 2s linear infinite; animation-delay: 1s;"></i>
-            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 3s linear infinite; animation-delay: 0.5s;"></i>
-            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 2.5s linear infinite;"></i>
-            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 3.5s linear infinite; animation-delay: 1.5s;"></i>
-            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 2s linear infinite;"></i>
-            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 1.5s linear infinite; animation-delay: 1;"></i>
-            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 3s linear infinite; animation-delay: 2s;"></i>
-            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 2s linear infinite; animation-delay: 0.5s;"></i>
-            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 3.5s linear infinite; animation-delay: 0.5s;"></i>
-        </div>
-        <div style="position: fixed; top: -5px; left: 0; right: 0; width: 100%; height: 5px; z-index: 18; color: lightskyblue; font-size: 17px; display: flex; justify-content: center; align-items: flex-end; overflow: visible;">
-            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite;"></div>
-            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite;"></div>
-            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite;"></div>
-            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite;"></div>
-            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite;"></div>
-            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite;"></div>
-            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite;"></div>
-            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite;"></div>
-            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite;"></div>
-            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite;"></div>
-        </div>
-        <div style="position: fixed; bottom: -5px; left: 0; right: 0; width: 100%; height: 5px; z-index: 18; color: lightskyblue; font-size: 17px; display: flex; justify-content: center; align-items: flex-start; overflow: visible;">
-            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite; animation-delay: 0.5s;"></div>
-            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite; animation-delay: 0.5s;"></div>
-            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite; animation-delay: 0.5s;"></div>
-            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite; animation-delay: 0.5s;"></div>
-            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite; animation-delay: 0.5s;"></div>
-            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite; animation-delay: 0.5s;"></div>
-            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite; animation-delay: 0.5s;"></div>
-            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite; animation-delay: 0.5s;"></div>
-            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite; animation-delay: 0.5s;"></div>
-            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite; animation-delay: 0.5s;"></div>
-        </div>
-
-        <div style="width: 100%; height: auto; background-color: rgba(242, 242, 242, 0.75); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); position: fixed; bottom: 0; left: 0; right: 0; padding: 15px; display: flex; justify-content: center; align-items: center; flex-direction: column; z-index: 17; box-shadow: 0 0 10px lightgrey; border-radius: 25px 25px 0 0;" id="scenarijusAurelijaBackground">
-            <button style="width: 100%; height: 50px; display: flex; justify-content: center; align-items: center; border-radius: 15px; border: none; background-color: transparent; color: black; border: 2px solid black; font-size: 15px;" onclick="scenarijusAurelija()" class="warningButton" ontouchstart><i class="fa-solid fa-scroll" style="margin-right: 5px;"></i>Atsisiųsti visą scenarijų</button>
-        </div>
-        <div id="downloadingBackgroundAurelija" style="width: 100%; height: 100%; pointer-events: none; z-index: 19; background-color: rgba(211, 211, 211, 0.75); position: fixed; top: 0; left: 0; right: 0; bottom: 0; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); opacity: 0; display: none;"></div>
-        <div id="downloadingScriptAurelija" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "scenarijus.pdf"</div>
-        <div id="downloading1Aurelija" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio1.mp3"</div>
-        <div id="downloading2Aurelija" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio2.mp3"</div>
-        <div id="downloading3Aurelija" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio3.mp3"</div>
-        <div id="downloading4Aurelija" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio4.mp3"</div>
-        <div id="downloading5Aurelija" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio5.mp3"</div>
-
-
-
-        <div class="vardas" id="vardasAurelija">
-            <i class="fa-regular fa-user-circle" style="position: absolute; width: 25px; height: 25px; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 12.5px; left: 27.5px; font-size: 20px; color: black;"></i>
-            <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Už scenos</p>
-            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Aurelija</p>
-        </div>
-        <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
-        <div class="apie">
-            <i class="fa-regular fa-circle-question" style="position: absolute; width: 25px; height: 100%; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
-            <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Apie rolę:</p>
-            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Reikalingu metu nešioja visus reikalingus daiktus iš/į sceną.</p>
-        </div>
-        <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
-        <div class="apranga">
-            <i class="fa-solid fa-shirt" style="position: absolute; width: 25px; height: 100%; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
-            <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Apranga:</p>
-            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Juodos spalvos drabužiai ir avalynė.</p>
-        </div>
-        <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
-        <div class="vaidinimas">
-            <i class="fa-solid fa-people-arrows" style="position: absolute; width: 25px; height: 100%; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
-            <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Vaidinimo eiga:</p>
-            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Naudotis scenarijumi ir reikalingu metu įnešti/išnešti daiktus iš scenos: <br> Už scenos įneša ir per vidurį scenos pastato veidrodį; įneša kalėdinę eglutę ir pastato ją kampe. <br> Už scenos išneša veidrodį. <br> Už scenos įneša namą (sienas) ir drabužius, kėdę. <br> Už scenos išneša namą, įneša veidrodį. <br> Už scenos išneša veidrodį ir numestą dėžutę. <br> Atbėga už scenos ir perrengia ją į raganą, paduoda jai lazdelę ir obuolį, išeina.</p>
-        </div>
-        <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
-        <div class="papildomai">
-            <i class="fa-regular fa-circle-dot" style="position: absolute; width: 25px; height: 100%; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
-            <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Papildomai:</p>
-            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Dalis informacijos ir funkcijų ruošiamos.</p>
-            <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti1Aurelija()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio1.mp3"</button>
-            <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti2Aurelija()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio2.mp3"</button>
-            <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti3Aurelija()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio3.mp3"</button>
-            <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti4Aurelija()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio4.mp3"</button>
-            <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti5Aurelija()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio5.mp3"</button>
+            <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti1Deividas()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio1.mp3"</button>
+            <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti2Deividas()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio2.mp3"</button>
+            <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti3Deividas()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio3.mp3"</button>
+            <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti4Deividas()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio4.mp3"</button>
+            <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti5Deividas()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio5.mp3"</button>
         </div>
     </div>
     <div id="samanta">
@@ -1832,6 +1755,7 @@
         <div id="downloading3Samanta" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio3.mp3"</div>
         <div id="downloading4Samanta" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio4.mp3"</div>
         <div id="downloading5Samanta" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio5.mp3"</div>
+        <button onclick="importantInfo()" class="warningButton" style="position: fixed; right: 15px; bottom: 95px; width: 50px; height: 50px; border-radius: 100%; border: none; background-color: rgba(242, 242, 242, 0.75); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); z-index: 17; box-shadow: 0 0 10px lightgrey; display: flex; justify-content: center; align-items: center;"><i class="fa-solid fa-info" style="width: 30px; height: 30px; border-radius: 100%; border: 2px solid black; display: flex; justify-content: center; align-items: center; font-size: 17px;"></i></button>
 
 
 
@@ -1876,7 +1800,6 @@
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot" style="position: absolute; width: 25px; height: 100%; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
             <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Papildomai:</p>
-            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Dalis informacijos ir funkcijų ruošiamos.</p>
             <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti1Samanta()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio1.mp3"</button>
             <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti2Samanta()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio2.mp3"</button>
             <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti3Samanta()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio3.mp3"</button>
@@ -1935,6 +1858,7 @@
         <div id="downloading3Emilija" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio3.mp3"</div>
         <div id="downloading4Emilija" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio4.mp3"</div>
         <div id="downloading5Emilija" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio5.mp3"</div>
+        <button onclick="importantInfo()" class="warningButton" style="position: fixed; right: 15px; bottom: 95px; width: 50px; height: 50px; border-radius: 100%; border: none; background-color: rgba(242, 242, 242, 0.75); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); z-index: 17; box-shadow: 0 0 10px lightgrey; display: flex; justify-content: center; align-items: center;"><i class="fa-solid fa-info" style="width: 30px; height: 30px; border-radius: 100%; border: 2px solid black; display: flex; justify-content: center; align-items: center; font-size: 17px;"></i></button>
 
 
 
@@ -1979,7 +1903,6 @@
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot" style="position: absolute; width: 25px; height: 100%; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
             <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Papildomai:</p>
-            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Dalis informacijos ir funkcijų ruošiamos.</p>
             <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti1Emilija()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio1.mp3"</button>
             <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti2Emilija()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio2.mp3"</button>
             <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti3Emilija()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio3.mp3"</button>
@@ -2038,6 +1961,7 @@
         <div id="downloading3Justina" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio3.mp3"</div>
         <div id="downloading4Justina" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio4.mp3"</div>
         <div id="downloading5Justina" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio5.mp3"</div>
+        <button onclick="importantInfo()" class="warningButton" style="position: fixed; right: 15px; bottom: 95px; width: 50px; height: 50px; border-radius: 100%; border: none; background-color: rgba(242, 242, 242, 0.75); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); z-index: 17; box-shadow: 0 0 10px lightgrey; display: flex; justify-content: center; align-items: center;"><i class="fa-solid fa-info" style="width: 30px; height: 30px; border-radius: 100%; border: 2px solid black; display: flex; justify-content: center; align-items: center; font-size: 17px;"></i></button>
 
 
 
@@ -2082,7 +2006,6 @@
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot" style="position: absolute; width: 25px; height: 100%; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
             <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Papildomai:</p>
-            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Dalis informacijos ir funkcijų ruošiamos.</p>
             <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti1Justina()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio1.mp3"</button>
             <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti2Justina()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio2.mp3"</button>
             <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti3Justina()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio3.mp3"</button>
@@ -2141,6 +2064,7 @@
         <div id="downloading3Dovydas" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio3.mp3"</div>
         <div id="downloading4Dovydas" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio4.mp3"</div>
         <div id="downloading5Dovydas" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio5.mp3"</div>
+        <button onclick="importantInfo()" class="warningButton" style="position: fixed; right: 15px; bottom: 95px; width: 50px; height: 50px; border-radius: 100%; border: none; background-color: rgba(242, 242, 242, 0.75); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); z-index: 17; box-shadow: 0 0 10px lightgrey; display: flex; justify-content: center; align-items: center;"><i class="fa-solid fa-info" style="width: 30px; height: 30px; border-radius: 100%; border: 2px solid black; display: flex; justify-content: center; align-items: center; font-size: 17px;"></i></button>
 
 
 
@@ -2185,7 +2109,6 @@
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot" style="position: absolute; width: 25px; height: 100%; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
             <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Papildomai:</p>
-            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Dalis informacijos ir funkcijų ruošiamos.</p>
             <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti1Dovydas()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio1.mp3"</button>
             <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti2Dovydas()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio2.mp3"</button>
             <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti3Dovydas()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio3.mp3"</button>
@@ -2244,6 +2167,7 @@
         <div id="downloading3Adriana" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio3.mp3"</div>
         <div id="downloading4Adriana" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio4.mp3"</div>
         <div id="downloading5Adriana" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio5.mp3"</div>
+        <button onclick="importantInfo()" class="warningButton" style="position: fixed; right: 15px; bottom: 95px; width: 50px; height: 50px; border-radius: 100%; border: none; background-color: rgba(242, 242, 242, 0.75); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); z-index: 17; box-shadow: 0 0 10px lightgrey; display: flex; justify-content: center; align-items: center;"><i class="fa-solid fa-info" style="width: 30px; height: 30px; border-radius: 100%; border: 2px solid black; display: flex; justify-content: center; align-items: center; font-size: 17px;"></i></button>
 
 
 
@@ -2287,7 +2211,6 @@
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot" style="position: absolute; width: 25px; height: 100%; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
             <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Papildomai:</p>
-            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Dalis informacijos ir funkcijų ruošiamos.</p>
             <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti1Adriana()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio1.mp3"</button>
             <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti2Adriana()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio2.mp3"</button>
             <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti3Adriana()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio3.mp3"</button>
@@ -2335,6 +2258,7 @@
             <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite; animation-delay: 0.5s;"></div>
             <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite; animation-delay: 0.5s;"></div>
         </div>
+        <div style="position: fixed; top: 2px; left: 0; right: 0; width: 100%; height: 15px; justify-content: center; align-items: center; z-index: 50; font-size: 13px; display: none;" id="adminasDiv"><div style="width: 0; height: 15px; display: flex; justify-content: right; align-items: center; position: relative; overflow: hidden;" id="adminasText"><i class="fa-solid fa-unlock" style="position: absolute; left: 0;"></i><p style="position: absolute; right: 0; display: inline-block; white-space: nowrap;">Sveiki, adminas!</p></div></div>
 
         <div style="width: 100%; height: auto; background-color: rgba(242, 242, 242, 0.75); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); position: fixed; bottom: 0; left: 0; right: 0; padding: 15px; display: flex; justify-content: center; align-items: center; flex-direction: column; z-index: 17; box-shadow: 0 0 10px lightgrey; border-radius: 25px 25px 0 0;" id="scenarijusMatasBackground">
             <button style="width: 100%; height: 50px; display: flex; justify-content: center; align-items: center; border-radius: 15px; border: none; background-color: transparent; color: black; border: 2px solid black; font-size: 15px;" onclick="scenarijusMatas()" class="warningButton" ontouchstart><i class="fa-solid fa-scroll" style="margin-right: 5px;"></i>Atsisiųsti visą scenarijų</button>
@@ -2346,6 +2270,7 @@
         <div id="downloading3Matas" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio3.mp3"</div>
         <div id="downloading4Matas" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio4.mp3"</div>
         <div id="downloading5Matas" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio5.mp3"</div>
+        <button onclick="importantInfo()" class="warningButton" style="position: fixed; right: 15px; bottom: 95px; width: 50px; height: 50px; border-radius: 100%; border: none; background-color: rgba(242, 242, 242, 0.75); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); z-index: 17; box-shadow: 0 0 10px lightgrey; display: flex; justify-content: center; align-items: center;"><i class="fa-solid fa-info" style="width: 30px; height: 30px; border-radius: 100%; border: 2px solid black; display: flex; justify-content: center; align-items: center; font-size: 17px;"></i></button>
 
 
 
@@ -2390,7 +2315,6 @@
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot" style="position: absolute; width: 25px; height: 100%; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
             <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Papildomai:</p>
-            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Dalis informacijos ir funkcijų ruošiamos.</p>
             <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti1Matas()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio1.mp3"</button>
             <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti2Matas()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio2.mp3"</button>
             <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti3Matas()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio3.mp3"</button>
@@ -2449,6 +2373,7 @@
         <div id="downloading3Smilte" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio3.mp3"</div>
         <div id="downloading4Smilte" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio4.mp3"</div>
         <div id="downloading5Smilte" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio5.mp3"</div>
+        <button onclick="importantInfo()" class="warningButton" style="position: fixed; right: 15px; bottom: 95px; width: 50px; height: 50px; border-radius: 100%; border: none; background-color: rgba(242, 242, 242, 0.75); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); z-index: 17; box-shadow: 0 0 10px lightgrey; display: flex; justify-content: center; align-items: center;"><i class="fa-solid fa-info" style="width: 30px; height: 30px; border-radius: 100%; border: 2px solid black; display: flex; justify-content: center; align-items: center; font-size: 17px;"></i></button>
 
 
 
@@ -2493,7 +2418,6 @@
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot" style="position: absolute; width: 25px; height: 100%; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
             <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Papildomai:</p>
-            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Dalis informacijos ir funkcijų ruošiamos.</p>
             <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti1Smilte()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio1.mp3"</button>
             <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti2Smilte()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio2.mp3"</button>
             <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti3Smilte()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio3.mp3"</button>
@@ -2552,6 +2476,7 @@
         <div id="downloading3Agnieska" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio3.mp3"</div>
         <div id="downloading4Agnieska" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio4.mp3"</div>
         <div id="downloading5Agnieska" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio5.mp3"</div>
+        <button onclick="importantInfo()" class="warningButton" style="position: fixed; right: 15px; bottom: 95px; width: 50px; height: 50px; border-radius: 100%; border: none; background-color: rgba(242, 242, 242, 0.75); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); z-index: 17; box-shadow: 0 0 10px lightgrey; display: flex; justify-content: center; align-items: center;"><i class="fa-solid fa-info" style="width: 30px; height: 30px; border-radius: 100%; border: 2px solid black; display: flex; justify-content: center; align-items: center; font-size: 17px;"></i></button>
 
 
 
@@ -2583,12 +2508,100 @@
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot" style="position: absolute; width: 25px; height: 100%; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
             <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Papildomai:</p>
-            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Dalis informacijos ir funkcijų ruošiamos.</p>
             <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti1Agnieska()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio1.mp3"</button>
             <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti2Agnieska()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio2.mp3"</button>
             <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti3Agnieska()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio3.mp3"</button>
             <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti4Agnieska()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio4.mp3"</button>
             <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti5Agnieska()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio5.mp3"</button>
+        </div>
+    </div>
+    <div id="aurelija">
+        <div style="position: absolute; width: 5px; height: 5px; top: 0; left: 0;" id="topInfoAurelija"></div>
+        <div id="infoAurelija"><i class="fa-solid fa-chevron-down" style="font-size: 15px; position: absolute; top: 15px; left: 15px; z-index: 4; transition: 0.15s; cursor: pointer; width: 30px; height: 30px; display: flex; justify-content: center; align-items: center; border-radius: 100%; background-color: #DEDEDE;" onclick="closeAurelija()" id="chevronAurelija" ontouchstart></i></div>
+        <p style="font-size: 25px; font-weight: 600; color: black; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; width: 100%; position: fixed; top: 60px; padding-left: 15px; padding-right: 15px; z-index: 10;" id="aurelijaKarnavalasText">Karnavalas "Snieguolė ir septyni nykštukai"</p>
+        <div style="position: fixed; top: 60px; left: 0; right: 0; width: 100%; height: 60px; z-index: 11; color: lightskyblue; font-size: 17px; display: flex; justify-content: space-around; overflow: visible;">
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 4s linear infinite;"></i>
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 2s linear infinite; animation-delay: 1s;"></i>
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 3s linear infinite; animation-delay: 0.5s;"></i>
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 2.5s linear infinite;"></i>
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 3.5s linear infinite; animation-delay: 1.5s;"></i>
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 2s linear infinite;"></i>
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 1.5s linear infinite; animation-delay: 1;"></i>
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 3s linear infinite; animation-delay: 2s;"></i>
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 2s linear infinite; animation-delay: 0.5s;"></i>
+            <i class="fa-regular fa-snowflake" style="margin-top: -100px; width: 17px; height: 17px; display: flex; justify-content: center; align-items: center; animation: snow 3.5s linear infinite; animation-delay: 0.5s;"></i>
+        </div>
+        <div style="position: fixed; top: -5px; left: 0; right: 0; width: 100%; height: 5px; z-index: 18; color: lightskyblue; font-size: 17px; display: flex; justify-content: center; align-items: flex-end; overflow: visible;">
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite;"></div>
+        </div>
+        <div style="position: fixed; bottom: -5px; left: 0; right: 0; width: 100%; height: 5px; z-index: 18; color: lightskyblue; font-size: 17px; display: flex; justify-content: center; align-items: flex-start; overflow: visible;">
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite; animation-delay: 0.5s;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite; animation-delay: 0.5s;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite; animation-delay: 0.5s;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite; animation-delay: 0.5s;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite; animation-delay: 0.5s;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite; animation-delay: 0.5s;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite; animation-delay: 0.5s;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite; animation-delay: 0.5s;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: red; animation: raudona 1s linear infinite; animation-delay: 0.5s;"></div>
+            <div style="width: 10%; height: 5px; display: inline-block; background-color: green; animation: zalia 1s linear infinite; animation-delay: 0.5s;"></div>
+        </div>
+
+        <div style="width: 100%; height: auto; background-color: rgba(242, 242, 242, 0.75); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); position: fixed; bottom: 0; left: 0; right: 0; padding: 15px; display: flex; justify-content: center; align-items: center; flex-direction: column; z-index: 17; box-shadow: 0 0 10px lightgrey; border-radius: 25px 25px 0 0;" id="scenarijusAurelijaBackground">
+            <button style="width: 100%; height: 50px; display: flex; justify-content: center; align-items: center; border-radius: 15px; border: none; background-color: transparent; color: black; border: 2px solid black; font-size: 15px;" onclick="scenarijusAurelija()" class="warningButton" ontouchstart><i class="fa-solid fa-scroll" style="margin-right: 5px;"></i>Atsisiųsti visą scenarijų</button>
+        </div>
+        <div id="downloadingBackgroundAurelija" style="width: 100%; height: 100%; pointer-events: none; z-index: 19; background-color: rgba(211, 211, 211, 0.75); position: fixed; top: 0; left: 0; right: 0; bottom: 0; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); opacity: 0; display: none;"></div>
+        <div id="downloadingScriptAurelija" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "scenarijus.pdf"</div>
+        <div id="downloading1Aurelija" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio1.mp3"</div>
+        <div id="downloading2Aurelija" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio2.mp3"</div>
+        <div id="downloading3Aurelija" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio3.mp3"</div>
+        <div id="downloading4Aurelija" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio4.mp3"</div>
+        <div id="downloading5Aurelija" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio5.mp3"</div>
+        <button onclick="importantInfo()" class="warningButton" style="position: fixed; right: 15px; bottom: 95px; width: 50px; height: 50px; border-radius: 100%; border: none; background-color: rgba(242, 242, 242, 0.75); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); z-index: 17; box-shadow: 0 0 10px lightgrey; display: flex; justify-content: center; align-items: center;"><i class="fa-solid fa-info" style="width: 30px; height: 30px; border-radius: 100%; border: 2px solid black; display: flex; justify-content: center; align-items: center; font-size: 17px;"></i></button>
+
+
+
+        <div class="vardas" id="vardasAurelija">
+            <i class="fa-regular fa-user-circle" style="position: absolute; width: 25px; height: 25px; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 12.5px; left: 27.5px; font-size: 20px; color: black;"></i>
+            <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Už scenos</p>
+            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Aurelija</p>
+        </div>
+        <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
+        <div class="apie">
+            <i class="fa-regular fa-circle-question" style="position: absolute; width: 25px; height: 100%; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
+            <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Apie rolę:</p>
+            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Reikalingu metu nešioja visus reikalingus daiktus iš/į sceną.</p>
+        </div>
+        <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
+        <div class="apranga">
+            <i class="fa-solid fa-shirt" style="position: absolute; width: 25px; height: 100%; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
+            <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Apranga:</p>
+            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Juodos spalvos drabužiai ir avalynė.</p>
+        </div>
+        <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
+        <div class="vaidinimas">
+            <i class="fa-solid fa-people-arrows" style="position: absolute; width: 25px; height: 100%; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
+            <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Vaidinimo eiga:</p>
+            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%;">Naudotis scenarijumi ir reikalingu metu įnešti/išnešti daiktus iš scenos: <br> Už scenos įneša ir per vidurį scenos pastato veidrodį; įneša kalėdinę eglutę ir pastato ją kampe. <br> Už scenos išneša veidrodį. <br> Už scenos įneša namą (sienas) ir drabužius, kėdę. <br> Už scenos išneša namą, įneša veidrodį. <br> Už scenos išneša veidrodį ir numestą dėžutę. <br> Atbėga už scenos ir perrengia ją į raganą, paduoda jai lazdelę ir obuolį, išeina.</p>
+        </div>
+        <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
+        <div class="papildomai">
+            <i class="fa-regular fa-circle-dot" style="position: absolute; width: 25px; height: 100%; border-radius: 25px; display: flex; justify-content: center; align-items: center; top: 0; left: 27.5px; font-size: 20px; color: black;"></i>
+            <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Papildomai:</p>
+            <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti1Aurelija()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio1.mp3"</button>
+            <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti2Aurelija()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio2.mp3"</button>
+            <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti3Aurelija()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio3.mp3"</button>
+            <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti4Aurelija()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio4.mp3"</button>
+            <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="parsisiusti5Aurelija()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti įrašą "audio5.mp3"</button>
         </div>
     </div>
 
@@ -2642,11 +2655,11 @@
                 document.getElementById("vardasNorbertas").style.marginTop = "75px";
                 document.getElementById("infoNorbertas").style.boxShadow = "0 0 10px lightgrey";
 
-                document.getElementById("nojusKarnavalasText").style.fontSize = "20px";
-                document.getElementById("nojusKarnavalasText").style.top = "17px";
-                document.getElementById("chevronNojus").style.opacity = "0";
-                document.getElementById("vardasNojus").style.marginTop = "75px";
-                document.getElementById("infoNojus").style.boxShadow = "0 0 10px lightgrey";
+                document.getElementById("deividasKarnavalasText").style.fontSize = "20px";
+                document.getElementById("deividasKarnavalasText").style.top = "17px";
+                document.getElementById("chevronDeividas").style.opacity = "0";
+                document.getElementById("vardasDeividas").style.marginTop = "75px";
+                document.getElementById("infoDeividas").style.boxShadow = "0 0 10px lightgrey";
 
                 document.getElementById("aurelijaKarnavalasText").style.fontSize = "20px";
                 document.getElementById("aurelijaKarnavalasText").style.top = "17px";
@@ -2745,13 +2758,13 @@
                 document.getElementById("vardasNorbertas").style.marginTop = "110px";
                 document.getElementById("infoNorbertas").style.boxShadow = "none";
 
-                document.getElementById("nojusKarnavalasText").style.fontSize = "25px";
-                document.getElementById("nojusKarnavalasText").style.top = "60px";
+                document.getElementById("deividasKarnavalasText").style.fontSize = "25px";
+                document.getElementById("deividasKarnavalasText").style.top = "60px";
                 setTimeout(() => {
-                    document.getElementById("chevronNojus").style.opacity = "1";
+                    document.getElementById("chevronDeividas").style.opacity = "1";
                 }, 100);
-                document.getElementById("vardasNojus").style.marginTop = "110px";
-                document.getElementById("infoNojus").style.boxShadow = "none";
+                document.getElementById("vardasDeividas").style.marginTop = "110px";
+                document.getElementById("infoDeividas").style.boxShadow = "none";
 
                 document.getElementById("aurelijaKarnavalasText").style.fontSize = "25px";
                 document.getElementById("aurelijaKarnavalasText").style.top = "60px";
@@ -3014,6 +3027,23 @@
         }
 
 
+
+        function importantInfo() {
+            document.getElementById("importantInfoBackground").style.display = "block";
+            document.getElementById("body").style.overflow = "hidden";
+            setTimeout(() => {
+                document.getElementById("importantInfoDiv").style.bottom = "0";
+                document.getElementById("importantInfoBackground").style.opacity = "1";
+            }, 10);
+        }
+        function closeImportantInfo() {
+            document.getElementById("importantInfoBackground").style.opacity = "0";
+            document.getElementById("importantInfoDiv").style.bottom = "-100%";
+            setTimeout(() => {
+                document.getElementById("importantInfoBackground").style.display = "none";
+                document.getElementById("body").style.overflow = "scroll";
+            }, 300);
+        }
 
         function scenarijusArune() {
             document.getElementById("downloadingBackgroundArune").style.display = "block";
@@ -3471,231 +3501,117 @@
                 document.getElementById("body").style.overflow = "scroll";
             }, 6310);
         }
-        function scenarijusNojus() {
-            document.getElementById("downloadingBackgroundNojus").style.display = "block";
+        function scenarijusDeividas() {
+            document.getElementById("downloadingBackgroundDeividas").style.display = "block";
             document.getElementById("body").style.overflow = "hidden";
             setTimeout(() => {
-                document.getElementById("downloadingScriptNojus").style.bottom = "0";
-                document.getElementById("downloadingBackgroundNojus").style.opacity = "1";
+                document.getElementById("downloadingScriptDeividas").style.bottom = "0";
+                document.getElementById("downloadingBackgroundDeividas").style.opacity = "1";
             }, 10);
             setTimeout(() => {
                 document.getElementById("download_script").click();
             }, 1010);
             setTimeout(() => {
-                document.getElementById("downloadingScriptNojus").style.bottom = "-100%";
-                document.getElementById("downloadingBackgroundNojus").style.opacity = "0";
+                document.getElementById("downloadingScriptDeividas").style.bottom = "-100%";
+                document.getElementById("downloadingBackgroundDeividas").style.opacity = "0";
             }, 6010);
             setTimeout(() => {
-                document.getElementById("downloadingBackgroundNojus").style.display = "none";
+                document.getElementById("downloadingBackgroundDeividas").style.display = "none";
                 document.getElementById("body").style.overflow = "scroll";
             }, 6310);
         }
-        function parsisiusti1Nojus() {
-            document.getElementById("downloadingBackgroundNojus").style.display = "block";
+        function parsisiusti1Deividas() {
+            document.getElementById("downloadingBackgroundDeividas").style.display = "block";
             document.getElementById("body").style.overflow = "hidden";
             setTimeout(() => {
-                document.getElementById("downloading1Nojus").style.bottom = "0";
-                document.getElementById("downloadingBackgroundNojus").style.opacity = "1";
+                document.getElementById("downloading1Deividas").style.bottom = "0";
+                document.getElementById("downloadingBackgroundDeividas").style.opacity = "1";
             }, 10);
             setTimeout(() => {
                 document.getElementById("download_1").click();
             }, 1010);
             setTimeout(() => {
-                document.getElementById("downloading1Nojus").style.bottom = "-100%";
-                document.getElementById("downloadingBackgroundNojus").style.opacity = "0";
+                document.getElementById("downloading1Deividas").style.bottom = "-100%";
+                document.getElementById("downloadingBackgroundDeividas").style.opacity = "0";
             }, 6010);
             setTimeout(() => {
-                document.getElementById("downloadingBackgroundNojus").style.display = "none";
+                document.getElementById("downloadingBackgroundDeividas").style.display = "none";
                 document.getElementById("body").style.overflow = "scroll";
             }, 6310);
         }
-        function parsisiusti2Nojus() {
-            document.getElementById("downloadingBackgroundNojus").style.display = "block";
+        function parsisiusti2Deividas() {
+            document.getElementById("downloadingBackgroundDeividas").style.display = "block";
             document.getElementById("body").style.overflow = "hidden";
             setTimeout(() => {
-                document.getElementById("downloading2Nojus").style.bottom = "0";
-                document.getElementById("downloadingBackgroundNojus").style.opacity = "1";
+                document.getElementById("downloading2Deividas").style.bottom = "0";
+                document.getElementById("downloadingBackgroundDeividas").style.opacity = "1";
             }, 10);
             setTimeout(() => {
                 document.getElementById("download_2").click();
             }, 1010);
             setTimeout(() => {
-                document.getElementById("downloading2Nojus").style.bottom = "-100%";
-                document.getElementById("downloadingBackgroundNojus").style.opacity = "0";
+                document.getElementById("downloading2Deividas").style.bottom = "-100%";
+                document.getElementById("downloadingBackgroundDeividas").style.opacity = "0";
             }, 6010);
             setTimeout(() => {
-                document.getElementById("downloadingBackgroundNojus").style.display = "none";
+                document.getElementById("downloadingBackgroundDeividas").style.display = "none";
                 document.getElementById("body").style.overflow = "scroll";
             }, 6310);
         }
-        function parsisiusti3Nojus() {
-            document.getElementById("downloadingBackgroundNojus").style.display = "block";
+        function parsisiusti3Deividas() {
+            document.getElementById("downloadingBackgroundDeividas").style.display = "block";
             document.getElementById("body").style.overflow = "hidden";
             setTimeout(() => {
-                document.getElementById("downloading3Nojus").style.bottom = "0";
-                document.getElementById("downloadingBackgroundNojus").style.opacity = "1";
+                document.getElementById("downloading3Deividas").style.bottom = "0";
+                document.getElementById("downloadingBackgroundDeividas").style.opacity = "1";
             }, 10);
             setTimeout(() => {
                 document.getElementById("download_3").click();
             }, 1010);
             setTimeout(() => {
-                document.getElementById("downloading3Nojus").style.bottom = "-100%";
-                document.getElementById("downloadingBackgroundNojus").style.opacity = "0";
+                document.getElementById("downloading3Deividas").style.bottom = "-100%";
+                document.getElementById("downloadingBackgroundDeividas").style.opacity = "0";
             }, 6010);
             setTimeout(() => {
-                document.getElementById("downloadingBackgroundNojus").style.display = "none";
+                document.getElementById("downloadingBackgroundDeividas").style.display = "none";
                 document.getElementById("body").style.overflow = "scroll";
             }, 6310);
         }
-        function parsisiusti4Nojus() {
-            document.getElementById("downloadingBackgroundNojus").style.display = "block";
+        function parsisiusti4Deividas() {
+            document.getElementById("downloadingBackgroundDeividas").style.display = "block";
             document.getElementById("body").style.overflow = "hidden";
             setTimeout(() => {
-                document.getElementById("downloading4Nojus").style.bottom = "0";
-                document.getElementById("downloadingBackgroundNojus").style.opacity = "1";
+                document.getElementById("downloading4Deividas").style.bottom = "0";
+                document.getElementById("downloadingBackgroundDeividas").style.opacity = "1";
             }, 10);
             setTimeout(() => {
                 document.getElementById("download_4").click();
             }, 1010);
             setTimeout(() => {
-                document.getElementById("downloading4Nojus").style.bottom = "-100%";
-                document.getElementById("downloadingBackgroundNojus").style.opacity = "0";
+                document.getElementById("downloading4Deividas").style.bottom = "-100%";
+                document.getElementById("downloadingBackgroundDeividas").style.opacity = "0";
             }, 6010);
             setTimeout(() => {
-                document.getElementById("downloadingBackgroundNojus").style.display = "none";
+                document.getElementById("downloadingBackgroundDeividas").style.display = "none";
                 document.getElementById("body").style.overflow = "scroll";
             }, 6310);
         }
-        function parsisiusti5Nojus() {
-            document.getElementById("downloadingBackgroundNojus").style.display = "block";
+        function parsisiusti5Deividas() {
+            document.getElementById("downloadingBackgroundDeividas").style.display = "block";
             document.getElementById("body").style.overflow = "hidden";
             setTimeout(() => {
-                document.getElementById("downloading5Nojus").style.bottom = "0";
-                document.getElementById("downloadingBackgroundNojus").style.opacity = "1";
+                document.getElementById("downloading5Deividas").style.bottom = "0";
+                document.getElementById("downloadingBackgroundDeividas").style.opacity = "1";
             }, 10);
             setTimeout(() => {
                 document.getElementById("download_5").click();
             }, 1010);
             setTimeout(() => {
-                document.getElementById("downloading5Nojus").style.bottom = "-100%";
-                document.getElementById("downloadingBackgroundNojus").style.opacity = "0";
+                document.getElementById("downloading5Deividas").style.bottom = "-100%";
+                document.getElementById("downloadingBackgroundDeividas").style.opacity = "0";
             }, 6010);
             setTimeout(() => {
-                document.getElementById("downloadingBackgroundNojus").style.display = "none";
-                document.getElementById("body").style.overflow = "scroll";
-            }, 6310);
-        }
-        function scenarijusAurelija() {
-            document.getElementById("downloadingBackgroundAurelija").style.display = "block";
-            document.getElementById("body").style.overflow = "hidden";
-            setTimeout(() => {
-                document.getElementById("downloadingScriptAurelija").style.bottom = "0";
-                document.getElementById("downloadingBackgroundAurelija").style.opacity = "1";
-            }, 10);
-            setTimeout(() => {
-                document.getElementById("download_script").click();
-            }, 1010);
-            setTimeout(() => {
-                document.getElementById("downloadingScriptAurelija").style.bottom = "-100%";
-                document.getElementById("downloadingBackgroundAurelija").style.opacity = "0";
-            }, 6010);
-            setTimeout(() => {
-                document.getElementById("downloadingBackgroundAurelija").style.display = "none";
-                document.getElementById("body").style.overflow = "scroll";
-            }, 6310);
-        }
-        function parsisiusti1Aurelija() {
-            document.getElementById("downloadingBackgroundAurelija").style.display = "block";
-            document.getElementById("body").style.overflow = "hidden";
-            setTimeout(() => {
-                document.getElementById("downloading1Aurelija").style.bottom = "0";
-                document.getElementById("downloadingBackgroundAurelija").style.opacity = "1";
-            }, 10);
-            setTimeout(() => {
-                document.getElementById("download_1").click();
-            }, 1010);
-            setTimeout(() => {
-                document.getElementById("downloading1Aurelija").style.bottom = "-100%";
-                document.getElementById("downloadingBackgroundAurelija").style.opacity = "0";
-            }, 6010);
-            setTimeout(() => {
-                document.getElementById("downloadingBackgroundAurelija").style.display = "none";
-                document.getElementById("body").style.overflow = "scroll";
-            }, 6310);
-        }
-        function parsisiusti2Aurelija() {
-            document.getElementById("downloadingBackgroundAurelija").style.display = "block";
-            document.getElementById("body").style.overflow = "hidden";
-            setTimeout(() => {
-                document.getElementById("downloading2Aurelija").style.bottom = "0";
-                document.getElementById("downloadingBackgroundAurelija").style.opacity = "1";
-            }, 10);
-            setTimeout(() => {
-                document.getElementById("download_2").click();
-            }, 1010);
-            setTimeout(() => {
-                document.getElementById("downloading2Aurelija").style.bottom = "-100%";
-                document.getElementById("downloadingBackgroundAurelija").style.opacity = "0";
-            }, 6010);
-            setTimeout(() => {
-                document.getElementById("downloadingBackgroundAurelija").style.display = "none";
-                document.getElementById("body").style.overflow = "scroll";
-            }, 6310);
-        }
-        function parsisiusti3Aurelija() {
-            document.getElementById("downloadingBackgroundAurelija").style.display = "block";
-            document.getElementById("body").style.overflow = "hidden";
-            setTimeout(() => {
-                document.getElementById("downloading3Aurelija").style.bottom = "0";
-                document.getElementById("downloadingBackgroundAurelija").style.opacity = "1";
-            }, 10);
-            setTimeout(() => {
-                document.getElementById("download_3").click();
-            }, 1010);
-            setTimeout(() => {
-                document.getElementById("downloading3Aurelija").style.bottom = "-100%";
-                document.getElementById("downloadingBackgroundAurelija").style.opacity = "0";
-            }, 6010);
-            setTimeout(() => {
-                document.getElementById("downloadingBackgroundAurelija").style.display = "none";
-                document.getElementById("body").style.overflow = "scroll";
-            }, 6310);
-        }
-        function parsisiusti4Aurelija() {
-            document.getElementById("downloadingBackgroundAurelija").style.display = "block";
-            document.getElementById("body").style.overflow = "hidden";
-            setTimeout(() => {
-                document.getElementById("downloading4Aurelija").style.bottom = "0";
-                document.getElementById("downloadingBackgroundAurelija").style.opacity = "1";
-            }, 10);
-            setTimeout(() => {
-                document.getElementById("download_4").click();
-            }, 1010);
-            setTimeout(() => {
-                document.getElementById("downloading4Aurelija").style.bottom = "-100%";
-                document.getElementById("downloadingBackgroundAurelija").style.opacity = "0";
-            }, 6010);
-            setTimeout(() => {
-                document.getElementById("downloadingBackgroundAurelija").style.display = "none";
-                document.getElementById("body").style.overflow = "scroll";
-            }, 6310);
-        }
-        function parsisiusti5Aurelija() {
-            document.getElementById("downloadingBackgroundAurelija").style.display = "block";
-            document.getElementById("body").style.overflow = "hidden";
-            setTimeout(() => {
-                document.getElementById("downloading5Aurelija").style.bottom = "0";
-                document.getElementById("downloadingBackgroundAurelija").style.opacity = "1";
-            }, 10);
-            setTimeout(() => {
-                document.getElementById("download_5").click();
-            }, 1010);
-            setTimeout(() => {
-                document.getElementById("downloading5Aurelija").style.bottom = "-100%";
-                document.getElementById("downloadingBackgroundAurelija").style.opacity = "0";
-            }, 6010);
-            setTimeout(() => {
-                document.getElementById("downloadingBackgroundAurelija").style.display = "none";
+                document.getElementById("downloadingBackgroundDeividas").style.display = "none";
                 document.getElementById("body").style.overflow = "scroll";
             }, 6310);
         }
@@ -4611,6 +4527,120 @@
                 document.getElementById("body").style.overflow = "scroll";
             }, 6310);
         }
+        function scenarijusAurelija() {
+            document.getElementById("downloadingBackgroundAurelija").style.display = "block";
+            document.getElementById("body").style.overflow = "hidden";
+            setTimeout(() => {
+                document.getElementById("downloadingScriptAurelija").style.bottom = "0";
+                document.getElementById("downloadingBackgroundAurelija").style.opacity = "1";
+            }, 10);
+            setTimeout(() => {
+                document.getElementById("download_script").click();
+            }, 1010);
+            setTimeout(() => {
+                document.getElementById("downloadingScriptAurelija").style.bottom = "-100%";
+                document.getElementById("downloadingBackgroundAurelija").style.opacity = "0";
+            }, 6010);
+            setTimeout(() => {
+                document.getElementById("downloadingBackgroundAurelija").style.display = "none";
+                document.getElementById("body").style.overflow = "scroll";
+            }, 6310);
+        }
+        function parsisiusti1Aurelija() {
+            document.getElementById("downloadingBackgroundAurelija").style.display = "block";
+            document.getElementById("body").style.overflow = "hidden";
+            setTimeout(() => {
+                document.getElementById("downloading1Aurelija").style.bottom = "0";
+                document.getElementById("downloadingBackgroundAurelija").style.opacity = "1";
+            }, 10);
+            setTimeout(() => {
+                document.getElementById("download_1").click();
+            }, 1010);
+            setTimeout(() => {
+                document.getElementById("downloading1Aurelija").style.bottom = "-100%";
+                document.getElementById("downloadingBackgroundAurelija").style.opacity = "0";
+            }, 6010);
+            setTimeout(() => {
+                document.getElementById("downloadingBackgroundAurelija").style.display = "none";
+                document.getElementById("body").style.overflow = "scroll";
+            }, 6310);
+        }
+        function parsisiusti2Aurelija() {
+            document.getElementById("downloadingBackgroundAurelija").style.display = "block";
+            document.getElementById("body").style.overflow = "hidden";
+            setTimeout(() => {
+                document.getElementById("downloading2Aurelija").style.bottom = "0";
+                document.getElementById("downloadingBackgroundAurelija").style.opacity = "1";
+            }, 10);
+            setTimeout(() => {
+                document.getElementById("download_2").click();
+            }, 1010);
+            setTimeout(() => {
+                document.getElementById("downloading2Aurelija").style.bottom = "-100%";
+                document.getElementById("downloadingBackgroundAurelija").style.opacity = "0";
+            }, 6010);
+            setTimeout(() => {
+                document.getElementById("downloadingBackgroundAurelija").style.display = "none";
+                document.getElementById("body").style.overflow = "scroll";
+            }, 6310);
+        }
+        function parsisiusti3Aurelija() {
+            document.getElementById("downloadingBackgroundAurelija").style.display = "block";
+            document.getElementById("body").style.overflow = "hidden";
+            setTimeout(() => {
+                document.getElementById("downloading3Aurelija").style.bottom = "0";
+                document.getElementById("downloadingBackgroundAurelija").style.opacity = "1";
+            }, 10);
+            setTimeout(() => {
+                document.getElementById("download_3").click();
+            }, 1010);
+            setTimeout(() => {
+                document.getElementById("downloading3Aurelija").style.bottom = "-100%";
+                document.getElementById("downloadingBackgroundAurelija").style.opacity = "0";
+            }, 6010);
+            setTimeout(() => {
+                document.getElementById("downloadingBackgroundAurelija").style.display = "none";
+                document.getElementById("body").style.overflow = "scroll";
+            }, 6310);
+        }
+        function parsisiusti4Aurelija() {
+            document.getElementById("downloadingBackgroundAurelija").style.display = "block";
+            document.getElementById("body").style.overflow = "hidden";
+            setTimeout(() => {
+                document.getElementById("downloading4Aurelija").style.bottom = "0";
+                document.getElementById("downloadingBackgroundAurelija").style.opacity = "1";
+            }, 10);
+            setTimeout(() => {
+                document.getElementById("download_4").click();
+            }, 1010);
+            setTimeout(() => {
+                document.getElementById("downloading4Aurelija").style.bottom = "-100%";
+                document.getElementById("downloadingBackgroundAurelija").style.opacity = "0";
+            }, 6010);
+            setTimeout(() => {
+                document.getElementById("downloadingBackgroundAurelija").style.display = "none";
+                document.getElementById("body").style.overflow = "scroll";
+            }, 6310);
+        }
+        function parsisiusti5Aurelija() {
+            document.getElementById("downloadingBackgroundAurelija").style.display = "block";
+            document.getElementById("body").style.overflow = "hidden";
+            setTimeout(() => {
+                document.getElementById("downloading5Aurelija").style.bottom = "0";
+                document.getElementById("downloadingBackgroundAurelija").style.opacity = "1";
+            }, 10);
+            setTimeout(() => {
+                document.getElementById("download_5").click();
+            }, 1010);
+            setTimeout(() => {
+                document.getElementById("downloading5Aurelija").style.bottom = "-100%";
+                document.getElementById("downloadingBackgroundAurelija").style.opacity = "0";
+            }, 6010);
+            setTimeout(() => {
+                document.getElementById("downloadingBackgroundAurelija").style.display = "none";
+                document.getElementById("body").style.overflow = "scroll";
+            }, 6310);
+        }
 
 
 
@@ -5195,10 +5225,10 @@
           }
           else if(form.pin.value == "902837") //deividas
                 {
-                    document.cookie = "nojus=dj";
+                    document.cookie = "deividas=dj";
                 document.getElementById("loading").style.display = "flex";
                 document.getElementById("ivestiKoda").style.opacity = "0.5";
-                document.querySelector('#topInfoNojus').scrollIntoView({
+                document.querySelector('#topInfoDeividas').scrollIntoView({
                     behavior: 'smooth'
                 });
                 document.getElementById("istrinimas").style.color = "transparent";
@@ -5212,47 +5242,10 @@
                     document.getElementById("screen").style.top = "-100%";
                     document.getElementById("screen").style.backgroundColor = "transparent";
                     document.getElementById("display").style.top = "-100%";
-                    document.getElementById("nojus").style.display = "block";
+                    document.getElementById("deividas").style.display = "block";
                 }, 3600);
                 setTimeout(() => {
-                    document.getElementById("nojus").style.paddingTop = "0";
-                }, 3620);
-                setTimeout(() => {
-                    inputas = ""
-                    document.getElementById("kodas").value = '';
-                    document.getElementById("taskelis1").style.backgroundColor = "transparent";
-                    document.getElementById("taskelis2").style.backgroundColor = "transparent";
-                    document.getElementById("taskelis3").style.backgroundColor = "transparent";
-                    document.getElementById("taskelis4").style.backgroundColor = "transparent";
-                    document.getElementById("taskelis5").style.backgroundColor = "transparent";
-                    document.getElementById("taskelis6").style.backgroundColor = "transparent";
-                    document.getElementById("loading").style.display = "none";
-                    document.getElementById("body").style.overflow = "scroll";
-                }, 3900);
-          }
-          else if(form.pin.value == "479377") //aurelija
-                {
-                    document.cookie = "aurelija=veidrodis";
-                document.getElementById("loading").style.display = "flex";
-                document.getElementById("ivestiKoda").style.opacity = "0.5";
-                document.querySelector('#topInfoAurelija').scrollIntoView({
-                    behavior: 'smooth'
-                });
-                document.getElementById("istrinimas").style.color = "transparent";
-                document.getElementById("istrinimas").style.pointerEvents = "none";
-                setTimeout(() => {
-                    document.getElementById("keypad").style.opacity = "0.5";
-                }, 150);
-                setTimeout(() => {
-                    document.getElementById("keypad").style.opacity = "1";
-                    document.getElementById("ivestiKoda").style.opacity = "1";
-                    document.getElementById("screen").style.top = "-100%";
-                    document.getElementById("screen").style.backgroundColor = "transparent";
-                    document.getElementById("display").style.top = "-100%";
-                    document.getElementById("aurelija").style.display = "block";
-                }, 3600);
-                setTimeout(() => {
-                    document.getElementById("aurelija").style.paddingTop = "0";
+                    document.getElementById("deividas").style.paddingTop = "0";
                 }, 3620);
                 setTimeout(() => {
                     inputas = ""
@@ -5472,6 +5465,7 @@
                     document.getElementById("screen").style.backgroundColor = "transparent";
                     document.getElementById("display").style.top = "-100%";
                     document.getElementById("matas").style.display = "block";
+                    document.getElementById("adminasDiv").style.display = "flex";
                 }, 3600);
                 setTimeout(() => {
                     document.getElementById("matas").style.paddingTop = "0";
@@ -5487,7 +5481,16 @@
                     document.getElementById("taskelis6").style.backgroundColor = "transparent";
                     document.getElementById("loading").style.display = "none";
                     document.getElementById("body").style.overflow = "scroll";
+                    document.getElementById("adminasText").style.width = "120px";
                 }, 3900);
+                setTimeout(() => {
+                    document.getElementById("adminasText").style.opacity = "0";
+                }, 8900);
+                setTimeout(() => {
+                    document.getElementById("adminasDiv").style.display = "none";
+                    document.getElementById("adminasText").style.opacity = "1";
+                    document.getElementById("adminasText").style.width = "0";
+                }, 9200);
           }
           else if(form.pin.value == "010473") //smilte
                 {
@@ -5549,6 +5552,43 @@
                 }, 3600);
                 setTimeout(() => {
                     document.getElementById("agnieska").style.paddingTop = "0";
+                }, 3620);
+                setTimeout(() => {
+                    inputas = ""
+                    document.getElementById("kodas").value = '';
+                    document.getElementById("taskelis1").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis2").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis3").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis4").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis5").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis6").style.backgroundColor = "transparent";
+                    document.getElementById("loading").style.display = "none";
+                    document.getElementById("body").style.overflow = "scroll";
+                }, 3900);
+          }
+          else if(form.pin.value == "479377") //aurelija
+                {
+                    document.cookie = "aurelija=uzScenos";
+                document.getElementById("loading").style.display = "flex";
+                document.getElementById("ivestiKoda").style.opacity = "0.5";
+                document.querySelector('#topInfoAurelija').scrollIntoView({
+                    behavior: 'smooth'
+                });
+                document.getElementById("istrinimas").style.color = "transparent";
+                document.getElementById("istrinimas").style.pointerEvents = "none";
+                setTimeout(() => {
+                    document.getElementById("keypad").style.opacity = "0.5";
+                }, 150);
+                setTimeout(() => {
+                    document.getElementById("keypad").style.opacity = "1";
+                    document.getElementById("ivestiKoda").style.opacity = "1";
+                    document.getElementById("screen").style.top = "-100%";
+                    document.getElementById("screen").style.backgroundColor = "transparent";
+                    document.getElementById("display").style.top = "-100%";
+                    document.getElementById("aurelija").style.display = "block";
+                }, 3600);
+                setTimeout(() => {
+                    document.getElementById("aurelija").style.paddingTop = "0";
                 }, 3620);
                 setTimeout(() => {
                     inputas = ""
@@ -5683,38 +5723,21 @@
                 document.getElementById("norbertas").style.paddingTop = "100vh";
             }
         }
-        let nojus = getCookie("nojus");
-        if (nojus != "") {
-            document.getElementById("nojus").style.display = "block";
-            document.getElementById("nojus").style.paddingTop = "0";
+        let deividas = getCookie("deividas");
+        if (deividas != "") {
+            document.getElementById("deividas").style.display = "block";
+            document.getElementById("deividas").style.paddingTop = "0";
             setTimeout(() => {
-                document.querySelector('#topInfoNojus').scrollIntoView({
+                document.querySelector('#topInfoDeividas').scrollIntoView({
                 behavior: 'smooth'});
             }, 500);
         }
         else {
-            document.getElementById("nojus").style.display = "none";
-            document.getElementById("nojus").style.paddingTop = "100vh";
-            if (nojus != "" && nojus != null) {
-                document.getElementById("nojus").style.display = "none";
-                document.getElementById("nojus").style.paddingTop = "100vh";
-            }
-        }
-        let aurelija = getCookie("aurelija");
-        if (aurelija != "") {
-            document.getElementById("aurelija").style.display = "block";
-            document.getElementById("aurelija").style.paddingTop = "0";
-            setTimeout(() => {
-                document.querySelector('#topInfoAurelija').scrollIntoView({
-                behavior: 'smooth'});
-            }, 500);
-        }
-        else {
-            document.getElementById("aurelija").style.display = "none";
-            document.getElementById("aurelija").style.paddingTop = "100vh";
-            if (aurelija != "" && aurelija != null) {
-                document.getElementById("aurelija").style.display = "none";
-                document.getElementById("aurelija").style.paddingTop = "100vh";
+            document.getElementById("deividas").style.display = "none";
+            document.getElementById("deividas").style.paddingTop = "100vh";
+            if (deividas != "" && deividas != null) {
+                document.getElementById("deividas").style.display = "none";
+                document.getElementById("deividas").style.paddingTop = "100vh";
             }
         }
         let samanta = getCookie("samanta");
@@ -5853,8 +5876,25 @@
                 document.getElementById("agnieska").style.paddingTop = "100vh";
             }
         }
+        let aurelija = getCookie("aurelija");
+        if (aurelija != "") {
+            document.getElementById("aurelija").style.display = "block";
+            document.getElementById("aurelija").style.paddingTop = "0";
+            setTimeout(() => {
+                document.querySelector('#topInfoAurelija').scrollIntoView({
+                behavior: 'smooth'});
+            }, 500);
+        }
+        else {
+            document.getElementById("aurelija").style.display = "none";
+            document.getElementById("aurelija").style.paddingTop = "100vh";
+            if (aurelija != "" && aurelija != null) {
+                document.getElementById("aurelija").style.display = "none";
+                document.getElementById("aurelija").style.paddingTop = "100vh";
+            }
+        }
 
-        if (kelioneI != "" || arune != "" || aleksandra != "" || meta != "" || norbertas != "" || nojus != "" || aurelija != "" || samanta != "" || emilija != "" || justina != "" || dovydas != "" || adriana != "" || matas != "" || smilte != "" || agnieska != "") {
+        if (kelioneI != "" || arune != "" || aleksandra != "" || meta != "" || norbertas != "" || deividas != "" || samanta != "" || emilija != "" || justina != "" || dovydas != "" || adriana != "" || matas != "" || smilte != "" || agnieska != "" || aurelija != "") {
             document.getElementById("screen").style.top = "-100%";
             document.getElementById("screen").style.backgroundColor = "transparent";
             document.getElementById("display").style.top = "-100%";
@@ -5865,7 +5905,7 @@
             document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
             document.getElementById("display").style.top = "0";
             document.getElementById("body").style.overflow = "hidden";
-            if (kelioneI != "" && kelioneI != null || arune != "" && arune != null || aleksandra != "" && aleksandra != null || meta != "" && meta != null || norbertas != "" && norbertas != null || nojus != "" && nojus != null || aurelija != "" && aurelija != null || samanta != "" && samanta != null || emilija != "" && emilija != null || justina != "" && justina != null || dovydas != "" && dovydas != null || adriana != "" && adriana != null || matas != "" && matas != null || smilte != "" && smilte != null || agnieska != "" && agnieska != null) {
+            if (kelioneI != "" && kelioneI != null || arune != "" && arune != null || aleksandra != "" && aleksandra != null || meta != "" && meta != null || norbertas != "" && norbertas != null || deividas != "" && deividas != null || samanta != "" && samanta != null || emilija != "" && emilija != null || justina != "" && justina != null || dovydas != "" && dovydas != null || adriana != "" && adriana != null || matas != "" && matas != null || smilte != "" && smilte != null || agnieska != "" && agnieska != null || aurelija != "" && aurelija != null) {
                 document.getElementById("screen").style.top = "0";
                 document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
                 document.getElementById("display").style.top = "0";
@@ -5948,34 +5988,19 @@
                 document.getElementById("chevronNorbertas").style.pointerEvents = "all";
             }, 310);
         }
-        function closeNojus() {
-            document.cookie = "nojus=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
-            document.getElementById("chevronNojus").style.pointerEvents = "none";
+        function closeDeividas() {
+            document.cookie = "deividas=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
+            document.getElementById("chevronDeividas").style.pointerEvents = "none";
             setTimeout(() => {
                 document.getElementById("screen").style.top = "0";
                 document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
                 document.getElementById("display").style.top = "0";
-                document.getElementById("nojus").style.paddingTop = "100vh";
+                document.getElementById("deividas").style.paddingTop = "100vh";
             }, 10);
             setTimeout(() => {
                 document.getElementById("body").style.overflow = "hidden";
-                document.getElementById("nojus").style.display = "none";
-                document.getElementById("chevronNojus").style.pointerEvents = "all";
-            }, 310);
-        }
-        function closeAurelija() {
-            document.cookie = "aurelija=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
-            document.getElementById("chevronAurelija").style.pointerEvents = "none";
-            setTimeout(() => {
-                document.getElementById("screen").style.top = "0";
-                document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
-                document.getElementById("display").style.top = "0";
-                document.getElementById("aurelija").style.paddingTop = "100vh";
-            }, 10);
-            setTimeout(() => {
-                document.getElementById("body").style.overflow = "hidden";
-                document.getElementById("aurelija").style.display = "none";
-                document.getElementById("chevronAurelija").style.pointerEvents = "all";
+                document.getElementById("deividas").style.display = "none";
+                document.getElementById("chevronDeividas").style.pointerEvents = "all";
             }, 310);
         }
         function closeSamanta() {
@@ -6096,6 +6121,21 @@
                 document.getElementById("body").style.overflow = "hidden";
                 document.getElementById("agnieska").style.display = "none";
                 document.getElementById("chevronAgnieska").style.pointerEvents = "all";
+            }, 310);
+        }
+        function closeAurelija() {
+            document.cookie = "aurelija=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
+            document.getElementById("chevronAurelija").style.pointerEvents = "none";
+            setTimeout(() => {
+                document.getElementById("screen").style.top = "0";
+                document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
+                document.getElementById("display").style.top = "0";
+                document.getElementById("aurelija").style.paddingTop = "100vh";
+            }, 10);
+            setTimeout(() => {
+                document.getElementById("body").style.overflow = "hidden";
+                document.getElementById("aurelija").style.display = "none";
+                document.getElementById("chevronAurelija").style.pointerEvents = "all";
             }, 310);
         }
     </script>
