@@ -248,16 +248,7 @@
             border-radius: 100%;
             transition: 0.15s;
         }
-        hr{
-            border: none;
-            border-top: 1px solid lightgrey;
-            width: 100%;
-        }
-        .warningButton{
-            cursor: pointer;
-            color: black;
-        }
-        .warningButton:active{
+        .mygtukas:active{
             transform: scale(0.9);
         }
 
@@ -271,6 +262,13 @@
             padding-bottom: 15px;
             display: none;
             padding-top: 100vh;
+        }
+        #topInfo{
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            top: 0;
+            left: 0;
         }
         #info{
             width: 100%;
@@ -288,10 +286,109 @@
             right: 0;
             z-index: 10;
         }
+        #info i{
+            font-size: 15px;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            z-index: 4;
+            transition: 0.15s;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            background-color: #DEDEDE;
+        }
+        .kaina{
+            position: absolute;
+            right: 15px;
+            top: 20px;
+        }
+        #kelionesMarsrutasTekstas{
+            font-size: 25px;
+            font-weight: 600;
+            color: black;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            text-overflow: ellipsis;
+            width: 100%;
+            position: fixed;
+            top: 60px;
+            padding-left: 15px;
+            padding-right: 15px;
+            z-index: 10;
+        }
         #chevron:active{
             opacity: 0.2;
         }
-        #warningTicket{
+
+
+
+        .centerLoader2{
+            width: 50px;
+            height: 50px;
+            justify-content: center;
+            align-items: center;
+            transform: scale(0.5);
+        }
+        .atidaromaImg{
+            width: 20px;
+            border-radius: 5px;
+            background-color: white;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        #openingMapsBg{
+            width: 100%;
+            height: 100%;
+            z-index: 19;
+            background-color: rgba(211, 211, 211, 0.75);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+            opacity: 0;
+            display: none;
+        }
+        #openingMaps{
+            font-size: 15px;
+            width: 100%;
+            height: 50px;
+            border-radius: 25px 25px 0 0;
+            justify-content: center;
+            align-items: center;
+            background-color: #f2f2f2;
+            box-shadow: 0 0 10px lightgrey;
+            position: fixed;
+            bottom: -100%;
+            left: 0;
+            right: 0;
+            z-index: 20;
+        }
+        #ticketActivationBg{
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 19;
+            background-color: rgba(211, 211, 211, 0.75);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+            opacity: 0;
+            display: none;
+        }
+        #ticketActivation{
             width: 100%;
             height: auto;
             background-color: #f2f2f2;
@@ -303,13 +400,89 @@
             border-radius: 25px 25px 0 0;
             padding: 15px;
             padding-top: 20px;
-            display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             z-index: 20;
         }
-        #warningTrafi{
+        .ticketActivationTekstas1{
+            font-weight: 600;
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 15px;
+            color: black;
+        }
+        .ticketActivationTekstas2{
+            font-weight: 400;
+            font-size: 15px;
+            text-align: center;
+            margin-bottom: 15px;
+            color: black;
+        }
+        .ticketActivationButtons{
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .ticketActivationButtonImg{
+            height: 70%;
+            background-color: white;
+            border-radius: 7px;
+            margin-right: 5px;
+        }
+        .androidButton{
+            width: 45%;
+            height: 50px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            border: none;
+            background-color: #f2f2f2;
+            color: #46aa5b;
+            border: 2px solid #46aa5b;
+            font-size: 15px;
+        }
+        .iphoneButton{
+            width: 45%;
+            height: 50px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            border: none;
+            background-color: #f2f2f2;
+            color: black;
+            border: 2px solid black;
+            font-size: 15px;
+        }
+        #trafiButton{
+            width: 45%;
+            height: 50px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            border: none;
+            background-color: #f2f2f2;
+            color: #ff0099;
+            border: 2px solid #ff0099;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        #mticketButton{
+            width: 45%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            border: none;
+            background-color: #f2f2f2;
+            color: #00e500;
+            border: 2px solid #00e500;
+            font-size: 15px;
+        }
+        #trafiPhone{
             width: 100%;
             height: auto;
             background-color: #f2f2f2;
@@ -321,13 +494,12 @@
             border-radius: 25px 25px 0 0;
             padding: 15px;
             padding-top: 20px;
-            display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             z-index: 20;
         }
-        #warningMticket{
+        #mticketPhone{
             width: 100%;
             height: auto;
             background-color: #f2f2f2;
@@ -339,10 +511,39 @@
             border-radius: 25px 25px 0 0;
             padding: 15px;
             padding-top: 20px;
-            display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            z-index: 20;
+        }
+        #openingPlay{
+            font-size: 15px;
+            width: 100%;
+            height: 50px;
+            border-radius: 25px 25px 0 0;
+            justify-content: center;
+            align-items: center;
+            background-color: #f2f2f2;
+            box-shadow: 0 0 10px lightgrey;
+            position: fixed;
+            bottom: -100%;
+            left: 0;
+            right: 0;
+            z-index: 20;
+        }
+        #openingStore{
+            font-size: 15px;
+            width: 100%;
+            height: 50px;
+            border-radius: 25px 25px 0 0;
+            justify-content: center;
+            align-items: center;
+            background-color: #f2f2f2;
+            box-shadow: 0 0 10px lightgrey;
+            position: fixed;
+            bottom: -100%;
+            left: 0;
+            right: 0;
             z-index: 20;
         }
         #warningStops{
@@ -396,7 +597,7 @@
             position: relative;
             margin-bottom: 5px;
         }
-        #ejimas{
+        .ejimas{
             width: 100%;
             height: 35px;
             display: flex;
@@ -409,7 +610,7 @@
             position: relative;
             margin-bottom: 5px;
         }
-        #autobusas{
+        .autobusas{
             width: 100%;
             height: 240px;
             margin-top: 5px;
@@ -418,7 +619,7 @@
             position: relative;
             margin-bottom: 5px;
         }
-        #laukimas{
+        .laukimas{
             width: 100%;
             height: 35px;
             display: flex;
@@ -431,7 +632,7 @@
             position: relative;
             margin-bottom: 5px;
         }
-        #traukinys{
+        .traukinys{
             width: 100%;
             height: 220px;
             margin-top: 5px;
@@ -440,7 +641,7 @@
             position: relative;
             margin-bottom: 5px;
         }
-        #lankymasis{
+        .lankymasis{
             width: 100%;
             height: 70px;
             display: flex;
@@ -453,7 +654,7 @@
             position: relative;
             margin-bottom: 5px;
         }
-        #finisas{
+        .finisas{
             width: 100%;
             height: 50px;
             display: flex;
@@ -466,17 +667,252 @@
             position: relative;
             margin-bottom: 5px;
         }
+        .kelionesTekstas1{
+            font-weight: 600;
+            font-size: 17px;
+            color: black;
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            text-overflow: ellipsis;
+        }
+        .kelionesTekstas2{
+            color: grey;
+            font-size: 13px;
+            font-weight: 400;
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            text-overflow: ellipsis;
+            margin-top: 1px;
+        }
+        .kelionesTekstas3{
+            color: grey;
+            font-size: 13px;
+            font-weight: 400;
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            text-overflow: ellipsis;
+        }
+        .kelionesIcon1{
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            border-radius: 100%;
+            justify-content: center;
+            align-items: center;
+            top: 12.5px;
+            left: 27.5px;
+            font-size: 20px;
+            color: black;
+        }
+        .kelionesIcon2{
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            border-radius: 100%;
+            justify-content: center;
+            align-items: center;
+            top: 5px;
+            left: 27.5px;
+            font-size: 20px;
+            color: black;
+        }
+        .kelionesIcon3{
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            border-radius: 100%;
+            justify-content: center;
+            align-items: center;
+            top: 25px;
+            left: 27.5px;
+            font-size: 20px;
+            color: black;
+        }
+        .transportasDiv1{
+            width: 100%;
+            height: 50px;
+            position: relative;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+        }
+        .transportasDiv2{
+            width: 100%;
+            height: 70px;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            position: relative;
+        }
+        .transportasDiv3{
+            width: 100%;
+            height: 35px;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+        }
+        .transportasDiv4{
+            width: 100%;
+            height: 50px;
+            position: relative;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+        }
+        .transportasDiv5{
+            width: 100%;
+            height: 50px;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            position: relative;
+        }
+        .autobusasIcon{
+            font-size: 17px;
+            width: 30px;
+            height: 30px;
+            background-color: #0073ac;
+            color: white;
+            border-radius: 100%;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            left: -42.5px;
+            top: 20px;
+        }
+        .autobusoNr{
+            background-color: #0073ac;
+            color: white;
+            padding-left: 6px;
+            padding-right: 6px;
+            padding-top: 1px;
+            padding-bottom: 1px;
+            border-radius: 5px;
+            font-weight: 400;
+        }
+        .traukinysIcon{
+            font-size: 17px;
+            width: 30px;
+            height: 30px;
+            background-color: black;
+            color: white;
+            border-radius: 100%;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            left: -42.5px;
+            top: 10px;
+        }
+        .traukinioNr{
+            background-color: black;
+            color: white;
+            padding-left: 6px;
+            padding-right: 6px;
+            padding-top: 1px;
+            padding-bottom: 1px;
+            border-radius: 5px;
+            font-weight: 400;
+        }
+        .snaige{
+            color: white;
+            background-color: dodgerblue;
+            font-size: 11px;
+            border-radius: 5px;
+            padding: 3px;
+            padding-top: 2.5px;
+            padding-bottom: 2.5px;
+            position: absolute;
+        }
+        .neigaliesiems{
+            color: white;
+            background-color: blue;
+            font-size: 10px;
+            border-radius: 5px;
+            padding: 3px;
+            position: absolute; 
+        }
         .maps{
             cursor: pointer;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            justify-content: center;
+            align-items: center;
+            top: 0;
+            right: 0;
+            font-size: 20px;
+            color: black;
+            background-color: #f2f2f2;
+        }
+        .maps2{
+            position: absolute;
+            width: 50px;
+            height: 70px;
+            justify-content: center;
+            align-items: center;
+            top: 0;
+            right: 15px;
+            font-size: 20px;
+            color: black;
+            background-color: #f2f2f2;
         }
         .maps:active{
             transform: scale(0.8);
         }
-        .stopsButton:active{
+        .stotelesTekstas{
+            color: grey;
+            font-size: 13px;
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            text-overflow: ellipsis;
+        }
+        .stotelesTekstas:active{
             opacity: 0.2;
         }
-        .ticketP:active{
+        .bilietaiTekstas{
+            color: grey;
+            font-size: 13px;
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            text-overflow: ellipsis;
+            margin-top: 1px;
+        }
+        .bilietaiTekstas:active{
             opacity: 0.2;
+        }
+        .separationLine1{
+            width: 100%;
+            height: 1px;
+            padding-left: 67.5px;
+            padding-right: 15px;
+        }
+        .separationLine2{
+            width: 100%;
+            height: 1px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        hr{
+            border: none;
+            border-top: 1px solid lightgrey;
+            width: 100%;
+        }
+        .travelInfoBottom{
+            font-size: 13px;
+            color: grey;
+            text-align: center;
+            padding-left: 10px;
+            padding-right: 10px;
         }
         @media only screen and (max-width: 750px){
             #screenSize{
@@ -538,33 +974,33 @@
         </form>
     </div>
     <div id="kelioneI---">
-        <div style="position: absolute; width: 5px; height: 5px; top: 0; left: 0;" id="topInfo"></div>
-        <div id="info"><i class="fa-solid fa-chevron-down" style="font-size: 15px; position: absolute; top: 15px; left: 15px; z-index: 4; transition: 0.15s; cursor: pointer; width: 30px; height: 30px; display: flex; justify-content: center; align-items: center; border-radius: 100%; background-color: #DEDEDE;" onclick="closeKelione()" id="chevron" ontouchstart></i><p style="position: absolute; right: 15px; top: 20px;">~00,00€</p></div>
-        <p style="font-size: 25px; font-weight: 600; color: black; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; width: 100%; position: fixed; top: 60px; padding-left: 15px; padding-right: 15px; z-index: 10;" id="kelionesMarsrutasText">Kelionės į ----- maršrutas</p>
+        <div id="topInfo"></div>
+        <div id="info"><i class="fa-solid fa-chevron-down" onclick="closeKelione()" id="chevron" ontouchstart></i><p class="kaina">~00,00€</p></div>
+        <p id="kelionesMarsrutasTekstas">Kelionės į ----- maršrutas</p>
 
 
 
-        <div id="warningBg" onclick="closeMaps()" style="width: 100%; height: 100%; pointer-events: none; z-index: 19; background-color: rgba(211, 211, 211, 0.75); position: fixed; top: 0; left: 0; right: 0; bottom: 0; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); opacity: 0; display: none;"></div>
-        <div id="openingMaps" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atidaroma <img src="images/maps.png" alt="Google Maps" style="width: 20px; border-radius: 5px; background-color: white; margin-left: 5px; margin-right: 5px;"> <span style="color: #34a852;">Google Maps</span></div>
+        <div id="openingMapsBg"></div>
+        <div id="openingMaps" style="display: flex;"><div class="centerLoader2" style="display: flex;"><div class="spin-loader2" aria-hidden="true"></div></div> Atidaroma <img src="images/maps.png" alt="Google Maps" class="atidaromaImg"> <span style="color: #34a852;">Google Maps</span></div>
 
-        <div id="warningTicketBg" onclick="closeTicket()" style="width: 100%; height: 100%; pointer-events: none; z-index: 19; background-color: rgba(211, 211, 211, 0.75); position: fixed; top: 0; left: 0; right: 0; bottom: 0; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); opacity: 0; display: none;"></div>
-        <div id="warningTicket">
-            <p style="font-weight: 600; font-size: 20px; text-align: center; margin-bottom: 15px; color: black;">Bilieto aktyvavimas</p>
-            <p style="font-size: 15px; text-align: center; margin-bottom: 15px; color: black;">Pasirink, kur nori aktyvuoti savo bilietą:</p>
-            <div style="width: 100%; height: 50px; display: flex; justify-content: space-around; align-items: center;"><button style="width: 45%; height: 50px; display: flex; justify-content: center; align-items: center; border-radius: 15px; border: none; background-color: #f2f2f2; color: #ff0099; border: 2px solid #ff0099; font-size: 15px;" onclick="trafi()" class="warningButton" ontouchstart><img src="images/trafi.png" alt="Trafi" style="height: 70%; background-color: white; border-radius: 7px; margin-right: 5px;">Trafi</button><button style="width: 45%; height: 50px; display: flex; justify-content: center; align-items: center; border-radius: 15px; border: none; background-color: #f2f2f2; color: #00e500; border: 2px solid #00e500; font-size: 15px;" onclick="mticket()" class="warningButton" ontouchstart><img src="images/mticket.png" alt="m. Ticket" style="height: 70%; background-color: white; border-radius: 7px; margin-right: 5px;">m. Ticket</button></div>
+        <div id="ticketActivationBg" onclick="closeTicket()"></div>
+        <div id="ticketActivation" style="display: flex;">
+            <p class="ticketActivationTekstas1">Bilieto aktyvavimas</p>
+            <p class="ticketActivationTekstas2">Pasirink, kur nori aktyvuoti savo bilietą:</p>
+            <div class="ticketActivationButtons" style="display: flex;"><button onclick="trafi()" id="trafiButton" style="display: flex;" class="mygtukas" ontouchstart><img src="images/trafi.png" alt="Trafi" class="ticketActivationButtonImg">Trafi</button><button onclick="mticket()" id="mticketButton" style="display: flex;" class="mygtukas" ontouchstart><img src="images/mticket.png" alt="m. Ticket"  class="ticketActivationButtonImg">m. Ticket</button></div>
         </div>
-        <div id="warningTrafi">
-            <p style="font-weight: 600; font-size: 20px; text-align: center; margin-bottom: 15px; color: black;">Bilieto aktyvavimas</p>
-            <p style="font-size: 15px; text-align: center; margin-bottom: 15px; display: flex; justify-content: center; align-items: center; color: black;">Pasirink savo telefoną:</p>
-            <div style="width: 100%; height: 50px; display: flex; justify-content: space-around; align-items: center;"><button style="width: 45%; height: 50px; display: flex; justify-content: center; align-items: center; border-radius: 15px; border: none; background-color: #f2f2f2; color: #46aa5b; border: 2px solid #46aa5b; font-size: 15px;" onclick="trafiGP()" class="warningButton" ontouchstart><img src="images/android.png" alt="Android" style="height: 70%; background-color: transparent; border-radius: 10px; margin-right: 5px;">Android</button><button style="width: 45%; height: 50px; display: flex; justify-content: center; align-items: center; border-radius: 15px; border: none; background-color: #f2f2f2; color: black; border: 2px solid black; font-size: 15px;" onclick="trafiAS()" class="warningButton" ontouchstart><img src="images/iphone.png" alt="iPhone" style="height: 60%; background-color: transparent; border-radius: 10px; margin-right: 5px;">iPhone</button></div>
+        <div id="trafiPhone" style="display: flex;">
+            <p class="ticketActivationTekstas1">Bilieto aktyvavimas</p>
+            <p class="ticketActivationTekstas2">Pasirink savo telefoną:</p>
+            <div class="ticketActivationButtons" style="display: flex;"><button onclick="trafiGP()" style="display: flex;" class="mygtukas androidButton" ontouchstart><img src="images/android.png" alt="Android" class="ticketActivationButtonImg" style="background-color: transparent;">Android</button><button onclick="trafiAS()" style="display: flex;" class="mygtukas iphoneButton" ontouchstart><img src="images/iphone.png" alt="iPhone" class="ticketActivationButtonImg" style="background-color: transparent; height: 60%;">iPhone</button></div>
         </div>
-        <div id="warningMticket">
-            <p style="font-weight: 600; font-size: 20px; text-align: center; margin-bottom: 15px; color: black;">Bilieto aktyvavimas</p>
-            <p style="font-size: 15px; text-align: center; margin-bottom: 15px; display: flex; justify-content: center; align-items: center; color: black;">Pasirink savo telefoną:</p>
-            <div style="width: 100%; height: 50px; display: flex; justify-content: space-around; align-items: center;"><button style="width: 45%; height: 50px; display: flex; justify-content: center; align-items: center; border-radius: 15px; border: none; background-color: #f2f2f2; color: #46aa5b; border: 2px solid #46aa5b; font-size: 15px;" onclick="mticketGP()" class="warningButton" ontouchstart><img src="images/android.png" alt="Android" style="height: 70%; background-color: transparent; border-radius: 10px; margin-right: 5px;">Android</button><button style="width: 45%; height: 50px; display: flex; justify-content: center; align-items: center; border-radius: 15px; border: none; background-color: #f2f2f2; color: black; border: 2px solid black; font-size: 15px;" onclick="mticketAS()" class="warningButton" ontouchstart><img src="images/iphone.png" alt="iPhone" style="height: 60%; background-color: transparent; border-radius: 10px; margin-right: 5px;">iPhone</button></div>
+        <div id="mticketPhone" style="display: flex;">
+            <p class="ticketActivationTekstas1">Bilieto aktyvavimas</p>
+            <p class="ticketActivationTekstas2">Pasirink savo telefoną:</p>
+            <div class="ticketActivationButtons" style="display: flex;"><button onclick="mticketGP()" style="display: flex;" class="mygtukas androidButton" ontouchstart><img src="images/android.png" alt="Android" class="ticketActivationButtonImg" style="background-color: transparent;">Android</button><button onclick="mticketAS()" style="display: flex;" class="mygtukas iphoneButton" ontouchstart><img src="images/iphone.png" alt="iPhone" class="ticketActivationButtonImg" style="background-color: transparent; height: 60%;">iPhone</button></div>
         </div>
-        <div id="openingPlay" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atidaroma <img src="images/googleplay.png" alt="Google Play" style="width: 20px; border-radius: 5px; background-color: white; margin-left: 5px; margin-right: 5px;"> <span style="color: #2da951;">Google Play</span></div>
-        <div id="openingStore" style="font-size: 15px; width: 100%; height: 50px; border-radius: 25px 25px 0 0; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; box-shadow: 0 0 10px lightgrey; position: fixed; bottom: -100%; left: 0; right: 0; z-index: 20;"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atidaroma <img src="images/appstore.png" alt="App Store" style="width: 20px; border-radius: 5px; background-color: white; margin-left: 5px; margin-right: 5px;"> <span style="color: #0c83f8;">App Store</span></div>
+        <div id="openingPlay" style="display: flex;"><div class="centerLoader2" style="display: flex;"><div class="spin-loader2" aria-hidden="true"></div></div> Atidaroma <img src="images/googleplay.png" alt="Google Play" class="atidaromaImg"> <span style="color: #2da951;">Google Play</span></div>
+        <div id="openingStore" style="display: flex;"><div class="centerLoader2" style="display: flex;"><div class="spin-loader2" aria-hidden="true"></div></div> Atidaroma <img src="images/appstore.png" alt="App Store" class="atidaromaImg"> <span style="color: #0c83f8;">App Store</span></div>
 
         <div id="warningStopsBg" onclick="closeStops()" style="width: 100%; height: 100%; pointer-events: none; z-index: 19; background-color: rgba(211, 211, 211, 0.75); position: fixed; top: 0; left: 0; right: 0; bottom: 0; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); opacity: 0; display: none;"></div>
         <div id="warningStops">
@@ -599,94 +1035,93 @@
 
 
         <div id="startas">
-            <i class="fa-solid fa-circle" style="position: absolute; width: 25px; height: 25px; border-radius: 100%; display: flex; justify-content: center; align-items: center; top: 12.5px; left: 27.5px; font-size: 20px; color: black;"></i>
-            <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Maršruto pradžia</p>
-            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; margin-top: 1px;">Išvyk 00:00</p>
+            <i class="fa-solid fa-circle kelionesIcon1" style="display: flex;"></i>
+            <p class="kelionesTekstas1">Maršruto pradžia</p>
+            <p class="kelionesTekstas2">Išvyk 00:00</p>
         </div>
-        <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
-        <div id="ejimas">
+        <div class="separationLine1"><hr></div>
+        <div class="ejimas">
             <div style="width: 5px; height: 100%; position: absolute; top: -50%; left: 37.5px;"><div style="width: 5px; height: 5px; background-color: black; border-radius: 100%;"></div><div style="width: 5px; height: 5px; background-color: black; border-radius: 100%; margin-top: 5px;"></div></div>
             <div style="width: 5px; height: 100%; position: absolute; top: 100%; left: 37.5px;"><div style="width: 5px; height: 5px; background-color: black; border-radius: 100%;"></div><div style="width: 5px; height: 5px; background-color: black; border-radius: 100%; margin-top: 5px; margin-bottom: 5px;"></div><div style="width: 5px; height: 5px; background-color: black; border-radius: 100%;"></div></div>
 
-            <i class="fa-solid fa-person-walking" style="position: absolute; width: 25px; height: 25px; border-radius: 100%; display: flex; justify-content: center; align-items: center; top: 5px; left: 27.5px; font-size: 20px; color: black;"></i>
-            <p style="color: grey; font-size: 13px; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Eik 00 min (00 km 000 m)</p>
+            <i class="fa-solid fa-person-walking kelionesIcon2" style="display: flex;"></i>
+            <p class="kelionesTekstas3">Eik 00 min (00 km 000 m)</p>
         </div>
-        <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
-        <div id="autobusas">
+        <div class="separationLine1"><hr></div>
+        <div class="autobusas">
             <div style="width: 5px; height: 100%; position: absolute; top: 0; left: 37.5px; padding-top: 25px; padding-bottom: 25px;"><div style="position: absolute; top: 20px; left: -5px; background-color: #0073ac; width: 15px; height: 15px; border-radius: 100%;"></div><div style="width: 100%; height: 100%; background-color: #0073ac; border-radius: 15px;"></div><div style="position: absolute; bottom: 20px; left: -5px; background-color: #0073ac; width: 15px; height: 15px; border-radius: 100%;"></div></div>
 
-            <div style="width: 100%; height: 50px; position: relative; display: flex; justify-content: center; align-items: flex-start; flex-direction: column;">
-                <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; padding-right: 50px;">Stotelė A</p>
-                <p style="color: grey; font-size: 13px; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; padding-right: 50px; margin-top: 1px;">Atvyksi 00:00</p>
-                <i class="fa-solid fa-location-dot maps" style="position: absolute; width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; top: 0; right: 0; font-size: 20px; color: black; background-color: #f2f2f2;" onclick="openMaps()" ontouchstart></i>
+            <div class="transportasDiv1" style="display: flex;">
+                <p class="kelionesTekstas1" style="padding-right: 50px;">Stotelė A</p>
+                <p class="kelionesTekstas2" style="padding-right: 50px;">Atvyksi 00:00</p>
+                <i class="fa-solid fa-location-dot maps" style="display: flex;" onclick="openMaps()" ontouchstart></i>
             </div>
-            <div style="width: 100%; height: 1px; margin-top: 5px; margin-bottom: 5px;"><hr></div>
-            <div style="width: 100%; height: 70px; display: flex; justify-content: center; align-items: flex-start; flex-direction: column; position: relative;">
-                <p style="font-size: 17px; width: 30px; height: 30px; background-color: #0073ac; color: white; border-radius: 100%; display: flex; justify-content: center; align-items: center; position: absolute; left: -42.5px; top: 20px;"><i class="fa-solid fa-bus"></i></p>
-                <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;"><span style="background-color: #0073ac; color: white; padding-left: 6px; padding-right: 6px; padding-top: 1px; padding-bottom: 1px; border-radius: 5px; font-weight: 400;">00</span> ----- <i class="fa-regular fa-snowflake" style="color: white; background-color: dodgerblue; font-size: 11px; border-radius: 5px; padding: 3px; padding-top: 2.5px; padding-bottom: 2.5px; position: absolute; margin-top: 3px; margin-left: 5px;"></i><i class="fa-solid fa-wheelchair" style="color: white; background-color: blue; font-size: 10px; border-radius: 5px; padding: 3px; position: absolute; margin-top: 3px; margin-left: 25px;"></i></p>
-                <p style="color: grey; font-size: 13px; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; margin-top: 1px;">Išvyksta 00:00</p>
-                <p class="ticketP" onclick="activateTicket()" style="color: grey; font-size: 13px; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; margin-top: 1px;" ontouchstart>E. bilietai <i class="fa-solid fa-chevron-right"></i></p>
+            <div class="separationLine2"><hr></div>
+            <div class="transportasDiv2" style="display: flex;">
+                <p class="autobusasIcon" style="display: flex;"><i class="fa-solid fa-bus"></i></p>
+                <p class="kelionesTekstas1"><span class="autobusoNr">00</span> ----- <i class="fa-regular fa-snowflake snaige" style="margin-top: 3px; margin-left: 5px;"></i><i class="fa-solid fa-wheelchair neigaliesiems" style="margin-top: 3px; margin-left: 25px;"></i></p>
+                <p class="kelionesTekstas2">Išvyksta 00:00</p>
+                <p class="bilietaiTekstas" onclick="activateTicket()" ontouchstart>E. bilietai <i class="fa-solid fa-chevron-right"></i></p>
             </div>
-            <div style="width: 100%; height: 1px; margin-top: 5px; margin-bottom: 5px;"><hr></div>
-            <div style="width: 100%; height: 35px; display: flex; justify-content: center; align-items: flex-start; flex-direction: column;">
-                <p onclick="openStops()" class="stopsButton" style="color: grey; font-size: 13px; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;" ontouchstart>Važiuok -- st. 00 min <i class="fa-solid fa-chevron-down"></i></p>
+            <div class="separationLine2"><hr></div>
+            <div class="transportasDiv3" style="display: flex;">
+                <p class="stotelesTekstas" onclick="openStops()" ontouchstart>Važiuok -- st. 00 min <i class="fa-solid fa-chevron-down"></i></p>
             </div>
-            <div style="width: 100%; height: 1px; margin-top: 5px; margin-bottom: 5px;"><hr></div>
-            <div style="width: 100%; height: 50px; position: relative; display: flex; justify-content: center; align-items: flex-start; flex-direction: column;">
-                <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; padding-right: 50px;">Stotelė B</p>
-                <p style="color: grey; font-size: 13px; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; padding-right: 50px; margin-top: 1px;">Atvyksi 00:00</p>
-                <i class="fa-solid fa-location-dot maps" style="position: absolute; width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; top: 0; right: 0; font-size: 20px; color: black; background-color: #f2f2f2;" ontouchstart></i>
+            <div class="separationLine2"><hr></div>
+            <div class="transportasDiv4" style="display: flex;">
+                <p class="kelionesTekstas1" style="padding-right: 50px;">Stotelė B</p>
+                <p class="kelionesTekstas2" style="padding-right: 50px;">Atvyksi 00:00</p>
+                <i class="fa-solid fa-location-dot maps" style="display: flex;" ontouchstart></i>
             </div>
         </div>
-        <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
-        <div id="laukimas">
-            <i class="fa-regular fa-clock" style="position: absolute; width: 25px; height: 25px; border-radius: 100%; display: flex; justify-content: center; align-items: center; top: 5px; left: 27.5px; font-size: 20px; color: black;"></i>
-            <p style="color: grey; font-size: 13px; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Palauk 00 min</p>
+        <div class="separationLine1"><hr></div>
+        <div class="laukimas">
+            <i class="fa-regular fa-clock kelionesIcon2" style="display: flex;"></i>
+            <p class="kelionesTekstas3">Palauk 00 min</p>
         </div>
-        <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
-        <div id="traukinys">
+        <div class="separationLine1"><hr></div>
+        <div class="traukinys">
             <div style="width: 5px; height: 100%; position: absolute; top: 0; left: 37.5px; padding-top: 25px; padding-bottom: 25px;"><div style="position: absolute; top: 20px; left: -5px; background-color: black; width: 15px; height: 15px; border-radius: 100%;"></div><div style="width: 100%; height: 100%; background-color: black; border-radius: 15px;"></div><div style="position: absolute; bottom: 20px; left: -5px; background-color: black; width: 15px; height: 15px; border-radius: 100%;"></div></div>
 
-            <div style="width: 100%; height: 50px; position: relative; display: flex; justify-content: center; align-items: flex-start; flex-direction: column;">
-                <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; padding-right: 50px;">Stotelė A</p>
-                <p style="color: grey; font-size: 13px; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; padding-right: 50px; margin-top: 1px;">Atvyksi 00:00</p>
-                <i class="fa-solid fa-location-dot maps" style="position: absolute; width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; top: 0; right: 0; font-size: 20px; color: black; background-color: #f2f2f2;" ontouchstart></i>
+            <div class="transportasDiv1" style="display: flex;">
+                <p class="kelionesTekstas1" style="padding-right: 50px;">Stotelė A</p>
+                <p class="kelionesTekstas2" style="padding-right: 50px;">Atvyksi 00:00</p>
+                <i class="fa-solid fa-location-dot maps" style="display: flex;" ontouchstart></i>
             </div>
-            <div style="width: 100%; height: 1px; margin-top: 5px; margin-bottom: 5px;"><hr></div>
-            <div style="width: 100%; height: 50px; display: flex; justify-content: center; align-items: flex-start; flex-direction: column; position: relative;">
-                <p style="font-size: 17px; width: 30px; height: 30px; background-color: black; color: white; border-radius: 100%; display: flex; justify-content: center; align-items: center; position: absolute; left: -42.5px; top: 20px;"><i class="fa-solid fa-train-subway"></i></p>
-                <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;"><span style="background-color: black; color: white; padding-left: 6px; padding-right: 6px; padding-top: 1px; padding-bottom: 1px; border-radius: 5px; font-weight: 400;">000</span> -----</p>
-                <p style="color: grey; font-size: 13px; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; margin-top: 1px;">Išvyksta 00:00</p>
+            <div class="separationLine2"><hr></div>
+            <div class="transportasDiv5" style="display: flex;">
+                <p class="traukinysIcon" style="display: flex;"><i class="fa-solid fa-train-subway"></i></p>
+                <p class="kelionesTekstas1"><span class="traukinioNr">000</span> -----</p>
+                <p class="kelionesTekstas2">Išvyksta 00:00</p>
             </div>
-            <div style="width: 100%; height: 1px; margin-top: 5px; margin-bottom: 5px;"><hr></div>
-            <div style="width: 100%; height: 35px; display: flex; justify-content: center; align-items: flex-start; flex-direction: column;">
-                <p onclick="openTracks()" class="stopsButton" style="color: grey; font-size: 13px; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;" ontouchstart>Važiuok -- st. 00 min <i class="fa-solid fa-chevron-down"></i></p>
+            <div class="separationLine2"><hr></div>
+            <div class="transportasDiv3" style="display: flex;">
+                <p class="stotelesTekstas" onclick="openTracks()" ontouchstart>Važiuok -- st. 00 min <i class="fa-solid fa-chevron-down"></i></p>
             </div>
-            <div style="width: 100%; height: 1px; margin-top: 5px; margin-bottom: 5px;"><hr></div>
-            <div style="width: 100%; height: 50px; position: relative; display: flex; justify-content: center; align-items: flex-start; flex-direction: column;">
-                <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; padding-right: 50px;">Stotelė B</p>
-                <p style="color: grey; font-size: 13px; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; padding-right: 50px; margin-top: 1px;">Atvyksi 00:00</p>
-                <i class="fa-solid fa-location-dot maps" style="position: absolute; width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; top: 0; right: 0; font-size: 20px; color: black; background-color: #f2f2f2;" ontouchstart></i>
+            <div class="separationLine2"><hr></div>
+            <div class="transportasDiv4" style="display: flex;">
+                <p class="kelionesTekstas1" style="padding-right: 50px;">Stotelė B</p>
+                <p class="kelionesTekstas2" style="padding-right: 50px;">Atvyksi 00:00</p>
+                <i class="fa-solid fa-location-dot maps" style="display: flex;" ontouchstart></i>
             </div>
         </div>
-        <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
-        <div id="lankymasis">
-            <i class="fa-solid fa-building-columns" style="position: absolute; width: 25px; height: 25px; border-radius: 100%; display: flex; justify-content: center; align-items: center; top: 25px; left: 27.5px; font-size: 20px; color: black;"></i>
-            <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; padding-right: 50px;">Lankymosi objektas</p>
-            <p style="color: grey; font-size: 13px; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; padding-right: 50px; margin-top: 1px;">Atvyksi 00:00</p>
-            <p style="color: grey; font-size: 13px; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; padding-right: 50px; margin-top: 1px;">Išvyk 00:00</p>
-            <i class="fa-solid fa-location-dot maps" style="position: absolute; width: 50px; height: 70px; display: flex; justify-content: center; align-items: center; top: 0; right: 15px; font-size: 20px; color: black; background-color: #f2f2f2;" ontouchstart></i>
+        <div class="separationLine1"><hr></div>
+        <div class="lankymasis">
+            <i class="fa-solid fa-building-columns kelionesIcon3" style="display: flex;"></i>
+            <p class="kelionesTekstas1" style="padding-right: 50px;">Lankymosi objektas</p>
+            <p class="kelionesTekstas2">Atvyksi 00:00</p>
+            <p class="kelionesTekstas2">Išvyk 00:00</p>
+            <i class="fa-solid fa-location-dot maps maps2" style="display: flex;" ontouchstart></i>
         </div>
-        <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
-        <div id="finisas">
-            <i class="fa-regular fa-circle-check" style="position: absolute; width: 25px; height: 25px; border-radius: 100%; display: flex; justify-content: center; align-items: center; top: 12.5px; left: 27.5px; font-size: 20px; color: black;"></i>
-            <p style="font-weight: 600; font-size: 17px; color: black; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis;">Maršruto pabaiga</p>
-            <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; margin-top: 1px;">Atvyksi 00:00</p>
+        <div class="separationLine1"><hr></div>
+        <div class="finisas">
+            <i class="fa-regular fa-circle-check kelionesIcon1" style="display: flex;"></i>
+            <p class="kelionesTekstas1">Maršruto pabaiga</p>
+            <p class="kelionesTekstas2">Atvyksi 00:00</p>
         </div>
-        <div style="width: 100%; height: 1px; padding-left: 67.5px; padding-right: 15px;"><hr></div>
-        <p style="font-size: 13px; color: grey; text-align: center; padding-left: 10px; padding-right: 10px; margin-top: 10px;">Informacija gali būti netiksli.</p>
-        <p style="font-size: 13px; color: grey; text-align: center; padding-left: 10px; padding-right: 10px; margin-top: 5px;">Maršruto laikai nurodyti pagal <img src="images/judu.png" alt="Judu.lt" style="height: 8px;"></p>
-        <p style="font-size: 13px; color: grey; text-align: center; padding-left: 10px; padding-right: 10px; margin-top: 5px; margin-bottom: 15px;">Paskutinį kartą atnaujinta 0000<span style="color: transparent;">.</span>00<span style="color: transparent;">.</span>00 00:00</p>
+        <div class="separationLine1"><hr></div>
+        <p class="travelInfoBottom" style="margin-top: 15px;">Informacija gali būti netiksli</p>
+        <p class="travelInfoBottom" style="margin-top: 5px; margin-bottom: 15px;">Maršruto laikai nurodyti pagal <img src="images/judu.png" alt="judu.lt" style="height: 8px;"> <img src="images/ltg.png" alt="ltglink.lt" style="height: 8px;"></p>
         <div style="width: 10px; height: 1500px; outline: 1px solid red; margin-left: 15px;"></div>
     </div>
 
@@ -719,17 +1154,17 @@
         window.onscroll = function() {scrollFunction()};
         function scrollFunction() {
             if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
-                document.getElementById("kelionesMarsrutasText").style.fontSize = "20px";
-                document.getElementById("kelionesMarsrutasText").style.top = "17px";
-                document.getElementById("kelionesMarsrutasText").style.paddingRight = "90px";
+                document.getElementById("kelionesMarsrutasTekstas").style.fontSize = "20px";
+                document.getElementById("kelionesMarsrutasTekstas").style.top = "17px";
+                document.getElementById("kelionesMarsrutasTekstas").style.paddingRight = "90px";
                 document.getElementById("chevron").style.opacity = "0";
                 document.getElementById("startas").style.marginTop = "75px";
                 document.getElementById("info").style.boxShadow = "0 0 10px lightgrey";
             }
             else {
-                document.getElementById("kelionesMarsrutasText").style.fontSize = "25px";
-                document.getElementById("kelionesMarsrutasText").style.top = "60px";
-                document.getElementById("kelionesMarsrutasText").style.paddingRight = "15px";
+                document.getElementById("kelionesMarsrutasTekstas").style.fontSize = "25px";
+                document.getElementById("kelionesMarsrutasTekstas").style.top = "60px";
+                document.getElementById("kelionesMarsrutasTekstas").style.paddingRight = "15px";
                 setTimeout(() => {
                     document.getElementById("chevron").style.opacity = "1";
                 }, 100);
@@ -739,49 +1174,49 @@
         }
 
         function activateTicket() {
-            document.getElementById("warningTicketBg").style.display = "block";
+            document.getElementById("ticketActivationBg").style.display = "block";
             document.getElementById("body").style.overflow = "hidden";
             setTimeout(() => {
-                document.getElementById("warningTicketBg").style.opacity = "1";
-                document.getElementById("warningTicketBg").style.pointerEvents = "all";
-                document.getElementById("warningTicket").style.bottom = "0";
+                document.getElementById("ticketActivationBg").style.opacity = "1";
+                document.getElementById("ticketActivationBg").style.pointerEvents = "all";
+                document.getElementById("ticketActivation").style.bottom = "0";
             }, 10);
         }
         function closeTicket() {
-            document.getElementById("warningTicket").style.bottom = "-100%";
-            document.getElementById("warningTrafi").style.bottom = "-100%";
-            document.getElementById("warningMticket").style.bottom = "-100%";
-            document.getElementById("warningTicketBg").style.opacity = "0";
-            document.getElementById("warningTicketBg").style.pointerEvents = "none";
+            document.getElementById("ticketActivation").style.bottom = "-100%";
+            document.getElementById("trafiPhone").style.bottom = "-100%";
+            document.getElementById("mticketPhone").style.bottom = "-100%";
+            document.getElementById("ticketActivationBg").style.opacity = "0";
+            document.getElementById("ticketActivationBg").style.pointerEvents = "none";
             setTimeout(() => {
-                document.getElementById("warningTicketBg").style.display = "none";
+                document.getElementById("ticketActivationBg").style.display = "none";
                 document.getElementById("body").style.overflow = "scroll";
             }, 300);
         }
         function trafi() {
             setTimeout(() => {
-                document.getElementById("warningTicket").style.bottom = "-100%";
-                document.getElementById("warningTicketBg").style.pointerEvents = "none";
+                document.getElementById("ticketActivation").style.bottom = "-100%";
+                document.getElementById("ticketActivationBg").style.pointerEvents = "none";
             }, 10);
             setTimeout(() => {
-                document.getElementById("warningTrafi").style.bottom = "0";
-                document.getElementById("warningTicketBg").style.pointerEvents = "all";
+                document.getElementById("trafiPhone").style.bottom = "0";
+                document.getElementById("ticketActivationBg").style.pointerEvents = "all";
             }, 310);
         }
         function mticket() {
             setTimeout(() => {
-                document.getElementById("warningTicket").style.bottom = "-100%";
-                document.getElementById("warningTicketBg").style.pointerEvents = "none";
+                document.getElementById("ticketActivation").style.bottom = "-100%";
+                document.getElementById("ticketActivationBg").style.pointerEvents = "none";
             }, 10);
             setTimeout(() => {
-                document.getElementById("warningMticket").style.bottom = "0";
-                document.getElementById("warningTicketBg").style.pointerEvents = "all";
+                document.getElementById("mticketPhone").style.bottom = "0";
+                document.getElementById("ticketActivationBg").style.pointerEvents = "all";
             }, 310);
         }
         function trafiGP() {
             setTimeout(() => {
-                document.getElementById("warningTrafi").style.bottom = "-100%";
-                document.getElementById("warningTicketBg").style.pointerEvents = "none";
+                document.getElementById("trafiPhone").style.bottom = "-100%";
+                document.getElementById("ticketActivationBg").style.pointerEvents = "none";
                 document.getElementById("openingPlay").style.display = "flex";
             }, 10);
             setTimeout(() => {
@@ -792,17 +1227,17 @@
             }, 1310);
             setTimeout(() => {
                 document.getElementById("openingPlay").style.bottom = "-100%";
-                document.getElementById("warningTicketBg").style.opacity = "0";
+                document.getElementById("ticketActivationBg").style.opacity = "0";
             }, 6310);
             setTimeout(() => {
-                document.getElementById("warningTicketBg").style.display = "none";
+                document.getElementById("ticketActivationBg").style.display = "none";
                 document.getElementById("body").style.overflow = "scroll";
             }, 6610);
         }
         function trafiAS() {
             setTimeout(() => {
-                document.getElementById("warningTrafi").style.bottom = "-100%";
-                document.getElementById("warningTicketBg").style.pointerEvents = "none";
+                document.getElementById("trafiPhone").style.bottom = "-100%";
+                document.getElementById("ticketActivationBg").style.pointerEvents = "none";
                 document.getElementById("openingStore").style.display = "flex";
             }, 10);
             setTimeout(() => {
@@ -813,17 +1248,17 @@
             }, 1310);
             setTimeout(() => {
                 document.getElementById("openingStore").style.bottom = "-100%";
-                document.getElementById("warningTicketBg").style.opacity = "0";
+                document.getElementById("ticketActivationBg").style.opacity = "0";
             }, 6310);
             setTimeout(() => {
-                document.getElementById("warningTicketBg").style.display = "none";
+                document.getElementById("ticketActivationBg").style.display = "none";
                 document.getElementById("body").style.overflow = "scroll";
             }, 6610);
         }
         function mticketGP() {
             setTimeout(() => {
-                document.getElementById("warningMticket").style.bottom = "-100%";
-                document.getElementById("warningTicketBg").style.pointerEvents = "none";
+                document.getElementById("mticketPhone").style.bottom = "-100%";
+                document.getElementById("ticketActivationBg").style.pointerEvents = "none";
                 document.getElementById("openingPlay").style.display = "flex";
             }, 10);
             setTimeout(() => {
@@ -834,17 +1269,17 @@
             }, 1310);
             setTimeout(() => {
                 document.getElementById("openingPlay").style.bottom = "-100%";
-                document.getElementById("warningTicketBg").style.opacity = "0";
+                document.getElementById("ticketActivationBg").style.opacity = "0";
             }, 6310);
             setTimeout(() => {
-                document.getElementById("warningTicketBg").style.display = "none";
+                document.getElementById("ticketActivationBg").style.display = "none";
                 document.getElementById("body").style.overflow = "scroll";
             }, 6610);
         }
         function mticketAS() {
             setTimeout(() => {
-                document.getElementById("warningMticket").style.bottom = "-100%";
-                document.getElementById("warningTicketBg").style.pointerEvents = "none";
+                document.getElementById("mticketPhone").style.bottom = "-100%";
+                document.getElementById("ticketActivationBg").style.pointerEvents = "none";
                 document.getElementById("openingStore").style.display = "flex";
             }, 10);
             setTimeout(() => {
@@ -855,10 +1290,10 @@
             }, 1310);
             setTimeout(() => {
                 document.getElementById("openingStore").style.bottom = "-100%";
-                document.getElementById("warningTicketBg").style.opacity = "0";
+                document.getElementById("ticketActivationBg").style.opacity = "0";
             }, 6310);
             setTimeout(() => {
-                document.getElementById("warningTicketBg").style.display = "none";
+                document.getElementById("ticketActivationBg").style.display = "none";
                 document.getElementById("body").style.overflow = "scroll";
             }, 6610);
         }
@@ -896,41 +1331,22 @@
 
 
 
-
-        function testMaps() {
-            document.getElementById("warningBg").style.display = "block";
-            document.getElementById("body").style.overflow = "hidden";
-            setTimeout(() => {
-                document.getElementById("warningBg").style.opacity = "1";
-                document.getElementById("warningBg").style.pointerEvents = "all";
-                document.getElementById("warning").style.bottom = "0";
-            }, 10);
-        }
-        function closeMaps() {
-            document.getElementById("warning").style.bottom = "-100%";
-            document.getElementById("warningBg").style.opacity = "0";
-            document.getElementById("warningBg").style.pointerEvents = "none";
-            setTimeout(() => {
-                document.getElementById("warningBg").style.display = "none";
-                document.getElementById("body").style.overflow = "scroll";
-            }, 300);
-        }
         function openMaps() {
-            document.getElementById("warningBg").style.display = "block";
+            document.getElementById("openingMapsBg").style.display = "block";
             document.getElementById("body").style.overflow = "hidden";
             setTimeout(() => {
                 document.getElementById("openingMaps").style.bottom = "0";
-                document.getElementById("warningBg").style.opacity = "1";
+                document.getElementById("openingMapsBg").style.opacity = "1";
             }, 10);
             setTimeout(() => {
                 window.open("https://www.google.com/maps");
             }, 1010);
             setTimeout(() => {
                 document.getElementById("openingMaps").style.bottom = "-100%";
-                document.getElementById("warningBg").style.opacity = "0";
+                document.getElementById("openingMapsBg").style.opacity = "0";
             }, 6010);
             setTimeout(() => {
-                document.getElementById("warningBg").style.display = "none";
+                document.getElementById("openingMapsBg").style.display = "none";
                 document.getElementById("body").style.overflow = "scroll";
             }, 6310);
         }
