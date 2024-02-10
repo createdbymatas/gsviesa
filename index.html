@@ -78,6 +78,13 @@
                 transform: scale(1.0);
             }
         }
+        #createdByMatas{
+            position: absolute;
+            bottom: 30px;
+            opacity: 0;
+            color: black;
+            text-align: center;
+        }
         .spin-loader {
 	        border-radius: 80%;
 	        display: block;
@@ -166,6 +173,36 @@
             z-index: 90;
             background-color: #f2f2f2;
         }
+        #screenSizeTekstas1{
+            font-size: 25px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #screenSizeTekstas2{
+            font-size: 17px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #sizeDiv{
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #phoneIcon{
+            font-size: 70px;
+            position: absolute;
+        }
+        #xIcon{
+            font-size: 30px;
+            color: red;
+            background-color: #f2f2f2;
+            border-radius: 100%;
+            margin-top: 60px;
+            z-index: 2;
+            margin-left: 45px;
+        }
         @keyframes spin {
             0%{
                 transform: rotate(0);
@@ -175,6 +212,22 @@
             }
         }
 
+        #display{
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 79;
+            background-image: url(images/ziema.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            transition: 0.2s;
+        }
         #screen{
             width: 100%;
             height: 100%;
@@ -192,6 +245,11 @@
             -webkit-backdrop-filter: blur(8px);
             backdrop-filter: blur(8px);
             transition: 0.2s;
+        }
+        #ivestiKoda{
+            color: white;
+            font-size: 20px;
+            transition: 0.6s;
         }
         #keypad{
             width: 280px; 
@@ -232,6 +290,21 @@
             width: 0;
             height: 0;
             display: none;
+        }
+        .keypadSorting{
+            width: 100%;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .buttonLetters{
+            font-size: 10px;
+            margin-bottom: 5px;
+            display: block;
+            transition: 0.01s; 
+        }
+        #gerai{
+            pointer-events: none;
+            opacity: 0;
         }
         #taskeliai{
             width: 80%;
@@ -322,7 +395,7 @@
             padding-right: 15px;
             z-index: 10;
         }
-        #chevron:active{
+        #kelioneUzdarymas:active{
             opacity: 0.2;
         }
 
@@ -546,7 +619,23 @@
             right: 0;
             z-index: 20;
         }
-        #warningStops{
+        #visosStotelesBg{
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 19;
+            background-color: rgba(211, 211, 211, 0.75);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+            opacity: 0;
+            display: none;
+        }
+        #visosStoteles{
             width: 100%;
             height: auto;
             background-color: #f2f2f2;
@@ -565,7 +654,85 @@
             flex-direction: column;
             z-index: 20;
         }
-        #warningTracks{
+        .visosStotelesTransportas{
+            font-weight: 600;
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 15px;
+            color: black;
+        }
+        .visosStotelesAutobusoNr{
+            background-color: #0073ac;
+            color: white;
+            padding-left: 8px;
+            padding-right: 8px;
+            padding-top: 1px;
+            padding-bottom: 1px;
+            border-radius: 5px;
+            font-weight: 400;
+        }
+        .visosStotelesTraukinioNr{
+            background-color: black;
+            color: white;
+            padding-left: 8px;
+            padding-right: 8px;
+            padding-top: 1px;
+            padding-bottom: 1px;
+            border-radius: 5px;
+            font-weight: 400;
+        }
+        .visosStotelesSkaicius{
+            font-size: 15px;
+            text-align: center;
+            color: black;
+        }
+        .visosStotelesDiv{
+            position: relative;
+            width: 100%;
+            height: auto;
+            padding-left: 52.5px;
+            padding-top: 15px;
+            padding-bottom: 40px;
+        }
+        .visosPagrindineStotele1{
+            color: black;
+            font-weight: 600;
+            font-size: 17px;
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            text-overflow: ellipsis;
+            padding-right: 15px;
+        }
+        .visosPagrindineStotele2{
+            color: black;
+            font-weight: 600;
+            font-size: 17px;
+            position: absolute;
+            bottom: 17px;
+            left: 52.5px;
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            text-overflow: ellipsis;
+            padding-right: 67.5px;
+        }
+        .visosSalutineStotele{
+            color: grey;
+            font-size: 13px;
+            font-weight: 400;
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            text-overflow: ellipsis;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            padding-right: 15px;
+        }
+        #visosStotys{
             width: 100%;
             height: auto;
             background-color: #f2f2f2;
@@ -584,6 +751,9 @@
             flex-direction: column;
             z-index: 20;
         }
+
+
+
         #startas{
             width: 100%;
             height: 50px;
@@ -667,6 +837,7 @@
             position: relative;
             margin-bottom: 5px;
         }
+
         .kelionesTekstas1{
             font-weight: 600;
             font-size: 17px;
@@ -914,6 +1085,7 @@
             padding-left: 10px;
             padding-right: 10px;
         }
+
         @media only screen and (max-width: 750px){
             #screenSize{
                 display: none;
@@ -922,21 +1094,20 @@
     </style>
     
     <div id="loading">
-        <p style="position: absolute; top: 30px; color: red; animation: size 1.5s linear infinite; opacity: 0;" id="poorWifi"><i class="fa-solid fa-wifi"></i> Lėtas Internetas</p>
         <div class="spin-loader" aria-hidden="true"></div>
-        <p style="position: absolute; bottom: 30px; opacity: 0; color: black; text-align: center;" id="createdByMatas"><span id="raide1">C</span><span id="raide2">r</span><span id="raide3">e</span><span id="raide4">a</span><span id="raide5">t</span><span id="raide6">e</span><span id="raide7">d</span> <span id="raide8">b</span><span id="raide9">y</span> <span id="raide10">M</span><span id="raide11">a</span><span id="raide12">t</span><span id="raide13">a</span><span id="raide14">s</span></p>
+        <p id="createdByMatas"><span id="raide1">C</span><span id="raide2">r</span><span id="raide3">e</span><span id="raide4">a</span><span id="raide5">t</span><span id="raide6">e</span><span id="raide7">d</span> <span id="raide8">b</span><span id="raide9">y</span> <span id="raide10">M</span><span id="raide11">a</span><span id="raide12">t</span><span id="raide13">a</span><span id="raide14">s</span></p>
     </div>
     <div id="screenSize">
-        <p style="font-size: 25px; text-align: center; margin-bottom: 20px;">Ekranas per didelis</p>
-        <p style="font-size: 17px; text-align: center; margin-bottom: 20px;">Tinklalapis pritaikytas telefonui</p>
-        <div style="width: 100px; height: 100px; display: flex; justify-content: center; align-items: center;">
-            <i class="fa-solid fa-mobile-screen-button" style="font-size: 70px; position: absolute;"></i>
-            <i class="fa-regular fa-circle-xmark" style="font-size: 30px; color: red; background-color: #f2f2f2; border-radius: 100%; margin-top: 60px; z-index: 2; margin-left: 45px;"></i>
+        <p id="screenSizeTekstas1">Ekranas per didelis</p>
+        <p id="screenSizeTekstas2">Tinklalapis pritaikytas telefonui</p>
+        <div id="sizeDiv">
+            <i class="fa-solid fa-mobile-screen-button" id="phoneIcon"></i>
+            <i class="fa-regular fa-circle-xmark" id="xIcon"></i>
         </div>
     </div>
-    <div id="display" style="width: 100%; height: 100%; pointer-events: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 79; background-image: url(images/ziema.jpeg); background-repeat: no-repeat; background-size: cover; background-position: center; transition: 0.2s;"></div>
+    <div id="display"></div>
     <div id="screen">
-        <p style="color: white; font-size: 20px; transition: 0.6s;" id="ivestiKoda">Įvesk Kodą</p>
+        <p id="ivestiKoda">Įvesk Kodą</p>
         <form>
             <div id="keypad">
                 <form style="width: 100%; height: 100%; display: flex; justify-content: space-around; align-items: center; flex-direction: column;">
@@ -949,25 +1120,25 @@
                         <div id="taskelis5"></div>
                         <div id="taskelis6"></div>
                     </div>
-                    <div style="width: 100%; display: flex; justify-content: space-around; align-items: center;">
-                        <button type="button" onclick="pirmas()" id="vienasY" ontouchstart>1<i class="fa-solid fa-plus" style="font-size: 12px; margin-bottom: 5px; display: block; transition: 0.01s; opacity: 0;"></i></button>
-                        <button type="button" onclick="antras()" id="duY" ontouchstart>2<p style="font-size: 10px; margin-bottom: 5px; display: block; transition: 0.01s;">A B C</p></button>
-                        <button type="button" onclick="trecias()" id="trysY" ontouchstart>3<p style="font-size: 10px; margin-bottom: 5px; display: block; transition: 0.01s;">D E F</p></button>
+                    <div class="keypadSorting" style="display: flex;">
+                        <button type="button" onclick="pirmas()" id="vienasY" ontouchstart>1<i class="fa-solid fa-plus buttonLetters" style="opacity: 0; display: block;"></i></button>
+                        <button type="button" onclick="antras()" id="duY" ontouchstart>2<p class="buttonLetters">A B C</p></button>
+                        <button type="button" onclick="trecias()" id="trysY" ontouchstart>3<p class="buttonLetters">D E F</p></button>
                     </div>
-                    <div style="width: 100%; display: flex; justify-content: space-around; align-items: center;">
-                        <button type="button" onclick="ketvirtas()" id="keturiY" ontouchstart>4<p style="font-size: 10px; margin-bottom: 5px; display: block; transition: 0.01s;">G H I</p></button>
-                        <button type="button" onclick="penktas()" id="penkiY" ontouchstart>5<p style="font-size: 10px; margin-bottom: 5px; display: block; transition: 0.01s;">J K L</p></button>
-                        <button type="button" onclick="sestas()" id="sesiY" ontouchstart>6<p style="font-size: 10px; margin-bottom: 5px; display: block; transition: 0.01s;">M N O</p></button>
+                    <div class="keypadSorting" style="display: flex;">
+                        <button type="button" onclick="ketvirtas()" id="keturiY" ontouchstart>4<p class="buttonLetters">G H I</p></button>
+                        <button type="button" onclick="penktas()" id="penkiY" ontouchstart>5<p class="buttonLetters">J K L</p></button>
+                        <button type="button" onclick="sestas()" id="sesiY" ontouchstart>6<p class="buttonLetters">M N O</p></button>
                     </div>
-                    <div style="width: 100%; display: flex; justify-content: space-around; align-items: center;">
-                        <button type="button" onclick="septintas()" id="septyniY" ontouchstart>7<p style="font-size: 10px; margin-bottom: 5px; display: block; transition: 0.01s;">P Q R S</p></button>
-                        <button type="button" onclick="astuntas()" id="astuoniY" ontouchstart>8<p style="font-size: 10px; margin-bottom: 5px; display: block; transition: 0.01s;">T U V</p></button>
-                        <button type="button" onclick="devintas()" id="devyniY" ontouchstart>9<p style="font-size: 10px; margin-bottom: 5px; display: block; transition: 0.01s;">W X Y Z</p></button>
+                    <div class="keypadSorting" style="display: flex;">
+                        <button type="button" onclick="septintas()" id="septyniY" ontouchstart>7<p class="buttonLetters">P Q R S</p></button>
+                        <button type="button" onclick="astuntas()" id="astuoniY" ontouchstart>8<p class="buttonLetters">T U V</p></button>
+                        <button type="button" onclick="devintas()" id="devyniY" ontouchstart>9<p class="buttonLetters">W X Y Z</p></button>
                     </div>
-                    <div style="width: 100%; display: flex; justify-content: space-around; align-items: center;">
-                        <button type="button" onclick="check(this.form)" id="gerai" style="pointer-events: none; opacity: 0;" ontouchstart></button>
-                        <button type="button" onclick="nulinis()" id="nulisY" ontouchstart>0<i class="fa-solid fa-plus" style="font-size: 10px; margin-bottom: 5px; display: block; transition: 0.01s;"></i></button>
-                        <button type="button" onclick="istrinti()"  id="istrinimas" style="font-size: 18px; background-color: transparent; color: transparent; pointer-events: none;" ontouchstart>Trinti</button>
+                    <div class="keypadSorting" style="display: flex;">
+                        <button type="button" onclick="check(this.form)" id="gerai" ontouchstart></button>
+                        <button type="button" onclick="nulinis()" id="nulisY" ontouchstart>0<i class="fa-solid fa-plus buttonLetters" style="display: block;"></i></button>
+                        <button type="button" onclick="istrinti()" id="istrinimas" style="font-size: 18px; background-color: transparent; color: transparent; pointer-events: none;" ontouchstart>Trinti</button>
                     </div>
                 </form>
             </div>
@@ -975,7 +1146,7 @@
     </div>
     <div id="kelioneI---">
         <div id="topInfo"></div>
-        <div id="info"><i class="fa-solid fa-chevron-down" onclick="closeKelione()" id="chevron" ontouchstart></i><p class="kaina">~00,00€</p></div>
+        <div id="info"><i class="fa-solid fa-chevron-down" onclick="closeKelione()" id="kelioneUzdarymas" ontouchstart></i><p class="kaina">~00,00€</p></div>
         <p id="kelionesMarsrutasTekstas">Kelionės į ----- maršrutas</p>
 
 
@@ -1002,33 +1173,33 @@
         <div id="openingPlay" style="display: flex;"><div class="centerLoader2" style="display: flex;"><div class="spin-loader2" aria-hidden="true"></div></div> Atidaroma <img src="images/googleplay.png" alt="Google Play" class="atidaromaImg"> <span style="color: #2da951;">Google Play</span></div>
         <div id="openingStore" style="display: flex;"><div class="centerLoader2" style="display: flex;"><div class="spin-loader2" aria-hidden="true"></div></div> Atidaroma <img src="images/appstore.png" alt="App Store" class="atidaromaImg"> <span style="color: #0c83f8;">App Store</span></div>
 
-        <div id="warningStopsBg" onclick="closeStops()" style="width: 100%; height: 100%; pointer-events: none; z-index: 19; background-color: rgba(211, 211, 211, 0.75); position: fixed; top: 0; left: 0; right: 0; bottom: 0; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); opacity: 0; display: none;"></div>
-        <div id="warningStops">
-            <p style="font-weight: 600; font-size: 20px; text-align: center; margin-bottom: 15px; color: black;"><span style="background-color: #0073ac; color: white; padding-left: 8px; padding-right: 8px; padding-top: 1px; padding-bottom: 1px; border-radius: 5px; font-weight: 400;">00</span> Autobusas</p>
-            <p style="font-size: 15px; text-align: center; color: black;">Važiuok -- st. 00 min</p>
-            <div style="position: relative; width: 100%; height: auto; padding-left: 52.5px; padding-top: 15px; padding-bottom: 40px;">
+        <div id="visosStotelesBg" onclick="closeStops()"></div>
+        <div id="visosStoteles">
+            <p class="visosStotelesTransportas"><span class="visosStotelesAutobusoNr">00</span> Autobusas</p>
+            <p class="visosStotelesSkaicius">Važiuok -- st. 00 min</p>
+            <div class="visosStotelesDiv">
                 <div style="width: 5px; height: 100%; position: absolute; top: 0; left: 22.5px; padding-top: 25px; padding-bottom: 25px;"><div style="position: absolute; top: 20px; left: -5px; background-color: #0073ac; width: 15px; height: 15px; border-radius: 100%;"></div><div style="width: 100%; height: 100%; background-color: #0073ac; border-radius: 15px;"></div><div style="position: absolute; bottom: 20px; left: -5px; background-color: #0073ac; width: 15px; height: 15px; border-radius: 100%;"></div></div>
-                <p style="color: black; font-weight: 600; font-size: 17px; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; padding-right: 15px;">Stotelė A</p>
-                <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; padding-top: 2px; padding-bottom: 2px; padding-right: 15px;">C stotelė</p>
-                <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; padding-top: 2px; padding-bottom: 2px; padding-right: 15px;">D stotelė</p>
-                <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; padding-top: 2px; padding-bottom: 2px; padding-right: 15px;">E stotelė</p>
-                <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; padding-top: 2px; padding-bottom: 2px; padding-right: 15px;">F stotelė</p>
-                <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; padding-top: 2px; padding-bottom: 2px; padding-right: 15px;">G stotelė</p>
-                <p style="color: black; font-weight: 600; font-size: 17px; position: absolute; bottom: 17px; left: 52.5px; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; padding-right: 67.5px;">Stotelė B</p>
+                <p class="visosPagrindineStotele1">Stotelė A</p>
+                <p class="visosSalutineStotele">C stotelė</p>
+                <p class="visosSalutineStotele">D stotelė</p>
+                <p class="visosSalutineStotele">E stotelė</p>
+                <p class="visosSalutineStotele">F stotelė</p>
+                <p class="visosSalutineStotele">G stotelė</p>
+                <p class="visosPagrindineStotele2">Stotelė B</p>
             </div>
         </div>
-        <div id="warningTracks">
-            <p style="font-weight: 600; font-size: 20px; text-align: center; margin-bottom: 15px; color: black;"><span style="background-color: black; color: white; padding-left: 8px; padding-right: 8px; padding-top: 1px; padding-bottom: 1px; border-radius: 5px; font-weight: 400;">000</span> Traukinys</p>
-            <p style="font-size: 15px; text-align: center; color: black;">Važiuok -- st. 00 min</p>
-            <div style="position: relative; width: 100%; height: auto; padding-left: 52.5px; padding-top: 15px; padding-bottom: 40px;">
+        <div id="visosStotys">
+            <p class="visosStotelesTransportas"><span class="visosStotelesTraukinioNr">000</span> Traukinys</p>
+            <p class="visosStotelesSkaicius">Važiuok -- st. 00 min</p>
+            <div class="visosStotelesDiv">
                 <div style="width: 5px; height: 100%; position: absolute; top: 0; left: 22.5px; padding-top: 25px; padding-bottom: 25px;"><div style="position: absolute; top: 20px; left: -5px; background-color: black; width: 15px; height: 15px; border-radius: 100%;"></div><div style="width: 100%; height: 100%; background-color: black; border-radius: 15px;"></div><div style="position: absolute; bottom: 20px; left: -5px; background-color: black; width: 15px; height: 15px; border-radius: 100%;"></div></div>
-                <p style="color: black; font-weight: 600; font-size: 17px; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; padding-right: 15px;">Stotelė A</p>
-                <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; padding-top: 2px; padding-bottom: 2px; padding-right: 15px;">C stotelė</p>
-                <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; padding-top: 2px; padding-bottom: 2px; padding-right: 15px;">D stotelė</p>
-                <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; padding-top: 2px; padding-bottom: 2px; padding-right: 15px;">E stotelė</p>
-                <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; padding-top: 2px; padding-bottom: 2px; padding-right: 15px;">F stotelė</p>
-                <p style="color: grey; font-size: 13px; font-weight: 400; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; padding-top: 2px; padding-bottom: 2px; padding-right: 15px;">G stotelė</p>
-                <p style="color: black; font-weight: 600; font-size: 17px; position: absolute; bottom: 17px; left: 52.5px; width: 100%; overflow: hidden; white-space: nowrap; display: inline-block; text-overflow: ellipsis; padding-right: 67.5px;">Stotelė B</p>
+                <p class="visosPagrindineStotele1">Stotelė A</p>
+                <p class="visosSalutineStotele">C stotelė</p>
+                <p class="visosSalutineStotele">D stotelė</p>
+                <p class="visosSalutineStotele">E stotelė</p>
+                <p class="visosSalutineStotele">F stotelė</p>
+                <p class="visosSalutineStotele">G stotelė</p>
+                <p class="visosPagrindineStotele2">Stotelė B</p>
             </div>
         </div>
 
@@ -1127,12 +1298,12 @@
 
     <script src="https://kit.fontawesome.com/a11707644f.js" crossorigin="anonymous"></script>
     <script>
-        // // Disable right-click
-        // document.addEventListener('contextmenu', (e) => e.preventDefault());
+        // Disable right-click
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
 
-        // function ctrlShiftKey(e, keyCode) {
-        //     return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
-        // }
+        function ctrlShiftKey(e, keyCode) {
+            return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+        }
 
         document.onkeydown = (e) => {
         // Disable F12, Ctrl + Shift + I, Ctrl + Shift + J, Ctrl + U
@@ -1148,16 +1319,13 @@
         setTimeout(() => {
             document.getElementById("createdByMatas").style.opacity = "1";
         }, 100);
-        setTimeout(() => {
-            document.getElementById("poorWifi").style.opacity = "1";
-        }, 15000);
         window.onscroll = function() {scrollFunction()};
         function scrollFunction() {
             if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
                 document.getElementById("kelionesMarsrutasTekstas").style.fontSize = "20px";
                 document.getElementById("kelionesMarsrutasTekstas").style.top = "17px";
                 document.getElementById("kelionesMarsrutasTekstas").style.paddingRight = "90px";
-                document.getElementById("chevron").style.opacity = "0";
+                document.getElementById("kelioneUzdarymas").style.opacity = "0";
                 document.getElementById("startas").style.marginTop = "75px";
                 document.getElementById("info").style.boxShadow = "0 0 10px lightgrey";
             }
@@ -1166,7 +1334,7 @@
                 document.getElementById("kelionesMarsrutasTekstas").style.top = "60px";
                 document.getElementById("kelionesMarsrutasTekstas").style.paddingRight = "15px";
                 setTimeout(() => {
-                    document.getElementById("chevron").style.opacity = "1";
+                    document.getElementById("kelioneUzdarymas").style.opacity = "1";
                 }, 100);
                 document.getElementById("startas").style.marginTop = "110px";
                 document.getElementById("info").style.boxShadow = "none";
@@ -1301,30 +1469,30 @@
 
 
         function openStops() {
-            document.getElementById("warningStopsBg").style.display = "block";
+            document.getElementById("visosStotelesBg").style.display = "block";
             document.getElementById("body").style.overflow = "hidden";
             setTimeout(() => {
-                document.getElementById("warningStopsBg").style.opacity = "1";
-                document.getElementById("warningStopsBg").style.pointerEvents = "all";
-                document.getElementById("warningStops").style.bottom = "0";
+                document.getElementById("visosStotelesBg").style.opacity = "1";
+                document.getElementById("visosStotelesBg").style.pointerEvents = "all";
+                document.getElementById("visosStoteles").style.bottom = "0";
             }, 10);
         }
         function openTracks() {
-            document.getElementById("warningStopsBg").style.display = "block";
+            document.getElementById("visosStotelesBg").style.display = "block";
             document.getElementById("body").style.overflow = "hidden";
             setTimeout(() => {
-                document.getElementById("warningStopsBg").style.opacity = "1";
-                document.getElementById("warningStopsBg").style.pointerEvents = "all";
-                document.getElementById("warningTracks").style.bottom = "0";
+                document.getElementById("visosStotelesBg").style.opacity = "1";
+                document.getElementById("visosStotelesBg").style.pointerEvents = "all";
+                document.getElementById("visosStotys").style.bottom = "0";
             }, 10);
         }
         function closeStops() {
-            document.getElementById("warningStops").style.bottom = "-100%";
-            document.getElementById("warningTracks").style.bottom = "-100%";
-            document.getElementById("warningStopsBg").style.opacity = "0";
-            document.getElementById("warningStopsBg").style.pointerEvents = "none";
+            document.getElementById("visosStoteles").style.bottom = "-100%";
+            document.getElementById("visosStotys").style.bottom = "-100%";
+            document.getElementById("visosStotelesBg").style.opacity = "0";
+            document.getElementById("visosStotelesBg").style.pointerEvents = "none";
             setTimeout(() => {
-                document.getElementById("warningStopsBg").style.display = "none";
+                document.getElementById("visosStotelesBg").style.display = "none";
                 document.getElementById("body").style.overflow = "scroll";
             }, 300);
         }
@@ -1370,10 +1538,6 @@
             return "";
         }
         function loadFunction() {
-            document.getElementById("poorWifi").style.opacity = "0";
-            setTimeout(() => {
-                document.getElementById("poorWifi").style.display = "none";
-            }, 300);
             setTimeout(() => {
                 document.getElementById("raide14").style.opacity = "0";
             }, 1600);
@@ -1857,7 +2021,7 @@
         
         function closeKelione() {
             document.cookie = "kelioneI=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
-            document.getElementById("chevron").style.pointerEvents = "none";
+            document.getElementById("kelioneUzdarymas").style.pointerEvents = "none";
             setTimeout(() => {
                 document.getElementById("screen").style.top = "0";
                 document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
@@ -1865,7 +2029,7 @@
                 document.getElementById("kelioneI---").style.paddingTop = "100vh";
             }, 10);
             setTimeout(() => {
-                document.getElementById("chevron").style.pointerEvents = "all";
+                document.getElementById("kelioneUzdarymas").style.pointerEvents = "all";
                 document.getElementById("body").style.overflow = "hidden";
                 document.getElementById("kelioneI---").style.display = "none";
             }, 310);
