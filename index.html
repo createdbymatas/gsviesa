@@ -85,7 +85,7 @@
             color: black;
             text-align: center;
         }
-        .spin-loader {
+        .spin-loader{
 	        border-radius: 80%;
 	        display: block;
 	        height: 50px;
@@ -94,12 +94,12 @@
 	        animation: spin 0.65s linear 0s infinite normal;
 	        background: lightgrey;
         }
-        .spin-loader:before, .spin-loader:after {
+        .spin-loader:before, .spin-loader:after{
 	        content: "";
 	        display: block;
 	        position: absolute;
         }
-        .spin-loader:before {
+        .spin-loader:before{
 	        border-radius: 0 90px 90px 0;
 	        height: 50px;
 	        width: 50%;
@@ -109,7 +109,7 @@
 	        background: black;
 	        background-image: linear-gradient(lightgrey, black);
         }
-        .spin-loader:after {
+        .spin-loader:after{
 	        border-radius: 80%;
 	        height: 40px;
 	        width: 40px;
@@ -124,7 +124,7 @@
 		        transform: rotate(360deg);
 	        }
         }
-        .spin-loader2 {
+        .spin-loader2{
 	        border-radius: 80%;
 	        display: block;
 	        height: 50px;
@@ -133,12 +133,12 @@
 	        animation: spin 0.65s linear 0s infinite normal;
 	        background: lightgrey;
         }
-        .spin-loader2:before, .spin-loader2:after {
+        .spin-loader2:before, .spin-loader2:after{
 	        content: "";
 	        display: block;
 	        position: absolute;
         }
-        .spin-loader2:before {
+        .spin-loader2:before{
 	        border-radius: 0 90px 90px 0;
 	        height: 50px;
 	        width: 50%;
@@ -148,7 +148,7 @@
 	        background: black;
 	        background-image: linear-gradient(lightgrey, black);
         }
-        .spin-loader2:after {
+        .spin-loader2:after{
 	        border-radius: 80%;
 	        height: 40px;
 	        width: 40px;
@@ -177,11 +177,13 @@
             font-size: 25px;
             text-align: center;
             margin-bottom: 20px;
+            color: black;
         }
         #screenSizeTekstas2{
             font-size: 17px;
             text-align: center;
             margin-bottom: 20px;
+            color: black;
         }
         #sizeDiv{
             width: 100px;
@@ -193,6 +195,7 @@
         #phoneIcon{
             font-size: 70px;
             position: absolute;
+            color: black;
         }
         #xIcon{
             font-size: 30px;
@@ -374,6 +377,7 @@
             align-items: center;
             border-radius: 100%;
             background-color: #DEDEDE;
+            color: black;
         }
         .kaina{
             position: absolute;
@@ -439,6 +443,7 @@
             align-items: center;
             background-color: #f2f2f2;
             box-shadow: 0 0 10px lightgrey;
+            color: black;
             position: fixed;
             bottom: -100%;
             left: 0;
@@ -505,29 +510,11 @@
             border-radius: 7px;
             margin-right: 5px;
         }
-        .androidButton{
-            width: 45%;
-            height: 50px;
-            justify-content: center;
-            align-items: center;
-            border-radius: 15px;
-            border: none;
-            background-color: #f2f2f2;
-            color: #46aa5b;
-            border: 2px solid #46aa5b;
-            font-size: 15px;
-        }
-        .iphoneButton{
-            width: 45%;
-            height: 50px;
-            justify-content: center;
-            align-items: center;
-            border-radius: 15px;
-            border: none;
-            background-color: #f2f2f2;
-            color: black;
-            border: 2px solid black;
-            font-size: 15px;
+        .ticketActivationButtonIphone{
+            font-size: 30px;
+            background-color: transparent;
+            border-radius: 7px;
+            margin-right: 5px;
         }
         #trafiButton{
             width: 45%;
@@ -553,6 +540,30 @@
             background-color: #f2f2f2;
             color: #00e500;
             border: 2px solid #00e500;
+            font-size: 15px;
+        }
+        .androidButton{
+            width: 45%;
+            height: 50px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            border: none;
+            background-color: #f2f2f2;
+            color: #46aa5b;
+            border: 2px solid #46aa5b;
+            font-size: 15px;
+        }
+        .iphoneButton{
+            width: 45%;
+            height: 50px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            border: none;
+            background-color: #f2f2f2;
+            color: black;
+            border: 2px solid black;
             font-size: 15px;
         }
         #trafiPhone{
@@ -838,6 +849,9 @@
             margin-bottom: 5px;
         }
 
+        .ejimoTaskelis{
+            background-color: black;
+        }
         .kelionesTekstas1{
             font-weight: 600;
             font-size: 17px;
@@ -979,6 +993,7 @@
             position: absolute;
             left: -42.5px;
             top: 10px;
+            box-shadow: 0 0 3px white;
         }
         .traukinioNr{
             background-color: black;
@@ -1091,6 +1106,166 @@
                 display: none;
             }
         }
+        @media (prefers-color-scheme: dark) {
+            body{
+                background-color: #141414;
+            }
+            #loading{
+                background-color: #141414;
+            }
+            #createdByMatas{
+                color: white;
+            }
+            .spin-loader{
+	            background: black;
+            }
+            .spin-loader:before{
+	            background: white;
+	            background-image: linear-gradient(black, white);
+            }
+            .spin-loader:after{
+	            background: #141414;
+            }
+            .spin-loader2{
+	            background: black;
+            }
+            .spin-loader2:before{
+	            background: white;
+	            background-image: linear-gradient(black, white);
+            }
+            .spin-loader2:after{
+	            background: #141414;
+            }
+            #screenSize{
+                background-color: #141414;
+            }
+            #screenSizeTekstas1{
+                color: white;
+            }
+            #screenSizeTekstas2{
+                color: white;
+            }
+            #phoneIcon{
+                color: white;
+            }
+            #xIcon{
+                background-color: #141414;
+            }
+            #kelioneI---{
+                background-color: #141414;
+            }
+            #info{
+                background-color: rgba(20, 20, 20, 0.75);
+                color: white;
+            }
+            #info i{
+                background-color: #282828;
+                color: white;
+            }
+            #kelionesMarsrutasTekstas{
+                color: white;
+            }
+            #openingMapsBg{
+                background-color: rgba(44, 44, 44, 0.75);
+            }
+            #openingMaps{
+                background-color: #141414;
+                box-shadow: 0 0 10px #333333;
+                color: white;
+            }
+            #ticketActivationBg{
+                background-color: rgba(44, 44, 44, 0.75);
+            }
+            #ticketActivation{
+                background-color: #141414;
+                box-shadow: 0 0 10px #333333;
+            }
+            .ticketActivationTekstas1{
+                color: white;
+            }
+            .ticketActivationTekstas2{
+                color: white;
+            }
+            #trafiButton{
+                background-color: #141414;
+            }
+            #mticketButton{
+                background-color: #141414;
+            }
+            .androidButton{
+                background-color: #141414;
+            }
+            .iphoneButton{
+                background-color: #141414;
+                color: white;
+                border: 2px solid white;
+            }
+            #trafiPhone{
+                background-color: #141414;
+                box-shadow: 0 0 10px #333333;
+            }
+            #mticketPhone{
+                background-color: #141414;
+                box-shadow: 0 0 10px #333333;
+            }
+            #openingPlay{
+                background-color: #141414;
+                box-shadow: 0 0 10px #333333;
+                color: white;
+            }
+            #openingStore{
+                background-color: #141414;
+                box-shadow: 0 0 10px #333333;
+                color: white;
+            }
+            #visosStotelesBg{
+                background-color: rgba(44, 44, 44, 0.75);
+            }
+            #visosStoteles{
+                background-color: #141414;
+                box-shadow: 0 0 10px #333333;
+            }
+            .visosStotelesTransportas{
+                color: white;
+            }
+            .visosStotelesSkaicius{
+                font-size: 15px;
+                text-align: center;
+                color: white;
+            }
+            .visosPagrindineStotele1{
+                color: white;
+            }
+            .visosPagrindineStotele2{
+                color: white;
+            }
+            #visosStotys{
+                background-color: #141414;
+                box-shadow: 0 0 10px #333333;
+            }
+            .ejimoTaskelis{
+                background-color: white;
+            }
+            .kelionesTekstas1{
+                color: white;
+            }
+            .kelionesIcon1{
+                color: white;
+            }
+            .kelionesIcon2{
+                color: white;
+            }
+            .kelionesIcon3{
+                color: white;
+            }
+            .maps{
+                color: white;
+                background-color: #141414;
+            }
+            hr{
+                border-top: 1px solid #333333;
+            }
+        }
     </style>
     
     <div id="loading">
@@ -1163,12 +1338,12 @@
         <div id="trafiPhone" style="display: flex;">
             <p class="ticketActivationTekstas1">Bilieto aktyvavimas</p>
             <p class="ticketActivationTekstas2">Pasirink savo telefoną:</p>
-            <div class="ticketActivationButtons" style="display: flex;"><button onclick="trafiGP()" style="display: flex;" class="mygtukas androidButton" ontouchstart><img src="images/android.png" alt="Android" class="ticketActivationButtonImg" style="background-color: transparent;">Android</button><button onclick="trafiAS()" style="display: flex;" class="mygtukas iphoneButton" ontouchstart><img src="images/iphone.png" alt="iPhone" class="ticketActivationButtonImg" style="background-color: transparent; height: 60%;">iPhone</button></div>
+            <div class="ticketActivationButtons" style="display: flex;"><button onclick="trafiGP()" style="display: flex;" class="mygtukas androidButton" ontouchstart><img src="images/android.png" alt="Android" class="ticketActivationButtonImg" style="background-color: transparent;">Android</button><button onclick="trafiAS()" style="display: flex;" class="mygtukas iphoneButton" ontouchstart><i class="fa-brands fa-apple ticketActivationButtonIphone"></i>iPhone</button></div>
         </div>
         <div id="mticketPhone" style="display: flex;">
             <p class="ticketActivationTekstas1">Bilieto aktyvavimas</p>
             <p class="ticketActivationTekstas2">Pasirink savo telefoną:</p>
-            <div class="ticketActivationButtons" style="display: flex;"><button onclick="mticketGP()" style="display: flex;" class="mygtukas androidButton" ontouchstart><img src="images/android.png" alt="Android" class="ticketActivationButtonImg" style="background-color: transparent;">Android</button><button onclick="mticketAS()" style="display: flex;" class="mygtukas iphoneButton" ontouchstart><img src="images/iphone.png" alt="iPhone" class="ticketActivationButtonImg" style="background-color: transparent; height: 60%;">iPhone</button></div>
+            <div class="ticketActivationButtons" style="display: flex;"><button onclick="mticketGP()" style="display: flex;" class="mygtukas androidButton" ontouchstart><img src="images/android.png" alt="Android" class="ticketActivationButtonImg" style="background-color: transparent;">Android</button><button onclick="mticketAS()" style="display: flex;" class="mygtukas iphoneButton" ontouchstart><i class="fa-brands fa-apple ticketActivationButtonIphone"></i>iPhone</button></div>
         </div>
         <div id="openingPlay" style="display: flex;"><div class="centerLoader2" style="display: flex;"><div class="spin-loader2" aria-hidden="true"></div></div> Atidaroma <img src="images/googleplay.png" alt="Google Play" class="atidaromaImg"> <span style="color: #2da951;">Google Play</span></div>
         <div id="openingStore" style="display: flex;"><div class="centerLoader2" style="display: flex;"><div class="spin-loader2" aria-hidden="true"></div></div> Atidaroma <img src="images/appstore.png" alt="App Store" class="atidaromaImg"> <span style="color: #0c83f8;">App Store</span></div>
@@ -1192,7 +1367,7 @@
             <p class="visosStotelesTransportas"><span class="visosStotelesTraukinioNr">000</span> Traukinys</p>
             <p class="visosStotelesSkaicius">Važiuok -- st. 00 min</p>
             <div class="visosStotelesDiv">
-                <div style="width: 5px; height: 100%; position: absolute; top: 0; left: 22.5px; padding-top: 25px; padding-bottom: 25px;"><div style="position: absolute; top: 20px; left: -5px; background-color: black; width: 15px; height: 15px; border-radius: 100%;"></div><div style="width: 100%; height: 100%; background-color: black; border-radius: 15px;"></div><div style="position: absolute; bottom: 20px; left: -5px; background-color: black; width: 15px; height: 15px; border-radius: 100%;"></div></div>
+                <div style="width: 5px; height: 100%; position: absolute; top: 0; left: 22.5px; padding-top: 25px; padding-bottom: 25px;"><div style="position: absolute; top: 20px; left: -5px; background-color: black; width: 15px; height: 15px; border-radius: 100%; box-shadow: 0 0 3px white;"></div><div style="width: 100%; height: 100%; background-color: black; border-radius: 15px; box-shadow: 0 0 3px white;"></div><div style="position: absolute; bottom: 20px; left: -5px; background-color: black; width: 15px; height: 15px; border-radius: 100%; box-shadow: 0 0 3px white;"></div></div>
                 <p class="visosPagrindineStotele1">Stotelė A</p>
                 <p class="visosSalutineStotele">C stotelė</p>
                 <p class="visosSalutineStotele">D stotelė</p>
@@ -1212,8 +1387,8 @@
         </div>
         <div class="separationLine1"><hr></div>
         <div class="ejimas">
-            <div style="width: 5px; height: 100%; position: absolute; top: -50%; left: 37.5px;"><div style="width: 5px; height: 5px; background-color: black; border-radius: 100%;"></div><div style="width: 5px; height: 5px; background-color: black; border-radius: 100%; margin-top: 5px;"></div></div>
-            <div style="width: 5px; height: 100%; position: absolute; top: 100%; left: 37.5px;"><div style="width: 5px; height: 5px; background-color: black; border-radius: 100%;"></div><div style="width: 5px; height: 5px; background-color: black; border-radius: 100%; margin-top: 5px; margin-bottom: 5px;"></div><div style="width: 5px; height: 5px; background-color: black; border-radius: 100%;"></div></div>
+            <div style="width: 5px; height: 100%; position: absolute; top: -50%; left: 37.5px;"><div class="ejimoTaskelis" style="width: 5px; height: 5px; border-radius: 100%;"></div><div class="ejimoTaskelis" style="width: 5px; height: 5px; border-radius: 100%; margin-top: 5px;"></div></div>
+            <div style="width: 5px; height: 100%; position: absolute; top: 100%; left: 37.5px;"><div class="ejimoTaskelis" style="width: 5px; height: 5px; border-radius: 100%;"></div><div class="ejimoTaskelis" style="width: 5px; height: 5px; border-radius: 100%; margin-top: 5px; margin-bottom: 5px;"></div><div class="ejimoTaskelis" style="width: 5px; height: 5px; border-radius: 100%;"></div></div>
 
             <i class="fa-solid fa-person-walking kelionesIcon2" style="display: flex;"></i>
             <p class="kelionesTekstas3">Eik 00 min (00 km 000 m)</p>
@@ -1252,7 +1427,7 @@
         </div>
         <div class="separationLine1"><hr></div>
         <div class="traukinys">
-            <div style="width: 5px; height: 100%; position: absolute; top: 0; left: 37.5px; padding-top: 25px; padding-bottom: 25px;"><div style="position: absolute; top: 20px; left: -5px; background-color: black; width: 15px; height: 15px; border-radius: 100%;"></div><div style="width: 100%; height: 100%; background-color: black; border-radius: 15px;"></div><div style="position: absolute; bottom: 20px; left: -5px; background-color: black; width: 15px; height: 15px; border-radius: 100%;"></div></div>
+            <div style="width: 5px; height: 100%; position: absolute; top: 0; left: 37.5px; padding-top: 25px; padding-bottom: 25px;"><div style="position: absolute; top: 20px; left: -5px; background-color: black; width: 15px; height: 15px; border-radius: 100%; box-shadow: 0 0 3px white;"></div><div style="width: 100%; height: 100%; background-color: black; border-radius: 15px; box-shadow: 0 0 3px white;"></div><div style="position: absolute; bottom: 20px; left: -5px; background-color: black; width: 15px; height: 15px; border-radius: 100%; box-shadow: 0 0 3px white;"></div></div>
 
             <div class="transportasDiv1" style="display: flex;">
                 <p class="kelionesTekstas1" style="padding-right: 50px;">Stotelė A</p>
@@ -1292,18 +1467,18 @@
         </div>
         <div class="separationLine1"><hr></div>
         <p class="travelInfoBottom" style="margin-top: 15px;">Informacija gali būti netiksli</p>
-        <p class="travelInfoBottom" style="margin-top: 5px; margin-bottom: 15px;">Maršruto laikai nurodyti pagal <img src="images/judu.png" alt="judu.lt" style="height: 8px;"> <img src="images/ltg.png" alt="ltglink.lt" style="height: 8px;"></p>
-        <div style="width: 10px; height: 1500px; outline: 1px solid red; margin-left: 15px;"></div>
+        <p class="travelInfoBottom" style="margin-top: 5px; margin-bottom: 15px;">Maršruto laikai nurodyti pagal <img src="images/judu.png" alt="judu.lt" style="height: 9px; background-color: white; padding: 1px; border-radius: 1px;"> <img src="images/ltg.png" alt="ltglink.lt" style="height: 9px; background-color: white; padding: 1px; border-radius: 1px;"></p>
+        <div style="width: 115px; height: 1500px; outline: 1px solid red; margin-left: 15px; color: grey;">testing_object</div>
     </div>
 
     <script src="https://kit.fontawesome.com/a11707644f.js" crossorigin="anonymous"></script>
     <script>
-        // Disable right-click
-        document.addEventListener('contextmenu', (e) => e.preventDefault());
+        // // Disable right-click
+        // document.addEventListener('contextmenu', (e) => e.preventDefault());
 
-        function ctrlShiftKey(e, keyCode) {
-            return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
-        }
+        // function ctrlShiftKey(e, keyCode) {
+        //     return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+        // }
 
         document.onkeydown = (e) => {
         // Disable F12, Ctrl + Shift + I, Ctrl + Shift + J, Ctrl + U
@@ -1327,7 +1502,12 @@
                 document.getElementById("kelionesMarsrutasTekstas").style.paddingRight = "90px";
                 document.getElementById("kelioneUzdarymas").style.opacity = "0";
                 document.getElementById("startas").style.marginTop = "75px";
-                document.getElementById("info").style.boxShadow = "0 0 10px lightgrey";
+                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    document.getElementById("info").style.boxShadow = "0 0 10px #333333";
+                }
+                else{
+                    document.getElementById("info").style.boxShadow = "0 0 10px lightgrey";
+                }
             }
             else {
                 document.getElementById("kelionesMarsrutasTekstas").style.fontSize = "25px";
