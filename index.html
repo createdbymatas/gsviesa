@@ -541,6 +541,7 @@
             color: #00e500;
             border: 2px solid #00e500;
             font-size: 15px;
+            cursor: pointer;
         }
         .androidButton{
             width: 45%;
@@ -553,6 +554,7 @@
             color: #46aa5b;
             border: 2px solid #46aa5b;
             font-size: 15px;
+            cursor: pointer;
         }
         .iphoneButton{
             width: 45%;
@@ -565,6 +567,7 @@
             color: black;
             border: 2px solid black;
             font-size: 15px;
+            cursor: pointer;
         }
         #trafiPhone{
             width: 100%;
@@ -1059,6 +1062,7 @@
             white-space: nowrap;
             display: inline-block;
             text-overflow: ellipsis;
+            cursor: pointer;
         }
         .stotelesTekstas:active{
             opacity: 0.2;
@@ -1072,6 +1076,7 @@
             display: inline-block;
             text-overflow: ellipsis;
             margin-top: 1px;
+            cursor: pointer;
         }
         .bilietaiTekstas:active{
             opacity: 0.2;
@@ -1117,17 +1122,17 @@
                 color: white;
             }
             .spin-loader{
-	            background: black;
+	            background: #333333;
             }
             .spin-loader:before{
 	            background: white;
-	            background-image: linear-gradient(black, white);
+	            background-image: linear-gradient(#333333, white);
             }
             .spin-loader:after{
 	            background: #141414;
             }
             .spin-loader2{
-	            background: black;
+	            background: #333333;
             }
             .spin-loader2:before{
 	            background: white;
@@ -1473,12 +1478,12 @@
 
     <script src="https://kit.fontawesome.com/a11707644f.js" crossorigin="anonymous"></script>
     <script>
-        // // Disable right-click
-        // document.addEventListener('contextmenu', (e) => e.preventDefault());
+        // Disable right-click
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
 
-        // function ctrlShiftKey(e, keyCode) {
-        //     return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
-        // }
+        function ctrlShiftKey(e, keyCode) {
+            return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+        }
 
         document.onkeydown = (e) => {
         // Disable F12, Ctrl + Shift + I, Ctrl + Shift + J, Ctrl + U
