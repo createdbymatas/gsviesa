@@ -1471,9 +1471,6 @@
         )
             return false;
         };
-        setTimeout(() => {
-            document.getElementById("createdByMatas").style.opacity = "1";
-        }, 100);
         window.onscroll = function() {scrollFunction()};
         function scrollFunction() {
             if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
@@ -1697,6 +1694,9 @@
             }
             return "";
         }
+        setTimeout(() => {
+            document.getElementById("createdByMatas").style.opacity = "1";
+        }, 100);
         function loadFunction() {
             setTimeout(() => {
                 document.getElementById("raide14").style.opacity = "0";
