@@ -33,6 +33,7 @@
             -moz-user-select: none;
             -o-user-select: none;
             user-select: none;
+            cursor: default;
         }
         img{
             pointer-events: none;
@@ -46,7 +47,7 @@
         }
         #loading{
             width: 100%;
-            height: 100vh;
+            height: 100%;
             position: fixed;
             left: 0;
             right: 0;
@@ -315,7 +316,7 @@
             transition: 0.2s;
             padding-bottom: 15px;
             display: none;
-            padding-top: 100vh;
+            padding-top: 100%;
         }
         #topInfo{
             position: absolute;
@@ -330,7 +331,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: rgba(242, 242, 242, 0.75);
+            background-color: rgba(242, 242, 242, 1);
             -webkit-backdrop-filter: blur(8px);
             backdrop-filter: blur(8px);
             color: black;
@@ -345,7 +346,7 @@
             position: absolute;
             top: 15px;
             left: 15px;
-            z-index: 4;
+            z-index: 11;
             transition: 0.15s;
             cursor: pointer;
             width: 30px;
@@ -371,12 +372,27 @@
             display: inline-block;
             text-overflow: ellipsis;
             width: 100%;
-            position: fixed;
+            position: absolute;
             top: 60px;
-            left: 0;
             padding-left: 15px;
             padding-right: 15px;
+            z-index: 2;
+        }
+        #kelionesMarsrutasTekstas2{
+            font-size: 20px;
+            font-weight: 600;
+            color: black;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            text-overflow: ellipsis;
+            width: 100%;
+            position: absolute;
+            top: 18px;
+            padding-left: 60px;
+            padding-right: 90px;
             z-index: 10;
+            opacity: 0;
         }
         #kelioneUzdarymas:active{
             opacity: 0.2;
@@ -473,8 +489,6 @@
             font-weight: 400;
             font-size: 15px;
             text-align: center;
-            justify-content: center;
-            align-items: center;
             margin-bottom: 15px;
             color: black;
         }
@@ -756,7 +770,7 @@
 
 
 
-        #startas{
+        .startas{
             width: 100%;
             height: 50px;
             display: flex;
@@ -1148,7 +1162,7 @@
                 background-color: #141414;
             }
             #info{
-                background-color: rgba(20, 20, 20, 0.75);
+                background-color: rgba(20, 20, 20, 1);
                 color: white;
             }
             #info i{
@@ -1156,6 +1170,9 @@
                 color: white;
             }
             #kelionesMarsrutasTekstas{
+                color: white;
+            }
+            #kelionesMarsrutasTekstas2{
                 color: white;
             }
             #openingMapsBg{
@@ -1314,7 +1331,7 @@
     </div>
     <div id="kelioneI---">
         <div id="topInfo"></div>
-        <div id="info"><i class="fa-solid fa-chevron-down" onclick="closeKelione()" id="kelioneUzdarymas" ontouchstart></i><p class="kaina">~00,00€</p></div>
+        <div id="info"><i class="fa-solid fa-chevron-down" onclick="closeKelione()" id="kelioneUzdarymas" ontouchstart></i><p id="kelionesMarsrutasTekstas2">Kelionės į ----- maršrutas</p><p class="kaina">~00,00€</p></div>
         <p id="kelionesMarsrutasTekstas">Kelionės į ----- maršrutas</p>
 
 
@@ -1325,17 +1342,17 @@
         <div id="ticketActivationBg" onclick="closeTicket()"></div>
         <div id="ticketActivation" style="display: flex;">
             <p class="ticketActivationTekstas1">Bilieto aktyvavimas</p>
-            <p class="ticketActivationTekstas2" style="display: flex;">Pasirink, kur nori aktyvuoti savo bilietą:</p>
+            <p class="ticketActivationTekstas2">Pasirink, kur nori aktyvuoti savo bilietą:</p>
             <div class="ticketActivationButtons" style="display: flex;"><button onclick="trafi()" id="trafiButton" style="display: flex;" class="mygtukas" ontouchstart><img src="images/trafi.png" alt="Trafi" class="ticketActivationButtonImg">Trafi</button><button onclick="mticket()" id="mticketButton" style="display: flex;" class="mygtukas" ontouchstart><img src="images/mticket.png" alt="m. Ticket"  class="ticketActivationButtonImg">m. Ticket</button></div>
         </div>
         <div id="trafiPhone" style="display: flex;">
             <p class="ticketActivationTekstas1">Bilieto aktyvavimas</p>
-            <p class="ticketActivationTekstas2" style="display: flex;">Pasirink savo telefoną, kuriame atsidarys <img src="images/trafi.png" alt="Trafi" class="ticketActivationPhoneImg"> <span style="color: #ff0099;">Trafi</span>:</p>
+            <p class="ticketActivationTekstas2">Pasirink savo telefoną:</p>
             <div class="ticketActivationButtons" style="display: flex;"><button onclick="trafiGP()" style="display: flex;" class="mygtukas androidButton" ontouchstart><img src="images/android.png" alt="Android" class="ticketActivationButtonImg" style="background-color: transparent;">Android</button><button onclick="trafiAS()" style="display: flex;" class="mygtukas iphoneButton" ontouchstart><i class="fa-brands fa-apple ticketActivationButtonIphone"></i>iPhone</button></div>
         </div>
         <div id="mticketPhone" style="display: flex;">
             <p class="ticketActivationTekstas1">Bilieto aktyvavimas</p>
-            <p class="ticketActivationTekstas2" style="display: flex;">Pasirink savo telefoną, kuriame atsidarys <img src="images/mticket.png" alt="m. Ticket" class="ticketActivationPhoneImg"> <span style="color: #00e500;">m. Ticket</span>:</p>
+            <p class="ticketActivationTekstas2">Pasirink savo telefoną:</p>
             <div class="ticketActivationButtons" style="display: flex;"><button onclick="mticketGP()" style="display: flex;" class="mygtukas androidButton" ontouchstart><img src="images/android.png" alt="Android" class="ticketActivationButtonImg" style="background-color: transparent;">Android</button><button onclick="mticketAS()" style="display: flex;" class="mygtukas iphoneButton" ontouchstart><i class="fa-brands fa-apple ticketActivationButtonIphone"></i>iPhone</button></div>
         </div>
         <div id="openingPlay" style="display: flex;"><div class="centerLoader2" style="display: flex;"><div class="spin-loader2" aria-hidden="true"></div></div> Atidaroma <img src="images/googleplay.png" alt="Google Play" class="atidaromaImg"> <span style="color: #2da951;">Google Play</span></div>
@@ -1343,7 +1360,7 @@
 
         <div id="visosStotelesBg" onclick="closeStops()"></div>
         <div id="visosStoteles">
-            <p class="visosStotelesTransportas"><span class="visosStotelesAutobusoNr">00</span> Autobusas</p>
+            <p class="visosStotelesTransportas"><span class="visosStotelesAutobusoNr">00</span> -----</p>
             <p class="visosStotelesSkaicius">Važiuok -- st. 00 min</p>
             <div class="visosStotelesDiv">
                 <div style="width: 5px; height: 100%; position: absolute; top: 0; left: 22.5px; padding-top: 25px; padding-bottom: 25px;"><div style="position: absolute; top: 20px; left: -5px; background-color: #0073ac; width: 15px; height: 15px; border-radius: 100%;"></div><div style="width: 100%; height: 100%; background-color: #0073ac; border-radius: 15px;"></div><div style="position: absolute; bottom: 20px; left: -5px; background-color: #0073ac; width: 15px; height: 15px; border-radius: 100%;"></div></div>
@@ -1357,7 +1374,7 @@
             </div>
         </div>
         <div id="visosStotys">
-            <p class="visosStotelesTransportas"><span class="visosStotelesTraukinioNr">000</span> Traukinys</p>
+            <p class="visosStotelesTransportas"><span class="visosStotelesTraukinioNr">000</span> -----</p>
             <p class="visosStotelesSkaicius">Važiuok -- st. 00 min</p>
             <div class="visosStotelesDiv">
                 <div style="width: 5px; height: 100%; position: absolute; top: 0; left: 22.5px; padding-top: 25px; padding-bottom: 25px;"><div style="position: absolute; top: 20px; left: -5px; background-color: black; width: 15px; height: 15px; border-radius: 100%; box-shadow: 0 0 3px white;"></div><div style="width: 100%; height: 100%; background-color: black; border-radius: 15px; box-shadow: 0 0 3px white;"></div><div style="position: absolute; bottom: 20px; left: -5px; background-color: black; width: 15px; height: 15px; border-radius: 100%; box-shadow: 0 0 3px white;"></div></div>
@@ -1373,7 +1390,7 @@
 
 
 
-        <div id="startas">
+        <div class="startas">
             <i class="fa-solid fa-circle kelionesIcon1" style="display: flex;"></i>
             <p class="kelionesTekstas1">Maršruto pradžia</p>
             <p class="kelionesTekstas2">Išvyk 00:00</p>
@@ -1486,30 +1503,28 @@
         };
         window.onscroll = function() {scrollFunction()};
         function scrollFunction() {
-            if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
-                document.getElementById("kelionesMarsrutasTekstas").style.transform = "scale(0.8)";
-                document.getElementById("kelionesMarsrutasTekstas").style.top = "16px";
-                document.getElementById("kelionesMarsrutasTekstas").style.paddingRight = "0";
-                document.getElementById("kelionesMarsrutasTekstas").style.left = "-45px";
-                document.getElementById("kelioneUzdarymas").style.opacity = "0";
-                document.getElementById("startas").style.marginTop = "75px";
+            if (document.body.scrollTop > 25 || document.documentElement.scrollTop > 25) {
+                document.getElementById("kelionesMarsrutasTekstas").style.opacity = "0";
+                document.getElementById("kelionesMarsrutasTekstas2").style.opacity = "1";
                 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
                     document.getElementById("info").style.boxShadow = "0 0 10px #333333";
+                    document.getElementById("info").style.backgroundColor = "rgba(20, 20, 20, 0.75)";
                 }
                 else{
                     document.getElementById("info").style.boxShadow = "0 0 10px lightgrey";
+                    document.getElementById("info").style.backgroundColor = "rgba(242, 242, 242, 0.75)";
                 }
             }
             else {
-                document.getElementById("kelionesMarsrutasTekstas").style.transform = "scale(1)";
-                document.getElementById("kelionesMarsrutasTekstas").style.top = "60px";
-                document.getElementById("kelionesMarsrutasTekstas").style.paddingRight = "15px";
-                document.getElementById("kelionesMarsrutasTekstas").style.left = "0";
-                setTimeout(() => {
-                    document.getElementById("kelioneUzdarymas").style.opacity = "1";
-                }, 100);
-                document.getElementById("startas").style.marginTop = "110px";
+                document.getElementById("kelionesMarsrutasTekstas").style.opacity = "1";
+                document.getElementById("kelionesMarsrutasTekstas2").style.opacity = "0";
                 document.getElementById("info").style.boxShadow = "none";
+                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    document.getElementById("info").style.backgroundColor = "rgba(20, 20, 20, 1)";
+                }
+                else{
+                    document.getElementById("info").style.backgroundColor = "rgba(242, 242, 242, 1)";
+                }
             }
         }
 
