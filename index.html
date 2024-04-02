@@ -473,6 +473,8 @@
             font-weight: 400;
             font-size: 15px;
             text-align: center;
+            justify-content: center;
+            align-items: center;
             margin-bottom: 15px;
             color: black;
         }
@@ -487,6 +489,13 @@
             height: 70%;
             background-color: white;
             border-radius: 7px;
+            margin-right: 5px;
+        }
+        .ticketActivationPhoneImg{
+            width: 20px;
+            border-radius: 5px;
+            background-color: white;
+            margin-left: 5px;
             margin-right: 5px;
         }
         .ticketActivationButtonIphone{
@@ -1316,17 +1325,17 @@
         <div id="ticketActivationBg" onclick="closeTicket()"></div>
         <div id="ticketActivation" style="display: flex;">
             <p class="ticketActivationTekstas1">Bilieto aktyvavimas</p>
-            <p class="ticketActivationTekstas2">Pasirink, kur nori aktyvuoti savo bilietą:</p>
+            <p class="ticketActivationTekstas2" style="display: flex;">Pasirink, kur nori aktyvuoti savo bilietą:</p>
             <div class="ticketActivationButtons" style="display: flex;"><button onclick="trafi()" id="trafiButton" style="display: flex;" class="mygtukas" ontouchstart><img src="images/trafi.png" alt="Trafi" class="ticketActivationButtonImg">Trafi</button><button onclick="mticket()" id="mticketButton" style="display: flex;" class="mygtukas" ontouchstart><img src="images/mticket.png" alt="m. Ticket"  class="ticketActivationButtonImg">m. Ticket</button></div>
         </div>
         <div id="trafiPhone" style="display: flex;">
             <p class="ticketActivationTekstas1">Bilieto aktyvavimas</p>
-            <p class="ticketActivationTekstas2">Pasirink savo telefoną:</p>
+            <p class="ticketActivationTekstas2" style="display: flex;">Pasirink savo telefoną, kuriame atsidarys <img src="images/trafi.png" alt="Trafi" class="ticketActivationPhoneImg"> <span style="color: #ff0099;">Trafi</span>:</p>
             <div class="ticketActivationButtons" style="display: flex;"><button onclick="trafiGP()" style="display: flex;" class="mygtukas androidButton" ontouchstart><img src="images/android.png" alt="Android" class="ticketActivationButtonImg" style="background-color: transparent;">Android</button><button onclick="trafiAS()" style="display: flex;" class="mygtukas iphoneButton" ontouchstart><i class="fa-brands fa-apple ticketActivationButtonIphone"></i>iPhone</button></div>
         </div>
         <div id="mticketPhone" style="display: flex;">
             <p class="ticketActivationTekstas1">Bilieto aktyvavimas</p>
-            <p class="ticketActivationTekstas2">Pasirink savo telefoną:</p>
+            <p class="ticketActivationTekstas2" style="display: flex;">Pasirink savo telefoną, kuriame atsidarys <img src="images/mticket.png" alt="m. Ticket" class="ticketActivationPhoneImg"> <span style="color: #00e500;">m. Ticket</span>:</p>
             <div class="ticketActivationButtons" style="display: flex;"><button onclick="mticketGP()" style="display: flex;" class="mygtukas androidButton" ontouchstart><img src="images/android.png" alt="Android" class="ticketActivationButtonImg" style="background-color: transparent;">Android</button><button onclick="mticketAS()" style="display: flex;" class="mygtukas iphoneButton" ontouchstart><i class="fa-brands fa-apple ticketActivationButtonIphone"></i>iPhone</button></div>
         </div>
         <div id="openingPlay" style="display: flex;"><div class="centerLoader2" style="display: flex;"><div class="spin-loader2" aria-hidden="true"></div></div> Atidaroma <img src="images/googleplay.png" alt="Google Play" class="atidaromaImg"> <span style="color: #2da951;">Google Play</span></div>
@@ -1481,7 +1490,7 @@
                 document.getElementById("kelionesMarsrutasTekstas").style.transform = "scale(0.8)";
                 document.getElementById("kelionesMarsrutasTekstas").style.top = "16px";
                 document.getElementById("kelionesMarsrutasTekstas").style.paddingRight = "0";
-                document.getElementById("kelionesMarsrutasTekstas").style.left = "-50px";
+                document.getElementById("kelionesMarsrutasTekstas").style.left = "-45px";
                 document.getElementById("kelioneUzdarymas").style.opacity = "0";
                 document.getElementById("startas").style.marginTop = "75px";
                 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
