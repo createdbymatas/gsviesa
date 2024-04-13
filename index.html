@@ -42,7 +42,7 @@
             width: 0;
         }
         body{
-            background-color: rgba(242, 242, 242, 0.75);
+            background-color: #f2f2f2;
             /* overflow: hidden; */
         }
         #loading{
@@ -209,6 +209,7 @@
             background-size: cover;
             background-position: center;
             transition: 0.2s;
+            /* display: none; */
         }
         #screen{
             width: 100%;
@@ -227,6 +228,7 @@
             -webkit-backdrop-filter: blur(8px);
             backdrop-filter: blur(8px);
             transition: 0.2s;
+            /* display: none; */
         }
         #ivestiKoda{
             color: white;
@@ -769,6 +771,337 @@
         }
 
 
+        #arune{
+            width: 100%;
+            height: 100%;
+            background-color: #f2f2f2;
+            transition: 0.2s;
+            padding-bottom: 80px;
+            overflow: hidden;
+            overflow-y: scroll;
+            padding-top: 0;
+            display: block;
+        }
+        #topInfoArune{
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            top: 0;
+            left: 0;
+        }
+        #infoArune{
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(242, 242, 242, 1);
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+            color: black;
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            z-index: 10;
+        }
+        #infoArune i{
+            font-size: 15px;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            z-index: 11;
+            transition: 0.15s;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            background-color: #DEDEDE;
+            color: black;
+        }
+        #aruneTekstas{
+            font-size: 25px;
+            font-weight: 600;
+            color: black;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            text-overflow: ellipsis;
+            width: 100%;
+            position: absolute;
+            top: 60px;
+            padding-left: 15px;
+            padding-right: 15px;
+            z-index: 2;
+        }
+        #aruneTekstas2{
+            font-size: 20px;
+            font-weight: 600;
+            color: black;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            text-overflow: ellipsis;
+            width: 100%;
+            position: absolute;
+            top: 17px;
+            padding-left: 60px;
+            padding-right: 15px;
+            z-index: 10;
+            opacity: 0;
+        }
+        #aruneUzdarymas:active{
+            opacity: 0.2;
+        }
+        #scenarijusAruneBackground{
+            width: 100%;
+            height: auto;
+            background-color: rgba(242, 242, 242, 0.75);
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            z-index: 17;
+            box-shadow: 0 0 10px lightgrey;
+            border-radius: 25px 25px 0 0;
+        }
+        #atsisiustiScenarijuArune{
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            border: none;
+            background-color: transparent;
+            color: black;
+            border: 2px solid black;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        #downloadingBackgroundArune{
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 19;
+            background-color: rgba(211, 211, 211, 0.75);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+            opacity: 0;
+            display: none;
+        }
+        #atsisiunciamasScenarijusArune{
+            font-size: 15px;
+            width: 100%;
+            height: 50px;
+            border-radius: 25px 25px 0 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f2f2f2;
+            box-shadow: 0 0 10px lightgrey;
+            position: fixed;
+            bottom: -100%;
+            left: 0;
+            right: 0;
+            z-index: 20;
+        }
+        .karnavalasIcon{
+            position: absolute;
+            width: 25px;
+            height: 100%;
+            border-radius: 25px;
+            justify-content: center;
+            align-items: center;
+            top: 0;
+            left: 27.5px;
+            font-size: 20px;
+            color: black;
+        }
+        .pagrTekstas{
+            font-weight: 600;
+            font-size: 17px;
+            color: black;
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            text-overflow: ellipsis;
+        }
+        .antrTekstas{
+            color: grey;
+            font-size: 13px;
+            font-weight: 400;
+            width: 100%;
+        }
+        .pastabaTekstas{
+            color: black;
+            font-size: 13px;
+            font-weight: 400;
+            width: 100%;
+            position: relative;
+            margin-top: 7px;
+            padding-left: 17px;
+        }
+        .sauktukas{
+            position: absolute;
+            left: 0;
+            border: 1px solid black;
+            font-weight: 600;
+            width: 13px;
+            height: 13px;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 10px;
+            margin-top: 1px;
+        }
+        .vardas{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            margin-top: 110px;
+            padding-left: 67.5px;
+            padding-right: 15px;
+            position: relative;
+            margin-bottom: 5px;
+            padding-top: 7px;
+            padding-bottom: 7px;
+        }
+        .vardasIcon{
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            border-radius: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 12.5px;
+            left: 27.5px;
+            font-size: 20px;
+            color: black;
+        }
+        .vardasAntrTekstas{
+            color: grey;
+            font-size: 13px;
+            font-weight: 400;
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            text-overflow: ellipsis;
+        }
+        .apie{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            margin-top: 5px;
+            padding-left: 67.5px;
+            padding-right: 15px;
+            position: relative;
+            margin-bottom: 5px;
+            padding-top: 7px;
+            padding-bottom: 7px;
+        }
+        .pasiruosimas{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            margin-top: 5px;
+            padding-left: 67.5px;
+            padding-right: 15px;
+            position: relative;
+            margin-bottom: 5px;
+            padding-top: 7px;
+            padding-bottom: 7px;
+        }
+        .zodziai{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            margin-top: 5px;
+            padding-left: 67.5px;
+            padding-right: 15px;
+            position: relative;
+            margin-bottom: 5px;
+            padding-top: 7px;
+            padding-bottom: 7px;
+        }
+        .apranga{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            margin-top: 5px;
+            padding-left: 67.5px;
+            padding-right: 15px;
+            position: relative;
+            margin-bottom: 5px;
+            padding-top: 7px;
+            padding-bottom: 7px;
+        }
+        .vaidinimas{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            margin-top: 5px;
+            padding-left: 67.5px;
+            padding-right: 15px;
+            position: relative;
+            margin-bottom: 5px;
+            padding-top: 7px;
+            padding-bottom: 7px;
+        }
+        .papildomai{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            margin-top: 5px;
+            padding-left: 67.5px;
+            padding-right: 15px;
+            position: relative;
+            margin-bottom: 5px;
+            padding-top: 7px;
+            padding-bottom: 7px;
+        }
+
+
 
         .startas{
             width: 100%;
@@ -1115,7 +1448,7 @@
         }
         @media (prefers-color-scheme: dark) {
             body{
-                background-color: rgba(20, 20, 20, 0.75);
+                background-color: #141414;
             }
             #loading{
                 background-color: #141414;
@@ -1274,6 +1607,57 @@
             }
             hr{
                 border-top: 1px solid #333333;
+            }
+
+
+
+            #arune{
+                background-color: #141414;
+            }
+            #infoArune{
+                background-color: rgba(20, 20, 20, 1);
+                color: white;
+            }
+            #infoArune i{
+                background-color: #282828;
+                color: white;
+            }
+            #aruneTekstas{
+                color: white;
+            }
+            #aruneTekstas2{
+                color: white;
+            }
+            .karnavalasIcon{
+                color: white;
+            }
+            .pagrTekstas{
+                color: white;
+            }
+            .vardasIcon{
+                color: white;
+            }
+            .pastabaTekstas{
+                color: white;
+            }
+            .sauktukas{
+                border: 1px solid white;
+            }
+            #scenarijusAruneBackground{
+                background-color: rgba(20, 20, 20, 0.75);
+                box-shadow: 0 0 10px #333333;
+            }
+            #atsisiustiScenarijuArune{
+                color: white;
+                border: 2px solid white;
+            }
+            #downloadingBackgroundArune{
+                background-color: rgba(44, 44, 44, 0.75);
+            }
+            #atsisiunciamasScenarijusArune{
+                background-color: #141414;
+                box-shadow: 0 0 10px #333333;
+                color: white;
             }
         }
     </style>
@@ -1481,8 +1865,99 @@
         <div style="width: 115px; height: 1500px; outline: 1px solid red; margin-left: 15px; color: red;">testing_object</div>
     </div>
 
+
+
+
+
+
+
+
+
+    <div id="arune">
+        <div id="topInfoArune"></div>
+        <div id="infoArune"><i class="fa-solid fa-chevron-down" onclick="closeArune()" id="aruneUzdarymas" ontouchstart></i><p id="aruneTekstas2">Vaidinimas "Mažasis princas - karjera"</p></div>
+        <p id="aruneTekstas">Vaidinimas "Mažasis princas - karjera"</p>
+
+        <div id="scenarijusAruneBackground">
+            <button onclick="scenarijusArune()" class="warningButton" id="atsisiustiScenarijuArune" ontouchstart><i class="fa-solid fa-scroll" style="margin-right: 5px;"></i>Atsisiųsti visą scenarijų</button>
+        </div>
+
+        <div id="downloadingBackgroundArune"></div>
+        <div id="atsisiunciamasScenarijusArune"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "scenarijus.pdf"</div>
+
+        <div class="vardas" id="vardasArune">
+            <i class="fa-regular fa-user-circle vardasIcon"></i>
+            <p class="pagrTekstas">Aktorius (-ė)</p>
+            <p class="vardasAntrTekstas">Arūnė</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="apie">
+            <i class="fa-regular fa-circle-question karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Apie rolę:</p>
+            <p class="antrTekstas">Rolės aprašymas.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="pasiruosimas">
+            <i class="fa-solid fa-suitcase karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Pasiruošti:</p>
+            <p class="antrTekstas">Pasiruošimo aprašymas.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="apranga">
+            <i class="fa-solid fa-shirt karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Apranga:</p>
+            <p class="antrTekstas">Aprangos aprašymas.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="zodziai">
+            <i class="fa-regular fa-comments karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Žodžiai:</p>
+            <p class="antrTekstas">Žodžių aprašymas.</p>
+            <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="vaidinimas">
+            <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Vaidinimo eiga:</p>
+            <p class="antrTekstas">Vaidinimo eigos aprašymas.</p>
+            <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="papildomai">
+            <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Papildomai:</p>
+            <p class="antrTekstas">Papildomai aprašymas.</p>
+            <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti failą</button> -->
+        </div>
+    </div>
+
+    <a id="download_script" href="scenarijus.pdf" download style="display: none;">download_script</a>
+
     <script src="https://kit.fontawesome.com/a11707644f.js" crossorigin="anonymous"></script>
     <script>
+function scenarijusArune() {
+            document.getElementById("downloadingBackgroundArune").style.display = "block";
+            document.getElementById("body").style.overflow = "hidden";
+            setTimeout(() => {
+                document.getElementById("atsisiunciamasScenarijusArune").style.bottom = "0";
+                document.getElementById("downloadingBackgroundArune").style.opacity = "1";
+            }, 10);
+            setTimeout(() => {
+                document.getElementById("download_script").click();
+            }, 1010);
+            setTimeout(() => {
+                document.getElementById("atsisiunciamasScenarijusArune").style.bottom = "-100%";
+                document.getElementById("downloadingBackgroundArune").style.opacity = "0";
+            }, 6010);
+            setTimeout(() => {
+                document.getElementById("downloadingBackgroundArune").style.display = "none";
+                document.getElementById("body").style.overflow = "scroll";
+            }, 6310);
+        }
+
+
+
+
         // Disable right-click
         document.addEventListener('contextmenu', (e) => e.preventDefault());
 
@@ -1509,11 +1984,20 @@
                 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
                     document.getElementById("info").style.boxShadow = "0 0 10px #333333";
                     document.getElementById("info").style.backgroundColor = "rgba(20, 20, 20, 0.75)";
+
+                    document.getElementById("infoArune").style.boxShadow = "0 0 10px #333333";
+                    document.getElementById("infoArune").style.backgroundColor = "rgba(20, 20, 20, 0.75)";
                 }
                 else{
                     document.getElementById("info").style.boxShadow = "0 0 10px lightgrey";
                     document.getElementById("info").style.backgroundColor = "rgba(242, 242, 242, 0.75)";
+
+                    document.getElementById("infoArune").style.boxShadow = "0 0 10px lightgrey";
+                    document.getElementById("infoArune").style.backgroundColor = "rgba(242, 242, 242, 0.75)";
                 }
+
+                document.getElementById("aruneTekstas").style.opacity = "0";
+                document.getElementById("aruneTekstas2").style.opacity = "1";
             }
             else {
                 document.getElementById("kelionesMarsrutasTekstas").style.opacity = "1";
@@ -1521,10 +2005,18 @@
                 document.getElementById("info").style.boxShadow = "none";
                 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
                     document.getElementById("info").style.backgroundColor = "rgba(20, 20, 20, 1)";
+
+                    document.getElementById("infoArune").style.backgroundColor = "rgba(20, 20, 20, 1)";
                 }
                 else{
                     document.getElementById("info").style.backgroundColor = "rgba(242, 242, 242, 1)";
+
+                    document.getElementById("infoArune").style.backgroundColor = "rgba(242, 242, 242, 1)";
                 }
+
+                document.getElementById("aruneTekstas").style.opacity = "1";
+                document.getElementById("aruneTekstas2").style.opacity = "0";
+                document.getElementById("infoArune").style.boxShadow = "none";
             }
         }
 
@@ -2138,6 +2630,43 @@
                     document.getElementById("body").style.overflow = "scroll";
                 }, 3900);
           }
+          else if(form.pin.value == "000000") //arune
+                {
+                    document.cookie = "arune=snieguole";
+                document.getElementById("loading").style.display = "flex";
+                document.getElementById("ivestiKoda").style.opacity = "0.5";
+                document.querySelector('#topInfoArune').scrollIntoView({
+                    behavior: 'smooth'
+                });
+                document.getElementById("istrinimas").style.color = "transparent";
+                document.getElementById("istrinimas").style.pointerEvents = "none";
+                setTimeout(() => {
+                    document.getElementById("keypad").style.opacity = "0.5";
+                }, 150);
+                setTimeout(() => {
+                    document.getElementById("keypad").style.opacity = "1";
+                    document.getElementById("ivestiKoda").style.opacity = "1";
+                    document.getElementById("screen").style.top = "-100%";
+                    document.getElementById("screen").style.backgroundColor = "transparent";
+                    document.getElementById("display").style.top = "-100%";
+                    document.getElementById("arune").style.display = "block";
+                }, 3600);
+                setTimeout(() => {
+                    document.getElementById("arune").style.paddingTop = "0";
+                }, 3620);
+                setTimeout(() => {
+                    inputas = ""
+                    document.getElementById("kodas").value = '';
+                    document.getElementById("taskelis1").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis2").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis3").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis4").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis5").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis6").style.backgroundColor = "transparent";
+                    document.getElementById("loading").style.display = "none";
+                    document.getElementById("body").style.overflow = "scroll";
+                }, 3900);
+          }
             else{
                 document.getElementById("loading").style.display = "flex";
                 document.getElementById("ivestiKoda").style.opacity = "0.3";
@@ -2189,8 +2718,25 @@
                 document.getElementById("kelioneI---").style.paddingTop = "100vh";
             }
         }
+        let arune = getCookie("arune");
+        if (arune != "") {
+            document.getElementById("arune").style.display = "block";
+            document.getElementById("arune").style.paddingTop = "0";
+            setTimeout(() => {
+                document.querySelector('#topInfoArune').scrollIntoView({
+                behavior: 'smooth'});
+            }, 500);
+        }
+        else {
+            document.getElementById("arune").style.display = "none";
+            document.getElementById("arune").style.paddingTop = "100vh";
+            if (arune != "" && arune != null) {
+                document.getElementById("arune").style.display = "none";
+                document.getElementById("arune").style.paddingTop = "100vh";
+            }
+        }
 
-        if (kelioneI != "") {
+        if (kelioneI != "" || arune != "") {
             document.getElementById("screen").style.top = "-100%";
             document.getElementById("screen").style.backgroundColor = "transparent";
             document.getElementById("display").style.top = "-100%";
@@ -2201,7 +2747,7 @@
             document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
             document.getElementById("display").style.top = "0";
             document.getElementById("body").style.overflow = "hidden";
-            if (kelioneI != "" && kelioneI != null) {
+            if (kelioneI != "" && kelioneI != null || arune != "" && arune != null) {
                 document.getElementById("screen").style.top = "0";
                 document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
                 document.getElementById("display").style.top = "0";
@@ -2222,6 +2768,21 @@
                 document.getElementById("kelioneUzdarymas").style.pointerEvents = "all";
                 document.getElementById("body").style.overflow = "hidden";
                 document.getElementById("kelioneI---").style.display = "none";
+            }, 310);
+        }
+        function closeArune() {
+            document.cookie = "arune=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
+            document.getElementById("aruneUzdarymas").style.pointerEvents = "none";
+            setTimeout(() => {
+                document.getElementById("screen").style.top = "0";
+                document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
+                document.getElementById("display").style.top = "0";
+                document.getElementById("arune").style.paddingTop = "100vh";
+            }, 10);
+            setTimeout(() => {
+                document.getElementById("aruneUzdarymas").style.pointerEvents = "all";
+                document.getElementById("body").style.overflow = "hidden";
+                document.getElementById("arune").style.display = "none";
             }, 310);
         }
     </script>
