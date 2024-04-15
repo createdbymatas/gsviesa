@@ -3009,7 +3009,7 @@
 
         <div class="vardas">
             <i class="fa-regular fa-user-circle vardasIcon"></i>
-            <p class="pagrTekstas">Aktorė</p>
+            <p class="pagrTekstas">Garbėtroška</p>
             <p class="vardasAntrTekstas">Arūnė</p>
         </div>
         <div class="separationLine1"><hr></div>
@@ -3067,7 +3067,7 @@
 
         <div class="vardas">
             <i class="fa-regular fa-user-circle vardasIcon"></i>
-            <p class="pagrTekstas">Aktorė</p>
+            <p class="pagrTekstas">Girtuoklė</p>
             <p class="vardasAntrTekstas">Smiltė</p>
         </div>
         <div class="separationLine1"><hr></div>
@@ -3125,7 +3125,7 @@
 
         <div class="vardas">
             <i class="fa-regular fa-user-circle vardasIcon"></i>
-            <p class="pagrTekstas">Aktorė</p>
+            <p class="pagrTekstas">Lakūnė/pasakotoja</p>
             <p class="vardasAntrTekstas">Aleksandra</p>
         </div>
         <div class="separationLine1"><hr></div>
@@ -3183,7 +3183,7 @@
 
         <div class="vardas">
             <i class="fa-regular fa-user-circle vardasIcon"></i>
-            <p class="pagrTekstas">Aktorė</p>
+            <p class="pagrTekstas">Biznierė</p>
             <p class="vardasAntrTekstas">Mėta</p>
         </div>
         <div class="separationLine1"><hr></div>
@@ -3241,7 +3241,7 @@
 
         <div class="vardas">
             <i class="fa-regular fa-user-circle vardasIcon"></i>
-            <p class="pagrTekstas">Aktorius</p>
+            <p class="pagrTekstas">Geografas</p>
             <p class="vardasAntrTekstas">Norbertas</p>
         </div>
         <div class="separationLine1"><hr></div>
@@ -3287,7 +3287,7 @@
 
     <div id="matas">
         <div id="topInfoMatas"></div>
-        <div id="infoMatas"><i class="fa-solid fa-chevron-down" onclick="closeMatas()" id="norbertasUzdarymas" ontouchstart></i><p id="matasTekstas2">Vaidinimas "Mažasis princas - karjera"</p></div>
+        <div id="infoMatas"><i class="fa-solid fa-chevron-down" onclick="closeMatas()" id="matasUzdarymas" ontouchstart></i><p id="matasTekstas2">Vaidinimas "Mažasis princas - karjera"</p></div>
         <p id="matasTekstas">Vaidinimas "Mažasis princas - karjera"</p>
 
         <div id="scenarijusMatasBackground">
@@ -3299,7 +3299,7 @@
 
         <div class="vardas">
             <i class="fa-regular fa-user-circle vardasIcon"></i>
-            <p class="pagrTekstas">Aktorius</p>
+            <p class="pagrTekstas">Mažasis princas</p>
             <p class="vardasAntrTekstas">Matas</p>
         </div>
         <div class="separationLine1"><hr></div>
@@ -3344,7 +3344,7 @@
     </div>
 
     <div id="olga">
-        <div id="administratoreText"><p id="administratoreTextP"><i class="fa-regular fa-user"></i> Sveiki, administratorė</p></div>
+        <div id="administratoreText"><p id="administratoreTextP"><i class="fa-regular fa-user"></i> Sveiki, administratorė!</p></div>
         <div id="topInfoOlga"></div>
         <div id="infoOlga"><i class="fa-solid fa-chevron-down" onclick="closeOlga()" id="olgaUzdarymas" ontouchstart></i><p id="olgaTekstas2">Vaidinimas "Mažasis princas - karjera"</p></div>
         <p id="olgaTekstas">Vaidinimas "Mažasis princas - karjera"</p>
@@ -3360,6 +3360,12 @@
             <i class="fa-regular fa-user-circle vardasIcon"></i>
             <p class="pagrTekstas">Administratorė</p>
             <p class="vardasAntrTekstas">Olga Vitkauskienė</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="apie">
+            <i class="fa-regular fa-circle-question karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Visos rolės:</p>
+            <p class="antrTekstas">Garbėtroška - Arūnė <br>Girtuoklė - Smiltė <br>Lakūnė/pasakotoja - Aleksandra <br>Biznierė - Mėta <br>Geografas - Norbertas <br>Mažasis princas - Matas</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="pasiruosimas">
@@ -4276,7 +4282,7 @@
           }
           else if(form.pin.value == "000000") //arune
                 {
-                    document.cookie = "arune=actor";
+                    document.cookie = "arune=garbetroska";
                 document.getElementById("loading").style.display = "flex";
                 document.getElementById("ivestiKoda").style.opacity = "0.5";
                 document.querySelector('#topInfoArune').scrollIntoView({
@@ -4313,7 +4319,7 @@
           }
           else if(form.pin.value == "111111") //smilte
                 {
-                    document.cookie = "smilte=actor";
+                    document.cookie = "smilte=girtuokle";
                 document.getElementById("loading").style.display = "flex";
                 document.getElementById("ivestiKoda").style.opacity = "0.5";
                 document.querySelector('#topInfoSmilte').scrollIntoView({
@@ -4350,7 +4356,7 @@
           }
           else if(form.pin.value == "222222") //aleksandra
                 {
-                    document.cookie = "aleksandra=actor";
+                    document.cookie = "aleksandra=lakune/pasakotoja";
                 document.getElementById("loading").style.display = "flex";
                 document.getElementById("ivestiKoda").style.opacity = "0.5";
                 document.querySelector('#topInfoAleksandra').scrollIntoView({
@@ -4387,7 +4393,7 @@
           }
           else if(form.pin.value == "333333") //meta
                 {
-                    document.cookie = "meta=actor";
+                    document.cookie = "meta=bizniere";
                 document.getElementById("loading").style.display = "flex";
                 document.getElementById("ivestiKoda").style.opacity = "0.5";
                 document.querySelector('#topInfoMeta').scrollIntoView({
@@ -4424,7 +4430,7 @@
           }
           else if(form.pin.value == "444444") //norbertas
                 {
-                    document.cookie = "norbertas=actor";
+                    document.cookie = "norbertas=geografas";
                 document.getElementById("loading").style.display = "flex";
                 document.getElementById("ivestiKoda").style.opacity = "0.5";
                 document.querySelector('#topInfoNorbertas').scrollIntoView({
@@ -4461,7 +4467,7 @@
           }
           else if(form.pin.value == "555555") //matas
                 {
-                    document.cookie = "matas=actor";
+                    document.cookie = "matas=mazasis princas";
                 document.getElementById("loading").style.display = "flex";
                 document.getElementById("ivestiKoda").style.opacity = "0.5";
                 document.querySelector('#topInfoMatas').scrollIntoView({
@@ -4523,7 +4529,7 @@
                     document.getElementById("administratoreText").style.opacity = "1";
                 }, 3620);
                 setTimeout(() => {
-                    document.getElementById("administratoreTextP").style.width = "155px";
+                    document.getElementById("administratoreTextP").style.width = "160px";
                 }, 3720);
                 setTimeout(() => {
                     inputas = ""
