@@ -10,13 +10,14 @@
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="800">
     <meta property="og:image:height" content="471">
-    <meta property="og:title" content="GŠG Ib">
+    <meta property="og:title" content="GŠG IIb">
     <meta property="og:description" content="Created by Matas">
-    <title>GŠG Ib</title>
+    <title>GŠG IIb</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600;800&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/jpg" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/app.png">
 </head>
 <body onload="loadFunction()" id="body">
     <style>
@@ -203,7 +204,7 @@
             left: 0;
             right: 0;
             z-index: 79;
-            background-image: url(images/pavasaris.jpeg);
+            background-image: url(images/ruduo.jpeg);
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
@@ -769,7 +770,7 @@
         }
 
 
-        #arune{
+        #vardas{
             width: 100%;
             height: 100%;
             background-color: #f2f2f2;
@@ -780,14 +781,14 @@
             padding-top: 100vh;
             display: block;
         }
-        #topInfoArune{
+        #topInfoVardas{
             position: absolute;
             width: 5px;
             height: 5px;
             top: 0;
             left: 0;
         }
-        #infoArune{
+        #infoVardas{
             width: 100%;
             height: 60px;
             display: flex;
@@ -803,7 +804,7 @@
             right: 0;
             z-index: 10;
         }
-        #infoArune i{
+        #infoVardas i{
             font-size: 15px;
             position: absolute;
             top: 15px;
@@ -820,7 +821,7 @@
             background-color: #DEDEDE;
             color: black;
         }
-        #aruneTekstas{
+        #vardasTekstas{
             font-size: 25px;
             font-weight: 600;
             color: black;
@@ -835,7 +836,7 @@
             padding-right: 15px;
             z-index: 2;
         }
-        #aruneTekstas2{
+        #vardasTekstas2{
             font-size: 20px;
             font-weight: 600;
             color: black;
@@ -851,10 +852,10 @@
             z-index: 10;
             opacity: 0;
         }
-        #aruneUzdarymas:active{
+        #vardasUzdarymas:active{
             opacity: 0.2;
         }
-        #scenarijusAruneBackground{
+        #scenarijusVardasBackground{
             width: 100%;
             height: auto;
             background-color: rgba(242, 242, 242, 0.75);
@@ -873,7 +874,7 @@
             box-shadow: 0 0 10px lightgrey;
             border-radius: 25px 25px 0 0;
         }
-        #atsisiustiScenarijuArune{
+        #atsisiustiScenarijuVardas{
             width: 100%;
             height: 50px;
             display: flex;
@@ -887,7 +888,7 @@
             font-size: 15px;
             cursor: pointer;
         }
-        #downloadingBackgroundArune{
+        #downloadingBackgroundVardas{
             width: 100%;
             height: 100%;
             pointer-events: none;
@@ -903,7 +904,7 @@
             opacity: 0;
             display: none;
         }
-        #atsisiunciamasScenarijusArune{
+        #atsisiunciamasScenarijusVardas{
             font-size: 15px;
             width: 100%;
             height: 50px;
@@ -918,930 +919,6 @@
             left: 0;
             right: 0;
             z-index: 20;
-        }
-        #smilte{
-            width: 100%;
-            height: 100%;
-            background-color: #f2f2f2;
-            transition: 0.2s;
-            padding-bottom: 90px;
-            overflow: hidden;
-            overflow-y: scroll;
-            padding-top: 100vh;
-            display: block;
-        }
-        #topInfoSmilte{
-            position: absolute;
-            width: 5px;
-            height: 5px;
-            top: 0;
-            left: 0;
-        }
-        #infoSmilte{
-            width: 100%;
-            height: 60px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: rgba(242, 242, 242, 1);
-            -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
-            color: black;
-            position: fixed;
-            left: 0;
-            top: 0;
-            right: 0;
-            z-index: 10;
-        }
-        #infoSmilte i{
-            font-size: 15px;
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            z-index: 11;
-            transition: 0.15s;
-            cursor: pointer;
-            width: 30px;
-            height: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 100%;
-            background-color: #DEDEDE;
-            color: black;
-        }
-        #smilteTekstas{
-            font-size: 25px;
-            font-weight: 600;
-            color: black;
-            overflow: hidden;
-            white-space: nowrap;
-            display: inline-block;
-            text-overflow: ellipsis;
-            width: 100%;
-            position: absolute;
-            top: 60px;
-            padding-left: 15px;
-            padding-right: 15px;
-            z-index: 2;
-        }
-        #smilteTekstas2{
-            font-size: 20px;
-            font-weight: 600;
-            color: black;
-            overflow: hidden;
-            white-space: nowrap;
-            display: inline-block;
-            text-overflow: ellipsis;
-            width: 100%;
-            position: absolute;
-            top: 17px;
-            padding-left: 60px;
-            padding-right: 15px;
-            z-index: 10;
-            opacity: 0;
-        }
-        #smilteUzdarymas:active{
-            opacity: 0.2;
-        }
-        #scenarijusSmilteBackground{
-            width: 100%;
-            height: auto;
-            background-color: rgba(242, 242, 242, 0.75);
-            -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 15px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            z-index: 17;
-            box-shadow: 0 0 10px lightgrey;
-            border-radius: 25px 25px 0 0;
-        }
-        #atsisiustiScenarijuSmilte{
-            width: 100%;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 15px;
-            border: none;
-            background-color: transparent;
-            color: black;
-            border: 2px solid black;
-            font-size: 15px;
-            cursor: pointer;
-        }
-        #downloadingBackgroundSmilte{
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 19;
-            background-color: rgba(211, 211, 211, 0.75);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
-            opacity: 0;
-            display: none;
-        }
-        #atsisiunciamasScenarijusSmilte{
-            font-size: 15px;
-            width: 100%;
-            height: 50px;
-            border-radius: 25px 25px 0 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #f2f2f2;
-            box-shadow: 0 0 10px lightgrey;
-            position: fixed;
-            bottom: -100%;
-            left: 0;
-            right: 0;
-            z-index: 20;
-        }
-        #aleksandra{
-            width: 100%;
-            height: 100%;
-            background-color: #f2f2f2;
-            transition: 0.2s;
-            padding-bottom: 90px;
-            overflow: hidden;
-            overflow-y: scroll;
-            padding-top: 100vh;
-            display: block;
-        }
-        #topInfoAleksandra{
-            position: absolute;
-            width: 5px;
-            height: 5px;
-            top: 0;
-            left: 0;
-        }
-        #infoAleksandra{
-            width: 100%;
-            height: 60px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: rgba(242, 242, 242, 1);
-            -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
-            color: black;
-            position: fixed;
-            left: 0;
-            top: 0;
-            right: 0;
-            z-index: 10;
-        }
-        #infoAleksandra i{
-            font-size: 15px;
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            z-index: 11;
-            transition: 0.15s;
-            cursor: pointer;
-            width: 30px;
-            height: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 100%;
-            background-color: #DEDEDE;
-            color: black;
-        }
-        #aleksandraTekstas{
-            font-size: 25px;
-            font-weight: 600;
-            color: black;
-            overflow: hidden;
-            white-space: nowrap;
-            display: inline-block;
-            text-overflow: ellipsis;
-            width: 100%;
-            position: absolute;
-            top: 60px;
-            padding-left: 15px;
-            padding-right: 15px;
-            z-index: 2;
-        }
-        #aleksandraTekstas2{
-            font-size: 20px;
-            font-weight: 600;
-            color: black;
-            overflow: hidden;
-            white-space: nowrap;
-            display: inline-block;
-            text-overflow: ellipsis;
-            width: 100%;
-            position: absolute;
-            top: 17px;
-            padding-left: 60px;
-            padding-right: 15px;
-            z-index: 10;
-            opacity: 0;
-        }
-        #aleksandraUzdarymas:active{
-            opacity: 0.2;
-        }
-        #scenarijusAleksandraBackground{
-            width: 100%;
-            height: auto;
-            background-color: rgba(242, 242, 242, 0.75);
-            -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 15px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            z-index: 17;
-            box-shadow: 0 0 10px lightgrey;
-            border-radius: 25px 25px 0 0;
-        }
-        #atsisiustiScenarijuAleksandra{
-            width: 100%;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 15px;
-            border: none;
-            background-color: transparent;
-            color: black;
-            border: 2px solid black;
-            font-size: 15px;
-            cursor: pointer;
-        }
-        #downloadingBackgroundAleksandra{
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 19;
-            background-color: rgba(211, 211, 211, 0.75);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
-            opacity: 0;
-            display: none;
-        }
-        #atsisiunciamasScenarijusAleksandra{
-            font-size: 15px;
-            width: 100%;
-            height: 50px;
-            border-radius: 25px 25px 0 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #f2f2f2;
-            box-shadow: 0 0 10px lightgrey;
-            position: fixed;
-            bottom: -100%;
-            left: 0;
-            right: 0;
-            z-index: 20;
-        }
-        #meta{
-            width: 100%;
-            height: 100%;
-            background-color: #f2f2f2;
-            transition: 0.2s;
-            padding-bottom: 90px;
-            overflow: hidden;
-            overflow-y: scroll;
-            padding-top: 100vh;
-            display: block;
-        }
-        #topInfoMeta{
-            position: absolute;
-            width: 5px;
-            height: 5px;
-            top: 0;
-            left: 0;
-        }
-        #infoMeta{
-            width: 100%;
-            height: 60px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: rgba(242, 242, 242, 1);
-            -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
-            color: black;
-            position: fixed;
-            left: 0;
-            top: 0;
-            right: 0;
-            z-index: 10;
-        }
-        #infoMeta i{
-            font-size: 15px;
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            z-index: 11;
-            transition: 0.15s;
-            cursor: pointer;
-            width: 30px;
-            height: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 100%;
-            background-color: #DEDEDE;
-            color: black;
-        }
-        #metaTekstas{
-            font-size: 25px;
-            font-weight: 600;
-            color: black;
-            overflow: hidden;
-            white-space: nowrap;
-            display: inline-block;
-            text-overflow: ellipsis;
-            width: 100%;
-            position: absolute;
-            top: 60px;
-            padding-left: 15px;
-            padding-right: 15px;
-            z-index: 2;
-        }
-        #metaTekstas2{
-            font-size: 20px;
-            font-weight: 600;
-            color: black;
-            overflow: hidden;
-            white-space: nowrap;
-            display: inline-block;
-            text-overflow: ellipsis;
-            width: 100%;
-            position: absolute;
-            top: 17px;
-            padding-left: 60px;
-            padding-right: 15px;
-            z-index: 10;
-            opacity: 0;
-        }
-        #metaUzdarymas:active{
-            opacity: 0.2;
-        }
-        #scenarijusMetaBackground{
-            width: 100%;
-            height: auto;
-            background-color: rgba(242, 242, 242, 0.75);
-            -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 15px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            z-index: 17;
-            box-shadow: 0 0 10px lightgrey;
-            border-radius: 25px 25px 0 0;
-        }
-        #atsisiustiScenarijuMeta{
-            width: 100%;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 15px;
-            border: none;
-            background-color: transparent;
-            color: black;
-            border: 2px solid black;
-            font-size: 15px;
-            cursor: pointer;
-        }
-        #downloadingBackgroundMeta{
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 19;
-            background-color: rgba(211, 211, 211, 0.75);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
-            opacity: 0;
-            display: none;
-        }
-        #atsisiunciamasScenarijusMeta{
-            font-size: 15px;
-            width: 100%;
-            height: 50px;
-            border-radius: 25px 25px 0 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #f2f2f2;
-            box-shadow: 0 0 10px lightgrey;
-            position: fixed;
-            bottom: -100%;
-            left: 0;
-            right: 0;
-            z-index: 20;
-        }
-        #norbertas{
-            width: 100%;
-            height: 100%;
-            background-color: #f2f2f2;
-            transition: 0.2s;
-            padding-bottom: 90px;
-            overflow: hidden;
-            overflow-y: scroll;
-            padding-top: 100vh;
-            display: block;
-        }
-        #topInfoNorbertas{
-            position: absolute;
-            width: 5px;
-            height: 5px;
-            top: 0;
-            left: 0;
-        }
-        #infoNorbertas{
-            width: 100%;
-            height: 60px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: rgba(242, 242, 242, 1);
-            -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
-            color: black;
-            position: fixed;
-            left: 0;
-            top: 0;
-            right: 0;
-            z-index: 10;
-        }
-        #infoNorbertas i{
-            font-size: 15px;
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            z-index: 11;
-            transition: 0.15s;
-            cursor: pointer;
-            width: 30px;
-            height: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 100%;
-            background-color: #DEDEDE;
-            color: black;
-        }
-        #norbertasTekstas{
-            font-size: 25px;
-            font-weight: 600;
-            color: black;
-            overflow: hidden;
-            white-space: nowrap;
-            display: inline-block;
-            text-overflow: ellipsis;
-            width: 100%;
-            position: absolute;
-            top: 60px;
-            padding-left: 15px;
-            padding-right: 15px;
-            z-index: 2;
-        }
-        #norbertasTekstas2{
-            font-size: 20px;
-            font-weight: 600;
-            color: black;
-            overflow: hidden;
-            white-space: nowrap;
-            display: inline-block;
-            text-overflow: ellipsis;
-            width: 100%;
-            position: absolute;
-            top: 17px;
-            padding-left: 60px;
-            padding-right: 15px;
-            z-index: 10;
-            opacity: 0;
-        }
-        #norbertasUzdarymas:active{
-            opacity: 0.2;
-        }
-        #scenarijusNorbertasBackground{
-            width: 100%;
-            height: auto;
-            background-color: rgba(242, 242, 242, 0.75);
-            -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 15px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            z-index: 17;
-            box-shadow: 0 0 10px lightgrey;
-            border-radius: 25px 25px 0 0;
-        }
-        #atsisiustiScenarijuNorbertas{
-            width: 100%;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 15px;
-            border: none;
-            background-color: transparent;
-            color: black;
-            border: 2px solid black;
-            font-size: 15px;
-            cursor: pointer;
-        }
-        #downloadingBackgroundNorbertas{
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 19;
-            background-color: rgba(211, 211, 211, 0.75);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
-            opacity: 0;
-            display: none;
-        }
-        #atsisiunciamasScenarijusNorbertas {
-            font-size: 15px;
-            width: 100%;
-            height: 50px;
-            border-radius: 25px 25px 0 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #f2f2f2;
-            box-shadow: 0 0 10px lightgrey;
-            position: fixed;
-            bottom: -100%;
-            left: 0;
-            right: 0;
-            z-index: 20;
-        }
-        #matas{
-            width: 100%;
-            height: 100%;
-            background-color: #f2f2f2;
-            transition: 0.2s;
-            padding-bottom: 90px;
-            overflow: hidden;
-            overflow-y: scroll;
-            padding-top: 100vh;
-            display: block;
-        }
-        #topInfoMatas{
-            position: absolute;
-            width: 5px;
-            height: 5px;
-            top: 0;
-            left: 0;
-        }
-        #infoMatas{
-            width: 100%;
-            height: 60px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: rgba(242, 242, 242, 1);
-            -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
-            color: black;
-            position: fixed;
-            left: 0;
-            top: 0;
-            right: 0;
-            z-index: 10;
-        }
-        #infoMatas i{
-            font-size: 15px;
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            z-index: 11;
-            transition: 0.15s;
-            cursor: pointer;
-            width: 30px;
-            height: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 100%;
-            background-color: #DEDEDE;
-            color: black;
-        }
-        #matasTekstas{
-            font-size: 25px;
-            font-weight: 600;
-            color: black;
-            overflow: hidden;
-            white-space: nowrap;
-            display: inline-block;
-            text-overflow: ellipsis;
-            width: 100%;
-            position: absolute;
-            top: 60px;
-            padding-left: 15px;
-            padding-right: 15px;
-            z-index: 2;
-        }
-        #matasTekstas2{
-            font-size: 20px;
-            font-weight: 600;
-            color: black;
-            overflow: hidden;
-            white-space: nowrap;
-            display: inline-block;
-            text-overflow: ellipsis;
-            width: 100%;
-            position: absolute;
-            top: 17px;
-            padding-left: 60px;
-            padding-right: 15px;
-            z-index: 10;
-            opacity: 0;
-        }
-        #matasUzdarymas:active{
-            opacity: 0.2;
-        }
-        #scenarijusMatasBackground{
-            width: 100%;
-            height: auto;
-            background-color: rgba(242, 242, 242, 0.75);
-            -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 15px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            z-index: 17;
-            box-shadow: 0 0 10px lightgrey;
-            border-radius: 25px 25px 0 0;
-        }
-        #atsisiustiScenarijuMatas{
-            width: 100%;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 15px;
-            border: none;
-            background-color: transparent;
-            color: black;
-            border: 2px solid black;
-            font-size: 15px;
-            cursor: pointer;
-        }
-        #downloadingBackgroundMatas{
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 19;
-            background-color: rgba(211, 211, 211, 0.75);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
-            opacity: 0;
-            display: none;
-        }
-        #atsisiunciamasScenarijusMatas {
-            font-size: 15px;
-            width: 100%;
-            height: 50px;
-            border-radius: 25px 25px 0 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #f2f2f2;
-            box-shadow: 0 0 10px lightgrey;
-            position: fixed;
-            bottom: -100%;
-            left: 0;
-            right: 0;
-            z-index: 20;
-        }
-        #olga{
-            width: 100%;
-            height: 100%;
-            background-color: #f2f2f2;
-            transition: 0.2s;
-            padding-bottom: 90px;
-            overflow: hidden;
-            overflow-y: scroll;
-            padding-top: 100vh;
-            display: block;
-        }
-        #topInfoOlga{
-            position: absolute;
-            width: 5px;
-            height: 5px;
-            top: 0;
-            left: 0;
-        }
-        #infoOlga{
-            width: 100%;
-            height: 60px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: rgba(242, 242, 242, 1);
-            -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
-            color: black;
-            position: fixed;
-            left: 0;
-            top: 0;
-            right: 0;
-            z-index: 10;
-        }
-        #infoOlga i{
-            font-size: 15px;
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            z-index: 12;
-            transition: 0.15s;
-            cursor: pointer;
-            width: 30px;
-            height: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 100%;
-            background-color: #DEDEDE;
-            color: black;
-        }
-        #olgaTekstas{
-            font-size: 25px;
-            font-weight: 600;
-            color: black;
-            overflow: hidden;
-            white-space: nowrap;
-            display: inline-block;
-            text-overflow: ellipsis;
-            width: 100%;
-            position: absolute;
-            top: 60px;
-            padding-left: 15px;
-            padding-right: 15px;
-            z-index: 2;
-        }
-        #olgaTekstas2{
-            font-size: 20px;
-            font-weight: 600;
-            color: black;
-            overflow: hidden;
-            white-space: nowrap;
-            display: inline-block;
-            text-overflow: ellipsis;
-            width: 100%;
-            position: absolute;
-            top: 17px;
-            padding-left: 60px;
-            padding-right: 15px;
-            z-index: 10;
-            opacity: 0;
-        }
-        #olgaUzdarymas:active{
-            opacity: 0.2;
-        }
-        #scenarijusOlgaBackground{
-            width: 100%;
-            height: auto;
-            background-color: rgba(242, 242, 242, 0.75);
-            -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 15px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            z-index: 17;
-            box-shadow: 0 0 10px lightgrey;
-            border-radius: 25px 25px 0 0;
-        }
-        #atsisiustiScenarijuOlga{
-            width: 100%;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 15px;
-            border: none;
-            background-color: transparent;
-            color: black;
-            border: 2px solid black;
-            font-size: 15px;
-            cursor: pointer;
-        }
-        #downloadingBackgroundOlga{
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 19;
-            background-color: rgba(211, 211, 211, 0.75);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
-            opacity: 0;
-            display: none;
-        }
-        #atsisiunciamasScenarijusOlga {
-            font-size: 15px;
-            width: 100%;
-            height: 50px;
-            border-radius: 25px 25px 0 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #f2f2f2;
-            box-shadow: 0 0 10px lightgrey;
-            position: fixed;
-            bottom: -100%;
-            left: 0;
-            right: 0;
-            z-index: 20;
-        }
-        #administratoreText{
-            width: 100%;
-            height: 15px;
-            font-size: 13px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 11;
-            text-align: center;
-            color: black;
-            display: none;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-        }
-        #administratoreTextP{
-            width: 15px;
-            height: 100%;
-            overflow: hidden;
-            white-space: nowrap;
-            display: inline-block;
-            transition: 0.3s linear;
         }
 
         .karnavalasIcon{
@@ -2534,238 +1611,37 @@
 
 
 
-            #arune{
+            #vardas{
                 background-color: #141414;
             }
-            #infoArune{
+            #infoVardas{
                 background-color: rgba(20, 20, 20, 1);
                 color: white;
             }
-            #infoArune i{
+            #infoVardas i{
                 background-color: #282828;
                 color: white;
             }
-            #aruneTekstas{
+            #vardasTekstas{
                 color: white;
             }
-            #aruneTekstas2{
+            #vardasTekstas2{
                 color: white;
             }
-            #scenarijusAruneBackground{
+            #scenarijusVardasBackground{
                 background-color: rgba(20, 20, 20, 0.75);
                 box-shadow: 0 0 10px #333333;
             }
-            #atsisiustiScenarijuArune{
+            #atsisiustiScenarijuVardas{
                 color: white;
                 border: 2px solid white;
             }
-            #downloadingBackgroundArune{
+            #downloadingBackgroundVardas{
                 background-color: rgba(44, 44, 44, 0.75);
             }
-            #atsisiunciamasScenarijusArune{
+            #atsisiunciamasScenarijusVardas{
                 background-color: #141414;
                 box-shadow: 0 0 10px #333333;
-                color: white;
-            }
-            #smilte{
-                background-color: #141414;
-            }
-            #infoSmilte{
-                background-color: rgba(20, 20, 20, 1);
-                color: white;
-            }
-            #infoSmilte i{
-                background-color: #282828;
-                color: white;
-            }
-            #smilteTekstas{
-                color: white;
-            }
-            #smilteTekstas2{
-                color: white;
-            }
-            #scenarijusSmilteBackground{
-                background-color: rgba(20, 20, 20, 0.75);
-                box-shadow: 0 0 10px #333333;
-            }
-            #atsisiustiScenarijuSmilte{
-                color: white;
-                border: 2px solid white;
-            }
-            #downloadingBackgroundSmilte{
-                background-color: rgba(44, 44, 44, 0.75);
-            }
-            #atsisiunciamasScenarijusSmilte{
-                background-color: #141414;
-                box-shadow: 0 0 10px #333333;
-                color: white;
-            }
-            #aleksandra{
-                background-color: #141414;
-            }
-            #infoAleksandra{
-                background-color: rgba(20, 20, 20, 1);
-                color: white;
-            }
-            #infoAleksandra i{
-                background-color: #282828;
-                color: white;
-            }
-            #aleksandraTekstas{
-                color: white;
-            }
-            #aleksandraTekstas2{
-                color: white;
-            }
-            #scenarijusAleksandraBackground{
-                background-color: rgba(20, 20, 20, 0.75);
-                box-shadow: 0 0 10px #333333;
-            }
-            #atsisiustiScenarijuAleksandra{
-                color: white;
-                border: 2px solid white;
-            }
-            #downloadingBackgroundAleksandra{
-                background-color: rgba(44, 44, 44, 0.75);
-            }
-            #atsisiunciamasScenarijusAleksandra{
-                background-color: #141414;
-                box-shadow: 0 0 10px #333333;
-                color: white;
-            }
-            #meta{
-                background-color: #141414;
-            }
-            #infoMeta{
-                background-color: rgba(20, 20, 20, 1);
-                color: white;
-            }
-            #infoMeta i{
-                background-color: #282828;
-                color: white;
-            }
-            #metaTekstas{
-                color: white;
-            }
-            #metaTekstas2{
-                color: white;
-            }
-            #scenarijusMetaBackground{
-                background-color: rgba(20, 20, 20, 0.75);
-                box-shadow: 0 0 10px #333333;
-            }
-            #atsisiustiScenarijuMeta{
-                color: white;
-                border: 2px solid white;
-            }
-            #downloadingBackgroundMeta{
-                background-color: rgba(44, 44, 44, 0.75);
-            }
-            #atsisiunciamasScenarijusMeta{
-                background-color: #141414;
-                box-shadow: 0 0 10px #333333;
-                color: white;
-            }
-            #norbertas{
-                background-color: #141414;
-            }
-            #infoNorbertas{
-                background-color: rgba(20, 20, 20, 1);
-                color: white;
-            }
-            #infoNorbertas i{
-                background-color: #282828;
-                color: white;
-            }
-            #norbertasTekstas{
-                color: white;
-            }
-            #norbertasTekstas2{
-                color: white;
-            }
-            #scenarijusNorbertasBackground{
-                background-color: rgba(20, 20, 20, 0.75);
-                box-shadow: 0 0 10px #333333;
-            }
-            #atsisiustiScenarijuNorbertas{
-                color: white;
-                border: 2px solid white;
-            }
-            #downloadingBackgroundNorbertas{
-                background-color: rgba(44, 44, 44, 0.75);
-            }
-            #atsisiunciamasScenarijusNorbertas{
-                background-color: #141414;
-                box-shadow: 0 0 10px #333333;
-                color: white;
-            }
-            #matas{
-                background-color: #141414;
-            }
-            #infoMatas{
-                background-color: rgba(20, 20, 20, 1);
-                color: white;
-            }
-            #infoMatas i{
-                background-color: #282828;
-                color: white;
-            }
-            #matasTekstas{
-                color: white;
-            }
-            #matasTekstas2{
-                color: white;
-            }
-            #scenarijusMatasBackground{
-                background-color: rgba(20, 20, 20, 0.75);
-                box-shadow: 0 0 10px #333333;
-            }
-            #atsisiustiScenarijuMatas{
-                color: white;
-                border: 2px solid white;
-            }
-            #downloadingBackgroundMatas{
-                background-color: rgba(44, 44, 44, 0.75);
-            }
-            #atsisiunciamasScenarijusMatas{
-                background-color: #141414;
-                box-shadow: 0 0 10px #333333;
-                color: white;
-            }
-            #olga{
-                background-color: #141414;
-            }
-            #infoOlga{
-                background-color: rgba(20, 20, 20, 1);
-                color: white;
-            }
-            #infoOlga i{
-                background-color: #282828;
-                color: white;
-            }
-            #olgaTekstas{
-                color: white;
-            }
-            #olgaTekstas2{
-                color: white;
-            }
-            #scenarijusOlgaBackground{
-                background-color: rgba(20, 20, 20, 0.75);
-                box-shadow: 0 0 10px #333333;
-            }
-            #atsisiustiScenarijuOlga{
-                color: white;
-                border: 2px solid white;
-            }
-            #downloadingBackgroundOlga{
-                background-color: rgba(44, 44, 44, 0.75);
-            }
-            #atsisiunciamasScenarijusOlga{
-                background-color: #141414;
-                box-shadow: 0 0 10px #333333;
-                color: white;
-            }
-            #administratoreText{
                 color: white;
             }
 
@@ -2998,22 +1874,22 @@
 
 
 
-    <div id="arune">
-        <div id="topInfoArune"></div>
-        <div id="infoArune"><i class="fa-solid fa-chevron-down" onclick="closeArune()" id="aruneUzdarymas" ontouchstart></i><p id="aruneTekstas2">Vaidinimas "Mažasis princas - karjera"</p></div>
-        <p id="aruneTekstas">Vaidinimas "Mažasis princas - karjera"</p>
+    <div id="vardas">
+        <div id="topInfoVardas"></div>
+        <div id="infoVardas"><i class="fa-solid fa-chevron-down" onclick="closeVardas()" id="vardasUzdarymas" ontouchstart></i><p id="vardasTekstas2">Vaidinimas "Mažasis princas - karjera"</p></div>
+        <p id="vardasTekstas">Vaidinimas "Mažasis princas - karjera"</p>
 
-        <div id="scenarijusAruneBackground">
-            <button onclick="scenarijusArune()" class="warningButton" id="atsisiustiScenarijuArune" ontouchstart><i class="fa-solid fa-scroll" style="margin-right: 5px;"></i>Atsisiųsti visą scenarijų</button>
+        <div id="scenarijusVardasBackground">
+            <button onclick="scenarijusVardas()" class="warningButton" id="atsisiustiScenarijuVardas" ontouchstart><i class="fa-solid fa-scroll" style="margin-right: 5px;"></i>Atsisiųsti visą scenarijų</button>
         </div>
 
-        <div id="downloadingBackgroundArune"></div>
-        <div id="atsisiunciamasScenarijusArune"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "scenarijus.pdf"</div>
+        <div id="downloadingBackgroundVardas"></div>
+        <div id="atsisiunciamasScenarijusVardas"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "scenarijus.pdf"</div>
 
         <div class="vardas">
             <i class="fa-regular fa-user-circle vardasIcon"></i>
-            <p class="pagrTekstas">Garbėtroška</p>
-            <p class="vardasAntrTekstas">Arūnė</p>
+            <p class="pagrTekstas">Rolė</p>
+            <p class="vardasAntrTekstas">Vardas</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="apie">
@@ -3044,354 +1920,6 @@
         <div class="vaidinimas">
             <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Vaidinimo eiga:</p>
-            <p class="antrTekstas">Vaidinimo eigos aprašymas.</p>
-            <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
-        </div>
-        <div class="separationLine1"><hr></div>
-        <div class="papildomai">
-            <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
-            <p class="pagrTekstas">Papildomai:</p>
-            <p class="antrTekstas">Papildomai aprašymas.</p>
-            <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti failą</button> -->
-        </div>
-    </div>
-
-    <div id="smilte">
-        <div id="topInfoSmilte"></div>
-        <div id="infoSmilte"><i class="fa-solid fa-chevron-down" onclick="closeSmilte()" id="smilteUzdarymas" ontouchstart></i><p id="smilteTekstas2">Vaidinimas "Mažasis princas - karjera"</p></div>
-        <p id="smilteTekstas">Vaidinimas "Mažasis princas - karjera"</p>
-
-        <div id="scenarijusSmilteBackground">
-            <button onclick="scenarijusSmilte()" class="warningButton" id="atsisiustiScenarijuSmilte" ontouchstart><i class="fa-solid fa-scroll" style="margin-right: 5px;"></i>Atsisiųsti visą scenarijų</button>
-        </div>
-
-        <div id="downloadingBackgroundSmilte"></div>
-        <div id="atsisiunciamasScenarijusSmilte"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "scenarijus.pdf"</div>
-
-        <div class="vardas">
-            <i class="fa-regular fa-user-circle vardasIcon"></i>
-            <p class="pagrTekstas">Girtuoklė</p>
-            <p class="vardasAntrTekstas">Smiltė</p>
-        </div>
-        <div class="separationLine1"><hr></div>
-        <div class="apie">
-            <i class="fa-regular fa-circle-question karnavalasIcon" style="display: flex;"></i>
-            <p class="pagrTekstas">Apie rolę:</p>
-            <p class="antrTekstas">Rolės aprašymas.</p>
-        </div>
-        <div class="separationLine1"><hr></div>
-        <div class="pasiruosimas">
-            <i class="fa-solid fa-suitcase karnavalasIcon" style="display: flex;"></i>
-            <p class="pagrTekstas">Pasiruošti:</p>
-            <p class="antrTekstas">Pasiruošimo aprašymas.</p>
-        </div>
-        <div class="separationLine1"><hr></div>
-        <div class="apranga">
-            <i class="fa-solid fa-shirt karnavalasIcon" style="display: flex;"></i>
-            <p class="pagrTekstas">Apranga:</p>
-            <p class="antrTekstas">Aprangos aprašymas.</p>
-        </div>
-        <div class="separationLine1"><hr></div>
-        <div class="zodziai">
-            <i class="fa-regular fa-comments karnavalasIcon" style="display: flex;"></i>
-            <p class="pagrTekstas">Žodžiai:</p>
-            <p class="antrTekstas">Žodžių aprašymas.</p>
-            <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip.</p>
-        </div>
-        <div class="separationLine1"><hr></div>
-        <div class="vaidinimas">
-            <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
-            <p class="pagrTekstas">Vaidinimo eiga:</p>
-            <p class="antrTekstas">Vaidinimo eigos aprašymas.</p>
-            <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
-        </div>
-        <div class="separationLine1"><hr></div>
-        <div class="papildomai">
-            <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
-            <p class="pagrTekstas">Papildomai:</p>
-            <p class="antrTekstas">Papildomai aprašymas.</p>
-            <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti failą</button> -->
-        </div>
-    </div>
-
-    <div id="aleksandra">
-        <div id="topInfoAleksandra"></div>
-        <div id="infoAleksandra"><i class="fa-solid fa-chevron-down" onclick="closeAleksandra()" id="aleksandraUzdarymas" ontouchstart></i><p id="aleksandraTekstas2">Vaidinimas "Mažasis princas - karjera"</p></div>
-        <p id="aleksandraTekstas">Vaidinimas "Mažasis princas - karjera"</p>
-
-        <div id="scenarijusAleksandraBackground">
-            <button onclick="scenarijusAleksandra()" class="warningButton" id="atsisiustiScenarijuAleksandra" ontouchstart><i class="fa-solid fa-scroll" style="margin-right: 5px;"></i>Atsisiųsti visą scenarijų</button>
-        </div>
-
-        <div id="downloadingBackgroundAleksandra"></div>
-        <div id="atsisiunciamasScenarijusAleksandra"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "scenarijus.pdf"</div>
-
-        <div class="vardas">
-            <i class="fa-regular fa-user-circle vardasIcon"></i>
-            <p class="pagrTekstas">Lakūnė/pasakotoja</p>
-            <p class="vardasAntrTekstas">Aleksandra</p>
-        </div>
-        <div class="separationLine1"><hr></div>
-        <div class="apie">
-            <i class="fa-regular fa-circle-question karnavalasIcon" style="display: flex;"></i>
-            <p class="pagrTekstas">Apie rolę:</p>
-            <p class="antrTekstas">Rolės aprašymas.</p>
-        </div>
-        <div class="separationLine1"><hr></div>
-        <div class="pasiruosimas">
-            <i class="fa-solid fa-suitcase karnavalasIcon" style="display: flex;"></i>
-            <p class="pagrTekstas">Pasiruošti:</p>
-            <p class="antrTekstas">Pasiruošimo aprašymas.</p>
-        </div>
-        <div class="separationLine1"><hr></div>
-        <div class="apranga">
-            <i class="fa-solid fa-shirt karnavalasIcon" style="display: flex;"></i>
-            <p class="pagrTekstas">Apranga:</p>
-            <p class="antrTekstas">Aprangos aprašymas.</p>
-        </div>
-        <div class="separationLine1"><hr></div>
-        <div class="zodziai">
-            <i class="fa-regular fa-comments karnavalasIcon" style="display: flex;"></i>
-            <p class="pagrTekstas">Žodžiai:</p>
-            <p class="antrTekstas">Žodžių aprašymas.</p>
-            <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip.</p>
-        </div>
-        <div class="separationLine1"><hr></div>
-        <div class="vaidinimas">
-            <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
-            <p class="pagrTekstas">Vaidinimo eiga:</p>
-            <p class="antrTekstas">Vaidinimo eigos aprašymas.</p>
-            <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
-        </div>
-        <div class="separationLine1"><hr></div>
-        <div class="papildomai">
-            <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
-            <p class="pagrTekstas">Papildomai:</p>
-            <p class="antrTekstas">Papildomai aprašymas.</p>
-            <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti failą</button> -->
-        </div>
-    </div>
-
-    <div id="meta">
-        <div id="topInfoMeta"></div>
-        <div id="infoMeta"><i class="fa-solid fa-chevron-down" onclick="closeMeta()" id="metaUzdarymas" ontouchstart></i><p id="metaTekstas2">Vaidinimas "Mažasis princas - karjera"</p></div>
-        <p id="metaTekstas">Vaidinimas "Mažasis princas - karjera"</p>
-
-        <div id="scenarijusMetaBackground">
-            <button onclick="scenarijusMeta()" class="warningButton" id="atsisiustiScenarijuMeta" ontouchstart><i class="fa-solid fa-scroll" style="margin-right: 5px;"></i>Atsisiųsti visą scenarijų</button>
-        </div>
-
-        <div id="downloadingBackgroundMeta"></div>
-        <div id="atsisiunciamasScenarijusMeta"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "scenarijus.pdf"</div>
-
-        <div class="vardas">
-            <i class="fa-regular fa-user-circle vardasIcon"></i>
-            <p class="pagrTekstas">Biznierė</p>
-            <p class="vardasAntrTekstas">Mėta</p>
-        </div>
-        <div class="separationLine1"><hr></div>
-        <div class="apie">
-            <i class="fa-regular fa-circle-question karnavalasIcon" style="display: flex;"></i>
-            <p class="pagrTekstas">Apie rolę:</p>
-            <p class="antrTekstas">Rolės aprašymas.</p>
-        </div>
-        <div class="separationLine1"><hr></div>
-        <div class="pasiruosimas">
-            <i class="fa-solid fa-suitcase karnavalasIcon" style="display: flex;"></i>
-            <p class="pagrTekstas">Pasiruošti:</p>
-            <p class="antrTekstas">Pasiruošimo aprašymas.</p>
-        </div>
-        <div class="separationLine1"><hr></div>
-        <div class="apranga">
-            <i class="fa-solid fa-shirt karnavalasIcon" style="display: flex;"></i>
-            <p class="pagrTekstas">Apranga:</p>
-            <p class="antrTekstas">Aprangos aprašymas.</p>
-        </div>
-        <div class="separationLine1"><hr></div>
-        <div class="zodziai">
-            <i class="fa-regular fa-comments karnavalasIcon" style="display: flex;"></i>
-            <p class="pagrTekstas">Žodžiai:</p>
-            <p class="antrTekstas">Žodžių aprašymas.</p>
-            <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip.</p>
-        </div>
-        <div class="separationLine1"><hr></div>
-        <div class="vaidinimas">
-            <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
-            <p class="pagrTekstas">Vaidinimo eiga:</p>
-            <p class="antrTekstas">Vaidinimo eigos aprašymas.</p>
-            <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
-        </div>
-        <div class="separationLine1"><hr></div>
-        <div class="papildomai">
-            <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
-            <p class="pagrTekstas">Papildomai:</p>
-            <p class="antrTekstas">Papildomai aprašymas.</p>
-            <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti failą</button> -->
-        </div>
-    </div>
-
-    <div id="norbertas">
-        <div id="topInfoNorbertas"></div>
-        <div id="infoNorbertas"><i class="fa-solid fa-chevron-down" onclick="closeNorbertas()" id="norbertasUzdarymas" ontouchstart></i><p id="norbertasTekstas2">Vaidinimas "Mažasis princas - karjera"</p></div>
-        <p id="norbertasTekstas">Vaidinimas "Mažasis princas - karjera"</p>
-
-        <div id="scenarijusNorbertasBackground">
-            <button onclick="scenarijusNorbertas()" class="warningButton" id="atsisiustiScenarijuNorbertas" ontouchstart><i class="fa-solid fa-scroll" style="margin-right: 5px;"></i>Atsisiųsti visą scenarijų</button>
-        </div>
-
-        <div id="downloadingBackgroundNorbertas"></div>
-        <div id="atsisiunciamasScenarijusNorbertas"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "scenarijus.pdf"</div>
-
-        <div class="vardas">
-            <i class="fa-regular fa-user-circle vardasIcon"></i>
-            <p class="pagrTekstas">Geografas</p>
-            <p class="vardasAntrTekstas">Norbertas</p>
-        </div>
-        <div class="separationLine1"><hr></div>
-        <div class="apie">
-            <i class="fa-regular fa-circle-question karnavalasIcon" style="display: flex;"></i>
-            <p class="pagrTekstas">Apie rolę:</p>
-            <p class="antrTekstas">Rolės aprašymas.</p>
-        </div>
-        <div class="separationLine1"><hr></div>
-        <div class="pasiruosimas">
-            <i class="fa-solid fa-suitcase karnavalasIcon" style="display: flex;"></i>
-            <p class="pagrTekstas">Pasiruošti:</p>
-            <p class="antrTekstas">Pasiruošimo aprašymas.</p>
-        </div>
-        <div class="separationLine1"><hr></div>
-        <div class="apranga">
-            <i class="fa-solid fa-shirt karnavalasIcon" style="display: flex;"></i>
-            <p class="pagrTekstas">Apranga:</p>
-            <p class="antrTekstas">Aprangos aprašymas.</p>
-        </div>
-        <div class="separationLine1"><hr></div>
-        <div class="zodziai">
-            <i class="fa-regular fa-comments karnavalasIcon" style="display: flex;"></i>
-            <p class="pagrTekstas">Žodžiai:</p>
-            <p class="antrTekstas">Žodžių aprašymas.</p>
-            <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip.</p>
-        </div>
-        <div class="separationLine1"><hr></div>
-        <div class="vaidinimas">
-            <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
-            <p class="pagrTekstas">Vaidinimo eiga:</p>
-            <p class="antrTekstas">Vaidinimo eigos aprašymas.</p>
-            <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
-        </div>
-        <div class="separationLine1"><hr></div>
-        <div class="papildomai">
-            <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
-            <p class="pagrTekstas">Papildomai:</p>
-            <p class="antrTekstas">Papildomai aprašymas.</p>
-            <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti failą</button> -->
-        </div>
-    </div>
-
-    <div id="matas">
-        <div id="topInfoMatas"></div>
-        <div id="infoMatas"><i class="fa-solid fa-chevron-down" onclick="closeMatas()" id="matasUzdarymas" ontouchstart></i><p id="matasTekstas2">Vaidinimas "Mažasis princas - karjera"</p></div>
-        <p id="matasTekstas">Vaidinimas "Mažasis princas - karjera"</p>
-
-        <div id="scenarijusMatasBackground">
-            <button onclick="scenarijusMatas()" class="warningButton" id="atsisiustiScenarijuMatas" ontouchstart><i class="fa-solid fa-scroll" style="margin-right: 5px;"></i>Atsisiųsti visą scenarijų</button>
-        </div>
-
-        <div id="downloadingBackgroundMatas"></div>
-        <div id="atsisiunciamasScenarijusMatas"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "scenarijus.pdf"</div>
-
-        <div class="vardas">
-            <i class="fa-regular fa-user-circle vardasIcon"></i>
-            <p class="pagrTekstas">Mažasis princas</p>
-            <p class="vardasAntrTekstas">Matas</p>
-        </div>
-        <div class="separationLine1"><hr></div>
-        <div class="apie">
-            <i class="fa-regular fa-circle-question karnavalasIcon" style="display: flex;"></i>
-            <p class="pagrTekstas">Apie rolę:</p>
-            <p class="antrTekstas">Rolės aprašymas.</p>
-        </div>
-        <div class="separationLine1"><hr></div>
-        <div class="pasiruosimas">
-            <i class="fa-solid fa-suitcase karnavalasIcon" style="display: flex;"></i>
-            <p class="pagrTekstas">Pasiruošti:</p>
-            <p class="antrTekstas">Pasiruošimo aprašymas.</p>
-        </div>
-        <div class="separationLine1"><hr></div>
-        <div class="apranga">
-            <i class="fa-solid fa-shirt karnavalasIcon" style="display: flex;"></i>
-            <p class="pagrTekstas">Apranga:</p>
-            <p class="antrTekstas">Aprangos aprašymas.</p>
-        </div>
-        <div class="separationLine1"><hr></div>
-        <div class="zodziai">
-            <i class="fa-regular fa-comments karnavalasIcon" style="display: flex;"></i>
-            <p class="pagrTekstas">Žodžiai:</p>
-            <p class="antrTekstas">Žodžių aprašymas.</p>
-            <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip.</p>
-        </div>
-        <div class="separationLine1"><hr></div>
-        <div class="vaidinimas">
-            <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
-            <p class="pagrTekstas">Vaidinimo eiga:</p>
-            <p class="antrTekstas">Vaidinimo eigos aprašymas.</p>
-            <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
-        </div>
-        <div class="separationLine1"><hr></div>
-        <div class="papildomai">
-            <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
-            <p class="pagrTekstas">Papildomai:</p>
-            <p class="antrTekstas">Papildomai aprašymas.</p>
-            <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti failą</button> -->
-        </div>
-    </div>
-
-    <div id="olga">
-        <div id="administratoreText"><p id="administratoreTextP"><i class="fa-regular fa-user"></i> Sveiki, administratorė!</p></div>
-        <div id="topInfoOlga"></div>
-        <div id="infoOlga"><i class="fa-solid fa-chevron-down" onclick="closeOlga()" id="olgaUzdarymas" ontouchstart></i><p id="olgaTekstas2">Vaidinimas "Mažasis princas - karjera"</p></div>
-        <p id="olgaTekstas">Vaidinimas "Mažasis princas - karjera"</p>
-
-        <div id="scenarijusOlgaBackground">
-            <button onclick="scenarijusOlga()" class="warningButton" id="atsisiustiScenarijuOlga" ontouchstart><i class="fa-solid fa-scroll" style="margin-right: 5px;"></i>Atsisiųsti visą scenarijų</button>
-        </div>
-
-        <div id="downloadingBackgroundOlga"></div>
-        <div id="atsisiunciamasScenarijusOlga"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "scenarijus.pdf"</div>
-
-        <div class="vardas">
-            <i class="fa-regular fa-user-circle vardasIcon"></i>
-            <p class="pagrTekstas">Administratorė</p>
-            <p class="vardasAntrTekstas">Olga Vitkauskienė</p>
-        </div>
-        <div class="separationLine1"><hr></div>
-        <div class="apie">
-            <i class="fa-regular fa-circle-question karnavalasIcon" style="display: flex;"></i>
-            <p class="pagrTekstas">Visos rolės:</p>
-            <p class="antrTekstas">Garbėtroška - Arūnė <br>Girtuoklė - Smiltė <br>Lakūnė/pasakotoja - Aleksandra <br>Biznierė - Mėta <br>Geografas - Norbertas <br>Mažasis princas - Matas</p>
-        </div>
-        <div class="separationLine1"><hr></div>
-        <div class="pasiruosimas">
-            <i class="fa-solid fa-suitcase karnavalasIcon" style="display: flex;"></i>
-            <p class="pagrTekstas">Pasiruošti (visoms rolėms):</p>
-            <p class="antrTekstas">Pasiruošimo aprašymas.</p>
-        </div>
-        <div class="separationLine1"><hr></div>
-        <div class="apranga">
-            <i class="fa-solid fa-shirt karnavalasIcon" style="display: flex;"></i>
-            <p class="pagrTekstas">Apranga (visų rolių):</p>
-            <p class="antrTekstas">Aprangos aprašymas.</p>
-        </div>
-        <div class="separationLine1"><hr></div>
-        <div class="zodziai">
-            <i class="fa-regular fa-comments karnavalasIcon" style="display: flex;"></i>
-            <p class="pagrTekstas">Žodžiai (visų rolių):</p>
-            <p class="antrTekstas">Žodžių aprašymas.</p>
-        </div>
-        <div class="separationLine1"><hr></div>
-        <div class="vaidinimas">
-            <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
-            <p class="pagrTekstas">Vaidinimo eiga (visų rolių):</p>
             <p class="antrTekstas">Vaidinimo eigos aprašymas.</p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
         </div>
@@ -3408,136 +1936,22 @@
 
     <script src="https://kit.fontawesome.com/a11707644f.js" crossorigin="anonymous"></script>
     <script>
-        function scenarijusArune() {
-            document.getElementById("downloadingBackgroundArune").style.display = "block";
+        function scenarijusVardas() {
+            document.getElementById("downloadingBackgroundVardas").style.display = "block";
             document.getElementById("body").style.overflow = "hidden";
             setTimeout(() => {
-                document.getElementById("atsisiunciamasScenarijusArune").style.bottom = "0";
-                document.getElementById("downloadingBackgroundArune").style.opacity = "1";
+                document.getElementById("atsisiunciamasScenarijusVardas").style.bottom = "0";
+                document.getElementById("downloadingBackgroundVardas").style.opacity = "1";
             }, 10);
             setTimeout(() => {
                 document.getElementById("download_script").click();
             }, 1010);
             setTimeout(() => {
-                document.getElementById("atsisiunciamasScenarijusArune").style.bottom = "-100%";
-                document.getElementById("downloadingBackgroundArune").style.opacity = "0";
+                document.getElementById("atsisiunciamasScenarijusVardas").style.bottom = "-100%";
+                document.getElementById("downloadingBackgroundVardas").style.opacity = "0";
             }, 6010);
             setTimeout(() => {
-                document.getElementById("downloadingBackgroundArune").style.display = "none";
-                document.getElementById("body").style.overflow = "scroll";
-            }, 6310);
-        }
-        function scenarijusSmilte() {
-            document.getElementById("downloadingBackgroundSmilte").style.display = "block";
-            document.getElementById("body").style.overflow = "hidden";
-            setTimeout(() => {
-                document.getElementById("atsisiunciamasScenarijusSmilte").style.bottom = "0";
-                document.getElementById("downloadingBackgroundSmilte").style.opacity = "1";
-            }, 10);
-            setTimeout(() => {
-                document.getElementById("download_script").click();
-            }, 1010);
-            setTimeout(() => {
-                document.getElementById("atsisiunciamasScenarijusSmilte").style.bottom = "-100%";
-                document.getElementById("downloadingBackgroundSmilte").style.opacity = "0";
-            }, 6010);
-            setTimeout(() => {
-                document.getElementById("downloadingBackgroundSmilte").style.display = "none";
-                document.getElementById("body").style.overflow = "scroll";
-            }, 6310);
-        }
-        function scenarijusAleksandra() {
-            document.getElementById("downloadingBackgroundAleksandra").style.display = "block";
-            document.getElementById("body").style.overflow = "hidden";
-            setTimeout(() => {
-                document.getElementById("atsisiunciamasScenarijusAleksandra").style.bottom = "0";
-                document.getElementById("downloadingBackgroundAleksandra").style.opacity = "1";
-            }, 10);
-            setTimeout(() => {
-                document.getElementById("download_script").click();
-            }, 1010);
-            setTimeout(() => {
-                document.getElementById("atsisiunciamasScenarijusAleksandra").style.bottom = "-100%";
-                document.getElementById("downloadingBackgroundAleksandra").style.opacity = "0";
-            }, 6010);
-            setTimeout(() => {
-                document.getElementById("downloadingBackgroundAleksandra").style.display = "none";
-                document.getElementById("body").style.overflow = "scroll";
-            }, 6310);
-        }
-        function scenarijusMeta() {
-            document.getElementById("downloadingBackgroundMeta").style.display = "block";
-            document.getElementById("body").style.overflow = "hidden";
-            setTimeout(() => {
-                document.getElementById("atsisiunciamasScenarijusMeta").style.bottom = "0";
-                document.getElementById("downloadingBackgroundMeta").style.opacity = "1";
-            }, 10);
-            setTimeout(() => {
-                document.getElementById("download_script").click();
-            }, 1010);
-            setTimeout(() => {
-                document.getElementById("atsisiunciamasScenarijusMeta").style.bottom = "-100%";
-                document.getElementById("downloadingBackgroundMeta").style.opacity = "0";
-            }, 6010);
-            setTimeout(() => {
-                document.getElementById("downloadingBackgroundMeta").style.display = "none";
-                document.getElementById("body").style.overflow = "scroll";
-            }, 6310);
-        }
-        function scenarijusNorbertas() {
-            document.getElementById("downloadingBackgroundNorbertas").style.display = "block";
-            document.getElementById("body").style.overflow = "hidden";
-            setTimeout(() => {
-                document.getElementById("atsisiunciamasScenarijusNorbertas").style.bottom = "0";
-                document.getElementById("downloadingBackgroundNorbertas").style.opacity = "1";
-            }, 10);
-            setTimeout(() => {
-                document.getElementById("download_script").click();
-            }, 1010);
-            setTimeout(() => {
-                document.getElementById("atsisiunciamasScenarijusNorbertas").style.bottom = "-100%";
-                document.getElementById("downloadingBackgroundNorbertas").style.opacity = "0";
-            }, 6010);
-            setTimeout(() => {
-                document.getElementById("downloadingBackgroundNorbertas").style.display = "none";
-                document.getElementById("body").style.overflow = "scroll";
-            }, 6310);
-        }
-        function scenarijusMatas() {
-            document.getElementById("downloadingBackgroundMatas").style.display = "block";
-            document.getElementById("body").style.overflow = "hidden";
-            setTimeout(() => {
-                document.getElementById("atsisiunciamasScenarijusMatas").style.bottom = "0";
-                document.getElementById("downloadingBackgroundMatas").style.opacity = "1";
-            }, 10);
-            setTimeout(() => {
-                document.getElementById("download_script").click();
-            }, 1010);
-            setTimeout(() => {
-                document.getElementById("atsisiunciamasScenarijusMatas").style.bottom = "-100%";
-                document.getElementById("downloadingBackgroundMatas").style.opacity = "0";
-            }, 6010);
-            setTimeout(() => {
-                document.getElementById("downloadingBackgroundMatas").style.display = "none";
-                document.getElementById("body").style.overflow = "scroll";
-            }, 6310);
-        }
-        function scenarijusOlga() {
-            document.getElementById("downloadingBackgroundOlga").style.display = "block";
-            document.getElementById("body").style.overflow = "hidden";
-            setTimeout(() => {
-                document.getElementById("atsisiunciamasScenarijusOlga").style.bottom = "0";
-                document.getElementById("downloadingBackgroundOlga").style.opacity = "1";
-            }, 10);
-            setTimeout(() => {
-                document.getElementById("download_script").click();
-            }, 1010);
-            setTimeout(() => {
-                document.getElementById("atsisiunciamasScenarijusOlga").style.bottom = "-100%";
-                document.getElementById("downloadingBackgroundOlga").style.opacity = "0";
-            }, 6010);
-            setTimeout(() => {
-                document.getElementById("downloadingBackgroundOlga").style.display = "none";
+                document.getElementById("downloadingBackgroundVardas").style.display = "none";
                 document.getElementById("body").style.overflow = "scroll";
             }, 6310);
         }
@@ -3572,55 +1986,19 @@
                     document.getElementById("info").style.boxShadow = "0 0 10px #333333";
                     document.getElementById("info").style.backgroundColor = "rgba(20, 20, 20, 0.75)";
 
-                    document.getElementById("infoArune").style.boxShadow = "0 0 10px #333333";
-                    document.getElementById("infoArune").style.backgroundColor = "rgba(20, 20, 20, 0.75)";
-                    document.getElementById("infoSmilte").style.boxShadow = "0 0 10px #333333";
-                    document.getElementById("infoSmilte").style.backgroundColor = "rgba(20, 20, 20, 0.75)";
-                    document.getElementById("infoAleksandra").style.boxShadow = "0 0 10px #333333";
-                    document.getElementById("infoAleksandra").style.backgroundColor = "rgba(20, 20, 20, 0.75)";
-                    document.getElementById("infoMeta").style.boxShadow = "0 0 10px #333333";
-                    document.getElementById("infoMeta").style.backgroundColor = "rgba(20, 20, 20, 0.75)";
-                    document.getElementById("infoNorbertas").style.boxShadow = "0 0 10px #333333";
-                    document.getElementById("infoNorbertas").style.backgroundColor = "rgba(20, 20, 20, 0.75)";
-                    document.getElementById("infoMatas").style.boxShadow = "0 0 10px #333333";
-                    document.getElementById("infoMatas").style.backgroundColor = "rgba(20, 20, 20, 0.75)";
-                    document.getElementById("infoOlga").style.boxShadow = "0 0 10px #333333";
-                    document.getElementById("infoOlga").style.backgroundColor = "rgba(20, 20, 20, 0.75)";
+                    document.getElementById("infoVardas").style.boxShadow = "0 0 10px #333333";
+                    document.getElementById("infoVardas").style.backgroundColor = "rgba(20, 20, 20, 0.75)";
                 }
                 else{
                     document.getElementById("info").style.boxShadow = "0 0 10px lightgrey";
                     document.getElementById("info").style.backgroundColor = "rgba(242, 242, 242, 0.75)";
 
-                    document.getElementById("infoArune").style.boxShadow = "0 0 10px lightgrey";
-                    document.getElementById("infoArune").style.backgroundColor = "rgba(242, 242, 242, 0.75)";
-                    document.getElementById("infoSmilte").style.boxShadow = "0 0 10px lightgrey";
-                    document.getElementById("infoSmilte").style.backgroundColor = "rgba(242, 242, 242, 0.75)";
-                    document.getElementById("infoAleksandra").style.boxShadow = "0 0 10px lightgrey";
-                    document.getElementById("infoAleksandra").style.backgroundColor = "rgba(242, 242, 242, 0.75)";
-                    document.getElementById("infoMeta").style.boxShadow = "0 0 10px lightgrey";
-                    document.getElementById("infoMeta").style.backgroundColor = "rgba(242, 242, 242, 0.75)";
-                    document.getElementById("infoNorbertas").style.boxShadow = "0 0 10px lightgrey";
-                    document.getElementById("infoNorbertas").style.backgroundColor = "rgba(242, 242, 242, 0.75)";
-                    document.getElementById("infoMatas").style.boxShadow = "0 0 10px lightgrey";
-                    document.getElementById("infoMatas").style.backgroundColor = "rgba(242, 242, 242, 0.75)";
-                    document.getElementById("infoOlga").style.boxShadow = "0 0 10px lightgrey";
-                    document.getElementById("infoOlga").style.backgroundColor = "rgba(242, 242, 242, 0.75)";
+                    document.getElementById("infoVardas").style.boxShadow = "0 0 10px lightgrey";
+                    document.getElementById("infoVardas").style.backgroundColor = "rgba(242, 242, 242, 0.75)";
                 }
 
-                document.getElementById("aruneTekstas").style.opacity = "0";
-                document.getElementById("aruneTekstas2").style.opacity = "1";
-                document.getElementById("smilteTekstas").style.opacity = "0";
-                document.getElementById("smilteTekstas2").style.opacity = "1";
-                document.getElementById("aleksandraTekstas").style.opacity = "0";
-                document.getElementById("aleksandraTekstas2").style.opacity = "1";
-                document.getElementById("metaTekstas").style.opacity = "0";
-                document.getElementById("metaTekstas2").style.opacity = "1";
-                document.getElementById("norbertasTekstas").style.opacity = "0";
-                document.getElementById("norbertasTekstas2").style.opacity = "1";
-                document.getElementById("matasTekstas").style.opacity = "0";
-                document.getElementById("matasTekstas2").style.opacity = "1";
-                document.getElementById("olgaTekstas").style.opacity = "0";
-                document.getElementById("olgaTekstas2").style.opacity = "1";
+                document.getElementById("vardasTekstas").style.opacity = "0";
+                document.getElementById("vardasTekstas2").style.opacity = "1";
             }
             else {
                 document.getElementById("kelionesMarsrutasTekstas").style.opacity = "1";
@@ -3629,47 +2007,17 @@
                 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
                     document.getElementById("info").style.backgroundColor = "rgba(20, 20, 20, 1)";
 
-                    document.getElementById("infoArune").style.backgroundColor = "rgba(20, 20, 20, 1)";
-                    document.getElementById("infoSmilte").style.backgroundColor = "rgba(20, 20, 20, 1)";
-                    document.getElementById("infoAleksandra").style.backgroundColor = "rgba(20, 20, 20, 1)";
-                    document.getElementById("infoMeta").style.backgroundColor = "rgba(20, 20, 20, 1)";
-                    document.getElementById("infoNorbertas").style.backgroundColor = "rgba(20, 20, 20, 1)";
-                    document.getElementById("infoMatas").style.backgroundColor = "rgba(20, 20, 20, 1)";
-                    document.getElementById("infoOlga").style.backgroundColor = "rgba(20, 20, 20, 1)";
+                    document.getElementById("infoVardas").style.backgroundColor = "rgba(20, 20, 20, 1)";
                 }
                 else{
                     document.getElementById("info").style.backgroundColor = "rgba(242, 242, 242, 1)";
 
-                    document.getElementById("infoArune").style.backgroundColor = "rgba(242, 242, 242, 1)";
-                    document.getElementById("infoSmilte").style.backgroundColor = "rgba(242, 242, 242, 1)";
-                    document.getElementById("infoAleksandra").style.backgroundColor = "rgba(242, 242, 242, 1)";
-                    document.getElementById("infoMeta").style.backgroundColor = "rgba(242, 242, 242, 1)";
-                    document.getElementById("infoNorbertas").style.backgroundColor = "rgba(242, 242, 242, 1)";
-                    document.getElementById("infoMatas").style.backgroundColor = "rgba(242, 242, 242, 1)";
-                    document.getElementById("infoOlga").style.backgroundColor = "rgba(242, 242, 242, 1)";
+                    document.getElementById("infoVardas").style.backgroundColor = "rgba(242, 242, 242, 1)";
                 }
 
-                document.getElementById("aruneTekstas").style.opacity = "1";
-                document.getElementById("aruneTekstas2").style.opacity = "0";
-                document.getElementById("infoArune").style.boxShadow = "none";
-                document.getElementById("smilteTekstas").style.opacity = "1";
-                document.getElementById("smilteTekstas2").style.opacity = "0";
-                document.getElementById("infoSmilte").style.boxShadow = "none";
-                document.getElementById("aleksandraTekstas").style.opacity = "1";
-                document.getElementById("aleksandraTekstas2").style.opacity = "0";
-                document.getElementById("infoAleksandra").style.boxShadow = "none";
-                document.getElementById("metaTekstas").style.opacity = "1";
-                document.getElementById("metaTekstas2").style.opacity = "0";
-                document.getElementById("infoMeta").style.boxShadow = "none";
-                document.getElementById("norbertasTekstas").style.opacity = "1";
-                document.getElementById("norbertasTekstas2").style.opacity = "0";
-                document.getElementById("infoNorbertas").style.boxShadow = "none";
-                document.getElementById("matasTekstas").style.opacity = "1";
-                document.getElementById("matasTekstas2").style.opacity = "0";
-                document.getElementById("infoMatas").style.boxShadow = "none";
-                document.getElementById("olgaTekstas").style.opacity = "1";
-                document.getElementById("olgaTekstas2").style.opacity = "0";
-                document.getElementById("infoOlga").style.boxShadow = "none";
+                document.getElementById("vardasTekstas").style.opacity = "1";
+                document.getElementById("vardasTekstas2").style.opacity = "0";
+                document.getElementById("infoVardas").style.boxShadow = "none";
             }
         }
 
@@ -4283,12 +2631,12 @@
                     document.getElementById("body").style.overflow = "scroll";
                 }, 3900);
           }
-          else if(form.pin.value == "827482") //arune
+          else if(form.pin.value == "123456") //vardas
                 {
-                    document.cookie = "arune=garbetroska";
+                    document.cookie = "vardas=role";
                 document.getElementById("loading").style.display = "flex";
                 document.getElementById("ivestiKoda").style.opacity = "0.5";
-                document.querySelector('#topInfoArune').scrollIntoView({
+                document.querySelector('#topInfoVardas').scrollIntoView({
                     behavior: 'smooth'
                 });
                 document.getElementById("istrinimas").style.color = "transparent";
@@ -4302,10 +2650,10 @@
                     document.getElementById("screen").style.top = "-100%";
                     document.getElementById("screen").style.backgroundColor = "transparent";
                     document.getElementById("display").style.top = "-100%";
-                    document.getElementById("arune").style.display = "block";
+                    document.getElementById("vardas").style.display = "block";
                 }, 3600);
                 setTimeout(() => {
-                    document.getElementById("arune").style.paddingTop = "0";
+                    document.getElementById("vardas").style.paddingTop = "0";
                 }, 3620);
                 setTimeout(() => {
                     inputas = ""
@@ -4319,240 +2667,6 @@
                     document.getElementById("loading").style.display = "none";
                     document.getElementById("body").style.overflow = "scroll";
                 }, 3900);
-          }
-          else if(form.pin.value == "010473") //smilte
-                {
-                    document.cookie = "smilte=girtuokle";
-                document.getElementById("loading").style.display = "flex";
-                document.getElementById("ivestiKoda").style.opacity = "0.5";
-                document.querySelector('#topInfoSmilte').scrollIntoView({
-                    behavior: 'smooth'
-                });
-                document.getElementById("istrinimas").style.color = "transparent";
-                document.getElementById("istrinimas").style.pointerEvents = "none";
-                setTimeout(() => {
-                    document.getElementById("keypad").style.opacity = "0.5";
-                }, 150);
-                setTimeout(() => {
-                    document.getElementById("keypad").style.opacity = "1";
-                    document.getElementById("ivestiKoda").style.opacity = "1";
-                    document.getElementById("screen").style.top = "-100%";
-                    document.getElementById("screen").style.backgroundColor = "transparent";
-                    document.getElementById("display").style.top = "-100%";
-                    document.getElementById("smilte").style.display = "block";
-                }, 3600);
-                setTimeout(() => {
-                    document.getElementById("smilte").style.paddingTop = "0";
-                }, 3620);
-                setTimeout(() => {
-                    inputas = ""
-                    document.getElementById("kodas").value = '';
-                    document.getElementById("taskelis1").style.backgroundColor = "transparent";
-                    document.getElementById("taskelis2").style.backgroundColor = "transparent";
-                    document.getElementById("taskelis3").style.backgroundColor = "transparent";
-                    document.getElementById("taskelis4").style.backgroundColor = "transparent";
-                    document.getElementById("taskelis5").style.backgroundColor = "transparent";
-                    document.getElementById("taskelis6").style.backgroundColor = "transparent";
-                    document.getElementById("loading").style.display = "none";
-                    document.getElementById("body").style.overflow = "scroll";
-                }, 3900);
-          }
-          else if(form.pin.value == "493793") //aleksandra
-                {
-                    document.cookie = "aleksandra=lakune/pasakotoja";
-                document.getElementById("loading").style.display = "flex";
-                document.getElementById("ivestiKoda").style.opacity = "0.5";
-                document.querySelector('#topInfoAleksandra').scrollIntoView({
-                    behavior: 'smooth'
-                });
-                document.getElementById("istrinimas").style.color = "transparent";
-                document.getElementById("istrinimas").style.pointerEvents = "none";
-                setTimeout(() => {
-                    document.getElementById("keypad").style.opacity = "0.5";
-                }, 150);
-                setTimeout(() => {
-                    document.getElementById("keypad").style.opacity = "1";
-                    document.getElementById("ivestiKoda").style.opacity = "1";
-                    document.getElementById("screen").style.top = "-100%";
-                    document.getElementById("screen").style.backgroundColor = "transparent";
-                    document.getElementById("display").style.top = "-100%";
-                    document.getElementById("aleksandra").style.display = "block";
-                }, 3600);
-                setTimeout(() => {
-                    document.getElementById("aleksandra").style.paddingTop = "0";
-                }, 3620);
-                setTimeout(() => {
-                    inputas = ""
-                    document.getElementById("kodas").value = '';
-                    document.getElementById("taskelis1").style.backgroundColor = "transparent";
-                    document.getElementById("taskelis2").style.backgroundColor = "transparent";
-                    document.getElementById("taskelis3").style.backgroundColor = "transparent";
-                    document.getElementById("taskelis4").style.backgroundColor = "transparent";
-                    document.getElementById("taskelis5").style.backgroundColor = "transparent";
-                    document.getElementById("taskelis6").style.backgroundColor = "transparent";
-                    document.getElementById("loading").style.display = "none";
-                    document.getElementById("body").style.overflow = "scroll";
-                }, 3900);
-          }
-          else if(form.pin.value == "028482") //meta
-                {
-                    document.cookie = "meta=bizniere";
-                document.getElementById("loading").style.display = "flex";
-                document.getElementById("ivestiKoda").style.opacity = "0.5";
-                document.querySelector('#topInfoMeta').scrollIntoView({
-                    behavior: 'smooth'
-                });
-                document.getElementById("istrinimas").style.color = "transparent";
-                document.getElementById("istrinimas").style.pointerEvents = "none";
-                setTimeout(() => {
-                    document.getElementById("keypad").style.opacity = "0.5";
-                }, 150);
-                setTimeout(() => {
-                    document.getElementById("keypad").style.opacity = "1";
-                    document.getElementById("ivestiKoda").style.opacity = "1";
-                    document.getElementById("screen").style.top = "-100%";
-                    document.getElementById("screen").style.backgroundColor = "transparent";
-                    document.getElementById("display").style.top = "-100%";
-                    document.getElementById("meta").style.display = "block";
-                }, 3600);
-                setTimeout(() => {
-                    document.getElementById("meta").style.paddingTop = "0";
-                }, 3620);
-                setTimeout(() => {
-                    inputas = ""
-                    document.getElementById("kodas").value = '';
-                    document.getElementById("taskelis1").style.backgroundColor = "transparent";
-                    document.getElementById("taskelis2").style.backgroundColor = "transparent";
-                    document.getElementById("taskelis3").style.backgroundColor = "transparent";
-                    document.getElementById("taskelis4").style.backgroundColor = "transparent";
-                    document.getElementById("taskelis5").style.backgroundColor = "transparent";
-                    document.getElementById("taskelis6").style.backgroundColor = "transparent";
-                    document.getElementById("loading").style.display = "none";
-                    document.getElementById("body").style.overflow = "scroll";
-                }, 3900);
-          }
-          else if(form.pin.value == "183748") //norbertas
-                {
-                    document.cookie = "norbertas=geografas";
-                document.getElementById("loading").style.display = "flex";
-                document.getElementById("ivestiKoda").style.opacity = "0.5";
-                document.querySelector('#topInfoNorbertas').scrollIntoView({
-                    behavior: 'smooth'
-                });
-                document.getElementById("istrinimas").style.color = "transparent";
-                document.getElementById("istrinimas").style.pointerEvents = "none";
-                setTimeout(() => {
-                    document.getElementById("keypad").style.opacity = "0.5";
-                }, 150);
-                setTimeout(() => {
-                    document.getElementById("keypad").style.opacity = "1";
-                    document.getElementById("ivestiKoda").style.opacity = "1";
-                    document.getElementById("screen").style.top = "-100%";
-                    document.getElementById("screen").style.backgroundColor = "transparent";
-                    document.getElementById("display").style.top = "-100%";
-                    document.getElementById("norbertas").style.display = "block";
-                }, 3600);
-                setTimeout(() => {
-                    document.getElementById("norbertas").style.paddingTop = "0";
-                }, 3620);
-                setTimeout(() => {
-                    inputas = ""
-                    document.getElementById("kodas").value = '';
-                    document.getElementById("taskelis1").style.backgroundColor = "transparent";
-                    document.getElementById("taskelis2").style.backgroundColor = "transparent";
-                    document.getElementById("taskelis3").style.backgroundColor = "transparent";
-                    document.getElementById("taskelis4").style.backgroundColor = "transparent";
-                    document.getElementById("taskelis5").style.backgroundColor = "transparent";
-                    document.getElementById("taskelis6").style.backgroundColor = "transparent";
-                    document.getElementById("loading").style.display = "none";
-                    document.getElementById("body").style.overflow = "scroll";
-                }, 3900);
-          }
-          else if(form.pin.value == "742094") //matas
-                {
-                    document.cookie = "matas=mazasis princas";
-                document.getElementById("loading").style.display = "flex";
-                document.getElementById("ivestiKoda").style.opacity = "0.5";
-                document.querySelector('#topInfoMatas').scrollIntoView({
-                    behavior: 'smooth'
-                });
-                document.getElementById("istrinimas").style.color = "transparent";
-                document.getElementById("istrinimas").style.pointerEvents = "none";
-                setTimeout(() => {
-                    document.getElementById("keypad").style.opacity = "0.5";
-                }, 150);
-                setTimeout(() => {
-                    document.getElementById("keypad").style.opacity = "1";
-                    document.getElementById("ivestiKoda").style.opacity = "1";
-                    document.getElementById("screen").style.top = "-100%";
-                    document.getElementById("screen").style.backgroundColor = "transparent";
-                    document.getElementById("display").style.top = "-100%";
-                    document.getElementById("matas").style.display = "block";
-                }, 3600);
-                setTimeout(() => {
-                    document.getElementById("matas").style.paddingTop = "0";
-                }, 3620);
-                setTimeout(() => {
-                    inputas = ""
-                    document.getElementById("kodas").value = '';
-                    document.getElementById("taskelis1").style.backgroundColor = "transparent";
-                    document.getElementById("taskelis2").style.backgroundColor = "transparent";
-                    document.getElementById("taskelis3").style.backgroundColor = "transparent";
-                    document.getElementById("taskelis4").style.backgroundColor = "transparent";
-                    document.getElementById("taskelis5").style.backgroundColor = "transparent";
-                    document.getElementById("taskelis6").style.backgroundColor = "transparent";
-                    document.getElementById("loading").style.display = "none";
-                    document.getElementById("body").style.overflow = "scroll";
-                }, 3900);
-          }
-          else if(form.pin.value == "674129") //olga
-                {
-                    document.cookie = "olga=admin";
-                document.getElementById("loading").style.display = "flex";
-                document.getElementById("ivestiKoda").style.opacity = "0.5";
-                document.querySelector('#topInfoOlga').scrollIntoView({
-                    behavior: 'smooth'
-                });
-                document.getElementById("istrinimas").style.color = "transparent";
-                document.getElementById("istrinimas").style.pointerEvents = "none";
-                setTimeout(() => {
-                    document.getElementById("keypad").style.opacity = "0.5";
-                }, 150);
-                setTimeout(() => {
-                    document.getElementById("keypad").style.opacity = "1";
-                    document.getElementById("ivestiKoda").style.opacity = "1";
-                    document.getElementById("screen").style.top = "-100%";
-                    document.getElementById("screen").style.backgroundColor = "transparent";
-                    document.getElementById("display").style.top = "-100%";
-                    document.getElementById("olga").style.display = "block";
-                    document.getElementById("administratoreText").style.display = "flex";
-                }, 3600);
-                setTimeout(() => {
-                    document.getElementById("olga").style.paddingTop = "0";
-                    document.getElementById("administratoreText").style.opacity = "1";
-                }, 3620);
-                setTimeout(() => {
-                    document.getElementById("administratoreTextP").style.width = "160px";
-                }, 3720);
-                setTimeout(() => {
-                    inputas = ""
-                    document.getElementById("kodas").value = '';
-                    document.getElementById("taskelis1").style.backgroundColor = "transparent";
-                    document.getElementById("taskelis2").style.backgroundColor = "transparent";
-                    document.getElementById("taskelis3").style.backgroundColor = "transparent";
-                    document.getElementById("taskelis4").style.backgroundColor = "transparent";
-                    document.getElementById("taskelis5").style.backgroundColor = "transparent";
-                    document.getElementById("taskelis6").style.backgroundColor = "transparent";
-                    document.getElementById("loading").style.display = "none";
-                    document.getElementById("body").style.overflow = "scroll";
-                }, 3900);
-                setTimeout(() => {
-                    document.getElementById("administratoreText").style.opacity = "0";
-                }, 8720);
-                setTimeout(() => {
-                    document.getElementById("administratoreText").style.display = "none";
-                    document.getElementById("administratoreTextP").style.width = "15px";
-                }, 9020);
           }
             else{
                 document.getElementById("loading").style.display = "flex";
@@ -4605,127 +2719,25 @@
                 document.getElementById("kelioneI---").style.paddingTop = "100vh";
             }
         }
-        let arune = getCookie("arune");
-        if (arune != "") {
-            document.getElementById("arune").style.display = "block";
-            document.getElementById("arune").style.paddingTop = "0";
+        let vardas = getCookie("vardas");
+        if (vardas != "") {
+            document.getElementById("vardas").style.display = "block";
+            document.getElementById("vardas").style.paddingTop = "0";
             setTimeout(() => {
-                document.querySelector('#topInfoArune').scrollIntoView({
+                document.querySelector('#topInfoVardas').scrollIntoView({
                 behavior: 'smooth'});
             }, 500);
         }
         else {
-            document.getElementById("arune").style.display = "none";
-            document.getElementById("arune").style.paddingTop = "100vh";
-            if (arune != "" && arune != null) {
-                document.getElementById("arune").style.display = "none";
-                document.getElementById("arune").style.paddingTop = "100vh";
-            }
-        }
-        let smilte = getCookie("smilte");
-        if (smilte != "") {
-            document.getElementById("smilte").style.display = "block";
-            document.getElementById("smilte").style.paddingTop = "0";
-            setTimeout(() => {
-                document.querySelector('#topInfoSmilte').scrollIntoView({
-                behavior: 'smooth'});
-            }, 500);
-        }
-        else {
-            document.getElementById("smilte").style.display = "none";
-            document.getElementById("smilte").style.paddingTop = "100vh";
-            if (smilte != "" && smilte != null) {
-                document.getElementById("smilte").style.display = "none";
-                document.getElementById("smilte").style.paddingTop = "100vh";
-            }
-        }
-        let aleksandra = getCookie("aleksandra");
-        if (aleksandra != "") {
-            document.getElementById("aleksandra").style.display = "block";
-            document.getElementById("aleksandra").style.paddingTop = "0";
-            setTimeout(() => {
-                document.querySelector('#topInfoAleksandra').scrollIntoView({
-                behavior: 'smooth'});
-            }, 500);
-        }
-        else {
-            document.getElementById("aleksandra").style.display = "none";
-            document.getElementById("aleksandra").style.paddingTop = "100vh";
-            if (aleksandra != "" && aleksandra != null) {
-                document.getElementById("aleksandra").style.display = "none";
-                document.getElementById("aleksandra").style.paddingTop = "100vh";
-            }
-        }
-        let meta = getCookie("meta");
-        if (meta != "") {
-            document.getElementById("meta").style.display = "block";
-            document.getElementById("meta").style.paddingTop = "0";
-            setTimeout(() => {
-                document.querySelector('#topInfoMeta').scrollIntoView({
-                behavior: 'smooth'});
-            }, 500);
-        }
-        else {
-            document.getElementById("meta").style.display = "none";
-            document.getElementById("meta").style.paddingTop = "100vh";
-            if (meta != "" && meta != null) {
-                document.getElementById("meta").style.display = "none";
-                document.getElementById("meta").style.paddingTop = "100vh";
-            }
-        }
-        let norbertas = getCookie("norbertas");
-        if (norbertas != "") {
-            document.getElementById("norbertas").style.display = "block";
-            document.getElementById("norbertas").style.paddingTop = "0";
-            setTimeout(() => {
-                document.querySelector('#topInfoNorbertas').scrollIntoView({
-                behavior: 'smooth'});
-            }, 500);
-        }
-        else {
-            document.getElementById("norbertas").style.display = "none";
-            document.getElementById("norbertas").style.paddingTop = "100vh";
-            if (norbertas != "" && norbertas != null) {
-                document.getElementById("norbertas").style.display = "none";
-                document.getElementById("norbertas").style.paddingTop = "100vh";
-            }
-        }
-        let matas = getCookie("matas");
-        if (matas != "") {
-            document.getElementById("matas").style.display = "block";
-            document.getElementById("matas").style.paddingTop = "0";
-            setTimeout(() => {
-                document.querySelector('#topInfoMatas').scrollIntoView({
-                behavior: 'smooth'});
-            }, 500);
-        }
-        else {
-            document.getElementById("matas").style.display = "none";
-            document.getElementById("matas").style.paddingTop = "100vh";
-            if (matas != "" && matas != null) {
-                document.getElementById("matas").style.display = "none";
-                document.getElementById("matas").style.paddingTop = "100vh";
-            }
-        }
-        let olga = getCookie("olga");
-        if (olga != "") {
-            document.getElementById("olga").style.display = "block";
-            document.getElementById("olga").style.paddingTop = "0";
-            setTimeout(() => {
-                document.querySelector('#topInfoOlga').scrollIntoView({
-                behavior: 'smooth'});
-            }, 500);
-        }
-        else {
-            document.getElementById("olga").style.display = "none";
-            document.getElementById("olga").style.paddingTop = "100vh";
-            if (olga != "" && olga != null) {
-                document.getElementById("olga").style.display = "none";
-                document.getElementById("olga").style.paddingTop = "100vh";
+            document.getElementById("vardas").style.display = "none";
+            document.getElementById("vardas").style.paddingTop = "100vh";
+            if (vardas != "" && vardas != null) {
+                document.getElementById("vardas").style.display = "none";
+                document.getElementById("vardas").style.paddingTop = "100vh";
             }
         }
 
-        if (kelioneI != "" || arune != "" || smilte != "" || aleksandra != "" || meta != "" || norbertas != "" || matas != "" || olga != "") {
+        if (kelioneI != "" || vardas != "") {
             document.getElementById("screen").style.top = "-100%";
             document.getElementById("screen").style.backgroundColor = "transparent";
             document.getElementById("display").style.top = "-100%";
@@ -4736,7 +2748,7 @@
             document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
             document.getElementById("display").style.top = "0";
             document.getElementById("body").style.overflow = "hidden";
-            if (kelioneI != "" && kelioneI != null || arune != "" && arune != null || smilte != "" && smilte != null || aleksandra != "" && aleksandra != null || meta != "" && meta != null || norbertas != "" && norbertas != null || matas != "" && matas != null || olga != "" && olga != null) {
+            if (kelioneI != "" && kelioneI != null || vardas != "" && vardas != null) {
                 document.getElementById("screen").style.top = "0";
                 document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
                 document.getElementById("display").style.top = "0";
@@ -4759,109 +2771,19 @@
                 document.getElementById("kelioneI---").style.display = "none";
             }, 310);
         }
-        function closeArune() {
-            document.cookie = "arune=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
-            document.getElementById("aruneUzdarymas").style.pointerEvents = "none";
+        function closeVardas() {
+            document.cookie = "vardas=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
+            document.getElementById("vardasUzdarymas").style.pointerEvents = "none";
             setTimeout(() => {
                 document.getElementById("screen").style.top = "0";
                 document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
                 document.getElementById("display").style.top = "0";
-                document.getElementById("arune").style.paddingTop = "100vh";
+                document.getElementById("vardas").style.paddingTop = "100vh";
             }, 10);
             setTimeout(() => {
-                document.getElementById("aruneUzdarymas").style.pointerEvents = "all";
+                document.getElementById("vardasUzdarymas").style.pointerEvents = "all";
                 document.getElementById("body").style.overflow = "hidden";
-                document.getElementById("arune").style.display = "none";
-            }, 310);
-        }
-        function closeSmilte() {
-            document.cookie = "smilte=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
-            document.getElementById("smilteUzdarymas").style.pointerEvents = "none";
-            setTimeout(() => {
-                document.getElementById("screen").style.top = "0";
-                document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
-                document.getElementById("display").style.top = "0";
-                document.getElementById("smilte").style.paddingTop = "100vh";
-            }, 10);
-            setTimeout(() => {
-                document.getElementById("smilteUzdarymas").style.pointerEvents = "all";
-                document.getElementById("body").style.overflow = "hidden";
-                document.getElementById("smilte").style.display = "none";
-            }, 310);
-        }
-        function closeAleksandra() {
-            document.cookie = "aleksandra=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
-            document.getElementById("aleksandraUzdarymas").style.pointerEvents = "none";
-            setTimeout(() => {
-                document.getElementById("screen").style.top = "0";
-                document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
-                document.getElementById("display").style.top = "0";
-                document.getElementById("aleksandra").style.paddingTop = "100vh";
-            }, 10);
-            setTimeout(() => {
-                document.getElementById("aleksandraUzdarymas").style.pointerEvents = "all";
-                document.getElementById("body").style.overflow = "hidden";
-                document.getElementById("aleksandra").style.display = "none";
-            }, 310);
-        }
-        function closeMeta() {
-            document.cookie = "meta=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
-            document.getElementById("metaUzdarymas").style.pointerEvents = "none";
-            setTimeout(() => {
-                document.getElementById("screen").style.top = "0";
-                document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
-                document.getElementById("display").style.top = "0";
-                document.getElementById("meta").style.paddingTop = "100vh";
-            }, 10);
-            setTimeout(() => {
-                document.getElementById("metaUzdarymas").style.pointerEvents = "all";
-                document.getElementById("body").style.overflow = "hidden";
-                document.getElementById("meta").style.display = "none";
-            }, 310);
-        }
-        function closeNorbertas() {
-            document.cookie = "norbertas=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
-            document.getElementById("norbertasUzdarymas").style.pointerEvents = "none";
-            setTimeout(() => {
-                document.getElementById("screen").style.top = "0";
-                document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
-                document.getElementById("display").style.top = "0";
-                document.getElementById("norbertas").style.paddingTop = "100vh";
-            }, 10);
-            setTimeout(() => {
-                document.getElementById("norbertasUzdarymas").style.pointerEvents = "all";
-                document.getElementById("body").style.overflow = "hidden";
-                document.getElementById("norbertas").style.display = "none";
-            }, 310);
-        }
-        function closeMatas() {
-            document.cookie = "matas=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
-            document.getElementById("matasUzdarymas").style.pointerEvents = "none";
-            setTimeout(() => {
-                document.getElementById("screen").style.top = "0";
-                document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
-                document.getElementById("display").style.top = "0";
-                document.getElementById("matas").style.paddingTop = "100vh";
-            }, 10);
-            setTimeout(() => {
-                document.getElementById("matasUzdarymas").style.pointerEvents = "all";
-                document.getElementById("body").style.overflow = "hidden";
-                document.getElementById("matas").style.display = "none";
-            }, 310);
-        }
-        function closeOlga() {
-            document.cookie = "olga=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
-            document.getElementById("olgaUzdarymas").style.pointerEvents = "none";
-            setTimeout(() => {
-                document.getElementById("screen").style.top = "0";
-                document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
-                document.getElementById("display").style.top = "0";
-                document.getElementById("olga").style.paddingTop = "100vh";
-            }, 10);
-            setTimeout(() => {
-                document.getElementById("olgaUzdarymas").style.pointerEvents = "all";
-                document.getElementById("body").style.overflow = "hidden";
-                document.getElementById("olga").style.display = "none";
+                document.getElementById("vardas").style.display = "none";
             }, 310);
         }
     </script>
