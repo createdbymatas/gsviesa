@@ -36,9 +36,6 @@
             user-select: none;
             cursor: default;
         }
-        img{
-            pointer-events: none;
-        }
         ::-webkit-scrollbar {
             width: 0;
         }
@@ -46,9 +43,19 @@
             background-color: #f2f2f2;
             /* overflow: hidden; */
         }
+        img{
+            pointer-events: none;
+        }
         button{
             touch-action: manipulation;
         }
+        hr{
+            border: none;
+            border-top: 1px solid lightgrey;
+            width: 100%;
+        }
+        
+        /* krovimas */
         #loading{
             width: 100%;
             height: 100%;
@@ -142,6 +149,16 @@
 	        z-index: 1;
 	        background: #f2f2f2;
         }
+        @keyframes spin {
+            0%{
+                transform: rotate(0);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+
+        /* ekrano ispejimas */
         #screenSize{
             width: 100%;
             height: 100%;
@@ -196,15 +213,8 @@
             margin-left: 45px;
             cursor: not-allowed;
         }
-        @keyframes spin {
-            0%{
-                transform: rotate(0);
-            }
-            100%{
-                transform: rotate(360deg);
-            }
-        }
 
+        /* klaviaturos backgroundas */
         #display{
             width: 100%;
             height: 100%;
@@ -239,6 +249,7 @@
             transition: 0.2s;
             /* display: none; */
         }
+        /* klaviaturos meniu */
         #ivestiKoda{
             color: white;
             font-size: 20px;
@@ -276,7 +287,7 @@
         #keypad button:active{
             background-color: rgba(255,255,255,0.7);
         }
-        #istrinimas:active{
+        #istrynimas:active{
             opacity: 0.5;
         }
         #keypad input{
@@ -321,6 +332,7 @@
 
 
 
+        /* kelione */
         #kelioneI---{
             width: 100%;
             height: auto;
@@ -409,9 +421,6 @@
         #kelioneUzdarymas:active{
             opacity: 0.2;
         }
-
-
-
         .centerLoader2{
             width: 50px;
             height: 50px;
@@ -780,340 +789,7 @@
             z-index: 20;
         }
 
-
-        #vardas{
-            width: 100%;
-            height: 100%;
-            background-color: #f2f2f2;
-            transition: 0.2s;
-            padding-bottom: 90px;
-            overflow: hidden;
-            overflow-y: scroll;
-            padding-top: 100vh;
-            display: block;
-        }
-        #topInfoVardas{
-            position: absolute;
-            width: 5px;
-            height: 5px;
-            top: 0;
-            left: 0;
-        }
-        #infoVardas{
-            width: 100%;
-            height: 60px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: rgba(242, 242, 242, 1);
-            -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
-            color: black;
-            position: fixed;
-            left: 0;
-            top: 0;
-            right: 0;
-            z-index: 10;
-        }
-        #infoVardas i{
-            font-size: 15px;
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            z-index: 11;
-            transition: 0.15s;
-            cursor: pointer;
-            width: 30px;
-            height: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 100%;
-            background-color: #DEDEDE;
-            color: black;
-        }
-        #vardasTekstas{
-            font-size: 25px;
-            font-weight: 600;
-            color: black;
-            overflow: hidden;
-            white-space: nowrap;
-            display: inline-block;
-            text-overflow: ellipsis;
-            width: 100%;
-            position: absolute;
-            top: 60px;
-            padding-left: 15px;
-            padding-right: 15px;
-            z-index: 2;
-        }
-        #vardasTekstas2{
-            font-size: 20px;
-            font-weight: 600;
-            color: black;
-            overflow: hidden;
-            white-space: nowrap;
-            display: inline-block;
-            text-overflow: ellipsis;
-            width: 100%;
-            position: absolute;
-            top: 17px;
-            padding-left: 60px;
-            padding-right: 15px;
-            z-index: 10;
-            opacity: 0;
-        }
-        #vardasUzdarymas:active{
-            opacity: 0.2;
-        }
-        #scenarijusVardasBackground{
-            width: 100%;
-            height: auto;
-            background-color: rgba(242, 242, 242, 0.75);
-            -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 15px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            z-index: 17;
-            box-shadow: 0 0 10px lightgrey;
-            border-radius: 25px 25px 0 0;
-        }
-        #atsisiustiScenarijuVardas{
-            width: 100%;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 15px;
-            border: none;
-            background-color: transparent;
-            color: black;
-            border: 2px solid black;
-            font-size: 15px;
-            cursor: pointer;
-        }
-        #downloadingBackgroundVardas{
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 19;
-            background-color: rgba(211, 211, 211, 0.75);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
-            opacity: 0;
-            display: none;
-        }
-        #atsisiunciamasScenarijusVardas{
-            font-size: 15px;
-            width: 100%;
-            height: 50px;
-            border-radius: 25px 25px 0 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #f2f2f2;
-            box-shadow: 0 0 10px lightgrey;
-            position: fixed;
-            bottom: -100%;
-            left: 0;
-            right: 0;
-            z-index: 20;
-        }
-
-        .karnavalasIcon{
-            position: absolute;
-            width: 25px;
-            height: 100%;
-            border-radius: 25px;
-            justify-content: center;
-            align-items: center;
-            top: 0;
-            left: 27.5px;
-            font-size: 20px;
-            color: black;
-        }
-        .pagrTekstas{
-            font-weight: 600;
-            font-size: 17px;
-            color: black;
-            width: 100%;
-            overflow: hidden;
-            white-space: nowrap;
-            display: inline-block;
-            text-overflow: ellipsis;
-        }
-        .antrTekstas{
-            color: grey;
-            font-size: 13px;
-            font-weight: 400;
-            width: 100%;
-        }
-        .pastabaTekstas{
-            color: black;
-            font-size: 13px;
-            font-weight: 400;
-            width: 100%;
-            position: relative;
-            margin-top: 7px;
-            padding-left: 17px;
-        }
-        .sauktukas{
-            position: absolute;
-            left: 0;
-            border: 1px solid black;
-            font-weight: 600;
-            width: 13px;
-            height: 13px;
-            border-radius: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 10px;
-            margin-top: 1px;
-        }
-        .vardas{
-            width: 100%;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            flex-direction: column;
-            margin-top: 110px;
-            padding-left: 67.5px;
-            padding-right: 15px;
-            position: relative;
-            margin-bottom: 5px;
-            padding-top: 7px;
-            padding-bottom: 7px;
-        }
-        .vardasIcon{
-            position: absolute;
-            width: 25px;
-            height: 25px;
-            border-radius: 25px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            top: 15px;
-            left: 27.5px;
-            font-size: 20px;
-            color: black;
-        }
-        .vardasAntrTekstas{
-            color: grey;
-            font-size: 13px;
-            font-weight: 400;
-            width: 100%;
-            overflow: hidden;
-            white-space: nowrap;
-            display: inline-block;
-            text-overflow: ellipsis;
-        }
-        .apie{
-            width: 100%;
-            height: auto;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            flex-direction: column;
-            margin-top: 5px;
-            padding-left: 67.5px;
-            padding-right: 15px;
-            position: relative;
-            margin-bottom: 5px;
-            padding-top: 7px;
-            padding-bottom: 7px;
-        }
-        .pasiruosimas{
-            width: 100%;
-            height: auto;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            flex-direction: column;
-            margin-top: 5px;
-            padding-left: 67.5px;
-            padding-right: 15px;
-            position: relative;
-            margin-bottom: 5px;
-            padding-top: 7px;
-            padding-bottom: 7px;
-        }
-        .zodziai{
-            width: 100%;
-            height: auto;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            flex-direction: column;
-            margin-top: 5px;
-            padding-left: 67.5px;
-            padding-right: 15px;
-            position: relative;
-            margin-bottom: 5px;
-            padding-top: 7px;
-            padding-bottom: 7px;
-        }
-        .apranga{
-            width: 100%;
-            height: auto;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            flex-direction: column;
-            margin-top: 5px;
-            padding-left: 67.5px;
-            padding-right: 15px;
-            position: relative;
-            margin-bottom: 5px;
-            padding-top: 7px;
-            padding-bottom: 7px;
-        }
-        .vaidinimas{
-            width: 100%;
-            height: auto;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            flex-direction: column;
-            margin-top: 5px;
-            padding-left: 67.5px;
-            padding-right: 15px;
-            position: relative;
-            margin-bottom: 5px;
-            padding-top: 7px;
-            padding-bottom: 7px;
-        }
-        .papildomai{
-            width: 100%;
-            height: auto;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            flex-direction: column;
-            margin-top: 5px;
-            padding-left: 67.5px;
-            padding-right: 15px;
-            position: relative;
-            margin-bottom: 5px;
-            padding-top: 7px;
-            padding-bottom: 7px;
-        }
-
-
-
+        /* keliones informacija/objektai */
         .startas{
             width: 100%;
             height: 50px;
@@ -1197,7 +873,6 @@
             position: relative;
             margin-bottom: 5px;
         }
-
         .ejimoTaskelis{
             background-color: black;
         }
@@ -1439,11 +1114,6 @@
             margin-top: 5px;
             margin-bottom: 5px;
         }
-        hr{
-            border: none;
-            border-top: 1px solid lightgrey;
-            width: 100%;
-        }
         .travelInfoBottom{
             font-size: 13px;
             color: grey;
@@ -1451,6 +1121,343 @@
             padding-left: 10px;
             padding-right: 10px;
         }
+
+
+
+        /* spektaklis */
+        #vardas{
+            width: 100%;
+            height: 100%;
+            background-color: #f2f2f2;
+            transition: 0.2s;
+            padding-bottom: 90px;
+            overflow: hidden;
+            overflow-y: scroll;
+            padding-top: 100vh;
+            display: block;
+        }
+        #topInfoVardas{
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            top: 0;
+            left: 0;
+        }
+        #infoVardas{
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(242, 242, 242, 1);
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+            color: black;
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            z-index: 10;
+        }
+        #infoVardas i{
+            font-size: 15px;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            z-index: 11;
+            transition: 0.15s;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            background-color: #DEDEDE;
+            color: black;
+        }
+        #vardasTekstas{
+            font-size: 25px;
+            font-weight: 600;
+            color: black;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            text-overflow: ellipsis;
+            width: 100%;
+            position: absolute;
+            top: 60px;
+            padding-left: 15px;
+            padding-right: 15px;
+            z-index: 2;
+        }
+        #vardasTekstas2{
+            font-size: 20px;
+            font-weight: 600;
+            color: black;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            text-overflow: ellipsis;
+            width: 100%;
+            position: absolute;
+            top: 17px;
+            padding-left: 60px;
+            padding-right: 15px;
+            z-index: 10;
+            opacity: 0;
+        }
+        #vardasUzdarymas:active{
+            opacity: 0.2;
+        }
+        #scenarijusVardasBackground{
+            width: 100%;
+            height: auto;
+            background-color: rgba(242, 242, 242, 0.75);
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            z-index: 17;
+            box-shadow: 0 0 10px lightgrey;
+            border-radius: 25px 25px 0 0;
+        }
+        #atsisiustiScenarijuVardas{
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            border: none;
+            background-color: transparent;
+            color: black;
+            border: 2px solid black;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        #downloadingBackgroundVardas{
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 19;
+            background-color: rgba(211, 211, 211, 0.75);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+            opacity: 0;
+            display: none;
+        }
+        #atsisiunciamasScenarijusVardas{
+            font-size: 15px;
+            width: 100%;
+            height: 50px;
+            border-radius: 25px 25px 0 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f2f2f2;
+            box-shadow: 0 0 10px lightgrey;
+            position: fixed;
+            bottom: -100%;
+            left: 0;
+            right: 0;
+            z-index: 20;
+        }
+
+        /* spektaklio informacija/objektai */
+        .karnavalasIcon{
+            position: absolute;
+            width: 25px;
+            height: 100%;
+            border-radius: 25px;
+            justify-content: center;
+            align-items: center;
+            top: 0;
+            left: 27.5px;
+            font-size: 20px;
+            color: black;
+        }
+        .pagrTekstas{
+            font-weight: 600;
+            font-size: 17px;
+            color: black;
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            text-overflow: ellipsis;
+        }
+        .antrTekstas{
+            color: grey;
+            font-size: 13px;
+            font-weight: 400;
+            width: 100%;
+        }
+        .pastabaTekstas{
+            color: black;
+            font-size: 13px;
+            font-weight: 400;
+            width: 100%;
+            position: relative;
+            margin-top: 7px;
+            padding-left: 17px;
+        }
+        .sauktukas{
+            position: absolute;
+            left: 0;
+            border: 1px solid black;
+            font-weight: 600;
+            width: 13px;
+            height: 13px;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 10px;
+            margin-top: 1px;
+        }
+        .vardas{
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            margin-top: 110px;
+            padding-left: 67.5px;
+            padding-right: 15px;
+            position: relative;
+            margin-bottom: 5px;
+            padding-top: 7px;
+            padding-bottom: 7px;
+        }
+        .vardasIcon{
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            border-radius: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 15px;
+            left: 27.5px;
+            font-size: 20px;
+            color: black;
+        }
+        .vardasAntrTekstas{
+            color: grey;
+            font-size: 13px;
+            font-weight: 400;
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            text-overflow: ellipsis;
+        }
+        .apie{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            margin-top: 5px;
+            padding-left: 67.5px;
+            padding-right: 15px;
+            position: relative;
+            margin-bottom: 5px;
+            padding-top: 7px;
+            padding-bottom: 7px;
+        }
+        .pasiruosimas{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            margin-top: 5px;
+            padding-left: 67.5px;
+            padding-right: 15px;
+            position: relative;
+            margin-bottom: 5px;
+            padding-top: 7px;
+            padding-bottom: 7px;
+        }
+        .zodziai{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            margin-top: 5px;
+            padding-left: 67.5px;
+            padding-right: 15px;
+            position: relative;
+            margin-bottom: 5px;
+            padding-top: 7px;
+            padding-bottom: 7px;
+        }
+        .apranga{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            margin-top: 5px;
+            padding-left: 67.5px;
+            padding-right: 15px;
+            position: relative;
+            margin-bottom: 5px;
+            padding-top: 7px;
+            padding-bottom: 7px;
+        }
+        .vaidinimas{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            margin-top: 5px;
+            padding-left: 67.5px;
+            padding-right: 15px;
+            position: relative;
+            margin-bottom: 5px;
+            padding-top: 7px;
+            padding-bottom: 7px;
+        }
+        .papildomai{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            margin-top: 5px;
+            padding-left: 67.5px;
+            padding-right: 15px;
+            position: relative;
+            margin-bottom: 5px;
+            padding-top: 7px;
+            padding-bottom: 7px;
+        }
+
+
 
         @media only screen and (max-width: 750px){
             #screenSize{
@@ -1702,24 +1709,24 @@
                         <div id="taskelis6"></div>
                     </div>
                     <div class="keypadSorting" style="display: flex;">
-                        <button type="button" onclick="pirmas()" id="vienasY" ontouchstart>1<i class="fa-solid fa-plus buttonLetters" style="opacity: 0; display: block;"></i></button>
-                        <button type="button" onclick="antras()" id="duY" ontouchstart>2<p class="buttonLetters">A B C</p></button>
-                        <button type="button" onclick="trecias()" id="trysY" ontouchstart>3<p class="buttonLetters">D E F</p></button>
+                        <button type="button" onclick="pirmas()" id="vienasBtn" ontouchstart>1<i class="fa-solid fa-plus buttonLetters" style="opacity: 0; display: block;"></i></button>
+                        <button type="button" onclick="antras()" id="duBtn" ontouchstart>2<p class="buttonLetters">A B C</p></button>
+                        <button type="button" onclick="trecias()" id="trysBtn" ontouchstart>3<p class="buttonLetters">D E F</p></button>
                     </div>
                     <div class="keypadSorting" style="display: flex;">
-                        <button type="button" onclick="ketvirtas()" id="keturiY" ontouchstart>4<p class="buttonLetters">G H I</p></button>
-                        <button type="button" onclick="penktas()" id="penkiY" ontouchstart>5<p class="buttonLetters">J K L</p></button>
-                        <button type="button" onclick="sestas()" id="sesiY" ontouchstart>6<p class="buttonLetters">M N O</p></button>
+                        <button type="button" onclick="ketvirtas()" id="keturiBtn" ontouchstart>4<p class="buttonLetters">G H I</p></button>
+                        <button type="button" onclick="penktas()" id="penkiBtn" ontouchstart>5<p class="buttonLetters">J K L</p></button>
+                        <button type="button" onclick="sestas()" id="sesiBtn" ontouchstart>6<p class="buttonLetters">M N O</p></button>
                     </div>
                     <div class="keypadSorting" style="display: flex;">
-                        <button type="button" onclick="septintas()" id="septyniY" ontouchstart>7<p class="buttonLetters">P Q R S</p></button>
-                        <button type="button" onclick="astuntas()" id="astuoniY" ontouchstart>8<p class="buttonLetters">T U V</p></button>
-                        <button type="button" onclick="devintas()" id="devyniY" ontouchstart>9<p class="buttonLetters">W X Y Z</p></button>
+                        <button type="button" onclick="septintas()" id="septyniBtn" ontouchstart>7<p class="buttonLetters">P Q R S</p></button>
+                        <button type="button" onclick="astuntas()" id="astuoniBtn" ontouchstart>8<p class="buttonLetters">T U V</p></button>
+                        <button type="button" onclick="devintas()" id="devyniBtn" ontouchstart>9<p class="buttonLetters">W X Y Z</p></button>
                     </div>
                     <div class="keypadSorting" style="display: flex;">
                         <button type="button" onclick="check(this.form)" id="gerai" ontouchstart></button>
-                        <button type="button" onclick="nulinis()" id="nulisY" ontouchstart>0<i class="fa-solid fa-plus buttonLetters" style="display: block;"></i></button>
-                        <button type="button" onclick="istrinti()" id="istrinimas" style="font-size: 18px; background-color: transparent; color: transparent; pointer-events: none;" ontouchstart>Trinti</button>
+                        <button type="button" onclick="nulinis()" id="nulisBtn" ontouchstart>0<i class="fa-solid fa-plus buttonLetters" style="display: block;"></i></button>
+                        <button type="button" onclick="istrinti()" id="istrynimas" style="font-size: 18px; background-color: transparent; color: transparent; pointer-events: none;" ontouchstart>Trinti</button>
                     </div>
                 </form>
             </div>
@@ -1942,43 +1949,88 @@
             <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
         </div>
     </div>
-
     <a id="download_script" href="scenarijus.pdf" download style="display: none;">download_script</a>
 
     <script src="https://kit.fontawesome.com/a11707644f.js" crossorigin="anonymous"></script>
     <script>
-        function scenarijusVardas() {
-            document.getElementById("downloadingBackgroundVardas").style.display = "block";
-            document.getElementById("body").style.overflow = "hidden";
+        function getCookie(cname) {
+            let name = cname + "=";
+            let ca = document.cookie.split(';');
+            for(let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+        setTimeout(() => {
+            document.getElementById("createdByMatas").style.opacity = "1";
+        }, 100);
+        function loadFunction() {
             setTimeout(() => {
-                document.getElementById("atsisiunciamasScenarijusVardas").style.bottom = "0";
-                document.getElementById("downloadingBackgroundVardas").style.opacity = "1";
-            }, 10);
+                document.getElementById("raide14").style.opacity = "0";
+            }, 1600);
             setTimeout(() => {
-                document.getElementById("download_script").click();
-            }, 1010);
+                document.getElementById("raide13").style.opacity = "0";
+            }, 1700);
             setTimeout(() => {
-                document.getElementById("atsisiunciamasScenarijusVardas").style.bottom = "-100%";
-                document.getElementById("downloadingBackgroundVardas").style.opacity = "0";
-            }, 6010);
+                document.getElementById("raide12").style.opacity = "0";
+            }, 1800);
             setTimeout(() => {
-                document.getElementById("downloadingBackgroundVardas").style.display = "none";
-                document.getElementById("body").style.overflow = "scroll";
-            }, 6310);
+                document.getElementById("raide11").style.opacity = "0";
+            }, 1900);
+            setTimeout(() => {
+                document.getElementById("raide10").style.opacity = "0";
+            }, 2000);
+            setTimeout(() => {
+                document.getElementById("raide9").style.opacity = "0";
+            }, 2100);
+            setTimeout(() => {
+                document.getElementById("raide8").style.opacity = "0";
+            }, 2200);
+            setTimeout(() => {
+                document.getElementById("raide7").style.opacity = "0";
+            }, 2300);
+            setTimeout(() => {
+                document.getElementById("raide6").style.opacity = "0";
+            }, 2400);
+            setTimeout(() => {
+                document.getElementById("raide5").style.opacity = "0";
+            }, 2500);
+            setTimeout(() => {
+                document.getElementById("raide4").style.opacity = "0";
+            }, 2600);
+            setTimeout(() => {
+                document.getElementById("raide3").style.opacity = "0";
+            }, 2700);
+            setTimeout(() => {
+                document.getElementById("raide2").style.opacity = "0";
+            }, 2800);
+            setTimeout(() => {
+                document.getElementById("raide1").style.opacity = "0";
+            }, 2900);
+            setTimeout(() => {
+                    document.getElementById("loading").style.opacity = "0";
+                    document.getElementById("createdByMatas").style.display = "none";
+            }, 3000);
+            setTimeout(() => {
+                document.getElementById("loading").style.display = "none";
+            }, 3300);
         }
 
-
-
-
-        // Disable right-click
+        // isjungti right-click
         document.addEventListener('contextmenu', (e) => e.preventDefault());
 
         function ctrlShiftKey(e, keyCode) {
             return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
         }
 
+        // isjungti f12, ctrl+shift+i, ctrl+shift+j, ctrl+u
         document.onkeydown = (e) => {
-        // Disable F12, Ctrl + Shift + I, Ctrl + Shift + J, Ctrl + U
         if (
             event.keyCode === 123 ||
             ctrlShiftKey(e, 'I') ||
@@ -1988,6 +2040,8 @@
         )
             return false;
         };
+
+        // scrollinimo animacijos, tamsus rezimas
         window.onscroll = function() {scrollFunction()};
         function scrollFunction() {
             if (document.body.scrollTop > 25 || document.documentElement.scrollTop > 25) {
@@ -2031,6 +2085,8 @@
                 document.getElementById("infoVardas").style.boxShadow = "none";
             }
         }
+
+
 
         function activateTicket() {
             document.getElementById("ticketActivationBg").style.display = "block";
@@ -2157,8 +2213,6 @@
             }, 6610);
         }
 
-
-
         function openStops() {
             document.getElementById("visosStotelesBg").style.display = "block";
             document.getElementById("body").style.overflow = "hidden";
@@ -2188,8 +2242,6 @@
             }, 300);
         }
 
-
-
         function openMaps() {
             document.getElementById("openingMapsBg").style.display = "block";
             document.getElementById("body").style.overflow = "hidden";
@@ -2212,82 +2264,34 @@
 
 
 
+        function scenarijusVardas() {
+            document.getElementById("downloadingBackgroundVardas").style.display = "block";
+            document.getElementById("body").style.overflow = "hidden";
+            setTimeout(() => {
+                document.getElementById("atsisiunciamasScenarijusVardas").style.bottom = "0";
+                document.getElementById("downloadingBackgroundVardas").style.opacity = "1";
+            }, 10);
+            setTimeout(() => {
+                document.getElementById("download_script").click();
+            }, 1010);
+            setTimeout(() => {
+                document.getElementById("atsisiunciamasScenarijusVardas").style.bottom = "-100%";
+                document.getElementById("downloadingBackgroundVardas").style.opacity = "0";
+            }, 6010);
+            setTimeout(() => {
+                document.getElementById("downloadingBackgroundVardas").style.display = "none";
+                document.getElementById("body").style.overflow = "scroll";
+            }, 6310);
+        }
 
 
-        function getCookie(cname) {
-            let name = cname + "=";
-            let ca = document.cookie.split(';');
-            for(let i = 0; i < ca.length; i++) {
-                let c = ca[i];
-                while (c.charAt(0) == ' ') {
-                    c = c.substring(1);
-                }
-                if (c.indexOf(name) == 0) {
-                    return c.substring(name.length, c.length);
-                }
-            }
-            return "";
-        }
-        setTimeout(() => {
-            document.getElementById("createdByMatas").style.opacity = "1";
-        }, 100);
-        function loadFunction() {
-            setTimeout(() => {
-                document.getElementById("raide14").style.opacity = "0";
-            }, 1600);
-            setTimeout(() => {
-                document.getElementById("raide13").style.opacity = "0";
-            }, 1700);
-            setTimeout(() => {
-                document.getElementById("raide12").style.opacity = "0";
-            }, 1800);
-            setTimeout(() => {
-                document.getElementById("raide11").style.opacity = "0";
-            }, 1900);
-            setTimeout(() => {
-                document.getElementById("raide10").style.opacity = "0";
-            }, 2000);
-            setTimeout(() => {
-                document.getElementById("raide9").style.opacity = "0";
-            }, 2100);
-            setTimeout(() => {
-                document.getElementById("raide8").style.opacity = "0";
-            }, 2200);
-            setTimeout(() => {
-                document.getElementById("raide7").style.opacity = "0";
-            }, 2300);
-            setTimeout(() => {
-                document.getElementById("raide6").style.opacity = "0";
-            }, 2400);
-            setTimeout(() => {
-                document.getElementById("raide5").style.opacity = "0";
-            }, 2500);
-            setTimeout(() => {
-                document.getElementById("raide4").style.opacity = "0";
-            }, 2600);
-            setTimeout(() => {
-                document.getElementById("raide3").style.opacity = "0";
-            }, 2700);
-            setTimeout(() => {
-                document.getElementById("raide2").style.opacity = "0";
-            }, 2800);
-            setTimeout(() => {
-                document.getElementById("raide1").style.opacity = "0";
-            }, 2900);
-            setTimeout(() => {
-                    document.getElementById("loading").style.opacity = "0";
-                    document.getElementById("createdByMatas").style.display = "none";
-            }, 3000);
-            setTimeout(() => {
-                document.getElementById("loading").style.display = "none";
-            }, 3300);
-        }
+
         var inputas = ""
         function pirmas() {
             inputas = inputas + 1;
             document.getElementById("kodas").value = inputas;
-            document.getElementById("istrinimas").style.color = "white";
-            document.getElementById("istrinimas").style.pointerEvents = "all";
+            document.getElementById("istrynimas").style.color = "white";
+            document.getElementById("istrynimas").style.pointerEvents = "all";
             if(inputas.length == "1")
                 {
                     document.getElementById("taskelis1").style.backgroundColor = "white";
@@ -2317,8 +2321,8 @@
         function antras() {
             inputas = inputas + 2;
             document.getElementById("kodas").value = inputas;
-            document.getElementById("istrinimas").style.color = "white";
-            document.getElementById("istrinimas").style.pointerEvents = "all";
+            document.getElementById("istrynimas").style.color = "white";
+            document.getElementById("istrynimas").style.pointerEvents = "all";
             if(inputas.length == "1")
                 {
                     document.getElementById("taskelis1").style.backgroundColor = "white";
@@ -2348,8 +2352,8 @@
         function trecias() {
             inputas = inputas + 3;
             document.getElementById("kodas").value = inputas;
-            document.getElementById("istrinimas").style.color = "white";
-            document.getElementById("istrinimas").style.pointerEvents = "all";
+            document.getElementById("istrynimas").style.color = "white";
+            document.getElementById("istrynimas").style.pointerEvents = "all";
             if(inputas.length == "1")
                 {
                     document.getElementById("taskelis1").style.backgroundColor = "white";
@@ -2379,8 +2383,8 @@
         function ketvirtas() {
             inputas = inputas + 4;
             document.getElementById("kodas").value = inputas;
-            document.getElementById("istrinimas").style.color = "white";
-            document.getElementById("istrinimas").style.pointerEvents = "all";
+            document.getElementById("istrynimas").style.color = "white";
+            document.getElementById("istrynimas").style.pointerEvents = "all";
             if(inputas.length == "1")
                 {
                     document.getElementById("taskelis1").style.backgroundColor = "white";
@@ -2410,8 +2414,8 @@
         function penktas() {
             inputas = inputas + 5;
             document.getElementById("kodas").value = inputas;
-            document.getElementById("istrinimas").style.color = "white";
-            document.getElementById("istrinimas").style.pointerEvents = "all";
+            document.getElementById("istrynimas").style.color = "white";
+            document.getElementById("istrynimas").style.pointerEvents = "all";
             if(inputas.length == "1")
                 {
                     document.getElementById("taskelis1").style.backgroundColor = "white";
@@ -2441,8 +2445,8 @@
         function sestas() {
             inputas = inputas + 6;
             document.getElementById("kodas").value = inputas;
-            document.getElementById("istrinimas").style.color = "white";
-            document.getElementById("istrinimas").style.pointerEvents = "all";
+            document.getElementById("istrynimas").style.color = "white";
+            document.getElementById("istrynimas").style.pointerEvents = "all";
             if(inputas.length == "1")
                 {
                     document.getElementById("taskelis1").style.backgroundColor = "white";
@@ -2472,8 +2476,8 @@
         function septintas() {
             inputas = inputas + 7;
             document.getElementById("kodas").value = inputas;
-            document.getElementById("istrinimas").style.color = "white";
-            document.getElementById("istrinimas").style.pointerEvents = "all";
+            document.getElementById("istrynimas").style.color = "white";
+            document.getElementById("istrynimas").style.pointerEvents = "all";
             if(inputas.length == "1")
                 {
                     document.getElementById("taskelis1").style.backgroundColor = "white";
@@ -2503,8 +2507,8 @@
         function astuntas() {
             inputas = inputas + 8;
             document.getElementById("kodas").value = inputas;
-            document.getElementById("istrinimas").style.color = "white";
-            document.getElementById("istrinimas").style.pointerEvents = "all";
+            document.getElementById("istrynimas").style.color = "white";
+            document.getElementById("istrynimas").style.pointerEvents = "all";
             if(inputas.length == "1")
                 {
                     document.getElementById("taskelis1").style.backgroundColor = "white";
@@ -2534,8 +2538,8 @@
         function devintas() {
             inputas = inputas + 9;
             document.getElementById("kodas").value = inputas;
-            document.getElementById("istrinimas").style.color = "white";
-            document.getElementById("istrinimas").style.pointerEvents = "all";
+            document.getElementById("istrynimas").style.color = "white";
+            document.getElementById("istrynimas").style.pointerEvents = "all";
             if(inputas.length == "1")
                 {
                     document.getElementById("taskelis1").style.backgroundColor = "white";
@@ -2565,8 +2569,8 @@
         function nulinis() {
             inputas = inputas + 0;
             document.getElementById("kodas").value = inputas;
-            document.getElementById("istrinimas").style.color = "white";
-            document.getElementById("istrinimas").style.pointerEvents = "all";
+            document.getElementById("istrynimas").style.color = "white";
+            document.getElementById("istrynimas").style.pointerEvents = "all";
             if(inputas.length == "1")
                 {
                     document.getElementById("taskelis1").style.backgroundColor = "white";
@@ -2596,8 +2600,8 @@
         function istrinti() {
             inputas = ""
             document.getElementById("kodas").value = '';
-            document.getElementById("istrinimas").style.color = "transparent";
-            document.getElementById("istrinimas").style.pointerEvents = "none";
+            document.getElementById("istrynimas").style.color = "transparent";
+            document.getElementById("istrynimas").style.pointerEvents = "none";
             document.getElementById("taskelis1").style.backgroundColor = "transparent";
             document.getElementById("taskelis2").style.backgroundColor = "transparent";
             document.getElementById("taskelis3").style.backgroundColor = "transparent";
@@ -2615,8 +2619,8 @@
                 document.querySelector('#topInfo').scrollIntoView({
                     behavior: 'smooth'
                 });
-                document.getElementById("istrinimas").style.color = "transparent";
-                document.getElementById("istrinimas").style.pointerEvents = "none";
+                document.getElementById("istrynimas").style.color = "transparent";
+                document.getElementById("istrynimas").style.pointerEvents = "none";
                 document.getElementById("keypad").style.opacity = "0.3";
                 setTimeout(() => {
                     document.getElementById("keypad").style.opacity = "1";
@@ -2650,8 +2654,8 @@
                 document.querySelector('#topInfoVardas').scrollIntoView({
                     behavior: 'smooth'
                 });
-                document.getElementById("istrinimas").style.color = "transparent";
-                document.getElementById("istrinimas").style.pointerEvents = "none";
+                document.getElementById("istrynimas").style.color = "transparent";
+                document.getElementById("istrynimas").style.pointerEvents = "none";
                 setTimeout(() => {
                     document.getElementById("keypad").style.opacity = "0.5";
                 }, 150);
@@ -2683,8 +2687,8 @@
                 document.getElementById("loading").style.display = "flex";
                 document.getElementById("ivestiKoda").style.opacity = "0.3";
                 document.getElementById("keypad").style.opacity = "0.3";
-                document.getElementById("istrinimas").style.color = "transparent";
-                document.getElementById("istrinimas").style.pointerEvents = "none";
+                document.getElementById("istrynimas").style.color = "transparent";
+                document.getElementById("istrynimas").style.pointerEvents = "none";
                 setTimeout(() => {
                     document.getElementById("taskeliai").style.marginLeft = "-100px";
                     document.getElementById("keypad").style.opacity = "1";
@@ -2699,7 +2703,6 @@
                     document.getElementById("taskelis6").style.backgroundColor = "transparent";
                 }, 3600);
                 setTimeout(() => {
-                    window.navigator.vibrate(100);
                     document.getElementById("taskeliai").style.marginLeft = "100px";
                 }, 3700);
                 setTimeout(() => {
