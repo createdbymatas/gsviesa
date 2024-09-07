@@ -71,6 +71,7 @@
             opacity: 0;
             color: black;
             text-align: center;
+            cursor: wait;
         }
         .spin-loader{
 	        border-radius: 80%;
@@ -80,6 +81,7 @@
 	        position: relative;
 	        animation: spin 0.65s linear 0s infinite normal;
 	        background: lightgrey;
+            cursor: wait;
         }
         .spin-loader:before, .spin-loader:after{
 	        content: "";
@@ -161,12 +163,14 @@
             text-align: center;
             margin-bottom: 20px;
             color: black;
+            cursor: not-allowed;
         }
         #screenSizeTekstas2{
             font-size: 17px;
             text-align: center;
             margin-bottom: 20px;
             color: black;
+            cursor: not-allowed;
         }
         #sizeDiv{
             width: 100px;
@@ -174,11 +178,13 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            cursor: not-allowed;
         }
         #phoneIcon{
             font-size: 70px;
             position: absolute;
             color: black;
+            cursor: not-allowed;
         }
         #xIcon{
             font-size: 30px;
@@ -188,6 +194,7 @@
             margin-top: 60px;
             z-index: 2;
             margin-left: 45px;
+            cursor: not-allowed;
         }
         @keyframes spin {
             0%{
@@ -286,7 +293,8 @@
             font-size: 10px;
             margin-bottom: 5px;
             display: block;
-            transition: 0.01s; 
+            transition: 0.01s;
+            cursor: pointer;
         }
         #gerai{
             pointer-events: none;
@@ -1805,11 +1813,11 @@
                 <p class="autobusasIcon" style="display: flex;"><i class="fa-solid fa-bus"></i></p>
                 <p class="kelionesTekstas1"><span class="autobusoNr">00</span> ----- <i class="fa-regular fa-snowflake snaige" style="margin-top: 3px; margin-left: 5px;"></i><i class="fa-solid fa-wheelchair neigaliesiems" style="margin-top: 3px; margin-left: 25px;"></i></p>
                 <p class="kelionesTekstas2">Išvyksta 00:00</p>
-                <p class="bilietaiTekstas" onclick="activateTicket()" ontouchstart>E. bilietai <i class="fa-solid fa-chevron-right"></i></p>
+                <p class="bilietaiTekstas" onclick="activateTicket()" ontouchstart>E. bilietai <i class="fa-solid fa-chevron-right" style="cursor: pointer;"></i></p>
             </div>
             <div class="separationLine2"><hr></div>
             <div class="transportasDiv3" style="display: flex;">
-                <p class="stotelesTekstas" onclick="openStops()" ontouchstart>Važiuok -- st. 00 min <i class="fa-solid fa-chevron-down"></i></p>
+                <p class="stotelesTekstas" onclick="openStops()" ontouchstart>Važiuok -- st. 00 min <i class="fa-solid fa-chevron-down" style="cursor: pointer;"></i></p>
             </div>
             <div class="separationLine2"><hr></div>
             <div class="transportasDiv4" style="display: flex;">
@@ -1840,7 +1848,7 @@
             </div>
             <div class="separationLine2"><hr></div>
             <div class="transportasDiv3" style="display: flex;">
-                <p class="stotelesTekstas" onclick="openTracks()" ontouchstart>Važiuok -- st. 00 min <i class="fa-solid fa-chevron-down"></i></p>
+                <p class="stotelesTekstas" onclick="openTracks()" ontouchstart>Važiuok -- st. 00 min <i class="fa-solid fa-chevron-down" style="cursor: pointer;"></i></p>
             </div>
             <div class="separationLine2"><hr></div>
             <div class="transportasDiv4" style="display: flex;">
@@ -1883,7 +1891,7 @@
         <p id="vardasTekstas">Vaidinimas "Mažasis princas - karjera"</p>
 
         <div id="scenarijusVardasBackground">
-            <button onclick="scenarijusVardas()" class="warningButton" id="atsisiustiScenarijuVardas" ontouchstart><i class="fa-solid fa-scroll" style="margin-right: 5px;"></i>Atsisiųsti visą scenarijų</button>
+            <button onclick="scenarijusVardas()" id="atsisiustiScenarijuVardas" ontouchstart><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti visą scenarijų</button>
         </div>
 
         <div id="downloadingBackgroundVardas"></div>
@@ -1931,7 +1939,7 @@
             <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Papildomai:</p>
             <p class="antrTekstas">Papildomai aprašymas.</p>
-            <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" class="warningButton" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px;"></i>Atsisiųsti failą</button> -->
+            <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
         </div>
     </div>
 
@@ -2691,6 +2699,7 @@
                     document.getElementById("taskelis6").style.backgroundColor = "transparent";
                 }, 3600);
                 setTimeout(() => {
+                    window.navigator.vibrate(100);
                     document.getElementById("taskeliai").style.marginLeft = "100px";
                 }, 3700);
                 setTimeout(() => {
