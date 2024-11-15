@@ -1311,6 +1311,192 @@
             padding-bottom: 15px;
             padding-left: 15px;
         }
+        /* Smilte */
+        #Smilte{
+            width: 100%;
+            height: 100%;
+            background-color: #f2f2f2;
+            transition: 0.2s;
+            padding-bottom: 90px;
+            overflow: hidden;
+            overflow-y: scroll;
+            padding-top: 100vh;
+            display: block;
+        }
+        #topInfoSmilte{
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            top: 0;
+            left: 0;
+        }
+        #infoSmilte{
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(242, 242, 242, 1);
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+            color: black;
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            z-index: 10;
+        }
+        #infoSmilte i{
+            font-size: 15px;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            z-index: 11;
+            transition: 0.15s;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            background-color: #DEDEDE;
+            color: black;
+        }
+        #SmilteTekstas{
+            font-size: 25px;
+            font-weight: 600;
+            color: black;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            text-overflow: ellipsis;
+            width: 100%;
+            position: absolute;
+            top: 60px;
+            padding-left: 15px;
+            padding-right: 15px;
+            z-index: 2;
+        }
+        #SmilteTekstas2{
+            font-size: 20px;
+            font-weight: 600;
+            color: black;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            text-overflow: ellipsis;
+            width: 100%;
+            position: absolute;
+            top: 17px;
+            padding-left: 60px;
+            padding-right: 15px;
+            z-index: 10;
+            opacity: 0;
+        }
+        #SmilteUzdarymas:active{
+            opacity: 0.2;
+        }
+        #pinnedSmilteBackground{
+            width: 100%;
+            height: auto;
+            background-color: rgba(242, 242, 242, 0.75);
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 15px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            z-index: 17;
+            box-shadow: 0 0 10px lightgrey;
+            border-radius: 30px 30px 0 0;
+        }
+        #atsisiustiScenarijuSmilte{
+            width: 47%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50px;
+            border: none;
+            background-color: transparent;
+            color: black;
+            border: 2px solid black;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        #atsisiustiScenarijuSmilte:active{
+            transform: scale(0.95);
+        }
+        #informacijaSmilte{
+            width: 47%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50px;
+            border: none;
+            background-color: transparent;
+            color: black;
+            border: 2px solid black;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        #informacijaSmilte:active{
+            transform: scale(0.95);
+        }
+        #pinnedBackgroundSmilte{
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 19;
+            background-color: rgba(211, 211, 211, 0.75);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+            opacity: 0;
+            display: none;
+        }
+        #atsisiunciamasScenarijusSmilte{
+            width: 100%;
+            height: 50px;
+            font-size: 15px;
+            border-radius: 30px 30px 0 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f2f2f2;
+            box-shadow: 0 0 10px lightgrey;
+            position: fixed;
+            bottom: -100%;
+            left: 0;
+            right: 0;
+            z-index: 20;
+        }
+        #rodomaInformacijaSmilte{
+            width: 100%;
+            height: auto;
+            font-size: 15px;
+            border-radius: 30px 30px 0 0;
+            background-color: #f2f2f2;
+            box-shadow: 0 0 10px lightgrey;
+            position: fixed;
+            bottom: -300px;
+            left: 0;
+            right: 0;
+            z-index: 20;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 15px;
+        }
 
         /* spektaklio informacija/objektai */
         .karnavalasIcon{
@@ -1778,6 +1964,49 @@
                 box-shadow: 0 0 10px #333333;
                 color: white;
             }
+            #Smilte{
+                background-color: #141414;
+            }
+            #infoSmilte{
+                background-color: rgba(20, 20, 20, 1);
+                color: white;
+            }
+            #infoSmilte i{
+                background-color: #282828;
+                color: white;
+            }
+            #SmilteTekstas{
+                color: white;
+            }
+            #SmilteTekstas2{
+                color: white;
+            }
+            #pinnedSmilteBackground{
+                background-color: rgba(20, 20, 20, 0.75);
+                box-shadow: 0 0 10px #333333;
+            }
+            #atsisiustiScenarijuSmilte{
+                color: white;
+                border: 2px solid white;
+            }
+            #informacijaSmilte{
+                color: white;
+                border: 2px solid white;
+            }
+            #pinnedBackgroundSmilte{
+                background-color: rgba(44, 44, 44, 0.75);
+                
+            }
+            #atsisiunciamasScenarijusSmilte{
+                background-color: #141414;
+                box-shadow: 0 0 10px #333333;
+                color: white;
+            }
+            #rodomaInformacijaSmilte{
+                background-color: #141414;
+                box-shadow: 0 0 10px #333333;
+                color: white;
+            }
 
             .karnavalasIcon{
                 color: white;
@@ -2091,6 +2320,89 @@
             <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
         </div>
     </div>
+    <div id="Smilte">
+        <div id="girlianda">
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+        </div>
+        <div id="girlianda2">
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+        </div>
+        <div id="topInfoSmilte"></div>
+        <div id="infoSmilte"><i class="fa-solid fa-chevron-down" onclick="closeSmilte()" id="SmilteUzdarymas" ontouchstart></i><p id="SmilteTekstas2">Karnavalas „Princesė ir varlius”</p></div>
+        <p id="SmilteTekstas">Karnavalas „Princesė ir varlius”</p>
+
+        <div id="pinnedSmilteBackground">
+            <button onclick="scenarijusSmilte()" id="atsisiustiScenarijuSmilte" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
+            <button onclick="informacijaSmilte()" id="informacijaSmilte" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
+        </div>
+
+        <div id="pinnedBackgroundSmilte" onclick="uzdarytiInfoSmilte()" ontouchstart></div>
+        <div id="atsisiunciamasScenarijusSmilte"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "scenarijus.pdf"</div>
+        <div id="rodomaInformacijaSmilte"><i>Informacija:</i><br><b style="font-weight: 600;">Karnavalo data:</b> 2024-12-20 (pn)<br><b style="font-weight: 600;">Pasirodymo laikas:</b> nėra informacijos</div>
+
+        <div class="vardas">
+            <i class="fa-regular fa-user-circle vardasIcon"></i>
+            <p class="pagrTekstas">Rolė</p>
+            <p class="vardasAntrTekstas">Arūnė</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="apie">
+            <i class="fa-regular fa-circle-question karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Apie rolę:</p>
+            <p class="antrTekstas">Rolės aprašymas.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="pasiruosimas">
+            <i class="fa-solid fa-suitcase karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Pasiruošti:</p>
+            <p class="antrTekstas">Pasiruošimo aprašymas.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="apranga">
+            <i class="fa-solid fa-shirt karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Apranga:</p>
+            <p class="antrTekstas">Aprangos aprašymas.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="zodziai">
+            <i class="fa-regular fa-comments karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Žodžiai:</p>
+            <p class="antrTekstas">Žodžių aprašymas.</p>
+            <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="vaidinimas">
+            <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Vaidinimo eiga:</p>
+            <p class="antrTekstas">Vaidinimo eigos aprašymas.</p>
+            <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="papildomai">
+            <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Papildomai:</p>
+            <p class="antrTekstas">Papildomai (garso takeliai ir pan.) aprašymas.</p>
+            <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
+        </div>
+    </div>
     <a id="download_script" href="scenarijus.pdf" download style="display: none;">download_script</a>
 
     <script src="https://kit.fontawesome.com/a11707644f.js" crossorigin="anonymous"></script>
@@ -2195,6 +2507,8 @@
 
                     document.getElementById("infoArune").style.boxShadow = "0 0 10px #333333";
                     document.getElementById("infoArune").style.backgroundColor = "rgba(20, 20, 20, 0.75)";
+                    document.getElementById("infoSmilte").style.boxShadow = "0 0 10px #333333";
+                    document.getElementById("infoSmilte").style.backgroundColor = "rgba(20, 20, 20, 0.75)";
                 }
                 else{
                     document.getElementById("info").style.boxShadow = "0 0 10px lightgrey";
@@ -2202,10 +2516,14 @@
 
                     document.getElementById("infoArune").style.boxShadow = "0 0 10px lightgrey";
                     document.getElementById("infoArune").style.backgroundColor = "rgba(242, 242, 242, 0.75)";
+                    document.getElementById("infoSmilte").style.boxShadow = "0 0 10px lightgrey";
+                    document.getElementById("infoSmilte").style.backgroundColor = "rgba(242, 242, 242, 0.75)";
                 }
 
                 document.getElementById("AruneTekstas").style.opacity = "0";
                 document.getElementById("AruneTekstas2").style.opacity = "1";
+                document.getElementById("SmilteTekstas").style.opacity = "0";
+                document.getElementById("SmilteTekstas2").style.opacity = "1";
             }
             else {
                 document.getElementById("kelionesMarsrutasTekstas").style.opacity = "1";
@@ -2215,16 +2533,21 @@
                     document.getElementById("info").style.backgroundColor = "rgba(20, 20, 20, 1)";
 
                     document.getElementById("infoArune").style.backgroundColor = "rgba(20, 20, 20, 1)";
+                    document.getElementById("infoSmilte").style.backgroundColor = "rgba(20, 20, 20, 1)";
                 }
                 else{
                     document.getElementById("info").style.backgroundColor = "rgba(242, 242, 242, 1)";
 
                     document.getElementById("infoArune").style.backgroundColor = "rgba(242, 242, 242, 1)";
+                    document.getElementById("infoSmilte").style.backgroundColor = "rgba(242, 242, 242, 1)";
                 }
 
                 document.getElementById("AruneTekstas").style.opacity = "1";
                 document.getElementById("AruneTekstas2").style.opacity = "0";
                 document.getElementById("infoArune").style.boxShadow = "none";
+                document.getElementById("SmilteTekstas").style.opacity = "1";
+                document.getElementById("SmilteTekstas2").style.opacity = "0";
+                document.getElementById("infoSmilte").style.boxShadow = "none";
             }
         }
 
@@ -2440,6 +2763,43 @@
             document.getElementById("pinnedBackgroundArune").style.pointerEvents = "none";
             setTimeout(() => {
                 document.getElementById("pinnedBackgroundArune").style.display = "none";
+                document.getElementById("body").style.overflow = "scroll";
+            }, 300);
+        }
+        function scenarijusSmilte() {
+            document.getElementById("pinnedBackgroundSmilte").style.display = "block";
+            document.getElementById("body").style.overflow = "hidden";
+            setTimeout(() => {
+                document.getElementById("atsisiunciamasScenarijusSmilte").style.bottom = "0";
+                document.getElementById("pinnedBackgroundSmilte").style.opacity = "1";
+            }, 10);
+            setTimeout(() => {
+                document.getElementById("download_script").click();
+            }, 1010);
+            setTimeout(() => {
+                document.getElementById("atsisiunciamasScenarijusSmilte").style.bottom = "-100%";
+                document.getElementById("pinnedBackgroundSmilte").style.opacity = "0";
+            }, 6010);
+            setTimeout(() => {
+                document.getElementById("pinnedBackgroundSmilte").style.display = "none";
+                document.getElementById("body").style.overflow = "scroll";
+            }, 6310);
+        }
+        function informacijaSmilte() {
+            document.getElementById("pinnedBackgroundSmilte").style.display = "block";
+            document.getElementById("body").style.overflow = "hidden";
+            setTimeout(() => {
+                document.getElementById("rodomaInformacijaSmilte").style.bottom = "0";
+                document.getElementById("pinnedBackgroundSmilte").style.opacity = "1";
+                document.getElementById("pinnedBackgroundSmilte").style.pointerEvents = "all";
+            }, 10);
+        }
+        function uzdarytiInfoSmilte() {
+            document.getElementById("rodomaInformacijaSmilte").style.bottom = "-300px";
+            document.getElementById("pinnedBackgroundSmilte").style.opacity = "0";
+            document.getElementById("pinnedBackgroundSmilte").style.pointerEvents = "none";
+            setTimeout(() => {
+                document.getElementById("pinnedBackgroundSmilte").style.display = "none";
                 document.getElementById("body").style.overflow = "scroll";
             }, 300);
         }
@@ -2810,15 +3170,13 @@
                 {
                     document.cookie = "Arune=role";
                 document.getElementById("loading").style.display = "flex";
-                document.getElementById("ivestiKoda").style.opacity = "0.5";
+                document.getElementById("ivestiKoda").style.opacity = "0.3";
                 document.querySelector('#topInfoArune').scrollIntoView({
                     behavior: 'smooth'
                 });
+                document.getElementById("keypad").style.opacity = "0.3";
                 document.getElementById("istrynimas").style.color = "transparent";
                 document.getElementById("istrynimas").style.pointerEvents = "none";
-                setTimeout(() => {
-                    document.getElementById("keypad").style.opacity = "0.5";
-                }, 150);
                 setTimeout(() => {
                     document.getElementById("keypad").style.opacity = "1";
                     document.getElementById("ivestiKoda").style.opacity = "1";
@@ -2829,6 +3187,41 @@
                 }, 3600);
                 setTimeout(() => {
                     document.getElementById("Arune").style.paddingTop = "0";
+                }, 3620);
+                setTimeout(() => {
+                    inputas = ""
+                    document.getElementById("kodas").value = '';
+                    document.getElementById("taskelis1").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis2").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis3").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis4").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis5").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis6").style.backgroundColor = "transparent";
+                    document.getElementById("loading").style.display = "none";
+                    document.getElementById("body").style.overflow = "scroll";
+                }, 3900);
+          }
+          else if(form.pin.value == "010473") //Smilte
+                {
+                    document.cookie = "Smilte=role";
+                document.getElementById("loading").style.display = "flex";
+                document.getElementById("ivestiKoda").style.opacity = "0.3";
+                document.querySelector('#topInfoSmilte').scrollIntoView({
+                    behavior: 'smooth'
+                });
+                document.getElementById("keypad").style.opacity = "0.3";
+                document.getElementById("istrynimas").style.color = "transparent";
+                document.getElementById("istrynimas").style.pointerEvents = "none";
+                setTimeout(() => {
+                    document.getElementById("keypad").style.opacity = "1";
+                    document.getElementById("ivestiKoda").style.opacity = "1";
+                    document.getElementById("screen").style.top = "-100%";
+                    document.getElementById("screen").style.backgroundColor = "transparent";
+                    document.getElementById("display").style.top = "-100%";
+                    document.getElementById("Smilte").style.display = "block";
+                }, 3600);
+                setTimeout(() => {
+                    document.getElementById("Smilte").style.paddingTop = "0";
                 }, 3620);
                 setTimeout(() => {
                     inputas = ""
@@ -2911,8 +3304,25 @@
                 document.getElementById("Arune").style.paddingTop = "100vh";
             }
         }
+        let Smilte = getCookie("Smilte");
+        if (Smilte != "") {
+            document.getElementById("Smilte").style.display = "block";
+            document.getElementById("Smilte").style.paddingTop = "0";
+            setTimeout(() => {
+                document.querySelector('#topInfoSmilte').scrollIntoView({
+                behavior: 'smooth'});
+            }, 500);
+        }
+        else {
+            document.getElementById("Smilte").style.display = "none";
+            document.getElementById("Smilte").style.paddingTop = "100vh";
+            if (Smilte != "" && Smilte != null) {
+                document.getElementById("Smilte").style.display = "none";
+                document.getElementById("Smilte").style.paddingTop = "100vh";
+            }
+        }
 
-        if (kelioneI != "" || Arune != "") {
+        if (kelioneI != "" || Arune != "" || Smilte != "") {
             document.getElementById("screen").style.top = "-100%";
             document.getElementById("screen").style.backgroundColor = "transparent";
             document.getElementById("display").style.top = "-100%";
@@ -2923,7 +3333,7 @@
             document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
             document.getElementById("display").style.top = "0";
             document.getElementById("body").style.overflow = "hidden";
-            if (kelioneI != "" && kelioneI != null || Arune != "" && Arune != null) {
+            if (kelioneI != "" && kelioneI != null || Arune != "" && Arune != null || Smilte != "" && Smilte != null) {
                 document.getElementById("screen").style.top = "0";
                 document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
                 document.getElementById("display").style.top = "0";
@@ -2959,6 +3369,21 @@
                 document.getElementById("AruneUzdarymas").style.pointerEvents = "all";
                 document.getElementById("body").style.overflow = "hidden";
                 document.getElementById("Arune").style.display = "none";
+            }, 310);
+        }
+        function closeSmilte() {
+            document.cookie = "Smilte=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
+            document.getElementById("SmilteUzdarymas").style.pointerEvents = "none";
+            setTimeout(() => {
+                document.getElementById("screen").style.top = "0";
+                document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
+                document.getElementById("display").style.top = "0";
+                document.getElementById("Smilte").style.paddingTop = "100vh";
+            }, 10);
+            setTimeout(() => {
+                document.getElementById("SmilteUzdarymas").style.pointerEvents = "all";
+                document.getElementById("body").style.overflow = "hidden";
+                document.getElementById("Smilte").style.display = "none";
             }, 310);
         }
     </script>
