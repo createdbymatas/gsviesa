@@ -1125,6 +1125,268 @@
 
 
         /* karnavalas */
+        /* garso takeliu valdymas, scenarijaus atsisiuntimas, info perziura */
+        #soundManager{
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: -100%;
+            z-index: 18;
+            background-color: #f2f2f2;
+            transition: 0.2s;
+        }
+        #soundManager h1{
+            font-weight: 600;
+            font-size: 25px;
+            margin-top: 15px;
+            margin-left: 15px;
+            margin-bottom: 15px;
+            color: black;
+        }
+        #soundManager div{
+            width: 95%;
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            color: black;
+            padding-left: 15px;
+            margin-bottom: 15px;
+            margin-left: 2.5%;
+            border-radius: 30px;
+        }
+        #soundManager div i{
+            font-size: 15px;
+            transition: 0.15s;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            background-color: #DEDEDE;
+            color: black;
+        }
+        #soundManager div i:active{
+            opacity: 0.2;
+        }
+        #closeSoundManager{
+            font-size: 15px;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            z-index: 11;
+            transition: 0.15s;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            background-color: #DEDEDE;
+            color: black;
+        }
+        #closeSoundManager:active{
+            opacity: 0.2;
+        }
+        @keyframes blink{
+            0%{
+                opacity: 1;
+            }
+            50%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        .atsisiustiScenariju{
+            width: 47%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50px;
+            border: none;
+            background-color: transparent;
+            color: black;
+            border: 2px solid black;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        .atsisiustiScenariju:active{
+            transform: scale(0.95);
+        }
+        .informacija{
+            width: 47%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50px;
+            border: none;
+            background-color: transparent;
+            color: black;
+            border: 2px solid black;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        .informacija:active{
+            transform: scale(0.95);
+        }
+        #pinnedBackground{
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 19;
+            background-color: rgba(211, 211, 211, 0.75);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+            opacity: 0;
+            display: none;
+        }
+        #atsisiunciamasScenarijus{
+            width: 100%;
+            height: 50px;
+            font-size: 15px;
+            border-radius: 30px 30px 0 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f2f2f2;
+            box-shadow: 0 0 10px lightgrey;
+            position: fixed;
+            bottom: -100%;
+            left: 0;
+            right: 0;
+            z-index: 20;
+        }
+        #rodomaInformacija{
+            width: 100%;
+            height: auto;
+            font-size: 15px;
+            border-radius: 30px 30px 0 0;
+            background-color: #f2f2f2;
+            box-shadow: 0 0 10px lightgrey;
+            position: fixed;
+            bottom: -300px;
+            left: 0;
+            right: 0;
+            z-index: 20;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 15px;
+        }
+        #atsisiunciamasAudio1{
+            width: 100%;
+            height: 50px;
+            font-size: 15px;
+            border-radius: 30px 30px 0 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f2f2f2;
+            box-shadow: 0 0 10px lightgrey;
+            position: fixed;
+            bottom: -100%;
+            left: 0;
+            right: 0;
+            z-index: 20;
+        }
+        #atsisiunciamasAudio2{
+            width: 100%;
+            height: 50px;
+            font-size: 15px;
+            border-radius: 30px 30px 0 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f2f2f2;
+            box-shadow: 0 0 10px lightgrey;
+            position: fixed;
+            bottom: -100%;
+            left: 0;
+            right: 0;
+            z-index: 20;
+        }
+        #atsisiunciamasAudio3{
+            width: 100%;
+            height: 50px;
+            font-size: 15px;
+            border-radius: 30px 30px 0 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f2f2f2;
+            box-shadow: 0 0 10px lightgrey;
+            position: fixed;
+            bottom: -100%;
+            left: 0;
+            right: 0;
+            z-index: 20;
+        }
+        #atsisiunciamasAudio4{
+            width: 100%;
+            height: 50px;
+            font-size: 15px;
+            border-radius: 30px 30px 0 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f2f2f2;
+            box-shadow: 0 0 10px lightgrey;
+            position: fixed;
+            bottom: -100%;
+            left: 0;
+            right: 0;
+            z-index: 20;
+        }
+        #atsisiunciamasAudio5{
+            width: 100%;
+            height: 50px;
+            font-size: 15px;
+            border-radius: 30px 30px 0 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f2f2f2;
+            box-shadow: 0 0 10px lightgrey;
+            position: fixed;
+            bottom: -100%;
+            left: 0;
+            right: 0;
+            z-index: 20;
+        }
+        .pinnedBg{
+            width: 100%;
+            height: auto;
+            background-color: rgba(242, 242, 242, 0.75);
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 15px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            z-index: 17;
+            box-shadow: 0 0 10px lightgrey;
+            border-radius: 30px 30px 0 0;
+        }
+
+
         /* Arune */
         #Arune{
             width: 100%;
@@ -1228,88 +1490,6 @@
             z-index: 17;
             box-shadow: 0 0 10px lightgrey;
             border-radius: 30px 30px 0 0;
-        }
-        #atsisiustiScenarijuArune{
-            width: 47%;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50px;
-            border: none;
-            background-color: transparent;
-            color: black;
-            border: 2px solid black;
-            font-size: 15px;
-            cursor: pointer;
-        }
-        #atsisiustiScenarijuArune:active{
-            transform: scale(0.95);
-        }
-        #informacijaArune{
-            width: 47%;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50px;
-            border: none;
-            background-color: transparent;
-            color: black;
-            border: 2px solid black;
-            font-size: 15px;
-            cursor: pointer;
-        }
-        #informacijaArune:active{
-            transform: scale(0.95);
-        }
-        #pinnedBackgroundArune{
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 19;
-            background-color: rgba(211, 211, 211, 0.75);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
-            opacity: 0;
-            display: none;
-        }
-        #atsisiunciamasScenarijusArune{
-            width: 100%;
-            height: 50px;
-            font-size: 15px;
-            border-radius: 30px 30px 0 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #f2f2f2;
-            box-shadow: 0 0 10px lightgrey;
-            position: fixed;
-            bottom: -100%;
-            left: 0;
-            right: 0;
-            z-index: 20;
-        }
-        #rodomaInformacijaArune{
-            width: 100%;
-            height: auto;
-            font-size: 15px;
-            border-radius: 30px 30px 0 0;
-            background-color: #f2f2f2;
-            box-shadow: 0 0 10px lightgrey;
-            position: fixed;
-            bottom: -300px;
-            left: 0;
-            right: 0;
-            z-index: 20;
-            padding-top: 15px;
-            padding-bottom: 15px;
-            padding-left: 15px;
         }
         /* Smilte */
         #Smilte{
@@ -1415,88 +1595,6 @@
             box-shadow: 0 0 10px lightgrey;
             border-radius: 30px 30px 0 0;
         }
-        #atsisiustiScenarijuSmilte{
-            width: 47%;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50px;
-            border: none;
-            background-color: transparent;
-            color: black;
-            border: 2px solid black;
-            font-size: 15px;
-            cursor: pointer;
-        }
-        #atsisiustiScenarijuSmilte:active{
-            transform: scale(0.95);
-        }
-        #informacijaSmilte{
-            width: 47%;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50px;
-            border: none;
-            background-color: transparent;
-            color: black;
-            border: 2px solid black;
-            font-size: 15px;
-            cursor: pointer;
-        }
-        #informacijaSmilte:active{
-            transform: scale(0.95);
-        }
-        #pinnedBackgroundSmilte{
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 19;
-            background-color: rgba(211, 211, 211, 0.75);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
-            opacity: 0;
-            display: none;
-        }
-        #atsisiunciamasScenarijusSmilte{
-            width: 100%;
-            height: 50px;
-            font-size: 15px;
-            border-radius: 30px 30px 0 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #f2f2f2;
-            box-shadow: 0 0 10px lightgrey;
-            position: fixed;
-            bottom: -100%;
-            left: 0;
-            right: 0;
-            z-index: 20;
-        }
-        #rodomaInformacijaSmilte{
-            width: 100%;
-            height: auto;
-            font-size: 15px;
-            border-radius: 30px 30px 0 0;
-            background-color: #f2f2f2;
-            box-shadow: 0 0 10px lightgrey;
-            position: fixed;
-            bottom: -300px;
-            left: 0;
-            right: 0;
-            z-index: 20;
-            padding-top: 15px;
-            padding-bottom: 15px;
-            padding-left: 15px;
-        }
         /* Adriana */
         #Adriana{
             width: 100%;
@@ -1600,88 +1698,6 @@
             z-index: 17;
             box-shadow: 0 0 10px lightgrey;
             border-radius: 30px 30px 0 0;
-        }
-        #atsisiustiScenarijuAdriana{
-            width: 47%;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50px;
-            border: none;
-            background-color: transparent;
-            color: black;
-            border: 2px solid black;
-            font-size: 15px;
-            cursor: pointer;
-        }
-        #atsisiustiScenarijuAdriana:active{
-            transform: scale(0.95);
-        }
-        #informacijaAdriana{
-            width: 47%;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50px;
-            border: none;
-            background-color: transparent;
-            color: black;
-            border: 2px solid black;
-            font-size: 15px;
-            cursor: pointer;
-        }
-        #informacijaAdriana:active{
-            transform: scale(0.95);
-        }
-        #pinnedBackgroundAdriana{
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 19;
-            background-color: rgba(211, 211, 211, 0.75);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
-            opacity: 0;
-            display: none;
-        }
-        #atsisiunciamasScenarijusAdriana{
-            width: 100%;
-            height: 50px;
-            font-size: 15px;
-            border-radius: 30px 30px 0 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #f2f2f2;
-            box-shadow: 0 0 10px lightgrey;
-            position: fixed;
-            bottom: -100%;
-            left: 0;
-            right: 0;
-            z-index: 20;
-        }
-        #rodomaInformacijaAdriana{
-            width: 100%;
-            height: auto;
-            font-size: 15px;
-            border-radius: 30px 30px 0 0;
-            background-color: #f2f2f2;
-            box-shadow: 0 0 10px lightgrey;
-            position: fixed;
-            bottom: -300px;
-            left: 0;
-            right: 0;
-            z-index: 20;
-            padding-top: 15px;
-            padding-bottom: 15px;
-            padding-left: 15px;
         }
         /* Norbertas */
         #Norbertas{
@@ -1787,88 +1803,6 @@
             box-shadow: 0 0 10px lightgrey;
             border-radius: 30px 30px 0 0;
         }
-        #atsisiustiScenarijuNorbertas{
-            width: 47%;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50px;
-            border: none;
-            background-color: transparent;
-            color: black;
-            border: 2px solid black;
-            font-size: 15px;
-            cursor: pointer;
-        }
-        #atsisiustiScenarijuNorbertas:active{
-            transform: scale(0.95);
-        }
-        #informacijaNorbertas{
-            width: 47%;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50px;
-            border: none;
-            background-color: transparent;
-            color: black;
-            border: 2px solid black;
-            font-size: 15px;
-            cursor: pointer;
-        }
-        #informacijaNorbertas:active{
-            transform: scale(0.95);
-        }
-        #pinnedBackgroundNorbertas{
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 19;
-            background-color: rgba(211, 211, 211, 0.75);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
-            opacity: 0;
-            display: none;
-        }
-        #atsisiunciamasScenarijusNorbertas{
-            width: 100%;
-            height: 50px;
-            font-size: 15px;
-            border-radius: 30px 30px 0 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #f2f2f2;
-            box-shadow: 0 0 10px lightgrey;
-            position: fixed;
-            bottom: -100%;
-            left: 0;
-            right: 0;
-            z-index: 20;
-        }
-        #rodomaInformacijaNorbertas{
-            width: 100%;
-            height: auto;
-            font-size: 15px;
-            border-radius: 30px 30px 0 0;
-            background-color: #f2f2f2;
-            box-shadow: 0 0 10px lightgrey;
-            position: fixed;
-            bottom: -300px;
-            left: 0;
-            right: 0;
-            z-index: 20;
-            padding-top: 15px;
-            padding-bottom: 15px;
-            padding-left: 15px;
-        }
         /* Meta */
         #Meta{
             width: 100%;
@@ -1972,88 +1906,6 @@
             z-index: 17;
             box-shadow: 0 0 10px lightgrey;
             border-radius: 30px 30px 0 0;
-        }
-        #atsisiustiScenarijuMeta{
-            width: 47%;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50px;
-            border: none;
-            background-color: transparent;
-            color: black;
-            border: 2px solid black;
-            font-size: 15px;
-            cursor: pointer;
-        }
-        #atsisiustiScenarijuMeta:active{
-            transform: scale(0.95);
-        }
-        #informacijaMeta{
-            width: 47%;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50px;
-            border: none;
-            background-color: transparent;
-            color: black;
-            border: 2px solid black;
-            font-size: 15px;
-            cursor: pointer;
-        }
-        #informacijaMeta:active{
-            transform: scale(0.95);
-        }
-        #pinnedBackgroundMeta{
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 19;
-            background-color: rgba(211, 211, 211, 0.75);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
-            opacity: 0;
-            display: none;
-        }
-        #atsisiunciamasScenarijusMeta{
-            width: 100%;
-            height: 50px;
-            font-size: 15px;
-            border-radius: 30px 30px 0 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #f2f2f2;
-            box-shadow: 0 0 10px lightgrey;
-            position: fixed;
-            bottom: -100%;
-            left: 0;
-            right: 0;
-            z-index: 20;
-        }
-        #rodomaInformacijaMeta{
-            width: 100%;
-            height: auto;
-            font-size: 15px;
-            border-radius: 30px 30px 0 0;
-            background-color: #f2f2f2;
-            box-shadow: 0 0 10px lightgrey;
-            position: fixed;
-            bottom: -300px;
-            left: 0;
-            right: 0;
-            z-index: 20;
-            padding-top: 15px;
-            padding-bottom: 15px;
-            padding-left: 15px;
         }
         /* Justina */
         #Justina{
@@ -2159,88 +2011,6 @@
             box-shadow: 0 0 10px lightgrey;
             border-radius: 30px 30px 0 0;
         }
-        #atsisiustiScenarijuJustina{
-            width: 47%;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50px;
-            border: none;
-            background-color: transparent;
-            color: black;
-            border: 2px solid black;
-            font-size: 15px;
-            cursor: pointer;
-        }
-        #atsisiustiScenarijuJustina:active{
-            transform: scale(0.95);
-        }
-        #informacijaJustina{
-            width: 47%;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50px;
-            border: none;
-            background-color: transparent;
-            color: black;
-            border: 2px solid black;
-            font-size: 15px;
-            cursor: pointer;
-        }
-        #informacijaJustina:active{
-            transform: scale(0.95);
-        }
-        #pinnedBackgroundJustina{
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 19;
-            background-color: rgba(211, 211, 211, 0.75);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
-            opacity: 0;
-            display: none;
-        }
-        #atsisiunciamasScenarijusJustina{
-            width: 100%;
-            height: 50px;
-            font-size: 15px;
-            border-radius: 30px 30px 0 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #f2f2f2;
-            box-shadow: 0 0 10px lightgrey;
-            position: fixed;
-            bottom: -100%;
-            left: 0;
-            right: 0;
-            z-index: 20;
-        }
-        #rodomaInformacijaJustina{
-            width: 100%;
-            height: auto;
-            font-size: 15px;
-            border-radius: 30px 30px 0 0;
-            background-color: #f2f2f2;
-            box-shadow: 0 0 10px lightgrey;
-            position: fixed;
-            bottom: -300px;
-            left: 0;
-            right: 0;
-            z-index: 20;
-            padding-top: 15px;
-            padding-bottom: 15px;
-            padding-left: 15px;
-        }
         /* Mindaugasd */
         #Mindaugasd{
             width: 100%;
@@ -2344,88 +2114,6 @@
             z-index: 17;
             box-shadow: 0 0 10px lightgrey;
             border-radius: 30px 30px 0 0;
-        }
-        #atsisiustiScenarijuMindaugasd{
-            width: 47%;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50px;
-            border: none;
-            background-color: transparent;
-            color: black;
-            border: 2px solid black;
-            font-size: 15px;
-            cursor: pointer;
-        }
-        #atsisiustiScenarijuMindaugasd:active{
-            transform: scale(0.95);
-        }
-        #informacijaMindaugasd{
-            width: 47%;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50px;
-            border: none;
-            background-color: transparent;
-            color: black;
-            border: 2px solid black;
-            font-size: 15px;
-            cursor: pointer;
-        }
-        #informacijaMindaugasd:active{
-            transform: scale(0.95);
-        }
-        #pinnedBackgroundMindaugasd{
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 19;
-            background-color: rgba(211, 211, 211, 0.75);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
-            opacity: 0;
-            display: none;
-        }
-        #atsisiunciamasScenarijusMindaugasd{
-            width: 100%;
-            height: 50px;
-            font-size: 15px;
-            border-radius: 30px 30px 0 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #f2f2f2;
-            box-shadow: 0 0 10px lightgrey;
-            position: fixed;
-            bottom: -100%;
-            left: 0;
-            right: 0;
-            z-index: 20;
-        }
-        #rodomaInformacijaMindaugasd{
-            width: 100%;
-            height: auto;
-            font-size: 15px;
-            border-radius: 30px 30px 0 0;
-            background-color: #f2f2f2;
-            box-shadow: 0 0 10px lightgrey;
-            position: fixed;
-            bottom: -300px;
-            left: 0;
-            right: 0;
-            z-index: 20;
-            padding-top: 15px;
-            padding-bottom: 15px;
-            padding-left: 15px;
         }
         /* Dovydas */
         #Dovydas{
@@ -2531,88 +2219,6 @@
             box-shadow: 0 0 10px lightgrey;
             border-radius: 30px 30px 0 0;
         }
-        #atsisiustiScenarijuDovydas{
-            width: 47%;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50px;
-            border: none;
-            background-color: transparent;
-            color: black;
-            border: 2px solid black;
-            font-size: 15px;
-            cursor: pointer;
-        }
-        #atsisiustiScenarijuDovydas:active{
-            transform: scale(0.95);
-        }
-        #informacijaDovydas{
-            width: 47%;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50px;
-            border: none;
-            background-color: transparent;
-            color: black;
-            border: 2px solid black;
-            font-size: 15px;
-            cursor: pointer;
-        }
-        #informacijaDovydas:active{
-            transform: scale(0.95);
-        }
-        #pinnedBackgroundDovydas{
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 19;
-            background-color: rgba(211, 211, 211, 0.75);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
-            opacity: 0;
-            display: none;
-        }
-        #atsisiunciamasScenarijusDovydas{
-            width: 100%;
-            height: 50px;
-            font-size: 15px;
-            border-radius: 30px 30px 0 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #f2f2f2;
-            box-shadow: 0 0 10px lightgrey;
-            position: fixed;
-            bottom: -100%;
-            left: 0;
-            right: 0;
-            z-index: 20;
-        }
-        #rodomaInformacijaDovydas{
-            width: 100%;
-            height: auto;
-            font-size: 15px;
-            border-radius: 30px 30px 0 0;
-            background-color: #f2f2f2;
-            box-shadow: 0 0 10px lightgrey;
-            position: fixed;
-            bottom: -300px;
-            left: 0;
-            right: 0;
-            z-index: 20;
-            padding-top: 15px;
-            padding-bottom: 15px;
-            padding-left: 15px;
-        }
         /* Matas */
         #Matas{
             width: 100%;
@@ -2699,7 +2305,93 @@
         #MatasUzdarymas:active{
             opacity: 0.2;
         }
-        #pinnedMatasBackground{
+        /* Aleksandra */
+        #Aleksandra{
+            width: 100%;
+            height: 100%;
+            background-color: #f2f2f2;
+            transition: 0.2s;
+            padding-bottom: 90px;
+            overflow: hidden;
+            overflow-y: scroll;
+            padding-top: 100vh;
+            display: block;
+        }
+        #topInfoAleksandra{
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            top: 0;
+            left: 0;
+        }
+        #infoAleksandra{
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(242, 242, 242, 1);
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+            color: black;
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            z-index: 10;
+        }
+        #infoAleksandra i{
+            font-size: 15px;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            z-index: 11;
+            transition: 0.15s;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            background-color: #DEDEDE;
+            color: black;
+        }
+        #AleksandraTekstas{
+            font-size: 25px;
+            font-weight: 600;
+            color: black;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            text-overflow: ellipsis;
+            width: 100%;
+            position: absolute;
+            top: 60px;
+            padding-left: 15px;
+            padding-right: 15px;
+            z-index: 2;
+        }
+        #AleksandraTekstas2{
+            font-size: 20px;
+            font-weight: 600;
+            color: black;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            text-overflow: ellipsis;
+            width: 100%;
+            position: absolute;
+            top: 17px;
+            padding-left: 60px;
+            padding-right: 15px;
+            z-index: 10;
+            opacity: 0;
+        }
+        #AleksandraUzdarymas:active{
+            opacity: 0.2;
+        }
+        #pinnedAleksandraBackground{
             width: 100%;
             height: auto;
             background-color: rgba(242, 242, 242, 0.75);
@@ -2717,88 +2409,7 @@
             box-shadow: 0 0 10px lightgrey;
             border-radius: 30px 30px 0 0;
         }
-        #atsisiustiScenarijuMatas{
-            width: 47%;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50px;
-            border: none;
-            background-color: transparent;
-            color: black;
-            border: 2px solid black;
-            font-size: 15px;
-            cursor: pointer;
-        }
-        #atsisiustiScenarijuMatas:active{
-            transform: scale(0.95);
-        }
-        #informacijaMatas{
-            width: 47%;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50px;
-            border: none;
-            background-color: transparent;
-            color: black;
-            border: 2px solid black;
-            font-size: 15px;
-            cursor: pointer;
-        }
-        #informacijaMatas:active{
-            transform: scale(0.95);
-        }
-        #pinnedBackgroundMatas{
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 19;
-            background-color: rgba(211, 211, 211, 0.75);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
-            opacity: 0;
-            display: none;
-        }
-        #atsisiunciamasScenarijusMatas{
-            width: 100%;
-            height: 50px;
-            font-size: 15px;
-            border-radius: 30px 30px 0 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #f2f2f2;
-            box-shadow: 0 0 10px lightgrey;
-            position: fixed;
-            bottom: -100%;
-            left: 0;
-            right: 0;
-            z-index: 20;
-        }
-        #rodomaInformacijaMatas{
-            width: 100%;
-            height: auto;
-            font-size: 15px;
-            border-radius: 30px 30px 0 0;
-            background-color: #f2f2f2;
-            box-shadow: 0 0 10px lightgrey;
-            position: fixed;
-            bottom: -300px;
-            left: 0;
-            right: 0;
-            z-index: 20;
-            padding-top: 15px;
-            padding-bottom: 15px;
-            padding-left: 15px;
-        }
+
         
 
         /* spektaklio informacija/objektai */
@@ -3051,6 +2662,25 @@
             padding-top: 7px;
             padding-bottom: 7px;
         }
+        .papildomai button{
+            width: 95%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 30px;
+            border: none;
+            background-color: transparent;
+            color: black;
+            border: 1.5px solid black;
+            font-size: 13px;
+            margin-top: 5px;
+            padding: 9px;
+            cursor: pointer;
+        }
+        .papildomai button:active{
+            transform: scale(0.95);
+        }
 
 
 
@@ -3224,6 +2854,50 @@
 
 
 
+            #soundManager{
+                background-color: #141414;
+            }
+            #soundManager h1{
+                color: white;
+            }
+            #soundManager div{
+                background-color: black;
+                color: white;
+            }
+            #soundManager div i{
+                background-color: #282828;
+                color: white;
+            }
+            #closeSoundManager{
+                background-color: #282828;
+                color: white;
+            }
+            .atsisiustiScenariju{
+                color: white;
+                border: 2px solid white;
+            }
+            .informacija{
+                color: white;
+                border: 2px solid white;
+            }
+            #pinnedBackground{
+                background-color: rgba(44, 44, 44, 0.75);
+            }
+            #atsisiunciamasScenarijus{
+                background-color: #141414;
+                box-shadow: 0 0 10px #333333;
+                color: white;
+            }
+            #rodomaInformacija{
+                background-color: #141414;
+                box-shadow: 0 0 10px #333333;
+                color: white;
+            }
+            .pinnedBg{
+                background-color: rgba(20, 20, 20, 0.75);
+                box-shadow: 0 0 10px #333333;
+            }
+
             #Arune{
                 background-color: #141414;
             }
@@ -3239,31 +2913,6 @@
                 color: white;
             }
             #AruneTekstas2{
-                color: white;
-            }
-            #pinnedAruneBackground{
-                background-color: rgba(20, 20, 20, 0.75);
-                box-shadow: 0 0 10px #333333;
-            }
-            #atsisiustiScenarijuArune{
-                color: white;
-                border: 2px solid white;
-            }
-            #informacijaArune{
-                color: white;
-                border: 2px solid white;
-            }
-            #pinnedBackgroundArune{
-                background-color: rgba(44, 44, 44, 0.75);
-            }
-            #atsisiunciamasScenarijusArune{
-                background-color: #141414;
-                box-shadow: 0 0 10px #333333;
-                color: white;
-            }
-            #rodomaInformacijaArune{
-                background-color: #141414;
-                box-shadow: 0 0 10px #333333;
                 color: white;
             }
             #Smilte{
@@ -3283,31 +2932,7 @@
             #SmilteTekstas2{
                 color: white;
             }
-            #pinnedSmilteBackground{
-                background-color: rgba(20, 20, 20, 0.75);
-                box-shadow: 0 0 10px #333333;
-            }
-            #atsisiustiScenarijuSmilte{
-                color: white;
-                border: 2px solid white;
-            }
-            #informacijaSmilte{
-                color: white;
-                border: 2px solid white;
-            }
-            #pinnedBackgroundSmilte{
-                background-color: rgba(44, 44, 44, 0.75);
-            }
-            #atsisiunciamasScenarijusSmilte{
-                background-color: #141414;
-                box-shadow: 0 0 10px #333333;
-                color: white;
-            }
-            #rodomaInformacijaSmilte{
-                background-color: #141414;
-                box-shadow: 0 0 10px #333333;
-                color: white;
-            }
+
             #Adriana{
                 background-color: #141414;
             }
@@ -3323,31 +2948,6 @@
                 color: white;
             }
             #AdrianaTekstas2{
-                color: white;
-            }
-            #pinnedAdrianaBackground{
-                background-color: rgba(20, 20, 20, 0.75);
-                box-shadow: 0 0 10px #333333;
-            }
-            #atsisiustiScenarijuAdriana{
-                color: white;
-                border: 2px solid white;
-            }
-            #informacijaAdriana{
-                color: white;
-                border: 2px solid white;
-            }
-            #pinnedBackgroundAdriana{
-                background-color: rgba(44, 44, 44, 0.75);
-            }
-            #atsisiunciamasScenarijusAdriana{
-                background-color: #141414;
-                box-shadow: 0 0 10px #333333;
-                color: white;
-            }
-            #rodomaInformacijaAdriana{
-                background-color: #141414;
-                box-shadow: 0 0 10px #333333;
                 color: white;
             }
             #Norbertas{
@@ -3367,31 +2967,6 @@
             #NorbertasTekstas2{
                 color: white;
             }
-            #pinnedNorbertasBackground{
-                background-color: rgba(20, 20, 20, 0.75);
-                box-shadow: 0 0 10px #333333;
-            }
-            #atsisiustiScenarijuNorbertas{
-                color: white;
-                border: 2px solid white;
-            }
-            #informacijaNorbertas{
-                color: white;
-                border: 2px solid white;
-            }
-            #pinnedBackgroundNorbertas{
-                background-color: rgba(44, 44, 44, 0.75);
-            }
-            #atsisiunciamasScenarijusNorbertas{
-                background-color: #141414;
-                box-shadow: 0 0 10px #333333;
-                color: white;
-            }
-            #rodomaInformacijaNorbertas{
-                background-color: #141414;
-                box-shadow: 0 0 10px #333333;
-                color: white;
-            }
             #Meta{
                 background-color: #141414;
             }
@@ -3407,31 +2982,6 @@
                 color: white;
             }
             #MetaTekstas2{
-                color: white;
-            }
-            #pinnedMetaBackground{
-                background-color: rgba(20, 20, 20, 0.75);
-                box-shadow: 0 0 10px #333333;
-            }
-            #atsisiustiScenarijuMeta{
-                color: white;
-                border: 2px solid white;
-            }
-            #informacijaMeta{
-                color: white;
-                border: 2px solid white;
-            }
-            #pinnedBackgroundMeta{
-                background-color: rgba(44, 44, 44, 0.75);
-            }
-            #atsisiunciamasScenarijusMeta{
-                background-color: #141414;
-                box-shadow: 0 0 10px #333333;
-                color: white;
-            }
-            #rodomaInformacijaMeta{
-                background-color: #141414;
-                box-shadow: 0 0 10px #333333;
                 color: white;
             }
             #Justina{
@@ -3451,31 +3001,6 @@
             #JustinaTekstas2{
                 color: white;
             }
-            #pinnedJustinaBackground{
-                background-color: rgba(20, 20, 20, 0.75);
-                box-shadow: 0 0 10px #333333;
-            }
-            #atsisiustiScenarijuJustina{
-                color: white;
-                border: 2px solid white;
-            }
-            #informacijaJustina{
-                color: white;
-                border: 2px solid white;
-            }
-            #pinnedBackgroundJustina{
-                background-color: rgba(44, 44, 44, 0.75);
-            }
-            #atsisiunciamasScenarijusJustina{
-                background-color: #141414;
-                box-shadow: 0 0 10px #333333;
-                color: white;
-            }
-            #rodomaInformacijaJustina{
-                background-color: #141414;
-                box-shadow: 0 0 10px #333333;
-                color: white;
-            }
             #Mindaugasd{
                 background-color: #141414;
             }
@@ -3491,31 +3016,6 @@
                 color: white;
             }
             #MindaugasdTekstas2{
-                color: white;
-            }
-            #pinnedMindaugasdBackground{
-                background-color: rgba(20, 20, 20, 0.75);
-                box-shadow: 0 0 10px #333333;
-            }
-            #atsisiustiScenarijuMindaugasd{
-                color: white;
-                border: 2px solid white;
-            }
-            #informacijaMindaugasd{
-                color: white;
-                border: 2px solid white;
-            }
-            #pinnedBackgroundMindaugasd{
-                background-color: rgba(44, 44, 44, 0.75);
-            }
-            #atsisiunciamasScenarijusMindaugasd{
-                background-color: #141414;
-                box-shadow: 0 0 10px #333333;
-                color: white;
-            }
-            #rodomaInformacijaMindaugasd{
-                background-color: #141414;
-                box-shadow: 0 0 10px #333333;
                 color: white;
             }
             #Dovydas{
@@ -3535,31 +3035,6 @@
             #DovydasTekstas2{
                 color: white;
             }
-            #pinnedDovydasBackground{
-                background-color: rgba(20, 20, 20, 0.75);
-                box-shadow: 0 0 10px #333333;
-            }
-            #atsisiustiScenarijuDovydas{
-                color: white;
-                border: 2px solid white;
-            }
-            #informacijaDovydas{
-                color: white;
-                border: 2px solid white;
-            }
-            #pinnedBackgroundDovydas{
-                background-color: rgba(44, 44, 44, 0.75);
-            }
-            #atsisiunciamasScenarijusDovydas{
-                background-color: #141414;
-                box-shadow: 0 0 10px #333333;
-                color: white;
-            }
-            #rodomaInformacijaDovydas{
-                background-color: #141414;
-                box-shadow: 0 0 10px #333333;
-                color: white;
-            }
             #Matas{
                 background-color: #141414;
             }
@@ -3577,29 +3052,21 @@
             #MatasTekstas2{
                 color: white;
             }
-            #pinnedMatasBackground{
-                background-color: rgba(20, 20, 20, 0.75);
-                box-shadow: 0 0 10px #333333;
-            }
-            #atsisiustiScenarijuMatas{
-                color: white;
-                border: 2px solid white;
-            }
-            #informacijaMatas{
-                color: white;
-                border: 2px solid white;
-            }
-            #pinnedBackgroundMatas{
-                background-color: rgba(44, 44, 44, 0.75);
-            }
-            #atsisiunciamasScenarijusMatas{
+            #Aleksandra{
                 background-color: #141414;
-                box-shadow: 0 0 10px #333333;
+            }
+            #infoAleksandra{
+                background-color: rgba(20, 20, 20, 1);
                 color: white;
             }
-            #rodomaInformacijaMatas{
-                background-color: #141414;
-                box-shadow: 0 0 10px #333333;
+            #infoAleksandra i{
+                background-color: #282828;
+                color: white;
+            }
+            #AleksandraTekstas{
+                color: white;
+            }
+            #AleksandraTekstas2{
                 color: white;
             }
 
@@ -3618,8 +3085,17 @@
             .sauktukas{
                 border: 1px solid white;
             }
+            .papildomai button{
+                color: white;
+                border: 1.5px solid white;
+            }
         }
     </style>
+    <audio src="audio1.mp3" id="audio1"></audio>
+    <audio src="audio2.mp3" id="audio2"></audio>
+    <audio src="audio3.mp3" id="audio3"></audio>
+    <audio src="audio4.mp3" id="audio4"></audio>
+    <audio src="audio5.mp3" id="audio5"></audio>
     
     <div id="loading">
         <div class="spin-loader" aria-hidden="true"></div>
@@ -3831,6 +3307,30 @@
 
 
 
+    <div id="soundManager">
+        <h1>Garso takeliai</h1>
+        <i id="closeSoundManager" class="fa-solid fa-chevron-down" onclick="closeSoundTracks()" ontouchstart></i>
+
+        <div><p id="1aud">audio1.mp3</p><div style="width: 100px; margin-bottom: 0; padding-right: 15px; background-color: none;"><i class="fa-solid fa-download" onclick="atsisiustiAudio1()" ontouchstart></i><i class="fa-solid fa-play" id="1play" onclick="playAudio1()" ontouchstart></i><i class="fa-solid fa-stop" style="display: none;" id="1stop" onclick="stopAudio1()" ontouchstart></i></div></div>
+        <div><p id="2aud">audio2.mp3</p><div style="width: 100px; margin-bottom: 0; padding-right: 15px; background-color: none;"><i class="fa-solid fa-download" onclick="atsisiustiAudio2()" ontouchstart></i><i class="fa-solid fa-play" id="2play" onclick="playAudio2()" ontouchstart></i><i class="fa-solid fa-stop" style="display: none;" id="2stop" onclick="stopAudio2()" ontouchstart></i></div></div>
+        <div><p id="3aud">audio3.mp3</p><div style="width: 100px; margin-bottom: 0; padding-right: 15px; background-color: none;"><i class="fa-solid fa-download" onclick="atsisiustiAudio3()" ontouchstart></i><i class="fa-solid fa-play" id="3play" onclick="playAudio3()" ontouchstart></i><i class="fa-solid fa-stop" style="display: none;" id="3stop" onclick="stopAudio3()" ontouchstart></i></div></div>
+        <div><p id="4aud">audio4.mp3</p><div style="width: 100px; margin-bottom: 0; padding-right: 15px; background-color: none;"><i class="fa-solid fa-download" onclick="atsisiustiAudio4()" ontouchstart></i><i class="fa-solid fa-play" id="4play" onclick="playAudio4()" ontouchstart></i><i class="fa-solid fa-stop" style="display: none;" id="4stop" onclick="stopAudio4()" ontouchstart></i></div></div>
+        <div><p id="5aud">audio5.mp3</p><div style="width: 100px; margin-bottom: 0; padding-right: 15px; background-color: none;"><i class="fa-solid fa-download" onclick="atsisiustiAudio5()" ontouchstart></i><i class="fa-solid fa-play" id="5play" onclick="playAudio5()" ontouchstart></i><i class="fa-solid fa-stop" style="display: none;" id="5stop" onclick="stopAudio5()" ontouchstart></i></div></div>
+    </div>
+    <div id="pinnedBackground" onclick="uzdarytiInfo()" ontouchstart></div>
+    <div id="atsisiunciamasScenarijus"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "scenarijus.pdf"</div>
+    <div id="rodomaInformacija"><i>Informacija:</i><br><b style="font-weight: 600;">Karnavalo data:</b> 2024-12-20 (pn)<br><b style="font-weight: 600;">Pasirodymo laikas:</b> nėra informacijos</div>
+    <div id="atsisiunciamasAudio1"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio1.mp3"</div>
+    <div id="atsisiunciamasAudio2"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio2.mp3"</div>
+    <div id="atsisiunciamasAudio3"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio3.mp3"</div>
+    <div id="atsisiunciamasAudio4"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio4.mp3"</div>
+    <div id="atsisiunciamasAudio5"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio5.mp3"</div>
+
+
+
+
+
+
 
     <div id="Arune">
         <div id="girlianda">
@@ -3861,14 +3361,10 @@
         <div id="infoArune"><i class="fa-solid fa-chevron-down" onclick="closeArune()" id="AruneUzdarymas" ontouchstart></i><p id="AruneTekstas2">Karnavalas „Princesė ir varlius”</p></div>
         <p id="AruneTekstas">Karnavalas „Princesė ir varlius”</p>
 
-        <div id="pinnedAruneBackground">
-            <button onclick="scenarijusArune()" id="atsisiustiScenarijuArune" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
-            <button onclick="informacijaArune()" id="informacijaArune" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
+        <div class="pinnedBg">
+            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
+            <button onclick="informacija()" class="informacija" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
         </div>
-
-        <div id="pinnedBackgroundArune" onclick="uzdarytiInfoArune()" ontouchstart></div>
-        <div id="atsisiunciamasScenarijusArune"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "scenarijus.pdf"</div>
-        <div id="rodomaInformacijaArune"><i>Informacija:</i><br><b style="font-weight: 600;">Karnavalo data:</b> 2024-12-20 (pn)<br><b style="font-weight: 600;">Pasirodymo laikas:</b> nėra informacijos</div>
 
         <div class="vardas">
             <i class="fa-regular fa-user-circle vardasIcon"></i>
@@ -3945,13 +3441,9 @@
         <p id="SmilteTekstas">Karnavalas „Princesė ir varlius”</p>
 
         <div id="pinnedSmilteBackground">
-            <button onclick="scenarijusSmilte()" id="atsisiustiScenarijuSmilte" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
-            <button onclick="informacijaSmilte()" id="informacijaSmilte" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
+            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
+            <button onclick="informacija()" class="informacija" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
         </div>
-
-        <div id="pinnedBackgroundSmilte" onclick="uzdarytiInfoSmilte()" ontouchstart></div>
-        <div id="atsisiunciamasScenarijusSmilte"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "scenarijus.pdf"</div>
-        <div id="rodomaInformacijaSmilte"><i>Informacija:</i><br><b style="font-weight: 600;">Karnavalo data:</b> 2024-12-20 (pn)<br><b style="font-weight: 600;">Pasirodymo laikas:</b> nėra informacijos</div>
 
         <div class="vardas">
             <i class="fa-regular fa-user-circle vardasIcon"></i>
@@ -4027,14 +3519,10 @@
         <div id="infoAdriana"><i class="fa-solid fa-chevron-down" onclick="closeAdriana()" id="AdrianaUzdarymas" ontouchstart></i><p id="AdrianaTekstas2">Karnavalas „Princesė ir varlius”</p></div>
         <p id="AdrianaTekstas">Karnavalas „Princesė ir varlius”</p>
 
-        <div id="pinnedAdrianaBackground">
-            <button onclick="scenarijusAdriana()" id="atsisiustiScenarijuAdriana" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
-            <button onclick="informacijaAdriana()" id="informacijaAdriana" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
+        <div class="pinnedBg">
+            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
+            <button onclick="informacija()" class="informacija" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
         </div>
-
-        <div id="pinnedBackgroundAdriana" onclick="uzdarytiInfoAdriana()" ontouchstart></div>
-        <div id="atsisiunciamasScenarijusAdriana"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "scenarijus.pdf"</div>
-        <div id="rodomaInformacijaAdriana"><i>Informacija:</i><br><b style="font-weight: 600;">Karnavalo data:</b> 2024-12-20 (pn)<br><b style="font-weight: 600;">Pasirodymo laikas:</b> nėra informacijos</div>
 
         <div class="vardas">
             <i class="fa-regular fa-user-circle vardasIcon"></i>
@@ -4111,13 +3599,9 @@
         <p id="NorbertasTekstas">Karnavalas „Princesė ir varlius”</p>
 
         <div id="pinnedNorbertasBackground">
-            <button onclick="scenarijusNorbertas()" id="atsisiustiScenarijuNorbertas" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
-            <button onclick="informacijaNorbertas()" id="informacijaNorbertas" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
+            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
+            <button onclick="informacija()" class="informacija" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
         </div>
-
-        <div id="pinnedBackgroundNorbertas" onclick="uzdarytiInfoNorbertas()" ontouchstart></div>
-        <div id="atsisiunciamasScenarijusNorbertas"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "scenarijus.pdf"</div>
-        <div id="rodomaInformacijaNorbertas"><i>Informacija:</i><br><b style="font-weight: 600;">Karnavalo data:</b> 2024-12-20 (pn)<br><b style="font-weight: 600;">Pasirodymo laikas:</b> nėra informacijos</div>
 
         <div class="vardas">
             <i class="fa-regular fa-user-circle vardasIcon"></i>
@@ -4193,14 +3677,10 @@
         <div id="infoMeta"><i class="fa-solid fa-chevron-down" onclick="closeMeta()" id="MetaUzdarymas" ontouchstart></i><p id="MetaTekstas2">Karnavalas „Princesė ir varlius”</p></div>
         <p id="MetaTekstas">Karnavalas „Princesė ir varlius”</p>
 
-        <div id="pinnedMetaBackground">
-            <button onclick="scenarijusMeta()" id="atsisiustiScenarijuMeta" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
-            <button onclick="informacijaMeta()" id="informacijaMeta" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
+        <div class="pinnedBg">
+            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
+            <button onclick="informacija()" class="informacija" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
         </div>
-
-        <div id="pinnedBackgroundMeta" onclick="uzdarytiInfoMeta()" ontouchstart></div>
-        <div id="atsisiunciamasScenarijusMeta"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "scenarijus.pdf"</div>
-        <div id="rodomaInformacijaMeta"><i>Informacija:</i><br><b style="font-weight: 600;">Karnavalo data:</b> 2024-12-20 (pn)<br><b style="font-weight: 600;">Pasirodymo laikas:</b> nėra informacijos</div>
 
         <div class="vardas">
             <i class="fa-regular fa-user-circle vardasIcon"></i>
@@ -4276,14 +3756,10 @@
         <div id="infoJustina"><i class="fa-solid fa-chevron-down" onclick="closeJustina()" id="JustinaUzdarymas" ontouchstart></i><p id="JustinaTekstas2">Karnavalas „Princesė ir varlius”</p></div>
         <p id="JustinaTekstas">Karnavalas „Princesė ir varlius”</p>
 
-        <div id="pinnedJustinaBackground">
-            <button onclick="scenarijusJustina()" id="atsisiustiScenarijuJustina" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
-            <button onclick="informacijaJustina()" id="informacijaJustina" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
+        <div class="pinnedBg">
+            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
+            <button onclick="informacija()" class="informacija" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
         </div>
-
-        <div id="pinnedBackgroundJustina" onclick="uzdarytiInfoJustina()" ontouchstart></div>
-        <div id="atsisiunciamasScenarijusJustina"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "scenarijus.pdf"</div>
-        <div id="rodomaInformacijaJustina"><i>Informacija:</i><br><b style="font-weight: 600;">Karnavalo data:</b> 2024-12-20 (pn)<br><b style="font-weight: 600;">Pasirodymo laikas:</b> nėra informacijos</div>
 
         <div class="vardas">
             <i class="fa-regular fa-user-circle vardasIcon"></i>
@@ -4359,14 +3835,10 @@
         <div id="infoMindaugasd"><i class="fa-solid fa-chevron-down" onclick="closeMindaugasd()" id="MindaugasdUzdarymas" ontouchstart></i><p id="MindaugasdTekstas2">Karnavalas „Princesė ir varlius”</p></div>
         <p id="MindaugasdTekstas">Karnavalas „Princesė ir varlius”</p>
 
-        <div id="pinnedMindaugasdBackground">
-            <button onclick="scenarijusMindaugasd()" id="atsisiustiScenarijuMindaugasd" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
-            <button onclick="informacijaMindaugasd()" id="informacijaMindaugasd" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
+        <div class="pinnedBg">
+            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
+            <button onclick="informacija()" class="informacija" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
         </div>
-
-        <div id="pinnedBackgroundMindaugasd" onclick="uzdarytiInfoMindaugasd()" ontouchstart></div>
-        <div id="atsisiunciamasScenarijusMindaugasd"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "scenarijus.pdf"</div>
-        <div id="rodomaInformacijaMindaugasd"><i>Informacija:</i><br><b style="font-weight: 600;">Karnavalo data:</b> 2024-12-20 (pn)<br><b style="font-weight: 600;">Pasirodymo laikas:</b> nėra informacijos</div>
 
         <div class="vardas">
             <i class="fa-regular fa-user-circle vardasIcon"></i>
@@ -4442,14 +3914,10 @@
         <div id="infoDovydas"><i class="fa-solid fa-chevron-down" onclick="closeDovydas()" id="DovydasUzdarymas" ontouchstart></i><p id="DovydasTekstas2">Karnavalas „Princesė ir varlius”</p></div>
         <p id="DovydasTekstas">Karnavalas „Princesė ir varlius”</p>
 
-        <div id="pinnedDovydasBackground">
-            <button onclick="scenarijusDovydas()" id="atsisiustiScenarijuDovydas" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
-            <button onclick="informacijaDovydas()" id="informacijaDovydas" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
+        <div class="pinnedBg">
+            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
+            <button onclick="informacija()" class="informacija" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
         </div>
-
-        <div id="pinnedBackgroundDovydas" onclick="uzdarytiInfoDovydas()" ontouchstart></div>
-        <div id="atsisiunciamasScenarijusDovydas"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "scenarijus.pdf"</div>
-        <div id="rodomaInformacijaDovydas"><i>Informacija:</i><br><b style="font-weight: 600;">Karnavalo data:</b> 2024-12-20 (pn)<br><b style="font-weight: 600;">Pasirodymo laikas:</b> nėra informacijos</div>
 
         <div class="vardas">
             <i class="fa-regular fa-user-circle vardasIcon"></i>
@@ -4525,14 +3993,10 @@
         <div id="infoMatas"><i class="fa-solid fa-chevron-down" onclick="closeMatas()" id="MatasUzdarymas" ontouchstart></i><p id="MatasTekstas2">Karnavalas „Princesė ir varlius”</p></div>
         <p id="MatasTekstas">Karnavalas „Princesė ir varlius”</p>
 
-        <div id="pinnedMatasBackground">
-            <button onclick="scenarijusMatas()" id="atsisiustiScenarijuMatas" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
-            <button onclick="informacijaMatas()" id="informacijaMatas" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
+        <div class="pinnedBg">
+            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
+            <button onclick="informacija()" class="informacija" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
         </div>
-
-        <div id="pinnedBackgroundMatas" onclick="uzdarytiInfoMatas()" ontouchstart></div>
-        <div id="atsisiunciamasScenarijusMatas"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "scenarijus.pdf"</div>
-        <div id="rodomaInformacijaMatas"><i>Informacija:</i><br><b style="font-weight: 600;">Karnavalo data:</b> 2024-12-20 (pn)<br><b style="font-weight: 600;">Pasirodymo laikas:</b> nėra informacijos</div>
 
         <div class="vardas">
             <i class="fa-regular fa-user-circle vardasIcon"></i>
@@ -4575,14 +4039,325 @@
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Papildomai:</p>
+            <button onclick="openSoundTracks()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atidaryti garso takelių valdymą</button>
+        </div>
+    </div>
+    <div id="Aleksandra">
+        <div id="girlianda">
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+        </div>
+        <div id="girlianda2">
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+        </div>
+        <div id="topInfoAleksandra"></div>
+        <div id="infoAleksandra"><i class="fa-solid fa-chevron-down" onclick="closeAleksandra()" id="AleksandraUzdarymas" ontouchstart></i><p id="AleksandraTekstas2">Karnavalas „Princesė ir varlius”</p></div>
+        <p id="AleksandraTekstas">Karnavalas „Princesė ir varlius”</p>
+
+        <div class="pinnedBg">
+            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
+            <button onclick="informacija()" class="informacija" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
+        </div>
+
+        <div class="vardas">
+            <i class="fa-regular fa-user-circle vardasIcon"></i>
+            <p class="pagrTekstas">Rolė</p>
+            <p class="vardasAntrTekstas">Aleksandra</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="apie">
+            <i class="fa-regular fa-circle-question karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Apie rolę:</p>
+            <p class="antrTekstas">Rolės aprašymas.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="pasiruosimas">
+            <i class="fa-solid fa-suitcase karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Pasiruošti:</p>
+            <p class="antrTekstas">Pasiruošimo aprašymas.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="apranga">
+            <i class="fa-solid fa-shirt karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Apranga:</p>
+            <p class="antrTekstas">Aprangos aprašymas.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="zodziai">
+            <i class="fa-regular fa-comments karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Žodžiai:</p>
+            <p class="antrTekstas">Žodžių aprašymas.</p>
+            <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="vaidinimas">
+            <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Vaidinimo eiga:</p>
+            <p class="antrTekstas">Vaidinimo eigos aprašymas.</p>
+            <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="papildomai">
+            <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Papildomai:</p>
             <p class="antrTekstas">Papildomai (garso takeliai ir pan.) aprašymas.</p>
             <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
         </div>
     </div>
     <a id="download_script" href="scenarijus.pdf" download style="display: none;">download_script</a>
+    <a id="download_audio1" href="audio1.mp3" download style="display: none;">download_audio1</a>
+    <a id="download_audio2" href="audio2.mp3" download style="display: none;">download_audio2</a>
+    <a id="download_audio3" href="audio3.mp3" download style="display: none;">download_audio3</a>
+    <a id="download_audio4" href="audio4.mp3" download style="display: none;">download_audio4</a>
+    <a id="download_audio5" href="audio5.mp3" download style="display: none;">download_audio5</a>
 
     <script src="https://kit.fontawesome.com/a11707644f.js" crossorigin="anonymous"></script>
     <script>
+
+        function openSoundTracks() {
+            setTimeout(() => {
+                document.getElementById("soundManager").style.bottom = "0";
+            }, 10);
+        }
+        function closeSoundTracks() {
+            setTimeout(() => {
+                document.getElementById("soundManager").style.bottom = "-100%";
+            }, 10);
+        }
+        function playAudio1() {
+            setTimeout(() => {
+                document.getElementById("1play").style.display = "none";
+                document.getElementById("1stop").style.display = "flex";
+                document.getElementById('audio1').currentTime = 0;
+                document.getElementById("audio1").play();
+                document.getElementById("1aud").style.animation = "blink 2s linear infinite";
+            }, 100);
+        }
+        document.getElementById("audio1").onended = function() {
+            document.getElementById("1play").style.display = "flex";
+            document.getElementById("1stop").style.display = "none";
+            document.getElementById("1aud").style.animation = "none";
+        }
+        function stopAudio1() {
+            setTimeout(() => {
+                document.getElementById("1play").style.display = "flex";
+                document.getElementById("1stop").style.display = "none";
+                document.getElementById('audio1').currentTime = 0;
+                document.getElementById("audio1").pause();
+                document.getElementById("1aud").style.animation = "none";
+            }, 100);
+        }
+        function playAudio2() {
+            setTimeout(() => {
+                document.getElementById("2play").style.display = "none";
+                document.getElementById("2stop").style.display = "flex";
+                document.getElementById('audio2').currentTime = 0;
+                document.getElementById("audio2").play();
+                document.getElementById("2aud").style.animation = "blink 2s linear infinite";
+            }, 100);
+        }
+        document.getElementById("audio2").onended = function() {
+            document.getElementById("2play").style.display = "flex";
+            document.getElementById("2stop").style.display = "none";
+            document.getElementById("2aud").style.animation = "none";
+        }
+        function stopAudio2() {
+            setTimeout(() => {
+                document.getElementById("2play").style.display = "flex";
+                document.getElementById("2stop").style.display = "none";
+                document.getElementById('audio2').currentTime = 0;
+                document.getElementById("audio2").pause();
+                document.getElementById("2aud").style.animation = "none";
+            }, 100);
+        }
+        function playAudio3() {
+            setTimeout(() => {
+                document.getElementById("3play").style.display = "none";
+                document.getElementById("3stop").style.display = "flex";
+                document.getElementById('audio3').currentTime = 0;
+                document.getElementById("audio3").play();
+                document.getElementById("3aud").style.animation = "blink 2s linear infinite";
+            }, 100);
+        }
+        document.getElementById("audio3").onended = function() {
+            document.getElementById("3play").style.display = "flex";
+            document.getElementById("3stop").style.display = "none";
+            document.getElementById("3aud").style.animation = "none";
+        }
+        function stopAudio3() {
+            setTimeout(() => {
+                document.getElementById("3play").style.display = "flex";
+                document.getElementById("3stop").style.display = "none";
+                document.getElementById('audio3').currentTime = 0;
+                document.getElementById("audio3").pause();
+                document.getElementById("3aud").style.animation = "none";
+            }, 100);
+        }
+        function playAudio4() {
+            setTimeout(() => {
+                document.getElementById("4play").style.display = "none";
+                document.getElementById("4stop").style.display = "flex";
+                document.getElementById('audio4').currentTime = 0;
+                document.getElementById("audio4").play();
+                document.getElementById("4aud").style.animation = "blink 2s linear infinite";
+            }, 100);
+        }
+        document.getElementById("audio4").onended = function() {
+            document.getElementById("4play").style.display = "flex";
+            document.getElementById("4stop").style.display = "none";
+            document.getElementById("4aud").style.animation = "none";
+        }
+        function stopAudio4() {
+            setTimeout(() => {
+                document.getElementById("4play").style.display = "flex";
+                document.getElementById("4stop").style.display = "none";
+                document.getElementById('audio4').currentTime = 0;
+                document.getElementById("audio4").pause();
+                document.getElementById("4aud").style.animation = "none";
+            }, 100);
+        }
+        function playAudio5() {
+            setTimeout(() => {
+                document.getElementById("5play").style.display = "none";
+                document.getElementById("5stop").style.display = "flex";
+                document.getElementById('audio5').currentTime = 0;
+                document.getElementById("audio5").play();
+                document.getElementById("5aud").style.animation = "blink 2s linear infinite";
+            }, 100);
+        }
+        document.getElementById("audio5").onended = function() {
+            document.getElementById("5play").style.display = "flex";
+            document.getElementById("5stop").style.display = "none";
+            document.getElementById("5aud").style.animation = "none";
+        }
+        function stopAudio5() {
+            setTimeout(() => {
+                document.getElementById("5play").style.display = "flex";
+                document.getElementById("5stop").style.display = "none";
+                document.getElementById('audio5').currentTime = 0;
+                document.getElementById("audio5").pause();
+                document.getElementById("5aud").style.animation = "none";
+            }, 100);
+        }
+        function atsisiustiAudio1() {
+            document.getElementById("pinnedBackground").style.display = "block";
+            document.getElementById("body").style.overflow = "hidden";
+            setTimeout(() => {
+                document.getElementById("atsisiunciamasAudio1").style.bottom = "0";
+                document.getElementById("pinnedBackground").style.opacity = "1";
+            }, 10);
+            setTimeout(() => {
+                document.getElementById("download_audio1").click();
+            }, 1010);
+            setTimeout(() => {
+                document.getElementById("atsisiunciamasAudio1").style.bottom = "-100%";
+                document.getElementById("pinnedBackground").style.opacity = "0";
+            }, 6010);
+            setTimeout(() => {
+                document.getElementById("pinnedBackground").style.display = "none";
+                document.getElementById("body").style.overflow = "scroll";
+            }, 6310);
+        }
+        function atsisiustiAudio2() {
+            document.getElementById("pinnedBackground").style.display = "block";
+            document.getElementById("body").style.overflow = "hidden";
+            setTimeout(() => {
+                document.getElementById("atsisiunciamasAudio2").style.bottom = "0";
+                document.getElementById("pinnedBackground").style.opacity = "1";
+            }, 10);
+            setTimeout(() => {
+                document.getElementById("download_audio2").click();
+            }, 1010);
+            setTimeout(() => {
+                document.getElementById("atsisiunciamasAudio2").style.bottom = "-100%";
+                document.getElementById("pinnedBackground").style.opacity = "0";
+            }, 6010);
+            setTimeout(() => {
+                document.getElementById("pinnedBackground").style.display = "none";
+                document.getElementById("body").style.overflow = "scroll";
+            }, 6310);
+        }
+        function atsisiustiAudio3() {
+            document.getElementById("pinnedBackground").style.display = "block";
+            document.getElementById("body").style.overflow = "hidden";
+            setTimeout(() => {
+                document.getElementById("atsisiunciamasAudio3").style.bottom = "0";
+                document.getElementById("pinnedBackground").style.opacity = "1";
+            }, 10);
+            setTimeout(() => {
+                document.getElementById("download_audio3").click();
+            }, 1010);
+            setTimeout(() => {
+                document.getElementById("atsisiunciamasAudio3").style.bottom = "-100%";
+                document.getElementById("pinnedBackground").style.opacity = "0";
+            }, 6010);
+            setTimeout(() => {
+                document.getElementById("pinnedBackground").style.display = "none";
+                document.getElementById("body").style.overflow = "scroll";
+            }, 6310);
+        }
+        function atsisiustiAudio4() {
+            document.getElementById("pinnedBackground").style.display = "block";
+            document.getElementById("body").style.overflow = "hidden";
+            setTimeout(() => {
+                document.getElementById("atsisiunciamasAudio4").style.bottom = "0";
+                document.getElementById("pinnedBackground").style.opacity = "1";
+            }, 10);
+            setTimeout(() => {
+                document.getElementById("download_audio4").click();
+            }, 1010);
+            setTimeout(() => {
+                document.getElementById("atsisiunciamasAudio4").style.bottom = "-100%";
+                document.getElementById("pinnedBackground").style.opacity = "0";
+            }, 6010);
+            setTimeout(() => {
+                document.getElementById("pinnedBackground").style.display = "none";
+                document.getElementById("body").style.overflow = "scroll";
+            }, 6310);
+        }
+        function atsisiustiAudio5() {
+            document.getElementById("pinnedBackground").style.display = "block";
+            document.getElementById("body").style.overflow = "hidden";
+            setTimeout(() => {
+                document.getElementById("atsisiunciamasAudio5").style.bottom = "0";
+                document.getElementById("pinnedBackground").style.opacity = "1";
+            }, 10);
+            setTimeout(() => {
+                document.getElementById("download_audio5").click();
+            }, 1010);
+            setTimeout(() => {
+                document.getElementById("atsisiunciamasAudio5").style.bottom = "-100%";
+                document.getElementById("pinnedBackground").style.opacity = "0";
+            }, 6010);
+            setTimeout(() => {
+                document.getElementById("pinnedBackground").style.display = "none";
+                document.getElementById("body").style.overflow = "scroll";
+            }, 6310);
+        }
+
+
+
+
+
+
+
         function getCookie(cname) {
             let name = cname + "=";
             let ca = document.cookie.split(';');
@@ -4699,6 +4474,8 @@
                     document.getElementById("infoDovydas").style.backgroundColor = "rgba(20, 20, 20, 0.75)";
                     document.getElementById("infoMatas").style.boxShadow = "0 0 10px #333333";
                     document.getElementById("infoMatas").style.backgroundColor = "rgba(20, 20, 20, 0.75)";
+                    document.getElementById("infoAleksandra").style.boxShadow = "0 0 10px #333333";
+                    document.getElementById("infoAleksandra").style.backgroundColor = "rgba(20, 20, 20, 0.75)";
                 }
                 else{
                     document.getElementById("info").style.boxShadow = "0 0 10px lightgrey";
@@ -4722,6 +4499,8 @@
                     document.getElementById("infoDovydas").style.backgroundColor = "rgba(242, 242, 242, 0.75)";
                     document.getElementById("infoMatas").style.boxShadow = "0 0 10px lightgrey";
                     document.getElementById("infoMatas").style.backgroundColor = "rgba(242, 242, 242, 0.75)";
+                    document.getElementById("infoAleksandra").style.boxShadow = "0 0 10px lightgrey";
+                    document.getElementById("infoAleksandra").style.backgroundColor = "rgba(242, 242, 242, 0.75)";
                 }
 
                 document.getElementById("AruneTekstas").style.opacity = "0";
@@ -4742,6 +4521,8 @@
                 document.getElementById("DovydasTekstas2").style.opacity = "1";
                 document.getElementById("MatasTekstas").style.opacity = "0";
                 document.getElementById("MatasTekstas2").style.opacity = "1";
+                document.getElementById("AleksandraTekstas").style.opacity = "0";
+                document.getElementById("AleksandraTekstas2").style.opacity = "1";
             }
             else {
                 document.getElementById("kelionesMarsrutasTekstas").style.opacity = "1";
@@ -4759,6 +4540,7 @@
                     document.getElementById("infoMindaugasd").style.backgroundColor = "rgba(20, 20, 20, 1)";
                     document.getElementById("infoDovydas").style.backgroundColor = "rgba(20, 20, 20, 1)";
                     document.getElementById("infoMatas").style.backgroundColor = "rgba(20, 20, 20, 1)";
+                    document.getElementById("infoAleksandra").style.backgroundColor = "rgba(20, 20, 20, 1)";
                 }
                 else{
                     document.getElementById("info").style.backgroundColor = "rgba(242, 242, 242, 1)";
@@ -4772,6 +4554,7 @@
                     document.getElementById("infoMindaugasd").style.backgroundColor = "rgba(242, 242, 242, 1)";
                     document.getElementById("infoDovydas").style.backgroundColor = "rgba(242, 242, 242, 1)";
                     document.getElementById("infoMatas").style.backgroundColor = "rgba(242, 242, 242, 1)";
+                    document.getElementById("infoAleksandra").style.backgroundColor = "rgba(242, 242, 242, 1)";
                 }
 
                 document.getElementById("AruneTekstas").style.opacity = "1";
@@ -4801,6 +4584,9 @@
                 document.getElementById("MatasTekstas").style.opacity = "1";
                 document.getElementById("MatasTekstas2").style.opacity = "0";
                 document.getElementById("infoMatas").style.boxShadow = "none";
+                document.getElementById("AleksandraTekstas").style.opacity = "1";
+                document.getElementById("AleksandraTekstas2").style.opacity = "0";
+                document.getElementById("infoAleksandra").style.boxShadow = "none";
             }
         }
 
@@ -4982,336 +4768,40 @@
 
 
 
-        function scenarijusArune() {
-            document.getElementById("pinnedBackgroundArune").style.display = "block";
+        function scenarijus() {
+            document.getElementById("pinnedBackground").style.display = "block";
             document.getElementById("body").style.overflow = "hidden";
             setTimeout(() => {
-                document.getElementById("atsisiunciamasScenarijusArune").style.bottom = "0";
-                document.getElementById("pinnedBackgroundArune").style.opacity = "1";
+                document.getElementById("atsisiunciamasScenarijus").style.bottom = "0";
+                document.getElementById("pinnedBackground").style.opacity = "1";
             }, 10);
             setTimeout(() => {
                 document.getElementById("download_script").click();
             }, 1010);
             setTimeout(() => {
-                document.getElementById("atsisiunciamasScenarijusArune").style.bottom = "-100%";
-                document.getElementById("pinnedBackgroundArune").style.opacity = "0";
+                document.getElementById("atsisiunciamasScenarijus").style.bottom = "-100%";
+                document.getElementById("pinnedBackground").style.opacity = "0";
             }, 6010);
             setTimeout(() => {
-                document.getElementById("pinnedBackgroundArune").style.display = "none";
+                document.getElementById("pinnedBackground").style.display = "none";
                 document.getElementById("body").style.overflow = "scroll";
             }, 6310);
         }
-        function informacijaArune() {
-            document.getElementById("pinnedBackgroundArune").style.display = "block";
+        function informacija() {
+            document.getElementById("pinnedBackground").style.display = "block";
             document.getElementById("body").style.overflow = "hidden";
             setTimeout(() => {
-                document.getElementById("rodomaInformacijaArune").style.bottom = "0";
-                document.getElementById("pinnedBackgroundArune").style.opacity = "1";
-                document.getElementById("pinnedBackgroundArune").style.pointerEvents = "all";
+                document.getElementById("rodomaInformacija").style.bottom = "0";
+                document.getElementById("pinnedBackground").style.opacity = "1";
+                document.getElementById("pinnedBackground").style.pointerEvents = "all";
             }, 10);
         }
-        function uzdarytiInfoArune() {
-            document.getElementById("rodomaInformacijaArune").style.bottom = "-300px";
-            document.getElementById("pinnedBackgroundArune").style.opacity = "0";
-            document.getElementById("pinnedBackgroundArune").style.pointerEvents = "none";
+        function uzdarytiInfo() {
+            document.getElementById("rodomaInformacija").style.bottom = "-300px";
+            document.getElementById("pinnedBackground").style.opacity = "0";
+            document.getElementById("pinnedBackground").style.pointerEvents = "none";
             setTimeout(() => {
-                document.getElementById("pinnedBackgroundArune").style.display = "none";
-                document.getElementById("body").style.overflow = "scroll";
-            }, 300);
-        }
-        function scenarijusSmilte() {
-            document.getElementById("pinnedBackgroundSmilte").style.display = "block";
-            document.getElementById("body").style.overflow = "hidden";
-            setTimeout(() => {
-                document.getElementById("atsisiunciamasScenarijusSmilte").style.bottom = "0";
-                document.getElementById("pinnedBackgroundSmilte").style.opacity = "1";
-            }, 10);
-            setTimeout(() => {
-                document.getElementById("download_script").click();
-            }, 1010);
-            setTimeout(() => {
-                document.getElementById("atsisiunciamasScenarijusSmilte").style.bottom = "-100%";
-                document.getElementById("pinnedBackgroundSmilte").style.opacity = "0";
-            }, 6010);
-            setTimeout(() => {
-                document.getElementById("pinnedBackgroundSmilte").style.display = "none";
-                document.getElementById("body").style.overflow = "scroll";
-            }, 6310);
-        }
-        function informacijaSmilte() {
-            document.getElementById("pinnedBackgroundSmilte").style.display = "block";
-            document.getElementById("body").style.overflow = "hidden";
-            setTimeout(() => {
-                document.getElementById("rodomaInformacijaSmilte").style.bottom = "0";
-                document.getElementById("pinnedBackgroundSmilte").style.opacity = "1";
-                document.getElementById("pinnedBackgroundSmilte").style.pointerEvents = "all";
-            }, 10);
-        }
-        function uzdarytiInfoSmilte() {
-            document.getElementById("rodomaInformacijaSmilte").style.bottom = "-300px";
-            document.getElementById("pinnedBackgroundSmilte").style.opacity = "0";
-            document.getElementById("pinnedBackgroundSmilte").style.pointerEvents = "none";
-            setTimeout(() => {
-                document.getElementById("pinnedBackgroundSmilte").style.display = "none";
-                document.getElementById("body").style.overflow = "scroll";
-            }, 300);
-        }
-        function scenarijusAdriana() {
-            document.getElementById("pinnedBackgroundAdriana").style.display = "block";
-            document.getElementById("body").style.overflow = "hidden";
-            setTimeout(() => {
-                document.getElementById("atsisiunciamasScenarijusAdriana").style.bottom = "0";
-                document.getElementById("pinnedBackgroundAdriana").style.opacity = "1";
-            }, 10);
-            setTimeout(() => {
-                document.getElementById("download_script").click();
-            }, 1010);
-            setTimeout(() => {
-                document.getElementById("atsisiunciamasScenarijusAdriana").style.bottom = "-100%";
-                document.getElementById("pinnedBackgroundAdriana").style.opacity = "0";
-            }, 6010);
-            setTimeout(() => {
-                document.getElementById("pinnedBackgroundAdriana").style.display = "none";
-                document.getElementById("body").style.overflow = "scroll";
-            }, 6310);
-        }
-        function informacijaAdriana() {
-            document.getElementById("pinnedBackgroundAdriana").style.display = "block";
-            document.getElementById("body").style.overflow = "hidden";
-            setTimeout(() => {
-                document.getElementById("rodomaInformacijaAdriana").style.bottom = "0";
-                document.getElementById("pinnedBackgroundAdriana").style.opacity = "1";
-                document.getElementById("pinnedBackgroundAdriana").style.pointerEvents = "all";
-            }, 10);
-        }
-        function uzdarytiInfoAdriana() {
-            document.getElementById("rodomaInformacijaAdriana").style.bottom = "-300px";
-            document.getElementById("pinnedBackgroundAdriana").style.opacity = "0";
-            document.getElementById("pinnedBackgroundAdriana").style.pointerEvents = "none";
-            setTimeout(() => {
-                document.getElementById("pinnedBackgroundAdriana").style.display = "none";
-                document.getElementById("body").style.overflow = "scroll";
-            }, 300);
-        }
-        function scenarijusNorbertas() {
-            document.getElementById("pinnedBackgroundNorbertas").style.display = "block";
-            document.getElementById("body").style.overflow = "hidden";
-            setTimeout(() => {
-                document.getElementById("atsisiunciamasScenarijusNorbertas").style.bottom = "0";
-                document.getElementById("pinnedBackgroundNorbertas").style.opacity = "1";
-            }, 10);
-            setTimeout(() => {
-                document.getElementById("download_script").click();
-            }, 1010);
-            setTimeout(() => {
-                document.getElementById("atsisiunciamasScenarijusNorbertas").style.bottom = "-100%";
-                document.getElementById("pinnedBackgroundNorbertas").style.opacity = "0";
-            }, 6010);
-            setTimeout(() => {
-                document.getElementById("pinnedBackgroundNorbertas").style.display = "none";
-                document.getElementById("body").style.overflow = "scroll";
-            }, 6310);
-        }
-        function informacijaNorbertas() {
-            document.getElementById("pinnedBackgroundNorbertas").style.display = "block";
-            document.getElementById("body").style.overflow = "hidden";
-            setTimeout(() => {
-                document.getElementById("rodomaInformacijaNorbertas").style.bottom = "0";
-                document.getElementById("pinnedBackgroundNorbertas").style.opacity = "1";
-                document.getElementById("pinnedBackgroundNorbertas").style.pointerEvents = "all";
-            }, 10);
-        }
-        function uzdarytiInfoNorbertas() {
-            document.getElementById("rodomaInformacijaNorbertas").style.bottom = "-300px";
-            document.getElementById("pinnedBackgroundNorbertas").style.opacity = "0";
-            document.getElementById("pinnedBackgroundNorbertas").style.pointerEvents = "none";
-            setTimeout(() => {
-                document.getElementById("pinnedBackgroundNorbertas").style.display = "none";
-                document.getElementById("body").style.overflow = "scroll";
-            }, 300);
-        }
-        function scenarijusMeta() {
-            document.getElementById("pinnedBackgroundMeta").style.display = "block";
-            document.getElementById("body").style.overflow = "hidden";
-            setTimeout(() => {
-                document.getElementById("atsisiunciamasScenarijusMeta").style.bottom = "0";
-                document.getElementById("pinnedBackgroundMeta").style.opacity = "1";
-            }, 10);
-            setTimeout(() => {
-                document.getElementById("download_script").click();
-            }, 1010);
-            setTimeout(() => {
-                document.getElementById("atsisiunciamasScenarijusMeta").style.bottom = "-100%";
-                document.getElementById("pinnedBackgroundMeta").style.opacity = "0";
-            }, 6010);
-            setTimeout(() => {
-                document.getElementById("pinnedBackgroundMeta").style.display = "none";
-                document.getElementById("body").style.overflow = "scroll";
-            }, 6310);
-        }
-        function informacijaMeta() {
-            document.getElementById("pinnedBackgroundMeta").style.display = "block";
-            document.getElementById("body").style.overflow = "hidden";
-            setTimeout(() => {
-                document.getElementById("rodomaInformacijaMeta").style.bottom = "0";
-                document.getElementById("pinnedBackgroundMeta").style.opacity = "1";
-                document.getElementById("pinnedBackgroundMeta").style.pointerEvents = "all";
-            }, 10);
-        }
-        function uzdarytiInfoMeta() {
-            document.getElementById("rodomaInformacijaMeta").style.bottom = "-300px";
-            document.getElementById("pinnedBackgroundMeta").style.opacity = "0";
-            document.getElementById("pinnedBackgroundMeta").style.pointerEvents = "none";
-            setTimeout(() => {
-                document.getElementById("pinnedBackgroundMeta").style.display = "none";
-                document.getElementById("body").style.overflow = "scroll";
-            }, 300);
-        }
-        function scenarijusJustina() {
-            document.getElementById("pinnedBackgroundJustina").style.display = "block";
-            document.getElementById("body").style.overflow = "hidden";
-            setTimeout(() => {
-                document.getElementById("atsisiunciamasScenarijusJustina").style.bottom = "0";
-                document.getElementById("pinnedBackgroundJustina").style.opacity = "1";
-            }, 10);
-            setTimeout(() => {
-                document.getElementById("download_script").click();
-            }, 1010);
-            setTimeout(() => {
-                document.getElementById("atsisiunciamasScenarijusJustina").style.bottom = "-100%";
-                document.getElementById("pinnedBackgroundJustina").style.opacity = "0";
-            }, 6010);
-            setTimeout(() => {
-                document.getElementById("pinnedBackgroundJustina").style.display = "none";
-                document.getElementById("body").style.overflow = "scroll";
-            }, 6310);
-        }
-        function informacijaJustina() {
-            document.getElementById("pinnedBackgroundJustina").style.display = "block";
-            document.getElementById("body").style.overflow = "hidden";
-            setTimeout(() => {
-                document.getElementById("rodomaInformacijaJustina").style.bottom = "0";
-                document.getElementById("pinnedBackgroundJustina").style.opacity = "1";
-                document.getElementById("pinnedBackgroundJustina").style.pointerEvents = "all";
-            }, 10);
-        }
-        function uzdarytiInfoJustina() {
-            document.getElementById("rodomaInformacijaJustina").style.bottom = "-300px";
-            document.getElementById("pinnedBackgroundJustina").style.opacity = "0";
-            document.getElementById("pinnedBackgroundJustina").style.pointerEvents = "none";
-            setTimeout(() => {
-                document.getElementById("pinnedBackgroundJustina").style.display = "none";
-                document.getElementById("body").style.overflow = "scroll";
-            }, 300);
-        }
-        function scenarijusMindaugasd() {
-            document.getElementById("pinnedBackgroundMindaugasd").style.display = "block";
-            document.getElementById("body").style.overflow = "hidden";
-            setTimeout(() => {
-                document.getElementById("atsisiunciamasScenarijusMindaugasd").style.bottom = "0";
-                document.getElementById("pinnedBackgroundMindaugasd").style.opacity = "1";
-            }, 10);
-            setTimeout(() => {
-                document.getElementById("download_script").click();
-            }, 1010);
-            setTimeout(() => {
-                document.getElementById("atsisiunciamasScenarijusMindaugasd").style.bottom = "-100%";
-                document.getElementById("pinnedBackgroundMindaugasd").style.opacity = "0";
-            }, 6010);
-            setTimeout(() => {
-                document.getElementById("pinnedBackgroundMindaugasd").style.display = "none";
-                document.getElementById("body").style.overflow = "scroll";
-            }, 6310);
-        }
-        function informacijaMindaugasd() {
-            document.getElementById("pinnedBackgroundMindaugasd").style.display = "block";
-            document.getElementById("body").style.overflow = "hidden";
-            setTimeout(() => {
-                document.getElementById("rodomaInformacijaMindaugasd").style.bottom = "0";
-                document.getElementById("pinnedBackgroundMindaugasd").style.opacity = "1";
-                document.getElementById("pinnedBackgroundMindaugasd").style.pointerEvents = "all";
-            }, 10);
-        }
-        function uzdarytiInfoMindaugasd() {
-            document.getElementById("rodomaInformacijaMindaugasd").style.bottom = "-300px";
-            document.getElementById("pinnedBackgroundMindaugasd").style.opacity = "0";
-            document.getElementById("pinnedBackgroundMindaugasd").style.pointerEvents = "none";
-            setTimeout(() => {
-                document.getElementById("pinnedBackgroundMindaugasd").style.display = "none";
-                document.getElementById("body").style.overflow = "scroll";
-            }, 300);
-        }
-        function scenarijusDovydas() {
-            document.getElementById("pinnedBackgroundDovydas").style.display = "block";
-            document.getElementById("body").style.overflow = "hidden";
-            setTimeout(() => {
-                document.getElementById("atsisiunciamasScenarijusDovydas").style.bottom = "0";
-                document.getElementById("pinnedBackgroundDovydas").style.opacity = "1";
-            }, 10);
-            setTimeout(() => {
-                document.getElementById("download_script").click();
-            }, 1010);
-            setTimeout(() => {
-                document.getElementById("atsisiunciamasScenarijusDovydas").style.bottom = "-100%";
-                document.getElementById("pinnedBackgroundDovydas").style.opacity = "0";
-            }, 6010);
-            setTimeout(() => {
-                document.getElementById("pinnedBackgroundDovydas").style.display = "none";
-                document.getElementById("body").style.overflow = "scroll";
-            }, 6310);
-        }
-        function informacijaDovydas() {
-            document.getElementById("pinnedBackgroundDovydas").style.display = "block";
-            document.getElementById("body").style.overflow = "hidden";
-            setTimeout(() => {
-                document.getElementById("rodomaInformacijaDovydas").style.bottom = "0";
-                document.getElementById("pinnedBackgroundDovydas").style.opacity = "1";
-                document.getElementById("pinnedBackgroundDovydas").style.pointerEvents = "all";
-            }, 10);
-        }
-        function uzdarytiInfoDovydas() {
-            document.getElementById("rodomaInformacijaDovydas").style.bottom = "-300px";
-            document.getElementById("pinnedBackgroundDovydas").style.opacity = "0";
-            document.getElementById("pinnedBackgroundDovydas").style.pointerEvents = "none";
-            setTimeout(() => {
-                document.getElementById("pinnedBackgroundDovydas").style.display = "none";
-                document.getElementById("body").style.overflow = "scroll";
-            }, 300);
-        }
-        function scenarijusMatas() {
-            document.getElementById("pinnedBackgroundMatas").style.display = "block";
-            document.getElementById("body").style.overflow = "hidden";
-            setTimeout(() => {
-                document.getElementById("atsisiunciamasScenarijusMatas").style.bottom = "0";
-                document.getElementById("pinnedBackgroundMatas").style.opacity = "1";
-            }, 10);
-            setTimeout(() => {
-                document.getElementById("download_script").click();
-            }, 1010);
-            setTimeout(() => {
-                document.getElementById("atsisiunciamasScenarijusMatas").style.bottom = "-100%";
-                document.getElementById("pinnedBackgroundMatas").style.opacity = "0";
-            }, 6010);
-            setTimeout(() => {
-                document.getElementById("pinnedBackgroundMatas").style.display = "none";
-                document.getElementById("body").style.overflow = "scroll";
-            }, 6310);
-        }
-        function informacijaMatas() {
-            document.getElementById("pinnedBackgroundMatas").style.display = "block";
-            document.getElementById("body").style.overflow = "hidden";
-            setTimeout(() => {
-                document.getElementById("rodomaInformacijaMatas").style.bottom = "0";
-                document.getElementById("pinnedBackgroundMatas").style.opacity = "1";
-                document.getElementById("pinnedBackgroundMatas").style.pointerEvents = "all";
-            }, 10);
-        }
-        function uzdarytiInfoMatas() {
-            document.getElementById("rodomaInformacijaMatas").style.bottom = "-300px";
-            document.getElementById("pinnedBackgroundMatas").style.opacity = "0";
-            document.getElementById("pinnedBackgroundMatas").style.pointerEvents = "none";
-            setTimeout(() => {
-                document.getElementById("pinnedBackgroundMatas").style.display = "none";
+                document.getElementById("pinnedBackground").style.display = "none";
                 document.getElementById("body").style.overflow = "scroll";
             }, 300);
         }
@@ -5993,6 +5483,41 @@
                     document.getElementById("body").style.overflow = "scroll";
                 }, 3900);
           }
+          else if(form.pin.value == "493793") //Aleksandra
+                {
+                    document.cookie = "Aleksandra=role";
+                document.getElementById("loading").style.display = "flex";
+                document.getElementById("ivestiKoda").style.opacity = "0.3";
+                document.querySelector('#topInfoAleksandra').scrollIntoView({
+                    behavior: 'smooth'
+                });
+                document.getElementById("keypad").style.opacity = "0.3";
+                document.getElementById("istrynimas").style.color = "transparent";
+                document.getElementById("istrynimas").style.pointerEvents = "none";
+                setTimeout(() => {
+                    document.getElementById("keypad").style.opacity = "1";
+                    document.getElementById("ivestiKoda").style.opacity = "1";
+                    document.getElementById("screen").style.top = "-100%";
+                    document.getElementById("screen").style.backgroundColor = "transparent";
+                    document.getElementById("display").style.top = "-100%";
+                    document.getElementById("Aleksandra").style.display = "block";
+                }, 3600);
+                setTimeout(() => {
+                    document.getElementById("Aleksandra").style.paddingTop = "0";
+                }, 3620);
+                setTimeout(() => {
+                    inputas = ""
+                    document.getElementById("kodas").value = '';
+                    document.getElementById("taskelis1").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis2").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis3").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis4").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis5").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis6").style.backgroundColor = "transparent";
+                    document.getElementById("loading").style.display = "none";
+                    document.getElementById("body").style.overflow = "scroll";
+                }, 3900);
+          }
             else{
                 document.getElementById("loading").style.display = "flex";
                 document.getElementById("ivestiKoda").style.opacity = "0.3";
@@ -6197,8 +5722,25 @@
                 document.getElementById("Matas").style.paddingTop = "100vh";
             }
         }
+        let Aleksandra = getCookie("Aleksandra");
+        if (Aleksandra != "") {
+            document.getElementById("Aleksandra").style.display = "block";
+            document.getElementById("Aleksandra").style.paddingTop = "0";
+            setTimeout(() => {
+                document.querySelector('#topInfoAleksandra').scrollIntoView({
+                behavior: 'smooth'});
+            }, 500);
+        }
+        else {
+            document.getElementById("Aleksandra").style.display = "none";
+            document.getElementById("Aleksandra").style.paddingTop = "100vh";
+            if (Aleksandra != "" && Aleksandra != null) {
+                document.getElementById("Aleksandra").style.display = "none";
+                document.getElementById("Aleksandra").style.paddingTop = "100vh";
+            }
+        }
 
-        if (kelioneI != "" || Arune != "" || Smilte != "" || Adriana != "" || Norbertas != "" || Meta != "" || Justina != "" || Mindaugasd != "" || Dovydas != "" || Matas != "") {
+        if (kelioneI != "" || Arune != "" || Smilte != "" || Adriana != "" || Norbertas != "" || Meta != "" || Justina != "" || Mindaugasd != "" || Dovydas != "" || Matas != "" || Aleksandra != "") {
             document.getElementById("screen").style.top = "-100%";
             document.getElementById("screen").style.backgroundColor = "transparent";
             document.getElementById("display").style.top = "-100%";
@@ -6209,7 +5751,7 @@
             document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
             document.getElementById("display").style.top = "0";
             document.getElementById("body").style.overflow = "hidden";
-            if (kelioneI != "" && kelioneI != null || Arune != "" && Arune != null || Smilte != "" && Smilte != null || Adriana != "" && Adriana != null || Norbertas != "" && Norbertas != null || Meta != "" && Meta != null || Justina != "" && Justina != null || Mindaugasd != "" && Mindaugasd != null || Dovydas != "" && Dovydas != null || Matas != "" && Matas != null) {
+            if (kelioneI != "" && kelioneI != null || Arune != "" && Arune != null || Smilte != "" && Smilte != null || Adriana != "" && Adriana != null || Norbertas != "" && Norbertas != null || Meta != "" && Meta != null || Justina != "" && Justina != null || Mindaugasd != "" && Mindaugasd != null || Dovydas != "" && Dovydas != null || Matas != "" && Matas != null || Aleksandra != "" && Aleksandra != null) {
                 document.getElementById("screen").style.top = "0";
                 document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
                 document.getElementById("display").style.top = "0";
@@ -6365,6 +5907,21 @@
                 document.getElementById("MatasUzdarymas").style.pointerEvents = "all";
                 document.getElementById("body").style.overflow = "hidden";
                 document.getElementById("Matas").style.display = "none";
+            }, 310);
+        }
+        function closeAleksandra() {
+            document.cookie = "Aleksandra=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
+            document.getElementById("AleksandraUzdarymas").style.pointerEvents = "none";
+            setTimeout(() => {
+                document.getElementById("screen").style.top = "0";
+                document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
+                document.getElementById("display").style.top = "0";
+                document.getElementById("Aleksandra").style.paddingTop = "100vh";
+            }, 10);
+            setTimeout(() => {
+                document.getElementById("AleksandraUzdarymas").style.pointerEvents = "all";
+                document.getElementById("body").style.overflow = "hidden";
+                document.getElementById("Aleksandra").style.display = "none";
             }, 310);
         }
     </script>
