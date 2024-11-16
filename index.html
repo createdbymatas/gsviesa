@@ -41,7 +41,7 @@
         }
         body{
             background-color: #f2f2f2;
-            /* overflow: hidden; */
+            overflow: hidden;
         }
         img{
             pointer-events: none;
@@ -181,6 +181,7 @@
             margin-bottom: 20px;
             color: black;
             cursor: not-allowed;
+            font-weight: 600;
         }
         #screenSizeTekstas2{
             font-size: 17px;
@@ -211,6 +212,38 @@
             margin-top: 60px;
             z-index: 2;
             margin-left: 45px;
+            cursor: not-allowed;
+        }
+
+        /* inspect tool uzblokavimas */
+        #accessDenied{
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 95;
+            background-color: #f2f2f2;
+            color: red;
+            transition: 0.2s;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 15px;
+            cursor: not-allowed;
+        }
+        .fa-ban{
+            color: red;
+            font-size: 70px;
+            cursor: not-allowed;
+            transition: none;
+        }
+        #accessDenied p{
+            margin-top: 20px;
             cursor: not-allowed;
         }
 
@@ -1124,6 +1157,26 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         /* karnavalas */
         /* garso takeliu valdymas, scenarijaus atsisiuntimas, info perziura */
         #soundManager{
@@ -1473,24 +1526,6 @@
         #AruneUzdarymas:active{
             opacity: 0.2;
         }
-        #pinnedAruneBackground{
-            width: 100%;
-            height: auto;
-            background-color: rgba(242, 242, 242, 0.75);
-            -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 15px;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            z-index: 17;
-            box-shadow: 0 0 10px lightgrey;
-            border-radius: 30px 30px 0 0;
-        }
         /* Smilte */
         #Smilte{
             width: 100%;
@@ -1576,24 +1611,6 @@
         }
         #SmilteUzdarymas:active{
             opacity: 0.2;
-        }
-        #pinnedSmilteBackground{
-            width: 100%;
-            height: auto;
-            background-color: rgba(242, 242, 242, 0.75);
-            -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 15px;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            z-index: 17;
-            box-shadow: 0 0 10px lightgrey;
-            border-radius: 30px 30px 0 0;
         }
         /* Adriana */
         #Adriana{
@@ -1681,24 +1698,6 @@
         #AdrianaUzdarymas:active{
             opacity: 0.2;
         }
-        #pinnedAdrianaBackground{
-            width: 100%;
-            height: auto;
-            background-color: rgba(242, 242, 242, 0.75);
-            -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 15px;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            z-index: 17;
-            box-shadow: 0 0 10px lightgrey;
-            border-radius: 30px 30px 0 0;
-        }
         /* Norbertas */
         #Norbertas{
             width: 100%;
@@ -1784,24 +1783,6 @@
         }
         #NorbertasUzdarymas:active{
             opacity: 0.2;
-        }
-        #pinnedNorbertasBackground{
-            width: 100%;
-            height: auto;
-            background-color: rgba(242, 242, 242, 0.75);
-            -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 15px;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            z-index: 17;
-            box-shadow: 0 0 10px lightgrey;
-            border-radius: 30px 30px 0 0;
         }
         /* Meta */
         #Meta{
@@ -1889,24 +1870,6 @@
         #MetaUzdarymas:active{
             opacity: 0.2;
         }
-        #pinnedMetaBackground{
-            width: 100%;
-            height: auto;
-            background-color: rgba(242, 242, 242, 0.75);
-            -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 15px;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            z-index: 17;
-            box-shadow: 0 0 10px lightgrey;
-            border-radius: 30px 30px 0 0;
-        }
         /* Justina */
         #Justina{
             width: 100%;
@@ -1992,24 +1955,6 @@
         }
         #JustinaUzdarymas:active{
             opacity: 0.2;
-        }
-        #pinnedJustinaBackground{
-            width: 100%;
-            height: auto;
-            background-color: rgba(242, 242, 242, 0.75);
-            -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 15px;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            z-index: 17;
-            box-shadow: 0 0 10px lightgrey;
-            border-radius: 30px 30px 0 0;
         }
         /* Mindaugasd */
         #Mindaugasd{
@@ -2097,24 +2042,6 @@
         #MindaugasdUzdarymas:active{
             opacity: 0.2;
         }
-        #pinnedMindaugasdBackground{
-            width: 100%;
-            height: auto;
-            background-color: rgba(242, 242, 242, 0.75);
-            -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 15px;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            z-index: 17;
-            box-shadow: 0 0 10px lightgrey;
-            border-radius: 30px 30px 0 0;
-        }
         /* Dovydas */
         #Dovydas{
             width: 100%;
@@ -2200,24 +2127,6 @@
         }
         #DovydasUzdarymas:active{
             opacity: 0.2;
-        }
-        #pinnedDovydasBackground{
-            width: 100%;
-            height: auto;
-            background-color: rgba(242, 242, 242, 0.75);
-            -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 15px;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            z-index: 17;
-            box-shadow: 0 0 10px lightgrey;
-            border-radius: 30px 30px 0 0;
         }
         /* Matas */
         #Matas{
@@ -2391,24 +2300,953 @@
         #AleksandraUzdarymas:active{
             opacity: 0.2;
         }
-        #pinnedAleksandraBackground{
+        /* Samanta */
+        #Samanta{
             width: 100%;
-            height: auto;
-            background-color: rgba(242, 242, 242, 0.75);
+            height: 100%;
+            background-color: #f2f2f2;
+            transition: 0.2s;
+            padding-bottom: 90px;
+            overflow: hidden;
+            overflow-y: scroll;
+            padding-top: 100vh;
+            display: block;
+        }
+        #topInfoSamanta{
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            top: 0;
+            left: 0;
+        }
+        #infoSamanta{
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(242, 242, 242, 1);
             -webkit-backdrop-filter: blur(8px);
             backdrop-filter: blur(8px);
+            color: black;
             position: fixed;
-            bottom: 0;
             left: 0;
+            top: 0;
             right: 0;
-            padding: 15px;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            z-index: 17;
-            box-shadow: 0 0 10px lightgrey;
-            border-radius: 30px 30px 0 0;
+            z-index: 10;
         }
+        #infoSamanta i{
+            font-size: 15px;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            z-index: 11;
+            transition: 0.15s;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            background-color: #DEDEDE;
+            color: black;
+        }
+        #SamantaTekstas{
+            font-size: 25px;
+            font-weight: 600;
+            color: black;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            text-overflow: ellipsis;
+            width: 100%;
+            position: absolute;
+            top: 60px;
+            padding-left: 15px;
+            padding-right: 15px;
+            z-index: 2;
+        }
+        #SamantaTekstas2{
+            font-size: 20px;
+            font-weight: 600;
+            color: black;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            text-overflow: ellipsis;
+            width: 100%;
+            position: absolute;
+            top: 17px;
+            padding-left: 60px;
+            padding-right: 15px;
+            z-index: 10;
+            opacity: 0;
+        }
+        #SamantaUzdarymas:active{
+            opacity: 0.2;
+        }
+        /* Arnas */
+        #Arnas{
+            width: 100%;
+            height: 100%;
+            background-color: #f2f2f2;
+            transition: 0.2s;
+            padding-bottom: 90px;
+            overflow: hidden;
+            overflow-y: scroll;
+            padding-top: 100vh;
+            display: block;
+        }
+        #topInfoArnas{
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            top: 0;
+            left: 0;
+        }
+        #infoArnas{
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(242, 242, 242, 1);
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+            color: black;
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            z-index: 10;
+        }
+        #infoArnas i{
+            font-size: 15px;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            z-index: 11;
+            transition: 0.15s;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            background-color: #DEDEDE;
+            color: black;
+        }
+        #ArnasTekstas{
+            font-size: 25px;
+            font-weight: 600;
+            color: black;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            text-overflow: ellipsis;
+            width: 100%;
+            position: absolute;
+            top: 60px;
+            padding-left: 15px;
+            padding-right: 15px;
+            z-index: 2;
+        }
+        #ArnasTekstas2{
+            font-size: 20px;
+            font-weight: 600;
+            color: black;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            text-overflow: ellipsis;
+            width: 100%;
+            position: absolute;
+            top: 17px;
+            padding-left: 60px;
+            padding-right: 15px;
+            z-index: 10;
+            opacity: 0;
+        }
+        #ArnasUzdarymas:active{
+            opacity: 0.2;
+        }
+        /* Milena */
+        #Milena{
+            width: 100%;
+            height: 100%;
+            background-color: #f2f2f2;
+            transition: 0.2s;
+            padding-bottom: 90px;
+            overflow: hidden;
+            overflow-y: scroll;
+            padding-top: 100vh;
+            display: block;
+        }
+        #topInfoMilena{
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            top: 0;
+            left: 0;
+        }
+        #infoMilena{
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(242, 242, 242, 1);
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+            color: black;
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            z-index: 10;
+        }
+        #infoMilena i{
+            font-size: 15px;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            z-index: 11;
+            transition: 0.15s;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            background-color: #DEDEDE;
+            color: black;
+        }
+        #MilenaTekstas{
+            font-size: 25px;
+            font-weight: 600;
+            color: black;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            text-overflow: ellipsis;
+            width: 100%;
+            position: absolute;
+            top: 60px;
+            padding-left: 15px;
+            padding-right: 15px;
+            z-index: 2;
+        }
+        #MilenaTekstas2{
+            font-size: 20px;
+            font-weight: 600;
+            color: black;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            text-overflow: ellipsis;
+            width: 100%;
+            position: absolute;
+            top: 17px;
+            padding-left: 60px;
+            padding-right: 15px;
+            z-index: 10;
+            opacity: 0;
+        }
+        #MilenaUzdarymas:active{
+            opacity: 0.2;
+        }
+        /* Emilija */
+        #Emilija{
+            width: 100%;
+            height: 100%;
+            background-color: #f2f2f2;
+            transition: 0.2s;
+            padding-bottom: 90px;
+            overflow: hidden;
+            overflow-y: scroll;
+            padding-top: 100vh;
+            display: block;
+        }
+        #topInfoEmilija{
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            top: 0;
+            left: 0;
+        }
+        #infoEmilija{
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(242, 242, 242, 1);
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+            color: black;
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            z-index: 10;
+        }
+        #infoEmilija i{
+            font-size: 15px;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            z-index: 11;
+            transition: 0.15s;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            background-color: #DEDEDE;
+            color: black;
+        }
+        #EmilijaTekstas{
+            font-size: 25px;
+            font-weight: 600;
+            color: black;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            text-overflow: ellipsis;
+            width: 100%;
+            position: absolute;
+            top: 60px;
+            padding-left: 15px;
+            padding-right: 15px;
+            z-index: 2;
+        }
+        #EmilijaTekstas2{
+            font-size: 20px;
+            font-weight: 600;
+            color: black;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            text-overflow: ellipsis;
+            width: 100%;
+            position: absolute;
+            top: 17px;
+            padding-left: 60px;
+            padding-right: 15px;
+            z-index: 10;
+            opacity: 0;
+        }
+        #EmilijaUzdarymas:active{
+            opacity: 0.2;
+        }
+        /* Modestas */
+        #Modestas{
+            width: 100%;
+            height: 100%;
+            background-color: #f2f2f2;
+            transition: 0.2s;
+            padding-bottom: 90px;
+            overflow: hidden;
+            overflow-y: scroll;
+            padding-top: 100vh;
+            display: block;
+        }
+        #topInfoModestas{
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            top: 0;
+            left: 0;
+        }
+        #infoModestas{
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(242, 242, 242, 1);
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+            color: black;
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            z-index: 10;
+        }
+        #infoModestas i{
+            font-size: 15px;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            z-index: 11;
+            transition: 0.15s;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            background-color: #DEDEDE;
+            color: black;
+        }
+        #ModestasTekstas{
+            font-size: 25px;
+            font-weight: 600;
+            color: black;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            text-overflow: ellipsis;
+            width: 100%;
+            position: absolute;
+            top: 60px;
+            padding-left: 15px;
+            padding-right: 15px;
+            z-index: 2;
+        }
+        #ModestasTekstas2{
+            font-size: 20px;
+            font-weight: 600;
+            color: black;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            text-overflow: ellipsis;
+            width: 100%;
+            position: absolute;
+            top: 17px;
+            padding-left: 60px;
+            padding-right: 15px;
+            z-index: 10;
+            opacity: 0;
+        }
+        #ModestasUzdarymas:active{
+            opacity: 0.2;
+        }
+        /* Mindaugasr */
+        #Mindaugasr{
+            width: 100%;
+            height: 100%;
+            background-color: #f2f2f2;
+            transition: 0.2s;
+            padding-bottom: 90px;
+            overflow: hidden;
+            overflow-y: scroll;
+            padding-top: 100vh;
+            display: block;
+        }
+        #topInfoMindaugasr{
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            top: 0;
+            left: 0;
+        }
+        #infoMindaugasr{
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(242, 242, 242, 1);
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+            color: black;
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            z-index: 10;
+        }
+        #infoMindaugasr i{
+            font-size: 15px;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            z-index: 11;
+            transition: 0.15s;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            background-color: #DEDEDE;
+            color: black;
+        }
+        #MindaugasrTekstas{
+            font-size: 25px;
+            font-weight: 600;
+            color: black;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            text-overflow: ellipsis;
+            width: 100%;
+            position: absolute;
+            top: 60px;
+            padding-left: 15px;
+            padding-right: 15px;
+            z-index: 2;
+        }
+        #MindaugasrTekstas2{
+            font-size: 20px;
+            font-weight: 600;
+            color: black;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            text-overflow: ellipsis;
+            width: 100%;
+            position: absolute;
+            top: 17px;
+            padding-left: 60px;
+            padding-right: 15px;
+            z-index: 10;
+            opacity: 0;
+        }
+        #MindaugasrUzdarymas:active{
+            opacity: 0.2;
+        }
+        /* Gabriele */
+        #Gabriele{
+            width: 100%;
+            height: 100%;
+            background-color: #f2f2f2;
+            transition: 0.2s;
+            padding-bottom: 90px;
+            overflow: hidden;
+            overflow-y: scroll;
+            padding-top: 100vh;
+            display: block;
+        }
+        #topInfoGabriele{
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            top: 0;
+            left: 0;
+        }
+        #infoGabriele{
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(242, 242, 242, 1);
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+            color: black;
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            z-index: 10;
+        }
+        #infoGabriele i{
+            font-size: 15px;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            z-index: 11;
+            transition: 0.15s;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            background-color: #DEDEDE;
+            color: black;
+        }
+        #GabrieleTekstas{
+            font-size: 25px;
+            font-weight: 600;
+            color: black;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            text-overflow: ellipsis;
+            width: 100%;
+            position: absolute;
+            top: 60px;
+            padding-left: 15px;
+            padding-right: 15px;
+            z-index: 2;
+        }
+        #GabrieleTekstas2{
+            font-size: 20px;
+            font-weight: 600;
+            color: black;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            text-overflow: ellipsis;
+            width: 100%;
+            position: absolute;
+            top: 17px;
+            padding-left: 60px;
+            padding-right: 15px;
+            z-index: 10;
+            opacity: 0;
+        }
+        #GabrieleUzdarymas:active{
+            opacity: 0.2;
+        }
+        /* Berzuna */
+        #Berzuna{
+            width: 100%;
+            height: 100%;
+            background-color: #f2f2f2;
+            transition: 0.2s;
+            padding-bottom: 90px;
+            overflow: hidden;
+            overflow-y: scroll;
+            padding-top: 100vh;
+            display: block;
+        }
+        #topInfoBerzuna{
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            top: 0;
+            left: 0;
+        }
+        #infoBerzuna{
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(242, 242, 242, 1);
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+            color: black;
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            z-index: 10;
+        }
+        #infoBerzuna i{
+            font-size: 15px;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            z-index: 11;
+            transition: 0.15s;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            background-color: #DEDEDE;
+            color: black;
+        }
+        #BerzunaTekstas{
+            font-size: 25px;
+            font-weight: 600;
+            color: black;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            text-overflow: ellipsis;
+            width: 100%;
+            position: absolute;
+            top: 60px;
+            padding-left: 15px;
+            padding-right: 15px;
+            z-index: 2;
+        }
+        #BerzunaTekstas2{
+            font-size: 20px;
+            font-weight: 600;
+            color: black;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            text-overflow: ellipsis;
+            width: 100%;
+            position: absolute;
+            top: 17px;
+            padding-left: 60px;
+            padding-right: 15px;
+            z-index: 10;
+            opacity: 0;
+        }
+        #BerzunaUzdarymas:active{
+            opacity: 0.2;
+        }
+        /* Nojus */
+        #Nojus{
+            width: 100%;
+            height: 100%;
+            background-color: #f2f2f2;
+            transition: 0.2s;
+            padding-bottom: 90px;
+            overflow: hidden;
+            overflow-y: scroll;
+            padding-top: 100vh;
+            display: block;
+        }
+        #topInfoNojus{
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            top: 0;
+            left: 0;
+        }
+        #infoNojus{
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(242, 242, 242, 1);
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+            color: black;
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            z-index: 10;
+        }
+        #infoNojus i{
+            font-size: 15px;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            z-index: 11;
+            transition: 0.15s;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            background-color: #DEDEDE;
+            color: black;
+        }
+        #NojusTekstas{
+            font-size: 25px;
+            font-weight: 600;
+            color: black;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            text-overflow: ellipsis;
+            width: 100%;
+            position: absolute;
+            top: 60px;
+            padding-left: 15px;
+            padding-right: 15px;
+            z-index: 2;
+        }
+        #NojusTekstas2{
+            font-size: 20px;
+            font-weight: 600;
+            color: black;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            text-overflow: ellipsis;
+            width: 100%;
+            position: absolute;
+            top: 17px;
+            padding-left: 60px;
+            padding-right: 15px;
+            z-index: 10;
+            opacity: 0;
+        }
+        #NojusUzdarymas:active{
+            opacity: 0.2;
+        }
+        /* Agnieska */
+        #Agnieska{
+            width: 100%;
+            height: 100%;
+            background-color: #f2f2f2;
+            transition: 0.2s;
+            padding-bottom: 90px;
+            overflow: hidden;
+            overflow-y: scroll;
+            padding-top: 100vh;
+            display: block;
+        }
+        #topInfoAgnieska{
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            top: 0;
+            left: 0;
+        }
+        #infoAgnieska{
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(242, 242, 242, 1);
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+            color: black;
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            z-index: 10;
+        }
+        #infoAgnieska i{
+            font-size: 15px;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            z-index: 11;
+            transition: 0.15s;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            background-color: #DEDEDE;
+            color: black;
+        }
+        #AgnieskaTekstas{
+            font-size: 25px;
+            font-weight: 600;
+            color: black;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            text-overflow: ellipsis;
+            width: 100%;
+            position: absolute;
+            top: 60px;
+            padding-left: 15px;
+            padding-right: 15px;
+            z-index: 2;
+        }
+        #AgnieskaTekstas2{
+            font-size: 20px;
+            font-weight: 600;
+            color: black;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            text-overflow: ellipsis;
+            width: 100%;
+            position: absolute;
+            top: 17px;
+            padding-left: 60px;
+            padding-right: 15px;
+            z-index: 10;
+            opacity: 0;
+        }
+        #AgnieskaUzdarymas:active{
+            opacity: 0.2;
+        }
+        /* Aurelija */
+        #Aurelija{
+            width: 100%;
+            height: 100%;
+            background-color: #f2f2f2;
+            transition: 0.2s;
+            padding-bottom: 90px;
+            overflow: hidden;
+            overflow-y: scroll;
+            padding-top: 100vh;
+            display: block;
+        }
+        #topInfoAurelija{
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            top: 0;
+            left: 0;
+        }
+        #infoAurelija{
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(242, 242, 242, 1);
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+            color: black;
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            z-index: 10;
+        }
+        #infoAurelija i{
+            font-size: 15px;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            z-index: 11;
+            transition: 0.15s;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            background-color: #DEDEDE;
+            color: black;
+        }
+        #AurelijaTekstas{
+            font-size: 25px;
+            font-weight: 600;
+            color: black;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            text-overflow: ellipsis;
+            width: 100%;
+            position: absolute;
+            top: 60px;
+            padding-left: 15px;
+            padding-right: 15px;
+            z-index: 2;
+        }
+        #AurelijaTekstas2{
+            font-size: 20px;
+            font-weight: 600;
+            color: black;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            text-overflow: ellipsis;
+            width: 100%;
+            position: absolute;
+            top: 17px;
+            padding-left: 60px;
+            padding-right: 15px;
+            z-index: 10;
+            opacity: 0;
+        }
+        #AurelijaUzdarymas:active{
+            opacity: 0.2;
+        }
+        
 
         
 
@@ -2734,6 +3572,13 @@
             #xIcon{
                 background-color: #141414;
             }
+            #accessDenied{
+                background-color: #141414;
+                color: white;
+            }
+
+
+
             #kelioneI---{
                 background-color: #141414;
             }
@@ -3094,6 +3939,193 @@
             #AleksandraTekstas2{
                 color: white;
             }
+            #Samanta{
+                background-color: #141414;
+            }
+            #infoSamanta{
+                background-color: rgba(20, 20, 20, 1);
+                color: white;
+            }
+            #infoSamanta i{
+                background-color: #282828;
+                color: white;
+            }
+            #SamantaTekstas{
+                color: white;
+            }
+            #SamantaTekstas2{
+                color: white;
+            }
+            #Arnas{
+                background-color: #141414;
+            }
+            #infoArnas{
+                background-color: rgba(20, 20, 20, 1);
+                color: white;
+            }
+            #infoArnas i{
+                background-color: #282828;
+                color: white;
+            }
+            #ArnasTekstas{
+                color: white;
+            }
+            #ArnasTekstas2{
+                color: white;
+            }
+            #Milena{
+                background-color: #141414;
+            }
+            #infoMilena{
+                background-color: rgba(20, 20, 20, 1);
+                color: white;
+            }
+            #infoMilena i{
+                background-color: #282828;
+                color: white;
+            }
+            #MilenaTekstas{
+                color: white;
+            }
+            #MilenaTekstas2{
+                color: white;
+            }
+            #Emilija{
+                background-color: #141414;
+            }
+            #infoEmilija{
+                background-color: rgba(20, 20, 20, 1);
+                color: white;
+            }
+            #infoEmilija i{
+                background-color: #282828;
+                color: white;
+            }
+            #EmilijaTekstas{
+                color: white;
+            }
+            #EmilijaTekstas2{
+                color: white;
+            }
+            #Modestas{
+                background-color: #141414;
+            }
+            #infoModestas{
+                background-color: rgba(20, 20, 20, 1);
+                color: white;
+            }
+            #infoModestas i{
+                background-color: #282828;
+                color: white;
+            }
+            #ModestasTekstas{
+                color: white;
+            }
+            #ModestasTekstas2{
+                color: white;
+            }
+            #Mindaugasr{
+                background-color: #141414;
+            }
+            #infoMindaugasr{
+                background-color: rgba(20, 20, 20, 1);
+                color: white;
+            }
+            #infoMindaugasr i{
+                background-color: #282828;
+                color: white;
+            }
+            #MindaugasrTekstas{
+                color: white;
+            }
+            #MindaugasrTekstas2{
+                color: white;
+            }
+            #Gabriele{
+                background-color: #141414;
+            }
+            #infoGabriele{
+                background-color: rgba(20, 20, 20, 1);
+                color: white;
+            }
+            #infoGabriele i{
+                background-color: #282828;
+                color: white;
+            }
+            #GabrieleTekstas{
+                color: white;
+            }
+            #GabrieleTekstas2{
+                color: white;
+            }
+            #Berzuna{
+                background-color: #141414;
+            }
+            #infoBerzuna{
+                background-color: rgba(20, 20, 20, 1);
+                color: white;
+            }
+            #infoBerzuna i{
+                background-color: #282828;
+                color: white;
+            }
+            #BerzunaTekstas{
+                color: white;
+            }
+            #BerzunaTekstas2{
+                color: white;
+            }
+            #Nojus{
+                background-color: #141414;
+            }
+            #infoNojus{
+                background-color: rgba(20, 20, 20, 1);
+                color: white;
+            }
+            #infoNojus i{
+                background-color: #282828;
+                color: white;
+            }
+            #NojusTekstas{
+                color: white;
+            }
+            #NojusTekstas2{
+                color: white;
+            }
+            #Agnieska{
+                background-color: #141414;
+            }
+            #infoAgnieska{
+                background-color: rgba(20, 20, 20, 1);
+                color: white;
+            }
+            #infoAgnieska i{
+                background-color: #282828;
+                color: white;
+            }
+            #AgnieskaTekstas{
+                color: white;
+            }
+            #AgnieskaTekstas2{
+                color: white;
+            }
+            #Aurelija{
+                background-color: #141414;
+            }
+            #infoAurelija{
+                background-color: rgba(20, 20, 20, 1);
+                color: white;
+            }
+            #infoAurelija i{
+                background-color: #282828;
+                color: white;
+            }
+            #AurelijaTekstas{
+                color: white;
+            }
+            #AurelijaTekstas2{
+                color: white;
+            }
 
             .karnavalasIcon{
                 color: white;
@@ -3330,6 +4362,13 @@
 
 
 
+
+
+    <div id="accessDenied">
+        <i class="fa-solid fa-ban" id="ban"></i>
+        <p style="font-size: 25px; font-weight: 600;">Prieiga uždrausta</p>
+        <p style="font-size: 17px;">Tinklalapyje negalima atlikti veiksmų, susijusių su programos kodo peržiūra ir apžiūrėjimo įrankio (angl.: inspect tool) naudojimu.</p>
+    </div>
 
 
     <div id="soundManager">
@@ -4146,6 +5185,875 @@
             <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
         </div>
     </div>
+    <div id="Samanta">
+        <div id="girlianda">
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+        </div>
+        <div id="girlianda2">
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+        </div>
+        <div id="topInfoSamanta"></div>
+        <div id="infoSamanta"><i class="fa-solid fa-chevron-down" onclick="closeSamanta()" id="SamantaUzdarymas" ontouchstart></i><p id="SamantaTekstas2">Karnavalas „Princesė ir varlius”</p></div>
+        <p id="SamantaTekstas">Karnavalas „Princesė ir varlius”</p>
+
+        <div class="pinnedBg">
+            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
+            <button onclick="informacija()" class="informacija" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
+        </div>
+
+        <div class="vardas">
+            <i class="fa-regular fa-user-circle vardasIcon"></i>
+            <p class="pagrTekstas">Rolė</p>
+            <p class="vardasAntrTekstas">Samanta</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="apie">
+            <i class="fa-regular fa-circle-question karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Apie rolę:</p>
+            <p class="antrTekstas">Rolės aprašymas.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="pasiruosimas">
+            <i class="fa-solid fa-suitcase karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Pasiruošti:</p>
+            <p class="antrTekstas">Pasiruošimo aprašymas.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="apranga">
+            <i class="fa-solid fa-shirt karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Apranga:</p>
+            <p class="antrTekstas">Aprangos aprašymas.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="zodziai">
+            <i class="fa-regular fa-comments karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Žodžiai:</p>
+            <p class="antrTekstas">Žodžių aprašymas.</p>
+            <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="vaidinimas">
+            <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Vaidinimo eiga:</p>
+            <p class="antrTekstas">Vaidinimo eigos aprašymas.</p>
+            <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="papildomai">
+            <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Papildomai:</p>
+            <p class="antrTekstas">Papildomai (garso takeliai ir pan.) aprašymas.</p>
+            <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
+        </div>
+    </div>
+    <div id="Arnas">
+        <div id="girlianda">
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+        </div>
+        <div id="girlianda2">
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+        </div>
+        <div id="topInfoArnas"></div>
+        <div id="infoArnas"><i class="fa-solid fa-chevron-down" onclick="closeArnas()" id="ArnasUzdarymas" ontouchstart></i><p id="ArnasTekstas2">Karnavalas „Princesė ir varlius”</p></div>
+        <p id="ArnasTekstas">Karnavalas „Princesė ir varlius”</p>
+
+        <div class="pinnedBg">
+            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
+            <button onclick="informacija()" class="informacija" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
+        </div>
+
+        <div class="vardas">
+            <i class="fa-regular fa-user-circle vardasIcon"></i>
+            <p class="pagrTekstas">Rolė</p>
+            <p class="vardasAntrTekstas">Arnas</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="apie">
+            <i class="fa-regular fa-circle-question karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Apie rolę:</p>
+            <p class="antrTekstas">Rolės aprašymas.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="pasiruosimas">
+            <i class="fa-solid fa-suitcase karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Pasiruošti:</p>
+            <p class="antrTekstas">Pasiruošimo aprašymas.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="apranga">
+            <i class="fa-solid fa-shirt karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Apranga:</p>
+            <p class="antrTekstas">Aprangos aprašymas.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="zodziai">
+            <i class="fa-regular fa-comments karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Žodžiai:</p>
+            <p class="antrTekstas">Žodžių aprašymas.</p>
+            <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="vaidinimas">
+            <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Vaidinimo eiga:</p>
+            <p class="antrTekstas">Vaidinimo eigos aprašymas.</p>
+            <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="papildomai">
+            <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Papildomai:</p>
+            <p class="antrTekstas">Papildomai (garso takeliai ir pan.) aprašymas.</p>
+            <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
+        </div>
+    </div>
+    <div id="Milena">
+        <div id="girlianda">
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+        </div>
+        <div id="girlianda2">
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+        </div>
+        <div id="topInfoMilena"></div>
+        <div id="infoMilena"><i class="fa-solid fa-chevron-down" onclick="closeMilena()" id="MilenaUzdarymas" ontouchstart></i><p id="MilenaTekstas2">Karnavalas „Princesė ir varlius”</p></div>
+        <p id="MilenaTekstas">Karnavalas „Princesė ir varlius”</p>
+
+        <div class="pinnedBg">
+            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
+            <button onclick="informacija()" class="informacija" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
+        </div>
+
+        <div class="vardas">
+            <i class="fa-regular fa-user-circle vardasIcon"></i>
+            <p class="pagrTekstas">Rolė</p>
+            <p class="vardasAntrTekstas">Milena</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="apie">
+            <i class="fa-regular fa-circle-question karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Apie rolę:</p>
+            <p class="antrTekstas">Rolės aprašymas.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="pasiruosimas">
+            <i class="fa-solid fa-suitcase karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Pasiruošti:</p>
+            <p class="antrTekstas">Pasiruošimo aprašymas.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="apranga">
+            <i class="fa-solid fa-shirt karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Apranga:</p>
+            <p class="antrTekstas">Aprangos aprašymas.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="zodziai">
+            <i class="fa-regular fa-comments karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Žodžiai:</p>
+            <p class="antrTekstas">Žodžių aprašymas.</p>
+            <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="vaidinimas">
+            <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Vaidinimo eiga:</p>
+            <p class="antrTekstas">Vaidinimo eigos aprašymas.</p>
+            <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="papildomai">
+            <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Papildomai:</p>
+            <p class="antrTekstas">Papildomai (garso takeliai ir pan.) aprašymas.</p>
+            <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
+        </div>
+    </div>
+    <div id="Emilija">
+        <div id="girlianda">
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+        </div>
+        <div id="girlianda2">
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+        </div>
+        <div id="topInfoEmilija"></div>
+        <div id="infoEmilija"><i class="fa-solid fa-chevron-down" onclick="closeEmilija()" id="EmilijaUzdarymas" ontouchstart></i><p id="EmilijaTekstas2">Karnavalas „Princesė ir varlius”</p></div>
+        <p id="EmilijaTekstas">Karnavalas „Princesė ir varlius”</p>
+
+        <div class="pinnedBg">
+            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
+            <button onclick="informacija()" class="informacija" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
+        </div>
+
+        <div class="vardas">
+            <i class="fa-regular fa-user-circle vardasIcon"></i>
+            <p class="pagrTekstas">Rolė</p>
+            <p class="vardasAntrTekstas">Emilija</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="apie">
+            <i class="fa-regular fa-circle-question karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Apie rolę:</p>
+            <p class="antrTekstas">Rolės aprašymas.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="pasiruosimas">
+            <i class="fa-solid fa-suitcase karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Pasiruošti:</p>
+            <p class="antrTekstas">Pasiruošimo aprašymas.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="apranga">
+            <i class="fa-solid fa-shirt karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Apranga:</p>
+            <p class="antrTekstas">Aprangos aprašymas.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="zodziai">
+            <i class="fa-regular fa-comments karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Žodžiai:</p>
+            <p class="antrTekstas">Žodžių aprašymas.</p>
+            <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="vaidinimas">
+            <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Vaidinimo eiga:</p>
+            <p class="antrTekstas">Vaidinimo eigos aprašymas.</p>
+            <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="papildomai">
+            <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Papildomai:</p>
+            <p class="antrTekstas">Papildomai (garso takeliai ir pan.) aprašymas.</p>
+            <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
+        </div>
+    </div>
+    <div id="Modestas">
+        <div id="girlianda">
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+        </div>
+        <div id="girlianda2">
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+        </div>
+        <div id="topInfoModestas"></div>
+        <div id="infoModestas"><i class="fa-solid fa-chevron-down" onclick="closeModestas()" id="ModestasUzdarymas" ontouchstart></i><p id="ModestasTekstas2">Karnavalas „Princesė ir varlius”</p></div>
+        <p id="ModestasTekstas">Karnavalas „Princesė ir varlius”</p>
+
+        <div class="pinnedBg">
+            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
+            <button onclick="informacija()" class="informacija" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
+        </div>
+
+        <div class="vardas">
+            <i class="fa-regular fa-user-circle vardasIcon"></i>
+            <p class="pagrTekstas">Rolė</p>
+            <p class="vardasAntrTekstas">Modestas</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="apie">
+            <i class="fa-regular fa-circle-question karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Apie rolę:</p>
+            <p class="antrTekstas">Rolės aprašymas.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="pasiruosimas">
+            <i class="fa-solid fa-suitcase karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Pasiruošti:</p>
+            <p class="antrTekstas">Pasiruošimo aprašymas.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="apranga">
+            <i class="fa-solid fa-shirt karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Apranga:</p>
+            <p class="antrTekstas">Aprangos aprašymas.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="zodziai">
+            <i class="fa-regular fa-comments karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Žodžiai:</p>
+            <p class="antrTekstas">Žodžių aprašymas.</p>
+            <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="vaidinimas">
+            <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Vaidinimo eiga:</p>
+            <p class="antrTekstas">Vaidinimo eigos aprašymas.</p>
+            <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="papildomai">
+            <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Papildomai:</p>
+            <p class="antrTekstas">Papildomai (garso takeliai ir pan.) aprašymas.</p>
+            <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
+        </div>
+    </div>
+    <div id="Mindaugasr">
+        <div id="girlianda">
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+        </div>
+        <div id="girlianda2">
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+        </div>
+        <div id="topInfoMindaugasr"></div>
+        <div id="infoMindaugasr"><i class="fa-solid fa-chevron-down" onclick="closeMindaugasr()" id="MindaugasrUzdarymas" ontouchstart></i><p id="MindaugasrTekstas2">Karnavalas „Princesė ir varlius”</p></div>
+        <p id="MindaugasrTekstas">Karnavalas „Princesė ir varlius”</p>
+
+        <div class="pinnedBg">
+            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
+            <button onclick="informacija()" class="informacija" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
+        </div>
+
+        <div class="vardas">
+            <i class="fa-regular fa-user-circle vardasIcon"></i>
+            <p class="pagrTekstas">Rolė</p>
+            <p class="vardasAntrTekstas">Mindaugas</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="apie">
+            <i class="fa-regular fa-circle-question karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Apie rolę:</p>
+            <p class="antrTekstas">Rolės aprašymas.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="pasiruosimas">
+            <i class="fa-solid fa-suitcase karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Pasiruošti:</p>
+            <p class="antrTekstas">Pasiruošimo aprašymas.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="apranga">
+            <i class="fa-solid fa-shirt karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Apranga:</p>
+            <p class="antrTekstas">Aprangos aprašymas.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="zodziai">
+            <i class="fa-regular fa-comments karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Žodžiai:</p>
+            <p class="antrTekstas">Žodžių aprašymas.</p>
+            <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="vaidinimas">
+            <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Vaidinimo eiga:</p>
+            <p class="antrTekstas">Vaidinimo eigos aprašymas.</p>
+            <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="papildomai">
+            <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Papildomai:</p>
+            <p class="antrTekstas">Papildomai (garso takeliai ir pan.) aprašymas.</p>
+            <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
+        </div>
+    </div>
+    <div id="Gabriele">
+        <div id="girlianda">
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+        </div>
+        <div id="girlianda2">
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+        </div>
+        <div id="topInfoGabriele"></div>
+        <div id="infoGabriele"><i class="fa-solid fa-chevron-down" onclick="closeGabriele()" id="GabrieleUzdarymas" ontouchstart></i><p id="GabrieleTekstas2">Karnavalas „Princesė ir varlius”</p></div>
+        <p id="GabrieleTekstas">Karnavalas „Princesė ir varlius”</p>
+
+        <div class="pinnedBg">
+            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
+            <button onclick="informacija()" class="informacija" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
+        </div>
+
+        <div class="vardas">
+            <i class="fa-regular fa-user-circle vardasIcon"></i>
+            <p class="pagrTekstas">Rolė</p>
+            <p class="vardasAntrTekstas">Gabrielė</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="apie">
+            <i class="fa-regular fa-circle-question karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Apie rolę:</p>
+            <p class="antrTekstas">Rolės aprašymas.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="pasiruosimas">
+            <i class="fa-solid fa-suitcase karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Pasiruošti:</p>
+            <p class="antrTekstas">Pasiruošimo aprašymas.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="apranga">
+            <i class="fa-solid fa-shirt karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Apranga:</p>
+            <p class="antrTekstas">Aprangos aprašymas.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="zodziai">
+            <i class="fa-regular fa-comments karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Žodžiai:</p>
+            <p class="antrTekstas">Žodžių aprašymas.</p>
+            <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="vaidinimas">
+            <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Vaidinimo eiga:</p>
+            <p class="antrTekstas">Vaidinimo eigos aprašymas.</p>
+            <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="papildomai">
+            <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Papildomai:</p>
+            <p class="antrTekstas">Papildomai (garso takeliai ir pan.) aprašymas.</p>
+            <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
+        </div>
+    </div>
+    <div id="Berzuna">
+        <div id="girlianda">
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+        </div>
+        <div id="girlianda2">
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+        </div>
+        <div id="topInfoBerzuna"></div>
+        <div id="infoBerzuna"><i class="fa-solid fa-chevron-down" onclick="closeBerzuna()" id="BerzunaUzdarymas" ontouchstart></i><p id="BerzunaTekstas2">Karnavalas „Princesė ir varlius”</p></div>
+        <p id="BerzunaTekstas">Karnavalas „Princesė ir varlius”</p>
+
+        <div class="pinnedBg">
+            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
+            <button onclick="informacija()" class="informacija" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
+        </div>
+
+        <div class="vardas">
+            <i class="fa-regular fa-user-circle vardasIcon"></i>
+            <p class="pagrTekstas">Rolė</p>
+            <p class="vardasAntrTekstas">Beržūna</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="apie">
+            <i class="fa-regular fa-circle-question karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Apie rolę:</p>
+            <p class="antrTekstas">Rolės aprašymas.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="pasiruosimas">
+            <i class="fa-solid fa-suitcase karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Pasiruošti:</p>
+            <p class="antrTekstas">Pasiruošimo aprašymas.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="apranga">
+            <i class="fa-solid fa-shirt karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Apranga:</p>
+            <p class="antrTekstas">Aprangos aprašymas.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="zodziai">
+            <i class="fa-regular fa-comments karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Žodžiai:</p>
+            <p class="antrTekstas">Žodžių aprašymas.</p>
+            <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="vaidinimas">
+            <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Vaidinimo eiga:</p>
+            <p class="antrTekstas">Vaidinimo eigos aprašymas.</p>
+            <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="papildomai">
+            <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Papildomai:</p>
+            <p class="antrTekstas">Papildomai (garso takeliai ir pan.) aprašymas.</p>
+            <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
+        </div>
+    </div>
+    <div id="Nojus">
+        <div id="girlianda">
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+        </div>
+        <div id="girlianda2">
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+        </div>
+        <div id="topInfoNojus"></div>
+        <div id="infoNojus"><i class="fa-solid fa-chevron-down" onclick="closeNojus()" id="NojusUzdarymas" ontouchstart></i><p id="NojusTekstas2">Karnavalas „Princesė ir varlius”</p></div>
+        <p id="NojusTekstas">Karnavalas „Princesė ir varlius”</p>
+
+        <div class="pinnedBg">
+            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
+            <button onclick="informacija()" class="informacija" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
+        </div>
+
+        <div class="vardas">
+            <i class="fa-regular fa-user-circle vardasIcon"></i>
+            <p class="pagrTekstas">Rolė</p>
+            <p class="vardasAntrTekstas">Nojus</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="apie">
+            <i class="fa-regular fa-circle-question karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Apie rolę:</p>
+            <p class="antrTekstas">Rolės aprašymas.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="pasiruosimas">
+            <i class="fa-solid fa-suitcase karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Pasiruošti:</p>
+            <p class="antrTekstas">Pasiruošimo aprašymas.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="apranga">
+            <i class="fa-solid fa-shirt karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Apranga:</p>
+            <p class="antrTekstas">Aprangos aprašymas.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="zodziai">
+            <i class="fa-regular fa-comments karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Žodžiai:</p>
+            <p class="antrTekstas">Žodžių aprašymas.</p>
+            <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="vaidinimas">
+            <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Vaidinimo eiga:</p>
+            <p class="antrTekstas">Vaidinimo eigos aprašymas.</p>
+            <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="papildomai">
+            <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Papildomai:</p>
+            <p class="antrTekstas">Papildomai (garso takeliai ir pan.) aprašymas.</p>
+            <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
+        </div>
+    </div>
+    <div id="Agnieska">
+        <div id="girlianda">
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+        </div>
+        <div id="girlianda2">
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+        </div>
+        <div id="topInfoAgnieska"></div>
+        <div id="infoAgnieska"><i class="fa-solid fa-chevron-down" onclick="closeAgnieska()" id="AgnieskaUzdarymas" ontouchstart></i><p id="AgnieskaTekstas2">Karnavalas „Princesė ir varlius”</p></div>
+        <p id="AgnieskaTekstas">Karnavalas „Princesė ir varlius”</p>
+
+        <div class="pinnedBg">
+            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
+            <button onclick="informacija()" class="informacija" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
+        </div>
+
+        <div class="vardas">
+            <i class="fa-regular fa-user-circle vardasIcon"></i>
+            <p class="pagrTekstas">Rolė</p>
+            <p class="vardasAntrTekstas">Agnieška</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="apie">
+            <i class="fa-regular fa-circle-question karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Apie rolę:</p>
+            <p class="antrTekstas">Rolės aprašymas.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="pasiruosimas">
+            <i class="fa-solid fa-suitcase karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Pasiruošti:</p>
+            <p class="antrTekstas">Pasiruošimo aprašymas.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="apranga">
+            <i class="fa-solid fa-shirt karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Apranga:</p>
+            <p class="antrTekstas">Aprangos aprašymas.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="zodziai">
+            <i class="fa-regular fa-comments karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Žodžiai:</p>
+            <p class="antrTekstas">Žodžių aprašymas.</p>
+            <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="vaidinimas">
+            <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Vaidinimo eiga:</p>
+            <p class="antrTekstas">Vaidinimo eigos aprašymas.</p>
+            <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="papildomai">
+            <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Papildomai:</p>
+            <p class="antrTekstas">Papildomai (garso takeliai ir pan.) aprašymas.</p>
+            <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
+        </div>
+    </div>
+    <div id="Aurelija">
+        <div id="girlianda">
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+        </div>
+        <div id="girlianda2">
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+            <div class="zaliaGirlianda"></div>
+            <div class="raudonaGirlianda"></div>
+        </div>
+        <div id="topInfoAurelija"></div>
+        <div id="infoAurelija"><i class="fa-solid fa-chevron-down" onclick="closeAurelija()" id="AurelijaUzdarymas" ontouchstart></i><p id="AurelijaTekstas2">Karnavalas „Princesė ir varlius”</p></div>
+        <p id="AurelijaTekstas">Karnavalas „Princesė ir varlius”</p>
+
+        <div class="pinnedBg">
+            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
+            <button onclick="informacija()" class="informacija" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
+        </div>
+
+        <div class="vardas">
+            <i class="fa-regular fa-user-circle vardasIcon"></i>
+            <p class="pagrTekstas">Rolė</p>
+            <p class="vardasAntrTekstas">Aurelija</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="apie">
+            <i class="fa-regular fa-circle-question karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Apie rolę:</p>
+            <p class="antrTekstas">Rolės aprašymas.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="pasiruosimas">
+            <i class="fa-solid fa-suitcase karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Pasiruošti:</p>
+            <p class="antrTekstas">Pasiruošimo aprašymas.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="apranga">
+            <i class="fa-solid fa-shirt karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Apranga:</p>
+            <p class="antrTekstas">Aprangos aprašymas.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="zodziai">
+            <i class="fa-regular fa-comments karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Žodžiai:</p>
+            <p class="antrTekstas">Žodžių aprašymas.</p>
+            <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="vaidinimas">
+            <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Vaidinimo eiga:</p>
+            <p class="antrTekstas">Vaidinimo eigos aprašymas.</p>
+            <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
+        </div>
+        <div class="separationLine1"><hr></div>
+        <div class="papildomai">
+            <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
+            <p class="pagrTekstas">Papildomai:</p>
+            <p class="antrTekstas">Papildomai (garso takeliai ir pan.) aprašymas.</p>
+            <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
+        </div>
+    </div>
     <a id="download_script" href="scenarijus.pdf" download style="display: none;">download_script</a>
     <a id="download_audio1" href="audio1.mp3" download style="display: none;">download_audio1</a>
     <a id="download_audio2" href="audio2.mp3" download style="display: none;">download_audio2</a>
@@ -4228,11 +6136,11 @@
         // isjungti right-click
         document.addEventListener('contextmenu', (e) => e.preventDefault());
 
+        // isjungti f12, ctrl+shift+i, ctrl+shift+j, ctrl+u (isjungti inspect tool)
         function ctrlShiftKey(e, keyCode) {
             return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
         }
 
-        // isjungti f12, ctrl+shift+i, ctrl+shift+j, ctrl+u (isjungti inspect tool)
         document.onkeydown = (e) => {
         if (
             event.keyCode === 123 ||
@@ -4241,8 +6149,31 @@
             ctrlShiftKey(e, 'C') ||
             (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
         )
+            deny();
             return false;
+            
         };
+        function deny(){
+            document.getElementById("accessDenied").style.display = "flex";
+            setTimeout(() => {
+                document.getElementById("ban").style.opacity = "0";
+            }, 100);
+            setTimeout(() => {
+                document.getElementById("ban").style.opacity = "1";
+            }, 200);
+            setTimeout(() => {
+                document.getElementById("ban").style.opacity = "0";
+            }, 300);
+            setTimeout(() => {
+                document.getElementById("ban").style.opacity = "1";
+            }, 400);
+            setTimeout(() => {
+                document.getElementById("ban").style.opacity = "0";
+            }, 500);
+            setTimeout(() => {
+                document.getElementById("ban").style.opacity = "1";
+            }, 600);
+        }
 
         // scrollinimo animacijos, dark mode
         window.onscroll = function() {scrollFunction()};
@@ -4274,6 +6205,28 @@
                     document.getElementById("infoMatas").style.backgroundColor = "rgba(20, 20, 20, 0.75)";
                     document.getElementById("infoAleksandra").style.boxShadow = "0 0 10px #333333";
                     document.getElementById("infoAleksandra").style.backgroundColor = "rgba(20, 20, 20, 0.75)";
+                    document.getElementById("infoSamanta").style.boxShadow = "0 0 10px #333333";
+                    document.getElementById("infoSamanta").style.backgroundColor = "rgba(20, 20, 20, 0.75)";
+                    document.getElementById("infoArnas").style.boxShadow = "0 0 10px #333333";
+                    document.getElementById("infoArnas").style.backgroundColor = "rgba(20, 20, 20, 0.75)";
+                    document.getElementById("infoMilena").style.boxShadow = "0 0 10px #333333";
+                    document.getElementById("infoMilena").style.backgroundColor = "rgba(20, 20, 20, 0.75)";
+                    document.getElementById("infoEmilija").style.boxShadow = "0 0 10px #333333";
+                    document.getElementById("infoEmilija").style.backgroundColor = "rgba(20, 20, 20, 0.75)";
+                    document.getElementById("infoModestas").style.boxShadow = "0 0 10px #333333";
+                    document.getElementById("infoModestas").style.backgroundColor = "rgba(20, 20, 20, 0.75)";
+                    document.getElementById("infoMindaugasr").style.boxShadow = "0 0 10px #333333";
+                    document.getElementById("infoMindaugasr").style.backgroundColor = "rgba(20, 20, 20, 0.75)";
+                    document.getElementById("infoGabriele").style.boxShadow = "0 0 10px #333333";
+                    document.getElementById("infoGabriele").style.backgroundColor = "rgba(20, 20, 20, 0.75)";
+                    document.getElementById("infoBerzuna").style.boxShadow = "0 0 10px #333333";
+                    document.getElementById("infoBerzuna").style.backgroundColor = "rgba(20, 20, 20, 0.75)";
+                    document.getElementById("infoNojus").style.boxShadow = "0 0 10px #333333";
+                    document.getElementById("infoNojus").style.backgroundColor = "rgba(20, 20, 20, 0.75)";
+                    document.getElementById("infoAgnieska").style.boxShadow = "0 0 10px #333333";
+                    document.getElementById("infoAgnieska").style.backgroundColor = "rgba(20, 20, 20, 0.75)";
+                    document.getElementById("infoAurelija").style.boxShadow = "0 0 10px #333333";
+                    document.getElementById("infoAurelija").style.backgroundColor = "rgba(20, 20, 20, 0.75)";
                 }
                 else{
                     document.getElementById("info").style.boxShadow = "0 0 10px lightgrey";
@@ -4299,6 +6252,28 @@
                     document.getElementById("infoMatas").style.backgroundColor = "rgba(242, 242, 242, 0.75)";
                     document.getElementById("infoAleksandra").style.boxShadow = "0 0 10px lightgrey";
                     document.getElementById("infoAleksandra").style.backgroundColor = "rgba(242, 242, 242, 0.75)";
+                    document.getElementById("infoSamanta").style.boxShadow = "0 0 10px lightgrey";
+                    document.getElementById("infoSamanta").style.backgroundColor = "rgba(242, 242, 242, 0.75)";
+                    document.getElementById("infoArnas").style.boxShadow = "0 0 10px lightgrey";
+                    document.getElementById("infoArnas").style.backgroundColor = "rgba(242, 242, 242, 0.75)";
+                    document.getElementById("infoMilena").style.boxShadow = "0 0 10px lightgrey";
+                    document.getElementById("infoMilena").style.backgroundColor = "rgba(242, 242, 242, 0.75)";
+                    document.getElementById("infoEmilija").style.boxShadow = "0 0 10px lightgrey";
+                    document.getElementById("infoEmilija").style.backgroundColor = "rgba(242, 242, 242, 0.75)";
+                    document.getElementById("infoModestas").style.boxShadow = "0 0 10px lightgrey";
+                    document.getElementById("infoModestas").style.backgroundColor = "rgba(242, 242, 242, 0.75)";
+                    document.getElementById("infoMindaugasr").style.boxShadow = "0 0 10px lightgrey";
+                    document.getElementById("infoMindaugasr").style.backgroundColor = "rgba(242, 242, 242, 0.75)";
+                    document.getElementById("infoGabriele").style.boxShadow = "0 0 10px lightgrey";
+                    document.getElementById("infoGabriele").style.backgroundColor = "rgba(242, 242, 242, 0.75)";
+                    document.getElementById("infoBerzuna").style.boxShadow = "0 0 10px lightgrey";
+                    document.getElementById("infoBerzuna").style.backgroundColor = "rgba(242, 242, 242, 0.75)";
+                    document.getElementById("infoNojus").style.boxShadow = "0 0 10px lightgrey";
+                    document.getElementById("infoNojus").style.backgroundColor = "rgba(242, 242, 242, 0.75)";
+                    document.getElementById("infoAgnieska").style.boxShadow = "0 0 10px lightgrey";
+                    document.getElementById("infoAgnieska").style.backgroundColor = "rgba(242, 242, 242, 0.75)";
+                    document.getElementById("infoAurelija").style.boxShadow = "0 0 10px lightgrey";
+                    document.getElementById("infoAurelija").style.backgroundColor = "rgba(242, 242, 242, 0.75)";
                 }
 
                 document.getElementById("AruneTekstas").style.opacity = "0";
@@ -4321,6 +6296,28 @@
                 document.getElementById("MatasTekstas2").style.opacity = "1";
                 document.getElementById("AleksandraTekstas").style.opacity = "0";
                 document.getElementById("AleksandraTekstas2").style.opacity = "1";
+                document.getElementById("SamantaTekstas").style.opacity = "0";
+                document.getElementById("SamantaTekstas2").style.opacity = "1";
+                document.getElementById("ArnasTekstas").style.opacity = "0";
+                document.getElementById("ArnasTekstas2").style.opacity = "1";
+                document.getElementById("MilenaTekstas").style.opacity = "0";
+                document.getElementById("MilenaTekstas2").style.opacity = "1";
+                document.getElementById("EmilijaTekstas").style.opacity = "0";
+                document.getElementById("EmilijaTekstas2").style.opacity = "1";
+                document.getElementById("ModestasTekstas").style.opacity = "0";
+                document.getElementById("ModestasTekstas2").style.opacity = "1";
+                document.getElementById("MindaugasrTekstas").style.opacity = "0";
+                document.getElementById("MindaugasrTekstas2").style.opacity = "1";
+                document.getElementById("GabrieleTekstas").style.opacity = "0";
+                document.getElementById("GabrieleTekstas2").style.opacity = "1";
+                document.getElementById("BerzunaTekstas").style.opacity = "0";
+                document.getElementById("BerzunaTekstas2").style.opacity = "1";
+                document.getElementById("NojusTekstas").style.opacity = "0";
+                document.getElementById("NojusTekstas2").style.opacity = "1";
+                document.getElementById("AgnieskaTekstas").style.opacity = "0";
+                document.getElementById("AgnieskaTekstas2").style.opacity = "1";
+                document.getElementById("AurelijaTekstas").style.opacity = "0";
+                document.getElementById("AurelijaTekstas2").style.opacity = "1";
             }
             else {
                 document.getElementById("kelionesMarsrutasTekstas").style.opacity = "1";
@@ -4339,6 +6336,17 @@
                     document.getElementById("infoDovydas").style.backgroundColor = "rgba(20, 20, 20, 1)";
                     document.getElementById("infoMatas").style.backgroundColor = "rgba(20, 20, 20, 1)";
                     document.getElementById("infoAleksandra").style.backgroundColor = "rgba(20, 20, 20, 1)";
+                    document.getElementById("infoSamanta").style.backgroundColor = "rgba(20, 20, 20, 1)";
+                    document.getElementById("infoArnas").style.backgroundColor = "rgba(20, 20, 20, 1)";
+                    document.getElementById("infoMilena").style.backgroundColor = "rgba(20, 20, 20, 1)";
+                    document.getElementById("infoEmilija").style.backgroundColor = "rgba(20, 20, 20, 1)";
+                    document.getElementById("infoModestas").style.backgroundColor = "rgba(20, 20, 20, 1)";
+                    document.getElementById("infoMindaugasr").style.backgroundColor = "rgba(20, 20, 20, 1)";
+                    document.getElementById("infoGabriele").style.backgroundColor = "rgba(20, 20, 20, 1)";
+                    document.getElementById("infoBerzuna").style.backgroundColor = "rgba(20, 20, 20, 1)";
+                    document.getElementById("infoNojus").style.backgroundColor = "rgba(20, 20, 20, 1)";
+                    document.getElementById("infoAgnieska").style.backgroundColor = "rgba(20, 20, 20, 1)";
+                    document.getElementById("infoAurelija").style.backgroundColor = "rgba(20, 20, 20, 1)";
                 }
                 else{
                     document.getElementById("info").style.backgroundColor = "rgba(242, 242, 242, 1)";
@@ -4353,6 +6361,17 @@
                     document.getElementById("infoDovydas").style.backgroundColor = "rgba(242, 242, 242, 1)";
                     document.getElementById("infoMatas").style.backgroundColor = "rgba(242, 242, 242, 1)";
                     document.getElementById("infoAleksandra").style.backgroundColor = "rgba(242, 242, 242, 1)";
+                    document.getElementById("infoSamanta").style.backgroundColor = "rgba(242, 242, 242, 1)";
+                    document.getElementById("infoArnas").style.backgroundColor = "rgba(242, 242, 242, 1)";
+                    document.getElementById("infoMilena").style.backgroundColor = "rgba(242, 242, 242, 1)";
+                    document.getElementById("infoEmilija").style.backgroundColor = "rgba(242, 242, 242, 1)";
+                    document.getElementById("infoModestas").style.backgroundColor = "rgba(242, 242, 242, 1)";
+                    document.getElementById("infoMindaugasr").style.backgroundColor = "rgba(242, 242, 242, 1)";
+                    document.getElementById("infoGabriele").style.backgroundColor = "rgba(242, 242, 242, 1)";
+                    document.getElementById("infoBerzuna").style.backgroundColor = "rgba(242, 242, 242, 1)";
+                    document.getElementById("infoNojus").style.backgroundColor = "rgba(242, 242, 242, 1)";
+                    document.getElementById("infoAgnieska").style.backgroundColor = "rgba(242, 242, 242, 1)";
+                    document.getElementById("infoAurelija").style.backgroundColor = "rgba(242, 242, 242, 1)";
                 }
 
                 document.getElementById("AruneTekstas").style.opacity = "1";
@@ -4385,6 +6404,39 @@
                 document.getElementById("AleksandraTekstas").style.opacity = "1";
                 document.getElementById("AleksandraTekstas2").style.opacity = "0";
                 document.getElementById("infoAleksandra").style.boxShadow = "none";
+                document.getElementById("SamantaTekstas").style.opacity = "1";
+                document.getElementById("SamantaTekstas2").style.opacity = "0";
+                document.getElementById("infoSamanta").style.boxShadow = "none";
+                document.getElementById("ArnasTekstas").style.opacity = "1";
+                document.getElementById("ArnasTekstas2").style.opacity = "0";
+                document.getElementById("infoArnas").style.boxShadow = "none";
+                document.getElementById("MilenaTekstas").style.opacity = "1";
+                document.getElementById("MilenaTekstas2").style.opacity = "0";
+                document.getElementById("infoMilena").style.boxShadow = "none";
+                document.getElementById("EmilijaTekstas").style.opacity = "1";
+                document.getElementById("EmilijaTekstas2").style.opacity = "0";
+                document.getElementById("infoEmilija").style.boxShadow = "none";
+                document.getElementById("ModestasTekstas").style.opacity = "1";
+                document.getElementById("ModestasTekstas2").style.opacity = "0";
+                document.getElementById("infoModestas").style.boxShadow = "none";
+                document.getElementById("MindaugasrTekstas").style.opacity = "1";
+                document.getElementById("MindaugasrTekstas2").style.opacity = "0";
+                document.getElementById("infoMindaugasr").style.boxShadow = "none";
+                document.getElementById("GabrieleTekstas").style.opacity = "1";
+                document.getElementById("GabrieleTekstas2").style.opacity = "0";
+                document.getElementById("infoGabriele").style.boxShadow = "none";
+                document.getElementById("BerzunaTekstas").style.opacity = "1";
+                document.getElementById("BerzunaTekstas2").style.opacity = "0";
+                document.getElementById("infoBerzuna").style.boxShadow = "none";
+                document.getElementById("NojusTekstas").style.opacity = "1";
+                document.getElementById("NojusTekstas2").style.opacity = "0";
+                document.getElementById("infoNojus").style.boxShadow = "none";
+                document.getElementById("AgnieskaTekstas").style.opacity = "1";
+                document.getElementById("AgnieskaTekstas2").style.opacity = "0";
+                document.getElementById("infoAgnieska").style.boxShadow = "none";
+                document.getElementById("AurelijaTekstas").style.opacity = "1";
+                document.getElementById("AurelijaTekstas2").style.opacity = "0";
+                document.getElementById("infoAurelija").style.boxShadow = "none";
             }
         }
 
@@ -5537,6 +7589,391 @@
                     document.getElementById("body").style.overflow = "scroll";
                 }, 3900);
           }
+          else if(form.pin.value == "282739") //Samanta
+                {
+                    document.cookie = "Samanta=role";
+                document.getElementById("loading").style.display = "flex";
+                document.getElementById("ivestiKoda").style.opacity = "0.3";
+                document.querySelector('#topInfoSamanta').scrollIntoView({
+                    behavior: 'smooth'
+                });
+                document.getElementById("keypad").style.opacity = "0.3";
+                document.getElementById("istrynimas").style.color = "transparent";
+                document.getElementById("istrynimas").style.pointerEvents = "none";
+                setTimeout(() => {
+                    document.getElementById("keypad").style.opacity = "1";
+                    document.getElementById("ivestiKoda").style.opacity = "1";
+                    document.getElementById("screen").style.top = "-100%";
+                    document.getElementById("screen").style.backgroundColor = "transparent";
+                    document.getElementById("display").style.top = "-100%";
+                    document.getElementById("Samanta").style.display = "block";
+                }, 3600);
+                setTimeout(() => {
+                    document.getElementById("Samanta").style.paddingTop = "0";
+                }, 3620);
+                setTimeout(() => {
+                    inputas = ""
+                    document.getElementById("kodas").value = '';
+                    document.getElementById("taskelis1").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis2").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis3").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis4").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis5").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis6").style.backgroundColor = "transparent";
+                    document.getElementById("loading").style.display = "none";
+                    document.getElementById("body").style.overflow = "scroll";
+                }, 3900);
+          }
+          else if(form.pin.value == "102023") //Arnas
+                {
+                    document.cookie = "Arnas=role";
+                document.getElementById("loading").style.display = "flex";
+                document.getElementById("ivestiKoda").style.opacity = "0.3";
+                document.querySelector('#topInfoArnas').scrollIntoView({
+                    behavior: 'smooth'
+                });
+                document.getElementById("keypad").style.opacity = "0.3";
+                document.getElementById("istrynimas").style.color = "transparent";
+                document.getElementById("istrynimas").style.pointerEvents = "none";
+                setTimeout(() => {
+                    document.getElementById("keypad").style.opacity = "1";
+                    document.getElementById("ivestiKoda").style.opacity = "1";
+                    document.getElementById("screen").style.top = "-100%";
+                    document.getElementById("screen").style.backgroundColor = "transparent";
+                    document.getElementById("display").style.top = "-100%";
+                    document.getElementById("Arnas").style.display = "block";
+                }, 3600);
+                setTimeout(() => {
+                    document.getElementById("Arnas").style.paddingTop = "0";
+                }, 3620);
+                setTimeout(() => {
+                    inputas = ""
+                    document.getElementById("kodas").value = '';
+                    document.getElementById("taskelis1").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis2").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis3").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis4").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis5").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis6").style.backgroundColor = "transparent";
+                    document.getElementById("loading").style.display = "none";
+                    document.getElementById("body").style.overflow = "scroll";
+                }, 3900);
+          }
+          else if(form.pin.value == "814858") //Milena
+                {
+                    document.cookie = "Milena=role";
+                document.getElementById("loading").style.display = "flex";
+                document.getElementById("ivestiKoda").style.opacity = "0.3";
+                document.querySelector('#topInfoMilena').scrollIntoView({
+                    behavior: 'smooth'
+                });
+                document.getElementById("keypad").style.opacity = "0.3";
+                document.getElementById("istrynimas").style.color = "transparent";
+                document.getElementById("istrynimas").style.pointerEvents = "none";
+                setTimeout(() => {
+                    document.getElementById("keypad").style.opacity = "1";
+                    document.getElementById("ivestiKoda").style.opacity = "1";
+                    document.getElementById("screen").style.top = "-100%";
+                    document.getElementById("screen").style.backgroundColor = "transparent";
+                    document.getElementById("display").style.top = "-100%";
+                    document.getElementById("Milena").style.display = "block";
+                }, 3600);
+                setTimeout(() => {
+                    document.getElementById("Milena").style.paddingTop = "0";
+                }, 3620);
+                setTimeout(() => {
+                    inputas = ""
+                    document.getElementById("kodas").value = '';
+                    document.getElementById("taskelis1").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis2").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis3").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis4").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis5").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis6").style.backgroundColor = "transparent";
+                    document.getElementById("loading").style.display = "none";
+                    document.getElementById("body").style.overflow = "scroll";
+                }, 3900);
+          }
+          else if(form.pin.value == "384739") //Emilija
+                {
+                    document.cookie = "Emilija=role";
+                document.getElementById("loading").style.display = "flex";
+                document.getElementById("ivestiKoda").style.opacity = "0.3";
+                document.querySelector('#topInfoEmilija').scrollIntoView({
+                    behavior: 'smooth'
+                });
+                document.getElementById("keypad").style.opacity = "0.3";
+                document.getElementById("istrynimas").style.color = "transparent";
+                document.getElementById("istrynimas").style.pointerEvents = "none";
+                setTimeout(() => {
+                    document.getElementById("keypad").style.opacity = "1";
+                    document.getElementById("ivestiKoda").style.opacity = "1";
+                    document.getElementById("screen").style.top = "-100%";
+                    document.getElementById("screen").style.backgroundColor = "transparent";
+                    document.getElementById("display").style.top = "-100%";
+                    document.getElementById("Emilija").style.display = "block";
+                }, 3600);
+                setTimeout(() => {
+                    document.getElementById("Emilija").style.paddingTop = "0";
+                }, 3620);
+                setTimeout(() => {
+                    inputas = ""
+                    document.getElementById("kodas").value = '';
+                    document.getElementById("taskelis1").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis2").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis3").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis4").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis5").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis6").style.backgroundColor = "transparent";
+                    document.getElementById("loading").style.display = "none";
+                    document.getElementById("body").style.overflow = "scroll";
+                }, 3900);
+          }
+          else if(form.pin.value == "773752") //Modestas
+                {
+                    document.cookie = "Modestas=role";
+                document.getElementById("loading").style.display = "flex";
+                document.getElementById("ivestiKoda").style.opacity = "0.3";
+                document.querySelector('#topInfoModestas').scrollIntoView({
+                    behavior: 'smooth'
+                });
+                document.getElementById("keypad").style.opacity = "0.3";
+                document.getElementById("istrynimas").style.color = "transparent";
+                document.getElementById("istrynimas").style.pointerEvents = "none";
+                setTimeout(() => {
+                    document.getElementById("keypad").style.opacity = "1";
+                    document.getElementById("ivestiKoda").style.opacity = "1";
+                    document.getElementById("screen").style.top = "-100%";
+                    document.getElementById("screen").style.backgroundColor = "transparent";
+                    document.getElementById("display").style.top = "-100%";
+                    document.getElementById("Modestas").style.display = "block";
+                }, 3600);
+                setTimeout(() => {
+                    document.getElementById("Modestas").style.paddingTop = "0";
+                }, 3620);
+                setTimeout(() => {
+                    inputas = ""
+                    document.getElementById("kodas").value = '';
+                    document.getElementById("taskelis1").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis2").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis3").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis4").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis5").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis6").style.backgroundColor = "transparent";
+                    document.getElementById("loading").style.display = "none";
+                    document.getElementById("body").style.overflow = "scroll";
+                }, 3900);
+          }
+          else if(form.pin.value == "324857") //Mindaugasr
+                {
+                    document.cookie = "Mindaugasr=role";
+                document.getElementById("loading").style.display = "flex";
+                document.getElementById("ivestiKoda").style.opacity = "0.3";
+                document.querySelector('#topInfoMindaugasr').scrollIntoView({
+                    behavior: 'smooth'
+                });
+                document.getElementById("keypad").style.opacity = "0.3";
+                document.getElementById("istrynimas").style.color = "transparent";
+                document.getElementById("istrynimas").style.pointerEvents = "none";
+                setTimeout(() => {
+                    document.getElementById("keypad").style.opacity = "1";
+                    document.getElementById("ivestiKoda").style.opacity = "1";
+                    document.getElementById("screen").style.top = "-100%";
+                    document.getElementById("screen").style.backgroundColor = "transparent";
+                    document.getElementById("display").style.top = "-100%";
+                    document.getElementById("Mindaugasr").style.display = "block";
+                }, 3600);
+                setTimeout(() => {
+                    document.getElementById("Mindaugasr").style.paddingTop = "0";
+                }, 3620);
+                setTimeout(() => {
+                    inputas = ""
+                    document.getElementById("kodas").value = '';
+                    document.getElementById("taskelis1").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis2").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis3").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis4").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis5").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis6").style.backgroundColor = "transparent";
+                    document.getElementById("loading").style.display = "none";
+                    document.getElementById("body").style.overflow = "scroll";
+                }, 3900);
+          }
+          else if(form.pin.value == "039586") //Gabriele
+                {
+                    document.cookie = "Gabriele=role";
+                document.getElementById("loading").style.display = "flex";
+                document.getElementById("ivestiKoda").style.opacity = "0.3";
+                document.querySelector('#topInfoGabriele').scrollIntoView({
+                    behavior: 'smooth'
+                });
+                document.getElementById("keypad").style.opacity = "0.3";
+                document.getElementById("istrynimas").style.color = "transparent";
+                document.getElementById("istrynimas").style.pointerEvents = "none";
+                setTimeout(() => {
+                    document.getElementById("keypad").style.opacity = "1";
+                    document.getElementById("ivestiKoda").style.opacity = "1";
+                    document.getElementById("screen").style.top = "-100%";
+                    document.getElementById("screen").style.backgroundColor = "transparent";
+                    document.getElementById("display").style.top = "-100%";
+                    document.getElementById("Gabriele").style.display = "block";
+                }, 3600);
+                setTimeout(() => {
+                    document.getElementById("Gabriele").style.paddingTop = "0";
+                }, 3620);
+                setTimeout(() => {
+                    inputas = ""
+                    document.getElementById("kodas").value = '';
+                    document.getElementById("taskelis1").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis2").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis3").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis4").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis5").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis6").style.backgroundColor = "transparent";
+                    document.getElementById("loading").style.display = "none";
+                    document.getElementById("body").style.overflow = "scroll";
+                }, 3900);
+          }
+          else if(form.pin.value == "645751") //Berzuna
+                {
+                    document.cookie = "Berzuna=role";
+                document.getElementById("loading").style.display = "flex";
+                document.getElementById("ivestiKoda").style.opacity = "0.3";
+                document.querySelector('#topInfoBerzuna').scrollIntoView({
+                    behavior: 'smooth'
+                });
+                document.getElementById("keypad").style.opacity = "0.3";
+                document.getElementById("istrynimas").style.color = "transparent";
+                document.getElementById("istrynimas").style.pointerEvents = "none";
+                setTimeout(() => {
+                    document.getElementById("keypad").style.opacity = "1";
+                    document.getElementById("ivestiKoda").style.opacity = "1";
+                    document.getElementById("screen").style.top = "-100%";
+                    document.getElementById("screen").style.backgroundColor = "transparent";
+                    document.getElementById("display").style.top = "-100%";
+                    document.getElementById("Berzuna").style.display = "block";
+                }, 3600);
+                setTimeout(() => {
+                    document.getElementById("Berzuna").style.paddingTop = "0";
+                }, 3620);
+                setTimeout(() => {
+                    inputas = ""
+                    document.getElementById("kodas").value = '';
+                    document.getElementById("taskelis1").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis2").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis3").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis4").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis5").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis6").style.backgroundColor = "transparent";
+                    document.getElementById("loading").style.display = "none";
+                    document.getElementById("body").style.overflow = "scroll";
+                }, 3900);
+          }
+          else if(form.pin.value == "192938") //Nojus
+                {
+                    document.cookie = "Nojus=role";
+                document.getElementById("loading").style.display = "flex";
+                document.getElementById("ivestiKoda").style.opacity = "0.3";
+                document.querySelector('#topInfoNojus').scrollIntoView({
+                    behavior: 'smooth'
+                });
+                document.getElementById("keypad").style.opacity = "0.3";
+                document.getElementById("istrynimas").style.color = "transparent";
+                document.getElementById("istrynimas").style.pointerEvents = "none";
+                setTimeout(() => {
+                    document.getElementById("keypad").style.opacity = "1";
+                    document.getElementById("ivestiKoda").style.opacity = "1";
+                    document.getElementById("screen").style.top = "-100%";
+                    document.getElementById("screen").style.backgroundColor = "transparent";
+                    document.getElementById("display").style.top = "-100%";
+                    document.getElementById("Nojus").style.display = "block";
+                }, 3600);
+                setTimeout(() => {
+                    document.getElementById("Nojus").style.paddingTop = "0";
+                }, 3620);
+                setTimeout(() => {
+                    inputas = ""
+                    document.getElementById("kodas").value = '';
+                    document.getElementById("taskelis1").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis2").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis3").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis4").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis5").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis6").style.backgroundColor = "transparent";
+                    document.getElementById("loading").style.display = "none";
+                    document.getElementById("body").style.overflow = "scroll";
+                }, 3900);
+          }
+          else if(form.pin.value == "850048") //Agnieska
+                {
+                    document.cookie = "Agnieska=role";
+                document.getElementById("loading").style.display = "flex";
+                document.getElementById("ivestiKoda").style.opacity = "0.3";
+                document.querySelector('#topInfoAgnieska').scrollIntoView({
+                    behavior: 'smooth'
+                });
+                document.getElementById("keypad").style.opacity = "0.3";
+                document.getElementById("istrynimas").style.color = "transparent";
+                document.getElementById("istrynimas").style.pointerEvents = "none";
+                setTimeout(() => {
+                    document.getElementById("keypad").style.opacity = "1";
+                    document.getElementById("ivestiKoda").style.opacity = "1";
+                    document.getElementById("screen").style.top = "-100%";
+                    document.getElementById("screen").style.backgroundColor = "transparent";
+                    document.getElementById("display").style.top = "-100%";
+                    document.getElementById("Agnieska").style.display = "block";
+                }, 3600);
+                setTimeout(() => {
+                    document.getElementById("Agnieska").style.paddingTop = "0";
+                }, 3620);
+                setTimeout(() => {
+                    inputas = ""
+                    document.getElementById("kodas").value = '';
+                    document.getElementById("taskelis1").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis2").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis3").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis4").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis5").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis6").style.backgroundColor = "transparent";
+                    document.getElementById("loading").style.display = "none";
+                    document.getElementById("body").style.overflow = "scroll";
+                }, 3900);
+          }
+          else if(form.pin.value == "479377") //Aurelija
+                {
+                    document.cookie = "Aurelija=role";
+                document.getElementById("loading").style.display = "flex";
+                document.getElementById("ivestiKoda").style.opacity = "0.3";
+                document.querySelector('#topInfoAurelija').scrollIntoView({
+                    behavior: 'smooth'
+                });
+                document.getElementById("keypad").style.opacity = "0.3";
+                document.getElementById("istrynimas").style.color = "transparent";
+                document.getElementById("istrynimas").style.pointerEvents = "none";
+                setTimeout(() => {
+                    document.getElementById("keypad").style.opacity = "1";
+                    document.getElementById("ivestiKoda").style.opacity = "1";
+                    document.getElementById("screen").style.top = "-100%";
+                    document.getElementById("screen").style.backgroundColor = "transparent";
+                    document.getElementById("display").style.top = "-100%";
+                    document.getElementById("Aurelija").style.display = "block";
+                }, 3600);
+                setTimeout(() => {
+                    document.getElementById("Aurelija").style.paddingTop = "0";
+                }, 3620);
+                setTimeout(() => {
+                    inputas = ""
+                    document.getElementById("kodas").value = '';
+                    document.getElementById("taskelis1").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis2").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis3").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis4").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis5").style.backgroundColor = "transparent";
+                    document.getElementById("taskelis6").style.backgroundColor = "transparent";
+                    document.getElementById("loading").style.display = "none";
+                    document.getElementById("body").style.overflow = "scroll";
+                }, 3900);
+          }
             else{
                 document.getElementById("loading").style.display = "flex";
                 document.getElementById("ivestiKoda").style.opacity = "0.3";
@@ -5758,8 +8195,195 @@
                 document.getElementById("Aleksandra").style.paddingTop = "100vh";
             }
         }
+        let Samanta = getCookie("Samanta");
+        if (Samanta != "") {
+            document.getElementById("Samanta").style.display = "block";
+            document.getElementById("Samanta").style.paddingTop = "0";
+            setTimeout(() => {
+                document.querySelector('#topInfoSamanta').scrollIntoView({
+                behavior: 'smooth'});
+            }, 500);
+        }
+        else {
+            document.getElementById("Samanta").style.display = "none";
+            document.getElementById("Samanta").style.paddingTop = "100vh";
+            if (Samanta != "" && Samanta != null) {
+                document.getElementById("Samanta").style.display = "none";
+                document.getElementById("Samanta").style.paddingTop = "100vh";
+            }
+        }
+        let Arnas = getCookie("Arnas");
+        if (Arnas != "") {
+            document.getElementById("Arnas").style.display = "block";
+            document.getElementById("Arnas").style.paddingTop = "0";
+            setTimeout(() => {
+                document.querySelector('#topInfoArnas').scrollIntoView({
+                behavior: 'smooth'});
+            }, 500);
+        }
+        else {
+            document.getElementById("Arnas").style.display = "none";
+            document.getElementById("Arnas").style.paddingTop = "100vh";
+            if (Arnas != "" && Arnas != null) {
+                document.getElementById("Arnas").style.display = "none";
+                document.getElementById("Arnas").style.paddingTop = "100vh";
+            }
+        }
+        let Milena = getCookie("Milena");
+        if (Milena != "") {
+            document.getElementById("Milena").style.display = "block";
+            document.getElementById("Milena").style.paddingTop = "0";
+            setTimeout(() => {
+                document.querySelector('#topInfoMilena').scrollIntoView({
+                behavior: 'smooth'});
+            }, 500);
+        }
+        else {
+            document.getElementById("Milena").style.display = "none";
+            document.getElementById("Milena").style.paddingTop = "100vh";
+            if (Milena != "" && Milena != null) {
+                document.getElementById("Milena").style.display = "none";
+                document.getElementById("Milena").style.paddingTop = "100vh";
+            }
+        }
+        let Emilija = getCookie("Emilija");
+        if (Emilija != "") {
+            document.getElementById("Emilija").style.display = "block";
+            document.getElementById("Emilija").style.paddingTop = "0";
+            setTimeout(() => {
+                document.querySelector('#topInfoEmilija').scrollIntoView({
+                behavior: 'smooth'});
+            }, 500);
+        }
+        else {
+            document.getElementById("Emilija").style.display = "none";
+            document.getElementById("Emilija").style.paddingTop = "100vh";
+            if (Emilija != "" && Emilija != null) {
+                document.getElementById("Emilija").style.display = "none";
+                document.getElementById("Emilija").style.paddingTop = "100vh";
+            }
+        }
+        let Modestas = getCookie("Modestas");
+        if (Modestas != "") {
+            document.getElementById("Modestas").style.display = "block";
+            document.getElementById("Modestas").style.paddingTop = "0";
+            setTimeout(() => {
+                document.querySelector('#topInfoModestas').scrollIntoView({
+                behavior: 'smooth'});
+            }, 500);
+        }
+        else {
+            document.getElementById("Modestas").style.display = "none";
+            document.getElementById("Modestas").style.paddingTop = "100vh";
+            if (Modestas != "" && Modestas != null) {
+                document.getElementById("Modestas").style.display = "none";
+                document.getElementById("Modestas").style.paddingTop = "100vh";
+            }
+        }
+        let Mindaugasr = getCookie("Mindaugasr");
+        if (Mindaugasr != "") {
+            document.getElementById("Mindaugasr").style.display = "block";
+            document.getElementById("Mindaugasr").style.paddingTop = "0";
+            setTimeout(() => {
+                document.querySelector('#topInfoMindaugasr').scrollIntoView({
+                behavior: 'smooth'});
+            }, 500);
+        }
+        else {
+            document.getElementById("Mindaugasr").style.display = "none";
+            document.getElementById("Mindaugasr").style.paddingTop = "100vh";
+            if (Mindaugasr != "" && Mindaugasr != null) {
+                document.getElementById("Mindaugasr").style.display = "none";
+                document.getElementById("Mindaugasr").style.paddingTop = "100vh";
+            }
+        }
+        let Gabriele = getCookie("Gabriele");
+        if (Gabriele != "") {
+            document.getElementById("Gabriele").style.display = "block";
+            document.getElementById("Gabriele").style.paddingTop = "0";
+            setTimeout(() => {
+                document.querySelector('#topInfoGabriele').scrollIntoView({
+                behavior: 'smooth'});
+            }, 500);
+        }
+        else {
+            document.getElementById("Gabriele").style.display = "none";
+            document.getElementById("Gabriele").style.paddingTop = "100vh";
+            if (Gabriele != "" && Gabriele != null) {
+                document.getElementById("Gabriele").style.display = "none";
+                document.getElementById("Gabriele").style.paddingTop = "100vh";
+            }
+        }
+        let Berzuna = getCookie("Berzuna");
+        if (Berzuna != "") {
+            document.getElementById("Berzuna").style.display = "block";
+            document.getElementById("Berzuna").style.paddingTop = "0";
+            setTimeout(() => {
+                document.querySelector('#topInfoBerzuna').scrollIntoView({
+                behavior: 'smooth'});
+            }, 500);
+        }
+        else {
+            document.getElementById("Berzuna").style.display = "none";
+            document.getElementById("Berzuna").style.paddingTop = "100vh";
+            if (Berzuna != "" && Berzuna != null) {
+                document.getElementById("Berzuna").style.display = "none";
+                document.getElementById("Berzuna").style.paddingTop = "100vh";
+            }
+        }
+        let Nojus = getCookie("Nojus");
+        if (Nojus != "") {
+            document.getElementById("Nojus").style.display = "block";
+            document.getElementById("Nojus").style.paddingTop = "0";
+            setTimeout(() => {
+                document.querySelector('#topInfoNojus').scrollIntoView({
+                behavior: 'smooth'});
+            }, 500);
+        }
+        else {
+            document.getElementById("Nojus").style.display = "none";
+            document.getElementById("Nojus").style.paddingTop = "100vh";
+            if (Nojus != "" && Nojus != null) {
+                document.getElementById("Nojus").style.display = "none";
+                document.getElementById("Nojus").style.paddingTop = "100vh";
+            }
+        }
+        let Agnieska = getCookie("Agnieska");
+        if (Agnieska != "") {
+            document.getElementById("Agnieska").style.display = "block";
+            document.getElementById("Agnieska").style.paddingTop = "0";
+            setTimeout(() => {
+                document.querySelector('#topInfoAgnieska').scrollIntoView({
+                behavior: 'smooth'});
+            }, 500);
+        }
+        else {
+            document.getElementById("Agnieska").style.display = "none";
+            document.getElementById("Agnieska").style.paddingTop = "100vh";
+            if (Agnieska != "" && Agnieska != null) {
+                document.getElementById("Agnieska").style.display = "none";
+                document.getElementById("Agnieska").style.paddingTop = "100vh";
+            }
+        }
+        let Aurelija = getCookie("Aurelija");
+        if (Aurelija != "") {
+            document.getElementById("Aurelija").style.display = "block";
+            document.getElementById("Aurelija").style.paddingTop = "0";
+            setTimeout(() => {
+                document.querySelector('#topInfoAurelija').scrollIntoView({
+                behavior: 'smooth'});
+            }, 500);
+        }
+        else {
+            document.getElementById("Aurelija").style.display = "none";
+            document.getElementById("Aurelija").style.paddingTop = "100vh";
+            if (Aurelija != "" && Aurelija != null) {
+                document.getElementById("Aurelija").style.display = "none";
+                document.getElementById("Aurelija").style.paddingTop = "100vh";
+            }
+        }
 
-        if (kelioneI != "" || Arune != "" || Smilte != "" || Adriana != "" || Norbertas != "" || Meta != "" || Justina != "" || Mindaugasd != "" || Dovydas != "" || Matas != "" || Aleksandra != "") {
+        if (kelioneI != "" || Arune != "" || Smilte != "" || Adriana != "" || Norbertas != "" || Meta != "" || Justina != "" || Mindaugasd != "" || Dovydas != "" || Matas != "" || Aleksandra != "" || Samanta != "" || Arnas != "" || Milena != "" || Emilija != "" || Modestas != "" || Mindaugasr != "" || Gabriele != "" || Berzuna != "" || Nojus != "" || Agnieska != "" || Aurelija != "") {
             document.getElementById("screen").style.top = "-100%";
             document.getElementById("screen").style.backgroundColor = "transparent";
             document.getElementById("display").style.top = "-100%";
@@ -5770,7 +8394,7 @@
             document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
             document.getElementById("display").style.top = "0";
             document.getElementById("body").style.overflow = "hidden";
-            if (kelioneI != "" && kelioneI != null || Arune != "" && Arune != null || Smilte != "" && Smilte != null || Adriana != "" && Adriana != null || Norbertas != "" && Norbertas != null || Meta != "" && Meta != null || Justina != "" && Justina != null || Mindaugasd != "" && Mindaugasd != null || Dovydas != "" && Dovydas != null || Matas != "" && Matas != null || Aleksandra != "" && Aleksandra != null) {
+            if (kelioneI != "" && kelioneI != null || Arune != "" && Arune != null || Smilte != "" && Smilte != null || Adriana != "" && Adriana != null || Norbertas != "" && Norbertas != null || Meta != "" && Meta != null || Justina != "" && Justina != null || Mindaugasd != "" && Mindaugasd != null || Dovydas != "" && Dovydas != null || Matas != "" && Matas != null || Aleksandra != "" && Aleksandra != null || Samanta != "" && Samanta != null || Arnas != "" && Arnas != null || Milena != "" && Milena != null || Emilija != "" && Emilija != null || Modestas != "" && Modestas != null || Mindaugasr != "" && Mindaugasr != null || Gabriele != "" && Gabriele != null || Berzuna != "" && Berzuna || Nojus != "" && Nojus != null || Agnieska != "" && Agnieska != null || Aurelija != "" && Aurelija != null) {
                 document.getElementById("screen").style.top = "0";
                 document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
                 document.getElementById("display").style.top = "0";
@@ -5941,6 +8565,171 @@
                 document.getElementById("AleksandraUzdarymas").style.pointerEvents = "all";
                 document.getElementById("body").style.overflow = "hidden";
                 document.getElementById("Aleksandra").style.display = "none";
+            }, 310);
+        }
+        function closeSamanta() {
+            document.cookie = "Samanta=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
+            document.getElementById("SamantaUzdarymas").style.pointerEvents = "none";
+            setTimeout(() => {
+                document.getElementById("screen").style.top = "0";
+                document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
+                document.getElementById("display").style.top = "0";
+                document.getElementById("Samanta").style.paddingTop = "100vh";
+            }, 10);
+            setTimeout(() => {
+                document.getElementById("SamantaUzdarymas").style.pointerEvents = "all";
+                document.getElementById("body").style.overflow = "hidden";
+                document.getElementById("Samanta").style.display = "none";
+            }, 310);
+        }
+        function closeArnas() {
+            document.cookie = "Arnas=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
+            document.getElementById("ArnasUzdarymas").style.pointerEvents = "none";
+            setTimeout(() => {
+                document.getElementById("screen").style.top = "0";
+                document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
+                document.getElementById("display").style.top = "0";
+                document.getElementById("Arnas").style.paddingTop = "100vh";
+            }, 10);
+            setTimeout(() => {
+                document.getElementById("ArnasUzdarymas").style.pointerEvents = "all";
+                document.getElementById("body").style.overflow = "hidden";
+                document.getElementById("Arnas").style.display = "none";
+            }, 310);
+        }
+        function closeMilena() {
+            document.cookie = "Milena=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
+            document.getElementById("MilenaUzdarymas").style.pointerEvents = "none";
+            setTimeout(() => {
+                document.getElementById("screen").style.top = "0";
+                document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
+                document.getElementById("display").style.top = "0";
+                document.getElementById("Milena").style.paddingTop = "100vh";
+            }, 10);
+            setTimeout(() => {
+                document.getElementById("MilenaUzdarymas").style.pointerEvents = "all";
+                document.getElementById("body").style.overflow = "hidden";
+                document.getElementById("Milena").style.display = "none";
+            }, 310);
+        }
+        function closeEmilija() {
+            document.cookie = "Emilija=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
+            document.getElementById("EmilijaUzdarymas").style.pointerEvents = "none";
+            setTimeout(() => {
+                document.getElementById("screen").style.top = "0";
+                document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
+                document.getElementById("display").style.top = "0";
+                document.getElementById("Emilija").style.paddingTop = "100vh";
+            }, 10);
+            setTimeout(() => {
+                document.getElementById("EmilijaUzdarymas").style.pointerEvents = "all";
+                document.getElementById("body").style.overflow = "hidden";
+                document.getElementById("Emilija").style.display = "none";
+            }, 310);
+        }
+        function closeModestas() {
+            document.cookie = "Modestas=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
+            document.getElementById("ModestasUzdarymas").style.pointerEvents = "none";
+            setTimeout(() => {
+                document.getElementById("screen").style.top = "0";
+                document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
+                document.getElementById("display").style.top = "0";
+                document.getElementById("Modestas").style.paddingTop = "100vh";
+            }, 10);
+            setTimeout(() => {
+                document.getElementById("ModestasUzdarymas").style.pointerEvents = "all";
+                document.getElementById("body").style.overflow = "hidden";
+                document.getElementById("Modestas").style.display = "none";
+            }, 310);
+        }
+        function closeMindaugasr() {
+            document.cookie = "Mindaugasr=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
+            document.getElementById("MindaugasrUzdarymas").style.pointerEvents = "none";
+            setTimeout(() => {
+                document.getElementById("screen").style.top = "0";
+                document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
+                document.getElementById("display").style.top = "0";
+                document.getElementById("Mindaugasr").style.paddingTop = "100vh";
+            }, 10);
+            setTimeout(() => {
+                document.getElementById("MindaugasrUzdarymas").style.pointerEvents = "all";
+                document.getElementById("body").style.overflow = "hidden";
+                document.getElementById("Mindaugasr").style.display = "none";
+            }, 310);
+        }
+        function closeGabriele() {
+            document.cookie = "Gabriele=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
+            document.getElementById("GabrieleUzdarymas").style.pointerEvents = "none";
+            setTimeout(() => {
+                document.getElementById("screen").style.top = "0";
+                document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
+                document.getElementById("display").style.top = "0";
+                document.getElementById("Gabriele").style.paddingTop = "100vh";
+            }, 10);
+            setTimeout(() => {
+                document.getElementById("GabrieleUzdarymas").style.pointerEvents = "all";
+                document.getElementById("body").style.overflow = "hidden";
+                document.getElementById("Gabriele").style.display = "none";
+            }, 310);
+        }
+        function closeBerzuna() {
+            document.cookie = "Berzuna=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
+            document.getElementById("BerzunaUzdarymas").style.pointerEvents = "none";
+            setTimeout(() => {
+                document.getElementById("screen").style.top = "0";
+                document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
+                document.getElementById("display").style.top = "0";
+                document.getElementById("Berzuna").style.paddingTop = "100vh";
+            }, 10);
+            setTimeout(() => {
+                document.getElementById("BerzunaUzdarymas").style.pointerEvents = "all";
+                document.getElementById("body").style.overflow = "hidden";
+                document.getElementById("Berzuna").style.display = "none";
+            }, 310);
+        }
+        function closeNojus() {
+            document.cookie = "Nojus=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
+            document.getElementById("NojusUzdarymas").style.pointerEvents = "none";
+            setTimeout(() => {
+                document.getElementById("screen").style.top = "0";
+                document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
+                document.getElementById("display").style.top = "0";
+                document.getElementById("Nojus").style.paddingTop = "100vh";
+            }, 10);
+            setTimeout(() => {
+                document.getElementById("NojusUzdarymas").style.pointerEvents = "all";
+                document.getElementById("body").style.overflow = "hidden";
+                document.getElementById("Nojus").style.display = "none";
+            }, 310);
+        }
+        function closeAgnieska() {
+            document.cookie = "Agnieska=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
+            document.getElementById("AgnieskaUzdarymas").style.pointerEvents = "none";
+            setTimeout(() => {
+                document.getElementById("screen").style.top = "0";
+                document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
+                document.getElementById("display").style.top = "0";
+                document.getElementById("Agnieska").style.paddingTop = "100vh";
+            }, 10);
+            setTimeout(() => {
+                document.getElementById("AgnieskaUzdarymas").style.pointerEvents = "all";
+                document.getElementById("body").style.overflow = "hidden";
+                document.getElementById("Agnieska").style.display = "none";
+            }, 310);
+        }
+        function closeAurelija() {
+            document.cookie = "Aurelija=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
+            document.getElementById("AurelijaUzdarymas").style.pointerEvents = "none";
+            setTimeout(() => {
+                document.getElementById("screen").style.top = "0";
+                document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
+                document.getElementById("display").style.top = "0";
+                document.getElementById("Aurelija").style.paddingTop = "100vh";
+            }, 10);
+            setTimeout(() => {
+                document.getElementById("AurelijaUzdarymas").style.pointerEvents = "all";
+                document.getElementById("body").style.overflow = "hidden";
+                document.getElementById("Aurelija").style.display = "none";
             }, 310);
         }
     </script>
