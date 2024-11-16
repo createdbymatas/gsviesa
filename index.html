@@ -4156,233 +4156,6 @@
     <script src="https://kit.fontawesome.com/a11707644f.js" crossorigin="anonymous"></script>
     <script>
 
-        function openSoundTracks() {
-            setTimeout(() => {
-                document.getElementById("soundManager").style.bottom = "0";
-            }, 10);
-        }
-        function closeSoundTracks() {
-            setTimeout(() => {
-                document.getElementById("soundManager").style.bottom = "-100%";
-            }, 10);
-        }
-        function playAudio1() {
-            setTimeout(() => {
-                document.getElementById("1play").style.display = "none";
-                document.getElementById("1stop").style.display = "flex";
-                document.getElementById('audio1').currentTime = 0;
-                document.getElementById("audio1").play();
-                document.getElementById("1aud").style.animation = "blink 2s linear infinite";
-            }, 100);
-        }
-        document.getElementById("audio1").onended = function() {
-            document.getElementById("1play").style.display = "flex";
-            document.getElementById("1stop").style.display = "none";
-            document.getElementById("1aud").style.animation = "none";
-        }
-        function stopAudio1() {
-            setTimeout(() => {
-                document.getElementById("1play").style.display = "flex";
-                document.getElementById("1stop").style.display = "none";
-                document.getElementById('audio1').currentTime = 0;
-                document.getElementById("audio1").pause();
-                document.getElementById("1aud").style.animation = "none";
-            }, 100);
-        }
-        function playAudio2() {
-            setTimeout(() => {
-                document.getElementById("2play").style.display = "none";
-                document.getElementById("2stop").style.display = "flex";
-                document.getElementById('audio2').currentTime = 0;
-                document.getElementById("audio2").play();
-                document.getElementById("2aud").style.animation = "blink 2s linear infinite";
-            }, 100);
-        }
-        document.getElementById("audio2").onended = function() {
-            document.getElementById("2play").style.display = "flex";
-            document.getElementById("2stop").style.display = "none";
-            document.getElementById("2aud").style.animation = "none";
-        }
-        function stopAudio2() {
-            setTimeout(() => {
-                document.getElementById("2play").style.display = "flex";
-                document.getElementById("2stop").style.display = "none";
-                document.getElementById('audio2').currentTime = 0;
-                document.getElementById("audio2").pause();
-                document.getElementById("2aud").style.animation = "none";
-            }, 100);
-        }
-        function playAudio3() {
-            setTimeout(() => {
-                document.getElementById("3play").style.display = "none";
-                document.getElementById("3stop").style.display = "flex";
-                document.getElementById('audio3').currentTime = 0;
-                document.getElementById("audio3").play();
-                document.getElementById("3aud").style.animation = "blink 2s linear infinite";
-            }, 100);
-        }
-        document.getElementById("audio3").onended = function() {
-            document.getElementById("3play").style.display = "flex";
-            document.getElementById("3stop").style.display = "none";
-            document.getElementById("3aud").style.animation = "none";
-        }
-        function stopAudio3() {
-            setTimeout(() => {
-                document.getElementById("3play").style.display = "flex";
-                document.getElementById("3stop").style.display = "none";
-                document.getElementById('audio3').currentTime = 0;
-                document.getElementById("audio3").pause();
-                document.getElementById("3aud").style.animation = "none";
-            }, 100);
-        }
-        function playAudio4() {
-            setTimeout(() => {
-                document.getElementById("4play").style.display = "none";
-                document.getElementById("4stop").style.display = "flex";
-                document.getElementById('audio4').currentTime = 0;
-                document.getElementById("audio4").play();
-                document.getElementById("4aud").style.animation = "blink 2s linear infinite";
-            }, 100);
-        }
-        document.getElementById("audio4").onended = function() {
-            document.getElementById("4play").style.display = "flex";
-            document.getElementById("4stop").style.display = "none";
-            document.getElementById("4aud").style.animation = "none";
-        }
-        function stopAudio4() {
-            setTimeout(() => {
-                document.getElementById("4play").style.display = "flex";
-                document.getElementById("4stop").style.display = "none";
-                document.getElementById('audio4').currentTime = 0;
-                document.getElementById("audio4").pause();
-                document.getElementById("4aud").style.animation = "none";
-            }, 100);
-        }
-        function playAudio5() {
-            setTimeout(() => {
-                document.getElementById("5play").style.display = "none";
-                document.getElementById("5stop").style.display = "flex";
-                document.getElementById('audio5').currentTime = 0;
-                document.getElementById("audio5").play();
-                document.getElementById("5aud").style.animation = "blink 2s linear infinite";
-            }, 100);
-        }
-        document.getElementById("audio5").onended = function() {
-            document.getElementById("5play").style.display = "flex";
-            document.getElementById("5stop").style.display = "none";
-            document.getElementById("5aud").style.animation = "none";
-        }
-        function stopAudio5() {
-            setTimeout(() => {
-                document.getElementById("5play").style.display = "flex";
-                document.getElementById("5stop").style.display = "none";
-                document.getElementById('audio5').currentTime = 0;
-                document.getElementById("audio5").pause();
-                document.getElementById("5aud").style.animation = "none";
-            }, 100);
-        }
-        function atsisiustiAudio1() {
-            document.getElementById("pinnedBackground").style.display = "block";
-            document.getElementById("body").style.overflow = "hidden";
-            setTimeout(() => {
-                document.getElementById("atsisiunciamasAudio1").style.bottom = "0";
-                document.getElementById("pinnedBackground").style.opacity = "1";
-            }, 10);
-            setTimeout(() => {
-                document.getElementById("download_audio1").click();
-            }, 1010);
-            setTimeout(() => {
-                document.getElementById("atsisiunciamasAudio1").style.bottom = "-100%";
-                document.getElementById("pinnedBackground").style.opacity = "0";
-            }, 6010);
-            setTimeout(() => {
-                document.getElementById("pinnedBackground").style.display = "none";
-                document.getElementById("body").style.overflow = "scroll";
-            }, 6310);
-        }
-        function atsisiustiAudio2() {
-            document.getElementById("pinnedBackground").style.display = "block";
-            document.getElementById("body").style.overflow = "hidden";
-            setTimeout(() => {
-                document.getElementById("atsisiunciamasAudio2").style.bottom = "0";
-                document.getElementById("pinnedBackground").style.opacity = "1";
-            }, 10);
-            setTimeout(() => {
-                document.getElementById("download_audio2").click();
-            }, 1010);
-            setTimeout(() => {
-                document.getElementById("atsisiunciamasAudio2").style.bottom = "-100%";
-                document.getElementById("pinnedBackground").style.opacity = "0";
-            }, 6010);
-            setTimeout(() => {
-                document.getElementById("pinnedBackground").style.display = "none";
-                document.getElementById("body").style.overflow = "scroll";
-            }, 6310);
-        }
-        function atsisiustiAudio3() {
-            document.getElementById("pinnedBackground").style.display = "block";
-            document.getElementById("body").style.overflow = "hidden";
-            setTimeout(() => {
-                document.getElementById("atsisiunciamasAudio3").style.bottom = "0";
-                document.getElementById("pinnedBackground").style.opacity = "1";
-            }, 10);
-            setTimeout(() => {
-                document.getElementById("download_audio3").click();
-            }, 1010);
-            setTimeout(() => {
-                document.getElementById("atsisiunciamasAudio3").style.bottom = "-100%";
-                document.getElementById("pinnedBackground").style.opacity = "0";
-            }, 6010);
-            setTimeout(() => {
-                document.getElementById("pinnedBackground").style.display = "none";
-                document.getElementById("body").style.overflow = "scroll";
-            }, 6310);
-        }
-        function atsisiustiAudio4() {
-            document.getElementById("pinnedBackground").style.display = "block";
-            document.getElementById("body").style.overflow = "hidden";
-            setTimeout(() => {
-                document.getElementById("atsisiunciamasAudio4").style.bottom = "0";
-                document.getElementById("pinnedBackground").style.opacity = "1";
-            }, 10);
-            setTimeout(() => {
-                document.getElementById("download_audio4").click();
-            }, 1010);
-            setTimeout(() => {
-                document.getElementById("atsisiunciamasAudio4").style.bottom = "-100%";
-                document.getElementById("pinnedBackground").style.opacity = "0";
-            }, 6010);
-            setTimeout(() => {
-                document.getElementById("pinnedBackground").style.display = "none";
-                document.getElementById("body").style.overflow = "scroll";
-            }, 6310);
-        }
-        function atsisiustiAudio5() {
-            document.getElementById("pinnedBackground").style.display = "block";
-            document.getElementById("body").style.overflow = "hidden";
-            setTimeout(() => {
-                document.getElementById("atsisiunciamasAudio5").style.bottom = "0";
-                document.getElementById("pinnedBackground").style.opacity = "1";
-            }, 10);
-            setTimeout(() => {
-                document.getElementById("download_audio5").click();
-            }, 1010);
-            setTimeout(() => {
-                document.getElementById("atsisiunciamasAudio5").style.bottom = "-100%";
-                document.getElementById("pinnedBackground").style.opacity = "0";
-            }, 6010);
-            setTimeout(() => {
-                document.getElementById("pinnedBackground").style.display = "none";
-                document.getElementById("body").style.overflow = "scroll";
-            }, 6310);
-        }
-
-
-
-
-
-
-
         function getCookie(cname) {
             let name = cname + "=";
             let ca = document.cookie.split(';');
@@ -4829,6 +4602,227 @@
                 document.getElementById("pinnedBackground").style.display = "none";
                 document.getElementById("body").style.overflow = "scroll";
             }, 300);
+        }
+        
+        function openSoundTracks() {
+            setTimeout(() => {
+                document.getElementById("soundManager").style.bottom = "0";
+            }, 10);
+        }
+        function closeSoundTracks() {
+            setTimeout(() => {
+                document.getElementById("soundManager").style.bottom = "-100%";
+            }, 10);
+        }
+        function playAudio1() {
+            setTimeout(() => {
+                document.getElementById("1play").style.display = "none";
+                document.getElementById("1stop").style.display = "flex";
+                document.getElementById('audio1').currentTime = 0;
+                document.getElementById("audio1").play();
+                document.getElementById("1aud").style.animation = "blink 2s linear infinite";
+            }, 100);
+        }
+        document.getElementById("audio1").onended = function() {
+            document.getElementById("1play").style.display = "flex";
+            document.getElementById("1stop").style.display = "none";
+            document.getElementById("1aud").style.animation = "none";
+        }
+        function stopAudio1() {
+            setTimeout(() => {
+                document.getElementById("1play").style.display = "flex";
+                document.getElementById("1stop").style.display = "none";
+                document.getElementById('audio1').currentTime = 0;
+                document.getElementById("audio1").pause();
+                document.getElementById("1aud").style.animation = "none";
+            }, 100);
+        }
+        function playAudio2() {
+            setTimeout(() => {
+                document.getElementById("2play").style.display = "none";
+                document.getElementById("2stop").style.display = "flex";
+                document.getElementById('audio2').currentTime = 0;
+                document.getElementById("audio2").play();
+                document.getElementById("2aud").style.animation = "blink 2s linear infinite";
+            }, 100);
+        }
+        document.getElementById("audio2").onended = function() {
+            document.getElementById("2play").style.display = "flex";
+            document.getElementById("2stop").style.display = "none";
+            document.getElementById("2aud").style.animation = "none";
+        }
+        function stopAudio2() {
+            setTimeout(() => {
+                document.getElementById("2play").style.display = "flex";
+                document.getElementById("2stop").style.display = "none";
+                document.getElementById('audio2').currentTime = 0;
+                document.getElementById("audio2").pause();
+                document.getElementById("2aud").style.animation = "none";
+            }, 100);
+        }
+        function playAudio3() {
+            setTimeout(() => {
+                document.getElementById("3play").style.display = "none";
+                document.getElementById("3stop").style.display = "flex";
+                document.getElementById('audio3').currentTime = 0;
+                document.getElementById("audio3").play();
+                document.getElementById("3aud").style.animation = "blink 2s linear infinite";
+            }, 100);
+        }
+        document.getElementById("audio3").onended = function() {
+            document.getElementById("3play").style.display = "flex";
+            document.getElementById("3stop").style.display = "none";
+            document.getElementById("3aud").style.animation = "none";
+        }
+        function stopAudio3() {
+            setTimeout(() => {
+                document.getElementById("3play").style.display = "flex";
+                document.getElementById("3stop").style.display = "none";
+                document.getElementById('audio3').currentTime = 0;
+                document.getElementById("audio3").pause();
+                document.getElementById("3aud").style.animation = "none";
+            }, 100);
+        }
+        function playAudio4() {
+            setTimeout(() => {
+                document.getElementById("4play").style.display = "none";
+                document.getElementById("4stop").style.display = "flex";
+                document.getElementById('audio4').currentTime = 0;
+                document.getElementById("audio4").play();
+                document.getElementById("4aud").style.animation = "blink 2s linear infinite";
+            }, 100);
+        }
+        document.getElementById("audio4").onended = function() {
+            document.getElementById("4play").style.display = "flex";
+            document.getElementById("4stop").style.display = "none";
+            document.getElementById("4aud").style.animation = "none";
+        }
+        function stopAudio4() {
+            setTimeout(() => {
+                document.getElementById("4play").style.display = "flex";
+                document.getElementById("4stop").style.display = "none";
+                document.getElementById('audio4').currentTime = 0;
+                document.getElementById("audio4").pause();
+                document.getElementById("4aud").style.animation = "none";
+            }, 100);
+        }
+        function playAudio5() {
+            setTimeout(() => {
+                document.getElementById("5play").style.display = "none";
+                document.getElementById("5stop").style.display = "flex";
+                document.getElementById('audio5').currentTime = 0;
+                document.getElementById("audio5").play();
+                document.getElementById("5aud").style.animation = "blink 2s linear infinite";
+            }, 100);
+        }
+        document.getElementById("audio5").onended = function() {
+            document.getElementById("5play").style.display = "flex";
+            document.getElementById("5stop").style.display = "none";
+            document.getElementById("5aud").style.animation = "none";
+        }
+        function stopAudio5() {
+            setTimeout(() => {
+                document.getElementById("5play").style.display = "flex";
+                document.getElementById("5stop").style.display = "none";
+                document.getElementById('audio5').currentTime = 0;
+                document.getElementById("audio5").pause();
+                document.getElementById("5aud").style.animation = "none";
+            }, 100);
+        }
+        function atsisiustiAudio1() {
+            document.getElementById("pinnedBackground").style.display = "block";
+            document.getElementById("body").style.overflow = "hidden";
+            setTimeout(() => {
+                document.getElementById("atsisiunciamasAudio1").style.bottom = "0";
+                document.getElementById("pinnedBackground").style.opacity = "1";
+            }, 10);
+            setTimeout(() => {
+                document.getElementById("download_audio1").click();
+            }, 1010);
+            setTimeout(() => {
+                document.getElementById("atsisiunciamasAudio1").style.bottom = "-100%";
+                document.getElementById("pinnedBackground").style.opacity = "0";
+            }, 6010);
+            setTimeout(() => {
+                document.getElementById("pinnedBackground").style.display = "none";
+                document.getElementById("body").style.overflow = "scroll";
+            }, 6310);
+        }
+        function atsisiustiAudio2() {
+            document.getElementById("pinnedBackground").style.display = "block";
+            document.getElementById("body").style.overflow = "hidden";
+            setTimeout(() => {
+                document.getElementById("atsisiunciamasAudio2").style.bottom = "0";
+                document.getElementById("pinnedBackground").style.opacity = "1";
+            }, 10);
+            setTimeout(() => {
+                document.getElementById("download_audio2").click();
+            }, 1010);
+            setTimeout(() => {
+                document.getElementById("atsisiunciamasAudio2").style.bottom = "-100%";
+                document.getElementById("pinnedBackground").style.opacity = "0";
+            }, 6010);
+            setTimeout(() => {
+                document.getElementById("pinnedBackground").style.display = "none";
+                document.getElementById("body").style.overflow = "scroll";
+            }, 6310);
+        }
+        function atsisiustiAudio3() {
+            document.getElementById("pinnedBackground").style.display = "block";
+            document.getElementById("body").style.overflow = "hidden";
+            setTimeout(() => {
+                document.getElementById("atsisiunciamasAudio3").style.bottom = "0";
+                document.getElementById("pinnedBackground").style.opacity = "1";
+            }, 10);
+            setTimeout(() => {
+                document.getElementById("download_audio3").click();
+            }, 1010);
+            setTimeout(() => {
+                document.getElementById("atsisiunciamasAudio3").style.bottom = "-100%";
+                document.getElementById("pinnedBackground").style.opacity = "0";
+            }, 6010);
+            setTimeout(() => {
+                document.getElementById("pinnedBackground").style.display = "none";
+                document.getElementById("body").style.overflow = "scroll";
+            }, 6310);
+        }
+        function atsisiustiAudio4() {
+            document.getElementById("pinnedBackground").style.display = "block";
+            document.getElementById("body").style.overflow = "hidden";
+            setTimeout(() => {
+                document.getElementById("atsisiunciamasAudio4").style.bottom = "0";
+                document.getElementById("pinnedBackground").style.opacity = "1";
+            }, 10);
+            setTimeout(() => {
+                document.getElementById("download_audio4").click();
+            }, 1010);
+            setTimeout(() => {
+                document.getElementById("atsisiunciamasAudio4").style.bottom = "-100%";
+                document.getElementById("pinnedBackground").style.opacity = "0";
+            }, 6010);
+            setTimeout(() => {
+                document.getElementById("pinnedBackground").style.display = "none";
+                document.getElementById("body").style.overflow = "scroll";
+            }, 6310);
+        }
+        function atsisiustiAudio5() {
+            document.getElementById("pinnedBackground").style.display = "block";
+            document.getElementById("body").style.overflow = "hidden";
+            setTimeout(() => {
+                document.getElementById("atsisiunciamasAudio5").style.bottom = "0";
+                document.getElementById("pinnedBackground").style.opacity = "1";
+            }, 10);
+            setTimeout(() => {
+                document.getElementById("download_audio5").click();
+            }, 1010);
+            setTimeout(() => {
+                document.getElementById("atsisiunciamasAudio5").style.bottom = "-100%";
+                document.getElementById("pinnedBackground").style.opacity = "0";
+            }, 6010);
+            setTimeout(() => {
+                document.getElementById("pinnedBackground").style.display = "none";
+                document.getElementById("body").style.overflow = "scroll";
+            }, 6310);
         }
 
 
