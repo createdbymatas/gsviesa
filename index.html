@@ -226,7 +226,7 @@
             bottom: 0;
             z-index: 95;
             background-color: #f2f2f2;
-            color: red;
+            color: black;
             transition: 0.2s;
             display: none;
             justify-content: center;
@@ -245,6 +245,48 @@
         #accessDenied p{
             margin-top: 20px;
             cursor: not-allowed;
+        }
+        #accessDenied div{
+            font-size: 15px;
+            width: 275px;
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            bottom: 15px;
+            right: 25px;
+            /* outline: 1px solid red; */
+        }
+        #accessDenied div p{
+            margin-top: 0;
+        }
+        #uzdraustaRestart {
+            width: 50px;
+            height: 50px;
+            border:7px solid black;
+            border-radius: 50%;
+            position: relative;
+            transform:rotate(45deg);
+            box-sizing: border-box;
+            }
+        #uzdraustaRestart::before {
+            content: "";
+            position: absolute;
+            box-sizing: border-box;
+            inset:-7px;
+            border-radius: 50%;
+            border:7px solid black;
+            /* animation: prixClipFix 10s linear; */
+            animation: none;
+        }
+
+        @keyframes prixClipFix {
+            0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+            25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+            50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+            75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
+            100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
         }
 
         /* klaviaturos backgroundas */
@@ -3576,6 +3618,12 @@
                 background-color: #141414;
                 color: white;
             }
+            #uzdraustaRestart {
+                border-color:white;
+            }
+            #uzdraustaRestart::before {
+                border-color:white;
+            }
 
 
 
@@ -4147,6 +4195,10 @@
                 border: 1.5px solid white;
             }
         }
+
+
+
+      
     </style>
     <audio src="audio1.mp3" id="audio1"></audio>
     <audio src="audio2.mp3" id="audio2"></audio>
@@ -4368,6 +4420,7 @@
         <i class="fa-solid fa-ban" id="ban"></i>
         <p style="font-size: 25px; font-weight: 600;">Prieiga uždrausta</p>
         <p style="font-size: 17px;">Tinklalapyje negalima atlikti veiksmų, susijusių su programos kodo peržiūra ir apžiūrėjimo įrankio (angl.: inspect tool) naudojimu.</p>
+        <div><p>Tinklalapis bus perkrautas... </p><span id="uzdraustaRestart"></span></div>
     </div>
 
 
@@ -6155,6 +6208,7 @@
         };
         function deny(){
             document.getElementById("accessDenied").style.display = "flex";
+            document.getElementById("uzdraustaRestart").style.animation = "prixClipFix 10s linear";
             setTimeout(() => {
                 document.getElementById("ban").style.opacity = "0";
             }, 100);
@@ -6173,6 +6227,9 @@
             setTimeout(() => {
                 document.getElementById("ban").style.opacity = "1";
             }, 600);
+            setTimeout(() => {
+                location.replace("index.html");
+            }, 10000);
         }
 
         // scrollinimo animacijos, dark mode
