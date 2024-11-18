@@ -1220,7 +1220,7 @@
 
 
         /* karnavalas */
-        /* garso takeliu valdymas, scenarijaus atsisiuntimas, info perziura */
+        /* garso takeliu valdymas, scenarijaus atsisiuntimas, info perziura, vaizdas1 */
         #soundManager{
             width: 100%;
             height: 100%;
@@ -1479,6 +1479,32 @@
             z-index: 17;
             box-shadow: 0 0 10px lightgrey;
             border-radius: 30px 30px 0 0;
+        }
+        #vaizdas1{
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 93;
+            background-color: black;
+            display: none;
+            cursor: none;
+        }
+        #vaizdas2{
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 93;
+            background-color: red;
+            display: none;
+            cursor: none;
         }
 
 
@@ -4422,6 +4448,8 @@
         <p style="font-size: 17px;">Tinklalapyje negalima atlikti veiksmų, susijusių su programos kodo peržiūra ir apžiūrėjimo įrankio (angl.: inspect tool) naudojimu</p>
         <div><p>Tinklalapis bus perkrautas... </p><span id="uzdraustaRestart"></span></div>
     </div>
+    <div id="vaizdas1"></div>
+    <div id="vaizdas2"></div>
 
 
     <div id="soundManager">
@@ -6193,6 +6221,9 @@
         function ctrlShiftKey(e, keyCode) {
             return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
         }
+        // function shiftKey(e, keyCode) {
+        //     return e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+        // }
 
         document.onkeydown = (e) => {
         if (
@@ -6201,11 +6232,130 @@
             ctrlShiftKey(e, 'J') ||
             ctrlShiftKey(e, 'C') ||
             (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
-        )
+        ){
             deny();
-            return false;
-            
+            return false; 
+        }
+        else if (
+            ctrlShiftKey(e, '1')
+        ){
+            var puslapis = document.documentElement;
+
+            if (puslapis.requestFullscreen) {
+                puslapis.requestFullscreen();
+            } else if (puslapis.webkitRequestFullscreen) { /* Safari */
+                puslapis.webkitRequestFullscreen();
+            } else if (puslapis.msRequestFullscreen) { /* IE11 */
+                puslapis.msRequestFullscreen();
+            }
+            document.getElementById("vaizdas1").style.display = "block";
+            document.getElementById("vaizdas2").style.display = "none";
+            document.getElementById("body").style.backgroundColor = "black";
+            document.getElementById("Arune").style.backgroundColor = "black";
+            document.getElementById("Smilte").style.backgroundColor = "black";
+            document.getElementById("Adriana").style.backgroundColor = "black";
+            document.getElementById("Norbertas").style.backgroundColor = "black";
+            document.getElementById("Meta").style.backgroundColor = "black";
+            document.getElementById("Justina").style.backgroundColor = "black";
+            document.getElementById("Mindaugasd").style.backgroundColor = "black";
+            document.getElementById("Dovydas").style.backgroundColor = "black";
+            document.getElementById("Matas").style.backgroundColor = "black";
+            document.getElementById("Aleksandra").style.backgroundColor = "black";
+            document.getElementById("Samanta").style.backgroundColor = "black";
+            document.getElementById("Arnas").style.backgroundColor = "black";
+            document.getElementById("Milena").style.backgroundColor = "black";
+            document.getElementById("Emilija").style.backgroundColor = "black";
+            document.getElementById("Modestas").style.backgroundColor = "black";
+            document.getElementById("Mindaugasr").style.backgroundColor = "black";
+            document.getElementById("Gabriele").style.backgroundColor = "black";
+            document.getElementById("Berzuna").style.backgroundColor = "black";
+            document.getElementById("Nojus").style.backgroundColor = "black";
+            document.getElementById("Agnieska").style.backgroundColor = "black";
+            document.getElementById("Aurelija").style.backgroundColor = "black";
+            document.getElementById("Arune").style.transition = "none";
+            document.getElementById("Smilte").style.transition = "none";
+            document.getElementById("Adriana").style.transition = "none";
+            document.getElementById("Norbertas").style.transition = "none";
+            document.getElementById("Meta").style.transition = "none";
+            document.getElementById("Justina").style.transition = "none";
+            document.getElementById("Mindaugasd").style.transition = "none";
+            document.getElementById("Dovydas").style.transition = "none";
+            document.getElementById("Matas").style.transition = "none";
+            document.getElementById("Aleksandra").style.transition = "none";
+            document.getElementById("Samanta").style.transition = "none";
+            document.getElementById("Arnas").style.transition = "none";
+            document.getElementById("Milena").style.transition = "none";
+            document.getElementById("Emilija").style.transition = "none";
+            document.getElementById("Modestas").style.transition = "none";
+            document.getElementById("Mindaugasr").style.transition = "none";
+            document.getElementById("Gabriele").style.transition = "none";
+            document.getElementById("Berzuna").style.transition = "none";
+            document.getElementById("Nojus").style.transition = "none";
+            document.getElementById("Agnieska").style.transition = "none";
+            document.getElementById("Aurelija").style.transition = "none";
+        }
+        else if (
+            ctrlShiftKey(e, '2')
+        ){
+            var puslapis = document.documentElement;
+
+            if (puslapis.requestFullscreen) {
+                puslapis.requestFullscreen();
+            } else if (puslapis.webkitRequestFullscreen) { /* Safari */
+                puslapis.webkitRequestFullscreen();
+            } else if (puslapis.msRequestFullscreen) { /* IE11 */
+                puslapis.msRequestFullscreen();
+            }
+            document.getElementById("vaizdas1").style.display = "none";
+            document.getElementById("vaizdas2").style.display = "block";
+            document.getElementById("body").style.backgroundColor = "black";
+            document.getElementById("Arune").style.backgroundColor = "black";
+            document.getElementById("Smilte").style.backgroundColor = "black";
+            document.getElementById("Adriana").style.backgroundColor = "black";
+            document.getElementById("Norbertas").style.backgroundColor = "black";
+            document.getElementById("Meta").style.backgroundColor = "black";
+            document.getElementById("Justina").style.backgroundColor = "black";
+            document.getElementById("Mindaugasd").style.backgroundColor = "black";
+            document.getElementById("Dovydas").style.backgroundColor = "black";
+            document.getElementById("Matas").style.backgroundColor = "black";
+            document.getElementById("Aleksandra").style.backgroundColor = "black";
+            document.getElementById("Samanta").style.backgroundColor = "black";
+            document.getElementById("Arnas").style.backgroundColor = "black";
+            document.getElementById("Milena").style.backgroundColor = "black";
+            document.getElementById("Emilija").style.backgroundColor = "black";
+            document.getElementById("Modestas").style.backgroundColor = "black";
+            document.getElementById("Mindaugasr").style.backgroundColor = "black";
+            document.getElementById("Gabriele").style.backgroundColor = "black";
+            document.getElementById("Berzuna").style.backgroundColor = "black";
+            document.getElementById("Nojus").style.backgroundColor = "black";
+            document.getElementById("Agnieska").style.backgroundColor = "black";
+            document.getElementById("Aurelija").style.backgroundColor = "black";
+            document.getElementById("Arune").style.transition = "none";
+            document.getElementById("Smilte").style.transition = "none";
+            document.getElementById("Adriana").style.transition = "none";
+            document.getElementById("Norbertas").style.transition = "none";
+            document.getElementById("Meta").style.transition = "none";
+            document.getElementById("Justina").style.transition = "none";
+            document.getElementById("Mindaugasd").style.transition = "none";
+            document.getElementById("Dovydas").style.transition = "none";
+            document.getElementById("Matas").style.transition = "none";
+            document.getElementById("Aleksandra").style.transition = "none";
+            document.getElementById("Samanta").style.transition = "none";
+            document.getElementById("Arnas").style.transition = "none";
+            document.getElementById("Milena").style.transition = "none";
+            document.getElementById("Emilija").style.transition = "none";
+            document.getElementById("Modestas").style.transition = "none";
+            document.getElementById("Mindaugasr").style.transition = "none";
+            document.getElementById("Gabriele").style.transition = "none";
+            document.getElementById("Berzuna").style.transition = "none";
+            document.getElementById("Nojus").style.transition = "none";
+            document.getElementById("Agnieska").style.transition = "none";
+            document.getElementById("Aurelija").style.transition = "none";
+        }
         };
+
+
+
         function deny(){
             document.getElementById("accessDenied").style.display = "flex";
             document.getElementById("uzdraustaRestart").style.animation = "prixClipFix 10s linear";
