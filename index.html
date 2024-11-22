@@ -41,7 +41,8 @@
         }
         body{
             background-color: #f2f2f2;
-            overflow: hidden;
+            overflow-x: hidden;
+            overflow-y: hidden;
         }
         img{
             pointer-events: none;
@@ -3267,92 +3268,6 @@
         #AgnieskaUzdarymas:active{
             opacity: 0.2;
         }
-        /* Aurelija */
-        #Aurelija{
-            width: 100%;
-            height: 100%;
-            background-color: #f2f2f2;
-            transition: 0.2s;
-            padding-bottom: 90px;
-            overflow: hidden;
-            overflow-y: scroll;
-            padding-top: 100vh;
-            display: none;
-        }
-        #topInfoAurelija{
-            position: absolute;
-            width: 5px;
-            height: 5px;
-            top: 0;
-            left: 0;
-        }
-        #infoAurelija{
-            width: 100%;
-            height: 60px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: rgba(242, 242, 242, 1);
-            -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
-            color: black;
-            position: fixed;
-            left: 0;
-            top: 0;
-            right: 0;
-            z-index: 10;
-        }
-        #infoAurelija i{
-            font-size: 15px;
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            z-index: 11;
-            transition: 0.15s;
-            cursor: pointer;
-            width: 30px;
-            height: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 100%;
-            background-color: #DEDEDE;
-            color: black;
-        }
-        #AurelijaTekstas{
-            font-size: 25px;
-            font-weight: 600;
-            color: black;
-            overflow: hidden;
-            white-space: nowrap;
-            display: inline-block;
-            text-overflow: ellipsis;
-            width: 100%;
-            position: absolute;
-            top: 60px;
-            padding-left: 15px;
-            padding-right: 15px;
-            z-index: 2;
-        }
-        #AurelijaTekstas2{
-            font-size: 20px;
-            font-weight: 600;
-            color: black;
-            overflow: hidden;
-            white-space: nowrap;
-            display: inline-block;
-            text-overflow: ellipsis;
-            width: 100%;
-            position: absolute;
-            top: 17px;
-            padding-left: 60px;
-            padding-right: 15px;
-            z-index: 10;
-            opacity: 0;
-        }
-        #AurelijaUzdarymas:active{
-            opacity: 0.2;
-        }
         
 
         
@@ -4222,23 +4137,6 @@
             #AgnieskaTekstas2{
                 color: white;
             }
-            #Aurelija{
-                background-color: #141414;
-            }
-            #infoAurelija{
-                background-color: rgba(20, 20, 20, 1);
-                color: white;
-            }
-            #infoAurelija i{
-                background-color: #282828;
-                color: white;
-            }
-            #AurelijaTekstas{
-                color: white;
-            }
-            #AurelijaTekstas2{
-                color: white;
-            }
 
             .karnavalasIcon{
                 color: white;
@@ -4562,39 +4460,39 @@
         <div class="apie">
             <i class="fa-regular fa-circle-question karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Apie rolę:</p>
-            <p class="antrTekstas">Rolės aprašymas.</p>
+            <p class="antrTekstas">Senas, draugiškas švytintis jonvabalis. Padeda varlei ir varliui surasti burtininkę mama Odę ir atvirsti žmonėmis, susidraugaudamas su jais.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="pasiruosimas">
             <i class="fa-solid fa-suitcase karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Pasiruošti:</p>
-            <p class="antrTekstas">Pasiruošimo aprašymas.</p>
+            <p class="antrTekstas">Geltona šviečianti girlianda...</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="apranga">
             <i class="fa-solid fa-shirt karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Apranga:</p>
-            <p class="antrTekstas">Aprangos aprašymas.</p>
+            <p class="antrTekstas">nėra informacijos</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="zodziai">
             <i class="fa-regular fa-comments karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Žodžiai:</p>
-            <p class="antrTekstas">Žodžių aprašymas.</p>
-            <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip.</p>
+            <p class="antrTekstas">“ėėė, tik pažvelkit, na ką, prisiburkavot, balandėliai? ar ne gėda?”<br>“tuoj užsidegsiu!”<br>“žiūrėkit, kokią turiu šviečiančią subinę!”<br>“leiskit prisistatyti, mano vardas Raimondas, bet kažkodėl visi mane vadina Raima, o ką jūs čia veikiat?”<br>“taigi jūs vapšie ne ten einat, chebra, parodysiu jums kelią”<br><i>(svajingai)</i> “o taip… mano mergina… vardu Andželina…”<br>“taip! ji pati gražiausia jonvabalė pasaulyje, aš ją kalbinu beveik kiekvieną naktį… nors ji ir neatsako, bet širdis man kužda, kad vieną dieną mes su ja būsime kartu”<br><i>(atsako krokodilui)</i> “šita vienintelė”</p>
+            <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip. Dalį žodžių gali reikti improvizuoti.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="vaidinimas">
             <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Vaidinimo eiga:</p>
-            <p class="antrTekstas">Vaidinimo eigos aprašymas.</p>
+            <p class="antrTekstas">Iš šono pasirodo jonvabalis.<br>Visi išeina.<br>Atsidarius užuolaidoms jonvabalis toliau keliauja su varlėmis ir krokodilu.<br>Varlius pradeda groti gitara, jonvabalis dainuoja, krokodilas su varle pritaria abiems.<br>Staiga pasirodo šešėliai, iš varliaus atima gitarą ir tempia jį iš scenos, varlė, krokodilas ir jonvabalis laiko varlių.<br>Visi parodo į besišypsantį varlių😅.<br>Visi vaikšto po sceną, mama Odė kažką sau murma, į sceną šešėliai įneša stalą su puodu, varlės viena kitą side-eye’ina.<br>Visi prieina prie puodo, mama Odė paragauja sriubos.</p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Papildomai:</p>
-            <p class="antrTekstas">Papildomai (garso takeliai ir pan.) aprašymas.</p>
+            <p class="antrTekstas">nėra informacijos</p>
             <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
         </div>
     </div>
@@ -4641,39 +4539,39 @@
         <div class="apie">
             <i class="fa-regular fa-circle-question karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Apie rolę:</p>
-            <p class="antrTekstas">Rolės aprašymas.</p>
+            <p class="antrTekstas">Baisi ir keista burtininkė, savo kerais padeda varlei ir varliui atvirsti žmonėmis.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="pasiruosimas">
             <i class="fa-solid fa-suitcase karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Pasiruošti:</p>
-            <p class="antrTekstas">Pasiruošimo aprašymas.</p>
+            <p class="antrTekstas">nėra informacijos</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="apranga">
             <i class="fa-solid fa-shirt karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Apranga:</p>
-            <p class="antrTekstas">Aprangos aprašymas.</p>
+            <p class="antrTekstas">nėra informacijos</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="zodziai">
             <i class="fa-regular fa-comments karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Žodžiai:</p>
-            <p class="antrTekstas">Žodžių aprašymas.</p>
-            <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip.</p>
+            <p class="antrTekstas">“na tai kuris iš jūsų, chuliganai, prasidėjo su tamsos šešėliais?”<br>“jūs atrodot išalkę, eime pas mane”<br>“na tai ką, varliukai, žmonėmis norite tapti?”<br>“na jeigu jau tikrai norite tapti žmonėmis, yra vienintelis būdas: <i>(maišo sriubą)</i> šaltekai nemeluoja niekad, duos atsakymą, žiūrėkit!”<br><i>(piktai)</i> “užsičiaupk ir žiūrėk į puodą!”<br>“aišku, kad suveiks, bet reikia suspėti iki šiandienos vakaro”</p>
+            <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip. Dalį žodžių gali reikti improvizuoti.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="vaidinimas">
             <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Vaidinimo eiga:</p>
-            <p class="antrTekstas">Vaidinimo eigos aprašymas.</p>
+            <p class="antrTekstas">Iš kitos užuolaidos po akimirkos išlenda mama Odė ir išgąsdina šešėlius.<br>Mama Odė pakviečia visus į savo namus.<br>Visi vaikšto po sceną, mama Odė kažką sau murma, į sceną šešėliai įneša stalą su puodu, varlės viena kitą side-eye’ina.<br>Visi prieina prie puodo, mama Odė paragauja sriubos.</p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Papildomai:</p>
-            <p class="antrTekstas">Papildomai (garso takeliai ir pan.) aprašymas.</p>
+            <p class="antrTekstas">nėra informacijos</p>
             <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
         </div>
     </div>
@@ -4720,32 +4618,32 @@
         <div class="apie">
             <i class="fa-regular fa-circle-question karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Apie rolę:</p>
-            <p class="antrTekstas">Rolės aprašymas.</p>
+            <p class="antrTekstas">Nekalbatis šešėlis, kartu su kitais šešėliais vykdo blogojo burtininko nurodymus ir stengiasi sugrąžinti jam varlių (princą).</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="pasiruosimas">
             <i class="fa-solid fa-suitcase karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Pasiruošti:</p>
-            <p class="antrTekstas">Pasiruošimo aprašymas.</p>
+            <p class="antrTekstas">nėra informacijos</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="apranga">
             <i class="fa-solid fa-shirt karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Apranga:</p>
-            <p class="antrTekstas">Aprangos aprašymas.</p>
+            <p class="antrTekstas">Visiškai juoda apranga, gali nesimatyti veido.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="vaidinimas">
             <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Vaidinimo eiga:</p>
-            <p class="antrTekstas">Vaidinimo eigos aprašymas.</p>
+            <p class="antrTekstas">Į sceną įbėga šešėliai.<br>Šešėliai išsisklaido po sceną.<br>Staiga pasirodo šešėliai, iš varliaus atima gitarą ir tempia jį iš scenos, varlė, krokodilas ir jonvabalis laiko varlių. Iš kitos užuolaidos po akimirkos išlenda mama Odė ir išgąsdina šešėlius.<br>Visi vaikšto po sceną, mama Odė kažką sau murma, į sceną šešėliai įneša stalą su puodu, varlės viena kitą side-eye’ina.</p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Papildomai:</p>
-            <p class="antrTekstas">Papildomai (garso takeliai ir pan.) aprašymas.</p>
+            <p class="antrTekstas">nėra informacijos</p>
             <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
         </div>
     </div>
@@ -4792,39 +4690,39 @@
         <div class="apie">
             <i class="fa-regular fa-circle-question karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Apie rolę:</p>
-            <p class="antrTekstas">Rolės aprašymas.</p>
+            <p class="antrTekstas">Pasipūtęs kilmingas žmogus, per neapdairumą pavirsta varliumi.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="pasiruosimas">
             <i class="fa-solid fa-suitcase karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Pasiruošti:</p>
-            <p class="antrTekstas">Pasiruošimo aprašymas.</p>
+            <p class="antrTekstas">Karūna...</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="apranga">
             <i class="fa-solid fa-shirt karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Apranga:</p>
-            <p class="antrTekstas">Aprangos aprašymas.</p>
+            <p class="antrTekstas">nėra informacijos</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="zodziai">
             <i class="fa-regular fa-comments karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Žodžiai:</p>
-            <p class="antrTekstas">Žodžių aprašymas.</p>
-            <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip.</p>
+            <p class="antrTekstas">“o, kaip nepasisekė, nes aš kaip tik stengiausi išvengti tavęs”<br><i>(įsiterpia)</i> “aaaah, klausyk, čia tikras džiazas, nagi, storuli, pašokam, atsipalaiduok”<br><i>(įsiterpia)</i> “a, taip, taip, taip, bet prieš tai, šį vakarą aš visus vaišinu”<br>“ah, gerai, vesiu, bet prieš tai…”</p>
+            <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip. Dalį žodžių gali reikti improvizuoti.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="vaidinimas">
             <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Vaidinimo eiga:</p>
-            <p class="antrTekstas">Vaidinimo eigos aprašymas.</p>
+            <p class="antrTekstas">Atsidarius užuolaidoms scenoje muzikuoja Navynas, groja džiazinė muzika, vos tempdamas lagaminus įsiterpia Lorensas.<br>Blogasis burtininkas vedasi Navyną prie kortų stalo.<br>Navynas ignoruoja Lorensą ir domisi burtų informacija. Prieina prie kortų stalo. Navynas su Lorensu atsisėda, prasideda chaosas - mėtomos kortos, groja muzika, vyksta burimas ir pan. Navynas tampa varliumi, Lorensas - princu (apsikeičia vietomis).</p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Papildomai:</p>
-            <p class="antrTekstas">Papildomai (garso takeliai ir pan.) aprašymas.</p>
+            <p class="antrTekstas">nėra informacijos</p>
             <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
         </div>
     </div>
@@ -4871,39 +4769,39 @@
         <div class="apie">
             <i class="fa-regular fa-circle-question karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Apie rolę:</p>
-            <p class="antrTekstas">Rolės aprašymas.</p>
+            <p class="antrTekstas">Princesė dėl bučinio su varliumi virtusi varle, siekia atvirsti žmogumi, siekiant tikslo sutikdama bičiulių.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="pasiruosimas">
             <i class="fa-solid fa-suitcase karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Pasiruošti:</p>
-            <p class="antrTekstas">Pasiruošimo aprašymas.</p>
+            <p class="antrTekstas">nėra informacijos</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="apranga">
             <i class="fa-solid fa-shirt karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Apranga:</p>
-            <p class="antrTekstas">Aprangos aprašymas.</p>
+            <p class="antrTekstas">nėra informacijos</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="zodziai">
             <i class="fa-regular fa-comments karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Žodžiai:</p>
-            <p class="antrTekstas">Žodžių aprašymas.</p>
-            <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip.</p>
+            <p class="antrTekstas"><i>(klykia)</i> “AAAAA!”<br><i>(piktu balsu)</i> “ką tu man padarei?!”<br>“einam, einam, mums jau laikas eiti…”<br><i>(piktu balsu)</i> “šitą asilą varlium pavertė kažkoks voodoo burtininkas, o dabar…”<br>“kaip ir tu, idiote!😒”<br>“seni, ar tau viskas gerai?”<br>“o tai tu turi jau kokią panelę?”<br>“Andželina?”<br>“na taip, močiute”<br><i>(įsiterpia)</i> “Šarlotė, ji gi ne princesė?”<br>“supratau, Šarlotė ištekės už apsimetėlio princo ir taps princese!”</p>
+            <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip. Dalį žodžių gali reikti improvizuoti.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="vaidinimas">
             <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Vaidinimo eiga:</p>
-            <p class="antrTekstas">Vaidinimo eigos aprašymas.</p>
+            <p class="antrTekstas">Tiana ir varlė apsikeičia. Varlė susivokia, kad yra varlė.<br>Varlė ir varlius mušasi.<br>Abu pamato krokodilą ir suspiegia.<br>Varlius pradeda šokti, varlė tempia varlių šalin.<br>Visi vaikšto po sceną, vis eidami į kitą pusę.<br>Varlius ir varlė toliau pešasi.<br>Varlius su varle tuo pačiu metu vis dar ginčijasi.<br>Varlius su varle suklūsta ir keistai žiūri į jonvabalį.<br>Visi išeina.<br>Atsidarius užuolaidoms jonvabalis toliau keliauja su varlėmis ir krokodilu.<br>Varlius pradeda groti gitara, jonvabalis dainuoja, krokodilas su varle pritaria abiems.<br>Staiga pasirodo šešėliai, iš varliaus atima gitarą ir tempia jį iš scenos, varlė, krokodilas ir jonvabalis laiko varlių.<br>Visi parodo į besišypsantį varlių😅.<br>Visi vaikšto po sceną, mama Odė kažką sau murma, į sceną šešėliai įneša stalą su puodu, varlės viena kitą side-eye’ina.<br>Visi prieina prie puodo, mama Odė paragauja sriubos.</p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Papildomai:</p>
-            <p class="antrTekstas">Papildomai (garso takeliai ir pan.) aprašymas.</p>
+            <p class="antrTekstas">nėra informacijos</p>
             <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
         </div>
     </div>
@@ -4950,39 +4848,39 @@
         <div class="apie">
             <i class="fa-regular fa-circle-question karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Apie rolę:</p>
-            <p class="antrTekstas">Rolės aprašymas.</p>
+            <p class="antrTekstas">Rokeris krokodilas, padeda varlei ir varliui atvirsti žmonėmis.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="pasiruosimas">
             <i class="fa-solid fa-suitcase karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Pasiruošti:</p>
-            <p class="antrTekstas">Pasiruošimo aprašymas.</p>
+            <p class="antrTekstas">Elektrinė gitara...</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="apranga">
             <i class="fa-solid fa-shirt karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Apranga:</p>
-            <p class="antrTekstas">Aprangos aprašymas.</p>
+            <p class="antrTekstas">nėra informacijos</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="zodziai">
             <i class="fa-regular fa-comments karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Žodžiai:</p>
-            <p class="antrTekstas">Žodžių aprašymas.</p>
-            <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip.</p>
+            <p class="antrTekstas">“aš žinau šitą melodiją!”<br>“o kur jūs keliaujat?”<br><i>(drebėdamas)</i> “voodoo burtininkas? jums reikia pas mamą Odę, kuri padės jums panaikinti kerus!”<br>“nuuuuu….. geraiiiii….. galllll….. turbūttttt….. eime!”<br><i>(šnibžda jonvabaliui)</i> “o gal yra kitų mažiau crazy burtininkių?”</p>
+            <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip. Dalį žodžių gali reikti improvizuoti.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="vaidinimas">
             <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Vaidinimo eiga:</p>
-            <p class="antrTekstas">Vaidinimo eigos aprašymas.</p>
+            <p class="antrTekstas">Iš užuolaidos išlenda krokodilas ir stebi juos.<br>Krokodilas bando išgąsdinti, bet staiga pradeda groti gitara.<br>Krokodilas priekabiauja prie abiejų.<br>Varlei nebaigus kalbėti įsiterpia krokodilas.<br>Visi vaikšto po sceną, vis eidami į kitą pusę. Krokodilas pasiklysta, išeina iš scenos.<br>Atsidarius užuolaidoms jonvabalis toliau keliauja su varlėmis ir krokodilu.<br>Varlius pradeda groti gitara, jonvabalis dainuoja, krokodilas su varle pritaria abiems.<br>Staiga pasirodo šešėliai, iš varliaus atima gitarą ir tempia jį iš scenos, varlė, krokodilas ir jonvabalis laiko varlių.<br>Visi parodo į besišypsantį varlių😅.<br>Visi vaikšto po sceną, mama Odė kažką sau murma, į sceną šešėliai įneša stalą su puodu, varlės viena kitą side-eye’ina.<br>Visi prieina prie puodo, mama Odė paragauja sriubos.</p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Papildomai:</p>
-            <p class="antrTekstas">Papildomai (garso takeliai ir pan.) aprašymas.</p>
+            <p class="antrTekstas">nėra informacijos</p>
             <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
         </div>
     </div>
@@ -5029,32 +4927,32 @@
         <div class="apie">
             <i class="fa-regular fa-circle-question karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Apie rolę:</p>
-            <p class="antrTekstas">Rolės aprašymas.</p>
+            <p class="antrTekstas">Nekalbatis šešėlis, kartu su kitais šešėliais vykdo blogojo burtininko nurodymus ir stengiasi sugrąžinti jam varlių (princą).</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="pasiruosimas">
             <i class="fa-solid fa-suitcase karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Pasiruošti:</p>
-            <p class="antrTekstas">Pasiruošimo aprašymas.</p>
+            <p class="antrTekstas">nėra informacijos</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="apranga">
             <i class="fa-solid fa-shirt karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Apranga:</p>
-            <p class="antrTekstas">Aprangos aprašymas.</p>
+            <p class="antrTekstas">Visiškai juoda apranga, gali nesimatyti veido.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="vaidinimas">
             <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Vaidinimo eiga:</p>
-            <p class="antrTekstas">Vaidinimo eigos aprašymas.</p>
+            <p class="antrTekstas">Į sceną įbėga šešėliai.<br>Šešėliai išsisklaido po sceną.<br>Staiga pasirodo šešėliai, iš varliaus atima gitarą ir tempia jį iš scenos, varlė, krokodilas ir jonvabalis laiko varlių. Iš kitos užuolaidos po akimirkos išlenda mama Odė ir išgąsdina šešėlius.<br>Visi vaikšto po sceną, mama Odė kažką sau murma, į sceną šešėliai įneša stalą su puodu, varlės viena kitą side-eye’ina.</p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Papildomai:</p>
-            <p class="antrTekstas">Papildomai (garso takeliai ir pan.) aprašymas.</p>
+            <p class="antrTekstas">nėra informacijos</p>
             <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
         </div>
     </div>
@@ -5101,39 +4999,39 @@
         <div class="apie">
             <i class="fa-regular fa-circle-question karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Apie rolę:</p>
-            <p class="antrTekstas">Rolės aprašymas.</p>
+            <p class="antrTekstas">Atsakingas, vargšas, didelę princo naštą nešantis buhalteris, viduje pavydi princui ir vėliau juo tampa.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="pasiruosimas">
             <i class="fa-solid fa-suitcase karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Pasiruošti:</p>
-            <p class="antrTekstas">Pasiruošimo aprašymas.</p>
+            <p class="antrTekstas">nėra informacijos</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="apranga">
             <i class="fa-solid fa-shirt karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Apranga:</p>
-            <p class="antrTekstas">Aprangos aprašymas.</p>
+            <p class="antrTekstas">nėra informacijos</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="zodziai">
             <i class="fa-regular fa-comments karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Žodžiai:</p>
-            <p class="antrTekstas">Žodžių aprašymas.</p>
-            <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip.</p>
+            <p class="antrTekstas">“pone, aš po visą miestą jūsų ieškau”<br>“bet mes pavėluosim į kaukių balių”<br><i>(atsisakydamas)</i> “mes vėluojame!”<br><i>(piktai)</i> “kad neturim už ką, ir jūsų žiniai, jūs turite tik du variantus: arba nusiraminti ir vesti turtuolę arba… SUSIRASTI DARBĄ!”<br><i>(improvizuoja įkyriu balsu)</i> “ką jūs čia dabar sugalvojot, negalima tokiais tipais pasitikėt!”</p>
+            <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip. Dalį žodžių gali reikti improvizuoti.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="vaidinimas">
             <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Vaidinimo eiga:</p>
-            <p class="antrTekstas">Vaidinimo eigos aprašymas.</p>
+            <p class="antrTekstas">Atsidarius užuolaidoms scenoje muzikuoja Navynas, groja džiazinė muzika, vos tempdamas lagaminus įsiterpia Lorensas.<br>Lorensas bando Navyną atkalbėti.<br>Navynas su Lorensu atsisėda, prasideda chaosas - mėtomos kortos, groja muzika, vyksta burimas ir pan. Navynas tampa varliumi, Lorensas - princu (apsikeičia vietomis).</p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Papildomai:</p>
-            <p class="antrTekstas">Papildomai (garso takeliai ir pan.) aprašymas.</p>
+            <p class="antrTekstas">nėra informacijos</p>
             <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
         </div>
     </div>
@@ -5180,32 +5078,32 @@
         <div class="apie">
             <i class="fa-regular fa-circle-question karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Apie rolę:</p>
-            <p class="antrTekstas">Rolės aprašymas.</p>
+            <p class="antrTekstas">Blogasis, slaptasis burtininkas, paverčia princą varliumi ir princo buhalterį - princu.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="pasiruosimas">
             <i class="fa-solid fa-suitcase karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Pasiruošti:</p>
-            <p class="antrTekstas">Pasiruošimo aprašymas.</p>
+            <p class="antrTekstas">nėra informacijos</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="apranga">
             <i class="fa-solid fa-shirt karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Apranga:</p>
-            <p class="antrTekstas">Aprangos aprašymas.</p>
+            <p class="antrTekstas">nėra informacijos</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="zodziai">
             <i class="fa-regular fa-comments karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Žodžiai:</p>
-            <p class="antrTekstas">Žodžių aprašymas.</p>
-            <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip.</p>
+            <p class="antrTekstas">“ponai! prieš jus magijos mokslų daktaras Monsieur Facilier, jūsų paslaugoms”<br>“eime! tu tapsi šreksi, meksi, merginų turėsi!”<br>“cha cha cha cha cha, netrukus užvaldysiu miestą ir visų sielos bus mano!”<br>“bus tvarka! iš po žemių išknisim tą varlių! atveskit jį gyvą, plakančia širdimi, supratot? pirmyn! <i>(sutrenkia lazda į žemę)</i>”</p>
+            <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip. Dalį žodžių gali reikti improvizuoti.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="vaidinimas">
             <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Vaidinimo eiga:</p>
-            <p class="antrTekstas">Vaidinimo eigos aprašymas.</p>
+            <p class="antrTekstas">Navynui nebaigus kalbėti scenoje pasirodo blogasis burtininkas.<br>Blogasis burtininkas paduoda Navynui kortelę su informacija.<br>Blogasis burtininkas vedasi Navyną prie kortų stalo.<br>Į sceną įeina blogasis burtininkas ir kalbasi su savimi.</p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
         </div>
         <div class="separationLine1"><hr></div>
@@ -5258,39 +5156,39 @@
         <div class="apie">
             <i class="fa-regular fa-circle-question karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Apie rolę:</p>
-            <p class="antrTekstas">Rolės aprašymas.</p>
+            <p class="antrTekstas">Vargingoji, darbšti princesė, pabučiavusi varlių norėdama jam padėti pati pavirsta varle.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="pasiruosimas">
             <i class="fa-solid fa-suitcase karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Pasiruošti:</p>
-            <p class="antrTekstas">Pasiruošimo aprašymas.</p>
+            <p class="antrTekstas">Karūna...</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="apranga">
             <i class="fa-solid fa-shirt karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Apranga:</p>
-            <p class="antrTekstas">Aprangos aprašymas.</p>
+            <p class="antrTekstas">nėra informacijos</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="zodziai">
             <i class="fa-regular fa-comments karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Žodžiai:</p>
-            <p class="antrTekstas">Žodžių aprašymas.</p>
-            <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip.</p>
+            <p class="antrTekstas"><i>(iškišdama liežuvį, kratydama galvą)</i> “fui, ewww”<br><i>(griežtesniu balsu, rodydama gestais)</i> “jeigu kas manęs paklaustų, aš jokiu būdu ir už jokius pinigus niekada nebučiuočiau jokio varliuko, fe”<br><i>(atstumdama Šarlotę)</i> “ne, liaukis, nebučiuosiu, ne!”<br><i>(liūdnu balsu)</i> “jis nepalaikino mano storio…”<br><i>(nusivylusiu balsu)</i> “labai juokinga…🙄 tai ką? nori pasibučiuoti?”<br><i>(klykia)</i> “AAAAA!”<br><i>(piktu balsu)</i> “nesiartink, arba aš tave užmušiu!”<br><i>(sustoja pagalvoti)</i> “bet jei tu princas, tai kodėl tu varlė?”<br><i>(piktai)</i> “atsiprašau?”<br>“atleisk, nieko nebus, aš tikrai norėčiau tau padėt, bet aš varlių nebučiuoju!”<br>“nu gerai, nu…”</p>
+            <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip. Dalį žodžių gali reikti improvizuoti.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="vaidinimas">
             <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Vaidinimo eiga:</p>
-            <p class="antrTekstas">Vaidinimo eigos aprašymas.</p>
+            <p class="antrTekstas">Mama iš knygos skaito Tianai ir Šarlotei istoriją apie princesę ir varlių. Abi labai įdėmiai klauso.<br>Tiana bėga nuo Šarlotės, kuri ją gaudo.<br>Abi apsiramina.<br>Tiana su mama stebi iš šono.<br>Šarlotės tėčiui kalbant mama su Tiana išeina iš scenos.<br>Atsidarius užuolaidoms Tiana verkia, įbėga besidažanti Šarlotė.<br>Tiana lieka viena, iš kitos scenos pusės įeina varlius ir priena prie jos.<br>Tiana bėga nuo varliaus, jis ją vejasi.<br>Tiana pradeda mėtyti į varlių daiktus, jis bėga nuo jų.<br>Tiana varliaus neklauso ir toliau mėto daiktus, kol iškelia pasakų knygą.<br>Tiana užvožia varliui.<br>Tiana ir varlius laikant širdelę pasibučiuoja. Tiana ir varlė apsikeičia.</p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Papildomai:</p>
-            <p class="antrTekstas">Papildomai (garso takeliai ir pan.) aprašymas.</p>
+            <p class="antrTekstas">nėra informacijos</p>
             <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
         </div>
     </div>
@@ -5337,39 +5235,39 @@
         <div class="apie">
             <i class="fa-regular fa-circle-question karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Apie rolę:</p>
-            <p class="antrTekstas">Rolės aprašymas.</p>
+            <p class="antrTekstas">Pamaiva, turtinga princesės Tianos draugė nuo mažų dienų, turi padėti varlei ir varliui atvirsti žmonėmis.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="pasiruosimas">
             <i class="fa-solid fa-suitcase karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Pasiruošti:</p>
-            <p class="antrTekstas">Pasiruošimo aprašymas.</p>
+            <p class="antrTekstas">nėra informacijos</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="apranga">
             <i class="fa-solid fa-shirt karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Apranga:</p>
-            <p class="antrTekstas">Aprangos aprašymas.</p>
+            <p class="antrTekstas">nėra informacijos</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="zodziai">
             <i class="fa-regular fa-comments karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Žodžiai:</p>
-            <p class="antrTekstas">Žodžių aprašymas.</p>
-            <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip.</p>
+            <p class="antrTekstas"><i>(įsiterpia)</i> “čia mano mėgstamiausia vieta!”<br><i>(meiliai linksėdama)</i> “aww”<br>“jėga! noriu dar, paskaityk dar!”<br><i>(erzindama Tianą)</i> “tikrai jokio?😉 o tu įsivaizduok, kad tai gražuolis princas!”<br><i>(kišdama Tianai į veidą savo pliušinį žaislą)</i> “nagi, pabučiuok, pabučiuok!”<br><i>(svajodama)</i> “o aš pabučiuočiau, pabučiuočiau varlę, nors ir šimtą varlių, kad tik ištekėčiau už princo ir tapčiau princese”<br>“tėti, tėti, žiūrėk, kokia suknelė! graži, ar ne?”<br>“o, kokia graži suknelė!”<br><i>(pertraukia nebaigus kalbėti)</i> “aš noriu, prašau, prašau, prašau!”<br><i>(įsiterpia)</i> “valio!”<br><i>(teiraujasi)</i> “kas atsitiko, brangioji? kodėl tokia nuliūdus? juk ten lauke vyksta didžiulis balius!”<br><i>(linksmai)</i> “ai, nesiparink! bus tų bachūrų!”</p>
+            <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip. Dalį žodžių gali reikti improvizuoti.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="vaidinimas">
             <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Vaidinimo eiga:</p>
-            <p class="antrTekstas">Vaidinimo eigos aprašymas.</p>
+            <p class="antrTekstas">Mama iš knygos skaito Tianai ir Šarlotei istoriją apie princesę ir varlių. Abi labai įdėmiai klauso.<br>Šarlotė nuvirsta ant nugaros ir makaluojasi.<br>Tiana bėga nuo Šarlotės, kuri ją gaudo.<br>Abi apsiramina.<br>Šarlotė pripuola prie jo.<br>Šarlotė knygoje pamato suknelę.<br>Atsidarius užuolaidoms Tiana verkia, įbėga besidažanti Šarlotė.<br>Šarlotė numoja ranka ir išeina iš scenos.</p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Papildomai:</p>
-            <p class="antrTekstas">Papildomai (garso takeliai ir pan.) aprašymas.</p>
+            <p class="antrTekstas">nėra informacijos</p>
             <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
         </div>
     </div>
@@ -5416,39 +5314,39 @@
         <div class="apie">
             <i class="fa-regular fa-circle-question karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Apie rolę:</p>
-            <p class="antrTekstas">Rolės aprašymas.</p>
+            <p class="antrTekstas">Dėl blogojo burtininko varliumi pavirtęs princas, siekia atvirsti žmogumi, siekdamas tikslo sutinka princesę, kurią pabučiuoja ir taip paverčia varle.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="pasiruosimas">
             <i class="fa-solid fa-suitcase karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Pasiruošti:</p>
-            <p class="antrTekstas">Pasiruošimo aprašymas.</p>
+            <p class="antrTekstas">nėra informacijos</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="apranga">
             <i class="fa-solid fa-shirt karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Apranga:</p>
-            <p class="antrTekstas">Aprangos aprašymas.</p>
+            <p class="antrTekstas">nėra informacijos</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="zodziai">
             <i class="fa-regular fa-comments karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Žodžiai:</p>
-            <p class="antrTekstas">Žodžių aprašymas.</p>
-            <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip.</p>
+            <p class="antrTekstas"><i>(pataikaujančiu balsu)</i> “gal būtų visai neblogai, a?😏”<br>“atleisk, atleisk, atsiprašau, aš, aš… visai nenorėjau tavęs gąsdinti, a, palauk!…”<br>“o tu, princese, turi stiprią rankelę😏 a! užteks, prašau!.. padėk beždžionę į vietą😡”<br>“palauk, leisk man prisistatyti, aš esu princas Navynas”<br>“aš nežinau! prisimenu tik, kad štai aš - žavus princas, trali vali festivali! (šoka) o po akimirkos aš žalias ir gleivėtas”<br>“palauk! aš žinau kaip galima mane išlaisvinti! pagal pasaką, tuuuu turi mane pabučiuoti😏”<br>“tau patiks, pamatysi, bučiuotis su tokiu alfa patinu, kaip aš, patinka visoms😏😏😏”<br>“bet tai panaikintų mano kerus…🥺”<br><i>(ramiu balsu)</i> “ramiai, princese, chill out”<br>“mes bandome atvirsti žmonėmis, jeigu ką😒”<br>“tai nuvesk mus pas ją!”<br>“kur jis dingo, ot kvailys!”<br>“mes keliaujam pas mamą Odę”<br>“o tai suveiks?”</p>
+            <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip. Dalį žodžių gali reikti improvizuoti.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="vaidinimas">
             <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Vaidinimo eiga:</p>
-            <p class="antrTekstas">Vaidinimo eigos aprašymas.</p>
+            <p class="antrTekstas">Navynas tampa varliumi, Lorensas - princu (apsikeičia vietomis).<br>Tiana lieka viena, iš kitos scenos pusės įeina varlius ir priena prie jos.<br>Tiana bėga nuo varliaus, jis ją vejasi.<br>Tiana pradeda mėtyti į varlių daiktus, jis bėga nuo jų. Bemėtant įsiterpia varlius.<br>Varlius prieina prie Tianos.<br>Tiana ruošiasi vėl trenkti varliui. Varlius ją sustabdo.<br>Tiana ir varlius laikant širdelę pasibučiuoja.<br>Varlė ir varlius mušasi.<br>Abu pamato krokodilą ir suspiegia.<br>Varlius pradeda šokti, varlė tempia varlių šalin<br>Visi vaikšto po sceną, vis eidami į kitą pusę.<br>Varlius ir varlė toliau pešasi.<br>Varlius su varle tuo pačiu metu vis dar ginčijasi.<br>Varlius su varle suklūsta ir keistai žiūri į jonvabalį.<br>Visi išeina.<br>Atsidarius užuolaidoms jonvabalis toliau keliauja su varlėmis ir krokodilu.<br>Varlius pradeda groti gitara, jonvabalis dainuoja, krokodilas su varle pritaria abiems.<br>Staiga pasirodo šešėliai, iš varliaus atima gitarą ir tempia jį iš scenos, varlė, krokodilas ir jonvabalis laiko varlių.<br>Visi vaikšto po sceną, mama Odė kažką sau murma, į sceną šešėliai įneša stalą su puodu, varlės viena kitą side-eye’ina.<br>Visi prieina prie puodo, mama Odė paragauja sriubos.</p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Papildomai:</p>
-            <p class="antrTekstas">Papildomai (garso takeliai ir pan.) aprašymas.</p>
+            <p class="antrTekstas">nėra informacijos</p>
             <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
         </div>
     </div>
@@ -5495,32 +5393,32 @@
         <div class="apie">
             <i class="fa-regular fa-circle-question karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Apie rolę:</p>
-            <p class="antrTekstas">Rolės aprašymas.</p>
+            <p class="antrTekstas">Nekalbatis šešėlis, kartu su kitais šešėliais vykdo blogojo burtininko nurodymus ir stengiasi sugrąžinti jam varlių (princą).</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="pasiruosimas">
             <i class="fa-solid fa-suitcase karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Pasiruošti:</p>
-            <p class="antrTekstas">Pasiruošimo aprašymas.</p>
+            <p class="antrTekstas">nėra informacijos</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="apranga">
             <i class="fa-solid fa-shirt karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Apranga:</p>
-            <p class="antrTekstas">Aprangos aprašymas.</p>
+            <p class="antrTekstas">Visiškai juoda apranga, gali nesimatyti veido.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="vaidinimas">
             <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Vaidinimo eiga:</p>
-            <p class="antrTekstas">Vaidinimo eigos aprašymas.</p>
+            <p class="antrTekstas">Į sceną įbėga šešėliai.<br>Šešėliai išsisklaido po sceną.<br>Staiga pasirodo šešėliai, iš varliaus atima gitarą ir tempia jį iš scenos, varlė, krokodilas ir jonvabalis laiko varlių. Iš kitos užuolaidos po akimirkos išlenda mama Odė ir išgąsdina šešėlius.<br>Visi vaikšto po sceną, mama Odė kažką sau murma, į sceną šešėliai įneša stalą su puodu, varlės viena kitą side-eye’ina.</p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Papildomai:</p>
-            <p class="antrTekstas">Papildomai (garso takeliai ir pan.) aprašymas.</p>
+            <p class="antrTekstas">nėra informacijos</p>
             <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
         </div>
     </div>
@@ -5567,33 +5465,33 @@
         <div class="apie">
             <i class="fa-regular fa-circle-question karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Apie rolę:</p>
-            <p class="antrTekstas">Rolės aprašymas.</p>
+            <p class="antrTekstas">Nekalbatis šešėlis, kartu su kitais šešėliais vykdo blogojo burtininko nurodymus ir stengiasi sugrąžinti jam varlių (princą).</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="pasiruosimas">
             <i class="fa-solid fa-suitcase karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Pasiruošti:</p>
-            <p class="antrTekstas">Pasiruošimo aprašymas.</p>
+            <p class="antrTekstas">nėra informacijos</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="apranga">
             <i class="fa-solid fa-shirt karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Apranga:</p>
-            <p class="antrTekstas">Aprangos aprašymas.</p>
+            <p class="antrTekstas">Visiškai juoda apranga, gali nesimatyti veido.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="separationLine1"><hr></div>
         <div class="vaidinimas">
             <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Vaidinimo eiga:</p>
-            <p class="antrTekstas">Vaidinimo eigos aprašymas.</p>
+            <p class="antrTekstas">Į sceną įbėga šešėliai.<br>Šešėliai išsisklaido po sceną.<br>Staiga pasirodo šešėliai, iš varliaus atima gitarą ir tempia jį iš scenos, varlė, krokodilas ir jonvabalis laiko varlių. Iš kitos užuolaidos po akimirkos išlenda mama Odė ir išgąsdina šešėlius.<br>Visi vaikšto po sceną, mama Odė kažką sau murma, į sceną šešėliai įneša stalą su puodu, varlės viena kitą side-eye’ina.</p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Papildomai:</p>
-            <p class="antrTekstas">Papildomai (garso takeliai ir pan.) aprašymas.</p>
+            <p class="antrTekstas">nėra informacijos</p>
             <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
         </div>
     </div>
@@ -5640,32 +5538,32 @@
         <div class="apie">
             <i class="fa-regular fa-circle-question karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Apie rolę:</p>
-            <p class="antrTekstas">Rolės aprašymas.</p>
+            <p class="antrTekstas">Nekalbatis šešėlis, kartu su kitais šešėliais vykdo blogojo burtininko nurodymus ir stengiasi sugrąžinti jam varlių (princą).</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="pasiruosimas">
             <i class="fa-solid fa-suitcase karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Pasiruošti:</p>
-            <p class="antrTekstas">Pasiruošimo aprašymas.</p>
+            <p class="antrTekstas">nėra informacijos</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="apranga">
             <i class="fa-solid fa-shirt karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Apranga:</p>
-            <p class="antrTekstas">Aprangos aprašymas.</p>
+            <p class="antrTekstas">Visiškai juoda apranga, gali nesimatyti veido.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="vaidinimas">
             <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Vaidinimo eiga:</p>
-            <p class="antrTekstas">Vaidinimo eigos aprašymas.</p>
+            <p class="antrTekstas">Į sceną įbėga šešėliai.<br>Šešėliai išsisklaido po sceną.<br>Staiga pasirodo šešėliai, iš varliaus atima gitarą ir tempia jį iš scenos, varlė, krokodilas ir jonvabalis laiko varlių. Iš kitos užuolaidos po akimirkos išlenda mama Odė ir išgąsdina šešėlius.<br>Visi vaikšto po sceną, mama Odė kažką sau murma, į sceną šešėliai įneša stalą su puodu, varlės viena kitą side-eye’ina.</p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Papildomai:</p>
-            <p class="antrTekstas">Papildomai (garso takeliai ir pan.) aprašymas.</p>
+            <p class="antrTekstas">nėra informacijos</p>
             <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
         </div>
     </div>
@@ -5712,39 +5610,39 @@
         <div class="apie">
             <i class="fa-regular fa-circle-question karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Apie rolę:</p>
-            <p class="antrTekstas">Rolės aprašymas.</p>
+            <p class="antrTekstas">Turtingas princesės Tianos draugės tėtušis, lepinantis ją.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="pasiruosimas">
             <i class="fa-solid fa-suitcase karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Pasiruošti:</p>
-            <p class="antrTekstas">Pasiruošimo aprašymas.</p>
+            <p class="antrTekstas">nėra informacijos</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="apranga">
             <i class="fa-solid fa-shirt karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Apranga:</p>
-            <p class="antrTekstas">Aprangos aprašymas.</p>
+            <p class="antrTekstas">nėra informacijos</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="zodziai">
             <i class="fa-regular fa-comments karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Žodžiai:</p>
-            <p class="antrTekstas">Žodžių aprašymas.</p>
-            <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip.</p>
+            <p class="antrTekstas">“sveika, Eudora!”<br>“o, tu dar klausi, taip galėjo pasiūti tik geriausia siuvėja”<br><i>(įsiterpia)</i> “aš tau gal geriau…”<br><i>(kreipiasi į mamą)</i> “Eudora, o tu kaip manai, ar tokią pasiūtum?”<br><i>(kreipiasi į Šarlotę)</i> “gerai, princese, turėsi dar vieną suknelę, bet tai bus paskutinė, daugiau tavęs nelepinsiu”</p>
+            <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip. Dalį žodžių gali reikti improvizuoti.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="vaidinimas">
             <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Vaidinimo eiga:</p>
-            <p class="antrTekstas">Vaidinimo eigos aprašymas.</p>
+            <p class="antrTekstas">Įeina Šarlotės tėtis.<br>Šarlotės tėtis paima Šarlotę į rankas ir džiaugsmingai iškelia.<br></p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Papildomai:</p>
-            <p class="antrTekstas">Papildomai (garso takeliai ir pan.) aprašymas.</p>
+            <p class="antrTekstas">nėra informacijos</p>
             <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
         </div>
     </div>
@@ -5791,39 +5689,39 @@
         <div class="apie">
             <i class="fa-regular fa-circle-question karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Apie rolę:</p>
-            <p class="antrTekstas">Rolės aprašymas.</p>
+            <p class="antrTekstas">Princesės Tianos mama, pasakoja jai ir jos draugei pasaką apie princesę ir varlių.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="pasiruosimas">
             <i class="fa-solid fa-suitcase karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Pasiruošti:</p>
-            <p class="antrTekstas">Pasiruošimo aprašymas.</p>
+            <p class="antrTekstas">Pasakų knyga...</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="apranga">
             <i class="fa-solid fa-shirt karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Apranga:</p>
-            <p class="antrTekstas">Aprangos aprašymas.</p>
+            <p class="antrTekstas">nėra informacijos</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="zodziai">
             <i class="fa-regular fa-comments karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Žodžiai:</p>
-            <p class="antrTekstas">Žodžių aprašymas.</p>
-            <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip.</p>
+            <p class="antrTekstas">“tą akimirką bjaurusis varliukas pažvelgė ir ėmė maldauti: brangioji princese, prašau, padėk man, tik tavo bučinys išsklaidys baisius piktosios burtininkės kerus…”<br><i>(tęsia toliau)</i> “gražiąją princesę taip sujaudino liūdnas jo prašymas, kad ji pasilenkė prie jo, paėmė į rankas sutvėrimą, užsimerkė, pakėlė jį prie lūpų ir... pabučiavo varliuką!”<br>“staiga varliukas pavirto gražuoliu princu, jie susituokė, ir ilgai laimingai gyveno, viskas”<br>“atleisk, Šarlote, mums jau metas namo, Tiana, atsisveikink”<br>“o kaipgi, juk ne vieną pasiuvau”<br><i>(kreipiasi į Tianą)</i> “paskubėkim, Tiana, tavo tėvas turbūt jau grįžo iš darbo”</p>
+            <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip. Dalį žodžių gali reikti improvizuoti.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="vaidinimas">
             <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Vaidinimo eiga:</p>
-            <p class="antrTekstas">Vaidinimo eigos aprašymas.</p>
+            <p class="antrTekstas">Mama iš knygos skaito Tianai ir Šarlotei istoriją apie princesę ir varlių.<br>Tiana su mama stebi iš šono<br>Šarlotės tėčiui kalbant mama su Tiana išeina iš scenos.</p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Papildomai:</p>
-            <p class="antrTekstas">Papildomai (garso takeliai ir pan.) aprašymas.</p>
+            <p class="antrTekstas">nėra informacijos</p>
             <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
         </div>
     </div>
@@ -5870,32 +5768,32 @@
         <div class="apie">
             <i class="fa-regular fa-circle-question karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Apie rolę:</p>
-            <p class="antrTekstas">Rolės aprašymas.</p>
+            <p class="antrTekstas">Nekalbatis šešėlis, kartu su kitais šešėliais vykdo blogojo burtininko nurodymus ir stengiasi sugrąžinti jam varlių (princą).</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="pasiruosimas">
             <i class="fa-solid fa-suitcase karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Pasiruošti:</p>
-            <p class="antrTekstas">Pasiruošimo aprašymas.</p>
+            <p class="antrTekstas">nėra informacijos</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="apranga">
             <i class="fa-solid fa-shirt karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Apranga:</p>
-            <p class="antrTekstas">Aprangos aprašymas.</p>
+            <p class="antrTekstas">Visiškai juoda apranga, gali nesimatyti veido.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="vaidinimas">
             <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Vaidinimo eiga:</p>
-            <p class="antrTekstas">Vaidinimo eigos aprašymas.</p>
+            <p class="antrTekstas">Į sceną įbėga šešėliai.<br>Šešėliai išsisklaido po sceną.<br>Staiga pasirodo šešėliai, iš varliaus atima gitarą ir tempia jį iš scenos, varlė, krokodilas ir jonvabalis laiko varlių. Iš kitos užuolaidos po akimirkos išlenda mama Odė ir išgąsdina šešėlius.<br>Visi vaikšto po sceną, mama Odė kažką sau murma, į sceną šešėliai įneša stalą su puodu, varlės viena kitą side-eye’ina.</p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Papildomai:</p>
-            <p class="antrTekstas">Papildomai (garso takeliai ir pan.) aprašymas.</p>
+            <p class="antrTekstas">nėra informacijos</p>
             <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
         </div>
     </div>
@@ -5942,32 +5840,32 @@
         <div class="apie">
             <i class="fa-regular fa-circle-question karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Apie rolę:</p>
-            <p class="antrTekstas">Rolės aprašymas.</p>
+            <p class="antrTekstas">Nekalbatis šešėlis, kartu su kitais šešėliais vykdo blogojo burtininko nurodymus ir stengiasi sugrąžinti jam varlių (princą).</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="pasiruosimas">
             <i class="fa-solid fa-suitcase karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Pasiruošti:</p>
-            <p class="antrTekstas">Pasiruošimo aprašymas.</p>
+            <p class="antrTekstas">nėra informacijos</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="apranga">
             <i class="fa-solid fa-shirt karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Apranga:</p>
-            <p class="antrTekstas">Aprangos aprašymas.</p>
+            <p class="antrTekstas">Visiškai juoda apranga, gali nesimatyti veido.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="vaidinimas">
             <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Vaidinimo eiga:</p>
-            <p class="antrTekstas">Vaidinimo eigos aprašymas.</p>
+            <p class="antrTekstas">Į sceną įbėga šešėliai.<br>Šešėliai išsisklaido po sceną.<br>Staiga pasirodo šešėliai, iš varliaus atima gitarą ir tempia jį iš scenos, varlė, krokodilas ir jonvabalis laiko varlių. Iš kitos užuolaidos po akimirkos išlenda mama Odė ir išgąsdina šešėlius.<br>Visi vaikšto po sceną, mama Odė kažką sau murma, į sceną šešėliai įneša stalą su puodu, varlės viena kitą side-eye’ina.</p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Papildomai:</p>
-            <p class="antrTekstas">Papildomai (garso takeliai ir pan.) aprašymas.</p>
+            <p class="antrTekstas">nėra informacijos</p>
             <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
         </div>
     </div>
@@ -6014,104 +5912,32 @@
         <div class="apie">
             <i class="fa-regular fa-circle-question karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Apie rolę:</p>
-            <p class="antrTekstas">Rolės aprašymas.</p>
+            <p class="antrTekstas">Nekalbatis šešėlis, kartu su kitais šešėliais vykdo blogojo burtininko nurodymus ir stengiasi sugrąžinti jam varlių (princą).</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="pasiruosimas">
             <i class="fa-solid fa-suitcase karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Pasiruošti:</p>
-            <p class="antrTekstas">Pasiruošimo aprašymas.</p>
+            <p class="antrTekstas">nėra informacijos</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="apranga">
             <i class="fa-solid fa-shirt karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Apranga:</p>
-            <p class="antrTekstas">Aprangos aprašymas.</p>
+            <p class="antrTekstas">Visiškai juoda apranga, gali nesimatyti veido.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="vaidinimas">
             <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Vaidinimo eiga:</p>
-            <p class="antrTekstas">Vaidinimo eigos aprašymas.</p>
+            <p class="antrTekstas">Į sceną įbėga šešėliai.<br>Šešėliai išsisklaido po sceną.<br>Staiga pasirodo šešėliai, iš varliaus atima gitarą ir tempia jį iš scenos, varlė, krokodilas ir jonvabalis laiko varlių. Iš kitos užuolaidos po akimirkos išlenda mama Odė ir išgąsdina šešėlius.<br>Visi vaikšto po sceną, mama Odė kažką sau murma, į sceną šešėliai įneša stalą su puodu, varlės viena kitą side-eye’ina.</p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Papildomai:</p>
-            <p class="antrTekstas">Papildomai (garso takeliai ir pan.) aprašymas.</p>
-            <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
-        </div>
-    </div>
-    <div id="Aurelija">
-        <div id="girlianda">
-            <div class="zaliaGirlianda"></div>
-            <div class="raudonaGirlianda"></div>
-            <div class="zaliaGirlianda"></div>
-            <div class="raudonaGirlianda"></div>
-            <div class="zaliaGirlianda"></div>
-            <div class="raudonaGirlianda"></div>
-            <div class="zaliaGirlianda"></div>
-            <div class="raudonaGirlianda"></div>
-            <div class="zaliaGirlianda"></div>
-            <div class="raudonaGirlianda"></div>
-        </div>
-        <div id="girlianda2">
-            <div class="zaliaGirlianda"></div>
-            <div class="raudonaGirlianda"></div>
-            <div class="zaliaGirlianda"></div>
-            <div class="raudonaGirlianda"></div>
-            <div class="zaliaGirlianda"></div>
-            <div class="raudonaGirlianda"></div>
-            <div class="zaliaGirlianda"></div>
-            <div class="raudonaGirlianda"></div>
-            <div class="zaliaGirlianda"></div>
-            <div class="raudonaGirlianda"></div>
-        </div>
-        <div id="topInfoAurelija"></div>
-        <div id="infoAurelija"><i class="fa-solid fa-chevron-down" onclick="closeAurelija()" id="AurelijaUzdarymas" ontouchstart></i><p id="AurelijaTekstas2">Karnavalas „Princesė ir varlius”</p></div>
-        <p id="AurelijaTekstas">Karnavalas „Princesė ir varlius”</p>
-
-        <div class="pinnedBg">
-            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
-            <button onclick="informacija()" class="informacija" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
-        </div>
-
-        <div class="vardas">
-            <i class="fa-regular fa-user-circle vardasIcon"></i>
-            <p class="pagrTekstas">Šešėlis</p>
-            <p class="vardasAntrTekstas">Aurelija</p>
-        </div>
-        <div class="separationLine1"><hr></div>
-        <div class="apie">
-            <i class="fa-regular fa-circle-question karnavalasIcon" style="display: flex;"></i>
-            <p class="pagrTekstas">Apie rolę:</p>
-            <p class="antrTekstas">Rolės aprašymas.</p>
-        </div>
-        <div class="separationLine1"><hr></div>
-        <div class="pasiruosimas">
-            <i class="fa-solid fa-suitcase karnavalasIcon" style="display: flex;"></i>
-            <p class="pagrTekstas">Pasiruošti:</p>
-            <p class="antrTekstas">Pasiruošimo aprašymas.</p>
-        </div>
-        <div class="separationLine1"><hr></div>
-        <div class="apranga">
-            <i class="fa-solid fa-shirt karnavalasIcon" style="display: flex;"></i>
-            <p class="pagrTekstas">Apranga:</p>
-            <p class="antrTekstas">Aprangos aprašymas.</p>
-        </div>
-        <div class="separationLine1"><hr></div>
-        <div class="vaidinimas">
-            <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
-            <p class="pagrTekstas">Vaidinimo eiga:</p>
-            <p class="antrTekstas">Vaidinimo eigos aprašymas.</p>
-            <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
-        </div>
-        <div class="separationLine1"><hr></div>
-        <div class="papildomai">
-            <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
-            <p class="pagrTekstas">Papildomai:</p>
-            <p class="antrTekstas">Papildomai (garso takeliai ir pan.) aprašymas.</p>
+            <p class="antrTekstas">nėra informacijos</p>
             <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
         </div>
     </div>
@@ -6286,7 +6112,6 @@
             document.getElementById("Berzuna").style.backgroundColor = "black";
             document.getElementById("Nojus").style.backgroundColor = "black";
             document.getElementById("Agnieska").style.backgroundColor = "black";
-            document.getElementById("Aurelija").style.backgroundColor = "black";
             document.getElementById("Arune").style.transition = "none";
             document.getElementById("Smilte").style.transition = "none";
             document.getElementById("Adriana").style.transition = "none";
@@ -6307,7 +6132,6 @@
             document.getElementById("Berzuna").style.transition = "none";
             document.getElementById("Nojus").style.transition = "none";
             document.getElementById("Agnieska").style.transition = "none";
-            document.getElementById("Aurelija").style.transition = "none";
         }
         else if (
             ctrlShiftKey(e, '2')
@@ -6347,7 +6171,6 @@
             document.getElementById("Berzuna").style.backgroundColor = "black";
             document.getElementById("Nojus").style.backgroundColor = "black";
             document.getElementById("Agnieska").style.backgroundColor = "black";
-            document.getElementById("Aurelija").style.backgroundColor = "black";
             document.getElementById("Arune").style.transition = "none";
             document.getElementById("Smilte").style.transition = "none";
             document.getElementById("Adriana").style.transition = "none";
@@ -6368,7 +6191,6 @@
             document.getElementById("Berzuna").style.transition = "none";
             document.getElementById("Nojus").style.transition = "none";
             document.getElementById("Agnieska").style.transition = "none";
-            document.getElementById("Aurelija").style.transition = "none";
         }
         else if (
             ctrlShiftKey(e, '3')
@@ -6408,7 +6230,6 @@
             document.getElementById("Berzuna").style.backgroundColor = "black";
             document.getElementById("Nojus").style.backgroundColor = "black";
             document.getElementById("Agnieska").style.backgroundColor = "black";
-            document.getElementById("Aurelija").style.backgroundColor = "black";
             document.getElementById("Arune").style.transition = "none";
             document.getElementById("Smilte").style.transition = "none";
             document.getElementById("Adriana").style.transition = "none";
@@ -6429,7 +6250,6 @@
             document.getElementById("Berzuna").style.transition = "none";
             document.getElementById("Nojus").style.transition = "none";
             document.getElementById("Agnieska").style.transition = "none";
-            document.getElementById("Aurelija").style.transition = "none";
         }
         else if (
             ctrlShiftKey(e, '4')
@@ -6469,7 +6289,6 @@
             document.getElementById("Berzuna").style.backgroundColor = "black";
             document.getElementById("Nojus").style.backgroundColor = "black";
             document.getElementById("Agnieska").style.backgroundColor = "black";
-            document.getElementById("Aurelija").style.backgroundColor = "black";
             document.getElementById("Arune").style.transition = "none";
             document.getElementById("Smilte").style.transition = "none";
             document.getElementById("Adriana").style.transition = "none";
@@ -6490,7 +6309,6 @@
             document.getElementById("Berzuna").style.transition = "none";
             document.getElementById("Nojus").style.transition = "none";
             document.getElementById("Agnieska").style.transition = "none";
-            document.getElementById("Aurelija").style.transition = "none";
         }
         else if (
             ctrlShiftKey(e, '5')
@@ -6530,7 +6348,6 @@
             document.getElementById("Berzuna").style.backgroundColor = "black";
             document.getElementById("Nojus").style.backgroundColor = "black";
             document.getElementById("Agnieska").style.backgroundColor = "black";
-            document.getElementById("Aurelija").style.backgroundColor = "black";
             document.getElementById("Arune").style.transition = "none";
             document.getElementById("Smilte").style.transition = "none";
             document.getElementById("Adriana").style.transition = "none";
@@ -6551,7 +6368,6 @@
             document.getElementById("Berzuna").style.transition = "none";
             document.getElementById("Nojus").style.transition = "none";
             document.getElementById("Agnieska").style.transition = "none";
-            document.getElementById("Aurelija").style.transition = "none";
         }
         };
 
@@ -6560,6 +6376,7 @@
         function deny(){
             document.getElementById("accessDenied").style.display = "flex";
             document.getElementById("uzdraustaRestart").style.animation = "prixClipFix 10s linear";
+            document.getElementById("body").style.overflowY = "hidden";
             setTimeout(() => {
                 document.getElementById("ban").style.opacity = "0";
             }, 100);
@@ -6586,7 +6403,7 @@
         // scrollinimo animacijos, dark mode
         window.onscroll = function() {scrollFunction()};
         function scrollFunction() {
-            if (document.body.scrollTop > 25 || document.documentElement.scrollTop > 25) {
+            if (document.body.scrollTop > 22 || document.documentElement.scrollTop > 22) {
                 document.getElementById("kelionesMarsrutasTekstas").style.opacity = "0";
                 document.getElementById("kelionesMarsrutasTekstas2").style.opacity = "1";
                 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -6633,8 +6450,6 @@
                     document.getElementById("infoNojus").style.backgroundColor = "rgba(20, 20, 20, 0.75)";
                     document.getElementById("infoAgnieska").style.boxShadow = "0 0 10px #333333";
                     document.getElementById("infoAgnieska").style.backgroundColor = "rgba(20, 20, 20, 0.75)";
-                    document.getElementById("infoAurelija").style.boxShadow = "0 0 10px #333333";
-                    document.getElementById("infoAurelija").style.backgroundColor = "rgba(20, 20, 20, 0.75)";
                 }
                 else{
                     document.getElementById("info").style.boxShadow = "0 0 10px lightgrey";
@@ -6680,8 +6495,6 @@
                     document.getElementById("infoNojus").style.backgroundColor = "rgba(242, 242, 242, 0.75)";
                     document.getElementById("infoAgnieska").style.boxShadow = "0 0 10px lightgrey";
                     document.getElementById("infoAgnieska").style.backgroundColor = "rgba(242, 242, 242, 0.75)";
-                    document.getElementById("infoAurelija").style.boxShadow = "0 0 10px lightgrey";
-                    document.getElementById("infoAurelija").style.backgroundColor = "rgba(242, 242, 242, 0.75)";
                 }
 
                 document.getElementById("AruneTekstas").style.opacity = "0";
@@ -6724,8 +6537,6 @@
                 document.getElementById("NojusTekstas2").style.opacity = "1";
                 document.getElementById("AgnieskaTekstas").style.opacity = "0";
                 document.getElementById("AgnieskaTekstas2").style.opacity = "1";
-                document.getElementById("AurelijaTekstas").style.opacity = "0";
-                document.getElementById("AurelijaTekstas2").style.opacity = "1";
             }
             else {
                 document.getElementById("kelionesMarsrutasTekstas").style.opacity = "1";
@@ -6754,7 +6565,6 @@
                     document.getElementById("infoBerzuna").style.backgroundColor = "rgba(20, 20, 20, 1)";
                     document.getElementById("infoNojus").style.backgroundColor = "rgba(20, 20, 20, 1)";
                     document.getElementById("infoAgnieska").style.backgroundColor = "rgba(20, 20, 20, 1)";
-                    document.getElementById("infoAurelija").style.backgroundColor = "rgba(20, 20, 20, 1)";
                 }
                 else{
                     document.getElementById("info").style.backgroundColor = "rgba(242, 242, 242, 1)";
@@ -6779,7 +6589,6 @@
                     document.getElementById("infoBerzuna").style.backgroundColor = "rgba(242, 242, 242, 1)";
                     document.getElementById("infoNojus").style.backgroundColor = "rgba(242, 242, 242, 1)";
                     document.getElementById("infoAgnieska").style.backgroundColor = "rgba(242, 242, 242, 1)";
-                    document.getElementById("infoAurelija").style.backgroundColor = "rgba(242, 242, 242, 1)";
                 }
 
                 document.getElementById("AruneTekstas").style.opacity = "1";
@@ -6842,9 +6651,6 @@
                 document.getElementById("AgnieskaTekstas").style.opacity = "1";
                 document.getElementById("AgnieskaTekstas2").style.opacity = "0";
                 document.getElementById("infoAgnieska").style.boxShadow = "none";
-                document.getElementById("AurelijaTekstas").style.opacity = "1";
-                document.getElementById("AurelijaTekstas2").style.opacity = "0";
-                document.getElementById("infoAurelija").style.boxShadow = "none";
             }
         }
 
@@ -7028,7 +6834,7 @@
 
         function scenarijus() {
             document.getElementById("pinnedBackground").style.display = "block";
-            document.getElementById("body").style.overflow = "hidden";
+            document.getElementById("body").style.overflowY = "hidden";
             setTimeout(() => {
                 document.getElementById("atsisiunciamasScenarijus").style.bottom = "0";
                 document.getElementById("pinnedBackground").style.opacity = "1";
@@ -7042,12 +6848,12 @@
             }, 6010);
             setTimeout(() => {
                 document.getElementById("pinnedBackground").style.display = "none";
-                document.getElementById("body").style.overflow = "scroll";
+                document.getElementById("body").style.overflowY = "scroll";
             }, 6310);
         }
         function informacija() {
             document.getElementById("pinnedBackground").style.display = "block";
-            document.getElementById("body").style.overflow = "hidden";
+            document.getElementById("body").style.overflowY = "hidden";
             setTimeout(() => {
                 document.getElementById("rodomaInformacija").style.bottom = "0";
                 document.getElementById("pinnedBackground").style.opacity = "1";
@@ -7060,16 +6866,18 @@
             document.getElementById("pinnedBackground").style.pointerEvents = "none";
             setTimeout(() => {
                 document.getElementById("pinnedBackground").style.display = "none";
-                document.getElementById("body").style.overflow = "scroll";
+                document.getElementById("body").style.overflowY = "scroll";
             }, 300);
         }
         
         function openSoundTracks() {
+            document.getElementById("body").style.overflowY = "hidden";
             setTimeout(() => {
                 document.getElementById("soundManager").style.bottom = "0";
             }, 10);
         }
         function closeSoundTracks() {
+            document.getElementById("body").style.overflowY = "scroll";
             setTimeout(() => {
                 document.getElementById("soundManager").style.bottom = "-100%";
             }, 10);
@@ -7191,7 +6999,7 @@
         }
         function atsisiustiAudio1() {
             document.getElementById("pinnedBackground").style.display = "block";
-            document.getElementById("body").style.overflow = "hidden";
+            document.getElementById("body").style.overflowY = "hidden";
             setTimeout(() => {
                 document.getElementById("atsisiunciamasAudio1").style.bottom = "0";
                 document.getElementById("pinnedBackground").style.opacity = "1";
@@ -7205,12 +7013,12 @@
             }, 6010);
             setTimeout(() => {
                 document.getElementById("pinnedBackground").style.display = "none";
-                document.getElementById("body").style.overflow = "scroll";
+                document.getElementById("body").style.overflowY = "scroll";
             }, 6310);
         }
         function atsisiustiAudio2() {
             document.getElementById("pinnedBackground").style.display = "block";
-            document.getElementById("body").style.overflow = "hidden";
+            document.getElementById("body").style.overflowY = "hidden";
             setTimeout(() => {
                 document.getElementById("atsisiunciamasAudio2").style.bottom = "0";
                 document.getElementById("pinnedBackground").style.opacity = "1";
@@ -7224,12 +7032,12 @@
             }, 6010);
             setTimeout(() => {
                 document.getElementById("pinnedBackground").style.display = "none";
-                document.getElementById("body").style.overflow = "scroll";
+                document.getElementById("body").style.overflowY = "scroll";
             }, 6310);
         }
         function atsisiustiAudio3() {
             document.getElementById("pinnedBackground").style.display = "block";
-            document.getElementById("body").style.overflow = "hidden";
+            document.getElementById("body").style.overflowY = "hidden";
             setTimeout(() => {
                 document.getElementById("atsisiunciamasAudio3").style.bottom = "0";
                 document.getElementById("pinnedBackground").style.opacity = "1";
@@ -7243,12 +7051,12 @@
             }, 6010);
             setTimeout(() => {
                 document.getElementById("pinnedBackground").style.display = "none";
-                document.getElementById("body").style.overflow = "scroll";
+                document.getElementById("body").style.overflowY = "scroll";
             }, 6310);
         }
         function atsisiustiAudio4() {
             document.getElementById("pinnedBackground").style.display = "block";
-            document.getElementById("body").style.overflow = "hidden";
+            document.getElementById("body").style.overflowY = "hidden";
             setTimeout(() => {
                 document.getElementById("atsisiunciamasAudio4").style.bottom = "0";
                 document.getElementById("pinnedBackground").style.opacity = "1";
@@ -7262,12 +7070,12 @@
             }, 6010);
             setTimeout(() => {
                 document.getElementById("pinnedBackground").style.display = "none";
-                document.getElementById("body").style.overflow = "scroll";
+                document.getElementById("body").style.overflowY = "scroll";
             }, 6310);
         }
         function atsisiustiAudio5() {
             document.getElementById("pinnedBackground").style.display = "block";
-            document.getElementById("body").style.overflow = "hidden";
+            document.getElementById("body").style.overflowY = "hidden";
             setTimeout(() => {
                 document.getElementById("atsisiunciamasAudio5").style.bottom = "0";
                 document.getElementById("pinnedBackground").style.opacity = "1";
@@ -7281,7 +7089,7 @@
             }, 6010);
             setTimeout(() => {
                 document.getElementById("pinnedBackground").style.display = "none";
-                document.getElementById("body").style.overflow = "scroll";
+                document.getElementById("body").style.overflowY = "scroll";
             }, 6310);
         }
 
@@ -7644,7 +7452,8 @@
                     document.getElementById("taskelis5").style.backgroundColor = "transparent";
                     document.getElementById("taskelis6").style.backgroundColor = "transparent";
                     document.getElementById("loading").style.display = "none";
-                    document.getElementById("body").style.overflow = "scroll";
+                    document.getElementById("body").style.overflowX = "hidden";
+                    document.getElementById("body").style.overflowY = "scroll";
                 }, 3900);
           }
           else if(form.pin.value == "827482") //Arune
@@ -7679,7 +7488,8 @@
                     document.getElementById("taskelis5").style.backgroundColor = "transparent";
                     document.getElementById("taskelis6").style.backgroundColor = "transparent";
                     document.getElementById("loading").style.display = "none";
-                    document.getElementById("body").style.overflow = "scroll";
+                    document.getElementById("body").style.overflowX = "hidden";
+                    document.getElementById("body").style.overflowY = "scroll";
                 }, 3900);
           }
           else if(form.pin.value == "010473") //Smilte
@@ -7714,7 +7524,8 @@
                     document.getElementById("taskelis5").style.backgroundColor = "transparent";
                     document.getElementById("taskelis6").style.backgroundColor = "transparent";
                     document.getElementById("loading").style.display = "none";
-                    document.getElementById("body").style.overflow = "scroll";
+                    document.getElementById("body").style.overflowX = "hidden";
+                    document.getElementById("body").style.overflowY = "scroll";
                 }, 3900);
           }
           else if(form.pin.value == "654029") //Adriana
@@ -7749,7 +7560,8 @@
                     document.getElementById("taskelis5").style.backgroundColor = "transparent";
                     document.getElementById("taskelis6").style.backgroundColor = "transparent";
                     document.getElementById("loading").style.display = "none";
-                    document.getElementById("body").style.overflow = "scroll";
+                    document.getElementById("body").style.overflowX = "hidden";
+                    document.getElementById("body").style.overflowY = "scroll";
                 }, 3900);
           }
           else if(form.pin.value == "183748") //Norbertas
@@ -7784,7 +7596,8 @@
                     document.getElementById("taskelis5").style.backgroundColor = "transparent";
                     document.getElementById("taskelis6").style.backgroundColor = "transparent";
                     document.getElementById("loading").style.display = "none";
-                    document.getElementById("body").style.overflow = "scroll";
+                    document.getElementById("body").style.overflowX = "hidden";
+                    document.getElementById("body").style.overflowY = "scroll";
                 }, 3900);
           }
           else if(form.pin.value == "028482") //Meta
@@ -7819,7 +7632,8 @@
                     document.getElementById("taskelis5").style.backgroundColor = "transparent";
                     document.getElementById("taskelis6").style.backgroundColor = "transparent";
                     document.getElementById("loading").style.display = "none";
-                    document.getElementById("body").style.overflow = "scroll";
+                    document.getElementById("body").style.overflowX = "hidden";
+                    document.getElementById("body").style.overflowY = "scroll";
                 }, 3900);
           }
           else if(form.pin.value == "538204") //Justina
@@ -7854,7 +7668,8 @@
                     document.getElementById("taskelis5").style.backgroundColor = "transparent";
                     document.getElementById("taskelis6").style.backgroundColor = "transparent";
                     document.getElementById("loading").style.display = "none";
-                    document.getElementById("body").style.overflow = "scroll";
+                    document.getElementById("body").style.overflowX = "hidden";
+                    document.getElementById("body").style.overflowY = "scroll";
                 }, 3900);
           }
           else if(form.pin.value == "854935") //Mindaugasd
@@ -7889,7 +7704,8 @@
                     document.getElementById("taskelis5").style.backgroundColor = "transparent";
                     document.getElementById("taskelis6").style.backgroundColor = "transparent";
                     document.getElementById("loading").style.display = "none";
-                    document.getElementById("body").style.overflow = "scroll";
+                    document.getElementById("body").style.overflowX = "hidden";
+                    document.getElementById("body").style.overflowY = "scroll";
                 }, 3900);
           }
           else if(form.pin.value == "996043") //Dovydas
@@ -7924,7 +7740,8 @@
                     document.getElementById("taskelis5").style.backgroundColor = "transparent";
                     document.getElementById("taskelis6").style.backgroundColor = "transparent";
                     document.getElementById("loading").style.display = "none";
-                    document.getElementById("body").style.overflow = "scroll";
+                    document.getElementById("body").style.overflowX = "hidden";
+                    document.getElementById("body").style.overflowY = "scroll";
                 }, 3900);
           }
           else if(form.pin.value == "742094") //Matas
@@ -7959,7 +7776,8 @@
                     document.getElementById("taskelis5").style.backgroundColor = "transparent";
                     document.getElementById("taskelis6").style.backgroundColor = "transparent";
                     document.getElementById("loading").style.display = "none";
-                    document.getElementById("body").style.overflow = "scroll";
+                    document.getElementById("body").style.overflowX = "hidden";
+                    document.getElementById("body").style.overflowY = "scroll";
                 }, 3900);
           }
           else if(form.pin.value == "493793") //Aleksandra
@@ -7994,7 +7812,8 @@
                     document.getElementById("taskelis5").style.backgroundColor = "transparent";
                     document.getElementById("taskelis6").style.backgroundColor = "transparent";
                     document.getElementById("loading").style.display = "none";
-                    document.getElementById("body").style.overflow = "scroll";
+                    document.getElementById("body").style.overflowX = "hidden";
+                    document.getElementById("body").style.overflowY = "scroll";
                 }, 3900);
           }
           else if(form.pin.value == "282739") //Samanta
@@ -8029,7 +7848,8 @@
                     document.getElementById("taskelis5").style.backgroundColor = "transparent";
                     document.getElementById("taskelis6").style.backgroundColor = "transparent";
                     document.getElementById("loading").style.display = "none";
-                    document.getElementById("body").style.overflow = "scroll";
+                    document.getElementById("body").style.overflowX = "hidden";
+                    document.getElementById("body").style.overflowY = "scroll";
                 }, 3900);
           }
           else if(form.pin.value == "102023") //Arnas
@@ -8064,7 +7884,8 @@
                     document.getElementById("taskelis5").style.backgroundColor = "transparent";
                     document.getElementById("taskelis6").style.backgroundColor = "transparent";
                     document.getElementById("loading").style.display = "none";
-                    document.getElementById("body").style.overflow = "scroll";
+                    document.getElementById("body").style.overflowX = "hidden";
+                    document.getElementById("body").style.overflowY = "scroll";
                 }, 3900);
           }
           else if(form.pin.value == "814858") //Milena
@@ -8099,7 +7920,8 @@
                     document.getElementById("taskelis5").style.backgroundColor = "transparent";
                     document.getElementById("taskelis6").style.backgroundColor = "transparent";
                     document.getElementById("loading").style.display = "none";
-                    document.getElementById("body").style.overflow = "scroll";
+                    document.getElementById("body").style.overflowX = "hidden";
+                    document.getElementById("body").style.overflowY = "scroll";
                 }, 3900);
           }
           else if(form.pin.value == "384739") //Emilija
@@ -8134,7 +7956,8 @@
                     document.getElementById("taskelis5").style.backgroundColor = "transparent";
                     document.getElementById("taskelis6").style.backgroundColor = "transparent";
                     document.getElementById("loading").style.display = "none";
-                    document.getElementById("body").style.overflow = "scroll";
+                    document.getElementById("body").style.overflowX = "hidden";
+                    document.getElementById("body").style.overflowY = "scroll";
                 }, 3900);
           }
           else if(form.pin.value == "773752") //Modestas
@@ -8169,7 +7992,8 @@
                     document.getElementById("taskelis5").style.backgroundColor = "transparent";
                     document.getElementById("taskelis6").style.backgroundColor = "transparent";
                     document.getElementById("loading").style.display = "none";
-                    document.getElementById("body").style.overflow = "scroll";
+                    document.getElementById("body").style.overflowX = "hidden";
+                    document.getElementById("body").style.overflowY = "scroll";
                 }, 3900);
           }
           else if(form.pin.value == "324857") //Mindaugasr
@@ -8204,7 +8028,8 @@
                     document.getElementById("taskelis5").style.backgroundColor = "transparent";
                     document.getElementById("taskelis6").style.backgroundColor = "transparent";
                     document.getElementById("loading").style.display = "none";
-                    document.getElementById("body").style.overflow = "scroll";
+                    document.getElementById("body").style.overflowX = "hidden";
+                    document.getElementById("body").style.overflowY = "scroll";
                 }, 3900);
           }
           else if(form.pin.value == "039586") //Gabriele
@@ -8239,7 +8064,8 @@
                     document.getElementById("taskelis5").style.backgroundColor = "transparent";
                     document.getElementById("taskelis6").style.backgroundColor = "transparent";
                     document.getElementById("loading").style.display = "none";
-                    document.getElementById("body").style.overflow = "scroll";
+                    document.getElementById("body").style.overflowX = "hidden";
+                    document.getElementById("body").style.overflowY = "scroll";
                 }, 3900);
           }
           else if(form.pin.value == "645751") //Berzuna
@@ -8274,7 +8100,8 @@
                     document.getElementById("taskelis5").style.backgroundColor = "transparent";
                     document.getElementById("taskelis6").style.backgroundColor = "transparent";
                     document.getElementById("loading").style.display = "none";
-                    document.getElementById("body").style.overflow = "scroll";
+                    document.getElementById("body").style.overflowX = "hidden";
+                    document.getElementById("body").style.overflowY = "scroll";
                 }, 3900);
           }
           else if(form.pin.value == "192938") //Nojus
@@ -8309,7 +8136,8 @@
                     document.getElementById("taskelis5").style.backgroundColor = "transparent";
                     document.getElementById("taskelis6").style.backgroundColor = "transparent";
                     document.getElementById("loading").style.display = "none";
-                    document.getElementById("body").style.overflow = "scroll";
+                    document.getElementById("body").style.overflowX = "hidden";
+                    document.getElementById("body").style.overflowY = "scroll";
                 }, 3900);
           }
           else if(form.pin.value == "850048") //Agnieska
@@ -8344,42 +8172,8 @@
                     document.getElementById("taskelis5").style.backgroundColor = "transparent";
                     document.getElementById("taskelis6").style.backgroundColor = "transparent";
                     document.getElementById("loading").style.display = "none";
-                    document.getElementById("body").style.overflow = "scroll";
-                }, 3900);
-          }
-          else if(form.pin.value == "479377") //Aurelija
-                {
-                    document.cookie = "Aurelija=seselis";
-                document.getElementById("loading").style.display = "flex";
-                document.getElementById("ivestiKoda").style.opacity = "0.3";
-                document.querySelector('#topInfoAurelija').scrollIntoView({
-                    behavior: 'smooth'
-                });
-                document.getElementById("keypad").style.opacity = "0.3";
-                document.getElementById("istrynimas").style.color = "transparent";
-                document.getElementById("istrynimas").style.pointerEvents = "none";
-                setTimeout(() => {
-                    document.getElementById("keypad").style.opacity = "1";
-                    document.getElementById("ivestiKoda").style.opacity = "1";
-                    document.getElementById("screen").style.top = "-100%";
-                    document.getElementById("screen").style.backgroundColor = "transparent";
-                    document.getElementById("display").style.top = "-100%";
-                    document.getElementById("Aurelija").style.display = "block";
-                }, 3600);
-                setTimeout(() => {
-                    document.getElementById("Aurelija").style.paddingTop = "0";
-                }, 3620);
-                setTimeout(() => {
-                    inputas = ""
-                    document.getElementById("kodas").value = '';
-                    document.getElementById("taskelis1").style.backgroundColor = "transparent";
-                    document.getElementById("taskelis2").style.backgroundColor = "transparent";
-                    document.getElementById("taskelis3").style.backgroundColor = "transparent";
-                    document.getElementById("taskelis4").style.backgroundColor = "transparent";
-                    document.getElementById("taskelis5").style.backgroundColor = "transparent";
-                    document.getElementById("taskelis6").style.backgroundColor = "transparent";
-                    document.getElementById("loading").style.display = "none";
-                    document.getElementById("body").style.overflow = "scroll";
+                    document.getElementById("body").style.overflowX = "hidden";
+                    document.getElementById("body").style.overflowY = "scroll";
                 }, 3900);
           }
             else{
@@ -8773,36 +8567,20 @@
                 document.getElementById("Agnieska").style.paddingTop = "100vh";
             }
         }
-        let Aurelija = getCookie("Aurelija");
-        if (Aurelija != "") {
-            document.getElementById("Aurelija").style.display = "block";
-            document.getElementById("Aurelija").style.paddingTop = "0";
-            setTimeout(() => {
-                document.querySelector('#topInfoAurelija').scrollIntoView({
-                behavior: 'smooth'});
-            }, 500);
-        }
-        else {
-            document.getElementById("Aurelija").style.display = "none";
-            document.getElementById("Aurelija").style.paddingTop = "100vh";
-            if (Aurelija != "" && Aurelija != null) {
-                document.getElementById("Aurelija").style.display = "none";
-                document.getElementById("Aurelija").style.paddingTop = "100vh";
-            }
-        }
 
-        if (kelioneI != "" || Arune != "" || Smilte != "" || Adriana != "" || Norbertas != "" || Meta != "" || Justina != "" || Mindaugasd != "" || Dovydas != "" || Matas != "" || Aleksandra != "" || Samanta != "" || Arnas != "" || Milena != "" || Emilija != "" || Modestas != "" || Mindaugasr != "" || Gabriele != "" || Berzuna != "" || Nojus != "" || Agnieska != "" || Aurelija != "") {
+        if (kelioneI != "" || Arune != "" || Smilte != "" || Adriana != "" || Norbertas != "" || Meta != "" || Justina != "" || Mindaugasd != "" || Dovydas != "" || Matas != "" || Aleksandra != "" || Samanta != "" || Arnas != "" || Milena != "" || Emilija != "" || Modestas != "" || Mindaugasr != "" || Gabriele != "" || Berzuna != "" || Nojus != "" || Agnieska != "") {
             document.getElementById("screen").style.top = "-100%";
             document.getElementById("screen").style.backgroundColor = "transparent";
             document.getElementById("display").style.top = "-100%";
-            document.getElementById("body").style.overflow = "scroll";
+            document.getElementById("body").style.overflowX = "hidden";
+            document.getElementById("body").style.overflowY = "scroll";
         }
         else {
             document.getElementById("screen").style.top = "0";
             document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
             document.getElementById("display").style.top = "0";
             document.getElementById("body").style.overflow = "hidden";
-            if (kelioneI != "" && kelioneI != null || Arune != "" && Arune != null || Smilte != "" && Smilte != null || Adriana != "" && Adriana != null || Norbertas != "" && Norbertas != null || Meta != "" && Meta != null || Justina != "" && Justina != null || Mindaugasd != "" && Mindaugasd != null || Dovydas != "" && Dovydas != null || Matas != "" && Matas != null || Aleksandra != "" && Aleksandra != null || Samanta != "" && Samanta != null || Arnas != "" && Arnas != null || Milena != "" && Milena != null || Emilija != "" && Emilija != null || Modestas != "" && Modestas != null || Mindaugasr != "" && Mindaugasr != null || Gabriele != "" && Gabriele != null || Berzuna != "" && Berzuna || Nojus != "" && Nojus != null || Agnieska != "" && Agnieska != null || Aurelija != "" && Aurelija != null) {
+            if (kelioneI != "" && kelioneI != null || Arune != "" && Arune != null || Smilte != "" && Smilte != null || Adriana != "" && Adriana != null || Norbertas != "" && Norbertas != null || Meta != "" && Meta != null || Justina != "" && Justina != null || Mindaugasd != "" && Mindaugasd != null || Dovydas != "" && Dovydas != null || Matas != "" && Matas != null || Aleksandra != "" && Aleksandra != null || Samanta != "" && Samanta != null || Arnas != "" && Arnas != null || Milena != "" && Milena != null || Emilija != "" && Emilija != null || Modestas != "" && Modestas != null || Mindaugasr != "" && Mindaugasr != null || Gabriele != "" && Gabriele != null || Berzuna != "" && Berzuna || Nojus != "" && Nojus != null || Agnieska != "" && Agnieska != null) {
                 document.getElementById("screen").style.top = "0";
                 document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
                 document.getElementById("display").style.top = "0";
@@ -9123,21 +8901,6 @@
                 document.getElementById("AgnieskaUzdarymas").style.pointerEvents = "all";
                 document.getElementById("body").style.overflow = "hidden";
                 document.getElementById("Agnieska").style.display = "none";
-            }, 310);
-        }
-        function closeAurelija() {
-            document.cookie = "Aurelija=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
-            document.getElementById("AurelijaUzdarymas").style.pointerEvents = "none";
-            setTimeout(() => {
-                document.getElementById("screen").style.top = "0";
-                document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
-                document.getElementById("display").style.top = "0";
-                document.getElementById("Aurelija").style.paddingTop = "100vh";
-            }, 10);
-            setTimeout(() => {
-                document.getElementById("AurelijaUzdarymas").style.pointerEvents = "all";
-                document.getElementById("body").style.overflow = "hidden";
-                document.getElementById("Aurelija").style.display = "none";
             }, 310);
         }
     </script>
