@@ -2838,92 +2838,6 @@
         #ModestasUzdarymas:active{
             opacity: 0.2;
         }
-        /* Mindaugasr */
-        #Mindaugasr{
-            width: 100%;
-            height: 100%;
-            background-color: #f2f2f2;
-            transition: 0.2s;
-            padding-bottom: 90px;
-            overflow: hidden;
-            overflow-y: scroll;
-            padding-top: 100vh;
-            display: none;
-        }
-        #topInfoMindaugasr{
-            position: absolute;
-            width: 5px;
-            height: 5px;
-            top: 0;
-            left: 0;
-        }
-        #infoMindaugasr{
-            width: 100%;
-            height: 60px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: rgba(242, 242, 242, 1);
-            -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
-            color: black;
-            position: fixed;
-            left: 0;
-            top: 0;
-            right: 0;
-            z-index: 10;
-        }
-        #infoMindaugasr i{
-            font-size: 15px;
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            z-index: 11;
-            transition: 0.15s;
-            cursor: pointer;
-            width: 30px;
-            height: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 100%;
-            background-color: #DEDEDE;
-            color: black;
-        }
-        #MindaugasrTekstas{
-            font-size: 25px;
-            font-weight: 600;
-            color: black;
-            overflow: hidden;
-            white-space: nowrap;
-            display: inline-block;
-            text-overflow: ellipsis;
-            width: 100%;
-            position: absolute;
-            top: 60px;
-            padding-left: 15px;
-            padding-right: 15px;
-            z-index: 2;
-        }
-        #MindaugasrTekstas2{
-            font-size: 20px;
-            font-weight: 600;
-            color: black;
-            overflow: hidden;
-            white-space: nowrap;
-            display: inline-block;
-            text-overflow: ellipsis;
-            width: 100%;
-            position: absolute;
-            top: 17px;
-            padding-left: 60px;
-            padding-right: 15px;
-            z-index: 10;
-            opacity: 0;
-        }
-        #MindaugasrUzdarymas:active{
-            opacity: 0.2;
-        }
         /* Gabriele */
         #Gabriele{
             width: 100%;
@@ -4050,23 +3964,6 @@
                 color: white;
             }
             #ModestasTekstas2{
-                color: white;
-            }
-            #Mindaugasr{
-                background-color: #141414;
-            }
-            #infoMindaugasr{
-                background-color: rgba(20, 20, 20, 1);
-                color: white;
-            }
-            #infoMindaugasr i{
-                background-color: #282828;
-                color: white;
-            }
-            #MindaugasrTekstas{
-                color: white;
-            }
-            #MindaugasrTekstas2{
                 color: white;
             }
             #Gabriele{
@@ -5567,85 +5464,6 @@
             <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
         </div>
     </div>
-    <div id="Mindaugasr">
-        <div id="girlianda">
-            <div class="zaliaGirlianda"></div>
-            <div class="raudonaGirlianda"></div>
-            <div class="zaliaGirlianda"></div>
-            <div class="raudonaGirlianda"></div>
-            <div class="zaliaGirlianda"></div>
-            <div class="raudonaGirlianda"></div>
-            <div class="zaliaGirlianda"></div>
-            <div class="raudonaGirlianda"></div>
-            <div class="zaliaGirlianda"></div>
-            <div class="raudonaGirlianda"></div>
-        </div>
-        <div id="girlianda2">
-            <div class="zaliaGirlianda"></div>
-            <div class="raudonaGirlianda"></div>
-            <div class="zaliaGirlianda"></div>
-            <div class="raudonaGirlianda"></div>
-            <div class="zaliaGirlianda"></div>
-            <div class="raudonaGirlianda"></div>
-            <div class="zaliaGirlianda"></div>
-            <div class="raudonaGirlianda"></div>
-            <div class="zaliaGirlianda"></div>
-            <div class="raudonaGirlianda"></div>
-        </div>
-        <div id="topInfoMindaugasr"></div>
-        <div id="infoMindaugasr"><i class="fa-solid fa-chevron-down" onclick="closeMindaugasr()" id="MindaugasrUzdarymas" ontouchstart></i><p id="MindaugasrTekstas2">Karnavalas „Princesė ir varlius”</p></div>
-        <p id="MindaugasrTekstas">Karnavalas „Princesė ir varlius”</p>
-
-        <div class="pinnedBg">
-            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
-            <button onclick="informacija()" class="informacija" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
-        </div>
-
-        <div class="vardas">
-            <i class="fa-regular fa-user-circle vardasIcon"></i>
-            <p class="pagrTekstas">Princesės draugės Šarlotės tėtis</p>
-            <p class="vardasAntrTekstas">Mindaugas</p>
-        </div>
-        <div class="separationLine1"><hr></div>
-        <div class="apie">
-            <i class="fa-regular fa-circle-question karnavalasIcon" style="display: flex;"></i>
-            <p class="pagrTekstas">Apie rolę:</p>
-            <p class="antrTekstas">Turtingas princesės Tianos draugės tėtušis, lepinantis ją.</p>
-        </div>
-        <div class="separationLine1"><hr></div>
-        <div class="pasiruosimas">
-            <i class="fa-solid fa-suitcase karnavalasIcon" style="display: flex;"></i>
-            <p class="pagrTekstas">Pasiruošti:</p>
-            <p class="antrTekstas">nėra informacijos</p>
-        </div>
-        <div class="separationLine1"><hr></div>
-        <div class="apranga">
-            <i class="fa-solid fa-shirt karnavalasIcon" style="display: flex;"></i>
-            <p class="pagrTekstas">Apranga:</p>
-            <p class="antrTekstas">nėra informacijos</p>
-        </div>
-        <div class="separationLine1"><hr></div>
-        <div class="zodziai">
-            <i class="fa-regular fa-comments karnavalasIcon" style="display: flex;"></i>
-            <p class="pagrTekstas">Žodžiai:</p>
-            <p class="antrTekstas">“sveika, Eudora!”<br>“o, tu dar klausi, taip galėjo pasiūti tik geriausia siuvėja”<br><i>(įsiterpia)</i> “aš tau gal geriau…”<br><i>(kreipiasi į mamą)</i> “Eudora, o tu kaip manai, ar tokią pasiūtum?”<br><i>(kreipiasi į Šarlotę)</i> “gerai, princese, turėsi dar vieną suknelę, bet tai bus paskutinė, daugiau tavęs nelepinsiu”</p>
-            <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip. Dalį žodžių gali reikti improvizuoti.</p>
-        </div>
-        <div class="separationLine1"><hr></div>
-        <div class="vaidinimas">
-            <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
-            <p class="pagrTekstas">Vaidinimo eiga:</p>
-            <p class="antrTekstas">Įeina Šarlotės tėtis.<br>Šarlotės tėtis paima Šarlotę į rankas ir džiaugsmingai iškelia.<br></p>
-            <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
-        </div>
-        <div class="separationLine1"><hr></div>
-        <div class="papildomai">
-            <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
-            <p class="pagrTekstas">Papildomai:</p>
-            <p class="antrTekstas">nėra informacijos</p>
-            <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
-        </div>
-    </div>
     <div id="Gabriele">
         <div id="girlianda">
             <div class="zaliaGirlianda"></div>
@@ -6107,7 +5925,6 @@
             document.getElementById("Milena").style.backgroundColor = "black";
             document.getElementById("Emilija").style.backgroundColor = "black";
             document.getElementById("Modestas").style.backgroundColor = "black";
-            document.getElementById("Mindaugasr").style.backgroundColor = "black";
             document.getElementById("Gabriele").style.backgroundColor = "black";
             document.getElementById("Berzuna").style.backgroundColor = "black";
             document.getElementById("Nojus").style.backgroundColor = "black";
@@ -6127,7 +5944,6 @@
             document.getElementById("Milena").style.transition = "none";
             document.getElementById("Emilija").style.transition = "none";
             document.getElementById("Modestas").style.transition = "none";
-            document.getElementById("Mindaugasr").style.transition = "none";
             document.getElementById("Gabriele").style.transition = "none";
             document.getElementById("Berzuna").style.transition = "none";
             document.getElementById("Nojus").style.transition = "none";
@@ -6166,7 +5982,6 @@
             document.getElementById("Milena").style.backgroundColor = "black";
             document.getElementById("Emilija").style.backgroundColor = "black";
             document.getElementById("Modestas").style.backgroundColor = "black";
-            document.getElementById("Mindaugasr").style.backgroundColor = "black";
             document.getElementById("Gabriele").style.backgroundColor = "black";
             document.getElementById("Berzuna").style.backgroundColor = "black";
             document.getElementById("Nojus").style.backgroundColor = "black";
@@ -6186,7 +6001,6 @@
             document.getElementById("Milena").style.transition = "none";
             document.getElementById("Emilija").style.transition = "none";
             document.getElementById("Modestas").style.transition = "none";
-            document.getElementById("Mindaugasr").style.transition = "none";
             document.getElementById("Gabriele").style.transition = "none";
             document.getElementById("Berzuna").style.transition = "none";
             document.getElementById("Nojus").style.transition = "none";
@@ -6225,7 +6039,6 @@
             document.getElementById("Milena").style.backgroundColor = "black";
             document.getElementById("Emilija").style.backgroundColor = "black";
             document.getElementById("Modestas").style.backgroundColor = "black";
-            document.getElementById("Mindaugasr").style.backgroundColor = "black";
             document.getElementById("Gabriele").style.backgroundColor = "black";
             document.getElementById("Berzuna").style.backgroundColor = "black";
             document.getElementById("Nojus").style.backgroundColor = "black";
@@ -6244,8 +6057,6 @@
             document.getElementById("Arnas").style.transition = "none";
             document.getElementById("Milena").style.transition = "none";
             document.getElementById("Emilija").style.transition = "none";
-            document.getElementById("Modestas").style.transition = "none";
-            document.getElementById("Mindaugasr").style.transition = "none";
             document.getElementById("Gabriele").style.transition = "none";
             document.getElementById("Berzuna").style.transition = "none";
             document.getElementById("Nojus").style.transition = "none";
@@ -6284,7 +6095,6 @@
             document.getElementById("Milena").style.backgroundColor = "black";
             document.getElementById("Emilija").style.backgroundColor = "black";
             document.getElementById("Modestas").style.backgroundColor = "black";
-            document.getElementById("Mindaugasr").style.backgroundColor = "black";
             document.getElementById("Gabriele").style.backgroundColor = "black";
             document.getElementById("Berzuna").style.backgroundColor = "black";
             document.getElementById("Nojus").style.backgroundColor = "black";
@@ -6304,7 +6114,6 @@
             document.getElementById("Milena").style.transition = "none";
             document.getElementById("Emilija").style.transition = "none";
             document.getElementById("Modestas").style.transition = "none";
-            document.getElementById("Mindaugasr").style.transition = "none";
             document.getElementById("Gabriele").style.transition = "none";
             document.getElementById("Berzuna").style.transition = "none";
             document.getElementById("Nojus").style.transition = "none";
@@ -6343,7 +6152,6 @@
             document.getElementById("Milena").style.backgroundColor = "black";
             document.getElementById("Emilija").style.backgroundColor = "black";
             document.getElementById("Modestas").style.backgroundColor = "black";
-            document.getElementById("Mindaugasr").style.backgroundColor = "black";
             document.getElementById("Gabriele").style.backgroundColor = "black";
             document.getElementById("Berzuna").style.backgroundColor = "black";
             document.getElementById("Nojus").style.backgroundColor = "black";
@@ -6363,7 +6171,6 @@
             document.getElementById("Milena").style.transition = "none";
             document.getElementById("Emilija").style.transition = "none";
             document.getElementById("Modestas").style.transition = "none";
-            document.getElementById("Mindaugasr").style.transition = "none";
             document.getElementById("Gabriele").style.transition = "none";
             document.getElementById("Berzuna").style.transition = "none";
             document.getElementById("Nojus").style.transition = "none";
@@ -6440,8 +6247,6 @@
                     document.getElementById("infoEmilija").style.backgroundColor = "rgba(20, 20, 20, 0.75)";
                     document.getElementById("infoModestas").style.boxShadow = "0 0 10px #333333";
                     document.getElementById("infoModestas").style.backgroundColor = "rgba(20, 20, 20, 0.75)";
-                    document.getElementById("infoMindaugasr").style.boxShadow = "0 0 10px #333333";
-                    document.getElementById("infoMindaugasr").style.backgroundColor = "rgba(20, 20, 20, 0.75)";
                     document.getElementById("infoGabriele").style.boxShadow = "0 0 10px #333333";
                     document.getElementById("infoGabriele").style.backgroundColor = "rgba(20, 20, 20, 0.75)";
                     document.getElementById("infoBerzuna").style.boxShadow = "0 0 10px #333333";
@@ -6485,8 +6290,6 @@
                     document.getElementById("infoEmilija").style.backgroundColor = "rgba(242, 242, 242, 0.75)";
                     document.getElementById("infoModestas").style.boxShadow = "0 0 10px lightgrey";
                     document.getElementById("infoModestas").style.backgroundColor = "rgba(242, 242, 242, 0.75)";
-                    document.getElementById("infoMindaugasr").style.boxShadow = "0 0 10px lightgrey";
-                    document.getElementById("infoMindaugasr").style.backgroundColor = "rgba(242, 242, 242, 0.75)";
                     document.getElementById("infoGabriele").style.boxShadow = "0 0 10px lightgrey";
                     document.getElementById("infoGabriele").style.backgroundColor = "rgba(242, 242, 242, 0.75)";
                     document.getElementById("infoBerzuna").style.boxShadow = "0 0 10px lightgrey";
@@ -6527,8 +6330,6 @@
                 document.getElementById("EmilijaTekstas2").style.opacity = "1";
                 document.getElementById("ModestasTekstas").style.opacity = "0";
                 document.getElementById("ModestasTekstas2").style.opacity = "1";
-                document.getElementById("MindaugasrTekstas").style.opacity = "0";
-                document.getElementById("MindaugasrTekstas2").style.opacity = "1";
                 document.getElementById("GabrieleTekstas").style.opacity = "0";
                 document.getElementById("GabrieleTekstas2").style.opacity = "1";
                 document.getElementById("BerzunaTekstas").style.opacity = "0";
@@ -6560,7 +6361,6 @@
                     document.getElementById("infoMilena").style.backgroundColor = "rgba(20, 20, 20, 1)";
                     document.getElementById("infoEmilija").style.backgroundColor = "rgba(20, 20, 20, 1)";
                     document.getElementById("infoModestas").style.backgroundColor = "rgba(20, 20, 20, 1)";
-                    document.getElementById("infoMindaugasr").style.backgroundColor = "rgba(20, 20, 20, 1)";
                     document.getElementById("infoGabriele").style.backgroundColor = "rgba(20, 20, 20, 1)";
                     document.getElementById("infoBerzuna").style.backgroundColor = "rgba(20, 20, 20, 1)";
                     document.getElementById("infoNojus").style.backgroundColor = "rgba(20, 20, 20, 1)";
@@ -6584,7 +6384,6 @@
                     document.getElementById("infoMilena").style.backgroundColor = "rgba(242, 242, 242, 1)";
                     document.getElementById("infoEmilija").style.backgroundColor = "rgba(242, 242, 242, 1)";
                     document.getElementById("infoModestas").style.backgroundColor = "rgba(242, 242, 242, 1)";
-                    document.getElementById("infoMindaugasr").style.backgroundColor = "rgba(242, 242, 242, 1)";
                     document.getElementById("infoGabriele").style.backgroundColor = "rgba(242, 242, 242, 1)";
                     document.getElementById("infoBerzuna").style.backgroundColor = "rgba(242, 242, 242, 1)";
                     document.getElementById("infoNojus").style.backgroundColor = "rgba(242, 242, 242, 1)";
@@ -6636,9 +6435,6 @@
                 document.getElementById("ModestasTekstas").style.opacity = "1";
                 document.getElementById("ModestasTekstas2").style.opacity = "0";
                 document.getElementById("infoModestas").style.boxShadow = "none";
-                document.getElementById("MindaugasrTekstas").style.opacity = "1";
-                document.getElementById("MindaugasrTekstas2").style.opacity = "0";
-                document.getElementById("infoMindaugasr").style.boxShadow = "none";
                 document.getElementById("GabrieleTekstas").style.opacity = "1";
                 document.getElementById("GabrieleTekstas2").style.opacity = "0";
                 document.getElementById("infoGabriele").style.boxShadow = "none";
@@ -7996,42 +7792,6 @@
                     document.getElementById("body").style.overflowY = "scroll";
                 }, 3900);
           }
-          else if(form.pin.value == "324857") //Mindaugasr
-                {
-                    document.cookie = "Mindaugasr=princeses_drauges__sarlotes_tetis";
-                document.getElementById("loading").style.display = "flex";
-                document.getElementById("ivestiKoda").style.opacity = "0.3";
-                document.querySelector('#topInfoMindaugasr').scrollIntoView({
-                    behavior: 'smooth'
-                });
-                document.getElementById("keypad").style.opacity = "0.3";
-                document.getElementById("istrynimas").style.color = "transparent";
-                document.getElementById("istrynimas").style.pointerEvents = "none";
-                setTimeout(() => {
-                    document.getElementById("keypad").style.opacity = "1";
-                    document.getElementById("ivestiKoda").style.opacity = "1";
-                    document.getElementById("screen").style.top = "-100%";
-                    document.getElementById("screen").style.backgroundColor = "transparent";
-                    document.getElementById("display").style.top = "-100%";
-                    document.getElementById("Mindaugasr").style.display = "block";
-                }, 3600);
-                setTimeout(() => {
-                    document.getElementById("Mindaugasr").style.paddingTop = "0";
-                }, 3620);
-                setTimeout(() => {
-                    inputas = ""
-                    document.getElementById("kodas").value = '';
-                    document.getElementById("taskelis1").style.backgroundColor = "transparent";
-                    document.getElementById("taskelis2").style.backgroundColor = "transparent";
-                    document.getElementById("taskelis3").style.backgroundColor = "transparent";
-                    document.getElementById("taskelis4").style.backgroundColor = "transparent";
-                    document.getElementById("taskelis5").style.backgroundColor = "transparent";
-                    document.getElementById("taskelis6").style.backgroundColor = "transparent";
-                    document.getElementById("loading").style.display = "none";
-                    document.getElementById("body").style.overflowX = "hidden";
-                    document.getElementById("body").style.overflowY = "scroll";
-                }, 3900);
-          }
           else if(form.pin.value == "039586") //Gabriele
                 {
                     document.cookie = "Gabriele=mama_eudora";
@@ -8482,23 +8242,6 @@
                 document.getElementById("Modestas").style.paddingTop = "100vh";
             }
         }
-        let Mindaugasr = getCookie("Mindaugasr");
-        if (Mindaugasr != "") {
-            document.getElementById("Mindaugasr").style.display = "block";
-            document.getElementById("Mindaugasr").style.paddingTop = "0";
-            setTimeout(() => {
-                document.querySelector('#topInfoMindaugasr').scrollIntoView({
-                behavior: 'smooth'});
-            }, 500);
-        }
-        else {
-            document.getElementById("Mindaugasr").style.display = "none";
-            document.getElementById("Mindaugasr").style.paddingTop = "100vh";
-            if (Mindaugasr != "" && Mindaugasr != null) {
-                document.getElementById("Mindaugasr").style.display = "none";
-                document.getElementById("Mindaugasr").style.paddingTop = "100vh";
-            }
-        }
         let Gabriele = getCookie("Gabriele");
         if (Gabriele != "") {
             document.getElementById("Gabriele").style.display = "block";
@@ -8568,7 +8311,7 @@
             }
         }
 
-        if (kelioneI != "" || Arune != "" || Smilte != "" || Adriana != "" || Norbertas != "" || Meta != "" || Justina != "" || Mindaugasd != "" || Dovydas != "" || Matas != "" || Aleksandra != "" || Samanta != "" || Arnas != "" || Milena != "" || Emilija != "" || Modestas != "" || Mindaugasr != "" || Gabriele != "" || Berzuna != "" || Nojus != "" || Agnieska != "") {
+        if (kelioneI != "" || Arune != "" || Smilte != "" || Adriana != "" || Norbertas != "" || Meta != "" || Justina != "" || Mindaugasd != "" || Dovydas != "" || Matas != "" || Aleksandra != "" || Samanta != "" || Arnas != "" || Milena != "" || Emilija != "" || Modestas != "" || Gabriele != "" || Berzuna != "" || Nojus != "" || Agnieska != "") {
             document.getElementById("screen").style.top = "-100%";
             document.getElementById("screen").style.backgroundColor = "transparent";
             document.getElementById("display").style.top = "-100%";
@@ -8580,7 +8323,7 @@
             document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
             document.getElementById("display").style.top = "0";
             document.getElementById("body").style.overflow = "hidden";
-            if (kelioneI != "" && kelioneI != null || Arune != "" && Arune != null || Smilte != "" && Smilte != null || Adriana != "" && Adriana != null || Norbertas != "" && Norbertas != null || Meta != "" && Meta != null || Justina != "" && Justina != null || Mindaugasd != "" && Mindaugasd != null || Dovydas != "" && Dovydas != null || Matas != "" && Matas != null || Aleksandra != "" && Aleksandra != null || Samanta != "" && Samanta != null || Arnas != "" && Arnas != null || Milena != "" && Milena != null || Emilija != "" && Emilija != null || Modestas != "" && Modestas != null || Mindaugasr != "" && Mindaugasr != null || Gabriele != "" && Gabriele != null || Berzuna != "" && Berzuna || Nojus != "" && Nojus != null || Agnieska != "" && Agnieska != null) {
+            if (kelioneI != "" && kelioneI != null || Arune != "" && Arune != null || Smilte != "" && Smilte != null || Adriana != "" && Adriana != null || Norbertas != "" && Norbertas != null || Meta != "" && Meta != null || Justina != "" && Justina != null || Mindaugasd != "" && Mindaugasd != null || Dovydas != "" && Dovydas != null || Matas != "" && Matas != null || Aleksandra != "" && Aleksandra != null || Samanta != "" && Samanta != null || Arnas != "" && Arnas != null || Milena != "" && Milena != null || Emilija != "" && Emilija != null || Modestas != "" && Modestas != null || Gabriele != "" && Gabriele != null || Berzuna != "" && Berzuna || Nojus != "" && Nojus != null || Agnieska != "" && Agnieska != null) {
                 document.getElementById("screen").style.top = "0";
                 document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
                 document.getElementById("display").style.top = "0";
@@ -8826,21 +8569,6 @@
                 document.getElementById("ModestasUzdarymas").style.pointerEvents = "all";
                 document.getElementById("body").style.overflow = "hidden";
                 document.getElementById("Modestas").style.display = "none";
-            }, 310);
-        }
-        function closeMindaugasr() {
-            document.cookie = "Mindaugasr=; expires=Sat, 01 Jan 2000 00:00:00 UTC";
-            document.getElementById("MindaugasrUzdarymas").style.pointerEvents = "none";
-            setTimeout(() => {
-                document.getElementById("screen").style.top = "0";
-                document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
-                document.getElementById("display").style.top = "0";
-                document.getElementById("Mindaugasr").style.paddingTop = "100vh";
-            }, 10);
-            setTimeout(() => {
-                document.getElementById("MindaugasrUzdarymas").style.pointerEvents = "all";
-                document.getElementById("body").style.overflow = "hidden";
-                document.getElementById("Mindaugasr").style.display = "none";
             }, 310);
         }
         function closeGabriele() {
