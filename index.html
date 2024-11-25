@@ -1221,7 +1221,7 @@
 
 
         /* karnavalas */
-        /* garso takeliu valdymas, scenarijaus atsisiuntimas, info perziura, vaizdai */
+        /* garso takeliu valdymas, scenarijaus atsisiuntimas, info perziura */
         #soundManager{
             width: 100%;
             height: 100%;
@@ -1447,22 +1447,6 @@
             right: 0;
             z-index: 20;
         }
-        #atsisiunciamasAudio5{
-            width: 100%;
-            height: 50px;
-            font-size: 15px;
-            border-radius: 30px 30px 0 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #f2f2f2;
-            box-shadow: 0 0 10px lightgrey;
-            position: fixed;
-            bottom: -100%;
-            left: 0;
-            right: 0;
-            z-index: 20;
-        }
         .pinnedBg{
             width: 100%;
             height: auto;
@@ -1480,71 +1464,6 @@
             z-index: 17;
             box-shadow: 0 0 10px lightgrey;
             border-radius: 30px 30px 0 0;
-        }
-        #vaizdas1{
-            width: 100%;
-            height: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 93;
-            background-color: black;
-            display: none;
-            cursor: none;
-        }
-        #vaizdas2{
-            width: 100%;
-            height: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 93;
-            background-color: red;
-            display: none;
-            cursor: none;
-        }
-        #vaizdas3{
-            width: 100%;
-            height: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 93;
-            background-color: blue;
-            display: none;
-            cursor: none;
-        }
-        #vaizdas4{
-            width: 100%;
-            height: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 93;
-            background-color: green;
-            display: none;
-            cursor: none;
-        }
-        #vaizdas5{
-            width: 100%;
-            height: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 93;
-            background-color: yellow;
-            display: none;
-            cursor: none;
         }
 
 
@@ -3700,11 +3619,6 @@
                 box-shadow: 0 0 10px #333333;
                 color: white;
             }
-            #atsisiunciamasAudio5{
-                background-color: #141414;
-                box-shadow: 0 0 10px #333333;
-                color: white;
-            }
             .pinnedBg{
                 background-color: rgba(20, 20, 20, 0.75);
                 box-shadow: 0 0 10px #333333;
@@ -4060,11 +3974,10 @@
 
       
     </style>
-    <audio src="audio1.mp3" id="audio1"></audio>
-    <audio src="audio2.mp3" id="audio2"></audio>
-    <audio src="audio3.mp3" id="audio3"></audio>
-    <audio src="audio4.mp3" id="audio4"></audio>
-    <audio src="audio5.mp3" id="audio5"></audio>
+    <audio src="rap.mp3" id="audio1"></audio>
+    <audio src="burtai.mp3" id="audio2"></audio>
+    <audio src="ma_belle_evangeline.mp3" id="audio3"></audio>
+    <audio src="laikrodis.mp3" id="audio4"></audio>
     
     <div id="loading">
         <div class="spin-loader" aria-hidden="true"></div>
@@ -4282,31 +4195,24 @@
         <p style="font-size: 17px;">Tinklalapyje negalima atlikti veiksmų, susijusių su programos kodo peržiūra ir apžiūrėjimo įrankio (angl.: inspect tool) naudojimu</p>
         <div><p>Tinklalapis bus perkrautas... </p><span id="uzdraustaRestart"></span></div>
     </div>
-    <div id="vaizdas1"></div>
-    <div id="vaizdas2"></div>
-    <div id="vaizdas3"></div>
-    <div id="vaizdas4"></div>
-    <div id="vaizdas5"></div>
 
 
     <div id="soundManager">
         <h1>Garso takeliai</h1>
         <i id="closeSoundManager" class="fa-solid fa-chevron-down" onclick="closeSoundTracks()" ontouchstart></i>
 
-        <div><p id="1aud">audio1.mp3</p><div style="width: 100px; margin-bottom: 0; padding-right: 15px; background-color: none;"><i class="fa-solid fa-download" onclick="atsisiustiAudio1()" ontouchstart></i><i class="fa-solid fa-play" id="1play" onclick="playAudio1()" ontouchstart></i><i class="fa-solid fa-stop" style="display: none;" id="1stop" onclick="stopAudio1()" ontouchstart></i></div></div>
-        <div><p id="2aud">audio2.mp3</p><div style="width: 100px; margin-bottom: 0; padding-right: 15px; background-color: none;"><i class="fa-solid fa-download" onclick="atsisiustiAudio2()" ontouchstart></i><i class="fa-solid fa-play" id="2play" onclick="playAudio2()" ontouchstart></i><i class="fa-solid fa-stop" style="display: none;" id="2stop" onclick="stopAudio2()" ontouchstart></i></div></div>
-        <div><p id="3aud">audio3.mp3</p><div style="width: 100px; margin-bottom: 0; padding-right: 15px; background-color: none;"><i class="fa-solid fa-download" onclick="atsisiustiAudio3()" ontouchstart></i><i class="fa-solid fa-play" id="3play" onclick="playAudio3()" ontouchstart></i><i class="fa-solid fa-stop" style="display: none;" id="3stop" onclick="stopAudio3()" ontouchstart></i></div></div>
-        <div><p id="4aud">audio4.mp3</p><div style="width: 100px; margin-bottom: 0; padding-right: 15px; background-color: none;"><i class="fa-solid fa-download" onclick="atsisiustiAudio4()" ontouchstart></i><i class="fa-solid fa-play" id="4play" onclick="playAudio4()" ontouchstart></i><i class="fa-solid fa-stop" style="display: none;" id="4stop" onclick="stopAudio4()" ontouchstart></i></div></div>
-        <div><p id="5aud">audio5.mp3</p><div style="width: 100px; margin-bottom: 0; padding-right: 15px; background-color: none;"><i class="fa-solid fa-download" onclick="atsisiustiAudio5()" ontouchstart></i><i class="fa-solid fa-play" id="5play" onclick="playAudio5()" ontouchstart></i><i class="fa-solid fa-stop" style="display: none;" id="5stop" onclick="stopAudio5()" ontouchstart></i></div></div>
+        <div><p id="1aud">rap.mp3</p><div style="width: 100px; margin-bottom: 0; padding-right: 15px; background-color: none;"><i class="fa-solid fa-download" onclick="atsisiustiAudio1()" ontouchstart></i><i class="fa-solid fa-play" id="1play" onclick="playAudio1()" ontouchstart></i><i class="fa-solid fa-stop" style="display: none;" id="1stop" onclick="stopAudio1()" ontouchstart></i></div></div>
+        <div><p id="2aud">burtai.mp3</p><div style="width: 100px; margin-bottom: 0; padding-right: 15px; background-color: none;"><i class="fa-solid fa-download" onclick="atsisiustiAudio2()" ontouchstart></i><i class="fa-solid fa-play" id="2play" onclick="playAudio2()" ontouchstart></i><i class="fa-solid fa-stop" style="display: none;" id="2stop" onclick="stopAudio2()" ontouchstart></i></div></div>
+        <div><p id="3aud">ma_belle_evangeline.mp3</p><div style="width: 100px; margin-bottom: 0; padding-right: 15px; background-color: none;"><i class="fa-solid fa-download" onclick="atsisiustiAudio3()" ontouchstart></i><i class="fa-solid fa-play" id="3play" onclick="playAudio3()" ontouchstart></i><i class="fa-solid fa-stop" style="display: none;" id="3stop" onclick="stopAudio3()" ontouchstart></i></div></div>
+        <div><p id="4aud">laikrodis.mp3</p><div style="width: 100px; margin-bottom: 0; padding-right: 15px; background-color: none;"><i class="fa-solid fa-download" onclick="atsisiustiAudio4()" ontouchstart></i><i class="fa-solid fa-play" id="4play" onclick="playAudio4()" ontouchstart></i><i class="fa-solid fa-stop" style="display: none;" id="4stop" onclick="stopAudio4()" ontouchstart></i></div></div>
     </div>
     <div id="pinnedBackground" onclick="uzdarytiInfo()" ontouchstart></div>
     <div id="atsisiunciamasScenarijus"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "scenarijus.pdf"</div>
     <div id="rodomaInformacija"><i>Informacija:</i><br><b style="font-weight: 600;">Karnavalo data:</b> 2024-12-20 (pn)<br><b style="font-weight: 600;">Pasirodymo laikas:</b> nėra informacijos</div>
-    <div id="atsisiunciamasAudio1"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio1.mp3"</div>
-    <div id="atsisiunciamasAudio2"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio2.mp3"</div>
-    <div id="atsisiunciamasAudio3"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio3.mp3"</div>
-    <div id="atsisiunciamasAudio4"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio4.mp3"</div>
-    <div id="atsisiunciamasAudio5"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "audio5.mp3"</div>
+    <div id="atsisiunciamasAudio1"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "rap.mp3"</div>
+    <div id="atsisiunciamasAudio2"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "burtai.mp3"</div>
+    <div id="atsisiunciamasAudio3"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "ma_belle_evangeline.mp3"</div>
+    <div id="atsisiunciamasAudio4"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "laikrodis.mp3"</div>
 
 
 
@@ -4389,8 +4295,7 @@
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Papildomai:</p>
-            <p class="antrTekstas">nėra informacijos</p>
-            <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
+            <button onclick="openSoundTracks()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Garso takelių valdymas</button>
         </div>
     </div>
     <div id="Smilte">
@@ -4468,8 +4373,7 @@
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Papildomai:</p>
-            <p class="antrTekstas">nėra informacijos</p>
-            <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
+            <button onclick="openSoundTracks()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Garso takelių valdymas</button>
         </div>
     </div>
     <div id="Adriana">
@@ -4540,8 +4444,7 @@
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Papildomai:</p>
-            <p class="antrTekstas">nėra informacijos</p>
-            <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
+            <button onclick="openSoundTracks()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Garso takelių valdymas</button>
         </div>
     </div>
     <div id="Norbertas">
@@ -4619,8 +4522,7 @@
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Papildomai:</p>
-            <p class="antrTekstas">nėra informacijos</p>
-            <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
+            <button onclick="openSoundTracks()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Garso takelių valdymas</button>
         </div>
     </div>
     <div id="Meta">
@@ -4698,8 +4600,7 @@
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Papildomai:</p>
-            <p class="antrTekstas">nėra informacijos</p>
-            <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
+            <button onclick="openSoundTracks()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Garso takelių valdymas</button>
         </div>
     </div>
     <div id="Justina">
@@ -4777,8 +4678,7 @@
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Papildomai:</p>
-            <p class="antrTekstas">nėra informacijos</p>
-            <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
+            <button onclick="openSoundTracks()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Garso takelių valdymas</button>
         </div>
     </div>
     <div id="Mindaugasd">
@@ -4849,8 +4749,7 @@
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Papildomai:</p>
-            <p class="antrTekstas">nėra informacijos</p>
-            <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
+            <button onclick="openSoundTracks()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Garso takelių valdymas</button>
         </div>
     </div>
     <div id="Dovydas">
@@ -4928,8 +4827,7 @@
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Papildomai:</p>
-            <p class="antrTekstas">nėra informacijos</p>
-            <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
+            <button onclick="openSoundTracks()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Garso takelių valdymas</button>
         </div>
     </div>
     <div id="Matas">
@@ -5085,8 +4983,7 @@
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Papildomai:</p>
-            <p class="antrTekstas">nėra informacijos</p>
-            <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
+            <button onclick="openSoundTracks()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Garso takelių valdymas</button>
         </div>
     </div>
     <div id="Samanta">
@@ -5164,8 +5061,7 @@
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Papildomai:</p>
-            <p class="antrTekstas">nėra informacijos</p>
-            <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
+            <button onclick="openSoundTracks()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Garso takelių valdymas</button>
         </div>
     </div>
     <div id="Arnas">
@@ -5243,8 +5139,7 @@
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Papildomai:</p>
-            <p class="antrTekstas">nėra informacijos</p>
-            <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
+            <button onclick="openSoundTracks()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Garso takelių valdymas</button>
         </div>
     </div>
     <div id="Milena">
@@ -5315,8 +5210,7 @@
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Papildomai:</p>
-            <p class="antrTekstas">nėra informacijos</p>
-            <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
+            <button onclick="openSoundTracks()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Garso takelių valdymas</button>
         </div>
     </div>
     <div id="Emilija">
@@ -5388,8 +5282,7 @@
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Papildomai:</p>
-            <p class="antrTekstas">nėra informacijos</p>
-            <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
+            <button onclick="openSoundTracks()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Garso takelių valdymas</button>
         </div>
     </div>
     <div id="Modestas">
@@ -5460,8 +5353,7 @@
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Papildomai:</p>
-            <p class="antrTekstas">nėra informacijos</p>
-            <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
+            <button onclick="openSoundTracks()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Garso takelių valdymas</button>
         </div>
     </div>
     <div id="Gabriele">
@@ -5539,8 +5431,7 @@
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Papildomai:</p>
-            <p class="antrTekstas">nėra informacijos</p>
-            <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
+            <button onclick="openSoundTracks()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Garso takelių valdymas</button>
         </div>
     </div>
     <div id="Berzuna">
@@ -5611,8 +5502,7 @@
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Papildomai:</p>
-            <p class="antrTekstas">nėra informacijos</p>
-            <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
+            <button onclick="openSoundTracks()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Garso takelių valdymas</button>
         </div>
     </div>
     <div id="Nojus">
@@ -5683,8 +5573,7 @@
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Papildomai:</p>
-            <p class="antrTekstas">nėra informacijos</p>
-            <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
+            <button onclick="openSoundTracks()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Garso takelių valdymas</button>
         </div>
     </div>
     <div id="Agnieska">
@@ -5755,16 +5644,14 @@
         <div class="papildomai">
             <i class="fa-regular fa-circle-dot karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Papildomai:</p>
-            <p class="antrTekstas">nėra informacijos</p>
-            <!-- <button style="width: 95%; height: auto; display: flex; justify-content: center; align-items: center; border-radius: 10px; border: none; background-color: #f2f2f2; color: black; border: 1.5px solid black; font-size: 13px; margin-top: 3px; padding: 9px;" onclick="empty()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Atsisiųsti failą</button> -->
+            <button onclick="openSoundTracks()" ontouchstart><i class="fa-solid fa-music" style="margin-right: 5px; cursor: pointer;"></i>Garso takelių valdymas</button>
         </div>
     </div>
     <a id="download_script" href="scenarijus.pdf" download style="display: none;">download_script</a>
-    <a id="download_audio1" href="audio1.mp3" download style="display: none;">download_audio1</a>
-    <a id="download_audio2" href="audio2.mp3" download style="display: none;">download_audio2</a>
-    <a id="download_audio3" href="audio3.mp3" download style="display: none;">download_audio3</a>
-    <a id="download_audio4" href="audio4.mp3" download style="display: none;">download_audio4</a>
-    <a id="download_audio5" href="audio5.mp3" download style="display: none;">download_audio5</a>
+    <a id="download_audio1" href="rap.mp3" download style="display: none;">download_audio1</a>
+    <a id="download_audio2" href="burtai.mp3" download style="display: none;">download_audio2</a>
+    <a id="download_audio3" href="ma_belle_evangeline.mp3" download style="display: none;">download_audio3</a>
+    <a id="download_audio4" href="laikrodis.mp3" download style="display: none;">download_audio4</a>
 
     <script src="https://kit.fontawesome.com/a11707644f.js" crossorigin="anonymous"></script>
     <script>
@@ -5856,325 +5743,6 @@
         ){
             deny();
             return false; 
-        }
-        else if (
-            ctrlShiftKey(e, 'Q')
-        ){
-            document.getElementById('audio1').currentTime = 0;
-            document.getElementById("audio1").play();
-        }
-        else if (
-            ctrlShiftKey(e, 'W')
-        ){
-            document.getElementById('audio2').currentTime = 0;
-            document.getElementById("audio2").play();
-        }
-        else if (
-            ctrlShiftKey(e, 'E')
-        ){
-            document.getElementById('audio3').currentTime = 0;
-            document.getElementById("audio3").play();
-        }
-        else if (
-            ctrlShiftKey(e, 'R')
-        ){
-            document.getElementById('audio4').currentTime = 0;
-            document.getElementById("audio4").play();
-        }
-        else if (
-            ctrlShiftKey(e, 'T')
-        ){
-            document.getElementById('audio5').currentTime = 0;
-            document.getElementById("audio5").play();
-        }
-        else if (
-            ctrlShiftKey(e, '0')
-        ){
-            location.replace("index.html");
-        }
-        else if (
-            ctrlShiftKey(e, '1')
-        ){
-            var puslapis = document.documentElement;
-
-            if (puslapis.requestFullscreen) {
-                puslapis.requestFullscreen();
-            } else if (puslapis.webkitRequestFullscreen) { /* Safari */
-                puslapis.webkitRequestFullscreen();
-            } else if (puslapis.msRequestFullscreen) { /* IE11 */
-                puslapis.msRequestFullscreen();
-            }
-            document.getElementById("vaizdas1").style.display = "block";
-            document.getElementById("vaizdas2").style.display = "none";
-            document.getElementById("vaizdas3").style.display = "none";
-            document.getElementById("vaizdas4").style.display = "none";
-            document.getElementById("vaizdas5").style.display = "none";
-            document.getElementById("body").style.backgroundColor = "black";
-            document.getElementById("Arune").style.backgroundColor = "black";
-            document.getElementById("Smilte").style.backgroundColor = "black";
-            document.getElementById("Adriana").style.backgroundColor = "black";
-            document.getElementById("Norbertas").style.backgroundColor = "black";
-            document.getElementById("Meta").style.backgroundColor = "black";
-            document.getElementById("Justina").style.backgroundColor = "black";
-            document.getElementById("Mindaugasd").style.backgroundColor = "black";
-            document.getElementById("Dovydas").style.backgroundColor = "black";
-            document.getElementById("Matas").style.backgroundColor = "black";
-            document.getElementById("Aleksandra").style.backgroundColor = "black";
-            document.getElementById("Samanta").style.backgroundColor = "black";
-            document.getElementById("Arnas").style.backgroundColor = "black";
-            document.getElementById("Milena").style.backgroundColor = "black";
-            document.getElementById("Emilija").style.backgroundColor = "black";
-            document.getElementById("Modestas").style.backgroundColor = "black";
-            document.getElementById("Gabriele").style.backgroundColor = "black";
-            document.getElementById("Berzuna").style.backgroundColor = "black";
-            document.getElementById("Nojus").style.backgroundColor = "black";
-            document.getElementById("Agnieska").style.backgroundColor = "black";
-            document.getElementById("Arune").style.transition = "none";
-            document.getElementById("Smilte").style.transition = "none";
-            document.getElementById("Adriana").style.transition = "none";
-            document.getElementById("Norbertas").style.transition = "none";
-            document.getElementById("Meta").style.transition = "none";
-            document.getElementById("Justina").style.transition = "none";
-            document.getElementById("Mindaugasd").style.transition = "none";
-            document.getElementById("Dovydas").style.transition = "none";
-            document.getElementById("Matas").style.transition = "none";
-            document.getElementById("Aleksandra").style.transition = "none";
-            document.getElementById("Samanta").style.transition = "none";
-            document.getElementById("Arnas").style.transition = "none";
-            document.getElementById("Milena").style.transition = "none";
-            document.getElementById("Emilija").style.transition = "none";
-            document.getElementById("Modestas").style.transition = "none";
-            document.getElementById("Gabriele").style.transition = "none";
-            document.getElementById("Berzuna").style.transition = "none";
-            document.getElementById("Nojus").style.transition = "none";
-            document.getElementById("Agnieska").style.transition = "none";
-        }
-        else if (
-            ctrlShiftKey(e, '2')
-        ){
-            var puslapis = document.documentElement;
-
-            if (puslapis.requestFullscreen) {
-                puslapis.requestFullscreen();
-            } else if (puslapis.webkitRequestFullscreen) { /* Safari */
-                puslapis.webkitRequestFullscreen();
-            } else if (puslapis.msRequestFullscreen) { /* IE11 */
-                puslapis.msRequestFullscreen();
-            }
-            document.getElementById("vaizdas1").style.display = "none";
-            document.getElementById("vaizdas2").style.display = "block";
-            document.getElementById("vaizdas3").style.display = "none";
-            document.getElementById("vaizdas4").style.display = "none";
-            document.getElementById("vaizdas5").style.display = "none";
-            document.getElementById("body").style.backgroundColor = "black";
-            document.getElementById("Arune").style.backgroundColor = "black";
-            document.getElementById("Smilte").style.backgroundColor = "black";
-            document.getElementById("Adriana").style.backgroundColor = "black";
-            document.getElementById("Norbertas").style.backgroundColor = "black";
-            document.getElementById("Meta").style.backgroundColor = "black";
-            document.getElementById("Justina").style.backgroundColor = "black";
-            document.getElementById("Mindaugasd").style.backgroundColor = "black";
-            document.getElementById("Dovydas").style.backgroundColor = "black";
-            document.getElementById("Matas").style.backgroundColor = "black";
-            document.getElementById("Aleksandra").style.backgroundColor = "black";
-            document.getElementById("Samanta").style.backgroundColor = "black";
-            document.getElementById("Arnas").style.backgroundColor = "black";
-            document.getElementById("Milena").style.backgroundColor = "black";
-            document.getElementById("Emilija").style.backgroundColor = "black";
-            document.getElementById("Modestas").style.backgroundColor = "black";
-            document.getElementById("Gabriele").style.backgroundColor = "black";
-            document.getElementById("Berzuna").style.backgroundColor = "black";
-            document.getElementById("Nojus").style.backgroundColor = "black";
-            document.getElementById("Agnieska").style.backgroundColor = "black";
-            document.getElementById("Arune").style.transition = "none";
-            document.getElementById("Smilte").style.transition = "none";
-            document.getElementById("Adriana").style.transition = "none";
-            document.getElementById("Norbertas").style.transition = "none";
-            document.getElementById("Meta").style.transition = "none";
-            document.getElementById("Justina").style.transition = "none";
-            document.getElementById("Mindaugasd").style.transition = "none";
-            document.getElementById("Dovydas").style.transition = "none";
-            document.getElementById("Matas").style.transition = "none";
-            document.getElementById("Aleksandra").style.transition = "none";
-            document.getElementById("Samanta").style.transition = "none";
-            document.getElementById("Arnas").style.transition = "none";
-            document.getElementById("Milena").style.transition = "none";
-            document.getElementById("Emilija").style.transition = "none";
-            document.getElementById("Modestas").style.transition = "none";
-            document.getElementById("Gabriele").style.transition = "none";
-            document.getElementById("Berzuna").style.transition = "none";
-            document.getElementById("Nojus").style.transition = "none";
-            document.getElementById("Agnieska").style.transition = "none";
-        }
-        else if (
-            ctrlShiftKey(e, '3')
-        ){
-            var puslapis = document.documentElement;
-
-            if (puslapis.requestFullscreen) {
-                puslapis.requestFullscreen();
-            } else if (puslapis.webkitRequestFullscreen) { /* Safari */
-                puslapis.webkitRequestFullscreen();
-            } else if (puslapis.msRequestFullscreen) { /* IE11 */
-                puslapis.msRequestFullscreen();
-            }
-            document.getElementById("vaizdas1").style.display = "none";
-            document.getElementById("vaizdas2").style.display = "none";
-            document.getElementById("vaizdas3").style.display = "block";
-            document.getElementById("vaizdas4").style.display = "none";
-            document.getElementById("vaizdas5").style.display = "none";
-            document.getElementById("body").style.backgroundColor = "black";
-            document.getElementById("Arune").style.backgroundColor = "black";
-            document.getElementById("Smilte").style.backgroundColor = "black";
-            document.getElementById("Adriana").style.backgroundColor = "black";
-            document.getElementById("Norbertas").style.backgroundColor = "black";
-            document.getElementById("Meta").style.backgroundColor = "black";
-            document.getElementById("Justina").style.backgroundColor = "black";
-            document.getElementById("Mindaugasd").style.backgroundColor = "black";
-            document.getElementById("Dovydas").style.backgroundColor = "black";
-            document.getElementById("Matas").style.backgroundColor = "black";
-            document.getElementById("Aleksandra").style.backgroundColor = "black";
-            document.getElementById("Samanta").style.backgroundColor = "black";
-            document.getElementById("Arnas").style.backgroundColor = "black";
-            document.getElementById("Milena").style.backgroundColor = "black";
-            document.getElementById("Emilija").style.backgroundColor = "black";
-            document.getElementById("Modestas").style.backgroundColor = "black";
-            document.getElementById("Gabriele").style.backgroundColor = "black";
-            document.getElementById("Berzuna").style.backgroundColor = "black";
-            document.getElementById("Nojus").style.backgroundColor = "black";
-            document.getElementById("Agnieska").style.backgroundColor = "black";
-            document.getElementById("Arune").style.transition = "none";
-            document.getElementById("Smilte").style.transition = "none";
-            document.getElementById("Adriana").style.transition = "none";
-            document.getElementById("Norbertas").style.transition = "none";
-            document.getElementById("Meta").style.transition = "none";
-            document.getElementById("Justina").style.transition = "none";
-            document.getElementById("Mindaugasd").style.transition = "none";
-            document.getElementById("Dovydas").style.transition = "none";
-            document.getElementById("Matas").style.transition = "none";
-            document.getElementById("Aleksandra").style.transition = "none";
-            document.getElementById("Samanta").style.transition = "none";
-            document.getElementById("Arnas").style.transition = "none";
-            document.getElementById("Milena").style.transition = "none";
-            document.getElementById("Emilija").style.transition = "none";
-            document.getElementById("Gabriele").style.transition = "none";
-            document.getElementById("Berzuna").style.transition = "none";
-            document.getElementById("Nojus").style.transition = "none";
-            document.getElementById("Agnieska").style.transition = "none";
-        }
-        else if (
-            ctrlShiftKey(e, '4')
-        ){
-            var puslapis = document.documentElement;
-
-            if (puslapis.requestFullscreen) {
-                puslapis.requestFullscreen();
-            } else if (puslapis.webkitRequestFullscreen) { /* Safari */
-                puslapis.webkitRequestFullscreen();
-            } else if (puslapis.msRequestFullscreen) { /* IE11 */
-                puslapis.msRequestFullscreen();
-            }
-            document.getElementById("vaizdas1").style.display = "none";
-            document.getElementById("vaizdas2").style.display = "none";
-            document.getElementById("vaizdas3").style.display = "none";
-            document.getElementById("vaizdas4").style.display = "block";
-            document.getElementById("vaizdas5").style.display = "none";
-            document.getElementById("body").style.backgroundColor = "black";
-            document.getElementById("Arune").style.backgroundColor = "black";
-            document.getElementById("Smilte").style.backgroundColor = "black";
-            document.getElementById("Adriana").style.backgroundColor = "black";
-            document.getElementById("Norbertas").style.backgroundColor = "black";
-            document.getElementById("Meta").style.backgroundColor = "black";
-            document.getElementById("Justina").style.backgroundColor = "black";
-            document.getElementById("Mindaugasd").style.backgroundColor = "black";
-            document.getElementById("Dovydas").style.backgroundColor = "black";
-            document.getElementById("Matas").style.backgroundColor = "black";
-            document.getElementById("Aleksandra").style.backgroundColor = "black";
-            document.getElementById("Samanta").style.backgroundColor = "black";
-            document.getElementById("Arnas").style.backgroundColor = "black";
-            document.getElementById("Milena").style.backgroundColor = "black";
-            document.getElementById("Emilija").style.backgroundColor = "black";
-            document.getElementById("Modestas").style.backgroundColor = "black";
-            document.getElementById("Gabriele").style.backgroundColor = "black";
-            document.getElementById("Berzuna").style.backgroundColor = "black";
-            document.getElementById("Nojus").style.backgroundColor = "black";
-            document.getElementById("Agnieska").style.backgroundColor = "black";
-            document.getElementById("Arune").style.transition = "none";
-            document.getElementById("Smilte").style.transition = "none";
-            document.getElementById("Adriana").style.transition = "none";
-            document.getElementById("Norbertas").style.transition = "none";
-            document.getElementById("Meta").style.transition = "none";
-            document.getElementById("Justina").style.transition = "none";
-            document.getElementById("Mindaugasd").style.transition = "none";
-            document.getElementById("Dovydas").style.transition = "none";
-            document.getElementById("Matas").style.transition = "none";
-            document.getElementById("Aleksandra").style.transition = "none";
-            document.getElementById("Samanta").style.transition = "none";
-            document.getElementById("Arnas").style.transition = "none";
-            document.getElementById("Milena").style.transition = "none";
-            document.getElementById("Emilija").style.transition = "none";
-            document.getElementById("Modestas").style.transition = "none";
-            document.getElementById("Gabriele").style.transition = "none";
-            document.getElementById("Berzuna").style.transition = "none";
-            document.getElementById("Nojus").style.transition = "none";
-            document.getElementById("Agnieska").style.transition = "none";
-        }
-        else if (
-            ctrlShiftKey(e, '5')
-        ){
-            var puslapis = document.documentElement;
-
-            if (puslapis.requestFullscreen) {
-                puslapis.requestFullscreen();
-            } else if (puslapis.webkitRequestFullscreen) { /* Safari */
-                puslapis.webkitRequestFullscreen();
-            } else if (puslapis.msRequestFullscreen) { /* IE11 */
-                puslapis.msRequestFullscreen();
-            }
-            document.getElementById("vaizdas1").style.display = "none";
-            document.getElementById("vaizdas2").style.display = "none";
-            document.getElementById("vaizdas3").style.display = "none";
-            document.getElementById("vaizdas4").style.display = "none";
-            document.getElementById("vaizdas5").style.display = "block";
-            document.getElementById("body").style.backgroundColor = "black";
-            document.getElementById("Arune").style.backgroundColor = "black";
-            document.getElementById("Smilte").style.backgroundColor = "black";
-            document.getElementById("Adriana").style.backgroundColor = "black";
-            document.getElementById("Norbertas").style.backgroundColor = "black";
-            document.getElementById("Meta").style.backgroundColor = "black";
-            document.getElementById("Justina").style.backgroundColor = "black";
-            document.getElementById("Mindaugasd").style.backgroundColor = "black";
-            document.getElementById("Dovydas").style.backgroundColor = "black";
-            document.getElementById("Matas").style.backgroundColor = "black";
-            document.getElementById("Aleksandra").style.backgroundColor = "black";
-            document.getElementById("Samanta").style.backgroundColor = "black";
-            document.getElementById("Arnas").style.backgroundColor = "black";
-            document.getElementById("Milena").style.backgroundColor = "black";
-            document.getElementById("Emilija").style.backgroundColor = "black";
-            document.getElementById("Modestas").style.backgroundColor = "black";
-            document.getElementById("Gabriele").style.backgroundColor = "black";
-            document.getElementById("Berzuna").style.backgroundColor = "black";
-            document.getElementById("Nojus").style.backgroundColor = "black";
-            document.getElementById("Agnieska").style.backgroundColor = "black";
-            document.getElementById("Arune").style.transition = "none";
-            document.getElementById("Smilte").style.transition = "none";
-            document.getElementById("Adriana").style.transition = "none";
-            document.getElementById("Norbertas").style.transition = "none";
-            document.getElementById("Meta").style.transition = "none";
-            document.getElementById("Justina").style.transition = "none";
-            document.getElementById("Mindaugasd").style.transition = "none";
-            document.getElementById("Dovydas").style.transition = "none";
-            document.getElementById("Matas").style.transition = "none";
-            document.getElementById("Aleksandra").style.transition = "none";
-            document.getElementById("Samanta").style.transition = "none";
-            document.getElementById("Arnas").style.transition = "none";
-            document.getElementById("Milena").style.transition = "none";
-            document.getElementById("Emilija").style.transition = "none";
-            document.getElementById("Modestas").style.transition = "none";
-            document.getElementById("Gabriele").style.transition = "none";
-            document.getElementById("Berzuna").style.transition = "none";
-            document.getElementById("Nojus").style.transition = "none";
-            document.getElementById("Agnieska").style.transition = "none";
         }
         };
 
@@ -6680,6 +6248,22 @@
         }
         function playAudio1() {
             setTimeout(() => {
+                document.getElementById("2play").style.display = "flex";
+                document.getElementById("2stop").style.display = "none";
+                document.getElementById('audio2').currentTime = 0;
+                document.getElementById("audio2").pause();
+                document.getElementById("2aud").style.animation = "none";
+                document.getElementById("3play").style.display = "flex";
+                document.getElementById("3stop").style.display = "none";
+                document.getElementById('audio3').currentTime = 0;
+                document.getElementById("audio3").pause();
+                document.getElementById("3aud").style.animation = "none";
+                document.getElementById("4play").style.display = "flex";
+                document.getElementById("4stop").style.display = "none";
+                document.getElementById('audio4').currentTime = 0;
+                document.getElementById("audio4").pause();
+                document.getElementById("4aud").style.animation = "none";
+
                 document.getElementById("1play").style.display = "none";
                 document.getElementById("1stop").style.display = "flex";
                 document.getElementById('audio1').currentTime = 0;
@@ -6703,6 +6287,22 @@
         }
         function playAudio2() {
             setTimeout(() => {
+                document.getElementById("1play").style.display = "flex";
+                document.getElementById("1stop").style.display = "none";
+                document.getElementById('audio1').currentTime = 0;
+                document.getElementById("audio1").pause();
+                document.getElementById("1aud").style.animation = "none";
+                document.getElementById("3play").style.display = "flex";
+                document.getElementById("3stop").style.display = "none";
+                document.getElementById('audio3').currentTime = 0;
+                document.getElementById("audio3").pause();
+                document.getElementById("3aud").style.animation = "none";
+                document.getElementById("4play").style.display = "flex";
+                document.getElementById("4stop").style.display = "none";
+                document.getElementById('audio4').currentTime = 0;
+                document.getElementById("audio4").pause();
+                document.getElementById("4aud").style.animation = "none";
+
                 document.getElementById("2play").style.display = "none";
                 document.getElementById("2stop").style.display = "flex";
                 document.getElementById('audio2').currentTime = 0;
@@ -6726,6 +6326,22 @@
         }
         function playAudio3() {
             setTimeout(() => {
+                document.getElementById("1play").style.display = "flex";
+                document.getElementById("1stop").style.display = "none";
+                document.getElementById('audio1').currentTime = 0;
+                document.getElementById("audio1").pause();
+                document.getElementById("1aud").style.animation = "none";
+                document.getElementById("2play").style.display = "flex";
+                document.getElementById("2stop").style.display = "none";
+                document.getElementById('audio2').currentTime = 0;
+                document.getElementById("audio2").pause();
+                document.getElementById("2aud").style.animation = "none";
+                document.getElementById("4play").style.display = "flex";
+                document.getElementById("4stop").style.display = "none";
+                document.getElementById('audio4').currentTime = 0;
+                document.getElementById("audio4").pause();
+                document.getElementById("4aud").style.animation = "none";
+
                 document.getElementById("3play").style.display = "none";
                 document.getElementById("3stop").style.display = "flex";
                 document.getElementById('audio3').currentTime = 0;
@@ -6749,6 +6365,22 @@
         }
         function playAudio4() {
             setTimeout(() => {
+                document.getElementById("1play").style.display = "flex";
+                document.getElementById("1stop").style.display = "none";
+                document.getElementById('audio1').currentTime = 0;
+                document.getElementById("audio1").pause();
+                document.getElementById("1aud").style.animation = "none";
+                document.getElementById("2play").style.display = "flex";
+                document.getElementById("2stop").style.display = "none";
+                document.getElementById('audio2').currentTime = 0;
+                document.getElementById("audio2").pause();
+                document.getElementById("2aud").style.animation = "none";
+                document.getElementById("3play").style.display = "flex";
+                document.getElementById("3stop").style.display = "none";
+                document.getElementById('audio3').currentTime = 0;
+                document.getElementById("audio3").pause();
+                document.getElementById("3aud").style.animation = "none";
+
                 document.getElementById("4play").style.display = "none";
                 document.getElementById("4stop").style.display = "flex";
                 document.getElementById('audio4').currentTime = 0;
@@ -6768,29 +6400,6 @@
                 document.getElementById('audio4').currentTime = 0;
                 document.getElementById("audio4").pause();
                 document.getElementById("4aud").style.animation = "none";
-            }, 100);
-        }
-        function playAudio5() {
-            setTimeout(() => {
-                document.getElementById("5play").style.display = "none";
-                document.getElementById("5stop").style.display = "flex";
-                document.getElementById('audio5').currentTime = 0;
-                document.getElementById("audio5").play();
-                document.getElementById("5aud").style.animation = "blink 2s linear infinite";
-            }, 100);
-        }
-        document.getElementById("audio5").onended = function() {
-            document.getElementById("5play").style.display = "flex";
-            document.getElementById("5stop").style.display = "none";
-            document.getElementById("5aud").style.animation = "none";
-        }
-        function stopAudio5() {
-            setTimeout(() => {
-                document.getElementById("5play").style.display = "flex";
-                document.getElementById("5stop").style.display = "none";
-                document.getElementById('audio5').currentTime = 0;
-                document.getElementById("audio5").pause();
-                document.getElementById("5aud").style.animation = "none";
             }, 100);
         }
         function atsisiustiAudio1() {
@@ -6862,25 +6471,6 @@
             }, 1010);
             setTimeout(() => {
                 document.getElementById("atsisiunciamasAudio4").style.bottom = "-100%";
-                document.getElementById("pinnedBackground").style.opacity = "0";
-            }, 6010);
-            setTimeout(() => {
-                document.getElementById("pinnedBackground").style.display = "none";
-                document.getElementById("body").style.overflowY = "scroll";
-            }, 6310);
-        }
-        function atsisiustiAudio5() {
-            document.getElementById("pinnedBackground").style.display = "block";
-            document.getElementById("body").style.overflowY = "hidden";
-            setTimeout(() => {
-                document.getElementById("atsisiunciamasAudio5").style.bottom = "0";
-                document.getElementById("pinnedBackground").style.opacity = "1";
-            }, 10);
-            setTimeout(() => {
-                document.getElementById("download_audio5").click();
-            }, 1010);
-            setTimeout(() => {
-                document.getElementById("atsisiunciamasAudio5").style.bottom = "-100%";
                 document.getElementById("pinnedBackground").style.opacity = "0";
             }, 6010);
             setTimeout(() => {
