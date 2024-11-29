@@ -1479,6 +1479,22 @@
             right: 0;
             z-index: 20;
         }
+        #atsisiunciamasAudio7{
+            width: 100%;
+            height: 50px;
+            font-size: 15px;
+            border-radius: 30px 30px 0 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f2f2f2;
+            box-shadow: 0 0 10px lightgrey;
+            position: fixed;
+            bottom: -100%;
+            left: 0;
+            right: 0;
+            z-index: 20;
+        }
         .pinnedBg{
             width: 100%;
             height: auto;
@@ -3661,6 +3677,11 @@
                 box-shadow: 0 0 10px #333333;
                 color: white;
             }
+            #atsisiunciamasAudio7{
+                background-color: #141414;
+                box-shadow: 0 0 10px #333333;
+                color: white;
+            }
             .pinnedBg{
                 background-color: rgba(20, 20, 20, 0.75);
                 box-shadow: 0 0 10px #333333;
@@ -4019,9 +4040,10 @@
     <audio src="pradzia.mp3" id="audio1"></audio>
     <audio src="rap.mp3" id="audio2"></audio>
     <audio src="burtai.mp3" id="audio3"></audio>
-    <audio src="ma_belle_evangeline.mp3" id="audio4"></audio>
-    <audio src="laikrodis.mp3" id="audio5"></audio>
-    <audio src="sokis.mp3" id="audio6"></audio>
+    <audio src="seseliai.mp3" id="audio4"></audio>
+    <audio src="ma_belle_evangeline.mp3" id="audio5"></audio>
+    <audio src="laikrodis.mp3" id="audio6"></audio>
+    <audio src="sokis.mp3" id="audio7"></audio>
     
     <div id="loading">
         <div class="spin-loader" aria-hidden="true"></div>
@@ -4248,9 +4270,10 @@
         <div><p><span id="1aud">pradzia.mp3</span> (00:28)</p><div style="width: 100px; margin-bottom: 0; padding-right: 15px; background-color: none;"><i class="fa-solid fa-download" onclick="atsisiustiAudio1()" ontouchstart></i><i class="fa-solid fa-play" id="1play" onclick="playAudio1()" ontouchstart></i><i class="fa-solid fa-stop" style="display: none;" id="1stop" onclick="stopAudio1()" ontouchstart></i></div></div>
         <div><p><span id="2aud">rap.mp3</span> (00:23)</p><div style="width: 100px; margin-bottom: 0; padding-right: 15px; background-color: none;"><i class="fa-solid fa-download" onclick="atsisiustiAudio2()" ontouchstart></i><i class="fa-solid fa-play" id="2play" onclick="playAudio2()" ontouchstart></i><i class="fa-solid fa-stop" style="display: none;" id="2stop" onclick="stopAudio2()" ontouchstart></i></div></div>
         <div><p><span id="3aud">burtai.mp3</span> (00:47)</p><div style="width: 100px; margin-bottom: 0; padding-right: 15px; background-color: none;"><i class="fa-solid fa-download" onclick="atsisiustiAudio3()" ontouchstart></i><i class="fa-solid fa-play" id="3play" onclick="playAudio3()" ontouchstart></i><i class="fa-solid fa-stop" style="display: none;" id="3stop" onclick="stopAudio3()" ontouchstart></i></div></div>
-        <div><p><span id="4aud">ma_belle_evangeline.mp3</span> (01:56)</p><div style="width: 100px; margin-bottom: 0; padding-right: 15px; background-color: none;"><i class="fa-solid fa-download" onclick="atsisiustiAudio4()" ontouchstart></i><i class="fa-solid fa-play" id="4play" onclick="playAudio4()" ontouchstart></i><i class="fa-solid fa-stop" style="display: none;" id="4stop" onclick="stopAudio4()" ontouchstart></i></div></div>
-        <div><p><span id="5aud">laikrodis.mp3</span> (00:18)</p><div style="width: 100px; margin-bottom: 0; padding-right: 15px; background-color: none;"><i class="fa-solid fa-download" onclick="atsisiustiAudio5()" ontouchstart></i><i class="fa-solid fa-play" id="5play" onclick="playAudio5()" ontouchstart></i><i class="fa-solid fa-stop" style="display: none;" id="5stop" onclick="stopAudio5()" ontouchstart></i></div></div>
-        <div><p><span id="6aud">sokis.mp3</span> (02:02)</p><div style="width: 100px; margin-bottom: 0; padding-right: 15px; background-color: none;"><i class="fa-solid fa-download" onclick="atsisiustiAudio6()" ontouchstart></i><i class="fa-solid fa-play" id="6play" onclick="playAudio6()" ontouchstart></i><i class="fa-solid fa-stop" style="display: none;" id="6stop" onclick="stopAudio6()" ontouchstart></i></div></div>
+        <div><p><span id="4aud">seseliai.mp3</span> (00:07)</p><div style="width: 100px; margin-bottom: 0; padding-right: 15px; background-color: none;"><i class="fa-solid fa-download" onclick="atsisiustiAudio4()" ontouchstart></i><i class="fa-solid fa-play" id="4play" onclick="playAudio4()" ontouchstart></i><i class="fa-solid fa-stop" style="display: none;" id="4stop" onclick="stopAudio4()" ontouchstart></i></div></div>
+        <div><p><span id="5aud">ma_belle_evangeline.mp3</span> (01:56)</p><div style="width: 100px; margin-bottom: 0; padding-right: 15px; background-color: none;"><i class="fa-solid fa-download" onclick="atsisiustiAudio5()" ontouchstart></i><i class="fa-solid fa-play" id="5play" onclick="playAudio5()" ontouchstart></i><i class="fa-solid fa-stop" style="display: none;" id="5stop" onclick="stopAudio5()" ontouchstart></i></div></div>
+        <div><p><span id="6aud">laikrodis.mp3</span> (00:18)</p><div style="width: 100px; margin-bottom: 0; padding-right: 15px; background-color: none;"><i class="fa-solid fa-download" onclick="atsisiustiAudio6()" ontouchstart></i><i class="fa-solid fa-play" id="6play" onclick="playAudio6()" ontouchstart></i><i class="fa-solid fa-stop" style="display: none;" id="6stop" onclick="stopAudio6()" ontouchstart></i></div></div>
+        <div><p><span id="7aud">sokis.mp3</span> (02:05)</p><div style="width: 100px; margin-bottom: 0; padding-right: 15px; background-color: none;"><i class="fa-solid fa-download" onclick="atsisiustiAudio7()" ontouchstart></i><i class="fa-solid fa-play" id="7play" onclick="playAudio7()" ontouchstart></i><i class="fa-solid fa-stop" style="display: none;" id="7stop" onclick="stopAudio7()" ontouchstart></i></div></div>
     </div>
     <div id="pinnedBackground" onclick="uzdarytiInfo()" ontouchstart></div>
     <div id="atsisiunciamasScenarijus"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "scenarijus.pdf"</div>
@@ -5718,9 +5741,10 @@
     <a id="download_audio1" href="pradzia.mp3" download style="display: none;">download_audio1</a>
     <a id="download_audio2" href="rap.mp3" download style="display: none;">download_audio2</a>
     <a id="download_audio3" href="burtai.mp3" download style="display: none;">download_audio3</a>
-    <a id="download_audio4 " href="ma_belle_evangeline.mp3" download style="display: none;">download_audio4</a>
-    <a id="download_audio5" href="laikrodis.mp3" download style="display: none;">download_audio5</a>
-    <a id="download_audio6" href="sokis.mp3" download style="display: none;">download_audio6</a>
+    <a id="download_audio4" href="seseliai.mp3" download style="display: none;">download_audio4</a>
+    <a id="download_audio5 " href="ma_belle_evangeline.mp3" download style="display: none;">download_audio5</a>
+    <a id="download_audio6" href="laikrodis.mp3" download style="display: none;">download_audio6</a>
+    <a id="download_audio7" href="sokis.mp3" download style="display: none;">download_audio7</a>
 
     <script src="https://kit.fontawesome.com/a11707644f.js" crossorigin="anonymous"></script>
     <script>
@@ -6372,6 +6396,11 @@
             document.getElementById('audio6').currentTime = 0;
             document.getElementById("audio6").pause();
             document.getElementById("6aud").style.animation = "none";
+            document.getElementById("7play").style.display = "flex";
+            document.getElementById("7stop").style.display = "none";
+            document.getElementById('audio7').currentTime = 0;
+            document.getElementById("audio7").pause();
+            document.getElementById("7aud").style.animation = "none";
             setTimeout(() => {
                 document.getElementById("soundManager").style.bottom = "-100%";
             }, 10);
@@ -6403,6 +6432,11 @@
                 document.getElementById('audio6').currentTime = 0;
                 document.getElementById("audio6").pause();
                 document.getElementById("6aud").style.animation = "none";
+                document.getElementById("7play").style.display = "flex";
+                document.getElementById("7stop").style.display = "none";
+                document.getElementById('audio7').currentTime = 0;
+                document.getElementById("audio7").pause();
+                document.getElementById("7aud").style.animation = "none";
 
                 document.getElementById("1play").style.display = "none";
                 document.getElementById("1stop").style.display = "flex";
@@ -6452,6 +6486,11 @@
                 document.getElementById('audio6').currentTime = 0;
                 document.getElementById("audio6").pause();
                 document.getElementById("6aud").style.animation = "none";
+                document.getElementById("7play").style.display = "flex";
+                document.getElementById("7stop").style.display = "none";
+                document.getElementById('audio7').currentTime = 0;
+                document.getElementById("audio7").pause();
+                document.getElementById("7aud").style.animation = "none";
 
                 document.getElementById("2play").style.display = "none";
                 document.getElementById("2stop").style.display = "flex";
@@ -6501,6 +6540,11 @@
                 document.getElementById('audio6').currentTime = 0;
                 document.getElementById("audio6").pause();
                 document.getElementById("6aud").style.animation = "none";
+                document.getElementById("7play").style.display = "flex";
+                document.getElementById("7stop").style.display = "none";
+                document.getElementById('audio7').currentTime = 0;
+                document.getElementById("audio7").pause();
+                document.getElementById("7aud").style.animation = "none";
 
                 document.getElementById("3play").style.display = "none";
                 document.getElementById("3stop").style.display = "flex";
@@ -6550,6 +6594,11 @@
                 document.getElementById('audio6').currentTime = 0;
                 document.getElementById("audio6").pause();
                 document.getElementById("6aud").style.animation = "none";
+                document.getElementById("7play").style.display = "flex";
+                document.getElementById("7stop").style.display = "none";
+                document.getElementById('audio7').currentTime = 0;
+                document.getElementById("audio7").pause();
+                document.getElementById("7aud").style.animation = "none";
 
                 document.getElementById("4play").style.display = "none";
                 document.getElementById("4stop").style.display = "flex";
@@ -6599,6 +6648,11 @@
                 document.getElementById('audio6').currentTime = 0;
                 document.getElementById("audio6").pause();
                 document.getElementById("6aud").style.animation = "none";
+                document.getElementById("7play").style.display = "flex";
+                document.getElementById("7stop").style.display = "none";
+                document.getElementById('audio7').currentTime = 0;
+                document.getElementById("audio7").pause();
+                document.getElementById("7aud").style.animation = "none";
 
                 document.getElementById("5play").style.display = "none";
                 document.getElementById("5stop").style.display = "flex";
@@ -6648,7 +6702,11 @@
                 document.getElementById('audio5').currentTime = 0;
                 document.getElementById("audio5").pause();
                 document.getElementById("5aud").style.animation = "none";
-
+                document.getElementById("7play").style.display = "flex";
+                document.getElementById("7stop").style.display = "none";
+                document.getElementById('audio7').currentTime = 0;
+                document.getElementById("audio7").pause();
+                document.getElementById("7aud").style.animation = "none";
 
                 document.getElementById("6play").style.display = "none";
                 document.getElementById("6stop").style.display = "flex";
@@ -6669,6 +6727,60 @@
                 document.getElementById('audio6').currentTime = 0;
                 document.getElementById("audio6").pause();
                 document.getElementById("6aud").style.animation = "none";
+            }, 100);
+        }
+        function playAudio7() {
+            setTimeout(() => {
+                document.getElementById("1play").style.display = "flex";
+                document.getElementById("1stop").style.display = "none";
+                document.getElementById('audio1').currentTime = 0;
+                document.getElementById("audio1").pause();
+                document.getElementById("1aud").style.animation = "none";
+                document.getElementById("2play").style.display = "flex";
+                document.getElementById("2stop").style.display = "none";
+                document.getElementById('audio2').currentTime = 0;
+                document.getElementById("audio2").pause();
+                document.getElementById("2aud").style.animation = "none";
+                document.getElementById("3play").style.display = "flex";
+                document.getElementById("3stop").style.display = "none";
+                document.getElementById('audio3').currentTime = 0;
+                document.getElementById("audio3").pause();
+                document.getElementById("3aud").style.animation = "none";
+                document.getElementById("4play").style.display = "flex";
+                document.getElementById("4stop").style.display = "none";
+                document.getElementById('audio4').currentTime = 0;
+                document.getElementById("audio4").pause();
+                document.getElementById("4aud").style.animation = "none";
+                document.getElementById("5play").style.display = "flex";
+                document.getElementById("5stop").style.display = "none";
+                document.getElementById('audio5').currentTime = 0;
+                document.getElementById("audio5").pause();
+                document.getElementById("5aud").style.animation = "none";
+                document.getElementById("6play").style.display = "flex";
+                document.getElementById("6stop").style.display = "none";
+                document.getElementById('audio6').currentTime = 0;
+                document.getElementById("audio6").pause();
+                document.getElementById("6aud").style.animation = "none";
+
+                document.getElementById("7play").style.display = "none";
+                document.getElementById("7stop").style.display = "flex";
+                document.getElementById('audio7').currentTime = 0;
+                document.getElementById("audio7").play();
+                document.getElementById("7aud").style.animation = "blink 2s linear infinite";
+            }, 100);
+        }
+        document.getElementById("audio7").onended = function() {
+            document.getElementById("7play").style.display = "flex";
+            document.getElementById("7stop").style.display = "none";
+            document.getElementById("7aud").style.animation = "none";
+        }
+        function stopAudio7() {
+            setTimeout(() => {
+                document.getElementById("7play").style.display = "flex";
+                document.getElementById("7stop").style.display = "none";
+                document.getElementById('audio7').currentTime = 0;
+                document.getElementById("audio7").pause();
+                document.getElementById("7aud").style.animation = "none";
             }, 100);
         }
         function atsisiustiAudio1() {
@@ -6778,6 +6890,25 @@
             }, 1010);
             setTimeout(() => {
                 document.getElementById("atsisiunciamasAudio6").style.bottom = "-100%";
+                document.getElementById("pinnedBackground").style.opacity = "0";
+            }, 6010);
+            setTimeout(() => {
+                document.getElementById("pinnedBackground").style.display = "none";
+                document.getElementById("body").style.overflowY = "scroll";
+            }, 6310);
+        }
+        function atsisiustiAudio7() {
+            document.getElementById("pinnedBackground").style.display = "block";
+            document.getElementById("body").style.overflowY = "hidden";
+            setTimeout(() => {
+                document.getElementById("atsisiunciamasAudio7").style.bottom = "0";
+                document.getElementById("pinnedBackground").style.opacity = "1";
+            }, 10);
+            setTimeout(() => {
+                document.getElementById("download_audio7").click();
+            }, 1010);
+            setTimeout(() => {
+                document.getElementById("atsisiunciamasAudio7").style.bottom = "-100%";
                 document.getElementById("pinnedBackground").style.opacity = "0";
             }, 6010);
             setTimeout(() => {
