@@ -1221,7 +1221,76 @@
 
 
         /* karnavalas */
-        /* garso takeliu valdymas, scenarijaus atsisiuntimas, info perziura */
+        /* scenarijaus perziura ir atsisiuntimas, garso takeliu valdymas, info perziura */
+        #scenarijusDocs{
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: -100%;
+            z-index: 18;
+            background-color: #f2f2f2;
+            transition: 0.2s;
+        }
+        #scenarijusDocs h1{
+            font-weight: 600;
+            font-size: 25px;
+            margin-top: 15px;
+            margin-left: 15px;
+            margin-bottom: 15px;
+            color: black;
+        }
+        #scenarijusDocs iframe{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding-top: 60px;
+        }
+        #downloadScenarijus{
+            font-size: 15px;
+            position: absolute;
+            top: 15px;
+            right: 55px;
+            z-index: 11;
+            transition: 0.15s;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            background-color: #DEDEDE;
+            color: black;
+        }
+        #downloadScenarijus:active{
+            opacity: 0.2;
+        }
+        #closeScenarijusDocs{
+            font-size: 15px;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            z-index: 11;
+            transition: 0.15s;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            background-color: #DEDEDE;
+            color: black;
+        }
+        #closeScenarijusDocs:active{
+            opacity: 0.2;
+        }
         #soundManager{
             width: 100%;
             height: 100%;
@@ -1232,6 +1301,8 @@
             z-index: 18;
             background-color: #f2f2f2;
             transition: 0.2s;
+            overflow-x: hidden;
+            overflow-y: scroll;
         }
         #soundManager h1{
             font-weight: 600;
@@ -1245,7 +1316,7 @@
             width: 95%;
             height: 50px;
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
             align-items: center;
             background-color: white;
             color: black;
@@ -1253,6 +1324,17 @@
             margin-bottom: 15px;
             margin-left: 2.5%;
             border-radius: 30px;
+            position: relative;
+        }
+        #soundManager div p{
+            font-size: 16px;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            text-overflow: ellipsis;
+            width: 100%;
+            padding-right: 85px;
+
         }
         #soundManager div i{
             font-size: 15px;
@@ -1266,6 +1348,7 @@
             border-radius: 100%;
             background-color: #DEDEDE;
             color: black;
+            position: absolute;
         }
         #soundManager div i:active{
             opacity: 0.2;
@@ -3608,6 +3691,20 @@
 
 
 
+            #scenarijusDocs{
+                background-color: #141414;
+            }
+            #scenarijusDocs h1{
+                color: white;
+            }
+            #closeScenarijusDocs{
+                background-color: #282828;
+                color: white;
+            }
+            #downloadScenarijus{
+                background-color: #282828;
+                color: white;
+            }
             #soundManager{
                 background-color: #141414;
             }
@@ -4255,6 +4352,8 @@
 
 
 
+
+
     <div id="accessDenied">
         <i class="fa-solid fa-ban" id="ban"></i>
         <p style="font-size: 25px; font-weight: 600;">Prieiga uždrausta</p>
@@ -4262,18 +4361,24 @@
         <div><p>Tinklalapis bus perkrautas... </p><span id="uzdraustaRestart"></span></div>
     </div>
 
+    <div id="scenarijusDocs">
+        <h1>Scenarijus</h1>
+        <i id="downloadScenarijus" class="fa-solid fa-download" onclick="downloadScenarijus()" ontouchstart></i>
+        <i id="closeScenarijusDocs" class="fa-solid fa-chevron-down" onclick="closeScenarijus()" ontouchstart></i>
+        <iframe src="scenarijus.pdf" frameborder="0"></iframe>
+    </div>
 
     <div id="soundManager">
         <h1>Garso takeliai</h1>
         <i id="closeSoundManager" class="fa-solid fa-chevron-down" onclick="closeSoundTracks()" ontouchstart></i>
 
-        <div><p><span id="1aud">pradzia.mp3</span> (00:28)</p><div style="width: 100px; margin-bottom: 0; padding-right: 15px; background-color: none;"><i class="fa-solid fa-download" onclick="atsisiustiAudio1()" ontouchstart></i><i class="fa-solid fa-play" id="1play" onclick="playAudio1()" ontouchstart></i><i class="fa-solid fa-stop" style="display: none;" id="1stop" onclick="stopAudio1()" ontouchstart></i></div></div>
-        <div><p><span id="2aud">rap.mp3</span> (00:23)</p><div style="width: 100px; margin-bottom: 0; padding-right: 15px; background-color: none;"><i class="fa-solid fa-download" onclick="atsisiustiAudio2()" ontouchstart></i><i class="fa-solid fa-play" id="2play" onclick="playAudio2()" ontouchstart></i><i class="fa-solid fa-stop" style="display: none;" id="2stop" onclick="stopAudio2()" ontouchstart></i></div></div>
-        <div><p><span id="3aud">burtai.mp3</span> (00:47)</p><div style="width: 100px; margin-bottom: 0; padding-right: 15px; background-color: none;"><i class="fa-solid fa-download" onclick="atsisiustiAudio3()" ontouchstart></i><i class="fa-solid fa-play" id="3play" onclick="playAudio3()" ontouchstart></i><i class="fa-solid fa-stop" style="display: none;" id="3stop" onclick="stopAudio3()" ontouchstart></i></div></div>
-        <div><p><span id="4aud">seseliai.mp3</span> (00:07)</p><div style="width: 100px; margin-bottom: 0; padding-right: 15px; background-color: none;"><i class="fa-solid fa-download" onclick="atsisiustiAudio4()" ontouchstart></i><i class="fa-solid fa-play" id="4play" onclick="playAudio4()" ontouchstart></i><i class="fa-solid fa-stop" style="display: none;" id="4stop" onclick="stopAudio4()" ontouchstart></i></div></div>
-        <div><p><span id="5aud">ma_belle_evangeline.mp3</span> (00:53)</p><div style="width: 100px; margin-bottom: 0; padding-right: 15px; background-color: none;"><i class="fa-solid fa-download" onclick="atsisiustiAudio5()" ontouchstart></i><i class="fa-solid fa-play" id="5play" onclick="playAudio5()" ontouchstart></i><i class="fa-solid fa-stop" style="display: none;" id="5stop" onclick="stopAudio5()" ontouchstart></i></div></div>
-        <div><p><span id="6aud">laikrodis.mp3</span> (00:16)</p><div style="width: 100px; margin-bottom: 0; padding-right: 15px; background-color: none;"><i class="fa-solid fa-download" onclick="atsisiustiAudio6()" ontouchstart></i><i class="fa-solid fa-play" id="6play" onclick="playAudio6()" ontouchstart></i><i class="fa-solid fa-stop" style="display: none;" id="6stop" onclick="stopAudio6()" ontouchstart></i></div></div>
-        <div><p><span id="7aud">sokis.mp3</span> (02:05)</p><div style="width: 100px; margin-bottom: 0; padding-right: 15px; background-color: none;"><i class="fa-solid fa-download" onclick="atsisiustiAudio7()" ontouchstart></i><i class="fa-solid fa-play" id="7play" onclick="playAudio7()" ontouchstart></i><i class="fa-solid fa-stop" style="display: none;" id="7stop" onclick="stopAudio7()" ontouchstart></i></div></div>
+        <div><p><span id="1aud">pradzia.mp3</span> (00:28)</p><i class="fa-solid fa-download" onclick="atsisiustiAudio1()" ontouchstart style="right: 50px;"></i><i class="fa-solid fa-play" id="1play" onclick="playAudio1()" ontouchstart style="right: 10px;"></i><i class="fa-solid fa-stop" style="display: none; right: 10px;" id="1stop" onclick="stopAudio1()" ontouchstart></i></div>
+        <div><p><span id="2aud">rap.mp3</span> (00:23)</p><i class="fa-solid fa-download" onclick="atsisiustiAudio2()" ontouchstart style="right: 50px;"></i><i class="fa-solid fa-play" id="2play" onclick="playAudio2()" ontouchstart style="right: 10px;"></i><i class="fa-solid fa-stop" style="display: none; right: 10px;" id="2stop" onclick="stopAudio2()" ontouchstart></i></div>
+        <div><p><span id="3aud">burtai.mp3</span> (00:47)</p><i class="fa-solid fa-download" onclick="atsisiustiAudio3()" ontouchstart style="right: 50px;"></i><i class="fa-solid fa-play" id="3play" onclick="playAudio3()" ontouchstart style="right: 10px;"></i><i class="fa-solid fa-stop" style="display: none; right: 10px;" id="3stop" onclick="stopAudio3()" ontouchstart></i></div>
+        <div><p><span id="4aud">seseliai.mp3</span> (00:07)</p><i class="fa-solid fa-download" onclick="atsisiustiAudio4()" ontouchstart style="right: 50px;"></i><i class="fa-solid fa-play" id="4play" onclick="playAudio4()" ontouchstart style="right: 10px;"></i><i class="fa-solid fa-stop" style="display: none; right: 10px;" id="4stop" onclick="stopAudio4()" ontouchstart></i></div>
+        <div><p><span id="5aud">ma_belle_evangeline.mp3</span> (00:53)</p><i class="fa-solid fa-download" onclick="atsisiustiAudio5()" ontouchstart style="right: 50px;"></i><i class="fa-solid fa-play" id="5play" onclick="playAudio5()" ontouchstart style="right: 10px;"></i><i class="fa-solid fa-stop" style="display: none; right: 10px;" id="5stop" onclick="stopAudio5()" ontouchstart></i></div>
+        <div><p><span id="6aud">laikrodis.mp3</span> (00:16)</p><i class="fa-solid fa-download" onclick="atsisiustiAudio6()" ontouchstart style="right: 50px;"></i><i class="fa-solid fa-play" id="6play" onclick="playAudio6()" ontouchstart style="right: 10px;"></i><i class="fa-solid fa-stop" style="display: none; right: 10px;" id="6stop" onclick="stopAudio6()" ontouchstart></i></div>
+        <div><p><span id="7aud">sokis.mp3</span> (02:05)</p><i class="fa-solid fa-download" onclick="atsisiustiAudio7()" ontouchstart style="right: 50px;"></i><i class="fa-solid fa-play" id="7play" onclick="playAudio7()" ontouchstart style="right: 10px;"></i><i class="fa-solid fa-stop" style="display: none; right: 10px;" id="7stop" onclick="stopAudio7()" ontouchstart></i></div>
     </div>
     <div id="pinnedBackground" onclick="uzdarytiInfo()" ontouchstart></div>
     <div id="atsisiunciamasScenarijus"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "scenarijus.pdf"</div>
@@ -4321,7 +4426,7 @@
         <p id="AruneTekstas">Karnavalas „Princesė ir varlius”</p>
 
         <div class="pinnedBg">
-            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
+            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Scenarijus</p></button>
             <button onclick="informacija()" class="informacija" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
         </div>
 
@@ -4399,7 +4504,7 @@
         <p id="SmilteTekstas">Karnavalas „Princesė ir varlius”</p>
 
         <div class="pinnedBg">
-            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
+            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Scenarijus</p></button>
             <button onclick="informacija()" class="informacija" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
         </div>
 
@@ -4477,7 +4582,7 @@
         <p id="AdrianaTekstas">Karnavalas „Princesė ir varlius”</p>
 
         <div class="pinnedBg">
-            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
+            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Scenarijus</p></button>
             <button onclick="informacija()" class="informacija" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
         </div>
 
@@ -4555,7 +4660,7 @@
         <p id="NorbertasTekstas">Karnavalas „Princesė ir varlius”</p>
 
         <div class="pinnedBg">
-            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
+            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Scenarijus</p></button>
             <button onclick="informacija()" class="informacija" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
         </div>
 
@@ -4633,7 +4738,7 @@
         <p id="MetaTekstas">Karnavalas „Princesė ir varlius”</p>
 
         <div class="pinnedBg">
-            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
+            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Scenarijus</p></button>
             <button onclick="informacija()" class="informacija" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
         </div>
 
@@ -4711,7 +4816,7 @@
         <p id="JustinaTekstas">Karnavalas „Princesė ir varlius”</p>
 
         <div class="pinnedBg">
-            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
+            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Scenarijus</p></button>
             <button onclick="informacija()" class="informacija" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
         </div>
 
@@ -4789,7 +4894,7 @@
         <p id="MindaugasdTekstas">Karnavalas „Princesė ir varlius”</p>
 
         <div class="pinnedBg">
-            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
+            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Scenarijus</p></button>
             <button onclick="informacija()" class="informacija" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
         </div>
 
@@ -4860,7 +4965,7 @@
         <p id="DovydasTekstas">Karnavalas „Princesė ir varlius”</p>
 
         <div class="pinnedBg">
-            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
+            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Scenarijus</p></button>
             <button onclick="informacija()" class="informacija" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
         </div>
 
@@ -4938,7 +5043,7 @@
         <p id="MatasTekstas">Karnavalas „Princesė ir varlius”</p>
 
         <div class="pinnedBg">
-            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
+            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Scenarijus</p></button>
             <button onclick="informacija()" class="informacija" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
         </div>
 
@@ -5016,7 +5121,7 @@
         <p id="AleksandraTekstas">Karnavalas „Princesė ir varlius”</p>
 
         <div class="pinnedBg">
-            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
+            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Scenarijus</p></button>
             <button onclick="informacija()" class="informacija" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
         </div>
 
@@ -5094,7 +5199,7 @@
         <p id="SamantaTekstas">Karnavalas „Princesė ir varlius”</p>
 
         <div class="pinnedBg">
-            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
+            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Scenarijus</p></button>
             <button onclick="informacija()" class="informacija" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
         </div>
 
@@ -5172,7 +5277,7 @@
         <p id="ArnasTekstas">Karnavalas „Princesė ir varlius”</p>
 
         <div class="pinnedBg">
-            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
+            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Scenarijus</p></button>
             <button onclick="informacija()" class="informacija" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
         </div>
 
@@ -5250,7 +5355,7 @@
         <p id="MilenaTekstas">Karnavalas „Princesė ir varlius”</p>
 
         <div class="pinnedBg">
-            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
+            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Scenarijus</p></button>
             <button onclick="informacija()" class="informacija" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
         </div>
 
@@ -5321,7 +5426,7 @@
         <p id="EmilijaTekstas">Karnavalas „Princesė ir varlius”</p>
 
         <div class="pinnedBg">
-            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
+            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Scenarijus</p></button>
             <button onclick="informacija()" class="informacija" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
         </div>
 
@@ -5393,7 +5498,7 @@
         <p id="ModestasTekstas">Karnavalas „Princesė ir varlius”</p>
 
         <div class="pinnedBg">
-            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
+            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Scenarijus</p></button>
             <button onclick="informacija()" class="informacija" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
         </div>
 
@@ -5464,7 +5569,7 @@
         <p id="GabrieleTekstas">Karnavalas „Princesė ir varlius”</p>
 
         <div class="pinnedBg">
-            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
+            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Scenarijus</p></button>
             <button onclick="informacija()" class="informacija" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
         </div>
 
@@ -5542,7 +5647,7 @@
         <p id="BerzunaTekstas">Karnavalas „Princesė ir varlius”</p>
 
         <div class="pinnedBg">
-            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
+            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Scenarijus</p></button>
             <button onclick="informacija()" class="informacija" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
         </div>
 
@@ -5613,7 +5718,7 @@
         <p id="NojusTekstas">Karnavalas „Princesė ir varlius”</p>
 
         <div class="pinnedBg">
-            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
+            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Scenarijus</p></button>
             <button onclick="informacija()" class="informacija" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
         </div>
 
@@ -5684,7 +5789,7 @@
         <p id="AgnieskaTekstas">Karnavalas „Princesė ir varlius”</p>
 
         <div class="pinnedBg">
-            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Atsisiųsti visą scenarijų</p></button>
+            <button onclick="scenarijus()" class="atsisiustiScenariju" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-scroll" style="margin-right: 5px; cursor: pointer;"></i> Scenarijus</p></button>
             <button onclick="informacija()" class="informacija" ontouchstart><p style="cursor: pointer;"><i class="fa-solid fa-circle-info" style="margin-right: 5px; cursor: pointer;"></i> Informacija</p></button>
         </div>
 
@@ -6309,6 +6414,19 @@
 
 
         function scenarijus() {
+            document.getElementById("body").style.overflowY = "hidden";
+            setTimeout(() => {
+                document.getElementById("scenarijusDocs").style.bottom = "0";
+            }, 10);
+        }
+        function closeScenarijus() {
+            document.getElementById("body").style.overflowY = "scroll";
+            setTimeout(() => {
+                document.getElementById("scenarijusDocs").style.bottom = "-100%";
+            }, 10);
+        }
+
+        function downloadScenarijus() {
             document.getElementById("pinnedBackground").style.display = "block";
             document.getElementById("body").style.overflowY = "hidden";
             setTimeout(() => {
@@ -6327,6 +6445,7 @@
                 document.getElementById("body").style.overflowY = "scroll";
             }, 6310);
         }
+
         function informacija() {
             document.getElementById("pinnedBackground").style.display = "block";
             document.getElementById("body").style.overflowY = "hidden";
