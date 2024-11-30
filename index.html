@@ -8460,19 +8460,23 @@
             document.getElementById("screen").style.top = "-100%";
             document.getElementById("screen").style.backgroundColor = "transparent";
             document.getElementById("display").style.top = "-100%";
-            document.getElementById("body").style.overflowX = "hidden";
-            document.getElementById("body").style.overflowY = "scroll";
+            setTimeout(() => {
+                document.getElementById("body").style.overflowX = "hidden";
+                document.getElementById("body").style.overflowY = "scroll";
+            }, 3000);
         }
         else {
             document.getElementById("screen").style.top = "0";
             document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
             document.getElementById("display").style.top = "0";
-            document.getElementById("body").style.overflow = "hidden";
+            document.getElementById("body").style.overflowX = "hidden";
+            document.getElementById("body").style.overflowY = "hidden";
             if (kelioneI != "" && kelioneI != null || Arune != "" && Arune != null || Smilte != "" && Smilte != null || Adriana != "" && Adriana != null || Norbertas != "" && Norbertas != null || Meta != "" && Meta != null || Justina != "" && Justina != null || Mindaugasd != "" && Mindaugasd != null || Dovydas != "" && Dovydas != null || Matas != "" && Matas != null || Aleksandra != "" && Aleksandra != null || Samanta != "" && Samanta != null || Arnas != "" && Arnas != null || Milena != "" && Milena != null || Emilija != "" && Emilija != null || Modestas != "" && Modestas != null || Gabriele != "" && Gabriele != null || Berzuna != "" && Berzuna || Nojus != "" && Nojus != null || Agnieska != "" && Agnieska != null) {
                 document.getElementById("screen").style.top = "0";
                 document.getElementById("screen").style.backgroundColor = "rgba(0, 0, 0, 0.75)";
                 document.getElementById("display").style.top = "0";
-                document.getElementById("body").style.overflow = "hidden";
+                document.getElementById("body").style.overflowX = "hidden";
+                document.getElementById("body").style.overflowY = "hidden";
             }
         }
         
