@@ -1571,22 +1571,6 @@
             right: 0;
             z-index: 20;
         }
-        #atsisiunciamasAudio7{
-            width: 100%;
-            height: 50px;
-            font-size: 15px;
-            border-radius: 30px 30px 0 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #f2f2f2;
-            box-shadow: 0 0 10px lightgrey;
-            position: fixed;
-            bottom: -100%;
-            left: 0;
-            right: 0;
-            z-index: 20;
-        }
         .pinnedBg{
             width: 100%;
             height: auto;
@@ -3783,11 +3767,6 @@
                 box-shadow: 0 0 10px #333333;
                 color: white;
             }
-            #atsisiunciamasAudio7{
-                background-color: #141414;
-                box-shadow: 0 0 10px #333333;
-                color: white;
-            }
             .pinnedBg{
                 background-color: rgba(20, 20, 20, 0.75);
                 box-shadow: 0 0 10px #333333;
@@ -4147,9 +4126,7 @@
     <audio src="rap.mp3" id="audio2"></audio>
     <audio src="burtai.mp3" id="audio3"></audio>
     <audio src="seseliai.mp3" id="audio4"></audio>
-    <audio src="ma_belle_evangeline.mp3" id="audio5"></audio>
-    <audio src="laikrodis.mp3" id="audio6"></audio>
-    <audio src="sokis.mp3" id="audio7"></audio>
+    <audio src="sokis.mp3" id="audio6"></audio>
     
     <div id="loading">
         <div class="spin-loader" aria-hidden="true"></div>
@@ -4386,9 +4363,7 @@
         <div><p><span id="2aud">rap.mp3</span> (00:23)</p><i class="fa-solid fa-download" onclick="atsisiustiAudio2()" ontouchstart style="right: 50px;"></i><i class="fa-solid fa-play" id="2play" onclick="playAudio2()" ontouchstart style="right: 10px;"></i><i class="fa-solid fa-stop" style="display: none; right: 10px;" id="2stop" onclick="stopAudio2()" ontouchstart></i></div>
         <div><p><span id="3aud">burtai.mp3</span> (00:47)</p><i class="fa-solid fa-download" onclick="atsisiustiAudio3()" ontouchstart style="right: 50px;"></i><i class="fa-solid fa-play" id="3play" onclick="playAudio3()" ontouchstart style="right: 10px;"></i><i class="fa-solid fa-stop" style="display: none; right: 10px;" id="3stop" onclick="stopAudio3()" ontouchstart></i></div>
         <div><p><span id="4aud">seseliai.mp3</span> (00:07)</p><i class="fa-solid fa-download" onclick="atsisiustiAudio4()" ontouchstart style="right: 50px;"></i><i class="fa-solid fa-play" id="4play" onclick="playAudio4()" ontouchstart style="right: 10px;"></i><i class="fa-solid fa-stop" style="display: none; right: 10px;" id="4stop" onclick="stopAudio4()" ontouchstart></i></div>
-        <div><p><span id="5aud">ma_belle_evangeline.mp3</span> (00:53)</p><i class="fa-solid fa-download" onclick="atsisiustiAudio5()" ontouchstart style="right: 50px;"></i><i class="fa-solid fa-play" id="5play" onclick="playAudio5()" ontouchstart style="right: 10px;"></i><i class="fa-solid fa-stop" style="display: none; right: 10px;" id="5stop" onclick="stopAudio5()" ontouchstart></i></div>
-        <div><p><span id="6aud">laikrodis.mp3</span> (00:16)</p><i class="fa-solid fa-download" onclick="atsisiustiAudio6()" ontouchstart style="right: 50px;"></i><i class="fa-solid fa-play" id="6play" onclick="playAudio6()" ontouchstart style="right: 10px;"></i><i class="fa-solid fa-stop" style="display: none; right: 10px;" id="6stop" onclick="stopAudio6()" ontouchstart></i></div>
-        <div><p><span id="7aud">sokis.mp3</span> (02:05)</p><i class="fa-solid fa-download" onclick="atsisiustiAudio7()" ontouchstart style="right: 50px;"></i><i class="fa-solid fa-play" id="7play" onclick="playAudio7()" ontouchstart style="right: 10px;"></i><i class="fa-solid fa-stop" style="display: none; right: 10px;" id="7stop" onclick="stopAudio7()" ontouchstart></i></div>
+        <div><p><span id="6aud">sokis.mp3</span> (02:05)</p><i class="fa-solid fa-download" onclick="atsisiustiAudio6()" ontouchstart style="right: 50px;"></i><i class="fa-solid fa-play" id="6play" onclick="playAudio6()" ontouchstart style="right: 10px;"></i><i class="fa-solid fa-stop" style="display: none; right: 10px;" id="6stop" onclick="stopAudio6()" ontouchstart></i></div>
     </div>
     <div id="pinnedBackground" onclick="uzdarytiInfo()" ontouchstart></div>
     <div id="atsisiunciamasScenarijus"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.5);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama "scenarijus.pdf"</div>
@@ -4449,7 +4424,7 @@
         <div class="apie">
             <i class="fa-regular fa-circle-question karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Apie rolę:</p>
-            <p class="antrTekstas">Senas, draugiškas švytintis jonvabalis. Padeda varlei ir varliui surasti burtininkę mama Odę ir atvirsti žmonėmis, susidraugaudamas su jais. Dėl blogojo burtininko miršta, vaidinimo pabaigoje prisikelia.</p>
+            <p class="antrTekstas">Senas, draugiškas švytintis jonvabalis. Padeda varlei ir varliui surasti burtininkę mama Odę ir atvirsti žmonėmis, susidraugaudamas su jais.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="pasiruosimas">
@@ -4467,14 +4442,14 @@
         <div class="zodziai">
             <i class="fa-regular fa-comments karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Žodžiai:</p>
-            <p class="antrTekstas">“ėėė, tik pažvelkit, na ką, prisiburkavot, balandėliai? ar ne gėda?”<br>“tuoj užsidegsiu!”<br>“žiūrėkit, kokią turiu šviečiančią subinę!”<br>“leiskit prisistatyti, mano vardas Raimondas, bet kažkodėl visi mane vadina Raima, o ką jūs čia veikiat?”<br>“taigi jūs vapšie ne ten einat, chebra, parodysiu jums kelią”<br><i>(svajingai)</i> “o taip… mano mergina… vardu Andželina…”<br>“taip! ji pati gražiausia jonvabalė pasaulyje, aš ją kalbinu beveik kiekvieną naktį… nors ji ir neatsako, bet širdis man kužda, kad vieną dieną mes su ja būsime kartu”<br><i>(atsako krokodilui)</i> “šita vienintelė”<br>“eeeee, pala, pala, nesupratau, peršiesi mano merginai?!”<br><i>(nudžiunga)</i> “taip ir žinojau, taip ir jaučiau!”<br><i>(piktai)</i> “tuoj aš jums užkursiu pirtį! Navynai, bėk iš čia!”<br><i>(lėtai)</i> “gražuole, o kodėl tu vis dar…”<br>“ah, très bien, labai graži pabaiga… Andželinai irgi patiktų”</p>
+            <p class="antrTekstas">“ėėė, tik pažvelkit, na ką, prisiburkavot, balandėliai? ar ne gėda?”<br>“tuoj užsidegsiu!”<br>“žiūrėkit, kokią turiu šviečiančią subinę!”<br>“leiskit prisistatyti, mano vardas Raimondas, bet kažkodėl visi mane vadina Raima, o ką jūs čia veikiat?”<br>“taigi jūs vapšie ne ten einat, chebra, parodysiu jums kelią”<br><i>(svajingai)</i> “o taip… mano mergina… vardu Andželina…”<br>“taip! ji pati gražiausia jonvabalė pasaulyje, aš ją kalbinu beveik kiekvieną naktį… nors ji ir neatsako, bet širdis man kužda, kad vieną dieną mes su ja būsime kartu...”<br><i>(atsako krokodilui)</i> “šita vienintelė”</p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip. Dalį žodžių gali reikti improvizuoti.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="vaidinimas">
             <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Vaidinimo eiga:</p>
-            <p class="antrTekstas">Iš šono pasirodo jonvabalis.<br>Visi išeina.<br>Atsidarius užuolaidoms jonvabalis toliau keliauja su varlėmis ir krokodilu.<br>Varlius pradeda groti gitara, jonvabalis dainuoja, krokodilas su varle pritaria abiems.<br>Staiga pasirodo šešėliai, iš varliaus atima gitarą ir tempia jį iš scenos, varlė, krokodilas ir jonvabalis laiko varlių.<br>Visi parodo į besišypsantį varlių😅.<br>Visi vaikšto po sceną, mama Odė kažką sau murma, į sceną įnešamas stalas su puodu, varlės viena kitą side-eye’ina.<br>Visi prieina prie puodo, mama Odė paragauja sriubos.<br>Visi išeina iš scenos išskyrus varlių, kuris išsitraukia žiedą ir pasižiūri į žvaigždę Andželiną.<br>Įeina jonvabalis.<br>Jonvabalis nori muštis, o varlius jį ramina.<br>Jonvabalis pradeda gintis su savo šviesa.<br>Besvyruojantį jonvabalį sugauna į sceną įlėkęs krokodilas.<br>Visi išeina.<br>Jonvabalis silpnai prabunda.<br>Jonvabalis staiga atsibunda, įbėga ir savo vietose sustoja visi veikėjai.</p>
+            <p class="antrTekstas">Iš šono pasirodo jonvabalis.<br>Visi išeina.<br>Atsidarius užuolaidoms jonvabalis toliau keliauja su varlėmis ir krokodilu.<br>Staiga pasirodo šešėliai ir tempia varlių iš scenos, varlė, krokodilas ir jonvabalis jį laiko.<br>Visi parodo į besišypsantį varlių😅.<br>Visi vaikšto po sceną, mama Odė kažką sau murma, į sceną įnešamas stalas su puodu, varlės viena kitą side-eye’ina.<br>Visi prieina prie puodo, mama Odė paragauja sriubos.<br>Visi išeina iš scenos.<br>Tiana ir Navynas sušoka valsą, įbėga ir savo vietose sustoja visi veikėjai.</p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
         </div>
         <div class="separationLine1"><hr></div>
@@ -4545,14 +4520,14 @@
         <div class="zodziai">
             <i class="fa-regular fa-comments karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Žodžiai:</p>
-            <p class="antrTekstas">“na tai kuris iš jūsų, chuliganai, prasidėjo su tamsos šešėliais?”<br>“jūs atrodot išalkę, eime pas mane”<br>“na tai ką, varliukai, žmonėmis norite tapti?”<br>“na jeigu jau tikrai norite tapti žmonėmis, yra vienintelis būdas: (maišo sriubą) šaltekai nemeluoja niekad, duos atsakymą, žiūrėkit!”<br><i>(piktai)</i> “užsičiaupk ir žiūrėk į puodą!”<br>“aišku, kad suveiks, bet reikia suspėti iki šiandienos vakaro. Svarbiausia - nepamiršk, kad princesė turi tave pabučiuoti ir tada BOOM! abu tapsite žmonėmis”<br>“krokodile, turi giliau mąstyti, o dabar nešdinkitės, kad suspėtumėte”<br><i>(gailestingu balsu)</i> “na, mano mieli varliukai, gana jums kentėti”</p>
+            <p class="antrTekstas">“na tai kuris iš jūsų, chuliganai, prasidėjo su tamsos šešėliais?”<br>“ak tu, begėdi! na, jūs atrodot išalkę, eime pas mane”<br>“na tai ką, varliukai, žmonėmis norite tapti?”<br>“na jeigu jau tikrai norite tapti žmonėmis, yra vienintelis būdas: <i>(maišo sriubą)</i> šaltekai nemeluoja niekad, duos atsakymą, žiūrėkit!”<br><i>(piktai)</i> “užsičiaupk ir žiūrėk į puodą!”<br>“aišku, kad suveiks, bet reikia suspėti iki šiandienos vakaro. Svarbiausia - nepamiršk, kad princesė turi tave pabučiuoti ir tada BOOM! abu tapsite žmonėmis”<br>“krokodile, turi giliau mąstyti, o dabar nešdinkitės, kad suspėtumėte”<br><i>(gailestingu balsu)</i> “na, mano mieli varliukai, gana jums kentėti”</p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip. Dalį žodžių gali reikti improvizuoti.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="vaidinimas">
             <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Vaidinimo eiga:</p>
-            <p class="antrTekstas">Iš kitos užuolaidos po akimirkos išlenda mama Odė ir išgąsdina šešėlius.<br>Mama Odė pakviečia visus į savo namus.<br>Visi vaikšto po sceną, mama Odė kažką sau murma, į sceną įnešamas stalas su puodu, varlės viena kitą side-eye’ina.<br>Visi prieina prie puodo, mama Odė paragauja sriubos.<br>Visi išeina iš scenos išskyrus varlių, kuris išsitraukia žiedą ir pasižiūri į žvaigždę Andželiną.<br>Staiga scenoje pasirodo mama Odė.<br>Mama Odė sutrenkia lazda į grindis, įsijungia muzika ir prasideda šokis.<br>Jonvabalis staiga atsibunda, įbėga ir savo vietose sustoja visi veikėjai.</p>
+            <p class="antrTekstas">Iš kitos užuolaidos po akimirkos išlenda mama Odė ir išgąsdina šešėlius.<br>Mama Odė pakviečia visus į savo namus.<br>Visi vaikšto po sceną, mama Odė kažką sau murma, į sceną įnešamas stalas su puodu, varlės viena kitą side-eye’ina.<br>Visi prieina prie puodo, mama Odė paragauja sriubos.<br>Visi išeina iš scenos.<br>Staiga scenoje pasirodo mama Odė.<br>Mama Odė sutrenkia lazda į grindis, įsijungia muzika ir prasideda šokis.<br>Tiana ir Navynas sušoka valsą, įbėga ir savo vietose sustoja visi veikėjai.</p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
         </div>
         <div class="separationLine1"><hr></div>
@@ -4623,7 +4598,7 @@
         <div class="vaidinimas">
             <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Vaidinimo eiga:</p>
-            <p class="antrTekstas">Į sceną įbėga šešėliai, groja garso takelis <i>“seseliai.mp3”</i>.<br>Šešėliai šnibždėdami išsisklaido po sceną.<br>Staiga pasirodo šešėliai, iš varliaus atima gitarą ir tempia jį iš scenos, varlė, krokodilas ir jonvabalis laiko varlių. Iš kitos užuolaidos po akimirkos išlenda mama Odė ir išgąsdina šešėlius.<br>Varlių staiga sugauna šešėliai.<br>Šešėliai išsisklaido, varlius išbėga, įeina blogasis burtininkas, užvožia jonvabaliui ir nepatenkintas išeina.<br>Jonvabalis staiga atsibunda, įbėga ir savo vietose sustoja visi veikėjai.</p>
+            <p class="antrTekstas">Į sceną įbėga šešėliai, groja garso takelis <i>“seseliai.mp3”</i>.<br>Šešėliai šnibždėdami išsisklaido po sceną.<br>Staiga pasirodo šešėliai ir tempia varlių iš scenos, varlė, krokodilas ir jonvabalis jį laiko. Iš kitos užuolaidos po akimirkos išlenda mama Odė ir išgąsdina šešėlius.<br>Tiana ir Navynas sušoka valsą, įbėga ir savo vietose sustoja visi veikėjai.</p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
         </div>
         <div class="separationLine1"><hr></div>
@@ -4701,7 +4676,7 @@
         <div class="vaidinimas">
             <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Vaidinimo eiga:</p>
-            <p class="antrTekstas">Atsidarius užuolaidoms scenoje muzikuoja Navynas, groja garso takelis <i>“rap.mp3”</i>, vos tempdamas lagaminus įsiterpia Lorensas.<br>Navynas ignoruoja Lorensą ir domisi burtų informacija. Prieina prie kortų stalo. Navynas su Lorensu atsisėda, prasideda chaosas - mėtomos kortos, groja garso takelis <i>“burtai.mp3”</i>, vyksta burimas ir pan. Navynas tampa varliumi, Lorensas - princu (apsikeičia vietomis).<br>Jonvabalis staiga atsibunda, įbėga ir savo vietose sustoja visi veikėjai.</p>
+            <p class="antrTekstas">Atsidarius užuolaidoms scenoje muzikuoja Navynas, groja garso takelis <i>“rap.mp3”</i>, vos tempdamas lagaminus įsiterpia Lorensas.<br>Navynas ignoruoja Lorensą ir domisi burtų informacija. Prieina prie kortų stalo. Navynas su Lorensu atsisėda, prasideda chaosas - mėtomos kortos, groja garso takelis <i>“burtai.mp3”</i>, vyksta burimas ir pan. Navynas tampa varliumi, Lorensas - princu (apsikeičia vietomis).<br>Tiana ir Navynas sušoka valsą, įbėga ir savo vietose sustoja visi veikėjai.</p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
         </div>
         <div class="separationLine1"><hr></div>
@@ -4772,14 +4747,14 @@
         <div class="zodziai">
             <i class="fa-regular fa-comments karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Žodžiai:</p>
-            <p class="antrTekstas"><i>(klykia)</i> “AAAAA!”<br><i>(piktu balsu)</i> “ką tu man padarei?!”<br>“einam, einam, mums jau laikas eiti…”<br><i>(piktu balsu)</i> “šitą asilą varlium pavertė kažkoks voodoo burtininkas, o dabar…”<br>“kaip ir tu, idiote!😒”<br>“seni, ar tau viskas gerai?”<br>“o tai tu turi jau kokią panelę?”<br>“Andželina?”<br>“na taip, močiute”<br><i>(įsiterpia)</i> “Šarlotė, ji gi ne princesė?”<br>“supratau, Šarlotė ištekės už apsimetėlio princo ir taps princese!”<br>“palaukit!”<br>“nedaryk to!”<br>“aš tau neleisiu!”<br>“mano svajonę… bet ji nieko verta, jei šalia nebus tavęs…”<br><i>(nedrąsiai)</i> “aš myliu tave”<br>“tokį, koks esi”<br><i>(graudžiu balsu)</i> “Raima…”<br><i>(įsiterpia)</i> “mes liksim varlėmis, Raima”</p>
+            <p class="antrTekstas"><i>(klykia)</i> “AAAAA!”<br><i>(piktu balsu)</i> “ką tu man padarei?!”<br>“einam, einam, mums jau laikas eiti…”<br><i>(piktu balsu)</i> “šitą asilą varlium pavertė kažkoks voodoo burtininkas, o dabar…”<br>“kaip ir tu, idiote!😒”<br>“seni, ar tau viskas gerai?”<br>“o tai tu turi jau kokią panelę?”<br>“Andželina?”<br>“na taip, močiute”<br><i>(įsiterpia)</i> “Šarlotė, ji gi ne princesė?”<br>“supratau, Šarlotė ištekės už apsimetėlio princo ir taps princese!”<br>“palaukit!”<br>“nedaryk to!”<br>“aš tau neleisiu!”<br>“mano svajonę… bet ji nieko verta, jei šalia nebus tavęs…”<br><i>(nedrąsiai)</i> “aš myliu tave”<br>“tokį, koks esi”</p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip. Dalį žodžių gali reikti improvizuoti.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="vaidinimas">
             <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Vaidinimo eiga:</p>
-            <p class="antrTekstas">Tiana ir varlė apsikeičia. Varlė susivokia, kad yra varlė.<br>Varlė ir varlius mušasi.<br>Abu pamato krokodilą ir suspiegia.<br>Varlius pradeda šokti, varlė tempia varlių šalin.<br>Visi vaikšto po sceną, vis eidami į kitą pusę.<br>Varlius ir varlė toliau pešasi.<br>Varlius su varle tuo pačiu metu vis dar ginčijasi.<br>Varlius su varle suklūsta ir keistai žiūri į jonvabalį.<br>Visi išeina.<br>Atsidarius užuolaidoms jonvabalis toliau keliauja su varlėmis ir krokodilu.<br>Varlius pradeda groti gitara, jonvabalis dainuoja, krokodilas su varle pritaria abiems.<br>Staiga pasirodo šešėliai, iš varliaus atima gitarą ir tempia jį iš scenos, varlė, krokodilas ir jonvabalis laiko varlių.<br>Visi parodo į besišypsantį varlių😅.<br>Visi vaikšto po sceną, mama Odė kažką sau murma, į sceną įnešamas stalas su puodu, varlės viena kitą side-eye’ina.<br>Visi prieina prie puodo, mama Odė paragauja sriubos.<br>Visi išeina iš scenos išskyrus varlių, kuris išsitraukia žiedą ir pasižiūri į žvaigždę Andželiną.<br>Šarlotė ir varlius ruošiasi bučiuotis, įbėga varlė.<br>Jonvabalis staiga atsibunda, įbėga ir savo vietose sustoja visi veikėjai.</p>
+            <p class="antrTekstas">Tiana ir varlė apsikeičia. Varlė susivokia, kad yra varlė.<br>Varlė ir varlius mušasi.<br>Abu pamato krokodilą ir suspiegia.<br>Varlius pradeda šokti, varlė tempia varlių šalin.<br>Visi vaikšto po sceną, vis eidami į kitą pusę.<br>Varlius ir varlė toliau pešasi.<br>Varlius su varle tuo pačiu metu vis dar ginčijasi.<br>Varlius su varle suklūsta ir keistai žiūri į jonvabalį.<br>Visi išeina.<br>Atsidarius užuolaidoms jonvabalis toliau keliauja su varlėmis ir krokodilu.<br>Staiga pasirodo šešėliai ir tempia varlių iš scenos, varlė, krokodilas ir jonvabalis jį laiko.<br>Visi parodo į besišypsantį varlių😅.<br>Visi vaikšto po sceną, mama Odė kažką sau murma, į sceną įnešamas stalas su puodu, varlės viena kitą side-eye’ina.<br>Visi prieina prie puodo, mama Odė paragauja sriubos.<br>Visi išeina iš scenos.<br>Šarlotė ir varlius ruošiasi bučiuotis, įbėga varlė.<br>Tiana ir Navynas sušoka valsą, įbėga ir savo vietose sustoja visi veikėjai.</p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
         </div>
         <div class="separationLine1"><hr></div>
@@ -4832,7 +4807,7 @@
         <div class="apie">
             <i class="fa-regular fa-circle-question karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Apie rolę:</p>
-            <p class="antrTekstas">Linksmas rokeris krokodilas, padeda varlei ir varliui atvirsti žmonėmis, pagauna krentantį primuštą jonvabalį.</p>
+            <p class="antrTekstas">Linksmas rokeris krokodilas, padeda varlei ir varliui atvirsti žmonėmis.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="pasiruosimas">
@@ -4850,14 +4825,14 @@
         <div class="zodziai">
             <i class="fa-regular fa-comments karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Žodžiai:</p>
-            <p class="antrTekstas">“aš žinau šitą melodiją!”<br>“o kur jūs keliaujat?”<br><i>(drebėdamas)</i> “voodoo burtininkas? jums reikia pas mamą Odę, kuri padės panaikinti kerus!”<br>“nuuuuu….. geraiiiii….. galllll….. turbūttttt….. eime!”<br><i>(šnibžda jonvabaliui)</i> “o gal yra kitų mažiau crazy burtininkių?”<br>“o kaipgi aš, mama? aš irgi noriu tapti žmogumi, kad galėčiau groti roko karnavaluose, taip pat noriu turėti pirštus ir bambą, bet ne kokią nors iššokusią, o sulindusią vidun”<br><i>(liūdnu, verkiančiu balsu)</i> “Tiana, Navynai!”<br>“žiaurusis Monsieur šešėlis jį pritrenkė…”<br>“jis mirtinai sužeistas”</p>
+            <p class="antrTekstas">“aš žinau šitą melodiją!”<br>“o kur jūs keliaujat?”<br><i>(drebėdamas)</i> “voodoo burtininkas? jums reikia pas mamą Odę, kuri padės panaikinti kerus!”<br>“nuuuuu….. geraiiiii….. galllll….. turbūttttt….. eime!”<br><i>(šnibžda jonvabaliui)</i> “o gal yra kitų mažiau crazy burtininkių?”<br>“o kaipgi aš, mama? aš irgi noriu tapti žmogumi, kad galėčiau groti roko karnavaluose, taip pat noriu turėti pirštus ir bambą, bet ne kokią nors iššokusią, o sulindusią vidun”</p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip. Dalį žodžių gali reikti improvizuoti.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="vaidinimas">
             <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Vaidinimo eiga:</p>
-            <p class="antrTekstas">Iš užuolaidos išlenda krokodilas ir stebi juos.<br>Krokodilas bando išgąsdinti, bet staiga pradeda groti gitara.<br>Krokodilas priekabiauja prie abiejų.<br>Varlei nebaigus kalbėti įsiterpia krokodilas.<br>Visi vaikšto po sceną, vis eidami į kitą pusę. Krokodilas pasiklysta, išeina iš scenos.<br>Atsidarius užuolaidoms jonvabalis toliau keliauja su varlėmis ir krokodilu.<br>Varlius pradeda groti gitara, jonvabalis dainuoja, krokodilas su varle pritaria abiems.<br>Staiga pasirodo šešėliai, iš varliaus atima gitarą ir tempia jį iš scenos, varlė, krokodilas ir jonvabalis laiko varlių.<br>Visi parodo į besišypsantį varlių😅.<br>Visi vaikšto po sceną, mama Odė kažką sau murma, į sceną įnešamas stalas su puodu, varlės viena kitą side-eye’ina.<br>Visi prieina prie puodo, mama Odė paragauja sriubos.<br>Visi išeina iš scenos išskyrus varlių, kuris išsitraukia žiedą ir pasižiūri į žvaigždę Andželiną.<br>Besvyruojantį jonvabalį sugauna į sceną įlėkęs krokodilas.<br>Scenoje pasirodo krokodilas, nešdamas mirštantį jonvabalį.<br>Jonvabalis staiga atsibunda, įbėga ir savo vietose sustoja visi veikėjai.</p>
+            <p class="antrTekstas">Iš užuolaidos išlenda krokodilas ir stebi juos.<br>Krokodilas bando išgąsdinti, bet staiga pradeda groti gitara.<br>Krokodilas priekabiauja prie abiejų.<br>Varlei nebaigus kalbėti įsiterpia krokodilas.<br>Visi vaikšto po sceną, vis eidami į kitą pusę. Krokodilas pasiklysta, išeina iš scenos.<br>Atsidarius užuolaidoms jonvabalis toliau keliauja su varlėmis ir krokodilu.<br>Staiga pasirodo šešėliai ir tempia varlių iš scenos, varlė, krokodilas ir jonvabalis jį laiko.<br>Visi parodo į besišypsantį varlių😅.<br>Visi vaikšto po sceną, mama Odė kažką sau murma, į sceną įnešamas stalas su puodu, varlės viena kitą side-eye’ina.<br>Visi prieina prie puodo, mama Odė paragauja sriubos.<br>Visi išeina iš scenos.<br>Tiana ir Navynas sušoka valsą, įbėga ir savo vietose sustoja visi veikėjai.</p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
         </div>
         <div class="separationLine1"><hr></div>
@@ -4928,7 +4903,7 @@
         <div class="vaidinimas">
             <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Vaidinimo eiga:</p>
-            <p class="antrTekstas">Į sceną įbėga šešėliai, groja garso takelis <i>“seseliai.mp3”</i>.<br>Šešėliai šnibždėdami išsisklaido po sceną.<br>Staiga pasirodo šešėliai, iš varliaus atima gitarą ir tempia jį iš scenos, varlė, krokodilas ir jonvabalis laiko varlių. Iš kitos užuolaidos po akimirkos išlenda mama Odė ir išgąsdina šešėlius.<br>Varlių staiga sugauna šešėliai.<br>Šešėliai išsisklaido, varlius išbėga, įeina blogasis burtininkas, užvožia jonvabaliui ir nepatenkintas išeina.<br>Jonvabalis staiga atsibunda, įbėga ir savo vietose sustoja visi veikėjai.</p>
+            <p class="antrTekstas">Į sceną įbėga šešėliai, groja garso takelis <i>“seseliai.mp3”</i>.<br>Šešėliai šnibždėdami išsisklaido po sceną.<br>Staiga pasirodo šešėliai ir tempia varlių iš scenos, varlė, krokodilas ir jonvabalis jį laiko. Iš kitos užuolaidos po akimirkos išlenda mama Odė ir išgąsdina šešėlius.<br>Tiana ir Navynas sušoka valsą, įbėga ir savo vietose sustoja visi veikėjai.</p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
         </div>
         <div class="separationLine1"><hr></div>
@@ -5006,7 +4981,7 @@
         <div class="vaidinimas">
             <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Vaidinimo eiga:</p>
-            <p class="antrTekstas">Atsidarius užuolaidoms scenoje muzikuoja Navynas, groja garso takelis “rap.mp3”, vos tempdamas lagaminus įsiterpia Lorensas.<br>Lorensas bando Navyną atkalbėti.<br>Navynas su Lorensu atsisėda, prasideda chaosas - mėtomos kortos, groja garso takelis “burtai.mp3”, vyksta burimas ir pan. Navynas tampa varliumi, Lorensas - princu (apsikeičia vietomis).<br>Jonvabalis staiga atsibunda, įbėga ir savo vietose sustoja visi veikėjai.</p>
+            <p class="antrTekstas">Atsidarius užuolaidoms scenoje muzikuoja Navynas, groja garso takelis <i>“rap.mp3”</i>, vos tempdamas lagaminus įsiterpia Lorensas.<br>Lorensas bando Navyną atkalbėti.<br>Navynas su Lorensu atsisėda, prasideda chaosas - mėtomos kortos, groja garso takelis <i>“burtai.mp3”</i>, vyksta burimas ir pan. Navynas tampa varliumi, Lorensas - princu (apsikeičia vietomis).<br>Tiana ir Navynas sušoka valsą, įbėga ir savo vietose sustoja visi veikėjai.</p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
         </div>
         <div class="separationLine1"><hr></div>
@@ -5059,7 +5034,7 @@
         <div class="apie">
             <i class="fa-regular fa-circle-question karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Apie rolę:</p>
-            <p class="antrTekstas">Blogasis, slaptasis burtininkas, paverčia princą varliumi ir princo buhalterį - princu, šešėlių pagalba bando sugauti princą..</p>
+            <p class="antrTekstas">Blogasis, slaptasis burtininkas, paverčia princą varliumi ir princo buhalterį - princu, šešėlių pagalba bando sugauti princą.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="pasiruosimas">
@@ -5077,14 +5052,14 @@
         <div class="zodziai">
             <i class="fa-regular fa-comments karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Žodžiai:</p>
-            <p class="antrTekstas">“ponai! prieš jus magijos mokslų daktaras Monsieur Facilier, jūsų paslaugoms… turiu jums šiokią tokią Kalėdinę dovanėlę😈”<br>“eime! tu tapsi šreksi, meksi, merginų turėsi!”<br>“cha cha cha cha cha, netrukus užvaldysiu miestą ir visų sielos bus mano!”<br>“bus tvarka! iš po žemių išknisim tą varlių! atveskit jį gyvą, plakančia širdimi, supratot? pirmyn! (sutrenkia lazda į žemę)”</p>
+            <p class="antrTekstas">“ponai! prieš jus magijos mokslų daktaras Monsieur Facilier, jūsų paslaugoms… turiu jums šiokią tokią Kalėdinę dovanėlę😈”<br>“eime! tu tapsi šreksi, meksi, merginų turėsi!”<br>“cha cha cha cha cha, netrukus užvaldysiu miestą ir visų sielos bus mano!”<br>“bus tvarka! iš po žemių išknisim tą varlių! atveskit jį gyvą, plakančia širdimi, supratot? pirmyn! <i>(sutrenkia lazda į žemę)</i>”</p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip. Dalį žodžių gali reikti improvizuoti.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="vaidinimas">
             <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Vaidinimo eiga:</p>
-            <p class="antrTekstas">Navynui nebaigus kalbėti scenoje pasirodo blogasis burtininkas.<br>Blogasis burtininkas paduoda Navynui kortelę su informacija.<br>Blogasis burtininkas vedasi Navyną prie kortų stalo.<br>Navynas su Lorensu atsisėda, prasideda chaosas - mėtomos kortos, groja garso takelis “burtai.mp3”, vyksta burimas ir pan.<br>Į sceną įeina blogasis burtininkas ir kalbasi su savimi.<br>Šešėliai išsisklaido, varlius išbėga, įeina blogasis burtininkas, užvožia jonvabaliui ir nepatenkintas išeina.<br>Jonvabalis staiga atsibunda, įbėga ir savo vietose sustoja visi veikėjai.</p>
+            <p class="antrTekstas">Navynui nebaigus kalbėti scenoje pasirodo blogasis burtininkas.<br>Blogasis burtininkas paduoda Navynui kortelę su informacija.<br>Blogasis burtininkas vedasi Navyną prie kortų stalo.<br>Navynas su Lorensu atsisėda, prasideda chaosas - mėtomos kortos, groja garso takelis <i>“burtai.mp3”</i>, vyksta burimas ir pan.<br>Į sceną įeina blogasis burtininkas ir kalbasi su savimi.<br>Tiana ir Navynas sušoka valsą, įbėga ir savo vietose sustoja visi veikėjai.</p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
         </div>
         <div class="separationLine1"><hr></div>
@@ -5162,7 +5137,7 @@
         <div class="vaidinimas">
             <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Vaidinimo eiga:</p>
-            <p class="antrTekstas">Mama iš knygos skaito Tianai ir Šarlotei istoriją apie princesę ir varlių. Abi labai įdėmiai klauso.<br>Abi apsiramina.<br>Mama su Tiana išeina iš scenos.<br>Atsidarius užuolaidoms Tiana verkia, įbėga besidažanti Šarlotė.<br>Tiana lieka viena, iš kitos scenos pusės įeina varlius ir priena prie jos.<br>Tiana bėga nuo varliaus, jis ją vejasi.<br>Tiana pradeda mėtyti į varlių daiktus, jis bėga nuo jų.<br>Tiana varliaus neklauso ir toliau mėto daiktus, kol iškelia pasakų knygą.<br>Tiana užvožia varliui.<br>Tiana ruošiasi vėl trenkti varliui. Varlius ją sustabdo.<br>Tiana ir varlius laikant širdelę pasibučiuoja. Tiana ir varlė apsikeičia.<br>Jonvabalis staiga atsibunda, įbėga ir savo vietose sustoja visi veikėjai.</p>
+            <p class="antrTekstas">Mama iš knygos skaito Tianai ir Šarlotei istoriją apie princesę ir varlių. Abi labai įdėmiai klauso.<br>Abi apsiramina.<br>Mama su Tiana išeina iš scenos.<br>Atsidarius užuolaidoms Tiana verkia, įbėga besidažanti Šarlotė.<br>Tiana lieka viena, iš kitos scenos pusės įeina varlius ir priena prie jos.<br>Tiana bėga nuo varliaus, jis ją vejasi.<br>Tiana pradeda mėtyti į varlių daiktus, jis bėga nuo jų.<br>Tiana varliaus neklauso ir toliau mėto daiktus, kol iškelia pasakų knygą.<br>Tiana užvožia varliui.<br>Tiana ruošiasi vėl trenkti varliui. Varlius ją sustabdo.<br>Tiana ir varlius laikant širdelę pasibučiuoja. Tiana ir varlė apsikeičia.<br>Tiana ir Navynas sušoka valsą, įbėga ir savo vietose sustoja visi veikėjai.</p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
         </div>
         <div class="separationLine1"><hr></div>
@@ -5233,14 +5208,14 @@
         <div class="zodziai">
             <i class="fa-regular fa-comments karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Žodžiai:</p>
-            <p class="antrTekstas"><i>(įsiterpia)</i> “čia mano mėgstamiausia vieta!”<br><i>(meiliai linksėdama)</i> “aww”<br>“jėga! noriu dar, paskaityk dar!”<br>“tikrai jokio?😉 o tu įsivaizduok, kad tai gražuolis princas! <i>(kiša Tianai į veidą savo pliušinį žaislą)</i> nagi, pabučiuok, pabučiuok!”<br><i>(svajodama)</i> “o aš pabučiuočiau, pabučiuočiau varlę, nors ir šimtą varlių, kad tik ištekėčiau už princo ir tapčiau princese”<br>“tėti, tėti, žiūrėk, kokia suknelė! graži, ar ne?”<br><i>(teiraujasi)</i> “kas atsitiko, brangioji? kodėl tokia nuliūdus? juk ten lauke vyksta didžiulis karnavalas!”<br><i>(linksmai)</i> “ai, nesiparink! bus tų bachūrų!”<br>“ar tu pasakei… princas?”<br>“tai bent naujienos… ir susituoksime, ir ilgai ir laimingai gyvensime? ir viskas?”<br>“ko tik pageidausi, mažuti! <i>(pasidažo lūpas)</i> nagi, nemiegam, atkišam lūpytes!”<br><i>(nustebusiu balsu)</i> “Tiana?”<br>“apie tokią meilę, apie tikrą meilę aš skaičiau tik pasakose… Tiana, tu radai ją!.. pabučiuosiu jį, dėl tavęs, brangioji, ir be jokio išskaičiavimo!”<br>“o varge, tikiuosi tas senas laikrodis skuba!”<br>“aš labai apgailestauju…”</p>
+            <p class="antrTekstas"><i>(įsiterpia)</i> “čia mano mėgstamiausia vieta!”<br><i>(meiliai linksėdama)</i> “aww”<br>“jėga! noriu dar, paskaityk dar!”<br>“tikrai jokio?😉 o tu įsivaizduok, kad tai gražuolis princas!<br><i>(teiraujasi)</i> “kas atsitiko, brangioji? kodėl tokia nuliūdus? juk ten lauke vyksta didžiulis karnavalas!”<br><i>(linksmai)</i> “ai, nesiparink! bus tų bachūrų!”<br>“ar tu pasakei… princas?”<br>“tai bent naujienos… ir susituoksime, ir ilgai ir laimingai gyvensime? ir viskas?”<br>“ko tik pageidausi, mažuti! <i>(pasidažo lūpas)</i> nagi, nemiegam, atkišam lūpytes!”<br><i>(nustebusiu balsu)</i> “Tiana?”</p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip. Dalį žodžių gali reikti improvizuoti.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="vaidinimas">
             <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Vaidinimo eiga:</p>
-            <p class="antrTekstas">Mama iš knygos skaito Tianai ir Šarlotei istoriją apie princesę ir varlių. Abi labai įdėmiai klauso.<br>Šarlotė nuvirsta ant nugaros ir makaluojasi.<br>Abi apsiramina.<br>Šarlotė pripuola prie jo.<br>Atsidarius užuolaidoms Tiana verkia, įbėga besidažanti Šarlotė.<br>Šarlotė numoja ranka ir išeina iš scenos.<br>Į sceną įlekia Šarlotė, už jos įeina varlius. Šarlotė laksto po sceną dažydamasi.<br>Šarlotė išsigandusi užvožia varliui ir po akimirkos susivokia, ką jis pasakė.<br>Šarlotė ir varlius ruošiasi bučiuotis, įbėga varlė.<br>Įsiterpia beverkianti Šarlotė.<br>Šarlotė ir varlius ruošiasi pasibučiuoti, groja garso takelis <i>“laikrodis.mp3”</i>.<br>Šarlotė bando bučiuoti varlių, nieko neįvyksta. Abu atsidūsta.<br>Jonvabalis staiga atsibunda, įbėga ir savo vietose sustoja visi veikėjai.</p>
+            <p class="antrTekstas">Mama iš knygos skaito Tianai ir Šarlotei istoriją apie princesę ir varlių. Abi labai įdėmiai klauso.<br>Šarlotė nuvirsta ant nugaros ir makaluojasi.<br>Abi apsiramina.<br>Atsidarius užuolaidoms Tiana verkia, įbėga besidažanti Šarlotė.<br>Šarlotė numoja ranka ir išeina iš scenos.<br>Į sceną įlekia Šarlotė, už jos įeina varlius. Šarlotė laksto po sceną dažydamasi.<br>Šarlotė išsigandusi užvožia varliui ir po akimirkos susivokia, ką jis pasakė.<br>Šarlotė ir varlius ruošiasi bučiuotis, įbėga varlė.<br>Tiana ir Navynas sušoka valsą, įbėga ir savo vietose sustoja visi veikėjai.</p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
         </div>
         <div class="separationLine1"><hr></div>
@@ -5311,14 +5286,14 @@
         <div class="zodziai">
             <i class="fa-regular fa-comments karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Žodžiai:</p>
-            <p class="antrTekstas"><i>(pataikaujančiu balsu)</i> “gal būtų visai neblogai, a?😏”<br>“atleisk, atleisk, atsiprašau, aš, aš… visai nenorėjau tavęs gąsdinti, a, palauk!…”<br>“o tu, princese, turi stiprią rankelę😏 a! užteks, prašau!.. padėk beždžionę į vietą😡”<br>“palauk, leisk man prisistatyti, aš esu princas Navynas”<br>“aš nežinau! prisimenu tik, kad štai aš - žavus princas, trali vali festivali! <i>(šoka)</i> o po akimirkos aš žalias ir gleivėtas”<br>“palauk! aš žinau kaip galima mane išlaisvinti! pagal pasaką, tuuuu turi mane pabučiuoti😏”<br>“tau patiks, pamatysi, bučiuotis su tokiu alfa patinu, kaip aš, patinka visoms😏😏😏”<br>“bet tai panaikintų mano kerus…🥺”<br><i>(ramiu balsu)</i> “ramiai, princese, chill out”<br>“mes bandome atvirsti žmonėmis, jeigu ką😒”<br>“tai nuvesk mus pas ją!”<br>“kur jis dingo, ot kvailys!”<br>“mes keliaujam pas mamą Odę”<br>“o tai suveiks?”<br>“ah, Andželina, kodėl nedrįstu pažiūrėt Tianai į akis ir pasakyt: išpildysiu visas, visas tavo svajones, nes… nes aš tave myliu”<br>“palauk! <i>(padaro TikTok’o judesį ‘palauk’)</i>, aš myliu ne Andželiną, o Tianą”<br><i>(iš šono, pasipūtusiu balsu)</i> “panele! leiskit prisistatyti, aš esu princas Navynas…”<br>“taip, tik kažkoks voodoo burtininkas mane pavertė varliumi, bet jeigu iki vidurnakčio mane pabučiuosi, atvirsiu žmogumi ir galėsiu ištekėti už tavęs!”<br>“na, maždaug… tačiau turėsi savo draugei Tianai duoti tiek pinigų, kiek jai reikės, norint įgyvendinti savo svajonę, nes Tiana… <i>(linksmai atsidūsta, pažiūri į žvaigždę)</i> ji mano Andželina”<br><i>(nustebusiu balsu)</i> “Tiana?”<br>“aš privalau, laiko liko nedaug…”<br>“tai vienintelis kelias į tavo svajonę”<br><i>(pataikaujančiu balsu)</i> “tokį, koks esu?”<br>“kas yra?”<br>“ir mes liksim kartu”</p>
+            <p class="antrTekstas"><i>(pataikaujančiu balsu)</i> “gal būtų visai neblogai, a?😏”<br>“atleisk, atleisk, atsiprašau, aš, aš… visai nenorėjau tavęs gąsdinti, a, palauk!…”<br>“o tu, princese, turi stiprią rankelę😏 a! užteks, prašau!.. padėk beždžionę į vietą😡”<br>“palauk, leisk man prisistatyti, aš esu princas Navynas”<br>“aš nežinau! prisimenu tik, kad štai aš - žavus princas, trali vali festivali! <i>(šoka)</i> o po akimirkos aš žalias ir gleivėtas”<br>“palauk! aš žinau kaip galima mane išlaisvinti! pagal pasaką, tuuuu turi mane pabučiuoti😏”<br>“tau patiks, pamatysi, bučiuotis su tokiu alfa patinu, kaip aš, patinka visoms😏😏😏”<br>“bet tai panaikintų mano kerus…🥺”<br><i>(ramiu balsu)</i> “ramiai, princese, chill out”<br>“mes bandome atvirsti žmonėmis, jeigu ką😒”<br>“tai nuvesk mus pas ją!”<br>“kur jis dingo, ot kvailys!”<br>“mes keliaujam pas mamą Odę”<br>“o tai suveiks?”<br><i>(iš šono, pasipūtusiu balsu)</i> “panele! leiskit prisistatyti, aš esu princas Navynas…”<br>“taip, tik kažkoks voodoo burtininkas mane pavertė varliumi, bet jeigu iki vidurnakčio mane pabučiuosi, atvirsiu žmogumi ir galėsiu ištekėti už tavęs!”<br>“na, maždaug… tačiau turėsi savo draugei Tianai duoti tiek pinigų, kiek jai reikės, norint įgyvendinti savo svajonę, nes Tiana… <i>(linksmai atsidūsta, pažiūri į žvaigždę)</i> ji mano Andželina”<br><i>(nustebusiu balsu)</i> “Tiana?”<br>“aš privalau, laiko liko nedaug…”<br>“tai vienintelis kelias į tavo svajonę”<br><i>(pataikaujančiu balsu)</i> “tokį, koks esu?”</p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip. Dalį žodžių gali reikti improvizuoti.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="vaidinimas">
             <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Vaidinimo eiga:</p>
-            <p class="antrTekstas">Navynas tampa varliumi, Lorensas - princu (apsikeičia vietomis).<br>Tiana lieka viena, iš kitos scenos pusės įeina varlius ir priena prie jos.<br>Tiana bėga nuo varliaus, jis ją vejasi.<br>Tiana pradeda mėtyti į varlių daiktus, jis bėga nuo jų. Bemėtant įsiterpia varlius.<br>Tiana varliaus neklauso ir toliau mėto daiktus, kol iškelia pasakų knygą.<br>Varlius prieina prie Tianos.<br>Tiana ruošiasi vėl trenkti varliui. Varlius ją sustabdo.<br>Varlius atkiša lūpas.<br>Tiana ir varlius laikant širdelę pasibučiuoja.<br>Varlė ir varlius mušasi.<br>Abu pamato krokodilą ir suspiegia.<br>Varlius pradeda šokti, varlė tempia varlių šalin.<br>Visi vaikšto po sceną, vis eidami į kitą pusę.<br>Varlius ir varlė toliau pešasi.<br>Varlius su varle tuo pačiu metu vis dar ginčijasi.<br>Varlius su varle suklūsta ir keistai žiūri į jonvabalį.<br>Visi išeina.<br>Atsidarius užuolaidoms jonvabalis toliau keliauja su varlėmis ir krokodilu.<br>Varlius pradeda groti gitara, jonvabalis dainuoja, krokodilas su varle pritaria abiems.<br>Staiga pasirodo šešėliai, iš varliaus atima gitarą ir tempia jį iš scenos, varlė, krokodilas ir jonvabalis laiko varlių.<br>Visi vaikšto po sceną, mama Odė kažką sau murma, į sceną įnešamas stalas su puodu, varlės viena kitą side-eye’ina.<br>Visi prieina prie puodo, mama Odė paragauja sriubos.<br>Visi išeina iš scenos išskyrus varlių, kuris išsitraukia žiedą ir pasižiūri į žvaigždę Andželiną.<br>Jonvabalis nori muštis, o varlius jį ramina.<br>Varlių staiga sugauna šešėliai.<br>Šešėliai išsisklaido, varlius išbėga, įeina blogasis burtininkas, užvožia jonvabaliui ir nepatenkintas išeina.<br>Į sceną įlekia Šarlotė, už jos įeina varlius.<br>Šarlotė ir varlius ruošiasi bučiuotis, įbėga varlė.<br>Varlius sustingsta ir nusišypso.<br>Varlius prieina arčiau.<br>Šarlotė ir varlius ruošiasi pasibučiuoti, groja garso takelis <i>“laikrodis.mp3”</i>.<br>Šarlotė bando bučiuoti varlių, nieko neįvyksta. Abu atsidūsta.<br>Jonvabalis staiga atsibunda, įbėga ir savo vietose sustoja visi veikėjai.</p>
+            <p class="antrTekstas">Navynas tampa varliumi, Lorensas - princu (apsikeičia vietomis).<br>Tiana lieka viena, iš kitos scenos pusės įeina varlius ir priena prie jos.<br>Tiana bėga nuo varliaus, jis ją vejasi.<br>Tiana pradeda mėtyti į varlių daiktus, jis bėga nuo jų. Bemėtant įsiterpia varlius.<br>Tiana varliaus neklauso ir toliau mėto daiktus, kol iškelia pasakų knygą.<br>Varlius prieina prie Tianos.<br>Tiana ruošiasi vėl trenkti varliui. Varlius ją sustabdo.<br>Varlius atkiša lūpas.<br>Tiana ir varlius laikant širdelę pasibučiuoja.<br>Varlė ir varlius mušasi.<br>Abu pamato krokodilą ir suspiegia.<br>Varlius pradeda šokti, varlė tempia varlių šalin.<br>Visi vaikšto po sceną, vis eidami į kitą pusę.<br>Varlius ir varlė toliau pešasi.<br>Varlius su varle tuo pačiu metu vis dar ginčijasi.<br>Varlius su varle suklūsta ir keistai žiūri į jonvabalį.<br>Visi išeina.<br>Atsidarius užuolaidoms jonvabalis toliau keliauja su varlėmis ir krokodilu.<br>Staiga pasirodo šešėliai ir tempia varlių iš scenos, varlė, krokodilas ir jonvabalis jį laiko.<br>Visi vaikšto po sceną, mama Odė kažką sau murma, į sceną įnešamas stalas su puodu, varlės viena kitą side-eye’ina.<br>Visi prieina prie puodo, mama Odė paragauja sriubos.<br>Visi išeina iš scenos.<br>Į sceną įlekia Šarlotė, už jos įeina varlius.<br>Šarlotė ir varlius ruošiasi bučiuotis, įbėga varlė.<br>Varlius sustingsta ir nusišypso.<br>Varlius prieina arčiau.<br>Tiana ir Navynas sušoka valsą, įbėga ir savo vietose sustoja visi veikėjai.</p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
         </div>
         <div class="separationLine1"><hr></div>
@@ -5389,7 +5364,7 @@
         <div class="vaidinimas">
             <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Vaidinimo eiga:</p>
-            <p class="antrTekstas">Į sceną įbėga šešėliai, groja garso takelis <i>“seseliai.mp3”</i>.<br>Šešėliai šnibždėdami išsisklaido po sceną.<br>Staiga pasirodo šešėliai, iš varliaus atima gitarą ir tempia jį iš scenos, varlė, krokodilas ir jonvabalis laiko varlių. Iš kitos užuolaidos po akimirkos išlenda mama Odė ir išgąsdina šešėlius.<br>Varlių staiga sugauna šešėliai.<br>Šešėliai išsisklaido, varlius išbėga, įeina blogasis burtininkas, užvožia jonvabaliui ir nepatenkintas išeina.<br>Jonvabalis staiga atsibunda, įbėga ir savo vietose sustoja visi veikėjai.</p>
+            <p class="antrTekstas">Į sceną įbėga šešėliai, groja garso takelis <i>“seseliai.mp3”</i>.<br>Šešėliai šnibždėdami išsisklaido po sceną.<br>Staiga pasirodo šešėliai ir tempia varlių iš scenos, varlė, krokodilas ir jonvabalis jį laiko. Iš kitos užuolaidos po akimirkos išlenda mama Odė ir išgąsdina šešėlius.<br>Tiana ir Navynas sušoka valsą, įbėga ir savo vietose sustoja visi veikėjai.</p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
         </div>
         <div class="separationLine1"><hr></div>
@@ -5461,7 +5436,7 @@
         <div class="vaidinimas">
             <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Vaidinimo eiga:</p>
-            <p class="antrTekstas">Į sceną įbėga šešėliai, groja garso takelis <i>“seseliai.mp3”</i>.<br>Šešėliai šnibždėdami išsisklaido po sceną.<br>Staiga pasirodo šešėliai, iš varliaus atima gitarą ir tempia jį iš scenos, varlė, krokodilas ir jonvabalis laiko varlių. Iš kitos užuolaidos po akimirkos išlenda mama Odė ir išgąsdina šešėlius.<br>Varlių staiga sugauna šešėliai.<br>Šešėliai išsisklaido, varlius išbėga, įeina blogasis burtininkas, užvožia jonvabaliui ir nepatenkintas išeina.<br>Jonvabalis staiga atsibunda, įbėga ir savo vietose sustoja visi veikėjai.</p>
+            <p class="antrTekstas">Į sceną įbėga šešėliai, groja garso takelis <i>“seseliai.mp3”</i>.<br>Šešėliai šnibždėdami išsisklaido po sceną.<br>Staiga pasirodo šešėliai ir tempia varlių iš scenos, varlė, krokodilas ir jonvabalis jį laiko. Iš kitos užuolaidos po akimirkos išlenda mama Odė ir išgąsdina šešėlius.<br>Tiana ir Navynas sušoka valsą, įbėga ir savo vietose sustoja visi veikėjai.</p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
         </div>
         <div class="separationLine1"><hr></div>
@@ -5532,7 +5507,7 @@
         <div class="vaidinimas">
             <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Vaidinimo eiga:</p>
-            <p class="antrTekstas">Į sceną įbėga šešėliai, groja garso takelis <i>“seseliai.mp3”</i>.<br>Šešėliai šnibždėdami išsisklaido po sceną.<br>Staiga pasirodo šešėliai, iš varliaus atima gitarą ir tempia jį iš scenos, varlė, krokodilas ir jonvabalis laiko varlių. Iš kitos užuolaidos po akimirkos išlenda mama Odė ir išgąsdina šešėlius.<br>Varlių staiga sugauna šešėliai.<br>Šešėliai išsisklaido, varlius išbėga, įeina blogasis burtininkas, užvožia jonvabaliui ir nepatenkintas išeina.<br>Jonvabalis staiga atsibunda, įbėga ir savo vietose sustoja visi veikėjai.</p>
+            <p class="antrTekstas">Į sceną įbėga šešėliai, groja garso takelis <i>“seseliai.mp3”</i>.<br>Šešėliai šnibždėdami išsisklaido po sceną.<br>Staiga pasirodo šešėliai ir tempia varlių iš scenos, varlė, krokodilas ir jonvabalis jį laiko. Iš kitos užuolaidos po akimirkos išlenda mama Odė ir išgąsdina šešėlius.<br>Tiana ir Navynas sušoka valsą, įbėga ir savo vietose sustoja visi veikėjai.</p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
         </div>
         <div class="separationLine1"><hr></div>
@@ -5603,14 +5578,14 @@
         <div class="zodziai">
             <i class="fa-regular fa-comments karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Žodžiai:</p>
-            <p class="antrTekstas">“tą akimirką bjaurusis varliukas pažvelgė ir ėmė maldauti: brangioji princese, prašau, padėk man, tik tavo bučinys išsklaidys baisius piktosios burtininkės kerus…”<br><i>(tęsia toliau)</i> “gražiąją princesę taip sujaudino liūdnas jo prašymas, kad ji pasilenkė prie jo, paėmė į rankas sutvėrimą, užsimerkė, pakėlė jį prie lūpų ir... pabučiavo varliuką!”<br>“staiga varliukas pavirto gražuoliu princu, jie susituokė, ir ilgai laimingai gyveno, viskas”<br>“atleisk, Šarlote, mums jau metas namo, Tiana, atsisveikink”<br>“deja, mums kaip tik reikia namo, Tiana, paskubėkim, tavo tėvas turbūt jau grįžo iš darbo”<br>“iki!”</p>
+            <p class="antrTekstas">“tą akimirką bjaurusis varliukas pažvelgė ir ėmė maldauti: brangioji princese, prašau, padėk man, tik tavo bučinys išsklaidys baisius piktosios burtininkės kerus…”<br><i>(tęsia toliau)</i> “gražiąją princesę taip sujaudino liūdnas jo prašymas, kad ji pasilenkė prie jo, paėmė į rankas sutvėrimą, užsimerkė, pakėlė jį prie lūpų ir... pabučiavo varliuką!”<br>“staiga varliukas pavirto gražuoliu princu, jie susituokė, ir ilgai laimingai gyveno, viskas”<br>“atleisk, Šarlote, mums jau metas namo, Tiana, atsisveikink”<br>“Tiana, paskubėkim, tavo tėvas turbūt jau grįžo iš dirbtuvių”</p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip. Dalį žodžių gali reikti improvizuoti.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="vaidinimas">
             <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Vaidinimo eiga:</p>
-            <p class="antrTekstas">Mama iš knygos skaito Tianai ir Šarlotei istoriją apie princesę ir varlių.<br>Mama su Tiana išeina iš scenos.</p>
+            <p class="antrTekstas">Mama iš knygos skaito Tianai ir Šarlotei istoriją apie princesę ir varlių.<br>Mama su Tiana išeina iš scenos.<br>Tiana ir Navynas sušoka valsą, įbėga ir savo vietose sustoja visi veikėjai.</p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
         </div>
         <div class="separationLine1"><hr></div>
@@ -5681,7 +5656,7 @@
         <div class="vaidinimas">
             <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Vaidinimo eiga:</p>
-            <p class="antrTekstas">Į sceną įbėga šešėliai, groja garso takelis <i>“seseliai.mp3”</i>.<br>Šešėliai šnibždėdami išsisklaido po sceną.<br>Staiga pasirodo šešėliai, iš varliaus atima gitarą ir tempia jį iš scenos, varlė, krokodilas ir jonvabalis laiko varlių. Iš kitos užuolaidos po akimirkos išlenda mama Odė ir išgąsdina šešėlius.<br>Varlių staiga sugauna šešėliai.<br>Šešėliai išsisklaido, varlius išbėga, įeina blogasis burtininkas, užvožia jonvabaliui ir nepatenkintas išeina.<br>Jonvabalis staiga atsibunda, įbėga ir savo vietose sustoja visi veikėjai.</p>
+            <p class="antrTekstas">Į sceną įbėga šešėliai, groja garso takelis <i>“seseliai.mp3”</i>.<br>Šešėliai šnibždėdami išsisklaido po sceną.<br>Staiga pasirodo šešėliai ir tempia varlių iš scenos, varlė, krokodilas ir jonvabalis jį laiko. Iš kitos užuolaidos po akimirkos išlenda mama Odė ir išgąsdina šešėlius.<br>Tiana ir Navynas sušoka valsą, įbėga ir savo vietose sustoja visi veikėjai.</p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
         </div>
         <div class="separationLine1"><hr></div>
@@ -5752,7 +5727,7 @@
         <div class="vaidinimas">
             <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Vaidinimo eiga:</p>
-            <p class="antrTekstas">Į sceną įbėga šešėliai, groja garso takelis <i>“seseliai.mp3”</i>.<br>Šešėliai šnibždėdami išsisklaido po sceną.<br>Staiga pasirodo šešėliai, iš varliaus atima gitarą ir tempia jį iš scenos, varlė, krokodilas ir jonvabalis laiko varlių. Iš kitos užuolaidos po akimirkos išlenda mama Odė ir išgąsdina šešėlius.<br>Varlių staiga sugauna šešėliai.<br>Šešėliai išsisklaido, varlius išbėga, įeina blogasis burtininkas, užvožia jonvabaliui ir nepatenkintas išeina.<br>Jonvabalis staiga atsibunda, įbėga ir savo vietose sustoja visi veikėjai.</p>
+            <p class="antrTekstas">Į sceną įbėga šešėliai, groja garso takelis <i>“seseliai.mp3”</i>.<br>Šešėliai šnibždėdami išsisklaido po sceną.<br>Staiga pasirodo šešėliai ir tempia varlių iš scenos, varlė, krokodilas ir jonvabalis jį laiko. Iš kitos užuolaidos po akimirkos išlenda mama Odė ir išgąsdina šešėlius.<br>Tiana ir Navynas sušoka valsą, įbėga ir savo vietose sustoja visi veikėjai.</p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
         </div>
         <div class="separationLine1"><hr></div>
@@ -5823,7 +5798,7 @@
         <div class="vaidinimas">
             <i class="fa-solid fa-people-arrows karnavalasIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Vaidinimo eiga:</p>
-            <p class="antrTekstas">Į sceną įbėga šešėliai, groja garso takelis <i>“seseliai.mp3”</i>.<br>Šešėliai šnibždėdami išsisklaido po sceną.<br>Staiga pasirodo šešėliai, iš varliaus atima gitarą ir tempia jį iš scenos, varlė, krokodilas ir jonvabalis laiko varlių. Iš kitos užuolaidos po akimirkos išlenda mama Odė ir išgąsdina šešėlius.<br>Varlių staiga sugauna šešėliai.<br>Šešėliai išsisklaido, varlius išbėga, įeina blogasis burtininkas, užvožia jonvabaliui ir nepatenkintas išeina.<br>Jonvabalis staiga atsibunda, įbėga ir savo vietose sustoja visi veikėjai.</p>
+            <p class="antrTekstas">Į sceną įbėga šešėliai, groja garso takelis <i>“seseliai.mp3”</i>.<br>Šešėliai šnibždėdami išsisklaido po sceną.<br>Staiga pasirodo šešėliai ir tempia varlių iš scenos, varlė, krokodilas ir jonvabalis jį laiko. Iš kitos užuolaidos po akimirkos išlenda mama Odė ir išgąsdina šešėlius.<br>Tiana ir Navynas sušoka valsą, įbėga ir savo vietose sustoja visi veikėjai.</p>
             <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
         </div>
         <div class="separationLine1"><hr></div>
@@ -5838,9 +5813,7 @@
     <a id="download_audio2" href="rap.mp3" download style="display: none;">download_audio2</a>
     <a id="download_audio3" href="burtai.mp3" download style="display: none;">download_audio3</a>
     <a id="download_audio4" href="seseliai.mp3" download style="display: none;">download_audio4</a>
-    <a id="download_audio5 " href="ma_belle_evangeline.mp3" download style="display: none;">download_audio5</a>
-    <a id="download_audio6" href="laikrodis.mp3" download style="display: none;">download_audio6</a>
-    <a id="download_audio7" href="sokis.mp3" download style="display: none;">download_audio7</a>
+    <a id="download_audio6" href="sokis.mp3" download style="display: none;">download_audio6</a>
 
     <script src="https://kit.fontawesome.com/a11707644f.js" crossorigin="anonymous"></script>
     <script>
@@ -6506,11 +6479,6 @@
             document.getElementById('audio6').currentTime = 0;
             document.getElementById("audio6").pause();
             document.getElementById("6aud").style.animation = "none";
-            document.getElementById("7play").style.display = "flex";
-            document.getElementById("7stop").style.display = "none";
-            document.getElementById('audio7').currentTime = 0;
-            document.getElementById("audio7").pause();
-            document.getElementById("7aud").style.animation = "none";
             setTimeout(() => {
                 document.getElementById("soundManager").style.bottom = "-100%";
             }, 10);
@@ -6542,11 +6510,6 @@
                 document.getElementById('audio6').currentTime = 0;
                 document.getElementById("audio6").pause();
                 document.getElementById("6aud").style.animation = "none";
-                document.getElementById("7play").style.display = "flex";
-                document.getElementById("7stop").style.display = "none";
-                document.getElementById('audio7').currentTime = 0;
-                document.getElementById("audio7").pause();
-                document.getElementById("7aud").style.animation = "none";
 
                 document.getElementById("1play").style.display = "none";
                 document.getElementById("1stop").style.display = "flex";
@@ -6596,11 +6559,6 @@
                 document.getElementById('audio6').currentTime = 0;
                 document.getElementById("audio6").pause();
                 document.getElementById("6aud").style.animation = "none";
-                document.getElementById("7play").style.display = "flex";
-                document.getElementById("7stop").style.display = "none";
-                document.getElementById('audio7').currentTime = 0;
-                document.getElementById("audio7").pause();
-                document.getElementById("7aud").style.animation = "none";
 
                 document.getElementById("2play").style.display = "none";
                 document.getElementById("2stop").style.display = "flex";
@@ -6650,11 +6608,6 @@
                 document.getElementById('audio6').currentTime = 0;
                 document.getElementById("audio6").pause();
                 document.getElementById("6aud").style.animation = "none";
-                document.getElementById("7play").style.display = "flex";
-                document.getElementById("7stop").style.display = "none";
-                document.getElementById('audio7').currentTime = 0;
-                document.getElementById("audio7").pause();
-                document.getElementById("7aud").style.animation = "none";
 
                 document.getElementById("3play").style.display = "none";
                 document.getElementById("3stop").style.display = "flex";
@@ -6704,11 +6657,6 @@
                 document.getElementById('audio6').currentTime = 0;
                 document.getElementById("audio6").pause();
                 document.getElementById("6aud").style.animation = "none";
-                document.getElementById("7play").style.display = "flex";
-                document.getElementById("7stop").style.display = "none";
-                document.getElementById('audio7').currentTime = 0;
-                document.getElementById("audio7").pause();
-                document.getElementById("7aud").style.animation = "none";
 
                 document.getElementById("4play").style.display = "none";
                 document.getElementById("4stop").style.display = "flex";
@@ -6758,11 +6706,6 @@
                 document.getElementById('audio6').currentTime = 0;
                 document.getElementById("audio6").pause();
                 document.getElementById("6aud").style.animation = "none";
-                document.getElementById("7play").style.display = "flex";
-                document.getElementById("7stop").style.display = "none";
-                document.getElementById('audio7').currentTime = 0;
-                document.getElementById("audio7").pause();
-                document.getElementById("7aud").style.animation = "none";
 
                 document.getElementById("5play").style.display = "none";
                 document.getElementById("5stop").style.display = "flex";
@@ -6812,11 +6755,6 @@
                 document.getElementById('audio5').currentTime = 0;
                 document.getElementById("audio5").pause();
                 document.getElementById("5aud").style.animation = "none";
-                document.getElementById("7play").style.display = "flex";
-                document.getElementById("7stop").style.display = "none";
-                document.getElementById('audio7').currentTime = 0;
-                document.getElementById("audio7").pause();
-                document.getElementById("7aud").style.animation = "none";
 
                 document.getElementById("6play").style.display = "none";
                 document.getElementById("6stop").style.display = "flex";
@@ -6837,60 +6775,6 @@
                 document.getElementById('audio6').currentTime = 0;
                 document.getElementById("audio6").pause();
                 document.getElementById("6aud").style.animation = "none";
-            }, 100);
-        }
-        function playAudio7() {
-            setTimeout(() => {
-                document.getElementById("1play").style.display = "flex";
-                document.getElementById("1stop").style.display = "none";
-                document.getElementById('audio1').currentTime = 0;
-                document.getElementById("audio1").pause();
-                document.getElementById("1aud").style.animation = "none";
-                document.getElementById("2play").style.display = "flex";
-                document.getElementById("2stop").style.display = "none";
-                document.getElementById('audio2').currentTime = 0;
-                document.getElementById("audio2").pause();
-                document.getElementById("2aud").style.animation = "none";
-                document.getElementById("3play").style.display = "flex";
-                document.getElementById("3stop").style.display = "none";
-                document.getElementById('audio3').currentTime = 0;
-                document.getElementById("audio3").pause();
-                document.getElementById("3aud").style.animation = "none";
-                document.getElementById("4play").style.display = "flex";
-                document.getElementById("4stop").style.display = "none";
-                document.getElementById('audio4').currentTime = 0;
-                document.getElementById("audio4").pause();
-                document.getElementById("4aud").style.animation = "none";
-                document.getElementById("5play").style.display = "flex";
-                document.getElementById("5stop").style.display = "none";
-                document.getElementById('audio5').currentTime = 0;
-                document.getElementById("audio5").pause();
-                document.getElementById("5aud").style.animation = "none";
-                document.getElementById("6play").style.display = "flex";
-                document.getElementById("6stop").style.display = "none";
-                document.getElementById('audio6').currentTime = 0;
-                document.getElementById("audio6").pause();
-                document.getElementById("6aud").style.animation = "none";
-
-                document.getElementById("7play").style.display = "none";
-                document.getElementById("7stop").style.display = "flex";
-                document.getElementById('audio7').currentTime = 0;
-                document.getElementById("audio7").play();
-                document.getElementById("7aud").style.animation = "blink 2s linear infinite";
-            }, 100);
-        }
-        document.getElementById("audio7").onended = function() {
-            document.getElementById("7play").style.display = "flex";
-            document.getElementById("7stop").style.display = "none";
-            document.getElementById("7aud").style.animation = "none";
-        }
-        function stopAudio7() {
-            setTimeout(() => {
-                document.getElementById("7play").style.display = "flex";
-                document.getElementById("7stop").style.display = "none";
-                document.getElementById('audio7').currentTime = 0;
-                document.getElementById("audio7").pause();
-                document.getElementById("7aud").style.animation = "none";
             }, 100);
         }
         function atsisiustiAudio1() {
@@ -7000,25 +6884,6 @@
             }, 1010);
             setTimeout(() => {
                 document.getElementById("atsisiunciamasAudio6").style.bottom = "-100%";
-                document.getElementById("pinnedBackground").style.opacity = "0";
-            }, 6010);
-            setTimeout(() => {
-                document.getElementById("pinnedBackground").style.display = "none";
-                document.getElementById("body").style.overflowY = "scroll";
-            }, 6310);
-        }
-        function atsisiustiAudio7() {
-            document.getElementById("pinnedBackground").style.display = "block";
-            document.getElementById("body").style.overflowY = "hidden";
-            setTimeout(() => {
-                document.getElementById("atsisiunciamasAudio7").style.bottom = "0";
-                document.getElementById("pinnedBackground").style.opacity = "1";
-            }, 10);
-            setTimeout(() => {
-                document.getElementById("download_audio7").click();
-            }, 1010);
-            setTimeout(() => {
-                document.getElementById("atsisiunciamasAudio7").style.bottom = "-100%";
                 document.getElementById("pinnedBackground").style.opacity = "0";
             }, 6010);
             setTimeout(() => {
