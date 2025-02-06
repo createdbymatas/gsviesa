@@ -1,0 +1,4075 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.3s;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+::-webkit-scrollbar {
+    width: 0;
+}
+body{
+    background-color: #f2f2f2;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+img{
+    pointer-events: none;
+}
+button{
+    touch-action: manipulation;
+}
+hr{
+    border: none;
+    border-top: 1px solid lightgrey;
+    width: 100%;
+}
+
+/* krovimas */
+#loading{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transform: scale(1);
+    background-color: #f2f2f2;
+    cursor: wait;
+}
+#createdByMatas{
+    position: absolute;
+    bottom: 30px;
+    opacity: 0;
+    color: black;
+    text-align: center;
+    cursor: wait;
+}
+.spin-loader{
+    border-radius: 80%;
+    display: block;
+    height: 50px;
+    width: 50px;
+    position: relative;
+    animation: spin 0.65s linear 0s infinite normal;
+    background: lightgrey;
+    cursor: wait;
+}
+.spin-loader:before, .spin-loader:after{
+    content: "";
+    display: block;
+    position: absolute;
+}
+.spin-loader:before{
+    border-radius: 0 90px 90px 0;
+    height: 50px;
+    width: 50%;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    background: black;
+    background-image: linear-gradient(lightgrey, black);
+}
+.spin-loader:after{
+    border-radius: 80%;
+    height: 40px;
+    width: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background: #f2f2f2;
+}
+.spin-loader2{
+    border-radius: 80%;
+    display: block;
+    height: 50px;
+    width: 50px;
+    position: relative;
+    animation: spin 0.65s linear 0s infinite normal;
+    background: lightgrey;
+}
+.spin-loader2:before, .spin-loader2:after{
+    content: "";
+    display: block;
+    position: absolute;
+}
+.spin-loader2:before{
+    border-radius: 0 90px 90px 0;
+    height: 50px;
+    width: 50%;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    background: black;
+    background-image: linear-gradient(lightgrey, black);
+}
+.spin-loader2:after{
+    border-radius: 80%;
+    height: 40px;
+    width: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background: #f2f2f2;
+}
+@keyframes spin {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/* ekrano ispejimas */
+#screenSize{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 90;
+    background-color: #f2f2f2;
+    cursor: not-allowed;
+}
+#screenSizeTekstas1{
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+    cursor: not-allowed;
+    font-weight: 600;
+}
+#screenSizeTekstas2{
+    font-size: 17px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+    cursor: not-allowed;
+}
+#sizeDiv{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: not-allowed;
+}
+#phoneIcon{
+    font-size: 70px;
+    position: absolute;
+    color: black;
+    cursor: not-allowed;
+}
+#xIcon{
+    font-size: 30px;
+    color: red;
+    background-color: #f2f2f2;
+    border-radius: 100%;
+    margin-top: 60px;
+    z-index: 2;
+    margin-left: 45px;
+    cursor: not-allowed;
+}
+
+/* inspect tool uzblokavimas */
+#accessDenied{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 95;
+    background-color: #f2f2f2;
+    color: black;
+    transition: 0.2s;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+    cursor: not-allowed;
+}
+.fa-ban{
+    color: red;
+    font-size: 70px;
+    cursor: not-allowed;
+    transition: none;
+}
+#accessDenied p{
+    margin-top: 20px;
+    cursor: not-allowed;
+}
+#accessDenied div{
+    font-size: 15px;
+    width: 275px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 15px;
+    right: 25px;
+    /* outline: 1px solid red; */
+}
+#accessDenied div p{
+    margin-top: 0;
+}
+#uzdraustaRestart {
+    width: 50px;
+    height: 50px;
+    border:7px solid black;
+    border-radius: 50%;
+    position: relative;
+    transform:rotate(45deg);
+    box-sizing: border-box;
+    }
+#uzdraustaRestart::before {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    inset:-7px;
+    border-radius: 50%;
+    border:7px solid black;
+    /* animation: prixClipFix 10s linear; */
+    animation: none;
+}
+
+@keyframes prixClipFix {
+    0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+    25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+    50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+    75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
+    100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+}
+
+/* klaviaturos backgroundas */
+#display{
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 79;
+    background-image: url(images/ziema.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: 0.2s;
+    /* display: none; */
+}
+#screen{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 80;
+    background-color: rgba(0, 0, 0, 0.75);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    transition: 0.2s;
+    /* display: none; */
+}
+/* klaviaturos meniu */
+#ivestiKoda{
+    color: white;
+    font-size: 20px;
+    transition: 0.3s;
+}
+#keypad{
+    width: 280px; 
+    height: 430px; 
+    border-radius: 25px; 
+    border: 2px none; 
+    background-color: transparent; 
+    color: white; 
+    font-size: 25px;
+    margin: 10px auto;
+    margin-top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    transition: 0.3s;
+    overflow: hidden;
+}
+#keypad button{
+    width: 75px;
+    height: 75px;
+    border-radius: 50px;
+    border: none;
+    font-size: 30px;
+    background-color: rgba(220,220,220,0.3);
+    cursor: pointer;
+    transition: 0.15s;
+    color: white;
+}
+#keypad button:active{
+    background-color: rgba(255,255,255,0.7);
+}
+#istrynimas:active{
+    opacity: 0.5;
+}
+#keypad input{
+    width: 0;
+    height: 0;
+    display: none;
+}
+.keypadSorting{
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+.buttonLetters{
+    font-size: 10px;
+    margin-bottom: 5px;
+    display: block;
+    transition: 0.01s;
+    cursor: pointer;
+}
+#gerai{
+    pointer-events: none;
+    opacity: 0;
+}
+#taskeliai{
+    width: 80%;
+    height: 30px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#taskeliai div{
+    width: 15px;
+    height: 15px;
+    border: 1px solid white;
+    border-radius: 100%;
+    transition: 0.15s;
+}
+.mygtukas:active{
+    transform: scale(0.9);
+}
+
+
+
+/* kelione */
+#kelioneI---{
+    width: 100%;
+    height: auto;
+    background-color: #f2f2f2;
+    transition: 0.2s;
+    padding-bottom: 15px;
+    display: none;
+    padding-top: 100vh;
+}
+#topInfo{
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    top: 0;
+    left: 0;
+}
+#info{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(242, 242, 242, 1);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    color: black;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+#info i{
+    font-size: 15px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 11;
+    transition: 0.15s;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: #DEDEDE;
+    color: black;
+}
+.kaina{
+    position: absolute;
+    right: 15px;
+    top: 20px;
+}
+#kelionesMarsrutasTekstas{
+    font-size: 25px;
+    font-weight: 600;
+    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+    z-index: 2;
+}
+#kelionesMarsrutasTekstas2{
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 100%;
+    position: absolute;
+    top: 17px;
+    padding-left: 60px;
+    padding-right: 90px;
+    z-index: 10;
+    opacity: 0;
+}
+#kelioneUzdarymas:active{
+    opacity: 0.2;
+}
+.centerLoader2{
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0.5);
+}
+.atidaromaImg{
+    width: 20px;
+    border-radius: 5px;
+    background-color: white;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#openingMapsBg{
+    width: 100%;
+    height: 100%;
+    z-index: 19;
+    background-color: rgba(211, 211, 211, 0.75);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    opacity: 0;
+    display: none;
+}
+#openingMaps{
+    font-size: 15px;
+    width: 100%;
+    height: 50px;
+    border-radius: 25px 25px 0 0;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+    box-shadow: 0 0 10px lightgrey;
+    color: black;
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    z-index: 20;
+}
+#ticketActivationBg{
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 19;
+    background-color: rgba(211, 211, 211, 0.75);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    opacity: 0;
+    display: none;
+}
+#ticketActivation{
+    width: 100%;
+    height: auto;
+    background-color: #f2f2f2;
+    box-shadow: 0 0 10px lightgrey;
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    border-radius: 25px 25px 0 0;
+    padding: 15px;
+    padding-top: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 20;
+}
+.ticketActivationTekstas1{
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 15px;
+    color: black;
+}
+.ticketActivationTekstas2{
+    font-weight: 400;
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 15px;
+    color: black;
+}
+.ticketActivationButtons{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.ticketActivationButtonImg{
+    height: 70%;
+    background-color: white;
+    border-radius: 7px;
+    margin-right: 5px;
+}
+.ticketActivationPhoneImg{
+    width: 20px;
+    border-radius: 5px;
+    background-color: white;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.ticketActivationButtonIphone{
+    font-size: 30px;
+    background-color: transparent;
+    border-radius: 7px;
+    margin-right: 5px;
+}
+#trafiButton{
+    width: 45%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    border: none;
+    background-color: #f2f2f2;
+    color: #ff0099;
+    border: 2px solid #ff0099;
+    font-size: 15px;
+    cursor: pointer;
+}
+#mticketButton{
+    width: 45%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    border: none;
+    background-color: #f2f2f2;
+    color: #00e500;
+    border: 2px solid #00e500;
+    font-size: 15px;
+    cursor: pointer;
+}
+.androidButton{
+    width: 45%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    border: none;
+    background-color: #f2f2f2;
+    color: #46aa5b;
+    border: 2px solid #46aa5b;
+    font-size: 15px;
+    cursor: pointer;
+}
+.iphoneButton{
+    width: 45%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    border: none;
+    background-color: #f2f2f2;
+    color: black;
+    border: 2px solid black;
+    font-size: 15px;
+    cursor: pointer;
+}
+#trafiPhone{
+    width: 100%;
+    height: auto;
+    background-color: #f2f2f2;
+    box-shadow: 0 0 10px lightgrey;
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    border-radius: 25px 25px 0 0;
+    padding: 15px;
+    padding-top: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 20;
+}
+#mticketPhone{
+    width: 100%;
+    height: auto;
+    background-color: #f2f2f2;
+    box-shadow: 0 0 10px lightgrey;
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    border-radius: 25px 25px 0 0;
+    padding: 15px;
+    padding-top: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 20;
+}
+#openingPlay{
+    font-size: 15px;
+    width: 100%;
+    height: 50px;
+    border-radius: 25px 25px 0 0;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+    box-shadow: 0 0 10px lightgrey;
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    z-index: 20;
+}
+#openingStore{
+    font-size: 15px;
+    width: 100%;
+    height: 50px;
+    border-radius: 25px 25px 0 0;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+    box-shadow: 0 0 10px lightgrey;
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    z-index: 20;
+}
+#visosStotelesBg{
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 19;
+    background-color: rgba(211, 211, 211, 0.75);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    opacity: 0;
+    display: none;
+}
+#visosStoteles{
+    width: 100%;
+    height: auto;
+    background-color: #f2f2f2;
+    box-shadow: 0 0 10px lightgrey;
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    border-radius: 25px 25px 0 0;
+    padding: 15px;
+    padding-top: 20px;
+    padding-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 20;
+}
+.visosStotelesTransportas{
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 15px;
+    color: black;
+}
+.visosStotelesAutobusoNr{
+    background-color: #0073ac;
+    color: white;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    border-radius: 5px;
+    font-weight: 400;
+}
+.visosStotelesTraukinioNr{
+    background-color: black;
+    color: white;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    border-radius: 5px;
+    font-weight: 400;
+}
+.visosStotelesSkaicius{
+    font-size: 15px;
+    text-align: center;
+    color: black;
+}
+.visosStotelesDiv{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-left: 52.5px;
+    padding-top: 15px;
+    padding-bottom: 40px;
+}
+.visosPagrindineStotele1{
+    color: black;
+    font-weight: 600;
+    font-size: 17px;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    padding-right: 15px;
+}
+.visosPagrindineStotele2{
+    color: black;
+    font-weight: 600;
+    font-size: 17px;
+    position: absolute;
+    bottom: 17px;
+    left: 52.5px;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    padding-right: 67.5px;
+}
+.visosSalutineStotele{
+    color: grey;
+    font-size: 13px;
+    font-weight: 400;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 15px;
+}
+#visosStotys{
+    width: 100%;
+    height: auto;
+    background-color: #f2f2f2;
+    box-shadow: 0 0 10px lightgrey;
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    border-radius: 25px 25px 0 0;
+    padding: 15px;
+    padding-top: 20px;
+    padding-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 20;
+}
+
+/* keliones informacija/objektai */
+.startas{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 110px;
+    padding-left: 67.5px;
+    padding-right: 15px;
+    position: relative;
+    margin-bottom: 5px;
+}
+.ejimas{
+    width: 100%;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 5px;
+    padding-left: 67.5px;
+    padding-right: 15px;
+    position: relative;
+    margin-bottom: 5px;
+}
+.autobusas{
+    width: 100%;
+    height: 240px;
+    margin-top: 5px;
+    padding-left: 67.5px;
+    padding-right: 15px;
+    position: relative;
+    margin-bottom: 5px;
+}
+.laukimas{
+    width: 100%;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 5px;
+    padding-left: 67.5px;
+    padding-right: 15px;
+    position: relative;
+    margin-bottom: 5px;
+}
+.traukinys{
+    width: 100%;
+    height: 220px;
+    margin-top: 5px;
+    padding-left: 67.5px;
+    padding-right: 15px;
+    position: relative;
+    margin-bottom: 5px;
+}
+.lankymasis{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 5px;
+    padding-left: 67.5px;
+    padding-right: 15px;
+    position: relative;
+    margin-bottom: 5px;
+}
+.finisas{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 5px;
+    padding-left: 67.5px;
+    padding-right: 15px;
+    position: relative;
+    margin-bottom: 5px;
+}
+.ejimoTaskelis{
+    background-color: black;
+}
+.kelionesTekstas1{
+    font-weight: 600;
+    font-size: 17px;
+    color: black;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+}
+.kelionesTekstas2{
+    color: grey;
+    font-size: 13px;
+    font-weight: 400;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    margin-top: 1px;
+}
+.kelionesTekstas3{
+    color: grey;
+    font-size: 13px;
+    font-weight: 400;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+}
+.kelionesIcon1{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+    top: 12.5px;
+    left: 27.5px;
+    font-size: 20px;
+    color: black;
+}
+.kelionesIcon2{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+    top: 5px;
+    left: 27.5px;
+    font-size: 20px;
+    color: black;
+}
+.kelionesIcon3{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+    top: 25px;
+    left: 27.5px;
+    font-size: 20px;
+    color: black;
+}
+.transportasDiv1{
+    width: 100%;
+    height: 50px;
+    position: relative;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.transportasDiv2{
+    width: 100%;
+    height: 70px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    position: relative;
+}
+.transportasDiv3{
+    width: 100%;
+    height: 35px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.transportasDiv4{
+    width: 100%;
+    height: 50px;
+    position: relative;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.transportasDiv5{
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    position: relative;
+}
+.autobusasIcon{
+    font-size: 17px;
+    width: 30px;
+    height: 30px;
+    background-color: #0073ac;
+    color: white;
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: -42.5px;
+    top: 20px;
+}
+.autobusoNr{
+    background-color: #0073ac;
+    color: white;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    border-radius: 5px;
+    font-weight: 400;
+}
+.traukinysIcon{
+    font-size: 17px;
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: -42.5px;
+    top: 10px;
+    box-shadow: 0 0 3px white;
+}
+.traukinioNr{
+    background-color: black;
+    color: white;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    border-radius: 5px;
+    font-weight: 400;
+}
+.snaige{
+    color: white;
+    background-color: dodgerblue;
+    font-size: 11px;
+    border-radius: 5px;
+    padding: 3px;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+    position: absolute;
+}
+.neigaliesiems{
+    color: white;
+    background-color: blue;
+    font-size: 10px;
+    border-radius: 5px;
+    padding: 3px;
+    position: absolute; 
+}
+.maps{
+    cursor: pointer;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    font-size: 20px;
+    color: black;
+    background-color: #f2f2f2;
+}
+.maps2{
+    position: absolute;
+    width: 50px;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 15px;
+    font-size: 20px;
+    color: black;
+    background-color: #f2f2f2;
+}
+.maps:active{
+    transform: scale(0.8);
+}
+.stotelesTekstas{
+    color: grey;
+    font-size: 13px;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+.stotelesTekstas:active{
+    opacity: 0.2;
+}
+.bilietaiTekstas{
+    color: grey;
+    font-size: 13px;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    margin-top: 1px;
+    cursor: pointer;
+}
+.bilietaiTekstas:active{
+    opacity: 0.2;
+}
+.separationLine1{
+    width: 100%;
+    height: 1px;
+    padding-left: 67.5px;
+    padding-right: 15px;
+}
+.separationLine2{
+    width: 100%;
+    height: 1px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.travelInfoBottom{
+    font-size: 13px;
+    color: grey;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* karnavalas */
+/* scenarijaus perziura ir atsisiuntimas, garso takeliu valdymas, info perziura */
+#scenarijusDocs{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: -100%;
+    z-index: 18;
+    background-color: #f2f2f2;
+    transition: 0.2s;
+}
+#scenarijusDocs h1{
+    font-weight: 600;
+    font-size: 25px;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    color: black;
+}
+#scenarijusDocs div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: white;
+}
+#scenarijusDocs iframe{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 60px;
+}
+#downloadScenarijus{
+    font-size: 15px;
+    position: absolute;
+    top: 15px;
+    right: 60px;
+    z-index: 11;
+    transition: 0.15s;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: #DEDEDE;
+    color: black;
+}
+#downloadScenarijus:active{
+    opacity: 0.2;
+}
+#closeScenarijusDocs{
+    font-size: 15px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 11;
+    transition: 0.15s;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: #DEDEDE;
+    color: black;
+}
+#closeScenarijusDocs:active{
+    opacity: 0.2;
+}
+#soundManager{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: -100%;
+    z-index: 18;
+    background-color: #f2f2f2;
+    transition: 0.2s;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+#soundManager h1{
+    font-weight: 600;
+    font-size: 25px;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    color: black;
+}
+#soundManager div{
+    width: 95%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: white;
+    color: black;
+    padding-left: 15px;
+    margin-bottom: 15px;
+    margin-left: 2.5%;
+    border-radius: 30px;
+    position: relative;
+}
+#soundManager div p{
+    font-size: 16px;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 100%;
+    padding-right: 85px;
+
+}
+#soundManager div i{
+    font-size: 15px;
+    transition: 0.15s;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: #DEDEDE;
+    color: black;
+    position: absolute;
+}
+#soundManager div i:active{
+    opacity: 0.2;
+}
+#closeSoundManager{
+    font-size: 15px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 11;
+    transition: 0.15s;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: #DEDEDE;
+    color: black;
+}
+#closeSoundManager:active{
+    opacity: 0.2;
+}
+@keyframes blink{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.atsisiustiScenariju{
+    width: 47%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    border: none;
+    background-color: transparent;
+    color: black;
+    border: 2px solid black;
+    font-size: 15px;
+    cursor: pointer;
+}
+.atsisiustiScenariju:active{
+    transform: scale(0.95);
+}
+.informacija{
+    width: 47%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    border: none;
+    background-color: transparent;
+    color: black;
+    border: 2px solid black;
+    font-size: 15px;
+    cursor: pointer;
+}
+.informacija:active{
+    transform: scale(0.95);
+}
+#pinnedBackground{
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 19;
+    background-color: rgba(211, 211, 211, 0.75);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    opacity: 0;
+    display: none;
+}
+#atsisiunciamasScenarijus{
+    width: 100%;
+    height: 50px;
+    font-size: 15px;
+    border-radius: 30px 30px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+    box-shadow: 0 0 10px lightgrey;
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    z-index: 20;
+}
+#rodomaInformacija{
+    width: 100%;
+    height: auto;
+    font-size: 15px;
+    border-radius: 30px 30px 0 0;
+    background-color: #f2f2f2;
+    box-shadow: 0 0 10px lightgrey;
+    position: fixed;
+    bottom: -300px;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+}
+#atsisiunciamasAudio1{
+    width: 100%;
+    height: 50px;
+    font-size: 15px;
+    border-radius: 30px 30px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+    box-shadow: 0 0 10px lightgrey;
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    z-index: 20;
+}
+#atsisiunciamasAudio2{
+    width: 100%;
+    height: 50px;
+    font-size: 15px;
+    border-radius: 30px 30px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+    box-shadow: 0 0 10px lightgrey;
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    z-index: 20;
+}
+#atsisiunciamasAudio3{
+    width: 100%;
+    height: 50px;
+    font-size: 15px;
+    border-radius: 30px 30px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+    box-shadow: 0 0 10px lightgrey;
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    z-index: 20;
+}
+#atsisiunciamasAudio4{
+    width: 100%;
+    height: 50px;
+    font-size: 15px;
+    border-radius: 30px 30px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+    box-shadow: 0 0 10px lightgrey;
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    z-index: 20;
+}
+#atsisiunciamasAudio5{
+    width: 100%;
+    height: 50px;
+    font-size: 15px;
+    border-radius: 30px 30px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+    box-shadow: 0 0 10px lightgrey;
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    z-index: 20;
+}
+.pinnedBg{
+    width: 100%;
+    height: auto;
+    background-color: rgba(242, 242, 242, 0.75);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 17;
+    box-shadow: 0 0 10px lightgrey;
+    border-radius: 30px 30px 0 0;
+}
+
+
+/* Arune */
+#Arune{
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+    transition: 0.2s;
+    padding-bottom: 90px;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding-top: 100vh;
+    display: none;
+}
+#topInfoArune{
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    top: 0;
+    left: 0;
+}
+#infoArune{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(242, 242, 242, 1);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    color: black;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+#infoArune i{
+    font-size: 15px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 11;
+    transition: 0.15s;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: #DEDEDE;
+    color: black;
+}
+#AruneTekstas{
+    font-size: 25px;
+    font-weight: 600;
+    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+    z-index: 2;
+}
+#AruneTekstas2{
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 100%;
+    position: absolute;
+    top: 17px;
+    padding-left: 60px;
+    padding-right: 15px;
+    z-index: 10;
+    opacity: 0;
+}
+#AruneUzdarymas:active{
+    opacity: 0.2;
+}
+/* Smilte */
+#Smilte{
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+    transition: 0.2s;
+    padding-bottom: 90px;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding-top: 100vh;
+    display: none;
+}
+#topInfoSmilte{
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    top: 0;
+    left: 0;
+}
+#infoSmilte{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(242, 242, 242, 1);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    color: black;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+#infoSmilte i{
+    font-size: 15px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 11;
+    transition: 0.15s;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: #DEDEDE;
+    color: black;
+}
+#SmilteTekstas{
+    font-size: 25px;
+    font-weight: 600;
+    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+    z-index: 2;
+}
+#SmilteTekstas2{
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 100%;
+    position: absolute;
+    top: 17px;
+    padding-left: 60px;
+    padding-right: 15px;
+    z-index: 10;
+    opacity: 0;
+}
+#SmilteUzdarymas:active{
+    opacity: 0.2;
+}
+/* Adriana */
+#Adriana{
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+    transition: 0.2s;
+    padding-bottom: 90px;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding-top: 100vh;
+    display: none;
+}
+#topInfoAdriana{
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    top: 0;
+    left: 0;
+}
+#infoAdriana{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(242, 242, 242, 1);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    color: black;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+#infoAdriana i{
+    font-size: 15px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 11;
+    transition: 0.15s;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: #DEDEDE;
+    color: black;
+}
+#AdrianaTekstas{
+    font-size: 25px;
+    font-weight: 600;
+    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+    z-index: 2;
+}
+#AdrianaTekstas2{
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 100%;
+    position: absolute;
+    top: 17px;
+    padding-left: 60px;
+    padding-right: 15px;
+    z-index: 10;
+    opacity: 0;
+}
+#AdrianaUzdarymas:active{
+    opacity: 0.2;
+}
+/* Norbertas */
+#Norbertas{
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+    transition: 0.2s;
+    padding-bottom: 90px;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding-top: 100vh;
+    display: none;
+}
+#topInfoNorbertas{
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    top: 0;
+    left: 0;
+}
+#infoNorbertas{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(242, 242, 242, 1);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    color: black;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+#infoNorbertas i{
+    font-size: 15px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 11;
+    transition: 0.15s;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: #DEDEDE;
+    color: black;
+}
+#NorbertasTekstas{
+    font-size: 25px;
+    font-weight: 600;
+    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+    z-index: 2;
+}
+#NorbertasTekstas2{
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 100%;
+    position: absolute;
+    top: 17px;
+    padding-left: 60px;
+    padding-right: 15px;
+    z-index: 10;
+    opacity: 0;
+}
+#NorbertasUzdarymas:active{
+    opacity: 0.2;
+}
+/* Meta */
+#Meta{
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+    transition: 0.2s;
+    padding-bottom: 90px;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding-top: 100vh;
+    display: none;
+}
+#topInfoMeta{
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    top: 0;
+    left: 0;
+}
+#infoMeta{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(242, 242, 242, 1);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    color: black;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+#infoMeta i{
+    font-size: 15px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 11;
+    transition: 0.15s;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: #DEDEDE;
+    color: black;
+}
+#MetaTekstas{
+    font-size: 25px;
+    font-weight: 600;
+    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+    z-index: 2;
+}
+#MetaTekstas2{
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 100%;
+    position: absolute;
+    top: 17px;
+    padding-left: 60px;
+    padding-right: 15px;
+    z-index: 10;
+    opacity: 0;
+}
+#MetaUzdarymas:active{
+    opacity: 0.2;
+}
+/* Justina */
+#Justina{
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+    transition: 0.2s;
+    padding-bottom: 90px;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding-top: 100vh;
+    display: none;
+}
+#topInfoJustina{
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    top: 0;
+    left: 0;
+}
+#infoJustina{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(242, 242, 242, 1);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    color: black;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+#infoJustina i{
+    font-size: 15px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 11;
+    transition: 0.15s;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: #DEDEDE;
+    color: black;
+}
+#JustinaTekstas{
+    font-size: 25px;
+    font-weight: 600;
+    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+    z-index: 2;
+}
+#JustinaTekstas2{
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 100%;
+    position: absolute;
+    top: 17px;
+    padding-left: 60px;
+    padding-right: 15px;
+    z-index: 10;
+    opacity: 0;
+}
+#JustinaUzdarymas:active{
+    opacity: 0.2;
+}
+/* Mindaugasd */
+#Mindaugasd{
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+    transition: 0.2s;
+    padding-bottom: 90px;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding-top: 100vh;
+    display: none;
+}
+#topInfoMindaugasd{
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    top: 0;
+    left: 0;
+}
+#infoMindaugasd{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(242, 242, 242, 1);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    color: black;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+#infoMindaugasd i{
+    font-size: 15px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 11;
+    transition: 0.15s;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: #DEDEDE;
+    color: black;
+}
+#MindaugasdTekstas{
+    font-size: 25px;
+    font-weight: 600;
+    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+    z-index: 2;
+}
+#MindaugasdTekstas2{
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 100%;
+    position: absolute;
+    top: 17px;
+    padding-left: 60px;
+    padding-right: 15px;
+    z-index: 10;
+    opacity: 0;
+}
+#MindaugasdUzdarymas:active{
+    opacity: 0.2;
+}
+/* Dovydas */
+#Dovydas{
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+    transition: 0.2s;
+    padding-bottom: 90px;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding-top: 100vh;
+    display: none;
+}
+#topInfoDovydas{
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    top: 0;
+    left: 0;
+}
+#infoDovydas{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(242, 242, 242, 1);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    color: black;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+#infoDovydas i{
+    font-size: 15px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 11;
+    transition: 0.15s;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: #DEDEDE;
+    color: black;
+}
+#DovydasTekstas{
+    font-size: 25px;
+    font-weight: 600;
+    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+    z-index: 2;
+}
+#DovydasTekstas2{
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 100%;
+    position: absolute;
+    top: 17px;
+    padding-left: 60px;
+    padding-right: 15px;
+    z-index: 10;
+    opacity: 0;
+}
+#DovydasUzdarymas:active{
+    opacity: 0.2;
+}
+/* Matas */
+#Matas{
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+    transition: 0.2s;
+    padding-bottom: 90px;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding-top: 100vh;
+    display: none;
+}
+#topInfoMatas{
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    top: 0;
+    left: 0;
+}
+#infoMatas{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(242, 242, 242, 1);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    color: black;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+#infoMatas i{
+    font-size: 15px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 11;
+    transition: 0.15s;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: #DEDEDE;
+    color: black;
+}
+#MatasTekstas{
+    font-size: 25px;
+    font-weight: 600;
+    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+    z-index: 2;
+}
+#MatasTekstas2{
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 100%;
+    position: absolute;
+    top: 17px;
+    padding-left: 60px;
+    padding-right: 15px;
+    z-index: 10;
+    opacity: 0;
+}
+#MatasUzdarymas:active{
+    opacity: 0.2;
+}
+/* Aleksandra */
+#Aleksandra{
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+    transition: 0.2s;
+    padding-bottom: 90px;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding-top: 100vh;
+    display: none;
+}
+#topInfoAleksandra{
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    top: 0;
+    left: 0;
+}
+#infoAleksandra{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(242, 242, 242, 1);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    color: black;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+#infoAleksandra i{
+    font-size: 15px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 11;
+    transition: 0.15s;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: #DEDEDE;
+    color: black;
+}
+#AleksandraTekstas{
+    font-size: 25px;
+    font-weight: 600;
+    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+    z-index: 2;
+}
+#AleksandraTekstas2{
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 100%;
+    position: absolute;
+    top: 17px;
+    padding-left: 60px;
+    padding-right: 15px;
+    z-index: 10;
+    opacity: 0;
+}
+#AleksandraUzdarymas:active{
+    opacity: 0.2;
+}
+/* Samanta */
+#Samanta{
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+    transition: 0.2s;
+    padding-bottom: 90px;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding-top: 100vh;
+    display: none;
+}
+#topInfoSamanta{
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    top: 0;
+    left: 0;
+}
+#infoSamanta{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(242, 242, 242, 1);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    color: black;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+#infoSamanta i{
+    font-size: 15px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 11;
+    transition: 0.15s;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: #DEDEDE;
+    color: black;
+}
+#SamantaTekstas{
+    font-size: 25px;
+    font-weight: 600;
+    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+    z-index: 2;
+}
+#SamantaTekstas2{
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 100%;
+    position: absolute;
+    top: 17px;
+    padding-left: 60px;
+    padding-right: 15px;
+    z-index: 10;
+    opacity: 0;
+}
+#SamantaUzdarymas:active{
+    opacity: 0.2;
+}
+/* Arnas */
+#Arnas{
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+    transition: 0.2s;
+    padding-bottom: 90px;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding-top: 100vh;
+    display: none;
+}
+#topInfoArnas{
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    top: 0;
+    left: 0;
+}
+#infoArnas{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(242, 242, 242, 1);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    color: black;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+#infoArnas i{
+    font-size: 15px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 11;
+    transition: 0.15s;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: #DEDEDE;
+    color: black;
+}
+#ArnasTekstas{
+    font-size: 25px;
+    font-weight: 600;
+    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+    z-index: 2;
+}
+#ArnasTekstas2{
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 100%;
+    position: absolute;
+    top: 17px;
+    padding-left: 60px;
+    padding-right: 15px;
+    z-index: 10;
+    opacity: 0;
+}
+#ArnasUzdarymas:active{
+    opacity: 0.2;
+}
+/* Milena */
+#Milena{
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+    transition: 0.2s;
+    padding-bottom: 90px;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding-top: 100vh;
+    display: none;
+}
+#topInfoMilena{
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    top: 0;
+    left: 0;
+}
+#infoMilena{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(242, 242, 242, 1);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    color: black;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+#infoMilena i{
+    font-size: 15px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 11;
+    transition: 0.15s;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: #DEDEDE;
+    color: black;
+}
+#MilenaTekstas{
+    font-size: 25px;
+    font-weight: 600;
+    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+    z-index: 2;
+}
+#MilenaTekstas2{
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 100%;
+    position: absolute;
+    top: 17px;
+    padding-left: 60px;
+    padding-right: 15px;
+    z-index: 10;
+    opacity: 0;
+}
+#MilenaUzdarymas:active{
+    opacity: 0.2;
+}
+/* Emilija */
+#Emilija{
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+    transition: 0.2s;
+    padding-bottom: 90px;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding-top: 100vh;
+    display: none;
+}
+#topInfoEmilija{
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    top: 0;
+    left: 0;
+}
+#infoEmilija{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(242, 242, 242, 1);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    color: black;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+#infoEmilija i{
+    font-size: 15px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 11;
+    transition: 0.15s;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: #DEDEDE;
+    color: black;
+}
+#EmilijaTekstas{
+    font-size: 25px;
+    font-weight: 600;
+    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+    z-index: 2;
+}
+#EmilijaTekstas2{
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 100%;
+    position: absolute;
+    top: 17px;
+    padding-left: 60px;
+    padding-right: 15px;
+    z-index: 10;
+    opacity: 0;
+}
+#EmilijaUzdarymas:active{
+    opacity: 0.2;
+}
+/* Modestas */
+#Modestas{
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+    transition: 0.2s;
+    padding-bottom: 90px;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding-top: 100vh;
+    display: none;
+}
+#topInfoModestas{
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    top: 0;
+    left: 0;
+}
+#infoModestas{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(242, 242, 242, 1);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    color: black;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+#infoModestas i{
+    font-size: 15px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 11;
+    transition: 0.15s;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: #DEDEDE;
+    color: black;
+}
+#ModestasTekstas{
+    font-size: 25px;
+    font-weight: 600;
+    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+    z-index: 2;
+}
+#ModestasTekstas2{
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 100%;
+    position: absolute;
+    top: 17px;
+    padding-left: 60px;
+    padding-right: 15px;
+    z-index: 10;
+    opacity: 0;
+}
+#ModestasUzdarymas:active{
+    opacity: 0.2;
+}
+/* Gabriele */
+#Gabriele{
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+    transition: 0.2s;
+    padding-bottom: 90px;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding-top: 100vh;
+    display: none;
+}
+#topInfoGabriele{
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    top: 0;
+    left: 0;
+}
+#infoGabriele{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(242, 242, 242, 1);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    color: black;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+#infoGabriele i{
+    font-size: 15px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 11;
+    transition: 0.15s;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: #DEDEDE;
+    color: black;
+}
+#GabrieleTekstas{
+    font-size: 25px;
+    font-weight: 600;
+    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+    z-index: 2;
+}
+#GabrieleTekstas2{
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 100%;
+    position: absolute;
+    top: 17px;
+    padding-left: 60px;
+    padding-right: 15px;
+    z-index: 10;
+    opacity: 0;
+}
+#GabrieleUzdarymas:active{
+    opacity: 0.2;
+}
+/* Berzuna */
+#Berzuna{
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+    transition: 0.2s;
+    padding-bottom: 90px;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding-top: 100vh;
+    display: none;
+}
+#topInfoBerzuna{
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    top: 0;
+    left: 0;
+}
+#infoBerzuna{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(242, 242, 242, 1);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    color: black;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+#infoBerzuna i{
+    font-size: 15px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 11;
+    transition: 0.15s;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: #DEDEDE;
+    color: black;
+}
+#BerzunaTekstas{
+    font-size: 25px;
+    font-weight: 600;
+    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+    z-index: 2;
+}
+#BerzunaTekstas2{
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 100%;
+    position: absolute;
+    top: 17px;
+    padding-left: 60px;
+    padding-right: 15px;
+    z-index: 10;
+    opacity: 0;
+}
+#BerzunaUzdarymas:active{
+    opacity: 0.2;
+}
+/* Nojus */
+#Nojus{
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+    transition: 0.2s;
+    padding-bottom: 90px;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding-top: 100vh;
+    display: none;
+}
+#topInfoNojus{
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    top: 0;
+    left: 0;
+}
+#infoNojus{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(242, 242, 242, 1);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    color: black;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+#infoNojus i{
+    font-size: 15px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 11;
+    transition: 0.15s;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: #DEDEDE;
+    color: black;
+}
+#NojusTekstas{
+    font-size: 25px;
+    font-weight: 600;
+    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+    z-index: 2;
+}
+#NojusTekstas2{
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 100%;
+    position: absolute;
+    top: 17px;
+    padding-left: 60px;
+    padding-right: 15px;
+    z-index: 10;
+    opacity: 0;
+}
+#NojusUzdarymas:active{
+    opacity: 0.2;
+}
+/* Agnieska */
+#Agnieska{
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+    transition: 0.2s;
+    padding-bottom: 90px;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding-top: 100vh;
+    display: none;
+}
+#topInfoAgnieska{
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    top: 0;
+    left: 0;
+}
+#infoAgnieska{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(242, 242, 242, 1);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    color: black;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+#infoAgnieska i{
+    font-size: 15px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 11;
+    transition: 0.15s;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: #DEDEDE;
+    color: black;
+}
+#AgnieskaTekstas{
+    font-size: 25px;
+    font-weight: 600;
+    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+    z-index: 2;
+}
+#AgnieskaTekstas2{
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 100%;
+    position: absolute;
+    top: 17px;
+    padding-left: 60px;
+    padding-right: 15px;
+    z-index: 10;
+    opacity: 0;
+}
+#AgnieskaUzdarymas:active{
+    opacity: 0.2;
+}
+
+
+
+
+/* spektaklio informacija/objektai */
+.karnavalasIcon{
+    position: absolute;
+    width: 25px;
+    height: 100%;
+    border-radius: 25px;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 27.5px;
+    font-size: 20px;
+    color: black;
+}
+.pagrTekstas{
+    font-weight: 600;
+    font-size: 17px;
+    color: black;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+}
+.antrTekstas{
+    color: grey;
+    font-size: 13px;
+    font-weight: 400;
+    width: 100%;
+}
+.pastabaTekstas{
+    color: black;
+    font-size: 13px;
+    font-weight: 400;
+    width: 100%;
+    position: relative;
+    margin-top: 7px;
+    padding-left: 17px;
+}
+.sauktukas{
+    position: absolute;
+    left: 0;
+    border: 1px solid black;
+    font-weight: 600;
+    width: 13px;
+    height: 13px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    margin-top: 1px;
+}
+#girlianda{
+    width: 100%;
+    height: 5px;
+    position: fixed;
+    top: -6px;
+    left: 0;
+    right: 0;
+    z-index: 18;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#girlianda2{
+    width: 100%;
+    height: 5px;
+    position: fixed;
+    bottom: -6px;
+    left: 0;
+    right: 0;
+    z-index: 18;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#girlianda2 div{
+    animation-delay: 0.5s;
+}
+.zaliaGirlianda{
+    width: 10%;
+    height: 5px;
+    background-color: green;
+    box-shadow: 0 0 20px green;
+    animation: girliandaZalia 1s linear infinite;
+}
+.raudonaGirlianda{
+    width: 10%;
+    height: 5px;
+    background-color: red;
+    box-shadow: 0 0 20px red;
+    animation: girliandaRaudona 1s linear infinite;
+}
+@keyframes girliandaZalia{
+    0%{
+        box-shadow: 0 0 20px green;
+    }
+    49.99%{
+        box-shadow: 0 0 20px green;
+    }
+    50%{
+        box-shadow: none;
+    }
+    100%{
+        box-shadow: none;
+    }
+}
+@keyframes girliandaRaudona{
+    0%{
+        box-shadow: none;
+    }
+    49.99%{
+        box-shadow: none;
+    }
+    50%{
+        box-shadow: 0 0 20px red;
+    }
+    100%{
+        box-shadow: 0 0 20px red;
+    }
+}
+
+.vardas{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 110px;
+    padding-left: 67.5px;
+    padding-right: 15px;
+    position: relative;
+    margin-bottom: 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+.vardasIcon{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 15px;
+    left: 27.5px;
+    font-size: 20px;
+    color: black;
+}
+.vardasAntrTekstas{
+    color: grey;
+    font-size: 13px;
+    font-weight: 400;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+}
+.apie{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 5px;
+    padding-left: 67.5px;
+    padding-right: 15px;
+    position: relative;
+    margin-bottom: 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+.pasiruosimas{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 5px;
+    padding-left: 67.5px;
+    padding-right: 15px;
+    position: relative;
+    margin-bottom: 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+.zodziai{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 5px;
+    padding-left: 67.5px;
+    padding-right: 15px;
+    position: relative;
+    margin-bottom: 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+.apranga{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 5px;
+    padding-left: 67.5px;
+    padding-right: 15px;
+    position: relative;
+    margin-bottom: 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+.vaidinimas{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 5px;
+    padding-left: 67.5px;
+    padding-right: 15px;
+    position: relative;
+    margin-bottom: 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+.papildomai{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 5px;
+    padding-left: 67.5px;
+    padding-right: 15px;
+    position: relative;
+    margin-bottom: 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+.papildomai button{
+    width: 95%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    border: none;
+    background-color: transparent;
+    color: black;
+    border: 1.5px solid black;
+    font-size: 13px;
+    margin-top: 5px;
+    padding: 9px;
+    cursor: pointer;
+}
+.papildomai button:active{
+    transform: scale(0.95);
+}
+
+
+
+@media only screen and (max-width: 750px){
+    #screenSize{
+        display: none;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    body{
+        background-color: #141414;
+    }
+    #loading{
+        background-color: #141414;
+    }
+    #createdByMatas{
+        color: white;
+    }
+    .spin-loader{
+        background: #333333;
+    }
+    .spin-loader:before{
+        background: white;
+        background-image: linear-gradient(#333333, white);
+    }
+    .spin-loader:after{
+        background: #141414;
+    }
+    .spin-loader2{
+        background: #333333;
+    }
+    .spin-loader2:before{
+        background: white;
+        background-image: linear-gradient(#333333, white);
+    }
+    .spin-loader2:after{
+        background: #141414;
+    }
+    #screenSize{
+        background-color: #141414;
+    }
+    #screenSizeTekstas1{
+        color: white;
+    }
+    #screenSizeTekstas2{
+        color: white;
+    }
+    #phoneIcon{
+        color: white;
+    }
+    #xIcon{
+        background-color: #141414;
+    }
+    #accessDenied{
+        background-color: #141414;
+        color: white;
+    }
+    #uzdraustaRestart {
+        border-color:white;
+    }
+    #uzdraustaRestart::before {
+        border-color:white;
+    }
+
+
+
+    #kelioneI---{
+        background-color: #141414;
+    }
+    #info{
+        background-color: rgba(20, 20, 20, 1);
+        color: white;
+    }
+    #info i{
+        background-color: #282828;
+        color: white;
+    }
+    #kelionesMarsrutasTekstas{
+        color: white;
+    }
+    #kelionesMarsrutasTekstas2{
+        color: white;
+    }
+    #openingMapsBg{
+        background-color: rgba(44, 44, 44, 0.75);
+    }
+    #openingMaps{
+        background-color: #141414;
+        box-shadow: 0 0 10px #333333;
+        color: white;
+    }
+    #ticketActivationBg{
+        background-color: rgba(44, 44, 44, 0.75);
+    }
+    #ticketActivation{
+        background-color: #141414;
+        box-shadow: 0 0 10px #333333;
+    }
+    .ticketActivationTekstas1{
+        color: white;
+    }
+    .ticketActivationTekstas2{
+        color: white;
+    }
+    #trafiButton{
+        background-color: #141414;
+    }
+    #mticketButton{
+        background-color: #141414;
+    }
+    .androidButton{
+        background-color: #141414;
+    }
+    .iphoneButton{
+        background-color: #141414;
+        color: white;
+        border: 2px solid white;
+    }
+    #trafiPhone{
+        background-color: #141414;
+        box-shadow: 0 0 10px #333333;
+    }
+    #mticketPhone{
+        background-color: #141414;
+        box-shadow: 0 0 10px #333333;
+    }
+    #openingPlay{
+        background-color: #141414;
+        box-shadow: 0 0 10px #333333;
+        color: white;
+    }
+    #openingStore{
+        background-color: #141414;
+        box-shadow: 0 0 10px #333333;
+        color: white;
+    }
+    #visosStotelesBg{
+        background-color: rgba(44, 44, 44, 0.75);
+    }
+    #visosStoteles{
+        background-color: #141414;
+        box-shadow: 0 0 10px #333333;
+    }
+    .visosStotelesTransportas{
+        color: white;
+    }
+    .visosStotelesSkaicius{
+        font-size: 15px;
+        text-align: center;
+        color: white;
+    }
+    .visosPagrindineStotele1{
+        color: white;
+    }
+    .visosPagrindineStotele2{
+        color: white;
+    }
+    #visosStotys{
+        background-color: #141414;
+        box-shadow: 0 0 10px #333333;
+    }
+    .ejimoTaskelis{
+        background-color: white;
+    }
+    .kelionesTekstas1{
+        color: white;
+    }
+    .kelionesIcon1{
+        color: white;
+    }
+    .kelionesIcon2{
+        color: white;
+    }
+    .kelionesIcon3{
+        color: white;
+    }
+    .maps{
+        color: white;
+        background-color: #141414;
+    }
+    hr{
+        border-top: 1px solid #333333;
+    }
+
+
+
+    #scenarijusDocs{
+        background-color: #141414;
+    }
+    #scenarijusDocs h1{
+        color: white;
+    }
+    #closeScenarijusDocs{
+        background-color: #282828;
+        color: white;
+    }
+    #downloadScenarijus{
+        background-color: #282828;
+        color: white;
+    }
+    #soundManager{
+        background-color: #141414;
+    }
+    #soundManager h1{
+        color: white;
+    }
+    #soundManager div{
+        background-color: black;
+        color: white;
+    }
+    #soundManager div i{
+        background-color: #282828;
+        color: white;
+    }
+    #closeSoundManager{
+        background-color: #282828;
+        color: white;
+    }
+    .atsisiustiScenariju{
+        color: white;
+        border: 2px solid white;
+    }
+    .informacija{
+        color: white;
+        border: 2px solid white;
+    }
+    #pinnedBackground{
+        background-color: rgba(44, 44, 44, 0.75);
+    }
+    #atsisiunciamasScenarijus{
+        background-color: #141414;
+        box-shadow: 0 0 10px #333333;
+        color: white;
+    }
+    #rodomaInformacija{
+        background-color: #141414;
+        box-shadow: 0 0 10px #333333;
+        color: white;
+    }
+    #atsisiunciamasAudio1{
+        background-color: #141414;
+        box-shadow: 0 0 10px #333333;
+        color: white;
+    }
+    #atsisiunciamasAudio2{
+        background-color: #141414;
+        box-shadow: 0 0 10px #333333;
+        color: white;
+    }
+    #atsisiunciamasAudio3{
+        background-color: #141414;
+        box-shadow: 0 0 10px #333333;
+        color: white;
+    }
+    #atsisiunciamasAudio4{
+        background-color: #141414;
+        box-shadow: 0 0 10px #333333;
+        color: white;
+    }
+    #atsisiunciamasAudio5{
+        background-color: #141414;
+        box-shadow: 0 0 10px #333333;
+        color: white;
+    }
+    .pinnedBg{
+        background-color: rgba(20, 20, 20, 0.75);
+        box-shadow: 0 0 10px #333333;
+    }
+
+    #Arune{
+        background-color: #141414;
+    }
+    #infoArune{
+        background-color: rgba(20, 20, 20, 1);
+        color: white;
+    }
+    #infoArune i{
+        background-color: #282828;
+        color: white;
+    }
+    #AruneTekstas{
+        color: white;
+    }
+    #AruneTekstas2{
+        color: white;
+    }
+    #Smilte{
+        background-color: #141414;
+    }
+    #infoSmilte{
+        background-color: rgba(20, 20, 20, 1);
+        color: white;
+    }
+    #infoSmilte i{
+        background-color: #282828;
+        color: white;
+    }
+    #SmilteTekstas{
+        color: white;
+    }
+    #SmilteTekstas2{
+        color: white;
+    }
+
+    #Adriana{
+        background-color: #141414;
+    }
+    #infoAdriana{
+        background-color: rgba(20, 20, 20, 1);
+        color: white;
+    }
+    #infoAdriana i{
+        background-color: #282828;
+        color: white;
+    }
+    #AdrianaTekstas{
+        color: white;
+    }
+    #AdrianaTekstas2{
+        color: white;
+    }
+    #Norbertas{
+        background-color: #141414;
+    }
+    #infoNorbertas{
+        background-color: rgba(20, 20, 20, 1);
+        color: white;
+    }
+    #infoNorbertas i{
+        background-color: #282828;
+        color: white;
+    }
+    #NorbertasTekstas{
+        color: white;
+    }
+    #NorbertasTekstas2{
+        color: white;
+    }
+    #Meta{
+        background-color: #141414;
+    }
+    #infoMeta{
+        background-color: rgba(20, 20, 20, 1);
+        color: white;
+    }
+    #infoMeta i{
+        background-color: #282828;
+        color: white;
+    }
+    #MetaTekstas{
+        color: white;
+    }
+    #MetaTekstas2{
+        color: white;
+    }
+    #Justina{
+        background-color: #141414;
+    }
+    #infoJustina{
+        background-color: rgba(20, 20, 20, 1);
+        color: white;
+    }
+    #infoJustina i{
+        background-color: #282828;
+        color: white;
+    }
+    #JustinaTekstas{
+        color: white;
+    }
+    #JustinaTekstas2{
+        color: white;
+    }
+    #Mindaugasd{
+        background-color: #141414;
+    }
+    #infoMindaugasd{
+        background-color: rgba(20, 20, 20, 1);
+        color: white;
+    }
+    #infoMindaugasd i{
+        background-color: #282828;
+        color: white;
+    }
+    #MindaugasdTekstas{
+        color: white;
+    }
+    #MindaugasdTekstas2{
+        color: white;
+    }
+    #Dovydas{
+        background-color: #141414;
+    }
+    #infoDovydas{
+        background-color: rgba(20, 20, 20, 1);
+        color: white;
+    }
+    #infoDovydas i{
+        background-color: #282828;
+        color: white;
+    }
+    #DovydasTekstas{
+        color: white;
+    }
+    #DovydasTekstas2{
+        color: white;
+    }
+    #Matas{
+        background-color: #141414;
+    }
+    #infoMatas{
+        background-color: rgba(20, 20, 20, 1);
+        color: white;
+    }
+    #infoMatas i{
+        background-color: #282828;
+        color: white;
+    }
+    #MatasTekstas{
+        color: white;
+    }
+    #MatasTekstas2{
+        color: white;
+    }
+    #Aleksandra{
+        background-color: #141414;
+    }
+    #infoAleksandra{
+        background-color: rgba(20, 20, 20, 1);
+        color: white;
+    }
+    #infoAleksandra i{
+        background-color: #282828;
+        color: white;
+    }
+    #AleksandraTekstas{
+        color: white;
+    }
+    #AleksandraTekstas2{
+        color: white;
+    }
+    #Samanta{
+        background-color: #141414;
+    }
+    #infoSamanta{
+        background-color: rgba(20, 20, 20, 1);
+        color: white;
+    }
+    #infoSamanta i{
+        background-color: #282828;
+        color: white;
+    }
+    #SamantaTekstas{
+        color: white;
+    }
+    #SamantaTekstas2{
+        color: white;
+    }
+    #Arnas{
+        background-color: #141414;
+    }
+    #infoArnas{
+        background-color: rgba(20, 20, 20, 1);
+        color: white;
+    }
+    #infoArnas i{
+        background-color: #282828;
+        color: white;
+    }
+    #ArnasTekstas{
+        color: white;
+    }
+    #ArnasTekstas2{
+        color: white;
+    }
+    #Milena{
+        background-color: #141414;
+    }
+    #infoMilena{
+        background-color: rgba(20, 20, 20, 1);
+        color: white;
+    }
+    #infoMilena i{
+        background-color: #282828;
+        color: white;
+    }
+    #MilenaTekstas{
+        color: white;
+    }
+    #MilenaTekstas2{
+        color: white;
+    }
+    #Emilija{
+        background-color: #141414;
+    }
+    #infoEmilija{
+        background-color: rgba(20, 20, 20, 1);
+        color: white;
+    }
+    #infoEmilija i{
+        background-color: #282828;
+        color: white;
+    }
+    #EmilijaTekstas{
+        color: white;
+    }
+    #EmilijaTekstas2{
+        color: white;
+    }
+    #Modestas{
+        background-color: #141414;
+    }
+    #infoModestas{
+        background-color: rgba(20, 20, 20, 1);
+        color: white;
+    }
+    #infoModestas i{
+        background-color: #282828;
+        color: white;
+    }
+    #ModestasTekstas{
+        color: white;
+    }
+    #ModestasTekstas2{
+        color: white;
+    }
+    #Gabriele{
+        background-color: #141414;
+    }
+    #infoGabriele{
+        background-color: rgba(20, 20, 20, 1);
+        color: white;
+    }
+    #infoGabriele i{
+        background-color: #282828;
+        color: white;
+    }
+    #GabrieleTekstas{
+        color: white;
+    }
+    #GabrieleTekstas2{
+        color: white;
+    }
+    #Berzuna{
+        background-color: #141414;
+    }
+    #infoBerzuna{
+        background-color: rgba(20, 20, 20, 1);
+        color: white;
+    }
+    #infoBerzuna i{
+        background-color: #282828;
+        color: white;
+    }
+    #BerzunaTekstas{
+        color: white;
+    }
+    #BerzunaTekstas2{
+        color: white;
+    }
+    #Nojus{
+        background-color: #141414;
+    }
+    #infoNojus{
+        background-color: rgba(20, 20, 20, 1);
+        color: white;
+    }
+    #infoNojus i{
+        background-color: #282828;
+        color: white;
+    }
+    #NojusTekstas{
+        color: white;
+    }
+    #NojusTekstas2{
+        color: white;
+    }
+    #Agnieska{
+        background-color: #141414;
+    }
+    #infoAgnieska{
+        background-color: rgba(20, 20, 20, 1);
+        color: white;
+    }
+    #infoAgnieska i{
+        background-color: #282828;
+        color: white;
+    }
+    #AgnieskaTekstas{
+        color: white;
+    }
+    #AgnieskaTekstas2{
+        color: white;
+    }
+
+    .karnavalasIcon{
+        color: white;
+    }
+    .pagrTekstas{
+        color: white;
+    }
+    .vardasIcon{
+        color: white;
+    }
+    .pastabaTekstas{
+        color: white;
+    }
+    .sauktukas{
+        border: 1px solid white;
+    }
+    .papildomai button{
+        color: white;
+        border: 1.5px solid white;
+    }
+}
