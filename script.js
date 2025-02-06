@@ -67,10 +67,10 @@ function loadFunction() {
     }, 3300);
 }
 
-// isjungti right-click
+// išjungti right-click
 document.addEventListener('contextmenu', (e) => e.preventDefault());
 
-// isjungti f12, ctrl+shift+i, ctrl+shift+j, ctrl+u (isjungti inspect tool); nematomi valdymai shortcutais (multimedijos vaizdas, garsas)
+// išjungti f12, ctrl+shift+i, ctrl+shift+j, ctrl+u (inspect tool); nematomi valdymai shortcut'ais (multimedijos vaizdas, garsas)
 function ctrlShiftKey(e, keyCode) {
     return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
 }
@@ -143,7 +143,7 @@ function deny(){
     }, 10000);
 }
 
-// scrollinimo animacijos, dark mode
+// scroll'inimo animacijos, dark mode
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
     if (document.body.scrollTop > 22 || document.documentElement.scrollTop > 22) {
