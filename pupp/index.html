@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta property="og:image" content="https://raw.githubusercontent.com/createdbymatas/gsgIIb/main/images/thumbnail.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="471">
+    <meta property="og:title" content="GŠG IIb">
+    <meta property="og:description" content="Created by Matas">
+    <title>GŠG IIb</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600;800&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/jpg" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/app.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="loadFunction()" id="body">
+    <div id="display"></div>
+    <div id="downloading">
+        <p>Atsisiunčiama...</p>
+        <span id="siunciamaPavadinimas">pavadinimas</span>
+    </div>
+    <div id="viewer">
+        <i class="fa-solid fa-xmark" onclick="viewFormulesClose()"></i>
+        <img src="images/formulynas.jpeg" alt="Formulynas">
+    </div>
+    <div id="positionLoader2"><div class="spin-loader2" aria-hidden="true"></div></div>
+    <div id="info">
+        <p id="back"><i class="fa-solid fa-chevron-left"></i> Atgal</p>
+        <p>Pasiruošimas PUPP | <span id="infoTextChange">GŠG IIb</span></p>
+        <p id="formulynas" onclick="atidarytiFormules()"><i class="fa-solid fa-sheet-plastic"></i> Formulynas</p>
+        <p id="formulynasUzdaryti" onclick="uzdarytiFormules()"><i class="fa-solid fa-xmark"></i> Formulynas</p>
+    </div>
+    <div id="formules">
+        <button onclick="viewFormules()"><i class="fa-solid fa-expand"></i> Peržiūrėti</button>
+        <button onclick="downloadFormules()"><i class="fa-solid fa-file-pdf"></i> Atsisiųsti</button>
+        <img src="images/formulynas.jpeg" alt="Formulynas">
+    </div>
+    <div id="screen">
+        <div id="pasirinktiDalyka">
+            <p class="tekstasVirsBox">Pasirink dalyką</p>
+            <div id="adjustBox">
+                <div class="box">lietuvių k. ir literatūra</div>
+                <div class="box" onclick="matematika()">matematika</div>
+            </div>
+        </div>
+        <div id="matematika">
+            <p class="tekstasVirsBox">Pasirink kategoriją</p>
+            <div id="adjustBox">
+                <div class="box" onclick="matematikaTeorija()">teorija <p>temos, pavyzdžiai</p></div>
+                <div class="box">praktika <p>uždaviniai, atsakymai</p></div>
+            </div>
+        </div>
+        <div id="matematikaTeorija">
+            <p class="tekstasVirsBox">Pasirink temą</p>
+            <div id="adjustBox">
+                <div class="box" onclick="matematikaModeliaiIrSarysiai()">modeliai ir sąryšiai <p>sudaro <b>55%</b> patikrinimo</p></div>
+                <div class="box" onclick="matematikaGeometrijaIrMatavimai()">geometrija ir matavimai <p>sudaro <b>40%</b> patikrinimo</p></div>
+                <div class="box">duomenys ir tikimybės <p>sudaro <b>5%</b> patikrinimo</p></div>
+            </div>
+        </div>
+        <div id="matematikaModeliaiIrSarysiai">
+            <p class="tekstasVirsBox">Pasirink temą</p>
+            <div id="adjustBox">
+                <div class="box">dėsningumai <p>skaičių sekos</p></div>
+                <div class="box">algebra <p>lygtys, lygčių sistemos, nelygybės, reiškiniai</p></div>
+                <div class="box">(ne)tiesiniai sąryšiai <p>tiesinė ir kvadratinė funkcijos</p></div>
+            </div>
+        </div>
+        <div id="matematikaGeometrijaIrMatavimai">
+            <p class="tekstasVirsBox">Pasirink temą</p>
+            <div id="adjustBox">
+                <div class="box">figūros <p>apskritimai, panašiosios ir įbrėžtinės figūros, savybės</p></div>
+                <div class="box">trigonometrija <p>sinusas, kosinusas, tangentas, reikšmės ir teoremos</p></div>
+            </div>
+        </div>
+    </div>
+
+    <a id="download_formulynas" href="formulynas.pdf" download style="display: none;">download_formulynas</a>
+
+    <script src="https://kit.fontawesome.com/a11707644f.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script>
+        function atidarytiFormules() {
+            document.getElementById("positionLoader2").style.opacity = "1";
+            document.getElementById("formules").style.right = "15px";
+            document.getElementById("formulynas").style.display = "none";
+            document.getElementById("formulynasUzdaryti").style.display = "block";
+            setTimeout(() => {
+                document.getElementById("positionLoader2").style.opacity = "0";
+            }, 100);
+        }
+        function uzdarytiFormules() {
+            document.getElementById("positionLoader2").style.opacity = "1";
+            document.getElementById("formules").style.right = "-135px";
+            document.getElementById("formulynas").style.display = "block";
+            document.getElementById("formulynasUzdaryti").style.display = "none";
+            setTimeout(() => {
+                document.getElementById("positionLoader2").style.opacity = "0";
+            }, 100);
+        }
+        function downloadFormules() {
+            document.getElementById("positionLoader2").style.opacity = "1";
+            document.getElementById("formules").style.right = "-135px";
+            document.getElementById("formulynas").style.display = "block";
+            document.getElementById("formulynasUzdaryti").style.display = "none";
+            document.getElementById("downloading").style.display = "flex";
+            document.getElementById("siunciamaPavadinimas").innerHTML = "formulynas.pdf";
+            setTimeout(() => {
+                document.getElementById("downloading").style.opacity = "1";
+            }, 10);
+            setTimeout(() => {
+                document.getElementById("download_formulynas").click();
+            }, 1000);
+            setTimeout(() => {
+                document.getElementById("downloading").style.opacity = "0";
+            }, 3000);
+            setTimeout(() => {
+                document.getElementById("positionLoader2").style.opacity = "0";
+            }, 3100);
+            setTimeout(() => {
+                document.getElementById("downloading").style.display = "none";
+            }, 3300);
+        }
+        function viewFormules() {
+            document.getElementById("positionLoader2").style.opacity = "1";
+            document.getElementById("formules").style.right = "-135px";
+            document.getElementById("formulynas").style.display = "block";
+            document.getElementById("formulynasUzdaryti").style.display = "none";
+            document.getElementById("viewer").style.display = "flex";
+            setTimeout(() => {
+                document.getElementById("viewer").style.opacity = "1";
+            }, 10);
+            setTimeout(() => {
+                document.getElementById("positionLoader2").style.opacity = "0";
+            }, 110);
+        }
+        function viewFormulesClose() {
+            document.getElementById("positionLoader2").style.opacity = "1";
+            document.getElementById("viewer").style.opacity = "0";
+            setTimeout(() => {
+                document.getElementById("positionLoader2").style.opacity = "0";
+            }, 100);
+            setTimeout(() => {
+                document.getElementById("viewer").style.display = "none";
+            }, 300);
+        }
+        function matematika() {
+            document.getElementById("positionLoader2").style.opacity = "1";
+            document.getElementById("pasirinktiDalyka").style.opacity = "0";
+            setTimeout(() => {
+                document.getElementById("pasirinktiDalyka").style.display = "none";
+                document.getElementById("matematika").style.display = "flex";
+            }, 300);
+            setTimeout(() => {
+                document.getElementById("matematika").style.opacity = "1";
+                document.getElementById("infoTextChange").innerHTML = "Matematika";
+                document.getElementById("back").style.opacity = "1";
+                document.getElementById("back").style.pointerEvents = "all";
+                document.getElementById("formulynas").style.opacity = "1";
+                document.getElementById("formulynas").style.pointerEvents = "all";
+            }, 310);
+            setTimeout(() => {
+                document.getElementById("positionLoader2").style.opacity = "0";
+            }, 410);
+        }
+        function matematikaTeorija() {
+            document.getElementById("positionLoader2").style.opacity = "1";
+            document.getElementById("matematika").style.opacity = "0";
+            setTimeout(() => {
+                document.getElementById("matematika").style.display = "none";
+                document.getElementById("matematikaTeorija").style.display = "flex";
+            }, 300);
+            setTimeout(() => {
+                document.getElementById("matematikaTeorija").style.opacity = "1";
+                document.getElementById("infoTextChange").innerHTML = "Matematika: teorija";
+                document.getElementById("back").style.opacity = "1";
+                document.getElementById("back").style.pointerEvents = "all";
+            }, 310);
+            setTimeout(() => {
+                document.getElementById("positionLoader2").style.opacity = "0";
+            }, 410);
+        }
+        function matematikaModeliaiIrSarysiai() {
+            document.getElementById("positionLoader2").style.opacity = "1";
+            document.getElementById("matematikaTeorija").style.opacity = "0";
+            setTimeout(() => {
+                document.getElementById("matematikaTeorija").style.display = "none";
+                document.getElementById("matematikaModeliaiIrSarysiai").style.display = "flex";
+            }, 300);
+            setTimeout(() => {
+                document.getElementById("matematikaModeliaiIrSarysiai").style.opacity = "1";
+                document.getElementById("infoTextChange").innerHTML = "Matematika: teorija: modeliai ir sąryšiai";
+                document.getElementById("back").style.opacity = "1";
+                document.getElementById("back").style.pointerEvents = "all";
+            }, 310);
+            setTimeout(() => {
+                document.getElementById("positionLoader2").style.opacity = "0";
+            }, 410);
+        }
+        function matematikaGeometrijaIrMatavimai() {
+            document.getElementById("positionLoader2").style.opacity = "1";
+            document.getElementById("matematikaTeorija").style.opacity = "0";
+            setTimeout(() => {
+                document.getElementById("matematikaTeorija").style.display = "none";
+                document.getElementById("matematikaGeometrijaIrMatavimai").style.display = "flex";
+            }, 300);
+            setTimeout(() => {
+                document.getElementById("matematikaGeometrijaIrMatavimai").style.opacity = "1";
+                document.getElementById("infoTextChange").innerHTML = "Matematika: teorija: geometrija ir matavimai";
+                document.getElementById("back").style.opacity = "1";
+                document.getElementById("back").style.pointerEvents = "all";
+            }, 310);
+            setTimeout(() => {
+                document.getElementById("positionLoader2").style.opacity = "0";
+            }, 410);
+        }
+    </script>
+</body>
+</html>

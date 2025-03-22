@@ -1,0 +1,568 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.3s;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+::-webkit-scrollbar {
+    width: 0;
+}
+body{
+    background-color: black;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+img{
+    pointer-events: none;
+}
+button{
+    touch-action: manipulation;
+}
+hr{
+    border: none;
+    border-top: 1px solid lightgrey;
+    width: 100%;
+}
+b{
+    font-weight: 600;
+}
+
+/* krovimas */
+#loading{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transform: scale(1);
+    background-color: #f2f2f2;
+    cursor: wait;
+}
+#createdByMatas{
+    position: absolute;
+    bottom: 30px;
+    opacity: 0;
+    color: black;
+    text-align: center;
+    cursor: wait;
+}
+.spin-loader{
+    border-radius: 80%;
+    display: block;
+    height: 50px;
+    width: 50px;
+    position: relative;
+    animation: spin 0.65s linear 0s infinite normal;
+    background: lightgrey;
+    cursor: wait;
+}
+.spin-loader:before, .spin-loader:after{
+    content: "";
+    display: block;
+    position: absolute;
+}
+.spin-loader:before{
+    border-radius: 0 90px 90px 0;
+    height: 50px;
+    width: 50%;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    background: black;
+    background-image: linear-gradient(lightgrey, black);
+}
+.spin-loader:after{
+    border-radius: 80%;
+    height: 40px;
+    width: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background: #f2f2f2;
+}
+.spin-loader2{
+    border-radius: 80%;
+    display: block;
+    height: 50px;
+    width: 50px;
+    position: relative;
+    animation: spin 0.65s linear 0s infinite normal;
+    background: #333333;
+}
+.spin-loader2:before, .spin-loader2:after{
+    content: "";
+    display: block;
+    position: absolute;
+}
+.spin-loader2:before{
+    border-radius: 0 90px 90px 0;
+    height: 50px;
+    width: 50%;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    background: white;
+    background-image: linear-gradient(#333333, white);
+}
+.spin-loader2:after{
+    border-radius: 80%;
+    height: 40px;
+    width: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background: #141414;
+}
+#positionLoader2{
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 15;
+    opacity: 0;
+    transition: 0.2s;
+}
+@keyframes spin {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+#downloading{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 12;
+    transform: scale(1);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 50px;
+    opacity: 0;
+}
+#downloading span{
+    font-size: 25px;
+    margin-top: 50px;
+}
+#viewer{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 12;
+    transform: scale(1);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    opacity: 0;
+}
+#viewer i{
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    font-size: 50px;
+    cursor: pointer;
+}
+#viewer i:hover{
+    opacity: 0.8;
+}
+#viewer i:active{
+    opacity: 0.5;
+}
+#viewer img{
+    height: 100%;
+}
+
+/* ekrano ispejimas */
+#screenSize{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 90;
+    background-color: #f2f2f2;
+    cursor: not-allowed;
+}
+#screenSizeTekstas1{
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+    cursor: not-allowed;
+    font-weight: 600;
+}
+#screenSizeTekstas2{
+    font-size: 17px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+    cursor: not-allowed;
+}
+#sizeDiv{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: not-allowed;
+}
+#phoneIcon{
+    font-size: 70px;
+    position: absolute;
+    color: black;
+    cursor: not-allowed;
+}
+#xIcon{
+    font-size: 30px;
+    color: red;
+    background-color: #f2f2f2;
+    border-radius: 100%;
+    margin-top: 60px;
+    z-index: 2;
+    margin-left: 45px;
+    cursor: not-allowed;
+}
+
+/* inspect tool uzblokavimas */
+#accessDenied{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 95;
+    background-color: #f2f2f2;
+    color: black;
+    transition: 0.2s;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+    cursor: not-allowed;
+}
+.fa-ban{
+    color: red;
+    font-size: 70px;
+    cursor: not-allowed;
+    transition: none;
+}
+#accessDenied p{
+    margin-top: 20px;
+    cursor: not-allowed;
+}
+#accessDenied div{
+    font-size: 15px;
+    width: 275px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 15px;
+    right: 25px;
+    /* outline: 1px solid red; */
+}
+#accessDenied div p{
+    margin-top: 0;
+}
+#uzdraustaRestart {
+    width: 50px;
+    height: 50px;
+    border:7px solid black;
+    border-radius: 50%;
+    position: relative;
+    transform:rotate(45deg);
+    box-sizing: border-box;
+    }
+#uzdraustaRestart::before {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    inset:-7px;
+    border-radius: 50%;
+    border:7px solid black;
+    /* animation: prixClipFix 10s linear; */
+    animation: none;
+}
+
+@keyframes prixClipFix {
+    0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+    25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+    50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+    75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
+    100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+}
+
+
+
+#info{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(20, 20, 20, 0.5);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    color: black;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    color: white;
+    font-size: 20px;
+}
+#info i{
+    transition: none;
+}
+#info span{
+    font-weight: 600;
+}
+#back{
+    position: absolute;
+    left: 8px;
+    cursor: pointer;
+    transform: scale(0.85);
+    padding: 10px;
+    pointer-events: none;
+    opacity: 0;
+    color: rgba(255,255,255,1);
+}
+#back:hover{
+    color: rgba(255,255,255,0.8);
+}
+#back:active{
+    color: rgba(255,255,255,0.5);
+}
+#formulynas{
+    position: absolute;
+    right: 8px;
+    cursor: pointer;
+    transform: scale(0.85);
+    padding: 10px;
+    pointer-events: none;
+    opacity: 0;
+    color: rgba(255,255,255,1);
+}
+#formulynas:hover{
+    color: rgba(255,255,255,0.8);
+}
+#formulynas:active{
+    color: rgba(255,255,255,0.5);
+}
+#formulynasUzdaryti{
+    position: absolute;
+    right: 8px;
+    cursor: pointer;
+    transform: scale(0.85);
+    padding: 10px;
+    display: none;
+    color: rgba(255,255,255,1);
+}
+#formulynasUzdaryti:hover{
+    color: rgba(255,255,255,0.8);
+}
+#formulynasUzdaryti:active{
+    color: rgba(255,255,255,0.5);
+}
+
+
+
+#display{
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 4;
+    background-image: url(images/pavasaris.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: 0.2s;
+    /* display: none; */
+}
+#screen{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.75);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    transition: 0.2s;
+    /* display: none; */
+}
+.box{
+    width: 230px;
+    height: 150px;
+    border-radius: 25px;
+    border: none;
+    font-size: 30px;
+    background-color: rgba(220,220,220,0.3);
+    cursor: pointer;
+    transition: 0.15s;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 10px;
+    position: relative;
+}
+.box p{
+    position: absolute;
+    font-size: 15px;
+    bottom: 15px;
+}
+.box:hover{
+    background-color: rgba(230,230,230,0.4);
+}
+.box:active{
+    background-color: rgba(255,255,255,0.7);
+}
+.tekstasVirsBox{
+    color: white;
+    font-size: 20px;
+    transition: 0.3s;
+    margin-bottom: 20px;
+}
+#adjustBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+#formules{
+    position: fixed;
+    width: 130px;
+    height: 245px;
+    top: 75px;
+    right: -135px;
+    z-index: 110;
+    background-color: rgba(220,220,220,0.3);
+    padding: 10px;
+    border-radius: 25px;
+}
+#formules button{
+    width: 100%;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 25px;
+    margin-bottom: 5px;
+    color: black;
+    font-size: 13px;
+    cursor: pointer;
+}
+#formules button:hover{
+    background-color: rgb(240, 240, 240);
+}
+#formules button:active{
+    background-color: rgb(200, 200, 200);
+}
+#formules img{
+    width: 100%;
+}
+
+
+
+#pasirinktiDalyka{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#matematika{
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+}
+#matematikaTeorija{
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+}
+#matematikaModeliaiIrSarysiai{
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+}
+#matematikaGeometrijaIrMatavimai{
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+}
