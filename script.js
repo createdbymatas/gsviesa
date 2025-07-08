@@ -70,7 +70,7 @@ function loadFunction() {
 // išjungti right-click
 document.addEventListener('contextmenu', (e) => e.preventDefault());
 
-// išjungti f12, ctrl+shift+i, ctrl+shift+j, ctrl+u (inspect tool); nematomi valdymai shortcut'ais (multimedijos vaizdas, garsas)
+// išjungti f12, ctrl+shift+i, ctrl+shift+j, ctrl+u (inspect tool)
 function ctrlShiftKey(e, keyCode) {
     return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
 }
@@ -152,6 +152,11 @@ function scrollFunction() {
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
             document.getElementById("info").style.boxShadow = "0 0 10px #333333";
             document.getElementById("info").style.backgroundColor = "rgba(20, 20, 20, 0.75)";
+            document.getElementById("info").style.width = "95%";
+            document.getElementById("info").style.top = "15px";
+            document.getElementById("info").style.left = "2.5%";
+            document.getElementById("info").style.left = "2.5%";
+            document.getElementById("info").style.borderRadius = "25px";
 
             document.getElementById("infoArune").style.boxShadow = "0 0 10px #333333";
             document.getElementById("infoArune").style.backgroundColor = "rgba(20, 20, 20, 0.75)";
@@ -195,6 +200,11 @@ function scrollFunction() {
         else{
             document.getElementById("info").style.boxShadow = "0 0 10px lightgrey";
             document.getElementById("info").style.backgroundColor = "rgba(242, 242, 242, 0.75)";
+            document.getElementById("info").style.width = "95%";
+            document.getElementById("info").style.top = "15px";
+            document.getElementById("info").style.left = "2.5%";
+            document.getElementById("info").style.left = "2.5%";
+            document.getElementById("info").style.borderRadius = "25px";
 
             document.getElementById("infoArune").style.boxShadow = "0 0 10px lightgrey";
             document.getElementById("infoArune").style.backgroundColor = "rgba(242, 242, 242, 0.75)";
@@ -281,6 +291,11 @@ function scrollFunction() {
         document.getElementById("info").style.boxShadow = "none";
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
             document.getElementById("info").style.backgroundColor = "rgba(20, 20, 20, 1)";
+            document.getElementById("info").style.width = "100%";
+            document.getElementById("info").style.top = "0";
+            document.getElementById("info").style.left = "0";
+            document.getElementById("info").style.left = "0";
+            document.getElementById("info").style.borderRadius = "0";
 
             document.getElementById("infoArune").style.backgroundColor = "rgba(20, 20, 20, 1)";
             document.getElementById("infoSmilte").style.backgroundColor = "rgba(20, 20, 20, 1)";
@@ -304,6 +319,11 @@ function scrollFunction() {
         }
         else{
             document.getElementById("info").style.backgroundColor = "rgba(242, 242, 242, 1)";
+            document.getElementById("info").style.width = "100%";
+            document.getElementById("info").style.top = "0";
+            document.getElementById("info").style.left = "0";
+            document.getElementById("info").style.left = "0";
+            document.getElementById("info").style.borderRadius = "0";
 
             document.getElementById("infoArune").style.backgroundColor = "rgba(242, 242, 242, 1)";
             document.getElementById("infoSmilte").style.backgroundColor = "rgba(242, 242, 242, 1)";

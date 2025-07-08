@@ -64,7 +64,8 @@ hr{
     height: 50px;
     width: 50px;
     position: relative;
-    animation: spin 0.65s linear 0s infinite normal;
+    animation: spin 0.65s linear infinite;
+    -webkit-animation: spin 0.65s linear infinite;
     background: lightgrey;
     cursor: wait;
 }
@@ -99,7 +100,8 @@ hr{
     height: 50px;
     width: 50px;
     position: relative;
-    animation: spin 0.65s linear 0s infinite normal;
+    animation: spin 0.65s linear infinite;
+    -webkit-animation: spin 0.65s linear infinite;
     background: lightgrey;
 }
 .spin-loader2:before, .spin-loader2:after{
@@ -128,6 +130,14 @@ hr{
     background: #f2f2f2;
 }
 @keyframes spin {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes spin{
     0%{
         transform: rotate(0);
     }
@@ -408,7 +418,7 @@ hr{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(242, 242, 242, 1);
+    background-color: rgba(242, 242, 242, 0);
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     color: black;
@@ -1087,18 +1097,37 @@ hr{
     background-color: dodgerblue;
     font-size: 11px;
     border-radius: 5px;
+    width: 16px;
+    height: 16px;
     padding: 3px;
-    padding-top: 2.5px;
-    padding-bottom: 2.5px;
     position: absolute;
+    margin-left: 5px;
+    margin-top: 3px;
 }
 .neigaliesiems{
     color: white;
     background-color: blue;
     font-size: 10px;
     border-radius: 5px;
+    width: 16px;
+    height: 16px;
     padding: 3px;
-    position: absolute; 
+    position: absolute;
+    margin-left: 25px;
+    margin-top: 3px;
+}
+.internetas{
+    color: white;
+    background-color: grey;
+    font-size: 10px;
+    border-radius: 5px;
+    width: 16px;
+    height: 16px;
+    padding: 3px;
+    padding-left: 2px;
+    position: absolute;
+    margin-left: 45px;
+    margin-top: 3px;
 }
 .maps{
     cursor: pointer;
