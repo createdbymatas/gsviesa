@@ -258,12 +258,22 @@
         <h1>Garso takeliai</h1>
         <i id="closeSoundManager" class="fa-solid fa-chevron-down" onclick="closeSoundTracks()" ontouchstart></i>
 
-        <div><p><span id="1aud">pradzia.mp3</span> (00:28)</p><i class="fa-solid fa-download" onclick="atsisiustiAudio1()" ontouchstart style="right: 50px;"></i><i class="fa-solid fa-play" id="1play" onclick="playAudio1()" ontouchstart style="right: 10px;"></i><i class="fa-solid fa-stop" style="display: none; right: 10px;" id="1stop" onclick="stopAudio1()" ontouchstart></i></div>
-        <div><p><span id="2aud">rap.mp3</span> (00:23)</p><i class="fa-solid fa-download" onclick="atsisiustiAudio2()" ontouchstart style="right: 50px;"></i><i class="fa-solid fa-play" id="2play" onclick="playAudio2()" ontouchstart style="right: 10px;"></i><i class="fa-solid fa-stop" style="display: none; right: 10px;" id="2stop" onclick="stopAudio2()" ontouchstart></i></div>
-        <div><p><span id="3aud">burtai.mp3</span> (00:47)</p><i class="fa-solid fa-download" onclick="atsisiustiAudio3()" ontouchstart style="right: 50px;"></i><i class="fa-solid fa-play" id="3play" onclick="playAudio3()" ontouchstart style="right: 10px;"></i><i class="fa-solid fa-stop" style="display: none; right: 10px;" id="3stop" onclick="stopAudio3()" ontouchstart></i></div>
-        <div><p><span id="4aud">seseliai.mp3</span> (00:07)</p><i class="fa-solid fa-download" onclick="atsisiustiAudio4()" ontouchstart style="right: 50px;"></i><i class="fa-solid fa-play" id="4play" onclick="playAudio4()" ontouchstart style="right: 10px;"></i><i class="fa-solid fa-stop" style="display: none; right: 10px;" id="4stop" onclick="stopAudio4()" ontouchstart></i></div>
-        <div><p><span id="5aud">sokis.mp3</span> (02:22)</p><i class="fa-solid fa-download" onclick="atsisiustiAudio5()" ontouchstart style="right: 50px;"></i><i class="fa-solid fa-play" id="5play" onclick="playAudio5()" ontouchstart style="right: 10px;"></i><i class="fa-solid fa-stop" style="display: none; right: 10px;" id="5stop" onclick="stopAudio5()" ontouchstart></i></div>
+        <div class="soundTrackDiv" ontouchstart><p class="trackName"><i class="fa-solid fa-1 trackNo"></i> pradzia.mp3</p><p class="trackDuration"><i class="fa-regular fa-clock"></i> 00:28</p></div>
+        <!-- <div><p><span id="1aud">pradzia.mp3</span> (00:28)</p><i class="fa-solid fa-download" onclick="atsisiustiAudio1()" ontouchstart style="right: 50px;"></i><i class="fa-solid fa-play" id="1play" onclick="playAudio1()" ontouchstart style="right: 10px;"></i><i class="fa-solid fa-stop" style="display: none; right: 10px;" id="1stop" onclick="stopAudio1()" ontouchstart></i></div> -->
+        <div class="soundTrackDiv" ontouchstart><p><span id="2aud">rap.mp3</span> (00:23)</p><i class="fa-solid fa-download" onclick="atsisiustiAudio2()" ontouchstart style="right: 50px;"></i><i class="fa-solid fa-play" id="2play" onclick="playAudio2()" ontouchstart style="right: 10px;"></i><i class="fa-solid fa-stop" style="display: none; right: 10px;" id="2stop" onclick="stopAudio2()" ontouchstart></i></div>
+        <div class="soundTrackDiv" ontouchstart><p><span id="3aud">burtai.mp3</span> (00:47)</p><i class="fa-solid fa-download" onclick="atsisiustiAudio3()" ontouchstart style="right: 50px;"></i><i class="fa-solid fa-play" id="3play" onclick="playAudio3()" ontouchstart style="right: 10px;"></i><i class="fa-solid fa-stop" style="display: none; right: 10px;" id="3stop" onclick="stopAudio3()" ontouchstart></i></div>
+        <div class="soundTrackDiv" ontouchstart><p><span id="4aud">seseliai.mp3</span> (00:07)</p><i class="fa-solid fa-download" onclick="atsisiustiAudio4()" ontouchstart style="right: 50px;"></i><i class="fa-solid fa-play" id="4play" onclick="playAudio4()" ontouchstart style="right: 10px;"></i><i class="fa-solid fa-stop" style="display: none; right: 10px;" id="4stop" onclick="stopAudio4()" ontouchstart></i></div>
+        <div class="soundTrackDiv" ontouchstart><p><span id="5aud">sokis.mp3</span> (02:22)</p><i class="fa-solid fa-download" onclick="atsisiustiAudio5()" ontouchstart style="right: 50px;"></i><i class="fa-solid fa-play" id="5play" onclick="playAudio5()" ontouchstart style="right: 10px;"></i><i class="fa-solid fa-stop" style="display: none; right: 10px;" id="5stop" onclick="stopAudio5()" ontouchstart></i></div>
+
+        <div id="soundPlayer">
+            <p id="playingTrackName"><i class="fa-solid fa-music"></i> <span>Garso takelio pavadinimas</span></p>
+            <i class="fa-solid fa-play" id="playBtn"></i>
+            <div id="playProgress"></div>
+            <p id="timePlayed">00:00</p>
+            <p id="timeRemaining">-05:00</p>
+        </div>
     </div>
+
     <div id="pinnedBackground" onclick="uzdarytiInfo()" ontouchstart></div>
     <div id="atsisiunciamasScenarijusBg"><div id="atsisiunciamasScenarijus"><div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; transform: scale(0.7);"><div class="spin-loader2" aria-hidden="true"></div></div> Atsisiunčiama „scenarijus.pdf“</div></div>
     <div id="rodomaInformacija"><i>Informacija:</i><br><b style="font-weight: 600;">Karnavalo data:</b> 2024-12-20 (pn)<br><b style="font-weight: 600;">Pasirodymo laikas:</b> 14:00</div>
@@ -316,14 +326,14 @@
             <i class="fa-regular fa-comments simtadienisIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Žodžiai</p>
             <p class="antrTekstas">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui distinctio nemo ipsum quisquam omnis aliquid eos eligendi! Totam, accusantium. Error accusamus enim facere deleniti dolore laborum fugit culpa. Commodi, deleniti.</p>
-            <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti kitaip. Dalį žodžių gali reikti improvizuoti.</p>
+            <p class="pastabaTekstas"><span class="sauktukas">!</span> Žodžių mintinai mokėti nereikia. Vaidinimo metu juos galima pasakyti panašiai. Dalį žodžių gali reikti improvizuoti.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="vaidinimas">
             <i class="fa-solid fa-people-arrows simtadienisIcon" style="display: flex;"></i>
             <p class="pagrTekstas">Vaidinimo eiga</p>
             <p class="antrTekstas">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora rem alias assumenda culpa impedit, eum veritatis! Molestias consequatur fuga nemo! Iste necessitatibus ipsam dignissimos pariatur voluptas sit vel ea veniam?</p>
-            <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos iš scenarijaus. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
+            <p class="pastabaTekstas"><span class="sauktukas">!</span> Surašytos tik ištraukos. Dėl detalesnės informacijos žiūrėti visą scenarijų.</p>
         </div>
         <div class="separationLine1"><hr></div>
         <div class="papildomai">
