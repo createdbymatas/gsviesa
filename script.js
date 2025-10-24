@@ -154,7 +154,7 @@ function scrollFunction() {
         document.getElementById("kelionesMarsrutasTekstas").style.opacity = "0";
         document.getElementById("kelionesMarsrutasTekstas2").style.opacity = "1";
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            document.getElementById("info").style.boxShadow = "0 0 10px #333333";
+            document.getElementById("info").style.boxShadow = "0 0 10px #464646";
             document.getElementById("info").style.backgroundColor = "rgba(20, 20, 20, 0.75)";
             document.getElementById("info").style.width = "95%";
             document.getElementById("info").style.top = "15px";
@@ -162,7 +162,7 @@ function scrollFunction() {
             document.getElementById("info").style.left = "2.5%";
             document.getElementById("info").style.borderRadius = "25px";
 
-            document.getElementById("infoSimtadienis").style.boxShadow = "0 0 10px #333333";
+            document.getElementById("infoSimtadienis").style.boxShadow = "0 0 10px #464646";
             document.getElementById("infoSimtadienis").style.width = "95%";
             document.getElementById("infoSimtadienis").style.top = "15px";
             document.getElementById("infoSimtadienis").style.left = "2.5%";
@@ -417,8 +417,10 @@ function downloadScenarijus() {
     document.getElementById("pinnedBackground").style.display = "block";
     document.getElementById("body").style.overflowY = "hidden";
     document.getElementById("atsisiunciamasScenarijusBg").style.display = "none";
+    document.getElementById("atsisiunciamasScenarijus").style.display = "none";
     setTimeout(() => {
         document.getElementById("atsisiunciamasScenarijusBg").style.display = "flex";
+        document.getElementById("atsisiunciamasScenarijus").style.display = "flex";
     }, 1);
     setTimeout(() => {
         document.getElementById("atsisiunciamasScenarijusBg").style.opacity = "1";

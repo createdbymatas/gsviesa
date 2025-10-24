@@ -1236,7 +1236,7 @@ hr{
     position: fixed;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: -100%;
     z-index: 18;
     background-color: #f2f2f2;
     transition: 0.2s;
@@ -1961,21 +1961,21 @@ hr{
         color: white;
     }
     .spin-loader{
-        background: #333333;
+        background: #464646;
     }
     .spin-loader:before{
         background: white;
-        background-image: linear-gradient(#333333, white);
+        background-image: linear-gradient(#464646, white);
     }
     .spin-loader:after{
         background: #141414;
     }
     .spin-loader2{
-        background: #333333;
+        background: #464646;
     }
     .spin-loader2:before{
         background: white;
-        background-image: linear-gradient(#333333, white);
+        background-image: linear-gradient(#464646, white);
     }
     .spin-loader2:after{
         background: #141414;
@@ -2030,7 +2030,7 @@ hr{
     }
     #openingMaps{
         background-color: #141414;
-        box-shadow: 0 0 10px #333333;
+        box-shadow: 0 0 10px #464646;
         color: white;
     }
     #ticketActivationBg{
@@ -2038,7 +2038,7 @@ hr{
     }
     #ticketActivation{
         background-color: #141414;
-        box-shadow: 0 0 10px #333333;
+        box-shadow: 0 0 10px #464646;
     }
     .ticketActivationTekstas1{
         color: white;
@@ -2062,20 +2062,20 @@ hr{
     }
     #trafiPhone{
         background-color: #141414;
-        box-shadow: 0 0 10px #333333;
+        box-shadow: 0 0 10px #464646;
     }
     #mticketPhone{
         background-color: #141414;
-        box-shadow: 0 0 10px #333333;
+        box-shadow: 0 0 10px #464646;
     }
     #openingPlay{
         background-color: #141414;
-        box-shadow: 0 0 10px #333333;
+        box-shadow: 0 0 10px #464646;
         color: white;
     }
     #openingStore{
         background-color: #141414;
-        box-shadow: 0 0 10px #333333;
+        box-shadow: 0 0 10px #464646;
         color: white;
     }
     #visosStotelesBg{
@@ -2083,7 +2083,7 @@ hr{
     }
     #visosStoteles{
         background-color: #141414;
-        box-shadow: 0 0 10px #333333;
+        box-shadow: 0 0 10px #464646;
     }
     .visosStotelesTransportas{
         color: white;
@@ -2101,7 +2101,7 @@ hr{
     }
     #visosStotys{
         background-color: #141414;
-        box-shadow: 0 0 10px #333333;
+        box-shadow: 0 0 10px #464646;
     }
     .ejimoTaskelis{
         background-color: white;
@@ -2123,7 +2123,7 @@ hr{
         background-color: #141414;
     }
     hr{
-        border-top: 1px solid #333333;
+        border-top: 1px solid #464646;
     }
 
 
@@ -2173,42 +2173,42 @@ hr{
     }
     #atsisiunciamasScenarijus{
         background-color: #141414;
-        box-shadow: 0 0 10px #333333;
+        box-shadow: 0 0 10px #464646;
         color: white;
     }
     #rodomaInformacija{
         background-color: #141414;
-        box-shadow: 0 0 10px #333333;
+        box-shadow: 0 0 10px #464646;
         color: white;
     }
     #atsisiunciamasAudio1{
         background-color: #141414;
-        box-shadow: 0 0 10px #333333;
+        box-shadow: 0 0 10px #464646;
         color: white;
     }
     #atsisiunciamasAudio2{
         background-color: #141414;
-        box-shadow: 0 0 10px #333333;
+        box-shadow: 0 0 10px #464646;
         color: white;
     }
     #atsisiunciamasAudio3{
         background-color: #141414;
-        box-shadow: 0 0 10px #333333;
+        box-shadow: 0 0 10px #464646;
         color: white;
     }
     #atsisiunciamasAudio4{
         background-color: #141414;
-        box-shadow: 0 0 10px #333333;
+        box-shadow: 0 0 10px #464646;
         color: white;
     }
     #atsisiunciamasAudio5{
         background-color: #141414;
-        box-shadow: 0 0 10px #333333;
+        box-shadow: 0 0 10px #464646;
         color: white;
     }
     .pinnedBg{
         background-color: rgba(20, 20, 20, 0.75);
-        box-shadow: 0 0 10px #333333;
+        box-shadow: 0 0 10px #464646;
     }
 
     #simtadienis{
