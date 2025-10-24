@@ -223,6 +223,8 @@ hr{
     text-align: center;
     padding: 15px;
     cursor: not-allowed;
+    transform: scale(1.1);
+    opacity: 0;
 }
 .fa-ban{
     color: red;
@@ -287,7 +289,7 @@ hr{
     left: 0;
     right: 0;
     z-index: 79;
-    background-image: url(images/pavasaris.jpeg);
+    background-image: url(images/ruduo.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -1234,15 +1236,15 @@ hr{
     position: fixed;
     left: 0;
     right: 0;
-    bottom: -100%;
+    bottom: 0;
     z-index: 18;
     background-color: #f2f2f2;
     transition: 0.2s;
 }
 #scenarijusDocs h1{
     font-weight: 600;
-    font-size: 25px;
-    margin-top: 15px;
+    font-size: 22px;
+    margin-top: 16px;
     margin-left: 15px;
     margin-bottom: 15px;
     color: black;
@@ -1321,8 +1323,8 @@ hr{
 }
 #soundManager h1{
     font-weight: 600;
-    font-size: 25px;
-    margin-top: 15px;
+    font-size: 22px;
+    margin-top: 16px;
     margin-left: 15px;
     margin-bottom: 15px;
     color: black;
@@ -1400,7 +1402,7 @@ hr{
     }
 }
 .atsisiustiScenariju{
-    width: 47%;
+    width: 49%;
     height: 50px;
     display: flex;
     justify-content: center;
@@ -1417,7 +1419,7 @@ hr{
     transform: scale(0.95);
 }
 .informacija{
-    width: 47%;
+    width: 49%;
     height: 50px;
     display: flex;
     justify-content: center;
@@ -1449,21 +1451,35 @@ hr{
     opacity: 0;
     display: none;
 }
+#atsisiunciamasScenarijusBg{
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    top: 15px;
+    right: 60px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    opacity: 0;
+    overflow: hidden;
+    border-radius: 25px;
+}
 #atsisiunciamasScenarijus{
-    width: 100%;
-    height: 50px;
+    width: auto;
+    max-width: 95%;
+    height: 100px;
     font-size: 15px;
-    border-radius: 30px 30px 0 0;
+    border-radius: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     background-color: #f2f2f2;
     box-shadow: 0 0 10px lightgrey;
-    position: fixed;
-    bottom: -100%;
-    left: 0;
-    right: 0;
-    z-index: 20;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 #rodomaInformacija{
     width: 100%;
@@ -1482,10 +1498,10 @@ hr{
     padding-left: 15px;
 }
 #atsisiunciamasAudio1{
-    width: 100%;
+    width: 95%;
     height: 50px;
     font-size: 15px;
-    border-radius: 30px 30px 0 0;
+    border-radius: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1493,15 +1509,15 @@ hr{
     box-shadow: 0 0 10px lightgrey;
     position: fixed;
     bottom: -100%;
-    left: 0;
-    right: 0;
+    left: 2.5%;
+    right: 2.5%;
     z-index: 20;
 }
 #atsisiunciamasAudio2{
-    width: 100%;
+    width: 95%;
     height: 50px;
     font-size: 15px;
-    border-radius: 30px 30px 0 0;
+    border-radius: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1509,15 +1525,15 @@ hr{
     box-shadow: 0 0 10px lightgrey;
     position: fixed;
     bottom: -100%;
-    left: 0;
-    right: 0;
+    left: 2.5%;
+    right: 2.5%;
     z-index: 20;
 }
 #atsisiunciamasAudio3{
-    width: 100%;
+    width: 95%;
     height: 50px;
     font-size: 15px;
-    border-radius: 30px 30px 0 0;
+    border-radius: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1525,15 +1541,15 @@ hr{
     box-shadow: 0 0 10px lightgrey;
     position: fixed;
     bottom: -100%;
-    left: 0;
-    right: 0;
+    left: 2.5%;
+    right: 2.5%;
     z-index: 20;
 }
 #atsisiunciamasAudio4{
-    width: 100%;
+    width: 95%;
     height: 50px;
     font-size: 15px;
-    border-radius: 30px 30px 0 0;
+    border-radius: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1541,15 +1557,15 @@ hr{
     box-shadow: 0 0 10px lightgrey;
     position: fixed;
     bottom: -100%;
-    left: 0;
-    right: 0;
+    left: 2.5%;
+    right: 2.5%;
     z-index: 20;
 }
 #atsisiunciamasAudio5{
-    width: 100%;
+    width: 95%;
     height: 50px;
     font-size: 15px;
-    border-radius: 30px 30px 0 0;
+    border-radius: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1557,32 +1573,32 @@ hr{
     box-shadow: 0 0 10px lightgrey;
     position: fixed;
     bottom: -100%;
-    left: 0;
-    right: 0;
+    left: 2.5%;
+    right: 2.5%;
     z-index: 20;
 }
 .pinnedBg{
-    width: 100%;
+    width: 95%;
     height: auto;
     background-color: rgba(242, 242, 242, 0.75);
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
     position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 15px;
+    bottom: 15px;
+    left: 2.5%;
+    right: 2.5%;
+    padding: 10px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     z-index: 17;
     box-shadow: 0 0 10px lightgrey;
-    border-radius: 30px 30px 0 0;
+    border-radius: 25px;
 }
 
 
-/* Arune */
-#Arune{
+/* simtadienis */
+#simtadienis{
     width: 100%;
     height: 100%;
     background-color: #f2f2f2;
@@ -1593,22 +1609,22 @@ hr{
     padding-top: 100vh;
     display: none;
 }
-#topInfoArune{
+#topInfoSimtadienis{
     position: absolute;
     width: 5px;
     height: 5px;
     top: 0;
     left: 0;
 }
-#infoArune{
+#infoSimtadienis{
     width: 100%;
     height: 60px;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
-    background-color: rgba(242, 242, 242, 1);
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
+    background-color: rgba(242, 242, 242, 0.75);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
     color: black;
     position: fixed;
     left: 0;
@@ -1616,7 +1632,7 @@ hr{
     right: 0;
     z-index: 10;
 }
-#infoArune i{
+#infoSimtadienis i{
     font-size: 15px;
     position: absolute;
     top: 15px;
@@ -1633,22 +1649,7 @@ hr{
     background-color: #DEDEDE;
     color: black;
 }
-#AruneTekstas{
-    font-size: 25px;
-    font-weight: 600;
-    color: black;
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
-    text-overflow: ellipsis;
-    width: 100%;
-    position: absolute;
-    top: 60px;
-    padding-left: 15px;
-    padding-right: 15px;
-    z-index: 2;
-}
-#AruneTekstas2{
+#simtadienisTekstas{
     font-size: 20px;
     font-weight: 600;
     color: black;
@@ -1662,1565 +1663,18 @@ hr{
     padding-left: 60px;
     padding-right: 15px;
     z-index: 10;
-    opacity: 0;
+    opacity: 1;
 }
-#AruneUzdarymas:active{
+#simtadienisUzdarymas:active{
     opacity: 0.2;
 }
-/* Smilte */
-#Smilte{
-    width: 100%;
-    height: 100%;
-    background-color: #f2f2f2;
-    transition: 0.2s;
-    padding-bottom: 90px;
-    overflow: hidden;
-    overflow-y: scroll;
-    padding-top: 100vh;
-    display: none;
-}
-#topInfoSmilte{
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    top: 0;
-    left: 0;
-}
-#infoSmilte{
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(242, 242, 242, 1);
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
-    color: black;
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    z-index: 10;
-}
-#infoSmilte i{
-    font-size: 15px;
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    z-index: 11;
-    transition: 0.15s;
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    background-color: #DEDEDE;
-    color: black;
-}
-#SmilteTekstas{
-    font-size: 25px;
-    font-weight: 600;
-    color: black;
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
-    text-overflow: ellipsis;
-    width: 100%;
-    position: absolute;
-    top: 60px;
-    padding-left: 15px;
-    padding-right: 15px;
-    z-index: 2;
-}
-#SmilteTekstas2{
-    font-size: 20px;
-    font-weight: 600;
-    color: black;
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
-    text-overflow: ellipsis;
-    width: 100%;
-    position: absolute;
-    top: 17px;
-    padding-left: 60px;
-    padding-right: 15px;
-    z-index: 10;
-    opacity: 0;
-}
-#SmilteUzdarymas:active{
-    opacity: 0.2;
-}
-/* Adriana */
-#Adriana{
-    width: 100%;
-    height: 100%;
-    background-color: #f2f2f2;
-    transition: 0.2s;
-    padding-bottom: 90px;
-    overflow: hidden;
-    overflow-y: scroll;
-    padding-top: 100vh;
-    display: none;
-}
-#topInfoAdriana{
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    top: 0;
-    left: 0;
-}
-#infoAdriana{
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(242, 242, 242, 1);
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
-    color: black;
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    z-index: 10;
-}
-#infoAdriana i{
-    font-size: 15px;
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    z-index: 11;
-    transition: 0.15s;
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    background-color: #DEDEDE;
-    color: black;
-}
-#AdrianaTekstas{
-    font-size: 25px;
-    font-weight: 600;
-    color: black;
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
-    text-overflow: ellipsis;
-    width: 100%;
-    position: absolute;
-    top: 60px;
-    padding-left: 15px;
-    padding-right: 15px;
-    z-index: 2;
-}
-#AdrianaTekstas2{
-    font-size: 20px;
-    font-weight: 600;
-    color: black;
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
-    text-overflow: ellipsis;
-    width: 100%;
-    position: absolute;
-    top: 17px;
-    padding-left: 60px;
-    padding-right: 15px;
-    z-index: 10;
-    opacity: 0;
-}
-#AdrianaUzdarymas:active{
-    opacity: 0.2;
-}
-/* Norbertas */
-#Norbertas{
-    width: 100%;
-    height: 100%;
-    background-color: #f2f2f2;
-    transition: 0.2s;
-    padding-bottom: 90px;
-    overflow: hidden;
-    overflow-y: scroll;
-    padding-top: 100vh;
-    display: none;
-}
-#topInfoNorbertas{
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    top: 0;
-    left: 0;
-}
-#infoNorbertas{
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(242, 242, 242, 1);
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
-    color: black;
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    z-index: 10;
-}
-#infoNorbertas i{
-    font-size: 15px;
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    z-index: 11;
-    transition: 0.15s;
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    background-color: #DEDEDE;
-    color: black;
-}
-#NorbertasTekstas{
-    font-size: 25px;
-    font-weight: 600;
-    color: black;
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
-    text-overflow: ellipsis;
-    width: 100%;
-    position: absolute;
-    top: 60px;
-    padding-left: 15px;
-    padding-right: 15px;
-    z-index: 2;
-}
-#NorbertasTekstas2{
-    font-size: 20px;
-    font-weight: 600;
-    color: black;
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
-    text-overflow: ellipsis;
-    width: 100%;
-    position: absolute;
-    top: 17px;
-    padding-left: 60px;
-    padding-right: 15px;
-    z-index: 10;
-    opacity: 0;
-}
-#NorbertasUzdarymas:active{
-    opacity: 0.2;
-}
-/* Meta */
-#Meta{
-    width: 100%;
-    height: 100%;
-    background-color: #f2f2f2;
-    transition: 0.2s;
-    padding-bottom: 90px;
-    overflow: hidden;
-    overflow-y: scroll;
-    padding-top: 100vh;
-    display: none;
-}
-#topInfoMeta{
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    top: 0;
-    left: 0;
-}
-#infoMeta{
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(242, 242, 242, 1);
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
-    color: black;
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    z-index: 10;
-}
-#infoMeta i{
-    font-size: 15px;
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    z-index: 11;
-    transition: 0.15s;
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    background-color: #DEDEDE;
-    color: black;
-}
-#MetaTekstas{
-    font-size: 25px;
-    font-weight: 600;
-    color: black;
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
-    text-overflow: ellipsis;
-    width: 100%;
-    position: absolute;
-    top: 60px;
-    padding-left: 15px;
-    padding-right: 15px;
-    z-index: 2;
-}
-#MetaTekstas2{
-    font-size: 20px;
-    font-weight: 600;
-    color: black;
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
-    text-overflow: ellipsis;
-    width: 100%;
-    position: absolute;
-    top: 17px;
-    padding-left: 60px;
-    padding-right: 15px;
-    z-index: 10;
-    opacity: 0;
-}
-#MetaUzdarymas:active{
-    opacity: 0.2;
-}
-/* Justina */
-#Justina{
-    width: 100%;
-    height: 100%;
-    background-color: #f2f2f2;
-    transition: 0.2s;
-    padding-bottom: 90px;
-    overflow: hidden;
-    overflow-y: scroll;
-    padding-top: 100vh;
-    display: none;
-}
-#topInfoJustina{
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    top: 0;
-    left: 0;
-}
-#infoJustina{
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(242, 242, 242, 1);
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
-    color: black;
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    z-index: 10;
-}
-#infoJustina i{
-    font-size: 15px;
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    z-index: 11;
-    transition: 0.15s;
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    background-color: #DEDEDE;
-    color: black;
-}
-#JustinaTekstas{
-    font-size: 25px;
-    font-weight: 600;
-    color: black;
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
-    text-overflow: ellipsis;
-    width: 100%;
-    position: absolute;
-    top: 60px;
-    padding-left: 15px;
-    padding-right: 15px;
-    z-index: 2;
-}
-#JustinaTekstas2{
-    font-size: 20px;
-    font-weight: 600;
-    color: black;
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
-    text-overflow: ellipsis;
-    width: 100%;
-    position: absolute;
-    top: 17px;
-    padding-left: 60px;
-    padding-right: 15px;
-    z-index: 10;
-    opacity: 0;
-}
-#JustinaUzdarymas:active{
-    opacity: 0.2;
-}
-/* Mindaugasd */
-#Mindaugasd{
-    width: 100%;
-    height: 100%;
-    background-color: #f2f2f2;
-    transition: 0.2s;
-    padding-bottom: 90px;
-    overflow: hidden;
-    overflow-y: scroll;
-    padding-top: 100vh;
-    display: none;
-}
-#topInfoMindaugasd{
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    top: 0;
-    left: 0;
-}
-#infoMindaugasd{
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(242, 242, 242, 1);
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
-    color: black;
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    z-index: 10;
-}
-#infoMindaugasd i{
-    font-size: 15px;
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    z-index: 11;
-    transition: 0.15s;
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    background-color: #DEDEDE;
-    color: black;
-}
-#MindaugasdTekstas{
-    font-size: 25px;
-    font-weight: 600;
-    color: black;
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
-    text-overflow: ellipsis;
-    width: 100%;
-    position: absolute;
-    top: 60px;
-    padding-left: 15px;
-    padding-right: 15px;
-    z-index: 2;
-}
-#MindaugasdTekstas2{
-    font-size: 20px;
-    font-weight: 600;
-    color: black;
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
-    text-overflow: ellipsis;
-    width: 100%;
-    position: absolute;
-    top: 17px;
-    padding-left: 60px;
-    padding-right: 15px;
-    z-index: 10;
-    opacity: 0;
-}
-#MindaugasdUzdarymas:active{
-    opacity: 0.2;
-}
-/* Dovydas */
-#Dovydas{
-    width: 100%;
-    height: 100%;
-    background-color: #f2f2f2;
-    transition: 0.2s;
-    padding-bottom: 90px;
-    overflow: hidden;
-    overflow-y: scroll;
-    padding-top: 100vh;
-    display: none;
-}
-#topInfoDovydas{
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    top: 0;
-    left: 0;
-}
-#infoDovydas{
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(242, 242, 242, 1);
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
-    color: black;
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    z-index: 10;
-}
-#infoDovydas i{
-    font-size: 15px;
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    z-index: 11;
-    transition: 0.15s;
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    background-color: #DEDEDE;
-    color: black;
-}
-#DovydasTekstas{
-    font-size: 25px;
-    font-weight: 600;
-    color: black;
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
-    text-overflow: ellipsis;
-    width: 100%;
-    position: absolute;
-    top: 60px;
-    padding-left: 15px;
-    padding-right: 15px;
-    z-index: 2;
-}
-#DovydasTekstas2{
-    font-size: 20px;
-    font-weight: 600;
-    color: black;
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
-    text-overflow: ellipsis;
-    width: 100%;
-    position: absolute;
-    top: 17px;
-    padding-left: 60px;
-    padding-right: 15px;
-    z-index: 10;
-    opacity: 0;
-}
-#DovydasUzdarymas:active{
-    opacity: 0.2;
-}
-/* Matas */
-#Matas{
-    width: 100%;
-    height: 100%;
-    background-color: #f2f2f2;
-    transition: 0.2s;
-    padding-bottom: 90px;
-    overflow: hidden;
-    overflow-y: scroll;
-    padding-top: 100vh;
-    display: none;
-}
-#topInfoMatas{
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    top: 0;
-    left: 0;
-}
-#infoMatas{
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(242, 242, 242, 1);
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
-    color: black;
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    z-index: 10;
-}
-#infoMatas i{
-    font-size: 15px;
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    z-index: 11;
-    transition: 0.15s;
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    background-color: #DEDEDE;
-    color: black;
-}
-#MatasTekstas{
-    font-size: 25px;
-    font-weight: 600;
-    color: black;
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
-    text-overflow: ellipsis;
-    width: 100%;
-    position: absolute;
-    top: 60px;
-    padding-left: 15px;
-    padding-right: 15px;
-    z-index: 2;
-}
-#MatasTekstas2{
-    font-size: 20px;
-    font-weight: 600;
-    color: black;
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
-    text-overflow: ellipsis;
-    width: 100%;
-    position: absolute;
-    top: 17px;
-    padding-left: 60px;
-    padding-right: 15px;
-    z-index: 10;
-    opacity: 0;
-}
-#MatasUzdarymas:active{
-    opacity: 0.2;
-}
-/* Aleksandra */
-#Aleksandra{
-    width: 100%;
-    height: 100%;
-    background-color: #f2f2f2;
-    transition: 0.2s;
-    padding-bottom: 90px;
-    overflow: hidden;
-    overflow-y: scroll;
-    padding-top: 100vh;
-    display: none;
-}
-#topInfoAleksandra{
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    top: 0;
-    left: 0;
-}
-#infoAleksandra{
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(242, 242, 242, 1);
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
-    color: black;
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    z-index: 10;
-}
-#infoAleksandra i{
-    font-size: 15px;
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    z-index: 11;
-    transition: 0.15s;
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    background-color: #DEDEDE;
-    color: black;
-}
-#AleksandraTekstas{
-    font-size: 25px;
-    font-weight: 600;
-    color: black;
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
-    text-overflow: ellipsis;
-    width: 100%;
-    position: absolute;
-    top: 60px;
-    padding-left: 15px;
-    padding-right: 15px;
-    z-index: 2;
-}
-#AleksandraTekstas2{
-    font-size: 20px;
-    font-weight: 600;
-    color: black;
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
-    text-overflow: ellipsis;
-    width: 100%;
-    position: absolute;
-    top: 17px;
-    padding-left: 60px;
-    padding-right: 15px;
-    z-index: 10;
-    opacity: 0;
-}
-#AleksandraUzdarymas:active{
-    opacity: 0.2;
-}
-/* Samanta */
-#Samanta{
-    width: 100%;
-    height: 100%;
-    background-color: #f2f2f2;
-    transition: 0.2s;
-    padding-bottom: 90px;
-    overflow: hidden;
-    overflow-y: scroll;
-    padding-top: 100vh;
-    display: none;
-}
-#topInfoSamanta{
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    top: 0;
-    left: 0;
-}
-#infoSamanta{
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(242, 242, 242, 1);
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
-    color: black;
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    z-index: 10;
-}
-#infoSamanta i{
-    font-size: 15px;
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    z-index: 11;
-    transition: 0.15s;
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    background-color: #DEDEDE;
-    color: black;
-}
-#SamantaTekstas{
-    font-size: 25px;
-    font-weight: 600;
-    color: black;
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
-    text-overflow: ellipsis;
-    width: 100%;
-    position: absolute;
-    top: 60px;
-    padding-left: 15px;
-    padding-right: 15px;
-    z-index: 2;
-}
-#SamantaTekstas2{
-    font-size: 20px;
-    font-weight: 600;
-    color: black;
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
-    text-overflow: ellipsis;
-    width: 100%;
-    position: absolute;
-    top: 17px;
-    padding-left: 60px;
-    padding-right: 15px;
-    z-index: 10;
-    opacity: 0;
-}
-#SamantaUzdarymas:active{
-    opacity: 0.2;
-}
-/* Arnas */
-#Arnas{
-    width: 100%;
-    height: 100%;
-    background-color: #f2f2f2;
-    transition: 0.2s;
-    padding-bottom: 90px;
-    overflow: hidden;
-    overflow-y: scroll;
-    padding-top: 100vh;
-    display: none;
-}
-#topInfoArnas{
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    top: 0;
-    left: 0;
-}
-#infoArnas{
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(242, 242, 242, 1);
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
-    color: black;
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    z-index: 10;
-}
-#infoArnas i{
-    font-size: 15px;
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    z-index: 11;
-    transition: 0.15s;
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    background-color: #DEDEDE;
-    color: black;
-}
-#ArnasTekstas{
-    font-size: 25px;
-    font-weight: 600;
-    color: black;
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
-    text-overflow: ellipsis;
-    width: 100%;
-    position: absolute;
-    top: 60px;
-    padding-left: 15px;
-    padding-right: 15px;
-    z-index: 2;
-}
-#ArnasTekstas2{
-    font-size: 20px;
-    font-weight: 600;
-    color: black;
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
-    text-overflow: ellipsis;
-    width: 100%;
-    position: absolute;
-    top: 17px;
-    padding-left: 60px;
-    padding-right: 15px;
-    z-index: 10;
-    opacity: 0;
-}
-#ArnasUzdarymas:active{
-    opacity: 0.2;
-}
-/* Milena */
-#Milena{
-    width: 100%;
-    height: 100%;
-    background-color: #f2f2f2;
-    transition: 0.2s;
-    padding-bottom: 90px;
-    overflow: hidden;
-    overflow-y: scroll;
-    padding-top: 100vh;
-    display: none;
-}
-#topInfoMilena{
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    top: 0;
-    left: 0;
-}
-#infoMilena{
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(242, 242, 242, 1);
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
-    color: black;
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    z-index: 10;
-}
-#infoMilena i{
-    font-size: 15px;
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    z-index: 11;
-    transition: 0.15s;
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    background-color: #DEDEDE;
-    color: black;
-}
-#MilenaTekstas{
-    font-size: 25px;
-    font-weight: 600;
-    color: black;
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
-    text-overflow: ellipsis;
-    width: 100%;
-    position: absolute;
-    top: 60px;
-    padding-left: 15px;
-    padding-right: 15px;
-    z-index: 2;
-}
-#MilenaTekstas2{
-    font-size: 20px;
-    font-weight: 600;
-    color: black;
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
-    text-overflow: ellipsis;
-    width: 100%;
-    position: absolute;
-    top: 17px;
-    padding-left: 60px;
-    padding-right: 15px;
-    z-index: 10;
-    opacity: 0;
-}
-#MilenaUzdarymas:active{
-    opacity: 0.2;
-}
-/* Emilija */
-#Emilija{
-    width: 100%;
-    height: 100%;
-    background-color: #f2f2f2;
-    transition: 0.2s;
-    padding-bottom: 90px;
-    overflow: hidden;
-    overflow-y: scroll;
-    padding-top: 100vh;
-    display: none;
-}
-#topInfoEmilija{
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    top: 0;
-    left: 0;
-}
-#infoEmilija{
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(242, 242, 242, 1);
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
-    color: black;
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    z-index: 10;
-}
-#infoEmilija i{
-    font-size: 15px;
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    z-index: 11;
-    transition: 0.15s;
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    background-color: #DEDEDE;
-    color: black;
-}
-#EmilijaTekstas{
-    font-size: 25px;
-    font-weight: 600;
-    color: black;
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
-    text-overflow: ellipsis;
-    width: 100%;
-    position: absolute;
-    top: 60px;
-    padding-left: 15px;
-    padding-right: 15px;
-    z-index: 2;
-}
-#EmilijaTekstas2{
-    font-size: 20px;
-    font-weight: 600;
-    color: black;
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
-    text-overflow: ellipsis;
-    width: 100%;
-    position: absolute;
-    top: 17px;
-    padding-left: 60px;
-    padding-right: 15px;
-    z-index: 10;
-    opacity: 0;
-}
-#EmilijaUzdarymas:active{
-    opacity: 0.2;
-}
-/* Modestas */
-#Modestas{
-    width: 100%;
-    height: 100%;
-    background-color: #f2f2f2;
-    transition: 0.2s;
-    padding-bottom: 90px;
-    overflow: hidden;
-    overflow-y: scroll;
-    padding-top: 100vh;
-    display: none;
-}
-#topInfoModestas{
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    top: 0;
-    left: 0;
-}
-#infoModestas{
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(242, 242, 242, 1);
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
-    color: black;
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    z-index: 10;
-}
-#infoModestas i{
-    font-size: 15px;
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    z-index: 11;
-    transition: 0.15s;
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    background-color: #DEDEDE;
-    color: black;
-}
-#ModestasTekstas{
-    font-size: 25px;
-    font-weight: 600;
-    color: black;
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
-    text-overflow: ellipsis;
-    width: 100%;
-    position: absolute;
-    top: 60px;
-    padding-left: 15px;
-    padding-right: 15px;
-    z-index: 2;
-}
-#ModestasTekstas2{
-    font-size: 20px;
-    font-weight: 600;
-    color: black;
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
-    text-overflow: ellipsis;
-    width: 100%;
-    position: absolute;
-    top: 17px;
-    padding-left: 60px;
-    padding-right: 15px;
-    z-index: 10;
-    opacity: 0;
-}
-#ModestasUzdarymas:active{
-    opacity: 0.2;
-}
-/* Gabriele */
-#Gabriele{
-    width: 100%;
-    height: 100%;
-    background-color: #f2f2f2;
-    transition: 0.2s;
-    padding-bottom: 90px;
-    overflow: hidden;
-    overflow-y: scroll;
-    padding-top: 100vh;
-    display: none;
-}
-#topInfoGabriele{
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    top: 0;
-    left: 0;
-}
-#infoGabriele{
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(242, 242, 242, 1);
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
-    color: black;
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    z-index: 10;
-}
-#infoGabriele i{
-    font-size: 15px;
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    z-index: 11;
-    transition: 0.15s;
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    background-color: #DEDEDE;
-    color: black;
-}
-#GabrieleTekstas{
-    font-size: 25px;
-    font-weight: 600;
-    color: black;
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
-    text-overflow: ellipsis;
-    width: 100%;
-    position: absolute;
-    top: 60px;
-    padding-left: 15px;
-    padding-right: 15px;
-    z-index: 2;
-}
-#GabrieleTekstas2{
-    font-size: 20px;
-    font-weight: 600;
-    color: black;
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
-    text-overflow: ellipsis;
-    width: 100%;
-    position: absolute;
-    top: 17px;
-    padding-left: 60px;
-    padding-right: 15px;
-    z-index: 10;
-    opacity: 0;
-}
-#GabrieleUzdarymas:active{
-    opacity: 0.2;
-}
-/* Berzuna */
-#Berzuna{
-    width: 100%;
-    height: 100%;
-    background-color: #f2f2f2;
-    transition: 0.2s;
-    padding-bottom: 90px;
-    overflow: hidden;
-    overflow-y: scroll;
-    padding-top: 100vh;
-    display: none;
-}
-#topInfoBerzuna{
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    top: 0;
-    left: 0;
-}
-#infoBerzuna{
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(242, 242, 242, 1);
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
-    color: black;
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    z-index: 10;
-}
-#infoBerzuna i{
-    font-size: 15px;
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    z-index: 11;
-    transition: 0.15s;
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    background-color: #DEDEDE;
-    color: black;
-}
-#BerzunaTekstas{
-    font-size: 25px;
-    font-weight: 600;
-    color: black;
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
-    text-overflow: ellipsis;
-    width: 100%;
-    position: absolute;
-    top: 60px;
-    padding-left: 15px;
-    padding-right: 15px;
-    z-index: 2;
-}
-#BerzunaTekstas2{
-    font-size: 20px;
-    font-weight: 600;
-    color: black;
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
-    text-overflow: ellipsis;
-    width: 100%;
-    position: absolute;
-    top: 17px;
-    padding-left: 60px;
-    padding-right: 15px;
-    z-index: 10;
-    opacity: 0;
-}
-#BerzunaUzdarymas:active{
-    opacity: 0.2;
-}
-/* Nojus */
-#Nojus{
-    width: 100%;
-    height: 100%;
-    background-color: #f2f2f2;
-    transition: 0.2s;
-    padding-bottom: 90px;
-    overflow: hidden;
-    overflow-y: scroll;
-    padding-top: 100vh;
-    display: none;
-}
-#topInfoNojus{
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    top: 0;
-    left: 0;
-}
-#infoNojus{
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(242, 242, 242, 1);
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
-    color: black;
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    z-index: 10;
-}
-#infoNojus i{
-    font-size: 15px;
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    z-index: 11;
-    transition: 0.15s;
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    background-color: #DEDEDE;
-    color: black;
-}
-#NojusTekstas{
-    font-size: 25px;
-    font-weight: 600;
-    color: black;
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
-    text-overflow: ellipsis;
-    width: 100%;
-    position: absolute;
-    top: 60px;
-    padding-left: 15px;
-    padding-right: 15px;
-    z-index: 2;
-}
-#NojusTekstas2{
-    font-size: 20px;
-    font-weight: 600;
-    color: black;
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
-    text-overflow: ellipsis;
-    width: 100%;
-    position: absolute;
-    top: 17px;
-    padding-left: 60px;
-    padding-right: 15px;
-    z-index: 10;
-    opacity: 0;
-}
-#NojusUzdarymas:active{
-    opacity: 0.2;
-}
-/* Agnieska */
-#Agnieska{
-    width: 100%;
-    height: 100%;
-    background-color: #f2f2f2;
-    transition: 0.2s;
-    padding-bottom: 90px;
-    overflow: hidden;
-    overflow-y: scroll;
-    padding-top: 100vh;
-    display: none;
-}
-#topInfoAgnieska{
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    top: 0;
-    left: 0;
-}
-#infoAgnieska{
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(242, 242, 242, 1);
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
-    color: black;
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    z-index: 10;
-}
-#infoAgnieska i{
-    font-size: 15px;
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    z-index: 11;
-    transition: 0.15s;
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    background-color: #DEDEDE;
-    color: black;
-}
-#AgnieskaTekstas{
-    font-size: 25px;
-    font-weight: 600;
-    color: black;
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
-    text-overflow: ellipsis;
-    width: 100%;
-    position: absolute;
-    top: 60px;
-    padding-left: 15px;
-    padding-right: 15px;
-    z-index: 2;
-}
-#AgnieskaTekstas2{
-    font-size: 20px;
-    font-weight: 600;
-    color: black;
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
-    text-overflow: ellipsis;
-    width: 100%;
-    position: absolute;
-    top: 17px;
-    padding-left: 60px;
-    padding-right: 15px;
-    z-index: 10;
-    opacity: 0;
-}
-#AgnieskaUzdarymas:active{
-    opacity: 0.2;
-}
+
 
 
 
 
 /* spektaklio informacija/objektai */
-.karnavalasIcon{
+.simtadienisIcon{
     position: absolute;
     width: 25px;
     height: 100%;
@@ -3348,7 +1802,7 @@ hr{
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    margin-top: 110px;
+    margin-top: 80px;
     padding-left: 67.5px;
     padding-right: 15px;
     position: relative;
@@ -3365,7 +1819,7 @@ hr{
     justify-content: center;
     align-items: center;
     top: 15px;
-    left: 27.5px;
+    left: 30px;
     font-size: 20px;
     color: black;
 }
@@ -3757,332 +2211,25 @@ hr{
         box-shadow: 0 0 10px #333333;
     }
 
-    #Arune{
+    #simtadienis{
         background-color: #141414;
     }
-    #infoArune{
+    #infoSimtadienis{
         background-color: rgba(20, 20, 20, 1);
         color: white;
     }
-    #infoArune i{
+    #infoSimtadienis i{
         background-color: #282828;
         color: white;
     }
-    #AruneTekstas{
+    #simtadienisTekstas{
         color: white;
     }
-    #AruneTekstas2{
-        color: white;
-    }
-    #Smilte{
-        background-color: #141414;
-    }
-    #infoSmilte{
-        background-color: rgba(20, 20, 20, 1);
-        color: white;
-    }
-    #infoSmilte i{
-        background-color: #282828;
-        color: white;
-    }
-    #SmilteTekstas{
-        color: white;
-    }
-    #SmilteTekstas2{
+    #simtadienisTekstas2{
         color: white;
     }
 
-    #Adriana{
-        background-color: #141414;
-    }
-    #infoAdriana{
-        background-color: rgba(20, 20, 20, 1);
-        color: white;
-    }
-    #infoAdriana i{
-        background-color: #282828;
-        color: white;
-    }
-    #AdrianaTekstas{
-        color: white;
-    }
-    #AdrianaTekstas2{
-        color: white;
-    }
-    #Norbertas{
-        background-color: #141414;
-    }
-    #infoNorbertas{
-        background-color: rgba(20, 20, 20, 1);
-        color: white;
-    }
-    #infoNorbertas i{
-        background-color: #282828;
-        color: white;
-    }
-    #NorbertasTekstas{
-        color: white;
-    }
-    #NorbertasTekstas2{
-        color: white;
-    }
-    #Meta{
-        background-color: #141414;
-    }
-    #infoMeta{
-        background-color: rgba(20, 20, 20, 1);
-        color: white;
-    }
-    #infoMeta i{
-        background-color: #282828;
-        color: white;
-    }
-    #MetaTekstas{
-        color: white;
-    }
-    #MetaTekstas2{
-        color: white;
-    }
-    #Justina{
-        background-color: #141414;
-    }
-    #infoJustina{
-        background-color: rgba(20, 20, 20, 1);
-        color: white;
-    }
-    #infoJustina i{
-        background-color: #282828;
-        color: white;
-    }
-    #JustinaTekstas{
-        color: white;
-    }
-    #JustinaTekstas2{
-        color: white;
-    }
-    #Mindaugasd{
-        background-color: #141414;
-    }
-    #infoMindaugasd{
-        background-color: rgba(20, 20, 20, 1);
-        color: white;
-    }
-    #infoMindaugasd i{
-        background-color: #282828;
-        color: white;
-    }
-    #MindaugasdTekstas{
-        color: white;
-    }
-    #MindaugasdTekstas2{
-        color: white;
-    }
-    #Dovydas{
-        background-color: #141414;
-    }
-    #infoDovydas{
-        background-color: rgba(20, 20, 20, 1);
-        color: white;
-    }
-    #infoDovydas i{
-        background-color: #282828;
-        color: white;
-    }
-    #DovydasTekstas{
-        color: white;
-    }
-    #DovydasTekstas2{
-        color: white;
-    }
-    #Matas{
-        background-color: #141414;
-    }
-    #infoMatas{
-        background-color: rgba(20, 20, 20, 1);
-        color: white;
-    }
-    #infoMatas i{
-        background-color: #282828;
-        color: white;
-    }
-    #MatasTekstas{
-        color: white;
-    }
-    #MatasTekstas2{
-        color: white;
-    }
-    #Aleksandra{
-        background-color: #141414;
-    }
-    #infoAleksandra{
-        background-color: rgba(20, 20, 20, 1);
-        color: white;
-    }
-    #infoAleksandra i{
-        background-color: #282828;
-        color: white;
-    }
-    #AleksandraTekstas{
-        color: white;
-    }
-    #AleksandraTekstas2{
-        color: white;
-    }
-    #Samanta{
-        background-color: #141414;
-    }
-    #infoSamanta{
-        background-color: rgba(20, 20, 20, 1);
-        color: white;
-    }
-    #infoSamanta i{
-        background-color: #282828;
-        color: white;
-    }
-    #SamantaTekstas{
-        color: white;
-    }
-    #SamantaTekstas2{
-        color: white;
-    }
-    #Arnas{
-        background-color: #141414;
-    }
-    #infoArnas{
-        background-color: rgba(20, 20, 20, 1);
-        color: white;
-    }
-    #infoArnas i{
-        background-color: #282828;
-        color: white;
-    }
-    #ArnasTekstas{
-        color: white;
-    }
-    #ArnasTekstas2{
-        color: white;
-    }
-    #Milena{
-        background-color: #141414;
-    }
-    #infoMilena{
-        background-color: rgba(20, 20, 20, 1);
-        color: white;
-    }
-    #infoMilena i{
-        background-color: #282828;
-        color: white;
-    }
-    #MilenaTekstas{
-        color: white;
-    }
-    #MilenaTekstas2{
-        color: white;
-    }
-    #Emilija{
-        background-color: #141414;
-    }
-    #infoEmilija{
-        background-color: rgba(20, 20, 20, 1);
-        color: white;
-    }
-    #infoEmilija i{
-        background-color: #282828;
-        color: white;
-    }
-    #EmilijaTekstas{
-        color: white;
-    }
-    #EmilijaTekstas2{
-        color: white;
-    }
-    #Modestas{
-        background-color: #141414;
-    }
-    #infoModestas{
-        background-color: rgba(20, 20, 20, 1);
-        color: white;
-    }
-    #infoModestas i{
-        background-color: #282828;
-        color: white;
-    }
-    #ModestasTekstas{
-        color: white;
-    }
-    #ModestasTekstas2{
-        color: white;
-    }
-    #Gabriele{
-        background-color: #141414;
-    }
-    #infoGabriele{
-        background-color: rgba(20, 20, 20, 1);
-        color: white;
-    }
-    #infoGabriele i{
-        background-color: #282828;
-        color: white;
-    }
-    #GabrieleTekstas{
-        color: white;
-    }
-    #GabrieleTekstas2{
-        color: white;
-    }
-    #Berzuna{
-        background-color: #141414;
-    }
-    #infoBerzuna{
-        background-color: rgba(20, 20, 20, 1);
-        color: white;
-    }
-    #infoBerzuna i{
-        background-color: #282828;
-        color: white;
-    }
-    #BerzunaTekstas{
-        color: white;
-    }
-    #BerzunaTekstas2{
-        color: white;
-    }
-    #Nojus{
-        background-color: #141414;
-    }
-    #infoNojus{
-        background-color: rgba(20, 20, 20, 1);
-        color: white;
-    }
-    #infoNojus i{
-        background-color: #282828;
-        color: white;
-    }
-    #NojusTekstas{
-        color: white;
-    }
-    #NojusTekstas2{
-        color: white;
-    }
-    #Agnieska{
-        background-color: #141414;
-    }
-    #infoAgnieska{
-        background-color: rgba(20, 20, 20, 1);
-        color: white;
-    }
-    #infoAgnieska i{
-        background-color: #282828;
-        color: white;
-    }
-    #AgnieskaTekstas{
-        color: white;
-    }
-    #AgnieskaTekstas2{
-        color: white;
-    }
-
-    .karnavalasIcon{
+    .simtadienisIcon{
         color: white;
     }
     .pagrTekstas{
