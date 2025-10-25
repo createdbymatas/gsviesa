@@ -1417,26 +1417,13 @@ hr{
     background-color: #e6e6e6;
     border-radius: 25px;
     cursor: pointer;
+    overflow: hidden;
 }
 #playProgress{
     width: 0;
     height: 5px;
     background-color: darkgrey;
     cursor: pointer;
-    position: relative;
-    border-radius: 25px;
-}
-#playProgress::before{
-    content: "";
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    background-color: darkgrey;
-    box-shadow: 0 0 5px #fefefe;
-    border-radius: 100%;
-    top: 50%;
-    transform: translateY(-50%);
-    right: -5px;
 }
 #timePlayed {
     font-size: 13px;
@@ -2245,9 +2232,6 @@ hr{
     }
     #progressBg{
         background-color: #191919;
-    }
-    #playProgress::before{
-        box-shadow: 0 0 5px #464646;
     }
     #closeSoundManager{
         background-color: #282828;
