@@ -91,31 +91,12 @@ if (
 
 
 function deny(){
-    document.getElementById("1play").style.display = "flex";
-    document.getElementById("1stop").style.display = "none";
-    document.getElementById('audio1').currentTime = 0;
-    document.getElementById("audio1").pause();
-    document.getElementById("1aud").style.animation = "none";
-    document.getElementById("2play").style.display = "flex";
-    document.getElementById("2stop").style.display = "none";
-    document.getElementById('audio2').currentTime = 0;
-    document.getElementById("audio2").pause();
-    document.getElementById("2aud").style.animation = "none";
-    document.getElementById("3play").style.display = "flex";
-    document.getElementById("3stop").style.display = "none";
-    document.getElementById('audio3').currentTime = 0;
-    document.getElementById("audio3").pause();
-    document.getElementById("3aud").style.animation = "none";
-    document.getElementById("4play").style.display = "flex";
-    document.getElementById("4stop").style.display = "none";
-    document.getElementById('audio4').currentTime = 0;
-    document.getElementById("audio4").pause();
-    document.getElementById("4aud").style.animation = "none";
-    document.getElementById("5play").style.display = "flex";
-    document.getElementById("5stop").style.display = "none";
-    document.getElementById('audio5').currentTime = 0;
-    document.getElementById("audio5").pause();
-    document.getElementById("5aud").style.animation = "none";
+    sound.pause();
+    soundPlayPauseIcon.classList.remove("fa-pause");
+    soundPlayPauseIcon.classList.add("fa-play");
+    sound.currentTime = 0;
+    document.getElementById("currentTrackName").innerText = 'Garso takelio pavadinimas';
+    document.getElementById("soundDuration").innerText = '0:00';
 
     document.getElementById("accessDenied").style.display = "flex";
     document.getElementById("uzdraustaRestart").style.animation = "prixClipFix 10s linear";
@@ -480,410 +461,120 @@ function openSoundTracks() {
 }
 function closeSoundTracks() {
     document.getElementById("body").style.overflowY = "scroll";
-    // document.getElementById("1play").style.display = "flex";
-    // document.getElementById("1stop").style.display = "none";
-    // document.getElementById('audio1').currentTime = 0;
-    // document.getElementById("audio1").pause();
-    // document.getElementById("1aud").style.animation = "none";
-    // document.getElementById("2play").style.display = "flex";
-    // document.getElementById("2stop").style.display = "none";
-    // document.getElementById('audio2').currentTime = 0;
-    // document.getElementById("audio2").pause();
-    // document.getElementById("2aud").style.animation = "none";
-    // document.getElementById("3play").style.display = "flex";
-    // document.getElementById("3stop").style.display = "none";
-    // document.getElementById('audio3').currentTime = 0;
-    // document.getElementById("audio3").pause();
-    // document.getElementById("3aud").style.animation = "none";
-    // document.getElementById("4play").style.display = "flex";
-    // document.getElementById("4stop").style.display = "none";
-    // document.getElementById('audio4').currentTime = 0;
-    // document.getElementById("audio4").pause();
-    // document.getElementById("4aud").style.animation = "none";
-    // document.getElementById("5play").style.display = "flex";
-    // document.getElementById("5stop").style.display = "none";
-    // document.getElementById('audio5').currentTime = 0;
-    // document.getElementById("audio5").pause();
-    // document.getElementById("5aud").style.animation = "none";
     setTimeout(() => {
         document.getElementById("soundManager").style.bottom = "-100%";
+        document.getElementById("soundPlayer").style.bottom = '-100%';
+        sound.pause();
+        soundPlayPauseIcon.classList.remove("fa-pause");
+        soundPlayPauseIcon.classList.add("fa-play");
+        sound.currentTime = 0;
+        document.getElementById("currentTrackName").innerText = 'Garso takelio pavadinimas';
+        document.getElementById("soundDuration").innerText = '0:00';
     }, 10);
 }
-function playAudio1() {
-    setTimeout(() => {
-        document.getElementById("2play").style.display = "flex";
-        document.getElementById("2stop").style.display = "none";
-        document.getElementById('audio2').currentTime = 0;
-        document.getElementById("audio2").pause();
-        document.getElementById("2aud").style.animation = "none";
-        document.getElementById("3play").style.display = "flex";
-        document.getElementById("3stop").style.display = "none";
-        document.getElementById('audio3').currentTime = 0;
-        document.getElementById("audio3").pause();
-        document.getElementById("3aud").style.animation = "none";
-        document.getElementById("4play").style.display = "flex";
-        document.getElementById("4stop").style.display = "none";
-        document.getElementById('audio4').currentTime = 0;
-        document.getElementById("audio4").pause();
-        document.getElementById("4aud").style.animation = "none";
-        document.getElementById("5play").style.display = "flex";
-        document.getElementById("5stop").style.display = "none";
-        document.getElementById('audio5').currentTime = 0;
-        document.getElementById("audio5").pause();
-        document.getElementById("5aud").style.animation = "none";
 
-        document.getElementById("1play").style.display = "none";
-        document.getElementById("1stop").style.display = "flex";
-        document.getElementById('audio1').currentTime = 0;
-        document.getElementById("audio1").play();
-        document.getElementById("1aud").style.animation = "blink 2s linear infinite";
-    }, 100);
-}
-document.getElementById("audio1").onended = function() {
-    document.getElementById("1play").style.display = "flex";
-    document.getElementById("1stop").style.display = "none";
-    document.getElementById("1aud").style.animation = "none";
-}
-function stopAudio1() {
-    document.getElementById("1stop").style.pointerEvents = "none";
-    document.getElementById("audio1").volume = 0.9;
-    setTimeout(() => {
-        document.getElementById("audio1").volume = 0.8;
-    }, 100);
-    setTimeout(() => {
-        document.getElementById("audio1").volume = 0.7;
-    }, 200);
-    setTimeout(() => {
-        document.getElementById("audio1").volume = 0.6;
-    }, 300);
-    setTimeout(() => {
-        document.getElementById("audio1").volume = 0.5;
-    }, 400);
-    setTimeout(() => {
-        document.getElementById("audio1").volume = 0.4;
-    }, 500);
-    setTimeout(() => {
-        document.getElementById("audio1").volume = 0.3;
-    }, 600);
-    setTimeout(() => {
-        document.getElementById("audio1").volume = 0.2;
-    }, 700);
-    setTimeout(() => {
-        document.getElementById("audio1").volume = 0.1;
-    }, 800);
-    setTimeout(() => {
-        document.getElementById("audio1").volume = 0;
-    }, 900);
-    setTimeout(() => {
-        document.getElementById("1play").style.display = "flex";
-        document.getElementById("1stop").style.display = "none";
-        document.getElementById("1stop").style.pointerEvents = "all";
-        document.getElementById('audio1').currentTime = 0;
-        document.getElementById("audio1").pause();
-        document.getElementById("audio1").volume = 1;
-        document.getElementById("1aud").style.animation = "none";
-    }, 1000);
-}
-function playAudio2() {
-    setTimeout(() => {
-        document.getElementById("1play").style.display = "flex";
-        document.getElementById("1stop").style.display = "none";
-        document.getElementById('audio1').currentTime = 0;
-        document.getElementById("audio1").pause();
-        document.getElementById("1aud").style.animation = "none";
-        document.getElementById("3play").style.display = "flex";
-        document.getElementById("3stop").style.display = "none";
-        document.getElementById('audio3').currentTime = 0;
-        document.getElementById("audio3").pause();
-        document.getElementById("3aud").style.animation = "none";
-        document.getElementById("4play").style.display = "flex";
-        document.getElementById("4stop").style.display = "none";
-        document.getElementById('audio4').currentTime = 0;
-        document.getElementById("audio4").pause();
-        document.getElementById("4aud").style.animation = "none";
-        document.getElementById("5play").style.display = "flex";
-        document.getElementById("5stop").style.display = "none";
-        document.getElementById('audio5').currentTime = 0;
-        document.getElementById("audio5").pause();
-        document.getElementById("5aud").style.animation = "none";
+let progress = document.getElementById('playProgress');
+let progressBg = document.getElementById('progressBg');
+let sound = document.getElementById('sound');
+let soundPlayPauseIcon = document.getElementById('soundPlayPauseIcon');
 
-        document.getElementById("2play").style.display = "none";
-        document.getElementById("2stop").style.display = "flex";
-        document.getElementById('audio2').currentTime = 0;
-        document.getElementById("audio2").play();
-        document.getElementById("2aud").style.animation = "blink 2s linear infinite";
-    }, 100);
+function playPause(){
+    if(soundPlayPauseIcon.classList.contains("fa-pause")){
+        sound.pause();
+        soundPlayPauseIcon.classList.remove("fa-pause");
+        soundPlayPauseIcon.classList.add("fa-play");
+    }
+    else{
+        sound.play();
+        soundPlayPauseIcon.classList.add("fa-pause");
+        soundPlayPauseIcon.classList.remove("fa-play");
+    }
 }
-document.getElementById("audio2").onended = function() {
-    document.getElementById("2play").style.display = "flex";
-    document.getElementById("2stop").style.display = "none";
-    document.getElementById("2aud").style.animation = "none";
-}
-function stopAudio2() {
-    document.getElementById("2stop").style.pointerEvents = "none";
-    document.getElementById("audio2").volume = 0.9;
-    setTimeout(() => {
-        document.getElementById("audio2").volume = 0.8;
-    }, 100);
-    setTimeout(() => {
-        document.getElementById("audio2").volume = 0.7;
-    }, 200);
-    setTimeout(() => {
-        document.getElementById("audio2").volume = 0.6;
-    }, 300);
-    setTimeout(() => {
-        document.getElementById("audio2").volume = 0.5;
-    }, 400);
-    setTimeout(() => {
-        document.getElementById("audio2").volume = 0.4;
-    }, 500);
-    setTimeout(() => {
-        document.getElementById("audio2").volume = 0.3;
-    }, 600);
-    setTimeout(() => {
-        document.getElementById("audio2").volume = 0.2;
-    }, 700);
-    setTimeout(() => {
-        document.getElementById("audio2").volume = 0.1;
-    }, 800);
-    setTimeout(() => {
-        document.getElementById("audio2").volume = 0;
-    }, 900);
-    setTimeout(() => {
-        document.getElementById("2play").style.display = "flex";
-        document.getElementById("2stop").style.display = "none";
-        document.getElementById("2stop").style.pointerEvents = "all";
-        document.getElementById('audio2').currentTime = 0;
-        document.getElementById("audio2").pause();
-        document.getElementById("audio2").volume = 1;
-        document.getElementById("2aud").style.animation = "none";
-    }, 1000);
-}
-function playAudio3() {
-    setTimeout(() => {
-        document.getElementById("1play").style.display = "flex";
-        document.getElementById("1stop").style.display = "none";
-        document.getElementById('audio1').currentTime = 0;
-        document.getElementById("audio1").pause();
-        document.getElementById("1aud").style.animation = "none";
-        document.getElementById("2play").style.display = "flex";
-        document.getElementById("2stop").style.display = "none";
-        document.getElementById('audio2').currentTime = 0;
-        document.getElementById("audio2").pause();
-        document.getElementById("2aud").style.animation = "none";
-        document.getElementById("4play").style.display = "flex";
-        document.getElementById("4stop").style.display = "none";
-        document.getElementById('audio4').currentTime = 0;
-        document.getElementById("audio4").pause();
-        document.getElementById("4aud").style.animation = "none";
-        document.getElementById("5play").style.display = "flex";
-        document.getElementById("5stop").style.display = "none";
-        document.getElementById('audio5').currentTime = 0;
-        document.getElementById("audio5").pause();
-        document.getElementById("5aud").style.animation = "none";
 
-        document.getElementById("3play").style.display = "none";
-        document.getElementById("3stop").style.display = "flex";
-        document.getElementById('audio3').currentTime = 0;
-        document.getElementById("audio3").play();
-        document.getElementById("3aud").style.animation = "blink 2s linear infinite";
-    }, 100);
+sound.onended = function() {
+    soundPlayPauseIcon.classList.remove("fa-pause");
+    soundPlayPauseIcon.classList.add("fa-play");
 }
-document.getElementById("audio3").onended = function() {
-    document.getElementById("3play").style.display = "flex";
-    document.getElementById("3stop").style.display = "none";
-    document.getElementById("3aud").style.animation = "none";
-}
-function stopAudio3() {
-    document.getElementById("3stop").style.pointerEvents = "none";
-    document.getElementById("audio3").volume = 0.9;
-    setTimeout(() => {
-        document.getElementById("audio3").volume = 0.8;
-    }, 100);
-    setTimeout(() => {
-        document.getElementById("audio3").volume = 0.7;
-    }, 200);
-    setTimeout(() => {
-        document.getElementById("audio3").volume = 0.6;
-    }, 300);
-    setTimeout(() => {
-        document.getElementById("audio3").volume = 0.5;
-    }, 400);
-    setTimeout(() => {
-        document.getElementById("audio3").volume = 0.4;
-    }, 500);
-    setTimeout(() => {
-        document.getElementById("audio3").volume = 0.3;
-    }, 600);
-    setTimeout(() => {
-        document.getElementById("audio3").volume = 0.2;
-    }, 700);
-    setTimeout(() => {
-        document.getElementById("audio3").volume = 0.1;
-    }, 800);
-    setTimeout(() => {
-        document.getElementById("audio3").volume = 0;
-    }, 900);
-    setTimeout(() => {
-        document.getElementById("3play").style.display = "flex";
-        document.getElementById("3stop").style.display = "none";
-        document.getElementById("3stop").style.pointerEvents = "all";
-        document.getElementById('audio3').currentTime = 0;
-        document.getElementById("audio3").pause();
-        document.getElementById("audio3").volume = 1;
-        document.getElementById("3aud").style.animation = "none";
-    }, 1000);
-}
-function playAudio4() {
-    setTimeout(() => {
-        document.getElementById("1play").style.display = "flex";
-        document.getElementById("1stop").style.display = "none";
-        document.getElementById('audio1').currentTime = 0;
-        document.getElementById("audio1").pause();
-        document.getElementById("1aud").style.animation = "none";
-        document.getElementById("2play").style.display = "flex";
-        document.getElementById("2stop").style.display = "none";
-        document.getElementById('audio2').currentTime = 0;
-        document.getElementById("audio2").pause();
-        document.getElementById("2aud").style.animation = "none";
-        document.getElementById("3play").style.display = "flex";
-        document.getElementById("3stop").style.display = "none";
-        document.getElementById('audio3').currentTime = 0;
-        document.getElementById("audio3").pause();
-        document.getElementById("3aud").style.animation = "none";
-        document.getElementById("5play").style.display = "flex";
-        document.getElementById("5stop").style.display = "none";
-        document.getElementById('audio5').currentTime = 0;
-        document.getElementById("audio5").pause();
-        document.getElementById("5aud").style.animation = "none";
 
-        document.getElementById("4play").style.display = "none";
-        document.getElementById("4stop").style.display = "flex";
-        document.getElementById('audio4').currentTime = 0;
-        document.getElementById("audio4").play();
-        document.getElementById("4aud").style.animation = "blink 2s linear infinite";
-    }, 100);
-}
-document.getElementById("audio4").onended = function() {
-    document.getElementById("4play").style.display = "flex";
-    document.getElementById("4stop").style.display = "none";
-    document.getElementById("4aud").style.animation = "none";
-}
-function stopAudio4() {
-    document.getElementById("4stop").style.pointerEvents = "none";
-    document.getElementById("audio4").volume = 0.9;
-    setTimeout(() => {
-        document.getElementById("audio4").volume = 0.8;
-    }, 100);
-    setTimeout(() => {
-        document.getElementById("audio4").volume = 0.7;
-    }, 200);
-    setTimeout(() => {
-        document.getElementById("audio4").volume = 0.6;
-    }, 300);
-    setTimeout(() => {
-        document.getElementById("audio4").volume = 0.5;
-    }, 400);
-    setTimeout(() => {
-        document.getElementById("audio4").volume = 0.4;
-    }, 500);
-    setTimeout(() => {
-        document.getElementById("audio4").volume = 0.3;
-    }, 600);
-    setTimeout(() => {
-        document.getElementById("audio4").volume = 0.2;
-    }, 700);
-    setTimeout(() => {
-        document.getElementById("audio4").volume = 0.1;
-    }, 800);
-    setTimeout(() => {
-        document.getElementById("audio4").volume = 0;
-    }, 900);
-    setTimeout(() => {
-        document.getElementById("4play").style.display = "flex";
-        document.getElementById("4stop").style.display = "none";
-        document.getElementById("4stop").style.pointerEvents = "all";
-        document.getElementById('audio4').currentTime = 0;
-        document.getElementById("audio4").pause();
-        document.getElementById("audio4").volume = 1;
-        document.getElementById("4aud").style.animation = "none";
-    }, 1000);
-}
-function playAudio5() {
-    setTimeout(() => {
-        document.getElementById("1play").style.display = "flex";
-        document.getElementById("1stop").style.display = "none";
-        document.getElementById('audio1').currentTime = 0;
-        document.getElementById("audio1").pause();
-        document.getElementById("1aud").style.animation = "none";
-        document.getElementById("2play").style.display = "flex";
-        document.getElementById("2stop").style.display = "none";
-        document.getElementById('audio2').currentTime = 0;
-        document.getElementById("audio2").pause();
-        document.getElementById("2aud").style.animation = "none";
-        document.getElementById("3play").style.display = "flex";
-        document.getElementById("3stop").style.display = "none";
-        document.getElementById('audio3').currentTime = 0;
-        document.getElementById("audio3").pause();
-        document.getElementById("3aud").style.animation = "none";
-        document.getElementById("4play").style.display = "flex";
-        document.getElementById("4stop").style.display = "none";
-        document.getElementById('audio4').currentTime = 0;
-        document.getElementById("audio4").pause();
-        document.getElementById("4aud").style.animation = "none";
+sound.addEventListener("timeupdate", (e)=>{
+    const currentTime = e.target.currentTime;
+    const duration = e.target.duration;
+    let progressWidth = (currentTime / duration) * 100;
+    progress.style.width = `${progressWidth}%`;
 
-        document.getElementById("5play").style.display = "none";
-        document.getElementById("5stop").style.display = "flex";
-        document.getElementById('audio5').currentTime = 0;
-        document.getElementById("audio5").play();
-        document.getElementById("5aud").style.animation = "blink 2s linear infinite";
-    }, 100);
+    let musicCurrentTime = document.getElementById("timePlayed");
+
+    let currentMin = Math.floor(currentTime / 60);
+    let currentSec = Math.floor(currentTime % 60);
+    if (currentSec < 10){
+        currentSec = `0${currentSec}`;
+    }
+    musicCurrentTime.innerText = `${currentMin}:${currentSec}`;
+});
+
+progressBg.addEventListener("click", (e)=>{
+    let progressWidthval = progressBg.clientWidth;
+    let clickedOffSetX = e.offsetX;
+    let soundDuration = sound.duration;
+
+    sound.currentTime = (clickedOffSetX / progressWidthval) * soundDuration;
+    sound.play();
+    soundPlayPauseIcon.classList.add("fa-pause");
+    soundPlayPauseIcon.classList.remove("fa-play");
+});
+
+
+function playSound1(){
+    sound.src = 'sounds/pradzia.mp3';
+    sound.currentTime = 0;
+    sound.play();
+    soundPlayPauseIcon.classList.add("fa-pause");
+    soundPlayPauseIcon.classList.remove("fa-play");
+    document.getElementById("soundPlayer").style.bottom = '15px';
+    document.getElementById("currentTrackName").innerText = 'pradzia.mp3';
+    document.getElementById("soundDuration").innerText = '0:27';
 }
-document.getElementById("audio5").onended = function() {
-    document.getElementById("5play").style.display = "flex";
-    document.getElementById("5stop").style.display = "none";
-    document.getElementById("5aud").style.animation = "none";
+function playSound2(){
+    sound.src = 'sounds/rap.mp3';
+    sound.currentTime = 0;
+    sound.play();
+    soundPlayPauseIcon.classList.add("fa-pause");
+    soundPlayPauseIcon.classList.remove("fa-play");
+    document.getElementById("soundPlayer").style.bottom = '15px';
+    document.getElementById("currentTrackName").innerText = 'rap.mp3';
+    document.getElementById("soundDuration").innerText = '0:22';
 }
-function stopAudio5() {
-    document.getElementById("5stop").style.pointerEvents = "none";
-    document.getElementById("audio5").volume = 0.9;
-    setTimeout(() => {
-        document.getElementById("audio5").volume = 0.8;
-    }, 100);
-    setTimeout(() => {
-        document.getElementById("audio5").volume = 0.7;
-    }, 200);
-    setTimeout(() => {
-        document.getElementById("audio5").volume = 0.6;
-    }, 300);
-    setTimeout(() => {
-        document.getElementById("audio5").volume = 0.5;
-    }, 400);
-    setTimeout(() => {
-        document.getElementById("audio5").volume = 0.4;
-    }, 500);
-    setTimeout(() => {
-        document.getElementById("audio5").volume = 0.3;
-    }, 600);
-    setTimeout(() => {
-        document.getElementById("audio5").volume = 0.2;
-    }, 700);
-    setTimeout(() => {
-        document.getElementById("audio5").volume = 0.1;
-    }, 800);
-    setTimeout(() => {
-        document.getElementById("audio5").volume = 0;
-    }, 900);
-    setTimeout(() => {
-        document.getElementById("5play").style.display = "flex";
-        document.getElementById("5stop").style.display = "none";
-        document.getElementById("5stop").style.pointerEvents = "all";
-        document.getElementById('audio5').currentTime = 0;
-        document.getElementById("audio5").pause();
-        document.getElementById("audio5").volume = 1;
-        document.getElementById("5aud").style.animation = "none";
-    }, 1000);
+function playSound3(){
+    sound.src = 'sounds/burtai.mp3';
+    sound.currentTime = 0;
+    sound.play();
+    soundPlayPauseIcon.classList.add("fa-pause");
+    soundPlayPauseIcon.classList.remove("fa-play");
+    document.getElementById("soundPlayer").style.bottom = '15px';
+    document.getElementById("currentTrackName").innerText = 'burtai.mp3';
+    document.getElementById("soundDuration").innerText = '0:47';
 }
+function playSound4(){
+    sound.src = 'sounds/seseliai.mp3';
+    sound.currentTime = 0;
+    sound.play();
+    soundPlayPauseIcon.classList.add("fa-pause");
+    soundPlayPauseIcon.classList.remove("fa-play");
+    document.getElementById("soundPlayer").style.bottom = '15px';
+    document.getElementById("currentTrackName").innerText = 'seseliai.mp3';
+    document.getElementById("soundDuration").innerText = '0:07';
+}
+function playSound5(){
+    sound.src = 'sounds/sokis.mp3';
+    sound.currentTime = 0;
+    sound.play();
+    soundPlayPauseIcon.classList.add("fa-pause");
+    soundPlayPauseIcon.classList.remove("fa-play");
+    document.getElementById("soundPlayer").style.bottom = '15px';
+    document.getElementById("currentTrackName").innerText = 'sokis.mp3';
+    document.getElementById("soundDuration").innerText = '02:21';
+}
+
 function atsisiustiAudio1() {
     document.getElementById("pinnedBackground").style.display = "block";
     document.getElementById("body").style.overflowY = "hidden";
